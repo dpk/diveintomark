@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CMukpsDzpIcC
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CLWXxdflhokC" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2006-12-10T01:56:19Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1165715779439">
+		<id gr:original-id="tag:diveintomark.org,2006-12-10:/archives/20061210010619">
+			tag:google.com,2005:reader/item/d85d0b3711b06304
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="parenting" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Jingle butt
+		</title>
+		<published>
+			2006-12-10T01:06:19Z
+		</published>
+		<updated>
+			2006-12-10T01:08:50Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/12/09/jingle-butt" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2006/12/09/jingle-butt/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2006/12/09/jingle-butt" xml:lang="en" type="html">
+			&lt;p&gt;Toddlers are fun.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;&lt;i&gt;Jingle butt,&lt;br&gt; Jingle butt,&lt;br&gt; Jingle all the way.&lt;br&gt; Oh what fun it is to wipe&lt;br&gt; A diaper rash today,&lt;br&gt; Hey!&lt;/i&gt;&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;He came up with the first line himself; I filled in the rest. And taught it to him.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1165510587612">
+		<id gr:original-id="tag:diveintomark.org,2006-12-07:/archives/20061207152458">
+			tag:google.com,2005:reader/item/760f391f8e12e1e5
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="http" scheme="http://diveintomark.org/tag/" /><category term="parenting" scheme="http://diveintomark.org/tag/" /><category term="rest" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			REST for toddlers
+		</title>
+		<published>
+			2006-12-07T15:24:58Z
+		</published>
+		<updated>
+			2006-12-08T01:30:59Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/12/07/rest-for-toddlers" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2006/12/07/rest-for-toddlers/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2006/12/07/rest-for-toddlers" xml:lang="en" type="html">
+			&lt;dl&gt; &lt;dt&gt;&lt;samp&gt;100 Continue&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Mmm hmm…”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;200 OK&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“OK.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;201 Created&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“You went pee-pee in the potty!”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;202 Accepted&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Daddy will do it in a minute.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;204 No Content&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“…”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;300 Multiple Choices&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Do you want apple juice or do you want milk?”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;301 Moved Permanently&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“That’s Mommy’s job now.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;302 Found&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Ask Mommy.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;303 See Other&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Give it to Mommy.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;304 Not Modified&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“The same as the last time you asked me.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;305 Use Proxy&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Did Mommy say it was OK?”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;400 Bad Request&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Daddy doesn’t understand.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;401 Unauthorized&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“That’s not your soda. That’s Daddy’s soda.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;402 Payment Required&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;Reserved for future use. (”If you’re not out of this house by your 18th birthday, we’re charging you rent.”)&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;403 Forbidden&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“You’re in timeout.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;404 Not Found&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Daddy can’t find it.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;405 Method Not Allowed&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Don’t draw on the table.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;406 Not Acceptable&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Make another choice.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;407 Proxy Authentication Required&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“You didn’t ask Mommy.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;408 Request Timeout&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“If you’re not going to answer me, then you get nothing.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;409 Conflict&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Your brother is playing with that right now.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;410 Gone&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Bath is all gone.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;412 Precondition Failed&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“If you don’t eat your meat, you can’t have any pudding. How can you have any pudding if you don’t eat your meat?”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;413 Request Entity Too Large&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“It doesn’t fit.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;415 Unsupported Media Type&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Don’t eat your boogers.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;416 Requested Range Not Satisfiable&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“No, you can’t have that piece.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;417 Expectation Failed&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“No, you can’t have a pony.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;501 Not Implemented&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Daddy can’t fix it.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;502 Bad Gateway&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Mommy said bad words.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;503 Service Unavailable&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Daddy is busy.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;504 Gateway Timeout&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Mommy’s not answering the phone.”&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;&lt;samp&gt;505 HTTP Version Not Supported&lt;/samp&gt;&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;“Daddy can’t hear you if you use words like that.”&lt;/p&gt; &lt;/dd&gt; &lt;/dl&gt; &lt;p&gt;(&lt;a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"&gt;The real definitions&lt;/a&gt; might help if you don’t get them all.)&lt;/p&gt; &lt;h4&gt;Postscript&lt;/h4&gt; &lt;p&gt;It is important to remember that REST != HTTP, and status codes don’t tell the whole story. &lt;a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm"&gt;REST is an architectural style&lt;/a&gt; which revolves around The Four Verbs:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;“Give it here,”&lt;/li&gt; &lt;li&gt;“Here you go,”&lt;/li&gt; &lt;li&gt;“Put that thing back where it came from or so help me,” and&lt;/li&gt; &lt;li&gt;“Flush.”&lt;/li&gt; &lt;/ol&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1163460471197">
+		<id gr:original-id="tag:diveintomark.org,2006-11-13:/archives/20061113224311">
+			tag:google.com,2005:reader/item/e48e5597f1198996
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Backson
+		</title>
+		<published>
+			2006-11-13T22:43:11Z
+		</published>
+		<updated>
+			2006-11-13T22:43:11Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/11/13/backson" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/11/13/backson" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://diveintomark.org/public/2006/11/bisy-backson-700x420.gif" alt="Gon out backson, bisy backson" title="this is neither a 410 nor a 447" width="700" height="420"&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1162847452835">
+		<id gr:original-id="tag:diveintomark.org,2006-11-06:/archives/20061106204234">
+			tag:google.com,2005:reader/item/6d0d0cccf2583723
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="debian" scheme="http://diveintomark.org/tag/" /><category term="gnewsense" scheme="http://diveintomark.org/tag/" /><category term="linux" scheme="http://diveintomark.org/tag/" /><category term="ubuntu" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			gNewSense first impressions
+		</title>
+		<published>
+			2006-11-06T20:42:34Z
+		</published>
+		<updated>
+			2006-11-07T02:47:17Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/11/06/gnewsense" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/11/06/gnewsense" xml:lang="en" type="html">
+			&lt;p&gt;There’s a new GNU/Linux distribution, &lt;a href="http://www.gnewsense.org/"&gt;gNewSense&lt;/a&gt;, so of course there had to be &lt;a href="http://www.digg.com/linux_unix/FSF_debuts_fully_free_Ubuntu_Debian_variant"&gt;a Digg thread full of people complaining that the world doesn’t need another GNU/Linux distribution&lt;/a&gt;. I would argue the opposite: this is one distribution that the world absolutely &lt;em&gt;does&lt;/em&gt; need. (It may need others too, that’s not part of this argument.)&lt;/p&gt; &lt;p&gt;gNewSense’s “schtick” is that it removes all the “binary blobs” from &lt;a href="http://www.ubuntu.com/"&gt;Ubuntu&lt;/a&gt; to create an entire operating system and packaging ecosystem that contains 100% &lt;a href="http://www.gnu.org/philosophy/free-sw.html"&gt;Free Software&lt;/a&gt;. This means no “restricted” repository (which contains non-free video drivers) and no “multiverse” repository (which contains a multitude of other non-free packages).&lt;/p&gt; &lt;blockquote style="font-size:smaller"&gt; &lt;p&gt;Digression: the “multiverse” repository contains a number of packages that are widely believed to violate actively enforced patents, but are nonetheless distributed under Free Software or open source licenses. (A lot of video-related libraries fall into this category.) As far as I can tell, gNewSense does not make any attempt to identify these packages. Nothing from the Ubuntu “multiverse” is available in the gNewSense repositories.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Besides the separate repositories, the “binary blobs” in question are primarily drivers in the kernel which are distributed under non-free licenses or which have unclear licensing terms. &lt;a href="http://wiki.debian.org/KernelFirmwareLicensing"&gt;Debian has been struggling with this issue&lt;/a&gt; and has decided to allow such drivers to ship in Debian Etch (due to be released Real Soon Now). Ubuntu also ships with a &lt;a href="http://www.tux.org/lkml/#s1-18"&gt;tainted kernel&lt;/a&gt; and a “restricted” repository that contains Canonical-supported non-free video drivers for ATI and nVidia cards. gNewSense rejects all such drivers and ships a kernel which is 100% Free Software, no matter how useless that may be in the real world. The gNewSense maintainers apparently feel that saying you’re “a little bit non-free” is akin to saying you’re “a little bit pregnant.” Close doesn’t count, and even if people don’t notice the difference today, they’ll definitely notice it nine months from now.&lt;/p&gt; &lt;blockquote style="font-size:smaller"&gt; &lt;p&gt;Digression #2: since &lt;a href="http://diveintomark.org/archives/2006/08/11/openwrt"&gt;the last time I discussed my home computing situation&lt;/a&gt;, I’ve made a number of hardware upgrades. One of the joys of having the world’s most boring hardware is that there’s an enormous ecosystem of compatible third-party hardware you can install. This may sound like the world’s most boring revelation, but it was actually a surprise to me. My last three computers, in reverse chronological order, were a PowerBook, an iMac, and an PowerMac 8500. OK, the 8500 had PCI slots, but the iMac and PowerBook were notoriously non-upgradeable. I worked around the problem by buying external accessories (terabyte hard drive, DVD+R/DL burner, CF card reader), but I honestly didn’t know about the wide world of &lt;em&gt;internal&lt;/em&gt; accessories. Why would I? I couldn’t use them.&lt;/p&gt; &lt;p&gt;Anyway, I’ve been having fun buying internal accessories recently: a 750 GB Seagate Barracuda hard drive (replaces the default hard drive), an internal Philips DVD+R/DL burner (replaces the default DVD-ROM drive), an internal 9-in-1 card reader (fits in the floppy drive slot), a Firewire card (fits in a PCI slot), a wireless card (fits in another PCI slot), and a cordless mouse (communicates with a base station that plugs into a USB port). They all worked like a charm in Ubuntu, although I did check the &lt;a href="https://help.ubuntu.com/community/WifiDocs/WirelessCardsSupported"&gt;wireless card compatibility list&lt;/a&gt; before buying the wireless card. I would have mentioned the upgrades sooner, except… they all worked. Nobody wants to read a one-line HOWTO that says “Everything just worked.”&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;So this is what convinced me to download the gNewSense Live CD (&lt;a href="http://cdimage.gnewsense.org/"&gt;via the torrent&lt;/a&gt;, which I am still seeding). Not because I want to use it (although I might someday, if they work out all the kinks and a real community forms around it), but because I wanted to check whether my recently upgraded hardware would work.&lt;/p&gt; &lt;blockquote style="font-size:smaller"&gt; &lt;p&gt;Digression #3: the first thing I noticed when I booted the gNewSense Live CD is that it inherits Debian’s and Ubuntu’s mistake of including a program called “Firefox” with non-official artwork. &lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354622"&gt;Debian got put on notice&lt;/a&gt; about this recently, whereas &lt;a href="http://www.markshuttleworth.com/archives/79"&gt;Ubuntu apparently made a special agreement with the Mozilla Corporation&lt;/a&gt;. (No one seems to know what the terms were, and &lt;a href="http://packages.ubuntu.com/feisty/web/firefox"&gt;the Firefox package in Ubuntu Feisty&lt;/a&gt; is still &lt;tt&gt;firefox_2.0+0dfsg-0ubuntu3&lt;/tt&gt;, which doesn’t seem to include any substantial changes over the package that Debian got in trouble for shipping. Presumably the changes will be made before Feisty ships next year.) The problem is that the official Firefox artwork is under a strict copyright license, not open source, and the Mozilla Corporation is insisting that any product called “Firefox” &lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354622;msg=74"&gt;must ship with the official artwork&lt;/a&gt;. In other words, you can’t ship a product called “Firefox” that is open source; it has to contain at least one piece of non-free artwork. The Mozilla Corporation &lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354622;msg=59"&gt;gave Debian a simple choice&lt;/a&gt;: “[Y]our usage of the trademark is not permitted in this way, and we are expecting a resolution. If your choice is to cease usage of the trademark rather than bend the DFSG a little, that is your decision to make.” Debian Etch will include a browser called “IceWeasel,” &lt;a href="http://web.glandium.org/blog/?p=97"&gt;which is simply Firefox rebranded with open source artwork&lt;/a&gt;, whereas Ubuntu Feisty will include a browser called “Firefox” which is a little bit pregnant.&lt;/p&gt; &lt;blockquote style="font-size:smaller"&gt; &lt;p&gt;Digression to the digression: I don’t really understand why Debian needs to call it “IceWeasel.” If you check out the MOZILLA_1_8_BRANCH from cvs.mozilla.org and compile it, you’ll get a perfectly good, completely open source browser named “Bon Echo.” It comes with open source artwork and everything. Of course, if you check out CVS HEAD (or MOZILLA_1_9_BRANCH next year, once it branches), you’ll get a perfectly good, completely open source browser called “Minefield.” Maybe the Debian folks just wanted consistent branding across versions.&lt;/p&gt; &lt;blockquote style="font-size:smaller"&gt; &lt;p&gt;Digression&lt;sup&gt;3&lt;/sup&gt;: Don’t confuse Debian’s IceWeasel with the Free Software Foundation’s &lt;a href="http://www.gnu.org/software/gnuzilla/"&gt;GNU IceWeasel&lt;/a&gt;. Debian is pulling from cvs.mozilla.org (MOZILLA_1_8_BRANCH, the same branch that Firefox 2.0 is based on) and changing the artwork and making other Debian-specific patches. The FSF actually maintains their own source code repository, which they forked a while ago from MOZILLA_1_8_0_BRANCH (the same branch that Firefox 1.5 was based on). Good Lord, this is complicated.&lt;/p&gt; &lt;/blockquote&gt; &lt;/blockquote&gt; &lt;p&gt;The second thing I noticed about gNewSense was that, upon launching the browser-improperly-known-as-Firefox, it tried to load a local file that didn’t exist. Apparently the gNewSense maintainers removed the &lt;tt&gt;ubuntu-artwork&lt;/tt&gt; package where the default home page is defined, but they didn’t bother to change the browser’s default home page. Kinks like this are why people love Ubuntu. Getting things to work well is a lot harder than getting them to work at all.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;It all comes back to the issue of the tainted kernel. I had only tested my new hardware in Ubuntu. Did it all “just work” because it’s truly supported by Free Software, or did it “just work” because Ubuntu “helpfully” installed a non-free driver? Without a clean kernel, I couldn’t be sure. (Yeah yeah, I could have compiled my own kernel. I’ve done it before. It’s not terribly complicated, especially if you’re compiling it on the same machine you’re going to run it on. Downloading and burning a Live CD was easier. Plus now I get to seed the torrent.)&lt;/p&gt; &lt;p&gt;I am happy to report that all of my hardware worked flawlessly in gNewSense. That includes the integrated Intel 945G video, ThinkVision L192p monitor at full resolution, integrated sound chip (AD198x I think), &lt;a href="http://pckeyboards.stores.yahoo.net/customizer.html"&gt;Customizer Black keyboard&lt;/a&gt; (&lt;a href="http://diveintomark.org/archives/2006/05/30/bye-apple"&gt;the real fucking keyboard&lt;/a&gt;), &lt;a href="http://www.newegg.com/Product/Product.asp?Item=N82E16826104192"&gt;Logitech LX7 cordless mouse&lt;/a&gt;, &lt;a href="http://www.newegg.com/Product/Product.asp?Item=N82E16815203001"&gt;ADS Firewire card&lt;/a&gt;, &lt;a href="http://www.newegg.com/Product/Product.asp?Item=N82E16827248002"&gt;Philips dual-layer DVD burner&lt;/a&gt;, &lt;a href="http://www.newegg.com/product/product.asp?item=N82E16820270002"&gt;SIIG JU-91NF12 9-in-1 card reader&lt;/a&gt;, and &lt;a href="http://www.newegg.com/Product/Product.asp?Item=N82E16833124115"&gt;Linksys WMP54G wireless networking&lt;/a&gt;. (Yes, I actually tested the Firewire card by hooking up my digital video camera and importing a short amount of video with &lt;kbd&gt;dvgrab&lt;/kbd&gt;.) The default layout and applications are mostly unchanged from Ubuntu, with the exception of Emacs, which gNewSense installs by default. (It also installs &lt;tt&gt;build-essentials&lt;/tt&gt;, which includes a compiler and other development tools.)&lt;/p&gt; &lt;p&gt;This is why I say that gNewSense is the one distribution that the world actually needs: it’s like a &lt;a href="http://en.wikipedia.org/wiki/Reference_implementation_(computing)"&gt;reference implementation&lt;/a&gt; for Free Software. Standards often (alas, not often enough) ship with a reference implementation which focuses on correctness at the expense of everything else (including performance, scalability, and backward compatibility). You’re not actually supposed to use reference implementations in the real world; you’re supposed to test against them. gNewSense is the reference implementation of software freedom, and my hardware passed the test.&lt;/p&gt; &lt;p&gt;Will I switch from Ubuntu to gNewSense? No. But I could, and that’s enough of a victory for today.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1162334222538">
+		<id gr:original-id="tag:diveintomark.org,2006-10-31:/archives/20061031202122">
+			tag:google.com,2005:reader/item/04158f077217416f
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="accessibility" scheme="http://diveintomark.org/tag/" /><category term="firefox" scheme="http://diveintomark.org/tag/" /><category term="mozilla" scheme="http://diveintomark.org/tag/" /><category term="planetmozilla" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			A success story
+		</title>
+		<published>
+			2006-10-31T20:21:22Z
+		</published>
+		<updated>
+			2006-10-31T20:21:22Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/31/success" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/31/success" xml:lang="en" type="html">
+			&lt;p&gt;&lt;cite&gt;Aaron Leventhal&lt;/cite&gt;: &lt;a href="http://www-306.ibm.com/able/resources/firefox.html"&gt;Firefox: an open source accessibility success story&lt;/a&gt;.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1162324846308">
+		<id gr:original-id="tag:diveintomark.org,2006-10-31:/archives/20061031181859">
+			tag:google.com,2005:reader/item/c597a1bf3e06d4cd
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="murdersandexecutions" scheme="http://diveintomark.org/tag/" /><category term="reddit" scheme="http://diveintomark.org/tag/" /><category term="web20" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			User-generated content
+		</title>
+		<published>
+			2006-10-31T18:18:59Z
+		</published>
+		<updated>
+			2006-10-31T18:19:14Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/31/ugc" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/31/ugc" xml:lang="en" type="html">
+			&lt;dl&gt; &lt;dt&gt;&lt;a href="http://en.wikipedia.org/wiki/User-generated_content"&gt;UGC&lt;/a&gt;&lt;/dt&gt; &lt;dd&gt;Stands for “user-generated content,” a new form of online scam in which &lt;a href="http://reddit.com/stats"&gt;you make all the content&lt;/a&gt;, and &lt;a href="http://www.techcrunch.com/2006/10/31/breaking-news-conde-nastwired-acquires-reddit/"&gt;we keep all the money&lt;/a&gt;.&lt;/dd&gt; &lt;/dl&gt; &lt;p style="font-size:x-small"&gt;(with apologies to &lt;a href="http://www.eod.com/devil/archive/"&gt;Greg Knauss&lt;/a&gt;, who in turn offers apologies to &lt;a href="http://www.kirjasto.sci.fi/bierce.htm"&gt;Ambrose Bierce&lt;/a&gt;)&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1161985474080">
+		<id gr:original-id="tag:diveintomark.org,2006-10-27:/archives/20061027211810">
+			tag:google.com,2005:reader/item/516e0ec26c83486c
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="parenting" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Sunday morning
+		</title>
+		<published>
+			2006-10-27T21:18:10Z
+		</published>
+		<updated>
+			2006-10-27T21:18:10Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/27/sunday-morning" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/27/sunday-morning" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://diveintomark.org/public/2006/10/sunday-morning-full.jpg"&gt;&lt;img src="http://diveintomark.org/public/2006/10/sunday-morning-640.jpg" alt="mess of toys, magazines, and scraps" width="640" height="480"&gt;&lt;/a&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1161629365292">
+		<id gr:original-id="tag:diveintomark.org,2006-10-23:/archives/20061023174917">
+			tag:google.com,2005:reader/item/761875f22174ce20
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="decss" scheme="http://diveintomark.org/tag/" /><category term="drm" scheme="http://diveintomark.org/tag/" /><category term="dvd" scheme="http://diveintomark.org/tag/" /><category term="parenting" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			DeCSS, how do I love thee?
+		</title>
+		<published>
+			2006-10-23T17:49:17Z
+		</published>
+		<updated>
+			2006-10-23T17:49:51Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/23/finding-drm" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/23/finding-drm" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://digg.com/apple/Unlocking_the_iPod_3#c3542274"&gt;Let me count the ways&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Why did I love DeCSS? Here’s a hint: it’s NOT so that I could give all my friends a copy of [enter movie here]. I have a 2 year old. Do you know how quickly a 2 year old learns how to eject a DVD from the player? Have you ever seen what a 2 year old can do to a now-ejected DVD?&lt;/p&gt; &lt;p&gt;Having DRM on any of the products that I purchased only limit my ability to protect said investment. Sure, an 8-track/CD/DVD/Blue-Ray isn’t a Franklin “not-guaranteed-to-increase-in-value” Mint hand-painted plate set, but I don’t want to be forced to re-purchase “Finding Nemo” 8 times because my kid wants to take it to bed with him. [Yes, he does love the movie THAT much.]&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Word.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1160927750965">
+		<id gr:original-id="tag:diveintomark.org,2006-10-15:/archives/20061015151742">
+			tag:google.com,2005:reader/item/8acc35ac63a96ca6
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="parenting" scheme="http://diveintomark.org/tag/" /><category term="tuxpaint" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Fish fish fish fish fish
+		</title>
+		<published>
+			2006-10-15T15:17:42Z
+		</published>
+		<updated>
+			2006-10-15T15:17:42Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/15/fish-fish-fish-fish-fish" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/15/fish-fish-fish-fish-fish" xml:lang="en" type="html">
+			&lt;p&gt;I recently introduced my two-year-old to &lt;a href="http://gcompris.net/"&gt;GCompris&lt;/a&gt; and &lt;a href="http://www.tuxpaint.org/"&gt;TuxPaint&lt;/a&gt;. This morning we spent 20 minutes playing with the stamp tool, and he would like to share the result. The conversation went something like this:&lt;/p&gt; &lt;dl&gt; &lt;dt&gt;Me&lt;/dt&gt; &lt;dd&gt;(Loads saved picture in browser) Look, that’s your fish.&lt;/dd&gt; &lt;dt&gt;Him&lt;/dt&gt; &lt;dd&gt;Yeah, fish fish fish fish fish.&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt; &lt;dd&gt;Can I share your fish?&lt;/dd&gt; &lt;dt&gt;Him&lt;/dt&gt; &lt;dd&gt;YEAH!&lt;/dd&gt; &lt;/dl&gt; &lt;p&gt;So, as his parent and legal guardian, I am licensing it under the &lt;a href="http://creativecommons.org/licenses/by-sa/2.5/"&gt;CC ShareAlike License&lt;/a&gt; on his behalf.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2006/10/20061015105156.jpg" alt="[Fish fish fish fish fish]" title="" width="729" height="606"&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1160763378897">
+		<id gr:original-id="tag:diveintomark.org,2006-10-13:/archives/20061013172122">
+			tag:google.com,2005:reader/item/2f3a6941f2a114e5
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="accessibility" scheme="http://diveintomark.org/tag/" /><category term="accessibilityworks" scheme="http://diveintomark.org/tag/" /><category term="atk" scheme="http://diveintomark.org/tag/" /><category term="conference" scheme="http://diveintomark.org/tag/" /><category term="dhtml" scheme="http://diveintomark.org/tag/" /><category term="firefox" scheme="http://diveintomark.org/tag/" /><category term="liveregion" scheme="http://diveintomark.org/tag/" /><category term="lsr" scheme="http://diveintomark.org/tag/" /><category term="mac" scheme="http://diveintomark.org/tag/" /><category term="mathml" scheme="http://diveintomark.org/tag/" /><category term="mozilla" scheme="http://diveintomark.org/tag/" /><category term="newatk" scheme="http://diveintomark.org/tag/" /><category term="planetmozilla" scheme="http://diveintomark.org/tag/" /><category term="svg" scheme="http://diveintomark.org/tag/" /><category term="voiceover" scheme="http://diveintomark.org/tag/" /><category term="xul" scheme="http://diveintomark.org/tag/" /><category term="xulrunner" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Mozilla Accessibility Summit 2006
+		</title>
+		<published>
+			2006-10-13T17:21:22Z
+		</published>
+		<updated>
+			2006-10-13T17:49:58Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" xml:lang="en" type="html">
+			&lt;p&gt;Tuesday, October 10 – Thursday, October 12, 2006&lt;/p&gt; &lt;p&gt;The summit was sponsored by the Mozilla Foundation and hosted by IBM in Cambridge, MA.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#opening"&gt;Opening&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#dhtml"&gt;Web 2.0&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/osk"&gt;On-screen keyboard&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#firevox"&gt;Fire Vox&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#accessibilityworks"&gt;AccessibilityWorks&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#lsr"&gt;LSR&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#xul"&gt;XUL accessibility checker and guidelines&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#mac"&gt;Mac Firefox + VoiceOver&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#newatk"&gt;Firefox ATK improvements&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#svg"&gt;SVG/MathML&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#dinner"&gt;Group dinner&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#other"&gt;Other attendees and anecdotes&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h4&gt;Opening&lt;/h4&gt; &lt;p&gt;Aaron Leventhal opened the summit with a presentation on the current state of the Mozilla accessibility “ecosystem”. This included specifics on what is missing and how we can fill in those pieces. He later led a discussion on how Firefox exposes web content and user interface “chrome” via accessibility APIs.&lt;/p&gt; &lt;h4&gt;Web 2.0&lt;/h4&gt; &lt;p&gt;Aaron Leventhal also presented on &lt;a href="http://developer.mozilla.org/en/docs/Accessible_DHTML"&gt;DHTML Accessibility&lt;/a&gt;. He then hosted a lively discussion of the &lt;a href="http://www.w3.org/WAI/PF/GUI/roleTaxonomy-20060508.html#Structure"&gt;proposed “live region” technique&lt;/a&gt; that will allow assistive technologies to be notified of in-page changes in AJAX web applications. Bill Haneman of Sun expressed concern over the semantics of a live region’s “politeness” level (that’s the actual attribute name at the moment). He also suggested a more streamlined markup to indicate which elements on the page are live regions. Aaron agreed to take all of these suggestions back to the WAI working group.&lt;/p&gt; &lt;h4&gt;On-screen keyboard&lt;/h4&gt; &lt;p&gt;&lt;a href="http://elgg.net/stevelee/profile/"&gt;Steve Lee&lt;/a&gt; presented his ideas for a cross-platform on-screen keyboard for head pointers and switch users. We talked through several approaches and agreed on a XULRunner/SVG/Python approach. As much as possible, the on-screen display will get out of the way and highlight interface elements on screen. Inspired by &lt;a href="http://www.treebuilder.de/default.asp?file=257091.xml"&gt;the SVG XULRunner clock&lt;/a&gt;, The use of SVG will allow it to have a scalable interface that looks good at any resolution. Steve is putting together a Mozilla Foundation grant proposal for further work.&lt;/p&gt; &lt;h4&gt;Fire Vox&lt;/h4&gt; &lt;p&gt;Charles Chen gave a demonstration of &lt;a href="http://www.firevox.clcworld.net/"&gt;Fire Vox&lt;/a&gt;, his GPL-licensed Firefox extension that can speak and navigate web pages, and supports both the CSS 3 speech module and MathML markup. Fire Vox works on Windows, Mac OS X, and Linux and is available today. I first saw it at the &lt;a href="http://www.csun.edu/cod/conf/"&gt;CSUN conference&lt;/a&gt; in March, and since then Charles has been hard at work adding multilingual support. He demonstrated a web page marked up with text in multiple languages, and Fire Vox changed speech engines automatically and spoke each paragraph in its correct language. (The speech engines are licensed separately. Windows users can &lt;a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=5E86EC97-40A7-453F-B0EE-6583171B4530&amp;amp;displaylang=en"&gt;download two additional voices for no charge&lt;/a&gt;.)&lt;/p&gt; &lt;p&gt;Charles is also putting together a Mozilla Foundation grant proposal to integrate “live region” support into Fire Vox, making it the first assistive technology to support the upcoming standard.&lt;/p&gt; &lt;h4&gt;AccessibilityWorks&lt;/h4&gt; &lt;p&gt;Cal Swart of IBM gave a demo of &lt;a href="http://domino.research.ibm.com/comm/research_projects.nsf/pages/access.index.html"&gt;AccessibilityWorks&lt;/a&gt;, a program which provides accessibility customizations in both Internet Explorer and Firefox. It can display a larger cursor, override document styles, increase letter spacing and line spacing, speak text as you hover your cursor over a word or paragraph, and much more. AccessibilityWorks is currently a technology preview that works on Windows, Mac OS X, and Linux.&lt;/p&gt; &lt;h4&gt;&lt;acronym title="Linux Screen Reader"&gt;LSR&lt;/acronym&gt;&lt;/h4&gt; &lt;p&gt;Peter Parente of IBM was also present. Peter is working on &lt;a href="http://live.gnome.org/LSR"&gt;LSR&lt;/a&gt;, a new open source screenreader for Linux. LSR is unique among screenreaders on any platform because it can manage multiple audio tracks simultaneously. For example, it can announce an incoming instant message in a background window while reading a web page in the foreground, or announce a notification area alert bubble while echoing user input in a terminal window. LSR can mimic the visual space in a 3-dimensional aural space, for instance by making background events sound further away. Peter and Aaron Leventhal have been collaborating for several months to get LSR to work correctly with Firefox 3. Peter has published &lt;a href="http://www.gnome.org/~parente/lsr/screencast/lsr-gsummit06.html"&gt;a 14-minute screencast of LSR&lt;/a&gt; (requires Flash).&lt;/p&gt; &lt;h4&gt;XUL accessibility checker&lt;/h4&gt; &lt;p&gt;Shane Anderson and Aaron Andersen of &lt;a href="http://www.webaim.org/"&gt;WebAIM&lt;/a&gt; were also there. WebAIM has received a Mozilla Foundation grant to write an open source XUL accessibility checker. It will be available as a server-side tool and as a client-side Firefox extension that can fully check installed Firefox extensions and Firefox itself. They will also be updating the &lt;a href="http://www.mozilla.org/access/xul-guidelines"&gt;XUL Accessibility Guidelines&lt;/a&gt; to bring them in line with &lt;a href="http://www.w3.org/TR/WCAG20/"&gt;WCAG 2.0&lt;/a&gt;. Shane, Aaron, and I brainstormed for six hours, and we ended up with a list of 119 techniques which their accessibility checker can programmatically test in XUL interfaces.&lt;/p&gt; &lt;h4&gt;Mac Firefox + VoiceOver&lt;/h4&gt; &lt;p&gt;Håkan Waara received a Mozilla Foundation grant earlier this year to integrate Firefox with &lt;a href="http://www.apple.com/accessibility/voiceover/"&gt;VoiceOver&lt;/a&gt;, Apple’s accessibility architecture for Mac OS X. Using his private build of Firefox 3, he demonstrated visiting Google and performing a web search. VoiceOver correctly announced the Firefox window on launch, spoke the current page URL in the location bar, and spoke the type and text of links and form controls as he tabbed through the home page and the search results page. Given the dearth of documentation from Apple, this is nothing short of miraculous.&lt;/p&gt; &lt;p&gt;Håkan traveled to the summit from his home country of Sweden with his desktop iMac in a suitcase. We were unable to reach consensus on which of these achievements was more impressive.&lt;/p&gt; &lt;h4&gt;Firefox/ATK improvements&lt;/h4&gt; &lt;p&gt;Bill Haneman and several other other Sun employees hosted a discussion of Firefox accessibility on Linux/Solaris, informally dubbed “&lt;a href="http://www.mozilla.org/access/unix/new-atk.html"&gt;New-ATK&lt;/a&gt;“. The consensus was that the way Firefox 3 exposes HTML via ATK is slightly non-standard but acceptable. Specifically, Firefox will continue to use embedded object characters for any non-text child in a text container, and Bill will note the Firefox implementation as an exception case in the ATK documentation. We also agreed on how autocomplete textboxes and combo boxes should be exposed. New states may be added to ATK/AT-SPI in the future to indicate inline vs. dropdown autocompletion.&lt;/p&gt; &lt;p&gt;With this consensus behind us, we are entering the “home stretch” for Firefox 3 accessibility support on Linux; from here on out, it’s just polishing the code and squashing bugs. And speaking of bugs, Will Walker of Sun sat down and hacked out a prototype to walk the Firefox accessibility hierarchy, which exposed several previously unknown issues. All in all, a three-hour discussion led to six new bugs being filed in Bugzilla.&lt;/p&gt; &lt;h4&gt;SVG/MathML&lt;/h4&gt; &lt;p&gt;Despite initial hopes going into the summit, no one volunteered to tackle the accessibility of MathML and SVG content. The Mozilla Foundation would be willing to sponsor such work (you know, with cash and stuff) if anyone were interested. Aaron Leventhal also maintains &lt;a href="http://www.mozilla.org/access/projects"&gt;a list of other potential projects&lt;/a&gt; that are waiting for the right person to write a grant proposal.&lt;/p&gt; &lt;h4&gt;Group dinner&lt;/h4&gt; &lt;p&gt;Frank Hecker of the Mozilla Foundation was there on Tuesday. He didn’t give a presentation, but between sessions he engaged with nearly everyone throughout the week. He also treated everyone to dinner and drinks at the &lt;a href="http://www.cambrew.com/"&gt;Cambridge Brewing Company&lt;/a&gt;.&lt;/p&gt; &lt;h4&gt;Other attendees and anecdotes&lt;/h4&gt; &lt;p&gt;Other attendees:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Ginn Chen, Nian Liu, William Walker, Peter Korn, and Mike Pedersen of Sun&lt;/li&gt; &lt;li&gt;Nagappan Alagappan of Novell&lt;/li&gt; &lt;li&gt;Rich Caloggero of WGBH&lt;/li&gt; &lt;li&gt;Frank Schwichtenberg of IBM&lt;/li&gt; &lt;li&gt;Joe Lazzaro from ITD, Commonwealth of Massachusetts&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Miscellaneous anecdotes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;This was Håkan’s first trip to the United States. We introduced him to Radio Shack and Starbucks.&lt;/li&gt; &lt;li&gt;Another Håkan anecdote: his demonstration required two trips to the local Apple Store, once to buy a VGA adapter to connect his iMac to the projector, and once to return it and buy a different one because the Apple geniuses convinced us to buy the wrong one the first time. Many thanks to Frank Schwichtenberg for making both trips.&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.songbirdnest.com/"&gt;Songbird&lt;/a&gt; provided an excellent opportunity to explore how many ways you can make a XUL application inaccessible. That’s a harsh assessment, but we were actually quite grateful. Reviewing Songbird revealed how our expertise can sometimes hinder our work, because outrageously inaccessible techniques simply don’t occur to us. WebAIM’s documentation and validator tools will be better for it.&lt;/li&gt; &lt;li&gt;Most people stayed in the &lt;a href="http://www.hotelmarlowe.com/"&gt;Hotel Marlowe&lt;/a&gt;, which was quite nice. Due to scheduling conflicts, I ended up spending the last night in the &lt;a href="http://www.kendallhotel.com/"&gt;Kendall Hotel&lt;/a&gt;, which is a charming little hotel located in what used to be a firehouse. I would recommend either of them for anyone traveling to Cambridge.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;em&gt;Disclaimer: the Mozilla Foundation paid my expenses to attend this summit.&lt;/em&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1160147563344">
+		<id gr:original-id="tag:diveintomark.org,2006-10-06:/archives/20061006134202">
+			tag:google.com,2005:reader/item/f96c03fa55f8b2d1
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="apex" scheme="http://diveintomark.org/tag/" /><category term="emergency" scheme="http://diveintomark.org/tag/" /><category term="evacuation" scheme="http://diveintomark.org/tag/" /><category term="fire" scheme="http://diveintomark.org/tag/" /><category term="local" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Liveblogging the Apex chemical fire
+		</title>
+		<published>
+			2006-10-06T13:42:02Z
+		</published>
+		<updated>
+			2006-10-07T13:53:34Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/06/apex-fire" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/06/apex-fire" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;Background: &lt;a href="http://www.newsobserver.com/102/story/495143.html"&gt;Apex fire spreads toxic gas&lt;/a&gt;.&lt;/li&gt; &lt;li&gt;&lt;a href="http://images.ibsys.com/2006/1006/10015196.jpg"&gt;Evacuation area&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;q=2500+Carpenter+Upchurch+Rd+cary,+nc&amp;amp;ie=UTF8&amp;amp;z=15&amp;amp;om=1&amp;amp;iwloc=A"&gt;Green Hope High School&lt;/a&gt; is operating as a shelter for evacuees. All other shelters (Turner Creek Elementary, Olive Chapel Elementary) are now closed.&lt;/li&gt; &lt;li&gt;Non-emergency inquiries: call 919-856-7044. DO NOT CALL 911 except for emergencies.&lt;/li&gt; &lt;li&gt;Plant company offering assistance/compensation to displaced residents for expenses incurred during evacuation: 1-888-675-1680.&lt;/li&gt; &lt;li&gt;My house is about a mile outside the outer limit of the evacuation area. We took precautions but did not need to evacuate.&lt;/li&gt; &lt;/ul&gt; &lt;dl&gt; &lt;dt&gt;Saturday 9:45 AM&lt;/dt&gt; &lt;dd&gt;Parts of the evacuation area have re-opened, and most residents are &lt;a href="http://www.wral.com/image/10024015/detail.html"&gt;returning home in phases&lt;/a&gt; throughout Saturday morning. The immediate area around the plant is still closed indefinitely. … Cause of fire is still unknown. … Residents who are concerned about chemical residue should wash their clothes and linens thoroughly, change all HVAC filters, wipe down all counters and surfaces with mild soap and water, wash all baby toys, and bathe pets. Pets who show symptoms of exposure (listed below) should be taken to a vet ASAP.&lt;/dd&gt; &lt;dt&gt;10:45 PM&lt;/dt&gt; &lt;dd&gt;Fire is still burning and may continue to burn until tomorrow morning. However, some residents have been cleared to go home (Haddon Hall residents only, appparently because it is close enough to the edge of the evacuation zone and the zone has been shrunk slightly). … State of emergency is still in effect; anyone caught in downtown Apex will be arrested on sight.&lt;/dd&gt; &lt;dt&gt;5 PM&lt;/dt&gt; &lt;dd&gt;Highways have reopened bordering the evacuation area. No “all clear” signal yet. 4 small fires still burning after 17 hours of “just letting it burn.” Still no word on what chemicals are burning. Still no word on when residents will be allowed to return home. Red Cross has arrived to provide assistance at shelter. … Town Manager: “This is the worst possible hazardous materials incident you could have.” … Investigators from U.S. Technical Safety Board are headed to the scene.&lt;/dd&gt; &lt;dt&gt;1 PM&lt;/dt&gt; &lt;dd&gt;Taking a break. Local coverage: &lt;a href="http://www.wral.com/"&gt;CBS&lt;/a&gt;, &lt;a href="http://abclocal.go.com/wtvd/"&gt;ABC&lt;/a&gt;, &lt;a href="http://www.nbc17.com/"&gt;NBC&lt;/a&gt;, &lt;a href="http://www.newsobserver.com/"&gt;News &amp;amp; Observer&lt;/a&gt;.&lt;/dd&gt; &lt;dt&gt;12:55 PM&lt;/dt&gt; &lt;dd&gt;Latest reports from air quality monitors show no problems.&lt;/dd&gt; &lt;dt&gt;12:45 PM&lt;/dt&gt; &lt;dd&gt;Reporter @ WakeMed: 34 people have come in. None by ambulance. Of 34, only 4 remain being treated. 2 of those 4 are police officers. Not admitted, just being checked out. … &lt;br&gt; WakeMed Chief of Medicine: expecting a trickle of more people complaining of symptoms. If you think you’ve been exposed, please come in and get checked out.&lt;/dd&gt; &lt;dt&gt;12:40 PM&lt;/dt&gt; &lt;dd&gt;Amtrak update: Silver Star trains (91 &amp;amp; 92) will bypass 3 stops: Raleigh, Southern Pines, &amp;amp; Cary. Passengers will be bussed from Rocky Mount and Hamlet.&lt;/dd&gt; &lt;dt&gt;12:30 PM&lt;/dt&gt; &lt;dd&gt;Reporter: hazmat crews having difficulty assessing the fire because the building where the fire started has collapsed. “In a holding pattern” until they can complete their work.&lt;/dd&gt; &lt;dt&gt;12:25 PM&lt;/dt&gt; &lt;dd&gt;Mayor: I was not aware until this morning that there had been previous compliance problems at this location. “We’ll be having an internal briefing at 1:30 PM, so as soon as that’s completed we’ll be coming out and talking to you again.”&lt;/dd&gt; &lt;dt&gt;12:20 PM&lt;/dt&gt; &lt;dd&gt;Fire chief: “we can not do anything with the exclusionary zone until the fire is out.” (That means nobody’s going home yet.) … [re: fighting the fire itself] “We have two options: we can either use unmanned monitors with straight water. Of course that creates a run-off issue. Our other option is using AFFF, a firefighters foam for chemical fires, which reduces the water run-off. We have both of those capabilities on-site standing by at this time.” &lt;br&gt;Mayor: [re: drinking water] “This spill happened in the Neuse River basin and we draw our water from the Cape Fear basin which is Lake Jordan. So let me assure anyone that has any concern about the quality of the drinking water that may be affected by hazardous chemicals, there’s absolutely no reason to have any concern in that regard, because we are drawing our water from Lake Jordan which could not possibly have been impacted by the spill.”&lt;/dd&gt; &lt;dt&gt;12:15 PM&lt;/dt&gt; &lt;dd&gt;Mayor: We had a total of 13 police officers exposed to the chemicals and required medical treatment. All 13 have now been discharged from hospital and are back on duty or will be very soon. … Green Hope shelter will allow people to stay overnight if necessary. … Had lengthy conversation with president of EQ (plant company) and will release a statement soon. Company intends to offer assistance to displaced residents: 1-888-675-1680. … EPA officials did a proximity review; that plus hazmat crew’s assessment, initial reports that petroleum tanks had exploded is “probably not true. … There were some explosions, but they were probably not petroleum.” … No evidence of any toxic residue in downtown Apex or anywhere else. … “I feel that officials anticipated everything that could reasonably be anticipated.”&lt;/dd&gt; &lt;dt&gt;12:10 PM&lt;/dt&gt; &lt;dd&gt;Apex fire chief: “we immediately started door-to-door evacuation in the initial hazard area. The situation expanded exponentially. We then activated the county’s reverse 911 system, which automatically called a determined grid area based on the plume path. … As soon as we could, we got messages on all local TV stations. Based on the travel path of the plume, we opted to shelter some people in their homes. If we had evacuated them they would have moved right into [the plume]. So it was a much safer option to shelter them in place. When we did the reverse 911 message, we identified those areas and placed a message on there to tell them how to safely shelter in place.” [question about people who never got the reverse 911 call] “That’s very possible, because based on the way the plume was going, we had a definitive wind pattern. It was taking the plume in one direction. We opted not to take and expand in the reverse direction behind our command post. That’s probably why they did not get notified. They were never in a hazardous area.” … Feels the reverse 911 system was very effective, based on the number of shelters. … Firefighters moved their command post 4 times during the night trying to stay out of the path of the plume. … “We do have a list of chemicals that were housed in that facility. We do not know which chemicals are burning at this time. That’s what we’re trying to determine with our reconnaissance.”&lt;/dd&gt; &lt;dt&gt;12:05 PM&lt;/dt&gt; &lt;dd&gt;Secretary of Crime Control &amp;amp; Public Safety: investigations are coming to see if the company was in compliance with all safety regulations and whether they kept the Town of Apex informed as required. Still no word on when refugees can return home. Confirmed that post-9/11 planning helped coordination of first responders. Wake County is one of the first counties in the state to have an interoperable communications system, “Viper 800 MHz system.” Wake County is on it [the system], the highway patrol, Raleigh Fire, Apex city, Garner, and many other agencies.&lt;/dd&gt; &lt;dt&gt;12 noon&lt;/dt&gt; &lt;dd&gt;Rep. David Price (D-NC) on now. Longer term questions about the hazards posed by chemical storage facilities. In the meantime, the community has done a wonderful job pulling together.&lt;/dd&gt; &lt;dt&gt;11:55 AM&lt;/dt&gt; &lt;dd&gt;Apex mayor (live): “level of cooperation [between agencies] has been extraordinary.” Hazmat team has left the site. Building where explosions occurred has collapsed. … All clear signal coming “hopefully soon”. Dogs and cats will experience similar symptoms to humans; if you see these symptoms in your pet, take them to a vet ASAP. … Hazmat team will send in handheld thermal cameras around and through the glass to find where fire is still burning, to help determine how to fight it.&lt;/dd&gt; &lt;dt&gt;11:50 AM&lt;/dt&gt; &lt;dd&gt;Green Hope shelter is not allowing pets. If you are evacuating, you must leave them at home or find other shelter for them.&lt;/dd&gt; &lt;dt&gt;11:40 AM&lt;/dt&gt; &lt;dd&gt;The company is allowed to store anything defined as hazardous waste at this plant, but that’s such a wide range that it’s not immediately helpful. … Still waiting on hazmat crews to come back from plant.&lt;/dd&gt; &lt;dt&gt;11:35 AM&lt;/dt&gt; &lt;dd&gt;New update from Division of Air Quality officer: no air quality problems detected as of 11:30 AM. Air quality monitors set up all around hot zone. Not expecting situation to get worse unless there are new/secondary explosions. Still no official word from company about what chemicals were involved in fire besides chlorine. No one can find the “list of materials” that lists exactly what chemicals were being stored. Have historical records but they’re useless because, due to the nature of the plant, the list of chemicals on-site changes all the time.&lt;/dd&gt; &lt;dt&gt;11:30 AM&lt;/dt&gt; &lt;dd&gt;Serious concern about pets that were not evacuated.&lt;/dd&gt; &lt;dt&gt;11:25 AM&lt;/dt&gt; &lt;dd&gt;Chlorine gas effects: chest pain, vomiting, coughing, difficulty breathing, excess fluid in lungs. Anchor: no evacuation planned or Holly Springs residents.&lt;/dd&gt; &lt;dt&gt;11:20 AM&lt;/dt&gt; &lt;dd&gt;News is slowing to a trickle. Now interviewing local residents at shelters, background material about hazmat suits, weather reports. Shelter @ &lt;a href="http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;q=2500+Carpenter+Upchurch+Rd+cary,+nc&amp;amp;ie=UTF8&amp;amp;z=15&amp;amp;om=1&amp;amp;iwloc=A"&gt;Green Hope High School&lt;/a&gt; is set up to house 593 people.&lt;/dd&gt; &lt;dt&gt;11:15 AM&lt;/dt&gt; &lt;dd&gt;Crime Control &amp;amp; Public Safety official: Hazmat crews have entered the “hot zone” and are determining what chemicals are still in the air. No impact in surrounding counties. Highway patrol is directing traffic around affected area.&lt;/dd&gt; &lt;dt&gt;11:10 AM&lt;/dt&gt; &lt;dd&gt;Reporter @ WakeMed Hospital: nearly 12 hours after explosions, no reports of serious injuries. 1 firefighter, 8 police officers, and 12 area residents treated, all now released except 2 police officers. 100 people evacuated from area nursing home, 23 moved to Rex Hospital. Hospital is fully staffed. Earlier this morning, police set up a decon tent outside the hospital with decon shower before people brought into hospital, first responders were decontaminated but no one has needed the decon tent since. Awaiting word of long-term effects of these chemicals.&lt;/dd&gt; &lt;dt&gt;11:05 AM&lt;/dt&gt; &lt;dd&gt;Evacuation area unchanged. &lt;a href="http://www.wral.com/news/10015847/detail.html"&gt;Photo slideshow of plant&lt;/a&gt;. Green Hope Shelter running well, no shortages, have enough food and cots. Gym has rows and rows of cots already set up. Cafeteria is open for feeding refugees. No word on how long people will need to be in the shelter, no word on when it will be safe to go back to the evacuated area.&lt;/dd&gt; &lt;dt&gt;10:55 AM&lt;/dt&gt; &lt;dd&gt;Schools closed: Apex Elementary, Apex Middle, Apex High, Baucom Elementary, olive Chapel Elementary, Turner Creek, Lufkin Road Middle, Bright Horizons, St Mary Magdalene School, goddard School, Primrose School fo West cary, Apex Enrichment Center, Triangle Academy Preschool, Mariposa School, Carolinda Kids Academy. Downtown Apex is a ghost town: no cars, no people, nothing.&lt;/dd&gt; &lt;dt&gt;10:50 AM&lt;/dt&gt; &lt;dd&gt;TV is back. All Apex schools are closed today. Stay of emergency declared in Apex and Wake County. Patients from Rex Rehabilitation and Nursing Care have been moved to Wake Med Cary. All businesses in downtown Apex are closed today.&lt;/dd&gt; &lt;dt&gt;10:45 AM&lt;/dt&gt; &lt;dd&gt;I have lost DirecTV signal.&lt;/dd&gt; &lt;dt&gt;10:40 AM&lt;/dt&gt; &lt;dd&gt;Reporter: latest update: lots of coordination with different agencies. State water quality officials testing local rivers and streams. Others checking air quality, still good. Hazmat teams on-site at plant, no word from them yet. Raleigh police is here, highway patrol is here, sheriff’s deputies, everybody has converged and are coordinating. Post-9/11 emergency response plans coming into play now.&lt;br&gt;More company info: fined $32,000 in March 2006 at this location. failed to reduce possibility of release of hazardous waste. Failed to carry out contingency plan. But passed latest safety inspection in late September.&lt;br&gt;Area hotels are completely full. Officials urge people to stay away from Salem Street, Industrial Drive, and Investment Blvd. in Apex.&lt;/dd&gt; &lt;dt&gt;10:35 AM&lt;/dt&gt; &lt;dd&gt;Wake County public safety director: “evacuation area” has lots of padding already, if you are just outside the marked area and have no symptoms, you should not go anywhere. … May need to set up blockades to prevent run-off of infected water. HMHTTC Response team official: best case is fire can be extinguished quickly, worst case this may burn on for a few more days.&lt;/dd&gt; &lt;dt&gt;10:30 AM&lt;/dt&gt; &lt;dd&gt;Officials urging people not to call 911 except for actual emergencies. Non-emergency callers should dial 362-8661 in Apex or 469-4012 in Cary. Firefighters hesitant to fight fire because they are still not sure what chemicals are in the fire. Hazmat crew going in now and will be able to determine what chemicals are involved. Fire has now been burning for over 12 hours. “Toxic cloud” seen initially has dissipated but hazmat crews unsure whether area puddles and grounds are affected.&lt;/dd&gt; &lt;dt&gt;10:25 AM&lt;/dt&gt; &lt;dd&gt;Subdivisions evacuated: Briarcliff, Sunny Meadows, Shepards Vineyard, haddon Hall, Waterford Green, Knollwood, and Sterling at Buckingham. More than 16,000 people evacuated. Vapor cloud has moved to the area around highways 64 and 55. Most roads in Apex are closed, but highgway 55 has been reopened. 9 police officers and 1 firefighter were treated for breathing problems. Half of those have been released. As many as 20 to 30 explosions were heard.&lt;/dd&gt; &lt;dt&gt;10:20 AM&lt;/dt&gt; &lt;dd&gt;~300 firefighters are on the scene, but they are allowing the fire to burn itself out. Stay away from downtown Apex. Evacuation area expanded, bordered by highways 55, 64, and US-1. Green Hope principal: “we will try to provide a facility that is safe and where people can rest and take care of basic needs.”&lt;/dd&gt; &lt;dt&gt;10:15 AM&lt;/dt&gt; &lt;dd&gt;N&amp;amp;O reports that more than 15,000 residents have been evacuated. State of emergency declared. Turner Creek Elementary School can not take any more people. Olive Chapel shelter will close at lunch. All routed to Green Hope High School @ 2500 Carpenter Upchurch Road.&lt;/dd&gt; &lt;dt&gt;10:10 AM&lt;/dt&gt; &lt;dd&gt;Reporter: “All things considered, we’re in a best-case scenario.”. Company spokesman for EQ Industrial: fire started at 10 PM last night. Cause of fire unknown. Confirmed: no employees on-site when fire began, all left by 7 PM. “We follow all safety procedures, we are ISO-certified.” Etc etc.&lt;/dd&gt; &lt;dt&gt;10:05 AM&lt;/dt&gt; &lt;dd&gt;Green Hope High School set up as a shelter. Reporter @ school: Turner Creek and Olive Chapel Elementary School were previous shelters; all refugees now being moved to Green Hope High School. First full-service facility (means there’s a sleeping area, kitchen, medical room, recreational area for kids, shower facilities in locker rooms). Still setting up.&lt;br&gt;Other reporter: hazmat crews at site all night, new crews being rotated in. Initial tests on air quality do not show anything alarming. Thanks mostly to rain all night and all day. Rain is “scrubbing chemicals out of the air”. Now primary concern is that the chemicals are on the ground, draining on asphalt, draining into ground, draining into water supply. Waiting on further hazmat results.&lt;/dd&gt; &lt;dt&gt;10 AM&lt;/dt&gt; &lt;dd&gt;Company: &lt;a href="http://www.eqonline.com/"&gt;The Environmental Quality Company&lt;/a&gt;. Fined earlier this year for safety violations. Required to be inspected 4 times a month. Most recent inspection found no safety violations (9/28). Company employs 20-25 people. No employees in plant when fire began.&lt;/dd&gt; &lt;dt&gt;9:55 AM&lt;/dt&gt; &lt;dd&gt;&lt;a href="http://abclocal.go.com/wtvd/story?section=triangle&amp;amp;id=4518558"&gt;Thousands evacuated from Apex&lt;/a&gt;. &lt;a href="http://video.ap.org/v/en-ap/fv/fv.htm?g=2A6E56C6-420C-44F8-B2D3-20BF0A29F33F&amp;amp;t=s60&amp;amp;p=ENAPus_ENAPus&amp;amp;f=nao"&gt;Taped video interview&lt;/a&gt;. &lt;a href="http://maps.google.com/maps?q=1005+Investment+Boulevard,+Apex,+NC+27502&amp;amp;ie=UTF8&amp;amp;z=15&amp;amp;om=1"&gt;Plant location on Google Maps&lt;/a&gt;&lt;/dd&gt; &lt;dt&gt;9:50 AM&lt;/dt&gt; &lt;dd&gt;&lt;a href="http://images.ibsys.com/2006/1006/10015196.jpg"&gt;Evacuation area&lt;/a&gt;. &lt;a href="http://www.wral.com/video/8068030/detail.html"&gt;Live local TV coverage&lt;/a&gt;. Anchor: Hazmat team from Raleigh about to go into site to assess. Rain continuing throughout day, best thing that could happen.&lt;/dd&gt; &lt;dt&gt;9:45 AM&lt;/dt&gt; &lt;dd&gt;Reporter @ WakeMed hospital: 32 people treated for possible chemical exposure, only 5 remain in hospital being treated. 8 police officers, 1 firefighter. 6 officers released already. Chlorine exposure symptoms: trouble breathing, nauseous, dizziness, chest thightness, burning sesnsation in nose/throat/eyes, watery eyes, blurred vision. Extra teams on standby at all area hospitals.&lt;/dd&gt; &lt;dt&gt;9:40 AM&lt;/dt&gt; &lt;dd&gt;Apex mayor: Firefighters are going through decon treatment. No serious injury reports yet.&lt;/dd&gt; &lt;dt&gt;9:35 AM&lt;/dt&gt; &lt;dd&gt;Town manager: people who have not evacuated should stay in their homes, close all doors and windows, and shut down their HVAC system.&lt;/dd&gt; &lt;/dl&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1159895848344">
+		<id gr:original-id="tag:diveintomark.org,2006-10-03:/archives/20061003152814">
+			tag:google.com,2005:reader/item/86af9142f3af2cce
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="accessibility" scheme="http://diveintomark.org/tag/" /><category term="firefox" scheme="http://diveintomark.org/tag/" /><category term="mozilla" scheme="http://diveintomark.org/tag/" /><category term="planetmozilla" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Accessibility improvements in Firefox 2
+		</title>
+		<published>
+			2006-10-03T15:28:14Z
+		</published>
+		<updated>
+			2006-10-03T17:25:42Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/03/firefox-2-accessibility" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/03/firefox-2-accessibility" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=144000"&gt;Bug 144000&lt;/a&gt;: caret browsing - bad initial position&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=241637"&gt;Bug 241637&lt;/a&gt;: Ctrl+P doesn’t work in Print Preview&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=243752"&gt;Bug 243752&lt;/a&gt;: No keyboard shortcut for closing “in the sidebar” bookmarks sidebars&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=284555"&gt;Bug 284555&lt;/a&gt;: Menu text color remains -moz-menuhovertext when popup a dialog&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=304497"&gt;Bug 304497&lt;/a&gt;: RSS not accessible&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=310291"&gt;Bug 310291&lt;/a&gt;: Sidebar max-width shouldn’t be in px, consistency with the Go menu&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=313443"&gt;Bug 313443&lt;/a&gt;: Caret move events from keyboard input not reported for XUL textboxes&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=315402"&gt;Bug 315402&lt;/a&gt;: Create Accessibility section in Help Documentation&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=315646"&gt;Bug 315646&lt;/a&gt;: “Select All” and “Save Link As” both use accesskey “A” in context menu&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=317213"&gt;Bug 317213&lt;/a&gt;: magnification loses focus of text element and moves to the top of the application&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=320383"&gt;Bug 320383&lt;/a&gt;: Sidebars accessible name is not human consumable&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=322546"&gt;Bug 322546&lt;/a&gt;: GOK UI-Grab window doesn’t refresh when switching tabs&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=326090"&gt;Bug 326090&lt;/a&gt;: &amp;lt;hr&amp;gt; not being exposed as ROLE_SEPARATOR&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=327340"&gt;Bug 327340&lt;/a&gt;: No keyboard-accessible way to sort columns in Places results list&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=327345"&gt;Bug 327345&lt;/a&gt;: No keyboard-accessible way to select displayed columns in Places results list&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=327395"&gt;Bug 327395&lt;/a&gt;: No keyboard-accessible way to move a folder of bookmarks from one folder to another in Places&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=327502"&gt;Bug 327502&lt;/a&gt;: use of setenv breaks solaris build&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=328036"&gt;Bug 328036&lt;/a&gt;: Flashbar does not flash&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=328198"&gt;Bug 328198&lt;/a&gt;: An &amp;lt;li&amp;gt; instead of &amp;lt;span&amp;gt; with a role gets spoken as &amp;quot;custom control&amp;quot;&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=331414"&gt;Bug 331414&lt;/a&gt;: Accelerate keys conflict in bookmark organizer window.&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=331905"&gt;Bug 331905&lt;/a&gt;: copying folder puts the bookmarks in the target&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=332540"&gt;Bug 332540&lt;/a&gt;: Text field can not be grabbed by GOK in firefox.&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=333025"&gt;Bug 333025&lt;/a&gt;: Three relatively frequent mozilla/accessible crashes in talkback&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=333134"&gt;Bug 333134&lt;/a&gt;: Accessibility still leaking when AT used&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=333160"&gt;Bug 333160&lt;/a&gt;: NSIS-based installer does not expose state of components to install&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=333579"&gt;Bug 333579&lt;/a&gt;: Firefox crash with Window-Eyes and DHTML/AJAX&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=334386"&gt;Bug 334386&lt;/a&gt;: repeating DHTML Accessibility alert not spoken by WindowEyes 5.5&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=334472"&gt;Bug 334472&lt;/a&gt;: Device manager dialog does not resize properly when using Extra Large Fonts theme&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=334579"&gt;Bug 334579&lt;/a&gt;: Button label is not visible in HighContrastInverse theme.&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=334600"&gt;Bug 334600&lt;/a&gt;: Icons in ‘Help’ toolbar are not compliant with theme.&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=335900"&gt;Bug 335900&lt;/a&gt;: no state change event fired when take action on HTML input element&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=337164"&gt;Bug 337164&lt;/a&gt;: Accessibility review of new anti-phishing feature&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=338234"&gt;Bug 338234&lt;/a&gt;: Name of preference tab can not be reported by screen readers&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=338337"&gt;Bug 338337&lt;/a&gt;: Update DHTML Accessibility roles&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=338443"&gt;Bug 338443&lt;/a&gt;: Make it easier to hit the notificationbox close button (Fitts’ law)&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=338874"&gt;Bug 338874&lt;/a&gt;: Safe Browsing alert not exposed to screenreader&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340841"&gt;Bug 340841&lt;/a&gt;: Infinite loop with some plugins when screen reader is running — empty tabs keep opening&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=342979"&gt;Bug 342979&lt;/a&gt;: Role attribute should be recognized in XHTML 1.x namespace&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=343654"&gt;Bug 343654&lt;/a&gt;: Choose Feed Reader associated label not read by WindowEyes&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=343657"&gt;Bug 343657&lt;/a&gt;: Choose Languages associated label not read by WindowEyes&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=343661"&gt;Bug 343661&lt;/a&gt;: Configure Security Warnings associated label not read by WindowEyes&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=344572"&gt;Bug 344572&lt;/a&gt;: Unit of measure for history preference not spoken by WindowEyes&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=344575"&gt;Bug 344575&lt;/a&gt;: Suspected forgery preferences not properly spoken by WindowEyes&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=344578"&gt;Bug 344578&lt;/a&gt;: Warning Messages Settings associated label not spoken by WindowEyes&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=344580"&gt;Bug 344580&lt;/a&gt;: Update accessibility help topic to match new wording in preferences window&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=344581"&gt;Bug 344581&lt;/a&gt;: Cache preferences not properly spoken by WindowEyes&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=345869"&gt;Bug 345869&lt;/a&gt;: Pull Down Menu within Search Field not Keyboard Accessible&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=345893"&gt;Bug 345893&lt;/a&gt;: Text in Safe Browsing overlay not visible with large font / high contrast theme&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=346175"&gt;Bug 346175&lt;/a&gt;: 404 bad url in help accessibility.xhtml file&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=346529"&gt;Bug 346529&lt;/a&gt;: Pressing accesskey for checkbox should toggle it&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=346721"&gt;Bug 346721&lt;/a&gt;: Parent of bullet accessible incorrect, causing hang in ZoomText docreader&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=347227"&gt;Bug 347227&lt;/a&gt;: Accessibility issues on Show Cookies dialog&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=347423"&gt;Bug 347423&lt;/a&gt;: Add-ons: No Updates Found message not accessible&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=347913"&gt;Bug 347913&lt;/a&gt;: No longer firing EVENT_ALERT for browsermessage bar&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=348257"&gt;Bug 348257&lt;/a&gt;: Add-ons window additional screen reader issues&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=348959"&gt;Bug 348959&lt;/a&gt;: tabbrowser-tabs lost their focus feedback&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=349056"&gt;Bug 349056&lt;/a&gt;: Read More button loses Visual Focus in Web Forgery popup&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=349700"&gt;Bug 349700&lt;/a&gt;: Tabs do not inherit high contrast settings&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=350615"&gt;Bug 350615&lt;/a&gt;: Subscription options on feed preview page are not accessible&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=351133"&gt;Bug 351133&lt;/a&gt;: Options&amp;gt;Feeds “Choose Application…” button is cut off and scroll-bar appears.&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=351263"&gt;Bug 351263&lt;/a&gt;: Dialog steals focus while navigating combobox in subscription options on feed preview pane&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=351775"&gt;Bug 351775&lt;/a&gt;: left, right, all tab button images should be semi-transparent so that they work with the OS theme and high contrast mode&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=351948"&gt;Bug 351948&lt;/a&gt;: Regression, location bar no longer has accessible name&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=352320"&gt;Bug 352320&lt;/a&gt;: need a third state for tab scroll right / left: enabled but not hovered&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=352321"&gt;Bug 352321&lt;/a&gt;: need alltabs background images that match new background tab images&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=352323"&gt;Bug 352323&lt;/a&gt;: the scroll right button doesn’t appear disabled like the scroll left&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=352388"&gt;Bug 352388&lt;/a&gt;: Add-ons: richlistbox does not report item accNames when arrowing through list&lt;/li&gt; &lt;li&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=355007"&gt;Bug 355007&lt;/a&gt;: RSS preview in Firefox 2 RC1 features black text on dark blue background&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1159824571557">
+		<id gr:original-id="tag:diveintomark.org,2006-10-02:/archives/20061002211328">
+			tag:google.com,2005:reader/item/a95dcd432ce66980
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="digg" scheme="http://diveintomark.org/tag/" /><category term="kittens" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			HOWTO play Digg users like drunk kittens
+		</title>
+		<published>
+			2006-10-02T21:13:28Z
+		</published>
+		<updated>
+			2006-10-03T15:07:07Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/02/drunk-kittens" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/02/drunk-kittens" xml:lang="en" type="html">
+			&lt;p&gt;Well, &lt;a href="http://digg.com/programming/Digg_users_are_dumber_than_goldfish"&gt;that didn’t take long at all&lt;/a&gt;. On the front page in under 90 minutes. Ah, the rush of nano-fame. Blogging doesn’t get any better than this.&lt;/p&gt; &lt;p&gt;(I don’t really have anything to add to that, I just wanted to use the phrase “playing Digg users like drunk kittens.” Hat tip to &lt;a href="http://bitworking.org/"&gt;Joe&lt;/a&gt; for once again providing me with a better title than I could drum up myself.)&lt;/p&gt; &lt;p&gt;(P.S. If you found this page searching for “drunk kittens,” first of all, you have some serious issues you need to work out. And second, &lt;a href="http://www.crazyphotos.com/drunkkitten.html"&gt;here’s one&lt;/a&gt;. &lt;a href="http://flickr.com/photos/harikb/6804654/"&gt;Here’s another&lt;/a&gt;. &lt;a href="http://images.google.com/images?q=drunk+kittens"&gt;Here’s plenty more&lt;/a&gt;.)&lt;/p&gt; &lt;p&gt;&lt;em&gt;Post-mortem: 1309 diggs, 104 comments, ~9000 unique visitors. AFAIK, my site never faltered (at least, there aren’t any &lt;code&gt;duggmirror.com&lt;/code&gt; links in the comments). Now, would someone be so kind as to re-post the link in 43 days?&lt;/em&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1159815886476">
+		<id gr:original-id="tag:diveintomark.org,2006-10-02:/archives/20061002190050">
+			tag:google.com,2005:reader/item/059076d0f37253e6
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="digg" scheme="http://diveintomark.org/tag/" /><category term="goldfish" scheme="http://diveintomark.org/tag/" /><category term="howtotestwpcache" scheme="http://diveintomark.org/tag/" /><category term="youtube" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Digg users are dumber than goldfish
+		</title>
+		<published>
+			2006-10-02T19:00:50Z
+		</published>
+		<updated>
+			2006-10-04T16:36:03Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/10/02/digg" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/10/02/digg" xml:lang="en" type="html">
+			&lt;p&gt;So what happened was, I was talking with &lt;a href="http://bitworking.org/news/training_goldfish_and_professors"&gt;Joe&lt;/a&gt; about the fact that &lt;a href="http://digg.com/programming/Dive_Into_Python_Free_eBook"&gt;Dive Into Python appeared on the front page of digg.com this morning&lt;/a&gt;, despite having been submitted &lt;a href="http://digg.com/search?area=all&amp;amp;age=all&amp;amp;sort=new&amp;amp;s=dive+into+python&amp;amp;submit=Search"&gt;at least three times already&lt;/a&gt;, including once &lt;a href="http://digg.com/programming/Rainy_Sunday_Dive_into_Python"&gt;just 43 days ago&lt;/a&gt;. (&lt;a href="http://diveintogreasemonkey.org/"&gt;Dive Into Greasemonkey&lt;/a&gt; has experienced &lt;a href="http://digg.com/search?area=all&amp;amp;age=all&amp;amp;sort=new&amp;amp;s=dive+into+greasemonkey&amp;amp;submit=Search"&gt;a similar pattern&lt;/a&gt;.) Which led to a brief discussion of collective memory, or the lack thereof. Which reminded me of the &lt;a href="http://msgboard.snopes.com/message/ultimatebb.php?/ubb/get_topic/f/24/t/001454/p/1.html"&gt;urban legend about goldfish&lt;/a&gt;, that they have 3-second memories or 30-second memories or whatever. From which I found &lt;a href="http://www.clickertraining.com/training/advanced_topics/index.htm?loaditem=training_a_fish&amp;amp;itemnumber=2&amp;amp;salesitem=advanced_s"&gt;a tantalizingly brief article on goldfish training&lt;/a&gt;. Which inspired me to &lt;a href="http://www.google.com/search?q=goldfish+training"&gt;do further research in the area of goldfish training&lt;/a&gt;. Which, as with all research on the internet, inevitably led to &lt;a href="http://www.youtube.com/watch?v=wGw6EhBtznM"&gt;a fascinating &lt;del&gt;Japanese&lt;/del&gt; &lt;del&gt;Chinese&lt;/del&gt; Japanese video of trained goldfish&lt;/a&gt; which someone — no doubt illegally — posted on YouTube.&lt;/p&gt; &lt;p&gt;So not only can they be trained (goldfish, not Digg users), but &lt;a href="http://www.abc.net.au/news/newsitems/200605/s1645894.htm"&gt;according to a recent study&lt;/a&gt;, “goldfish memories can last as long as three months.” Which puts them approximately 47 days ahead of the collective memory of Digg.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1158902917783">
+		<id gr:original-id="tag:diveintomark.org,2006-09-22:/archives/20060922052207">
+			tag:google.com,2005:reader/item/25e7cb998b5a07fb
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="classical" scheme="http://diveintomark.org/tag/" /><category term="drm" scheme="http://diveintomark.org/tag/" /><category term="flac" scheme="http://diveintomark.org/tag/" /><category term="music" scheme="http://diveintomark.org/tag/" /><category term="orchestra" scheme="http://diveintomark.org/tag/" /><category term="philadelphia" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			The Philadelphia Orchestra does it right. Really.
+		</title>
+		<published>
+			2006-09-22T05:22:07Z
+		</published>
+		<updated>
+			2006-10-03T01:19:08Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/09/22/really" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/09/22/really" xml:lang="en" type="html">
+			&lt;p&gt;(&lt;a href="http://www.boingboing.net/2006/09/21/philadelphia_symphon.html"&gt;via BoingBoing&lt;/a&gt;)&lt;/p&gt; &lt;p&gt;The Philadelphia Orchestra — indisputably one of the best orchestras in the world, and my personal favorite for two decades — &lt;a href="http://www.thephiladelphiaorchestra.com/"&gt;has opened an online store&lt;/a&gt; to sell their own recordings. Some are on CD, others are available for download. For a fair price. In &lt;a href="http://flac.sourceforge.net/"&gt;a free, open, &lt;em&gt;lossless,&lt;/em&gt; non-patent-encumbered, non-DRM-infected format&lt;/a&gt;. Really.&lt;/p&gt; &lt;p&gt;Their online store requires cookies and JavaScript but is otherwise compatible with any browser on any platform. I bought and downloaded six recordings with a nightly build of Firefox 2 that I compiled myself on 64-bit Ubuntu Linux. Really.&lt;/p&gt; &lt;p&gt;Once you’ve purchased a recording, you can access the individual music files through their “My Downloads” page. &lt;a href="http://www.thephiladelphiaorchestra.com/faq.asp"&gt;Their FAQ&lt;/a&gt; recommends that Windows/IE users install an ActiveX control to automate downloading multi-file recordings. Ignore that. I used &lt;a href="http://www.downthemall.net/"&gt;DownThemAll&lt;/a&gt;, a GPL-licensed download manager that works within Firefox (and thus sends all the proper authentication cookies, etc., with no additional configuration).&lt;/p&gt; &lt;p&gt;They do not appear to throttle download speeds; at least, I maxed out my DSL at 370 KB/s for a solid 45 minutes. FLAC files are rather large. It is lossless CD-quality audio, after all. They even offer surprisingly clueful FAQ entries on &lt;a href="http://www.thephiladelphiaorchestra.com/faq.asp#faq3aa"&gt;how to listen to FLAC files&lt;/a&gt; and &lt;a href="http://www.thephiladelphiaorchestra.com/faq.asp#faq3a"&gt;how to burn FLAC files to CD&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;(In case you were wondering, Ubuntu Linux can play FLAC files out of the box in &lt;a href="http://www.gnome.org/projects/rhythmbox/"&gt;Rhythmbox&lt;/a&gt;, thanks to FLAC support in &lt;a href="http://gstreamer.freedesktop.org/"&gt;GStreamer&lt;/a&gt;’s “plugins-good” package. Both of these are part of the default install. Amarok can also play FLAC files, thanks to support in &lt;code&gt;libxine&lt;/code&gt;. There is also an &lt;a href="http://packages.ubuntu.com/cgi-bin/search_packages.pl?searchon=names&amp;amp;version=all&amp;amp;exact=1&amp;amp;keywords=xmms-flac"&gt;XMMS FLAC plugin&lt;/a&gt; for those of you who like that sort of thing.)&lt;/p&gt; &lt;p&gt;There are a large number of &lt;a href="http://flac.sourceforge.net/links.html#software"&gt;open source converters&lt;/a&gt; that can help you transcode FLAC files into other formats, if you are unfortunate enough to own a portable music player that doesn’t support FLAC natively. Mac+iPod+iTunes users can allegedly install the &lt;a href="http://damien.drix.free.fr/qtflac/"&gt;FLAC QuickTime component&lt;/a&gt; and then use iTunes (with or without &lt;a href="http://www.dougscripts.com/itunes/scripts/scripts02.php?page=1#quickconvert"&gt;Doug’s QuickConvert script&lt;/a&gt;) to losslessly convert FLAC files to the iPod-compatible Apple Lossless Audio Codec. I haven’t tried it myself, for obvious reasons, so perhaps some kind soul could leave a comment about compatibility with the latest versions of QuickTime and iTunes.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1158697738985">
+		<id gr:original-id="tag:diveintomark.org,2006-09-19:/archives/20060919192352">
+			tag:google.com,2005:reader/item/22d50d17d7ef06a4
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="bash" scheme="http://diveintomark.org/tag/" /><category term="dash" scheme="http://diveintomark.org/tag/" /><category term="linux" scheme="http://diveintomark.org/tag/" /><category term="posix" scheme="http://diveintomark.org/tag/" /><category term="sh" scheme="http://diveintomark.org/tag/" /><category term="thingsihateaboutyou" scheme="http://diveintomark.org/tag/" /><category term="ubuntu" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			‘Bad fd number’ error in Ubuntu 6.10 (Edgy Eft)
+		</title>
+		<published>
+			2006-09-19T19:23:52Z
+		</published>
+		<updated>
+			2006-09-19T20:50:45Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/09/19/bad-fd-number" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/09/19/bad-fd-number" xml:lang="en" type="html">
+			&lt;p&gt;Have you tried to compile something that wasn’t in the repositories, or otherwise run a shell script, and gotten this error?&lt;/p&gt; &lt;pre&gt;&lt;code&gt;mark@atlantis:~/code/&lt;a href="http://mpeg4ip.sourceforge.net/"&gt;mpeg4ip&lt;/a&gt;-1.5.0.1$ ./bootstrap dir: . SDL appears to be installed ./bootstrap: 76: &lt;strong&gt;Syntax error: Bad fd number&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;This &lt;samp&gt;“Bad fd number”&lt;/samp&gt; error occurs because &lt;a href="https://wiki.ubuntu.com/DashAsBinSh"&gt;Ubuntu Edgy uses &lt;code&gt;dash&lt;/code&gt; as &lt;code&gt;/bin/sh&lt;/code&gt;&lt;/a&gt;. In Ubuntu 6.06 “Dapper Drake” and earlier versions used &lt;code&gt;bash&lt;/code&gt; instead, which ran scripts in a special backwards-compatibility mode that wasn’t truly backwards compatible (i.e. some &lt;code&gt;bash&lt;/code&gt;-specific code was still accepted, even though it wasn’t part of the POSIX 1003.2 and 1003.2a specifications for shells). Ubuntu Edgy is the first version of Ubuntu that symlinks &lt;code&gt;/bin/sh&lt;/code&gt; to &lt;code&gt;/bin/dash&lt;/code&gt; instead of &lt;code&gt;/bin/bash&lt;/code&gt;. The packages in the repositories have been checked for compatibility, but this may still cause problems with improperly-written third-party shell scripts.&lt;/p&gt; &lt;p&gt;Confused yet? There’s a simple solution: run the script through &lt;code&gt;bash&lt;/code&gt; yourself.&lt;/p&gt; &lt;pre&gt;&lt;code&gt;mark@atlantis:~/code/mpeg4ip-1.5.0.1$ bash bootstrap&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;If you’re developing your own shell script and your users are reporting this error to you, you should change the first line of your script to &lt;code&gt;#!/bin/bash&lt;/code&gt;, since you’ve been relying on &lt;code&gt;bash&lt;/code&gt;-specific extensions without realizing it. Or better yet, take the time to learn what those extensions are, and fix them so your script works in POSIX-compliant shells. You can manually install &lt;code&gt;dash&lt;/code&gt; and test compatibility by changing the first line of your script to &lt;code&gt;#!/bin/dash&lt;/code&gt;, then change it back to &lt;code&gt;#!/bin/sh&lt;/code&gt; once everything works again. I did this with my &lt;a href="http://diveintomark.org/archives/2006/08/30/ipod-video-howto"&gt;podencoder&lt;/a&gt; script and found a few surprises.&lt;/p&gt; &lt;p&gt;This tip has been brought to you by someone who knows just enough shell scripting to be dangerous.&lt;/p&gt; &lt;p&gt;Further reading:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://gondor.apana.org.au/~herbert/dash/"&gt;&lt;code&gt;dash&lt;/code&gt; home page&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Debian_Almquist_shell"&gt;&lt;code&gt;dash&lt;/code&gt; on Wikipedia&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://launchpad.net/distros/ubuntu/+spec/dash-as-bin-sh"&gt;“Dash as /bin/sh” in Ubuntu &lt;del&gt;bug&lt;/del&gt; feature tracker&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1158336483654">
+		<id gr:original-id="tag:diveintomark.org,2006-09-15:/archives/20060915143046">
+			tag:google.com,2005:reader/item/57df077bce1fc49b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="creativecommons" scheme="http://diveintomark.org/tag/" /><category term="licensing" scheme="http://diveintomark.org/tag/" /><category term="rant" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Waiting for the revolution
+		</title>
+		<published>
+			2006-09-15T14:30:46Z
+		</published>
+		<updated>
+			2006-09-15T17:30:04Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/09/15/cc-by-nc" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/09/15/cc-by-nc" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://diveintomark.org/archives/2006/09/13/mix-tape#comment-7381"&gt;&lt;cite&gt;Scott&lt;/cite&gt; writes&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Mark, Opsound used to license all works under Creative Commons’ BY-NC-SA, and later removed the non-commercial condition. Are you including BY-NC-SA when you refer to these “more restrictive” licenses? I think the non-commercial condition has an important place in the so-called Free Culture Revolution, and here’s why.&lt;/p&gt; &lt;p&gt;Since Opsound’s change of CC license, I have been contacted far too often by commercial entities trolling through sites like Opsound, looking to cut their budget by scoring some free music for an upcoming project. I publish my e-mail address in the hope to make connections with other artists, not to see my hard work profit a company whose philosophy I disagree with. I feel that the removal of the NC condition facilitates commercial entities exploiting artists like this, and is therefore damaging to the ideal of Free Culture.&lt;/p&gt; &lt;p&gt;Personally, I’m much more inclined to waive the attribution, certainly the share-alike, conditions before the non-commercial. &lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The short answer is yes, I count all Non-Commercial-Use-Only licenses as overly restrictive. Unfortunately, most published statistics I’ve seen (&lt;a href="http://flickr.com/creativecommons/"&gt;Flickr&lt;/a&gt;, &lt;a href="http://wiki.creativecommons.org/License_statistics"&gt;creativecommons.org&lt;/a&gt;) show a ⅔ majority of CC work is licensed for noncommercial use only. About ¼ of them prohibit any derivative works at all! (These are not mutually exclusive groups; there is some overlap in the form of the CC-BY-NC-ND license.) The lack of CC-BY-NC licenses is one of the main reasons I liked Opsound so much, compared to other CC-centric music sites. I guess I found it after they switched.&lt;/p&gt; &lt;p&gt;This is, in fact, one of my major beefs with the Creative Commons movement: they’ve created a brand that doesn’t really stand for anything except “Big Copyright sucks, let’s be slightly less evil than those guys over there who are &lt;em&gt;really&lt;/em&gt; screwing you.” By contrast, the two “brands” for code, &lt;a href="http://www.gnu.org/philosophy/free-sw.html"&gt;Free Software&lt;/a&gt; and &lt;a href="http://opensource.org/docs/definition.php"&gt;open source&lt;/a&gt;, both have well-articulated “first principles” that define the community. They afford a baseline of freedoms; some licenses provide different kinds of freedom for different parties above and beyond that baseline (GPL vs. BSD, etc.), but they draw a clear line in the sand and say, “If you want to be a part of this community, you need to pick a license that affords all of these freedoms.” One of the things that both camps agree on is that prohibiting commercial use is unacceptable. (See, for example, &lt;a href="http://opensource.org/docs/definition.php#6"&gt;#6: No Discrimination Against Fields of Endeavor&lt;/a&gt; and &lt;a href="http://www.debian.org/intro/free"&gt;What Does Free Mean?&lt;/a&gt;)&lt;/p&gt; &lt;p&gt;This is not to say that scumbags coming along and profiting from your work is a wonderful feeling, but allowing people to restrict commercial use and still call their work “Free” or “open source” would be worse. I have personally had some of my open source code used in ways that I do not approve of, by people I do not approve of. It was difficult to accept, but I ended up deciding that it was more important to stay above that baseline than to try to use licensing terms as a weapon against the small small small minority of people who were using my work against me. The fact that a more restrictive license would have “kicked me out of the community” played a major role in my decision.&lt;/p&gt; &lt;p&gt;It is possible that the reasons for banning commerical discrimination for code don’t translate well to the fields of music and art. (See, for example, &lt;a href="http://www.freesoftwaremagazine.com/node/1566"&gt;The case for a Creative Commons ’sunset’ Non-Commercial license module&lt;/a&gt;.) But I’m not sure I buy that. I think the folks behind Creative Commons made a huge mistake in allowing such a wide spectrum of licenses under the “Creative Commons” brand. Not everyone is a license geek like me, nor do they spend a lot of time thinking about first principles. Most people glom onto a community, and when they produce something of their own, they just pick a license to fit in without giving it a lot of thought. This is not a slam against artist types; I’ve known many programmers who chose a code license the same way. But the fact that Creative Commons allows artists to restrict commercial use and still feel like they are “part of the community” is a missed opportunity of epic proportions.&lt;/p&gt; &lt;p&gt;This rant is nothing against you personally. You should choose a license that you’re comfortable with, one that fits your goals. God knows Creative Commons gives you plenty to choose from. If that means that Opsound is not for you, then so be it. But I remember when I first read Lawrence Lessig’s &lt;a href="http://www.free-culture.cc/freecontent/"&gt;Free Culture&lt;/a&gt;, and I felt a wave of euphoria and optimism about the coming Free Culture Revolution. Then I looked at the book’s license: yup, you guessed it, CC-BY-NC. Sigh. “The fish rots from the head,” etc. We may someday get that revolution he promised, but it won’t be led by a bunch of lawyers and pragmatists.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1158206536676">
+		<id gr:original-id="tag:diveintomark.org,2006-09-14:/archives/20060914035349">
+			tag:google.com,2005:reader/item/f0cfed767dab5259
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="creativecommons" scheme="http://diveintomark.org/tag/" /><category term="download" scheme="http://diveintomark.org/tag/" /><category term="freeculture" scheme="http://diveintomark.org/tag/" /><category term="music" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Freely licensed Creative Commons music that I liked enough to put on a mix tape
+		</title>
+		<published>
+			2006-09-14T03:53:49Z
+		</published>
+		<updated>
+			2006-09-14T13:10:07Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/09/13/mix-tape" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/09/13/mix-tape" xml:lang="en" type="html">
+			&lt;p&gt;(Heh heh, the old fogey said “mix tape.”)&lt;/p&gt; &lt;p&gt;Anyway, &lt;a href="http://opsound.org/"&gt;OpSound&lt;/a&gt; is where it’s at for &lt;a href="http://creativecommons.org/licenses/by-sa/2.5/"&gt;CC-BY-SA&lt;/a&gt;-licensed music. And, apparently, &lt;a href="http://www.jamendo.com/"&gt;Jamendo&lt;/a&gt;, which has a mix of licenses but (and I can’t emphasize how important this is) lets you easily search by licensing terms. Please ignore the cargo culters on other sites that use more restrictive CC licenses and think they are somehow participating in the glorious Free Culture Revolution. Their masturbatory sampling circle jerks are of no consequence to me.&lt;/p&gt; &lt;p&gt;Here are my favorite artists, in no particular order (he lied):&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://opsound.org/artist/heathwhitelock/"&gt;Heath Whitelock&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://opsound.org/artist/leemaddefordinstrumentals/"&gt;Lee Maddeford&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://opsound.org/artist/paulcantrell/"&gt;Paul Cantrell&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://opsound.org/artist/thomasvolk0/"&gt;Thomas Volk&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://opsound.org/artist/marcinmaj/"&gt;Marcin Maj&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://opsound.org/artist/mortenjohs/"&gt;mortenjohs&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;And you?&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1158090981867">
+		<id gr:original-id="tag:diveintomark.org,2006-09-12:/archives/20060912184411">
+			tag:google.com,2005:reader/item/f24af4c4b0e79470
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="apple" scheme="http://diveintomark.org/tag/" /><category term="itunes" scheme="http://diveintomark.org/tag/" /><category term="windows" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Apple Software Update for Windows
+		</title>
+		<published>
+			2006-09-12T18:44:11Z
+		</published>
+		<updated>
+			2006-09-12T18:53:38Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/09/12/asu-win" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/09/12/asu-win" xml:lang="en" type="html">
+			&lt;p&gt;The Windows version of iTunes 7 comes bundled with Apple Software Update, “to easily update iTunes and other Apple software.”&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2006/09/itunes-7-installer.jpg" alt="screenshot of iTunes 7 installer" title="" width="500" height="383"&gt;&lt;/p&gt; &lt;p&gt;Leaving it checked (the default setting) adds an “Apple Software Update” item to the Start menu. The application looks like this:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2006/09/apple-software-update.jpg" alt="screenshot of Apple Software Update Windows application" title="" width="428" height="558"&gt;&lt;/p&gt; &lt;p&gt;Anyone know what “other Apple software” might include? After an (admittedly very quick) glance through the online &lt;a href="http://www.apple.com/itunes/overview/"&gt;iTunes 7 overview&lt;/a&gt;, I can’t find any mention of this at all.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1158073816304">
+		<id gr:original-id="tag:diveintomark.org,2006-09-12:/archives/20060912143311">
+			tag:google.com,2005:reader/item/114b3c4fb2aa2436
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="contentsniffing" scheme="http://diveintomark.org/tag/" /><category term="firefox" scheme="http://diveintomark.org/tag/" /><category term="mozilla" scheme="http://diveintomark.org/tag/" /><category term="planetmozilla" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Sniff
+		</title>
+		<published>
+			2006-09-12T14:33:11Z
+		</published>
+		<updated>
+			2006-09-12T14:34:33Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/09/12/sniff" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2006/09/12/sniff" xml:lang="en" type="html">
+			&lt;p&gt;A quick note to the Mozilla developers responsible (you know who you are)…&lt;/p&gt; &lt;p&gt;&lt;a href="http://svn.smedbergs.us/wordpress-atom10/tags/0.4/wp-atom10-comments.php"&gt;This is not a feed&lt;/a&gt;:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2006/09/content-sniffing-still-sucks.jpg" alt="screenshot of page which Firefox claims is a feed" title="" width="640" height="480"&gt;&lt;/p&gt; &lt;p&gt;And &lt;a href="http://diveintomark.org/archives/2004/08/13/safari-content-sniffing"&gt;content sniffing still sucks&lt;/a&gt;.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

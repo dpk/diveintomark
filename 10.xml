@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CJqzjeSx-IoC
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CIyP4vnpkIwC" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2007-05-15T18:44:21Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1179254661875">
+		<id gr:original-id="tag:diveintomark.org,2007-05-15:/archives/20070515184415">
+			tag:google.com,2005:reader/item/c7adc6be51579769
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Outrageous
+		</title>
+		<published>
+			2007-05-15T18:44:15Z
+		</published>
+		<updated>
+			2007-05-15T18:44:15Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/15/outrageous" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/15/outrageous" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://stephesblog.blogs.com/my_weblog/2007/05/the_microsoft_o.html"&gt;Stephen Walli wrote&lt;/a&gt;, “Disclaimer: Microsoft is a client. But I swear I’m reconsidering that decision. It’s unclear to me that the mortgage payment is worth this much aggravation.”&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.innoq.com/blog/st/2007/05/14/msft_goes_sco.html"&gt;Stefan Tilkov wrote&lt;/a&gt;, “If your name is on a software patent, you should feel ashamed.”&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.amazon.com/Surprise-Paul-Simon/dp/B000F0UV1S"&gt;Paul Simon wrote&lt;/a&gt;, “Who’s gonna love you when your looks are gone? / God will / Like he waters the flowers on your windowsill.”&lt;/p&gt; &lt;p&gt;My name is on a software patent. It happened during my brief tenure at IBM. The patent is not yet issued (as I understand it, issuance may take years) and does not show up in &lt;a href="http://www.uspto.gov/"&gt;USPTO&lt;/a&gt; or &lt;a href="http://www.google.com/patents"&gt;Google Patent Search&lt;/a&gt;. But it will, someday.&lt;/p&gt; &lt;p&gt;The patent describes &lt;a href="http://www.w3.org/WAI/PF/adaptable/HTML4/embedding-20060318.html"&gt;this method of embedding accessibility metadata in HTML documents&lt;/a&gt;. Please don’t flood my comments with calls of “prior art.” Yes, I know (and knew) all about &lt;a href="http://microformats.org/"&gt;microformats&lt;/a&gt;. This is not a microformat anyway, for reasons that would be interesting to very few people. Regardless, the patent is very narrow; there was no prior art. No one had done this exact thing, in this exact way, for this exact purpose, before we did. The patent was original, it was innovative, and it was still shameful.&lt;/p&gt; &lt;p&gt;I delayed writing the patent as long as possible. Weeks passed. My manager bugged me. We argued internally about whether we should patent it at all. Powerful people in our department — people who had personally written dozens of patents — argued &lt;em&gt;against&lt;/em&gt; patenting the technique. They wanted the technique to be widely adopted by assistive technology vendors, web authoring tool vendors, and web publishers across the board, and they felt that patenting it would slow down that adoption. (They were right.) My manager insisted. He assured me (and them) that IBM would only use the patent for defensive purposes. He assured me that IBM would grant a royalty-free license for anyone to implement the patented technique, even in open source (&lt;a href="https://datatracker.ietf.org/public/ipr_detail_show.cgi?ipr_id=804"&gt;like this one for APP&lt;/a&gt;). I didn’t believe him. Things like that have a way of falling off the Gantt chart.&lt;/p&gt; &lt;p&gt;You can ask why I would want to work for a company like that, if I feel so strongly. What can I say? I didn’t know how strongly they felt or how strongly I felt, until I was in the thick of it. Even then, I didn’t think it would affect me. Then I tried to resist it from the inside. Then I tried to delay it. I considered quitting. I actively looked for other employment. I made sure I was extra busy with all my other assignments. Weeks turned to months. My job leads petered out. Finally, I reached the now-or-never moment with my manager. I considered quitting anyway. I considered my mortgage payment. I took stock of my personal finances. My mortgage payment won out. I sat down and did what they paid me to do. It’s hard to live up to your principles. If it were easy, your principles probably aren’t worth a damn anyway.&lt;/p&gt; &lt;p&gt;After it was filed, I got a $1500 bonus in my next paycheck. I saw the money and cried. I swore I would donate the money to the &lt;a href="http://www.eff.org/patent/wp.php"&gt;EFF Patent Busting Project&lt;/a&gt;, but it too got swallowed up by food and medical expenses and daycare and an unexpected tax payment and yes, mortgage payments. At our next quarterly all-hands meeting, my boss’s boss’s boss called me out specifically for a job well done on my first patent. I put the phone on mute and cried some more.&lt;/p&gt; &lt;p&gt;Later we really did release it royalty-free. The patent. Or so I’m told. I never saw it in writing. Either way, it cost us time and money, bought us nothing but aggravation, and delayed adoption of an important piece of the crazy puzzle that is modern web accessibility. IBM shits patents like God waters flowers. It’s what they do. No, I take it back. To say “it’s what they do” implies a level of choice that I don’t think is present. Even our most seasoned patent writers argued against it, and we did it anyway. And for what?&lt;/p&gt; &lt;p&gt;Later I really did quit, but only after I secured another job, and not because of patents. I’m told that once the patent is issued, I’ll get another $500, even though I don’t work for IBM anymore. Issuance takes anywhere from 2 to 7 years. By then, IBM will have filed tens of thousands more. It’s an institutionalized form of madness, outrageous, all-consuming, and incurable. I’m ashamed to have been a part of it.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1178770755112">
+		<id gr:original-id="tag:diveintomark.org,2007-05-10:/archives/20070510034302">
+			tag:google.com,2005:reader/item/2b1ef7a459ccf34b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			The “you” in Youtube is you
+		</title>
+		<published>
+			2007-05-10T03:43:02Z
+		</published>
+		<updated>
+			2007-05-10T03:43:02Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/09/youtube" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/09/youtube/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/09/youtube" xml:lang="en" type="html">
+			&lt;p&gt;Dear politicians of all stripes:&lt;/p&gt; &lt;p&gt;Everything you have ever said is on Youtube. Please adjust your behavior accordingly.&lt;/p&gt; &lt;p&gt;Thank you.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1178749155466">
+		<id gr:original-id="tag:diveintomark.org,2007-05-09:/archives/20070509210656">
+			tag:google.com,2005:reader/item/6b76b54d6af9ab68
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Whither television?
+		</title>
+		<published>
+			2007-05-09T21:06:56Z
+		</published>
+		<updated>
+			2007-05-09T21:11:25Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/09/whither-television" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/09/whither-television/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/09/whither-television" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/05/television.jpg" alt="[discarded television]" title="" width="159" height="240"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/joyless_joyless/14598064/"&gt;Untitled&lt;/a&gt; © &lt;a href="http://flickr.com/people/joyless_joyless/"&gt;Holly&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;Discussion: &lt;a href="http://reddit.com/info/1p502/comments"&gt;How many people have stopped watching TV in the past two months?!&lt;/a&gt;&lt;/p&gt; &lt;p&gt;I called out sick today. (I can’t say I stayed home sick, because I work at home. And I didn’t actually call anyone, I just sent an e-mail to our department alias. But you get the idea.) It’s the kind of sick where you feel like crap all over and don’t want to eat much, but you can’t really sleep either. In other words, a perfect day to sit in front of the television and take your mind off the hook.&lt;/p&gt; &lt;p&gt;Except I didn’t. Due to our &lt;a href="http://diveintomark.org/archives/2007/04/23/floor"&gt;ongoing home renovation&lt;/a&gt;, our television and DirecTivo box have been sitting in the garage for two weeks. I didn’t miss them today. I didn’t even notice that I didn’t miss them until 5 o’clock — while cruising Reddit.&lt;/p&gt; &lt;p&gt;My wife has been saying for months that we should cancel our DirecTV subscription because we don’t watch enough to justify the cost. Now I believe her.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1178595668005">
+		<id gr:original-id="tag:diveintomark.org,2007-05-08:/archives/20070508025009">
+			tag:google.com,2005:reader/item/bd987b097cb640fc
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Site-specific text zoom
+		</title>
+		<published>
+			2007-05-08T02:50:09Z
+		</published>
+		<updated>
+			2007-05-08T02:50:09Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/07/nosquint" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/07/nosquint/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/07/nosquint" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://urandom.ca/nosquint/"&gt;NoSquint&lt;/a&gt; is my new favorite Firefox/Iceweasel extension. It allows you to set a default text zoom globally, and then remembers your text zoom settings per site. You don’t have to do anything special; just install it, go to a site like &lt;a href="http://daringfireball.net/"&gt;Daring Fireball&lt;/a&gt; that uses ridiculously small type, and select View → Text Size → Increase until you can read it. When you go to a new site (even in the same tab), the text zoom goes back to your global default. When you return to Daring Fireball, the text zoom goes back to the last size you had on Daring Fireball. That’s it. This is how text zoom ought to work in the first place.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1178125903125">
+		<id gr:original-id="tag:diveintomark.org,2007-05-02:/archives/20070502170048">
+			tag:google.com,2005:reader/item/ddc4c5df86ff256e
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Silly season
+		</title>
+		<published>
+			2007-05-02T17:00:48Z
+		</published>
+		<updated>
+			2007-05-02T18:00:45Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/02/silly-season" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/02/silly-season/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/02/silly-season" xml:lang="en" type="html">
+			&lt;p&gt;Springtime means conference time, which means it’s silly season on the web again. &lt;a href="http://labs.adobe.com/wiki/index.php/Apollo:Documentation:Introducing_Adobe_Apollo"&gt;Adobe introduced Apollo&lt;/a&gt;, their latest attempt to recreate the web in their own image. Apollo is based on Adobe’s own markup language, Adobe’s own runtime, Adobe’s own graphics and animation framework, Adobe’s own video and audio codecs, and Adobe’s own developer tools. You can do many things with it, but “&lt;a href="http://labs.adobe.com/technologies/eula/apolloruntime.html"&gt;you may not&lt;/a&gt; sublicense or distribute the Software. … You may not modify, adapt, translate or create derivative works based upon the Software. You may not reverse engineer, decompile, disassemble or otherwise attempt to discover the source code of the Software. … You may not install or use the Software on any non-PC device or with any embedded or device version of any operating system.” It requires at least Windows XP SP 2 or Mac OS X 10.4.&lt;/p&gt; &lt;p&gt;Meanwhile, &lt;a href="http://blogs.msdn.com/tims/archive/2007/04/15/introducing-microsoft-silverlight.aspx"&gt;Microsoft announced Silverlight&lt;/a&gt;, their latest attempt to recreate the web in their own image. Silverlight is based on Microsoft’s own markup language, Microsoft’s own runtime, Microsoft’s own graphics and animation framework, Microsoft’s own video and audio codecs, and Microsoft’s own developer tools. You can do many things with it, but “&lt;a href="http://www.microsoft.com/silverlight/license-win.aspx"&gt;you may not&lt;/a&gt; disclose the results of any benchmark tests of the pre-release version of software to any third party without Microsoft’s prior written approval; work around any technical limitations in the software; reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation; publish the software for others to copy; rent, lease or lend the software; or transfer the software or this agreement to any third party.” It requires at least Windows XP SP 2 or Mac OS X 10.4.8.&lt;/p&gt; &lt;p&gt;(Not to be outdone, &lt;a href="http://www.cio.in/news/viewArticle/ARTICLEID=3198"&gt;Sun is working on an “alternative” to AJAX&lt;/a&gt;, because “AJAX sort of deals with all of the old way of doing things. It makes it simpler, which is great, but underneath it’s still all this junky HTML, Document Object Model, CSS, all that stuff.” (&lt;a href="http://ajaxian.com/archives/suns-project-flair-ajax-without-the-dom-css-html-er-wait"&gt;discussion&lt;/a&gt;) To their credit, they claim they will release it as open source, and I’d bet it’ll work on Linux, but that’s easy to say because it doesn’t exist yet. Let’s be polite and forget I mentioned it.)&lt;/p&gt; &lt;p&gt;Reactions? “&lt;a href="http://www.techcrunch.com/2007/04/30/silverlight-the-web-just-got-richer/"&gt;The web just got richer&lt;/a&gt;.” Well, somebody’s getting richer, but I doubt it’s gonna be the web. And did you hear the news? You’ll &lt;a href="http://fuzzypanic.blogspot.com/2007/04/browswer-with-run-time.html"&gt;write it one time, and test it one time&lt;/a&gt; (for real this time, we promise). And Microsoft “&lt;a href="http://scobleizer.com/2007/05/01/microsoft-rebooted-the-web-yesterday/"&gt;rebooted the web&lt;/a&gt;.” I guess that’s all you can do after freezing up for five years. Hey, look over there, &lt;a href="http://download.microsoft.com/download/f/2/e/f2ecc2ad-c498-4538-8a2c-15eb157c00a7/SL_Map_FinalNET.png"&gt;shiny objects&lt;/a&gt;&lt;i&gt;!&lt;/i&gt; That poster may as well be titled “Fucked 6 Ways From Sunday,” because that’s what you’ll be if you buy into any of this.&lt;/p&gt; &lt;p&gt;Sigh. I used to have the strength to argue against such foolishness. Nowadays I’m reduced to nothing more than Grey’s-Anatomy-esque catchphrases. Seriously? &lt;em&gt;Seriously?&lt;/em&gt; Do I really have to explain why this is a bad idea? Again? To a bunch of technological virgins who haven’t been &lt;a href="http://diveintomark.org/archives/2004/05/14/freedom-0"&gt;fucked&lt;/a&gt; yet? Seriously?&lt;/p&gt; &lt;p&gt;No. Not this time. At some point, you just have to give up on virgins. Y’all have fun. Play with your vendor-specific runtimes. Don’t call me when you wake up one morning with a pink line in the round window and your &lt;acronym title="Best Friends Forever"&gt;BFF&lt;/acronym&gt; vendor &lt;a href="http://www.microsoft.com/windows/lifecycle/default.mspx"&gt;won’t return your calls&lt;/a&gt;. If you need me (but of course you won’t), I’ll be holed up in my drab unpainted toolshed around the corner, quietly building applications on the web that works.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1177457668454">
+		<id gr:original-id="tag:diveintomark.org,2007-04-24:/archives/20070424230302">
+			tag:google.com,2005:reader/item/5e6099c883d18556
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Vonnegut Day
+		</title>
+		<published>
+			2007-04-24T23:03:02Z
+		</published>
+		<updated>
+			2007-04-24T23:03:02Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/24/vonnegut-day" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/24/vonnegut-day/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/24/vonnegut-day" xml:lang="en" type="html">
+			&lt;p&gt;I, Mark Andrew Pilgrim, being of sound mind and body, and acting in my official capacity as… no one of any consequence, do hereby designate February 29th to be “Vonnegut Day.” The day shall be a vacation away from the busy, busy, busy. It shall be a holiday whose only commandment is to be kind to one another, God damn it. It shall be your chance to take a flying fuck at the mooooooooooooon. And it shall be celebrated on each and every February 29th, because the human race can only stand a vacation like that once every four years.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1177377738237">
+		<id gr:original-id="tag:diveintomark.org,2007-04-24:/archives/20070424011555">
+			tag:google.com,2005:reader/item/908ef17c9efd6d9b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			You’ve got floor
+		</title>
+		<published>
+			2007-04-24T01:15:55Z
+		</published>
+		<updated>
+			2007-04-24T01:15:55Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/23/floor" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/23/floor" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/04/floor-1.jpg" alt="newly laid hardwood floor" width="640" height="426"&gt;&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/04/floor-2.jpg" alt="newly laid hardwood floor" width="640" height="426"&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1177035500347">
+		<id gr:original-id="tag:diveintomark.org,2007-04-20:/archives/20070420021521">
+			tag:google.com,2005:reader/item/75fef60baa790981
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Renovation
+		</title>
+		<published>
+			2007-04-20T02:15:21Z
+		</published>
+		<updated>
+			2007-04-20T02:15:21Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/19/renovation" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/19/renovation/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/19/renovation" xml:lang="en" type="html">
+			&lt;p&gt;In April 2001, our downstairs looked like this:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/04/00-family-room-2001.jpg" alt="living room, April 2001" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;(By the time we moved in, in July 2001, they had added carpet where that non-hardwood-floor was, and screens on the outside deck visible through the door.)&lt;/p&gt; &lt;p&gt;One month ago, the same room looked like this:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/04/01-when-the-walls-came-down.jpg" alt="living room, March 2007" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;For the last month, we’ve had those large plastic sheets up, where there used to be walls separating the living room from the deck. In that picture, you can still see the deck flooring. The outside of the deck has been walled up with real walls and windows. We spent most of the month waiting on various inspections and subcontractors.&lt;/p&gt; &lt;p&gt;Today, the plastic sheets finally came down, and the space that used to be the outdoor deck now looks like this:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/04/02-drywall.jpg" alt="former deck, now indoors, with drywall" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;We’ve been packing up most of the things that were in and around the entertainment unit, in anticipation of moving everything into the garage this weekend so they can rip up the carpet and put down hardwood floors everywhere, including the new area.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/04/03-packing-up.jpg" alt="entertainment unit laid bare, with packed boxes everywhere" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;Now it’s all going to be one wide open living area:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/04/04-corner-shot.jpg" alt="entire new living area, from far corner" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;For reference, that sofa (which we’re getting rid of) is 91 inches long. It looked fine when there were walls behind it, and even when there were plastic sheets behind it. Now it looks puny in the middle of a 500 square foot room.&lt;/p&gt; &lt;p&gt;On the plus side, we’ll have plenty of room for Wii Bowling.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1176739619324">
+		<id gr:original-id="tag:diveintomark.org,2007-04-16:/archives/20070416144916">
+			tag:google.com,2005:reader/item/1d926ddccd7f8a0b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Translation From PR-Speak to English of Selected Portions of Rails Developer David Heinemeier Hansson’s Response to Alex Payne’s Interview
+		</title>
+		<published>
+			2007-04-16T14:49:16Z
+		</published>
+		<updated>
+			2007-04-16T17:07:07Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/16/dhh-translation" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/16/dhh-translation/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/16/dhh-translation" xml:lang="en" type="html">
+			&lt;p&gt;Source: &lt;a href="http://www.loudthinking.com/arc/000608.html"&gt;Twitter Trouble&lt;/a&gt;.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Twitter is an amazing success story in terms of rapid user uptake and flattering press.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I feel I deserve an enormous share of that flattering press.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I had a chance to speak with the team a while back about the wild ride they’ve been on. At that time they were fielding spikes of up to 11,000 requests per second across some 16 cores with very little caching thrown into the mix to mitigate. No wonder their site had been feeling slow.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I’m going to pretend that everyone has these problems.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;It sounded like they had a good plan at the time, though. Roll in a rack of new servers, look into doing substantial caching, and move beyond a single database server. The normal road to sanity employed by most any web application experiencing rapid growth.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I am a software developer, therefore this is obviously a hardware problem.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;It seems like at least one of their developers felt this standard approach to scaling was too much work and decided to share his feelings about that in an interview.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Fuck you, Alex.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;On some level, I can empathize with this sentiment. Rails makes the act of developing such a pleasant experience that when you need to follow the same scaling path as every other shared-nothing stack, the contrast can feel stark.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;My ego is the size of Montana.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;But I would still like to address two points raised in the interview. First, Alex mentions that scaling the application by adding more Mongrels and servers eventually puts a greater strain on the database. That’s absolutely correct, but also the intended consequence, not an unexpected side-effect. There should have been no surprises there.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The only surprise here is that you’re treating my utter disregard for scalability as a bug, when it is in fact a feature.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Scaling is the act of removing bottlenecks. When you remove one bottleneck (like application code execution), you tend to reveal another (like database queries). That’s natural and means you’re making progress.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Rails is an ogre, and ogres have layers.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Second, when you work with open source and you discover new requirements not met by the software, it’s your shining opportunity to give something back. Rather than just sit around idle waiting for some vendor to fix your problems, you get the unique chance of being a steward of your own destiny.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;My utter disregard for performance issues is entirely your fault.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;This is especially true with frameworks like Rails that are implemented in high-level languages like Ruby. The barriers to contribution are exceptionally low.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I am high as a kite.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;In this case, it seems that Twitter requires more sophisticated ways of talking to many databases at the same time. Alex puts it a little black and white with “…there’s no facility in Rails to talk to more than one database at a time”, which isn’t really true, but it could definitely be done better. Last I spoke with Twitter, we discussed this and they sounded enthusiastic about being able to further this area of Rails.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I can’t distinguish between people fluffing me because they want something, or fluffing me because they just can’t help themselves.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;It’s disappointing to hear that they’ve forsaken that opportunity for an arms-crossed alternative.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;It’s disappointing to discover that there are people in the world who disagree with me.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Once the stress of having to deal with that in the moment subsides, I’m convinced that the team will grow beyond the blame game, get their hands dirty as full participants in an open source community, and contribute back their advances to the framework.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I know this sucks, and I’m waiting for you to fix it so I can take credit for it.&lt;/p&gt; &lt;p style="text-align:right;font-style:oblique"&gt;&lt;small&gt;(with apologies to &lt;a href="http://daringfireball.net/2007/02/macrovision_translation"&gt;John Gruber&lt;/a&gt;)&lt;/small&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1176685980207">
+		<id gr:original-id="tag:diveintomark.org,2007-04-16:/archives/20070416002351">
+			tag:google.com,2005:reader/item/aff78c8090859a39
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Two minutes
+		</title>
+		<published>
+			2007-04-16T00:23:51Z
+		</published>
+		<updated>
+			2007-04-16T13:22:21Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/15/ejookashun" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/15/ejookashun/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/15/ejookashun" xml:lang="en" type="html">
+			&lt;dt&gt;Me&lt;/dt&gt; &lt;dd&gt;Bath time in &lt;em&gt;o-o-n-n-e minute!&lt;/em&gt;&lt;/dd&gt; &lt;dt&gt;3-year-old&lt;/dt&gt; &lt;dd&gt;Two minutes!&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt; &lt;dd&gt;One minute.&lt;/dd&gt; &lt;dt&gt;3-year-old&lt;/dt&gt; &lt;dd&gt;Two minutes! Two minutes! Two minutes!&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt; &lt;dd&gt;OK, two minutes.&lt;/dd&gt; &lt;p&gt;&lt;i&gt;One minute later…&lt;/i&gt;&lt;/p&gt; &lt;dt&gt;Me&lt;/dt&gt; &lt;dd&gt;Bath time! Everybody upstairs!&lt;/dd&gt; &lt;dt&gt;3-year-old&lt;/dt&gt; &lt;dd&gt;OK! &lt;i&gt;[Runs upstairs.]&lt;/i&gt;&lt;/dd&gt; &lt;dt&gt;Me (muttering)&lt;/dt&gt; &lt;dd&gt;Stay in school, kid.&lt;/dd&gt; &lt;dt&gt;Wife&lt;/dt&gt; &lt;dd&gt;You’re evil.&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt; &lt;dd&gt;What? It’s not like he can tell time.&lt;/dd&gt; &lt;dt&gt;Wife&lt;/dt&gt; &lt;dd&gt;That’s so bloggable.&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt; &lt;dd&gt;Excellent! It’s not like he can read either.&lt;/dd&gt; 
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1176602800400">
+		<id gr:original-id="tag:diveintomark.org,2007-04-15:/archives/20070415015227">
+			tag:google.com,2005:reader/item/b410c75fb40d1374
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			We like money
+		</title>
+		<published>
+			2007-04-15T01:52:27Z
+		</published>
+		<updated>
+			2007-04-15T01:52:56Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/14/we-like-money" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/14/we-like-money/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/14/we-like-money" xml:lang="en" type="html">
+			&lt;p&gt;So Google (&lt;a href="http://diveintomark.org/archives/2007/03/19/two-visions"&gt;my employer&lt;/a&gt;) &lt;a href="http://googleblog.blogspot.com/2007/04/next-step-in-google-advertising.html"&gt;bought DoubleClick&lt;/a&gt;. I wasn’t really under any illusions when I accepted their offer; I knew they were an advertising company. Anyone who reads Slashdot or Digg or even the New York Times knows they’re an advertising company. We’re in advertising for the same reason Willie Sutton robbed banks: it’s where the money is.&lt;/p&gt; &lt;p&gt;Many, many years ago, when the web was young and timid and slightly less jaded than it is today, I subscribed to &lt;a href="http://www.unitedmedia.com/comics/dilbert/dnrc/"&gt;Dogbert’s New Ruling Class newsletter&lt;/a&gt;. One month, Scott Adams explained why the Dilbert website would soon be including advertising — which was a big deal at the time. I can’t find the exact reference, but I believe it went something like this:&lt;/p&gt; &lt;blockquote&gt; &lt;ol&gt; &lt;li&gt;Advertisers give us money.&lt;/li&gt; &lt;li&gt;We like money.&lt;/li&gt; &lt;/ol&gt; &lt;/blockquote&gt; &lt;p&gt;(Insert obligatory &lt;cite&gt;Idiocracy&lt;/cite&gt; reference here.)&lt;/p&gt; &lt;p&gt;But back to Google. The commentary on the acquisition has been all over the place, and I have nothing to add to it except &lt;a href="http://digg.com/business_finance/The_Irony_of_Google_s_acquistion_of_DoubleClick#c6161202"&gt;this comment from Digg&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Whenever I read stories such as this, I wish I could go back in time ten years ago to high school and actually done something with my life rather than run off and drink in the hills and fire shotguns at rabbits.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I bet the rabbits agree with you.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1176514757184">
+		<id gr:original-id="tag:diveintomark.org,2007-04-14:/archives/20070414012730">
+			tag:google.com,2005:reader/item/0778d3f83ba62e02
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			The future of the web
+		</title>
+		<published>
+			2007-04-14T01:27:30Z
+		</published>
+		<updated>
+			2007-04-14T01:32:06Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/13/html5-presentation" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/13/html5-presentation/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/13/html5-presentation" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://www.digital-web.com/articles/html5_xhtml2_and_the_future_of_the_web/"&gt;HTML 5, XHTML 2, and the Future of the Web&lt;/a&gt; is making the rounds. It’s an excellent summary for people who haven’t been paying attention. Along the same lines, here’s a presentation I gave in December 2005 to a bunch of Firefox developers at Mozilla Corporation headquarters: &lt;a href="http://diveintomark.org/public/2005/12/whitelights/"&gt;White lights lead to red lights&lt;/a&gt;. The “future of the web” part comes in about halfway through.&lt;/p&gt; &lt;p&gt;(Yes, I am aware these slides violate all the rules of &lt;a href="http://www.presentationzen.com/"&gt;Presentation Zen&lt;/a&gt;. I wrote them on the plane. Hence the title.)&lt;/p&gt; &lt;p&gt;The circumstance surrounding this speaking engagement is itself a funny story, one which I may share someday. For now, let’s just say that I’ve been keeping this presentation under my hat for a long time, and now I don’t have to.&lt;/p&gt; &lt;p&gt;I shall now proceed to play Super Paper Mario all weekend.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1176406063468">
+		<id gr:original-id="tag:diveintomark.org,2007-04-12:/archives/20070412185631">
+			tag:google.com,2005:reader/item/bc89b607ade4e538
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			My kind of gutsy
+		</title>
+		<published>
+			2007-04-12T18:56:31Z
+		</published>
+		<updated>
+			2007-04-12T18:57:28Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/12/super-strict" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/12/super-strict/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/12/super-strict" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="https://lists.ubuntu.com/archives/ubuntu-devel-announce/2007-April/000276.html"&gt;&lt;cite&gt;Mark Shuttleworth&lt;/cite&gt; writes&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Ubuntu 7.10 will feature a new flavour - as yet unnamed - which takes an ultra-orthodox view of licensing: no firmware, drivers, imagery, sounds, applications, or other content which do not include full source materials and come with full rights of modification, remixing and redistribution. There should be no more conservative home, for those who demand a super-strict interpretation of the “free” in free software.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;That would be… me.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1176183111335">
+		<id gr:original-id="tag:diveintomark.org,2007-04-10:/archives/20070410035712">
+			tag:google.com,2005:reader/item/d01d5ec76aeadbed
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			The outward observance of sacraments
+		</title>
+		<published>
+			2007-04-10T03:57:12Z
+		</published>
+		<updated>
+			2007-04-10T03:59:01Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/09/the-outward-observance-of-sacraments" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/09/the-outward-observance-of-sacraments/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/09/the-outward-observance-of-sacraments" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/04/quaker-meetinghouse.jpg" alt="[Quaker Meetinghouse]" title="" width="240" height="161"&gt;&lt;br&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/celebdu/398171846/"&gt;Empty Meetinghouse&lt;/a&gt; © &lt;a href="http://flickr.com/people/celebdu/"&gt;Mike Goren&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;blockquote&gt; &lt;p&gt;The absence from Friends’ worship of the outward observance of the Lord’s Supper, water baptism, and other sacraments emphasizes the reality of inward experience. Friends are aware of the power of a true, inward baptism of the Holy Spirit; in meeting for worship at its best they know direct communion with God and fellowship with one another. These experiences make the outward rites seem unnecessary and, to some Friends, a hindrance to full attainment of the spiritual experiences which are symbolized.&lt;/p&gt; &lt;p&gt;… Friends affirm the sacramental nature of the whole of life when it is under the leading of the Spirit. Any moment, any relationship, any object when so touched can serve as a sacrament. Insofar as we are faithful in our testimonies, our very lives may thus serve for others as the outward and visible evidence of inward and invisible communion.&lt;/p&gt; &lt;p&gt;&lt;cite&gt;&lt;a href="http://www.pym.org/publish/fnp/05_beliefs.php#05h"&gt;Faith and Practice&lt;/a&gt;&lt;/cite&gt;, Philadelphia Yearly Meeting&lt;/p&gt; &lt;/blockquote&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1175707472280">
+		<id gr:original-id="tag:diveintomark.org,2007-04-04:/archives/20070404163323">
+			tag:google.com,2005:reader/item/4e887e73d8a9e90c
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			mod_musicindex alternatives?
+		</title>
+		<published>
+			2007-04-04T16:33:23Z
+		</published>
+		<updated>
+			2007-04-04T16:33:23Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/04/lighttpd-would-be-nice" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/04/lighttpd-would-be-nice/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/04/lighttpd-would-be-nice" xml:lang="en" type="html">
+			&lt;p&gt;If I had a personal music server running stock Apache + &lt;a href="http://www.parisc-linux.org/~varenet/musicindex/"&gt;mod_musicindex&lt;/a&gt;, and I wanted to move away from Apache and onto something like &lt;a href="http://www.lighttpd.net/"&gt;lighttpd&lt;/a&gt;, what would I use to continue serving my MP3+Ogg+AAC+FLAC files over the network?&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1175654923305">
+		<id gr:original-id="tag:diveintomark.org,2007-04-04:/archives/20070404013515">
+			tag:google.com,2005:reader/item/bb707ea3c3268f88
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Murphy’s snake
+		</title>
+		<published>
+			2007-04-04T01:35:15Z
+		</published>
+		<updated>
+			2007-04-04T01:35:41Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/03/murphys-snake" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/03/murphys-snake/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/03/murphys-snake" xml:lang="en" type="html">
+			&lt;p&gt;Seriously, what kind of luck do you need to work for &lt;a href="http://www.google.com/"&gt;a search company&lt;/a&gt; known for their &lt;a href="http://www.google.com/support/jobs/bin/search.py?lr=lang_en&amp;amp;type=famp;&amp;amp;query=python&amp;amp;Action.Search=Search+U.S.+Openings"&gt;use of Python&lt;/a&gt;, to &lt;a href="http://googleblog.blogspot.com/2007/04/snakes-in-plain-old-office-building.html"&gt;lose an actual python&lt;/a&gt; &lt;em&gt;on April Fool’s Day&lt;/em&gt;.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1175564946786">
+		<id gr:original-id="tag:diveintomark.org,2007-04-03:/archives/20070403010719">
+			tag:google.com,2005:reader/item/14e90a072e8ad91b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Back in the real world
+		</title>
+		<published>
+			2007-04-03T01:07:19Z
+		</published>
+		<updated>
+			2007-04-03T01:07:19Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/02/boy-that-free-food-is-nice" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/02/boy-that-free-food-is-nice/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/02/boy-that-free-food-is-nice" xml:lang="en" type="html">
+			&lt;p&gt;I’m back in Apex, NC, a.k.a. “the real world,” where food costs money.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1175433341281">
+		<id gr:original-id="tag:diveintomark.org,2007-04-01:/archives/20070401131450">
+			tag:google.com,2005:reader/item/7e8f0e231dfef9aa
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Complete this sentence
+		</title>
+		<published>
+			2007-04-01T13:14:50Z
+		</published>
+		<updated>
+			2007-04-01T13:14:50Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/01/altoids" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/01/altoids/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/01/altoids" xml:lang="en" type="html">
+			&lt;p&gt;When a 1-year-old finds a box of Altoids…&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1175404509306">
+		<id gr:original-id="tag:diveintomark.org,2007-04-01:/archives/20070401044848">
+			tag:google.com,2005:reader/item/5bffd1fb67e52029
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			document.wacko
+		</title>
+		<published>
+			2007-04-01T04:48:48Z
+		</published>
+		<updated>
+			2007-04-01T04:54:32Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/04/01/document-dot-wacko" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/04/01/document-dot-wacko/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/04/01/document-dot-wacko" xml:lang="en" type="html">
+			&lt;p&gt;So there I was, minding my own business, casually browsing MSDN for no reason, when I came across &lt;a href="http://msdn2.microsoft.com/en-us/library/ms537840.aspx"&gt;the UNSELECTABLE attribute&lt;/a&gt;. This attribute, as MSDN cheerfully points out, “specifies that an element cannot be selected.” As in, text selection. With the mouse. Or, presumably, with the keyboard. Or, in case the author decides for you, not at all.&lt;/p&gt; &lt;p&gt;I will note in passing that you turn text selection &lt;em&gt;off&lt;/em&gt; by setting the &lt;code&gt;unselectable&lt;/code&gt; attribute to &lt;em&gt;on&lt;/em&gt;. But that’s not the interesting part. This sentence caught my eye:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The UNSELECTABLE attribute is implemented as an &lt;a href="http://msdn2.microsoft.com/en-us/library/ms533747.aspx"&gt;expando&lt;/a&gt;. Setting the expando property of the document object to false precludes the functionality of all expandos.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;“Precludes the functionality.” Awesome.&lt;/p&gt; &lt;p&gt;Which led me to this wonderful example of using the &lt;a href="http://msdn2.microsoft.com/en-us/library/ms533747.aspx"&gt;expando&lt;/a&gt; property:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The following example demonstrates that, by setting the &lt;code&gt;expando&lt;/code&gt; property of the document object to &lt;code&gt;false&lt;/code&gt;, the document ignores the &lt;a href="http://msdn2.microsoft.com/en-us/library/ms537840.aspx"&gt;UNSELECTABLE&lt;/a&gt; expando on the span and allows you to select the text.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Breathtakingly awesome.&lt;/p&gt; &lt;p&gt;But wait! What was that implementation note about the &lt;code&gt;unselectable&lt;/code&gt; attribute? “The UNSELECTABLE attribute is implemented as an expando.” Hmm. “Is implemented as an expando” sounds like one of those boilerplate phrases, like “&lt;a href="http://www.google.com/search?q=%22There+is+no+public+standard+that+applies+to+this%22+site%3Amsdn2.microsoft.com&amp;amp;filter=0&amp;amp;num=100"&gt;There is no public standard that applies to this&lt;/a&gt;…” Are there other wacky “expando” properties that can be neutralized by setting &lt;code&gt;document.expando&lt;/code&gt;? As it turns out, no. The UNSELECTABLE attribute is the &lt;em&gt;only&lt;/em&gt; expando property that Internet Explorer recognizes, and therefore the only feature that can be disabled (or, depending how you look at it, re-enabled) by setting &lt;code&gt;document.expando&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;To sum up, you can turn text selection &lt;em&gt;off&lt;/em&gt; by setting the &lt;code&gt;unselectable&lt;/code&gt; attribute to &lt;em&gt;on&lt;/em&gt;, and then you can turn text selection back &lt;em&gt;on&lt;/em&gt; by setting the &lt;code&gt;document.expando&lt;/code&gt; property to &lt;em&gt;false&lt;/em&gt;. No other functionality is affected, and it only works in Internet Explorer.&lt;/p&gt; &lt;p&gt;Here’s an idea for an April Fool’s joke: Microsoft apologizes for treating the web as their own private playground for 12 years, and offers all web developers a token refund and a free t-shirt. Feel free to post ideas for the t-shirt.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1174349078595">
+		<id gr:original-id="tag:diveintomark.org,2007-03-19:/archives/20070319230834">
+			tag:google.com,2005:reader/item/7d8c882766bb6799
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="google" scheme="http://diveintomark.org/tag/" /><category term="work" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Two visions
+		</title>
+		<published>
+			2007-03-19T23:08:34Z
+		</published>
+		<updated>
+			2007-03-19T23:08:58Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/03/19/two-visions" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/03/19/two-visions/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/03/19/two-visions" xml:lang="en" type="html">
+			&lt;p&gt;There are two basic visions of the future of the web, and one of them is wrong. I’m going to work on the right one for a while. At Google. Starting today.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CJb85L2zjpEC
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CPShtreNkZMC" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2008-05-06T05:08:31Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1210050511999">
+		<id gr:original-id="tag:diveintomark.org,2008-05-06:/archives/20080506044922">
+			tag:google.com,2005:reader/item/740527c05797fbe4
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="drm" scheme="http://diveintomark.org" /><category term="microsoft" scheme="http://diveintomark.org" /><category term="music" scheme="http://diveintomark.org" /><category term="playsforsure" scheme="http://diveintomark.org" /><category term="zune" scheme="http://diveintomark.org" />
+		<title type="html">
+			The day the music died
+		</title>
+		<published>
+			2008-05-06T04:49:22Z
+		</published>
+		<updated>
+			2008-05-06T04:59:15Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/05/06/the-day-the-music-died" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/05/06/the-day-the-music-died" xml:lang="en" type="html">
+			&lt;p&gt;&lt;i&gt;This is a letter I sent to my father to explain what it means that Microsoft is &lt;a href="http://blog.wired.com/music/2008/04/microsoft-pulli.html"&gt;pulling support for MSN Music&lt;/a&gt;. Tech issues like this often bubble up into the media that he reads, but they are rarely explained well. My father assumes I have an opinion on such stories, and he is rarely wrong.&lt;/i&gt;&lt;/p&gt; &lt;p&gt;Actually, it is still technically in the future tense. The day the music dies will be August 31, 2008.&lt;/p&gt; &lt;p&gt;But first, some backstory.&lt;/p&gt; &lt;p&gt;It was the Dark Ages, around 2004 or so. The iTunes Store was new and booming. Microsoft, in its bid to be the center of everything without having to deal with pesky “end users”, decided that the way to fight Apple was to create a developer platform. This developer platform would handle all the technical details of ensuring that people could “purchase” music files from a variety of online vendors, and play these music files on their (Windows) PC or on a variety of handheld music players. This developer platform would also ensure that such “purchased” music files could not be copied. This involves a lot of fancy math (encryption) which Microsoft was happy to license to companies running online music stores and companies making handheld music players, as well as including by default in all modern versions of Windows.&lt;/p&gt; &lt;p&gt;Bruce Schneier, a famous cryptologist — or at least as famous a cryptologist as cryptologists are likely to get in this century — once described attempts to make digital bits uncopyable as “trying to make water not wet.”&lt;/p&gt; &lt;p&gt;Microsoft named this developer platform “PlaysForSure”, and they (and their partners) ran many, many ads decrying the fact that music purchased from Apple’s iTunes Music Store would “only” play in iTunes and on iPods. This was, technically speaking, true — and indeed it is still true, and it is why I have cautioned Dora and you and anyone else who would listen that you should never “purchase” anything from the iTunes Music Store that you might want to “own” longer than Apple was willing to allow. Nor should you “purchase” anything from a “PlaysForSure”-compatible music store, and for the same reasons, only with the word “Apple” crossed out and “Microsoft” written in in crayon.&lt;/p&gt; &lt;p&gt;To their credit, if that’s the right word, you can now purchase some music from the iTunes store that is unencrypted and plays anywhere. Apple calls these songs “iTunes Plus”, because it sounds so much better than calling everything else “iTunes Minus.” Apple has also promoted podcasts and other non-traditional sources of “things you might want to download onto our handheld devices where we make all of our money.” Steve is many things, but he is not an idiot.&lt;/p&gt; &lt;p&gt;To demonstrate the awesomeness of their developer platform, Microsoft opened their own online store, MSN Music, so they could compete directly with their business partners who also offered “PlaysForSure”-compatible music downloads. Because there’s nothing end users love more than fake choices.&lt;/p&gt; &lt;p&gt;The Electronic Frontier Foundation (EFF) — to whom I donate money every year because they are the digital embodiment of Tom Lehrer’s description of folk singers as “the people who get up on stage and come out in favor of all the things that everyone else in the audience is against, like peace and justice and brotherhood and so on” — has also been warning anyone who would listen that they &lt;a href="http://www.eff.org/pages/customer-always-wrong-users-guide-drm-online-music"&gt;should not “purchase” encrypted music from these services&lt;/a&gt;, since if these services go under then all that “purchased” music will no longer… what’s the word… “play”. But mostly people ignored them (and me), because, you know, &lt;i&gt;Microsoft&lt;/i&gt; was at the center of it all, and nobody ever got fired for “buying” from Microsoft. Or something.&lt;/p&gt; &lt;p&gt;So what happens on August 31, 2008? On that day, Microsoft will turn off the servers that they maintain for the sole purpose of validating that the songs that people have already “purchased” through MSN Music are still theirs to play. Those people (hereafter “the victims”) will not notice the change right away. The victims will only notice it when they purchase a new computer, or when they upgrade the operating system on their current computer, or when the hard drive in their computer dies and needs to be rebuilt/reinstalled. At that point — transferring the music files they have “purchased” to another drive or a new computer — the Microsoft music player running on the victim’s PC (like iTunes, but all Microsoft-y instead of Apple-y) will make a call to Microsoft’s validation servers to verify that the music files were legitimately purchased. This call will fail, since the servers are not responding, since Microsoft has intentionally turned them off. The Microsoft music player will then conclude, incorrectly but steadfastly, that the music files were downloaded illegally and that the victim is a filthy pirate, and it will refuse to play them. In this case, the left hand knows exactly what the right hand is doing: they’re both giving you the finger.&lt;/p&gt; &lt;p&gt;It is at this point that I am reminded of one classic call that I fielded when I worked at the AT+T Relay Service. One Friday night, a deaf person called Pizza Hut to, well, I don’t know, but probably to order a pizza of some kind, and the guy answered the phone with “Pizza Hut, we’re out of dough… can I help you?” Can you make me a pizza? No, we’re out of dough. Do you make anything else? No. Then you can’t help me! Does your music player play this music I “purchased”? No. Does your music player do anything other than play music? No. Then you can’t help me either.&lt;/p&gt; &lt;p&gt;Outside the EFF, a few of the smarter industry analysts (&lt;a href="http://www.itwire.com/content/view/5660/983/"&gt;not this guy&lt;/a&gt;) have been predicting this doomsday scenario for a while. In 2006, &lt;a href="http://news.bbc.co.uk/1/hi/technology/6120272.stm"&gt;Microsoft tacitly admitted that its PlaysForSure strategy wasn’t working&lt;/a&gt; when they announced that they were going to sell their own handheld music player (the “Zune”, which competes with the iPod… and with all the other handheld music players from Microsoft’s “PlaysForSure” business partners) and start a &lt;b&gt;second&lt;/b&gt; music service (which would directly compete with the iTunes Store… and Microsoft’s “PlaysForSure” business partners… and Microsoft’s own MSN Music store). End users, it turns out, aren’t so bad after all; they just can’t be trusted to make the right choices.&lt;/p&gt; &lt;p&gt;Also, to ensure that &lt;a href="http://www.zunethoughts.com/news/show/224/here-s-why-the-zune-isn-t-playsforsure.html"&gt;no one could screw this one up except Microsoft&lt;/a&gt;, this new music service and new handheld music player would use an entirely new encryption system that was incompatible with “PlaysForSure”, and the encryption system would not be available for licensing. Any victim who had “purchased” music through Microsoft’s old MSN Music store had no upgrade/migration path to transfer those music files to their new Microsoft Zune; the victim would have to re-purchase the same music all over again. But the victims were assured that their existing MSN Music “purchases” would continue to work as long as they owned “PlaysForSure”-compatible devices. Except now they won’t, because Microsoft is turning off the servers that verify that the music they “purchased” a long time ago is still theirs to play.&lt;/p&gt; &lt;p&gt;As you might expect, the EFF is just bursting with joy at the prospect of rubbing salt in the wound and saying “I told you so.” &lt;a href="http://www.eff.org/press/archives/2008/04/28/microsoft-open-letter"&gt;This is their “I told you so” letter&lt;/a&gt;. I would join in their jubilation, but frankly I’m tired of being right all the time. It was fun for a while, but now it’s just depressing.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1208278256918">
+		<id gr:original-id="tag:diveintomark.org,2008-04-15:/archives/20080415151228">
+			tag:google.com,2005:reader/item/1fc522606db27260
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="linux" scheme="http://diveintomark.org" /><category term="meme" scheme="http://diveintomark.org" /><category term="shell" scheme="http://diveintomark.org" />
+		<title type="html">
+			History meme
+		</title>
+		<published>
+			2008-04-15T15:12:28Z
+		</published>
+		<updated>
+			2008-04-15T15:12:28Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/04/15/history-meme" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/04/15/history-meme" xml:lang="en" type="html">
+			&lt;pre&gt;&lt;tt&gt;mark@atlantis:~% &lt;/tt&gt;&lt;kbd&gt;uname -a&lt;/kbd&gt; &lt;samp&gt;Linux atlantis 2.6.23.9 #1 SMP Sun Dec 2 22:09:17 EST 2007 x86_64 GNU/Linux&lt;/samp&gt; &lt;tt&gt;mark@atlantis:~% &lt;/tt&gt;&lt;kbd&gt;history -1000 | awk &amp;#39;{a[$2]++}END{for(i in a){print a[i] ” ” i}}’ | sort -rn | head&lt;/kbd&gt; &lt;samp&gt;181 cd 167 ls 103 sudo 75 rm 42 lsdvd 40 fp 39 mv 38 ll 37 cat 24 mkdir&lt;/samp&gt;&lt;/pre&gt; &lt;p&gt;And root:&lt;/p&gt; &lt;pre&gt;&lt;tt&gt;atlantis:~# &lt;/tt&gt;&lt;kbd&gt;history | awk &amp;#39;{a[$2]++}END{for(i in a){print a[i] ” ” i}}’ | sort -rn | head&lt;/kbd&gt; &lt;samp&gt;25 mount 20 aptitude 15 cd 11 ls 5 iwconfig 5 exit 5 dpkg 5 df 4 module-assistant 4 cat&lt;/samp&gt;&lt;/pre&gt; &lt;p&gt;Notes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;zsh needs &lt;kbd&gt;history -1000&lt;/kbd&gt; where bash just uses &lt;kbd&gt;history&lt;/kbd&gt;&lt;/li&gt; &lt;li&gt;&lt;kbd&gt;fp&lt;/kbd&gt; is a homegrown wrapper around &lt;kbd&gt;mplayer&lt;/kbd&gt; that auto-zooms and adjusts video placement to make extra room for subtitles if possible&lt;/li&gt; &lt;li&gt;&lt;kbd&gt;ll&lt;/kbd&gt; is an alias for &lt;kbd&gt;ls -l&lt;/kbd&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;(I’ve seen this meme sweep through &lt;a href="http://planet.intertwingly.net/"&gt;Planet Intertwingly&lt;/a&gt; like a bad rash, but &lt;a href="http://benjamin.smedbergs.us/blog/2008-04-15/history-meme/"&gt;Ben’s post&lt;/a&gt; is what finally prompted me to participate. In proper meme fashion, I tag &lt;a href="http://bitworking.org/"&gt;Joe&lt;/a&gt; and &lt;a href="http://tbray.org/ongoing/"&gt;Tim&lt;/a&gt; to go next.)&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1208211885522">
+		<id gr:original-id="tag:diveintomark.org,2008-04-14:/archives/20080414211101">
+			tag:google.com,2005:reader/item/25bb7bd410ad80a5
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="ikea" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			Poäng
+		</title>
+		<published>
+			2008-04-14T21:11:01Z
+		</published>
+		<updated>
+			2008-06-19T18:38:23Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/04/14/poang" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/04/14/poang" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2008/04/poang.jpg" alt="[Somebody else&amp;#39;s cats on a Poang chair]" title="" width="300" height="281"&gt; &lt;p&gt;&lt;a href="http://www.flickr.com/photos/whiskeytango/359978541/"&gt;Thanks for getting us a chair…&lt;/a&gt; © &lt;a href="http://www.flickr.com/people/whiskeytango/"&gt;Bruce Turner&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;It is impossible to parody Ikea.&lt;/p&gt; &lt;p&gt;But first, let’s back up a few miles. The extended family went up to Maryland over the weekend for a friend’s wedding. Everybody deserves to have the wedding they’ve always wanted, and these friends certainly did. Sunny gardens, Unitarian service, &lt;a href="http://www.plantamemory.com/"&gt;plantable seat cards&lt;/a&gt;, baseball-themed reception and two wedding cakes. (His: Nationals, hers: Orioles, both delicious. During wedding planning, they agreed that the team with the better record would have a higher cake stand.) On the way home we stopped at Ikea.&lt;/p&gt; &lt;p&gt;I grew up with Ikea in Philadelphia (the &lt;a href="http://www.ikea.com/ms/en_US/about_ikea_new/about/history/1980.html"&gt;first Ikea in the US&lt;/a&gt;), but I haven’t been to one in years because they aren’t anywhere near Raleigh, NC. Even &lt;a href="http://www.ikea.com/webapp/wcs/stores/servlet/IkeaNearYouView?storeId=12&amp;amp;catalogId=11001&amp;amp;langId=-1&amp;amp;StoreName=charlotte"&gt;Charlotte&lt;/a&gt; won’t be terribly convenient. In the interim, my budget and my taste have expanded, but not irreconcilably so. In 1985, my parents bought two original &lt;a href="http://www.ikea.com/us/en/catalog/products/S69805416"&gt;Poäng&lt;/a&gt; chairs for what my father remembers as $90 each. The chairs lasted for 18 years before finally succumbing to the moving van consolidation effect.&lt;/p&gt; &lt;p&gt;Ikea is exactly as I remember it. While it may be true that &lt;a href="http://www.youtube.com/watch?v=_iYBmAVuBns"&gt;Wii Fit looks great with anything from Ikea&lt;/a&gt;, Ikea itself remains impossible to parody. Funky Swedish names in bold sans serif, flat crate boxes in self-service aisles, even down to the odd British-looking cookies stacked near the checkout lanes. And a sign at checkout that reads (paraphrasing) “Plastic bags are now 5¢ because we want you to stop using them.” (Apparently this &lt;a href="http://forums.macrumors.com/showthread.php?t=296821"&gt;pisses off some Mac users&lt;/a&gt;, and you know how I love anything that pisses off Mac users.)&lt;/p&gt; &lt;p&gt;I bought myself a Poäng chair. They now come in colors, leather, and children’s sizes, with matching footstools. I chose a dark brown frame with red cushions. Total price: $90.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1206768950986">
+		<id gr:original-id="tag:diveintomark.org,2008-03-29:/archives/20080329045704">
+			tag:google.com,2005:reader/item/506eae6034840de1
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="extensions" scheme="http://diveintomark.org" /><category term="firefox" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" />
+		<title type="html">
+			No more squinting
+		</title>
+		<published>
+			2008-03-29T04:57:04Z
+		</published>
+		<updated>
+			2008-03-29T04:57:04Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/29/no-more-squinting" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/29/no-more-squinting" xml:lang="en" type="html">
+			&lt;p&gt;Hooray! &lt;a href="http://urandom.ca/nosquint/"&gt;NoSquint&lt;/a&gt; is now available for Firefox 3.0b4. For the uninitiated, NoSquint makes text zoom (now full-page zoom) work the way it’s supposed to: it remembers and automatically re-applies site-specific page zoom levels.&lt;/p&gt; &lt;p&gt;Alas, the Iceweasel 3.0b4 package in Debian experimental is currently busted, but &lt;a href="http://swiftweasel.tuxfamily.org/"&gt;Swiftweasel&lt;/a&gt; works well.&lt;/p&gt; &lt;p&gt;For other extensions that haven’t been updated yet, you can &lt;a href="http://kb.mozillazine.org/Updating_add-ons#Completely_disabling_the_compatibility_check"&gt;twiddle some hidden preferences&lt;/a&gt; and try them. The old version of NoSquint didn’t work, due to the massive changes in zooming — hence my excitement about the official update — but many other extensions work fine. &lt;a href="https://www.squarefree.com/extensions/search-keys/"&gt;Search Keys&lt;/a&gt;, for example, doesn’t advertise itself as compatible with Firefox 3, but it works fine after twiddling those hidden bits.&lt;/p&gt; &lt;p&gt;Finally, &lt;a href="http://codefisher.org/toolbar_button/"&gt;Toolbar Buttons&lt;/a&gt; has been updated to include buttons for controlling Firefox 3’s full-page zoom. Toolbar Buttons + NoSquint: it’s a match made in heaven.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1206464968648">
+		<id gr:original-id="tag:diveintomark.org,2008-03-25:/archives/20080325152426">
+			tag:google.com,2005:reader/item/d7355f53f634dba2
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="awesomebar" scheme="http://diveintomark.org" /><category term="firefox" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" />
+		<title type="html">
+			AwesomeBar
+		</title>
+		<published>
+			2008-03-25T15:24:26Z
+		</published>
+		<updated>
+			2008-03-25T15:32:52Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/25/awesomebar" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/25/awesomebar" xml:lang="en" type="html">
+			&lt;p&gt;The new &lt;a href="http://weblogs.mozillazine.org/schrep/archives/2007/12/firefox_3_beta_2.html"&gt;location bar in Firefox 3&lt;/a&gt; is growing on me. I first experienced it in an early beta on my wife’s old Powerbook, which I rarely use. It felt quite sluggish and buggy, partly because of bugs in the new Proto theme. But then I installed beta 4 on my work laptop (running Windows), a T60p which is obviously quite a bit faster than the Powerbook, and a computer on which I use a browser constantly.&lt;/p&gt; &lt;p&gt;For several days, the beta 4 AwesomeBar picked the “wrong” history items for single- or double-character queries — where by “wrong,” I mean “unexpected.” But to the credit of the &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=395739#c41"&gt;tenacious Mozilla developers&lt;/a&gt;, the bar in the nightlies seems to learn quickly and adjust to my habits. And it &lt;em&gt;has&lt;/em&gt; been useful several times when I wanted to search my own history for something I hadn’t bookmarked or shared anywhere.&lt;/p&gt; &lt;p&gt;I was skeptical, but count me as an AwesomeBar convert.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1205872588975">
+		<id gr:original-id="tag:diveintomark.org,2008-03-18:/archives/20080318201255">
+			tag:google.com,2005:reader/item/cd1cddfb5674b678
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="rant" scheme="http://diveintomark.org" />
+		<title type="html">
+			Translation From MS-Speak to English of Selected Portions of Joel Spolsky’s “Martian Headsets”
+		</title>
+		<published>
+			2008-03-18T20:12:55Z
+		</published>
+		<updated>
+			2008-03-19T16:00:37Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/18/translation-from-ms-speak-to-english-of-selected-portions-of-joel-spolskys-martin-headsets" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/18/translation-from-ms-speak-to-english-of-selected-portions-of-joel-spolskys-martin-headsets" xml:lang="en" type="html">
+			&lt;p&gt;Source: &lt;a href="http://www.joelonsoftware.com/items/2008/03/17.html"&gt;Martian Headsets&lt;/a&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;You’re about to see the mother of all flamewars on internet groups where web developers hang out.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;This self-fulfilling prophecy has been brought to you by Google Adsense: funding Slashdot trolls since 2003.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;With the web, there’s a bit of a problem: no way to test a web page against the standard, because there’s no reference implementation that guarantees that if it works, all the browsers work. This just doesn’t exist.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I demand documented standards with open reference implementations. That’s why I only develop with Microsoft technologies.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;So you have to “test” in your own head, purely as a thought experiment, against a bunch of standards documents which you probably never read and couldn’t completely understand even if you did.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;No one has ever written tools to encapsulate the world’s collective understanding of standards; you must start from scratch like everybody else. Freedom 0 buys you nothing unless you can audit the source code yourself. “Faith” in science is no more well-founded than “faith” in religion unless you can personally reproduce the experiments. &lt;blockquote&gt; &lt;p&gt;Those documents are &lt;i&gt;super&lt;/i&gt; confusing.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Hi, I’m Web Developer Barbie. Pull my string and I say, “Standards are tough! Let’s go shopping!”&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The precise problem here is that you’re pretending that there’s one standard, but since nobody has a way to test against the standard, it’s not a real standard.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I have &lt;a href="http://code.google.com/p/html5lib/source/browse/trunk/testdata/"&gt;never&lt;/a&gt; &lt;a href="http://www.w3.org/Style/CSS/Test/CSS1/current/"&gt;heard&lt;/a&gt; of &lt;a href="http://quirksmode.org/css/contents.html"&gt;test&lt;/a&gt; &lt;a href="http://quirksmode.org/dom/compatibility.html"&gt;suites&lt;/a&gt;.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;98% of the world will install IE8&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I am high as a kite.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Secretly? Here’s what I think is going to happen.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Wait… you mean you can… &lt;i&gt;see&lt;/i&gt; what I’m typing?&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;[Microsoft] will say, “look guys, we’re really sorry, we really wanted IE8 standards mode to be the default, but we can’t ship a browser that doesn’t work.”&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Microsoft has always had the best interests of the web at heart. Microsoft has never encouraged web developers to use Microsoft-specific technologies. Microsoft has never shipped a browser that &lt;a href="http://msdn2.microsoft.com/en-us/library/bb250395.aspx#cssenhancements_topic2"&gt;rendered pages differently than its predecessor&lt;/a&gt; and then let it stagnate for six years &lt;a href="http://www.betaversion.org/~stefano/linotype/news/143/"&gt;while the rest of the world moved on&lt;/a&gt;.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Or maybe they won’t… in which case, IE is going to lose a lot of market share.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I know IE is going to continue to lose a lot of market share, and I’m publishing this now so I can blame you dirty fucking hippies for it later.&lt;/p&gt; &lt;p style="text-align:right;font-style:oblique"&gt;&lt;small&gt;(as always, with apologies to &lt;a href="http://daringfireball.net/2007/02/macrovision_translation"&gt;John Gruber&lt;/a&gt;)&lt;/small&gt;&lt;/p&gt; &lt;p&gt;&lt;b&gt;Update&lt;/b&gt;: &lt;a href="http://diveintomark.org/archives/2008/03/18/translation-from-ms-speak-to-english-of-selected-portions-of-joel-spolskys-martin-headsets#comment-11565"&gt;this comment about Microsoft’s (lack of) participation&lt;/a&gt; in HTML 5 may help you understand why I hold apologists like Joel in such low regard. Or it may not, but I don’t know how to explain it any better than I already have.&lt;/p&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1205592246286">
+		<id gr:original-id="tag:diveintomark.org,2008-03-15:/archives/20080315135459">
+			tag:google.com,2005:reader/item/5b46724f562bb136
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="blogging" scheme="http://diveintomark.org" /><category term="draconian" scheme="http://diveintomark.org" /><category term="markup" scheme="http://diveintomark.org" /><category term="mu" scheme="http://diveintomark.org" /><category term="venus" scheme="http://diveintomark.org" /><category term="xml" scheme="http://diveintomark.org" />
+		<title type="html">
+			A dead fish in yesterday’s newspaper
+		</title>
+		<published>
+			2008-03-15T13:54:59Z
+		</published>
+		<updated>
+			2008-03-15T17:08:35Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/15/dead-fish" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/15/dead-fish" xml:lang="en" type="html">
+			&lt;p&gt;Time to resurface a few good comments I made at &lt;a href="http://www.tbray.org/ongoing/When/200x/2007/01/30/XML-2"&gt;Tim’s place&lt;/a&gt; last year:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;&amp;gt; if an electronic-trading system receives an XML message for a transaction valued at €2,000,000, and there’s a problem with a missing end tag, you do not want the system guessing what the message meant&lt;/p&gt; &lt;p&gt;You [Tim] have used this example, or variations of it, since 1997. I think I can finally express why it irritates me so much: you are conflating “non-draconian error handling” with “non-deterministic error handling”. It is true that there are some non-draconian formats which do not define an error handling mechanism, and it is true that this leads to non-interoperable implementations, but it is not true that non-draconian error handling implies “the system has to guess.” It is possible to specify a deterministic algorithm for graceful (non-draconian) error handling; this is one of the primary things WHATWG is attempting to do for HTML 5.&lt;/p&gt; &lt;p&gt;If any format (including an as-yet-unspecified format named “XML 2.0″) allows the creation of a document that two clients can parse into incompatible representations, and both clients have an equal footing for claiming that their way is correct, then that format has a serious bug. Draconian error handling is one way to solve such a bug, but it is not the only way, and for 10 years you’ve been using an overly simplistic example that misleadingly claims otherwise.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;And, in the same thread but on a different note:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I would posit that, for the vast majority of feed producers, feedvalidator.org *is* RSS (and Atom). People only read the relevant specs when they want to argue that the validator has a false positive (which has happened, and results in a new test) or a false negative (which has also happened, and also results in a new test). Around the time that RFC 4287 was published, Sam &lt;a href="http://feedvalidator.org/testcases/atom/"&gt;rearranged the tests by spec section&lt;/a&gt;. This is why specs matter. The validator service &lt;a href="http://diveintomark.org/archives/2004/08/16/specs"&gt;lets morons be efficient morons&lt;/a&gt;, and the tests behind it let the assholes be efficient assholes. More on this in a minute.&lt;/p&gt; &lt;p&gt;&amp;gt; A simpler specification would require a smaller and finite amount of test cases.&lt;/p&gt; &lt;p&gt;The only thing with a “finite amount of test cases” is a dead fish wrapped in yesterday’s newspaper.&lt;/p&gt; &lt;p&gt;On October 2, 2002, the service that is now hosted at feedvalidator.org came bundled with 262 tests. Today it has 1707. That ain’t all Atom. To a large extent, the increase in tests parallels an increase in understanding of feed formats and feed delivery mechanisms. The world understands more about feeds in 2007 than it did in 2002, and much of that knowledge is embodied in the validator service.&lt;/p&gt; &lt;p&gt;If a group of people want to define an XML-ish format with robust, deterministic error handling, then they will charge ahead and do so. Some in that group will charge ahead to write tests and a validator, which (one would hope) will be available when the spec finally ships. And then they will spend the next 5-10 years refining the validator, and its tests, based on the world’s collective understanding. It will take this long to refine the tests into something bordering on comprehensive *regardless of how simple the spec is* in the first place.&lt;/p&gt; &lt;p&gt;In short, you’re asking the wrong question: “How can we reduce the number of tests that would we need to ship with the spec in order to feel like we had complete coverage?” That’s a pernicious form of premature optimization. The tests you will actually need (and, hopefully, will actually *have*, 5 years from now) bears no relationship to the tests you can dream up now. True “simplicity” emerges over time, as the world’s understanding grows and the format proves that it won’t drown you in “gotchas” and unexpected interactions. XML is over 10 years old now. How many XML parsers still don’t support RFC 3023? How many do support it if you only count the parts where XML is served as “application/xml”?&lt;/p&gt; &lt;p&gt;I was *really proud* of those 262 validator tests in 2002. But if you’d forked the validator on October 3rd, 2002, and never synced it, you’d have something less than worthless today. Did the tests rot? No; the world just got smarter.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;On a somewhat related note, I’ve cobbled together a &lt;a href="http://firehose.diveintomark.org/"&gt;firehose&lt;/a&gt; which tracks comments (like these) that I make on other selected sites. Many thanks to &lt;a href="http://www.intertwingly.net/blog/"&gt;Sam&lt;/a&gt; for teaching me about &lt;a href="http://www.intertwingly.net/code/venus/docs/filters.html"&gt;Venus filters&lt;/a&gt;, which make it all possible. If you’ve been thinking “Gee, I just can’t get enough of that Pilgrim guy, I wish there were a way that I could stalk him without being overly creepy about it,” then this firehose is for you.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1205494696329">
+		<id gr:original-id="tag:diveintomark.org,2008-03-14:/archives/20080314055419">
+			tag:google.com,2005:reader/item/6dbc5acc1d3fb539
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="amazon" scheme="http://diveintomark.org" />
+		<title type="html">
+			Holy fucking shit, look at all those tubas
+		</title>
+		<published>
+			2008-03-14T05:54:19Z
+		</published>
+		<updated>
+			2008-03-14T05:54:19Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/14/tubutt" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/14/tubutt" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://diveintomark.org/public/2008/03/bobissimo.png" width="539" height="1432"&gt;&lt;/p&gt; &lt;p&gt;Or, as my four-year-old likes to say, “Bobo plays the tu-butt.” Came up with that all by himself, he did. We’re so proud.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1205183977916">
+		<id gr:original-id="tag:diveintomark.org,2008-03-10:/archives/20080310204508">
+			tag:google.com,2005:reader/item/522d9d53e66f2341
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="firefox" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" />
+		<title type="html">
+			Priorities
+		</title>
+		<published>
+			2008-03-10T20:45:08Z
+		</published>
+		<updated>
+			2008-03-10T20:45:08Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/10/priorities-2" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/10/priorities-2" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;Long tooltips: &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=45375"&gt;7&lt;/a&gt; &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=218223"&gt;years&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;kbd&gt;about:robots&lt;/kbd&gt;: &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=417302"&gt;1 month&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1205120724517">
+		<id gr:original-id="tag:diveintomark.org,2008-03-10:/archives/20080310023902">
+			tag:google.com,2005:reader/item/55b4141c27876076
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="markup" scheme="http://diveintomark.org" /><category term="mu" scheme="http://diveintomark.org" />
+		<title type="html">
+			Draconian error handling: still the worst idea ever
+		</title>
+		<published>
+			2008-03-10T02:39:02Z
+		</published>
+		<updated>
+			2008-03-10T02:42:10Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/09/no-fury-like-dracon-scorned" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/09/no-fury-like-dracon-scorned" xml:lang="en" type="html">
+			&lt;p&gt;Even the experts can’t get it right 100% of the time.&lt;/p&gt; &lt;p&gt;&lt;img alt="[screenshot of xml error on intertwingly.net]" src="http://diveintomark.org/public/2008/03/draconian-640.png" width="640" height="280"&gt;&lt;/p&gt; &lt;p&gt;&lt;small&gt;screenshot taken at 10:29 PM on March 8, 2008.&lt;/small&gt;&lt;/p&gt; &lt;p&gt;For the record, my site is valid HTML 5, except the parts that aren’t. My therapist says I shouldn’t rely so much on external validation.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1204938673929">
+		<id gr:original-id="tag:diveintomark.org,2008-03-08:/archives/20080308004224">
+			tag:google.com,2005:reader/item/2d4cf3ac90fe0f53
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="apple" scheme="http://diveintomark.org" /><category term="gpl" scheme="http://diveintomark.org" /><category term="iphone" scheme="http://diveintomark.org" /><category term="licensing" scheme="http://diveintomark.org" />
+		<title type="html">
+			Can GPL iPhone apps exist?
+		</title>
+		<published>
+			2008-03-08T00:42:24Z
+		</published>
+		<updated>
+			2008-03-08T00:43:40Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/07/iphone-gpl" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/07/iphone-gpl" xml:lang="en" type="html">
+			&lt;p&gt;My non-lawyerly reading of the GPL says no, or at least, not without some significant buy-in from Apple.&lt;/p&gt; &lt;p&gt;This is the relevant portion of &lt;a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"&gt;GPLv2 section 3&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;3. You may copy and distribute the Program (or a work based on it, under Section 2) in object code or executable form under the terms of Sections 1 and 2 above provided that you also do one of the following:&lt;/p&gt; &lt;p&gt; a) Accompany it with the complete corresponding machine-readable source code, which must be distributed under the terms of Sections 1 and 2 above on a medium customarily used for software interchange; or, &lt;/p&gt; &lt;p&gt; b) Accompany it with a written offer, valid for at least three years, to give any third party, for a charge no more than your cost of physically performing source distribution, a complete machine-readable copy of the corresponding source code …&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Since all iPhone apps must be distributed through a third-party (Apple’s “App Store”), that would make Apple the “distributor.” Which would mean that Apple — acting as the distributor of GPL-licensed object code — must provide source code or a written offer to provide source code. It’s analogous to a Linux distribution — they distribute binaries of upstream GPL programs, so they need to host the source code as well.&lt;/p&gt; &lt;p&gt;Is this correct, and if so, will Apple be set up to do this?&lt;/p&gt; &lt;p&gt;(My non-lawyerly reading of GPLv3 just makes my head spin, so I won’t even venture an opinion about that.)&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1204700306221">
+		<id gr:original-id="tag:diveintomark.org,2008-03-05:/archives/20080305062527">
+			tag:google.com,2005:reader/item/bc1db2f585454691
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="chardet" scheme="http://diveintomark.org" /><category term="encoding" scheme="http://diveintomark.org" /><category term="python" scheme="http://diveintomark.org" /><category term="unicode" scheme="http://diveintomark.org" />
+		<title type="html">
+			Universal Encoding Detector 1.0.1 is out
+		</title>
+		<published>
+			2008-03-05T06:25:27Z
+		</published>
+		<updated>
+			2008-03-05T14:51:35Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/05/upstream" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/05/upstream" xml:lang="en" type="html">
+			&lt;p&gt;Despite a complete lack of fanfare or self-promotion, much of the Python-loving world seems to have found my &lt;a href="http://chardet.feedparser.org/"&gt;Universal Encoding Detector&lt;/a&gt;, which is a pure-Python port of &lt;a href="http://www.mozilla.org/projects/intl/UniversalCharsetDetection.html"&gt;Mozilla’s encoding detection&lt;/a&gt;. &lt;acronym&gt;UED&lt;/acronym&gt; is used in a variety of end-user applications and other developer libraries, including:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://home.gna.org/gaupol/"&gt;Gaupol&lt;/a&gt;, a subtitle editor/shifter/tweaker (wonderful for converting PAL-timed subtitles found on &lt;a href="http://www.opensubtitles.com/en"&gt;OpenSubtitles.com&lt;/a&gt;)&lt;/li&gt; &lt;li&gt;&lt;a href="http://griffith.berlios.de/"&gt;Griffith&lt;/a&gt;, a film collection manager&lt;/li&gt; &lt;li&gt;&lt;a href="http://ninix-aya.sourceforge.jp/"&gt;ninix-aya&lt;/a&gt;, which is apparently some sort of &lt;a href="http://packages.ubuntu.com/gutsy/games/ninix-aya"&gt;desktop mascot&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://code.google.com/p/html5lib/"&gt;html5lib&lt;/a&gt;, a standards-compliant tokenizing HTML parser&lt;/li&gt; &lt;li&gt;My own &lt;a href="http://feedparser.org/"&gt;Universal Feed Parser&lt;/a&gt;, and other applications that rely on it, like &lt;a href="http://www.planetplanet.org/"&gt;Planet&lt;/a&gt; and &lt;a href="http://intertwingly.net/code/venus/"&gt;Venus&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://pygments.org/"&gt;Pygments&lt;/a&gt;, and other applications that rely on &lt;em&gt;it&lt;/em&gt;, like &lt;a href="http://www.rexx.com/~dkuhlman/odtwriter.html"&gt;Odtwriter&lt;/a&gt; and &lt;a href="http://pudge.lesscode.org/"&gt;Pudge&lt;/a&gt; &lt;li&gt;&lt;a href="http://www.anti-particle.com/wahcade.shtml"&gt;Wah!Cade&lt;/a&gt;, a MAME front-end &lt;/li&gt;&lt;/li&gt;&lt;/ul&gt; &lt;p&gt;And probably some others I don’t know about.&lt;/p&gt; &lt;p&gt;This is what it feels like to be an upstream author. And I use the term “author” loosely, since all I did was port somebody else’s wicked-smart algorithm, introduce new bugs, and write a few incoherent pages of documentation. But still, it is humbling to step back and observe the enormous worldwide community that is constantly packaging, updating, integrating, and distributing this stuff.&lt;/p&gt; &lt;p&gt;Anyway, &lt;a href="http://chardet.feedparser.org/docs/history.html"&gt;version 1.0.1 is out&lt;/a&gt;, with a whopping two bugs fixed. Sorry it’s so late, but I was busy &lt;a href="http://diveintomark.org/archives/2006/07/04/you-make-bunny-cry"&gt;practicing witchcraft and becoming a lesbian&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Yeah, I didn’t see that coming either.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1204606603336">
+		<id gr:original-id="tag:diveintomark.org,2008-03-04:/archives/20080304035724">
+			tag:google.com,2005:reader/item/99c94f25e2d7d9a9
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" />
+		<title type="html">
+			Bestsellers
+		</title>
+		<published>
+			2008-03-04T03:57:24Z
+		</published>
+		<updated>
+			2008-03-04T19:11:43Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/03/03/bestsellers" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/03/03/bestsellers" xml:lang="en" type="html">
+			&lt;p&gt;One of these things is not like the others,&lt;br&gt; One of these things just doesn’t belong.&lt;br&gt; Can you tell which thing is not like the others…&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.amazon.com/gp/bestsellers/pc/565108/ref=pd_ts_c_th_more"&gt;&lt;img src="http://diveintomark.org/public/2008/03/bestsellers-medium.png" alt="screenshot of top 5 bestselling laptops" width="680" height="1255"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;…Before I finish my song?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1204263734014">
+		<id gr:original-id="tag:diveintomark.org,2008-02-29:/archives/20080229051623">
+			tag:google.com,2005:reader/item/07db3e779e6c7a15
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="markup" scheme="http://diveintomark.org" /><category term="mu" scheme="http://diveintomark.org" />
+		<title type="html">
+			Jumping out of the system
+		</title>
+		<published>
+			2008-02-29T05:16:23Z
+		</published>
+		<updated>
+			2008-02-29T05:16:23Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/02/29/godel-escher-who" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/02/29/godel-escher-who" xml:lang="en" type="html">
+			&lt;p&gt;In the midst of a discussion between the only four people in the world who care about such things, Asbørn Ulsberg &lt;a href="http://intertwingly.net/blog/2008/02/24/XHTMLating-WordPress#c1204192590"&gt;writes&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I think the issue of getting plugin developers to author well-formed plugins is solved by getting the core of WordPress to support and enforce XHTML. Getting this right is, as I see it, a two-part enforcement and encouragement battle. First, &lt;b&gt;WordPress should be outputting everything as application/xhtml+xml (including the admin pages)&lt;/b&gt; to supporting browsers. [emphasis added]&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;This is, quite simply, the worst idea ever. Many, many years ago, I explained in great detail &lt;a href="http://diveintomark.org/archives/2004/01/14/thought_experiment"&gt;why it was the worst idea ever&lt;/a&gt;. This is &lt;a href="http://blog.codedread.com/archives/2008/02/25/stimulating-wordpress/"&gt;not just a theoretical problem&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;When he [inserted an invalid Unicode character into my system], I ran into the very problem that Mark mentioned years ago and I had to poke my WordPress database option to switch back to text/html for the WordPress admin panel so I could correct Jacques’ invalid character.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Wordpress constitutes a logical system. If errors are introduced into that system, the administration panel is the only place within the system that you can correct those errors. If the administration panel itself does not tolerate the very errors it seeks to correct, then you can not fix the errors without jumping out of the system. This is Logical Systems 101. Go read &lt;a href="http://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"&gt;Gödel, Escher, Bach&lt;/a&gt;, then come back and argue in favor of enforcing draconian error handling everywhere.&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.intertwingly.net/blog/"&gt;Sam&lt;/a&gt; does not have this problem, because he doesn’t have to fix errors from within his system. (In fact, his weblog has no administration panel at all. All of his administration is already done from outside the system.) But your average Wordpress user doesn’t have that luxury; they’re constrained by either a lack of knowledge (don’t know how to jump out of the system) or a lack of privileges (not allowed to jump outside the system). In my original &lt;a href="http://diveintomark.org/archives/2004/01/14/thought_experiment"&gt;thought experiment&lt;/a&gt;, Nick had the latter problem, because he was running on Typepad and had no access to anything outside his own administration pages.&lt;/p&gt; &lt;p&gt;(Interesting postscript: &lt;a href="http://diveintomark.org/archives/2004/01/14/thought_experiment"&gt;Thought Experiment&lt;/a&gt; led to the only documented case in the history of my blog where I &lt;a href="http://daringfireball.net/2004/03/dive_into_markdown"&gt;changed someone’s mind&lt;/a&gt; through reasoned argument. Possibly the only documented case in &lt;a href="http://xkcd.com/386/"&gt;the history of the internet&lt;/a&gt;, though I would be interested in other examples if you have them.)&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1203729946467">
+		<id gr:original-id="tag:diveintomark.org,2008-02-23:/archives/20080223001728">
+			tag:google.com,2005:reader/item/b151533db6d30b16
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="creativecommons" scheme="http://diveintomark.org" /><category term="flickr" scheme="http://diveintomark.org" /><category term="warts" scheme="http://diveintomark.org" />
+		<title type="html">
+			The warts of Flickr
+		</title>
+		<published>
+			2008-02-23T00:17:28Z
+		</published>
+		<updated>
+			2008-02-23T00:18:02Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/02/22/cc-warts" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/02/22/cc-warts" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://diveintomark.org/public/2008/02/the-warts-of-flickr.jpg" alt="[4 warts]" width="151" height="151"&gt;&lt;/p&gt; &lt;p&gt;&lt;small&gt;Licensed under &lt;a href="http://creativecommons.org/licenses/by/2.0/"&gt;CC-BY 2.0&lt;/a&gt;. Sources:&lt;/small&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;small&gt;&lt;a href="http://flickr.com/photos/hendry/459027963/"&gt;Frozen and blistered warts&lt;/a&gt; by &lt;a href="http://flickr.com/people/hendry/"&gt;Kai Hendry&lt;/a&gt; / &lt;a href="http://creativecommons.org/licenses/by/2.0/"&gt;CC-BY 2.0&lt;/a&gt;&lt;/small&gt;&lt;/li&gt; &lt;li&gt;&lt;small&gt;&lt;a href="http://flickr.com/photos/sloth_rider/544691731/"&gt;Wart removal&lt;/a&gt; by &lt;a href="http://flickr.com/people/sloth_rider/"&gt;Andrea Allen&lt;/a&gt; / &lt;a href="http://creativecommons.org/licenses/by/2.0/"&gt;CC-BY 2.0&lt;/a&gt;&lt;/small&gt;&lt;/li&gt; &lt;li&gt;&lt;small&gt;&lt;a href="http://flickr.com/photos/refusejesus/197164133/"&gt;The Jellytot&lt;/a&gt; by &lt;a href="http://flickr.com/people/refusejesus/"&gt;Tim Morris&lt;/a&gt; / &lt;a href="http://creativecommons.org/licenses/by/2.0/"&gt;CC-BY 2.0&lt;/a&gt;&lt;/small&gt;&lt;/li&gt; &lt;li&gt;&lt;small&gt;&lt;a href="http://flickr.com/photos/hendry/459032746/"&gt;Small wart, big blister&lt;/a&gt; by &lt;a href="http://flickr.com/people/hendry/"&gt;Kai Hendry&lt;/a&gt; / &lt;a href="http://creativecommons.org/licenses/by/2.0/"&gt;CC-BY 2.0&lt;/a&gt;&lt;/small&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Previously: &lt;a href="http://diveintomark.org/archives/2007/08/13/cc-elephants"&gt;elephants&lt;/a&gt;, &lt;a href="http://diveintomark.org/archives/2007/08/12/cc-butterflies"&gt;butterflies&lt;/a&gt;, &lt;a href="http://diveintomark.org/archives/2007/03/05/cc-dogs"&gt;dogs&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;This is all &lt;a href="http://blog.codedread.com/archives/2008/02/21/blog-use-cases/"&gt;Jeff’s fault&lt;/a&gt;.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1203645294628">
+		<id gr:original-id="tag:diveintomark.org,2008-02-22:/archives/20080222010157">
+			tag:google.com,2005:reader/item/2ae543115025c41b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="duckies" scheme="http://diveintomark.org" /><category term="html5" scheme="http://diveintomark.org" /><category term="rant" scheme="http://diveintomark.org" />
+		<title type="html">
+			The Bolero of trolls
+		</title>
+		<published>
+			2008-02-22T01:01:57Z
+		</published>
+		<updated>
+			2008-02-22T04:21:11Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/02/21/the-bolero-of-troll" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/02/21/the-bolero-of-troll" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://www.crockford.com/html/"&gt;Fixing HTML&lt;/a&gt; is awesome, and it makes me think of zefrank. No, it’s awesome &lt;em&gt;because&lt;/em&gt; it makes me think of zefrank. God, I miss zefrank. During the zefrank era, I was working on Firefox. At least in my corner of the Mozilla developer community, when someone came into IRC and said the magic words “zefrank is up,” no work of any kind got done for the next 3 minutes.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;&lt;a href="http://www.zefrank.com/theshow/archives/2006/05/050506.html"&gt;Let’s watch the monkey dance&lt;/a&gt; &lt;br&gt; Anti-intellectualism &lt;br&gt; Make fun of the South of France &lt;br&gt; Anti-intellectualism&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Good times.&lt;/p&gt; &lt;p&gt;Anyway, &lt;a href="http://www.crockford.com/html/"&gt;Fixing HTML&lt;/a&gt;’s awesomeness is like the awesomeness of a 5-year old when they come up to you on Sunday morning and announce, out of the blue, that they have a foolproof plan to end all wars ever. “Just be nice to each other!” they say, immediately before tripping over the toy Woody doll — which you bought at a yard sale and has ironically followed exactly the same trajectory as the make-believe toy Woody doll in the movie that invented the toy Woody doll — and spilling their Cheerios all over the dog. And you want to just pat them on the head and say “&lt;a href="http://www.zefrank.com/theshow/archives/2006/07/post_4.html"&gt;Well, it’s a little more complicated than that&lt;/a&gt;,” but you can’t say that to a 5-year old because it’ll destroy their wonderfully naive child-mind and eat away at their soul and discourage them from sharing the actually good ideas they get when they grow up. So you give them a hug and say, “You have a good heart” or some other platitude that makes them feel better about themselves without acknowledging that they are, in fact, only 5, and then get on to the important business of mopping the dog.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I found these balls, they’re made of brass &lt;br&gt; This little bathtub smells like ass &lt;br&gt; Look! A see-through wall of glass! &lt;br&gt; Anti-intellectualism&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The difference, of course, is that Crockford &lt;em&gt;should&lt;/em&gt; understand that things are a little more complicated than that, but the ideas that he thinks are good enough to announce to the world are no better than the ideas a 5-year old has before breakfast. “No more iframes! No more document.write!” he declares, blissfully unaware that his employer’s home page uses both. “Strict entity parsing!” he demands… in a page with unescaped ampersands. “UTF-8 is the One True Encoding!” he proclaims boldly… in a page that declares itself as ISO-8859-1. “No more javascript: URLs! In fact, let’s replace Javascript altogether! And I’ll be back to talk about CSS!” It just goes on and on, the awesomeness gradually swelling until it all folds back on itself like a Möbius strip of self-parody. It’s the Bolero of trolls. Everything he claims is secure isn’t, and everything he claims would increase security wouldn’t. Everything he wants to add to HTML would make it worse, and everything he wants to remove would also make it worse. Please, please tell me he’s &lt;a href="http://en.wikipedia.org/wiki/Hearts#Shooting_the_moon"&gt;shooting the moon&lt;/a&gt; to make the worst proposal ever. It just doesn’t make sense any other way, at least not from anyone older than 5.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I bet this bike goes really fast! &lt;br&gt; Oh, and Joel, kiss my ass! &lt;br&gt; Anti-anti-anti-anti-anti-anti-anti-anti-anti-intellectualism&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Did I mention that I miss zefrank? He could fix my HTML any day.&lt;/p&gt; &lt;p&gt;&lt;small&gt;(Are the new viewers gone yet?)&lt;/small&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1203475692302">
+		<id gr:original-id="tag:diveintomark.org,2008-02-20:/archives/20080220014613">
+			tag:google.com,2005:reader/item/bb39bf8871ce3400
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="html5" scheme="http://diveintomark.org" />
+		<title type="html">
+			All these years, I’ve been using the cite element incorrectly
+		</title>
+		<published>
+			2008-02-20T01:46:13Z
+		</published>
+		<updated>
+			2008-02-20T01:46:13Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/02/19/all-these-years" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/02/19/all-these-years" xml:lang="en" type="html">
+			&lt;p&gt;From the latest &lt;a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/section-phrase.html#the-cite"&gt;HTML 5 draft&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;A person’s name is not the title of a work — even if people call that person a piece of work — and the element must therefore not be used to mark up people’s names. …&lt;/p&gt; &lt;p&gt;A ship is similarly not a work, and the element must not be used to mark up ship names.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;On the plus side, the nautically challenged will be happy to learn that spec editors are now officially allowed to perform marriage ceremonies.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1202889565350">
+		<id gr:original-id="tag:diveintomark.org,2008-02-13:/archives/20080213070130">
+			tag:google.com,2005:reader/item/3e81a69fc3cd226f
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="africa" scheme="http://diveintomark.org" /><category term="photos" scheme="http://diveintomark.org" /><category term="zambia" scheme="http://diveintomark.org" />
+		<title type="html">
+			Hisabati
+		</title>
+		<published>
+			2008-02-13T07:01:30Z
+		</published>
+		<updated>
+			2008-02-13T07:11:58Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/02/13/hisabati" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/02/13/hisabati" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://diveintomark.org/public/2008/02/hisabati1.jpg"&gt;&lt;img src="http://diveintomark.org/public/2008/02/hisabati1_236.jpg" alt="school in Zambia" title="" width="236" height="177" style="margin-right:6px"&gt;&lt;/a&gt;&lt;a href="http://diveintomark.org/public/2008/02/hisabati2.jpg"&gt;&lt;img src="http://diveintomark.org/public/2008/02/hisabati2_236.jpg" alt="children sitting in school" title="" width="236" height="177" style="margin-right:6px"&gt;&lt;/a&gt;&lt;a href="http://diveintomark.org/public/2008/02/hisabati3.jpg"&gt;&lt;img src="http://diveintomark.org/public/2008/02/hisabati3_236.jpg" alt="child at blackboard" title="" width="236" height="177"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;In July 2006, my father traveled to Pamodzi, a small village in Zambia, Africa. (He builds houses with Habitat for Humanity.) The first picture shows the school from the outside. The second shows the children sitting against the wall of the school. The third shows a child at the blackboard. According to the only non-English word on the board, the lesson of the day is “Hisabati” — &lt;a href="http://en.wiktionary.org/wiki/hisabati"&gt;Swahili for mathematics&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Of all the photos he’s brought back from around the world, I’ve always liked this set the best.&lt;/p&gt; &lt;p&gt;&lt;small&gt;Photos licensed under &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;CC-BY-3.0&lt;/a&gt;.&lt;/small&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1202195212735">
+		<id gr:original-id="tag:diveintomark.org,2008-02-05:/archives/20080205060052">
+			tag:google.com,2005:reader/item/cbec03ffa653b008
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="writing" scheme="http://diveintomark.org" />
+		<title type="html">
+			Writing with ease
+		</title>
+		<published>
+			2008-02-05T06:00:52Z
+		</published>
+		<updated>
+			2008-02-05T19:06:28Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/02/05/writing-with-ease" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/02/05/writing-with-ease" xml:lang="en" type="html">
+			&lt;p&gt;During my brief but memorable tenure at Earlham College, I wrote a column for the school newspaper. (For the kids in the audience, that’s like Twittering on paper once a week.) Columns aren’t news articles (which sounded like work); they’re more like the opinions you read on the op-ed pages, without the opinions. Think Dave Barry (my inspiration) or George Will (not so much).&lt;/p&gt; &lt;p&gt;My first trimester (that’s right, trimester), I mostly wrote irreverent articles about making the Internet accessible to newbies. My first ever published article was entitled “Getting Wired at Earlham.” Don’t laugh; this was 1994. It was published on the inside back page, across from a half-page advertisement for the Macintosh Performa 636. The Performa impressively came with “the Internet Companion to help you tap into on-line research resources.” Plus ClarisWorks, and a CD-ROM drive. “And now, with an Apple Computer Loan, you can own a Macintosh for less than a dollar a day.” Screw those starving kids in Africa; I’m getting myself a Performa!&lt;/p&gt; &lt;p&gt;Anyway, I hereby present my first article, published on September 9, 1994 under the heading “Lost in Cyberspace”:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;If you’ve picked up a newspaper in the last year, you’ve probably seen the term “cyberspace,” and if you actually read the newspaper, you are probably confused. This is not entirely your fault; the general media, for the most part, doesn’t have the first clue what cyberspace is, where it came from, or what to do about it. &lt;i&gt;[Note: this is still true. -ed]&lt;/i&gt;&lt;/p&gt; &lt;p&gt;Loosely defined, cyberspace is anything you can see, hear, taste, touch, or feel on the Internet. Depending on what you read (and what you believe), this may also include anything people claim you will be able to do on the Information Superhighway, just as soon as they get around to building it. These claims range from buying groceries to walking your virtual dog, but none of these things are actually happening yet. &lt;i&gt;[I predicted Second Life in 1994. -ed]&lt;/i&gt;&lt;/p&gt; &lt;p&gt;The Internet, on the other hand, already exists, and it resembles the proposed Information Superhighway about as much as Earlham Hall resembles a four-star Hilton.&lt;/p&gt; &lt;p&gt;Dave Barry says that the Internet is just like the Information Superhighway, except that you’re driving in pouring rain with no windshield wipers and all the road signs are upside-down and backwards. &lt;i&gt;[Note: this is still true. -ed]&lt;/i&gt;&lt;/p&gt; &lt;p&gt;A long time ago, only scientists and tenured physics professors were on the Internet, and cyberspace was a “no shirt, no shoes, no brains, no service” kind of place. The population was 99.44% white males of European descent, and the other 0.56% were widely believed to be a glitch in the original software. &lt;i&gt;[In retrospect, this is not funny. -ed]&lt;/i&gt;&lt;/p&gt; &lt;p&gt;By 1994, all that has changed — the “virtual community” includes virtually everybody (a fact which annoys the scientists and physics professors to no end, and it is easier than ever to get “wired.”&lt;/p&gt; &lt;p&gt;If you want to get yourself wired without the help of caffeine or other harmless drugs, the first thing you should do is find Ira Carmel and get an account on Earlham’s mainframe. &lt;i&gt;[Note: so not kidding. -ed]&lt;/i&gt; This is actually trickier than it sounds, since Ira is usually only in his office during normal business hours, so you may have to wake up early to catch him.&lt;/p&gt; &lt;p&gt;Ira and I are old friends (we had Wiffleball class together last spring) &lt;i&gt;[Note: this is true; it counted as a gym credit. -ed]&lt;/i&gt; and if you mention my name, he’s give you a 10% discount. This doesn’t amount to much, since accounts are free, but it never hurts to ask.&lt;/p&gt; &lt;p&gt;His office is in the computer center in the basement of Lilly Library, and it has no windows, so small talk about the weather will probably only make him angry. But tell him your name and the year you’ll graduate (which, for some reason, is assumed to be four years after you get here), and he’ll give you an account.&lt;/p&gt; &lt;p&gt;Congratulations, you’ve just gotten yourself wired.&lt;/p&gt; &lt;p&gt;Next week: omniscient beings in cyberspace.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The next week’s article was devoted to the Usenet superstar of the day, James Parry, a.k.a. Kibo. The week after that was on the importance of choosing a good password. Then an entire article about the &lt;kbd&gt;'finger'&lt;/kbd&gt; command, then one about Internet-connected vending machines. (Remember the Coke machine at RIT that you could finger? I swear I recycled every 1994 Internet meme into print.) Then an article about the World Wide Web, featuring &lt;kbd&gt;lynx&lt;/kbd&gt; and a URL with a port number. Then an article on the MAKE MONEY FAST pyramid scheme that infested Usenet and bulletin boards for years. (The article began with this plea: “Will the person who sent me a pyramid scheme chain letter in the mail a few weeks ago stand up, go to the nearest wall, and bang your head against it?”) Finally, an article on how to forge e-mail by logging into unsecured SMTP servers. So not kidding. (That article was controversial, even in 1994.)&lt;/p&gt; &lt;p&gt;Looking through my newspaper archives, it appears I took a trimester off. When I came back, I was bored with writing about computer stuff. I came up with a new heading — “Ars Magna” — and wrote a series of articles, each a different style of &lt;a href="http://en.wikipedia.org/wiki/Constrained_writing"&gt;constrained writing&lt;/a&gt;. (I didn’t know that it had a name. We didn’t have Wikipedia back then, you know.)&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Did you know that a common word usually has two to six synonyms? It’s not as difficult as you might think to find a synonym for a word if you wish. Many programs such as Microsoft Word can look up words for you just by typing and clicking a button or two. in fact, I’m using Word right now for writing this column.&lt;/p&gt; &lt;p&gt;It’s practically a truism of writing that using synonyms can add color to your compositions. This is not to say that you should abandon your original word in favor of its synonyms, but substituting a synonym for a common word can transform a dull and prosaic thought into a piquant locution. You can always try substituting a synonym or mixing a common word with various analogous notions, as long as this won’t sound confusing to your instructor.&lt;/p&gt; &lt;p&gt;Also, using various grammatical forms can allow you to signify your original thought in various ways, using synonyms, antonyms, or both. But always pick your synonyms and antonyms thoughtfully: words can carry unusual connotations that you may not wish to imply. And, as always, a hazard of writing this way is that, by using too many synonyms or antonyms of common words, or by using highly unusual grammatical constructions, you may actually hurt your writing; your instructor may not know that your abundant synonyms signify an individual notion. Too much of a good thing…&lt;/p&gt; &lt;p&gt;This brings up a similar point: your writing should flow naturally. Adding flair to your writing is a worthy goal, but trying to match Kant’s intricacy of forms and vocabulary is not a particularly good way to win favor with your instructors. (Philosophy majors will strongly concur on this point.) Naturally, this calls for a broad vocabulary and a thorough command of grammatical forms. Accomplishing this is no light task, but if you can gain this important skill, you can go a long way towards dramatically improving your writing.&lt;/p&gt; &lt;p&gt;Postscript:&lt;/p&gt; &lt;p&gt;Why am I writing about writing? You may think that this topic is insignificant, but in fact it is anything but trivial. Of all my columns, this probably ranks as my most important; it was without a doubt my most difficult. I had four rough drafts prior to writing this final copy. Why was it so difficult? It has to do with a particular oddity in my writing, a curiosity that you probably will not spot right away. If you do spot it, jot down a quick summary and mail it to my account on yang (PILGRMA). Happy hunting.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I titled it “Writing with Ease.” The entire article was written without the letter E. (This is called a &lt;a href="http://en.wikipedia.org/wiki/Lipogram"&gt;lipogram&lt;/a&gt;, though I didn’t know that until today.) Several of my friends figured out the constraint, which I would say speaks to the quality of my friends at the time. I let the rest of my audience in on the joke in my next column.&lt;/p&gt; &lt;p&gt;After that, I wrote a column about vegetarianism where every sentence included an anagram of the word “vegetarian.” (That column was titled “I Love Vegetarians, They Taste Great.” My girlfriend’s best friend’s boyfriend was the newspaper editor, so we all basically did whatever we wanted.) And although I can’t find it in my archives, I swear I wrote another where all the article’s sentences were in alphabetical order. (This is harder than it sounds.)&lt;/p&gt; &lt;p&gt;Many years later, I published “&lt;a href="http://addictionis.org/"&gt;Addiction is…&lt;/a&gt;,” which follows the obvious constraint that every item in the list starts with the same two words. A lesser-known example is my story “&lt;a href="http://addictionis.org/close/"&gt;That Close&lt;/a&gt;,” which comprises nothing but words of one syllable. (I cheated a little by anonymizing names with single letters.) I couldn’t say why I felt compelled to choose those constraints, but in each case the choice was explicit and intentional from the very first drafts. In the case of “That Close,” I think it was a vague feeling that the story was simple and blunt, and fancying it up with long words would just fuck it up. “There are not a lot of roles to fill,” and all that. To this day, I can re-read those stories and lose myself in them, forgetting the constraints I imposed on myself while writing them.&lt;/p&gt; &lt;p&gt;And that’s all she wrote.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1201931446849">
+		<id gr:original-id="tag:diveintomark.org,2008-02-02:/archives/20080202045718">
+			tag:google.com,2005:reader/item/eca6beca52fe4af7
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="culture" scheme="http://diveintomark.org" /><category term="parody" scheme="http://diveintomark.org" />
+		<title type="html">
+			The real 2011 list
+		</title>
+		<published>
+			2008-02-02T04:57:18Z
+		</published>
+		<updated>
+			2008-02-02T05:32:09Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/02/02/the-real-2011-list" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/02/02/the-real-2011-list" xml:lang="en" type="html">
+			&lt;p&gt;The &lt;a href="http://www.beloit.edu/~pubaff/mindset/2011.php"&gt;2011 Mindset List&lt;/a&gt; is boring. Here’s the &lt;em&gt;real&lt;/em&gt; list of “things that make me feel old” about the freshmen entering college this year.&lt;sup&gt;&lt;a href="http://diveintomark.org/archives/2008/02/02/the-real-2011-list#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt; &lt;ol&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/amagill/362201147/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/cash.jpg" alt="[$5700 in $100 bills]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/amagill/362201147/"&gt;$5700&lt;/a&gt; © &lt;a href="http://flickr.com/people/amagill/"&gt;Andrew Magill&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;Computers have always come with operating systems, and &lt;a href="http://en.wikipedia.org/wiki/System_7#Miscellaneous"&gt;OS upgrades have always cost money&lt;/a&gt; (except &lt;a href="http://groups.google.com/group/comp.os.minix/msg/2194d253268b0a1b"&gt;the ones that didn’t&lt;/a&gt;).&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/gesteves/2220043964/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/mac512.jpg" alt="[Mac 512K closeup]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/gesteves/2220043964/"&gt;Old School&lt;/a&gt; © &lt;a href="http://flickr.com/people/gesteves/"&gt;Guillermo Esteves&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;An “Apple computer” has always meant &lt;a href="http://www.apple-history.com/?page=gallery&amp;amp;model=512ke&amp;amp;performa=off&amp;amp;sort=date&amp;amp;order=ASC"&gt;a “Macintosh computer”&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/rka/1123929/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/floppies.jpg" alt="[3.5-inch floppy disc]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/rka/1123929/"&gt;Floppy&lt;/a&gt; © &lt;a href="http://flickr.com/people/rka/"&gt;Rudolf Ammann&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;Apple computers have &lt;a href="http://en.wikipedia.org/wiki/IMac#USB"&gt;always had USB ports and never had floppy drives&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/sorian/2060776888/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/vibrators.jpg" alt="[Vibrators on a platter]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/sorian/2060776888/"&gt;hors d’vours&lt;/a&gt; © &lt;a href="http://flickr.com/people/sorian/"&gt;tox brown&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;V&lt;a href="http://www.geneffects.com/briarskin/ibrator/ibrator.html"&gt;ibrator&lt;/a&gt;s have &lt;a href="http://www.slate.com/id/2121835/slideshow/2121919/fs/0//entry/2121916/"&gt;always&lt;/a&gt; been &lt;a href="http://video.yahoo.com/video/play?vid=189798"&gt;mainstream&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/indi/273989876/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/blankdiscs.jpg" alt="[Spindle of blank CDs]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/indi/273989876/"&gt;Compact Disks&lt;/a&gt; © &lt;a href="http://flickr.com/people/indi/"&gt;Indi Samarajiva&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/CD_burner#Recording_performance"&gt;CDs have always been copyable&lt;/a&gt;. &lt;a href="http://cyber.law.harvard.edu/openlaw/DVD/dvd-discuss-faq.html"&gt;DVDs have always been copyable&lt;/a&gt;. The phrase “&lt;a href="http://www.archive.org/details/dontcopythatfloppy"&gt;Don’t Copy That Floppy&lt;/a&gt;” has never been more than a historical curiosity.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/jmarty/1804061993/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/bsod.jpg" alt="[Blue Screen of Death]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/jmarty/1804061993/"&gt;BSOD 0×07B&lt;/a&gt; © &lt;a href="http://flickr.com/people/jmarty/"&gt;Justin Marty&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;Windows has always supported &lt;a href="http://www.micropersuasion.com/2005/08/congrtlnsw95_yo.html"&gt;long filenames&lt;/a&gt; and &lt;a href="http://blogs.msdn.com/oldnewthing/archive/2004/11/19/266664.aspx#267389"&gt;pre-emptive multitasking&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/mark-birbeck/61853671/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/browser.jpg" alt="[Web browser screenshot]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/mark-birbeck/61853671/"&gt;Sidewinder showing the W3C Homepage&lt;/a&gt; © &lt;a href="http://flickr.com/people/mark-birbeck/"&gt;Mark Birbeck&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;They’ve never &lt;a href="http://www.blooberry.com/indexdot/history/netscape.htm"&gt;paid for a web browser&lt;/a&gt;, because computers have always &lt;a href="http://en.wikipedia.org/wiki/Windows_95#Internet_Explorer"&gt;come with one pre-installed&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/dopesmuglar/252464779/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/maskedman.jpg" alt="[Masked man]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/dopesmuglar/252464779/"&gt;Crime generally punishes itself&lt;/a&gt; © &lt;a href="http://flickr.com/people/dopesmuglar/"&gt;Chandan Nandrajog&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;Microsoft has &lt;a href="http://www.usdoj.gov/atr/cases/f3800/msjudgex.htm"&gt;always been a monopoly&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/bootbearwdc/269749703/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/rumsfeld.jpg" alt="[Donald Rumsfeld]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/bootbearwdc/269749703/"&gt;IMG_8072&lt;/a&gt; © &lt;a href="http://flickr.com/people/bootbearwdc/"&gt;dbking&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;&lt;a href="http://www.youtube.com/watch?v=eWEjvCRPrCo"&gt;Porn&lt;/a&gt; has always been &lt;a href="http://images.google.com/"&gt;easier to find&lt;/a&gt; than to avoid.&lt;sup&gt;&lt;a href="http://diveintomark.org/archives/2008/02/02/the-real-2011-list#footnote2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/89186997@N00/497649056/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/dildo.jpg" alt="[Dildo in glass case (no really)]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/89186997@N00/497649056/"&gt;Royal Copenhagen&lt;/a&gt; © &lt;a href="http://flickr.com/people/89186997@N00/"&gt;richkidsunite&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;Dildos have &lt;a href="http://en.wikipedia.org/wiki/Dildo#Materials"&gt;always been made of silicone&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/joyless_joyless/14598064/"&gt;&lt;img src="http://diveintomark.org/public/2007/05/television.jpg" alt="[discarded television]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/joyless_joyless/14598064/"&gt;Untitled&lt;/a&gt; © &lt;a href="http://flickr.com/people/joyless_joyless/"&gt;Holly&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;They’ve always learned about drugs &lt;a href="http://www.fda.gov/Fdac/features/2003/203_dtc.html"&gt;from television ads&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/negativz/74267002/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/pills.jpg" alt="[pile of multicolored pills]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/negativz/74267002/"&gt;pills&lt;/a&gt; © &lt;a href="http://flickr.com/people/negativz/"&gt;Rodrigo Senna&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;The easiest way to “&lt;a href="http://books.google.com/books?id=kO7i5wXIZkwC&amp;amp;dq=turn+on+tune+in+drop+out&amp;amp;pg=PP1&amp;amp;ots=zpuwiwCBfk&amp;amp;sig=f3znNCafY8wRvJBTtjYBHxU4rYo&amp;amp;hl=en&amp;amp;prev=http://www.google.com/search?q=turn+on,+tune+in,+drop+out&amp;amp;ie=utf-8&amp;amp;oe=utf-8&amp;amp;sa=X&amp;amp;oi=print&amp;amp;ct=title&amp;amp;cad=one-book-with-thumbnail"&gt;turn on, tune in, and drop out&lt;/a&gt;” has always been &lt;a href="http://www.erowid.org/experiences/subs/exp_Pharmaceuticals.shtml"&gt;with a prescription&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/katemonkey/213888113/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/napster.jpg" alt="[Napster logo on wall]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/katemonkey/213888113/"&gt;l33t from the str33t&lt;/a&gt; © &lt;a href="http://flickr.com/people/katemonkey/"&gt;KateMonkey&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;They’ve &lt;a href="http://www.biconews.com/article/view/3390"&gt;never had to pay for music&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;li style="clear:both"&gt; &lt;div style="width:75px"&gt; &lt;a href="http://flickr.com/photos/gnarlsmonkey/263019967/"&gt;&lt;img src="http://diveintomark.org/public/2008/02/contraceptives.jpg" alt="[Empty contraceptives package]" title="" width="75" height="75"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/gnarlsmonkey/263019967/"&gt;All the contraceptive pills are gone…&lt;/a&gt; © &lt;a href="http://flickr.com/people/gnarlsmonkey/"&gt;Gnarls Monkey&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;Anal sex has always been &lt;a href="http://www.infinitydog.com/technicalvirgin/message.html"&gt;an acceptable form of birth control&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;div style="clear:both"&gt; &lt;ol&gt; &lt;li&gt;Taking some liberties and assuming that the recorded life begins at age 8 or so. &lt;a href="http://diveintomark.org/archives/2008/02/02/the-real-2011-list#from-footnote1"&gt;↺&lt;/a&gt;&lt;/li&gt; &lt;li&gt;This, more than anything else on the list, makes me feel old. &lt;a href="http://diveintomark.org/archives/2008/02/02/the-real-2011-list#from-footnote2"&gt;↺&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

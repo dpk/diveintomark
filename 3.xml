@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CKjo5_GP5JQC
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CParvN7LzZcC" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2008-12-19T21:10:07Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1229721007232">
+		<id gr:original-id="tag:diveintomark.org,2008-12-19:/archives/20081219200926">
+			tag:google.com,2005:reader/item/b63175801900a800
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="3ivx" scheme="http://diveintomark.org" /><category term="dirac" scheme="http://diveintomark.org" /><category term="divx" scheme="http://diveintomark.org" /><category term="GIVE" scheme="http://diveintomark.org" /><category term="h264" scheme="http://diveintomark.org" /><category term="mpeg4" scheme="http://diveintomark.org" /><category term="theora" scheme="http://diveintomark.org" /><category term="vc-1" scheme="http://diveintomark.org" /><category term="video" scheme="http://diveintomark.org" /><category term="xvid" scheme="http://diveintomark.org" />
+		<title type="html">
+			A gentle introduction to video encoding, part 2: lossy video codecs
+		</title>
+		<published>
+			2008-12-19T20:09:26Z
+		</published>
+		<updated>
+			2009-01-11T19:39:02Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs" xml:lang="en" type="html">
+			&lt;p&gt;[&lt;a rel="alternate" hreflang="es" href="http://triptico.com/docs/give_part_2.html"&gt;en Español&lt;/a&gt;]&lt;/p&gt; &lt;p&gt;[These notes will eventually become part of a tech talk on video encoding. &lt;a href="http://diveintomark.org/tag/give"&gt;List of all articles in this series&lt;/a&gt;.]&lt;/p&gt; &lt;p&gt;The most important consideration in video encoding is choosing a video codec. A future article will talk about how to pick the one that’s right for you, but for now I just want to introduce the concept and describe the playing field. (This information is likely to go out of date quickly; future readers, be aware that this was written in December 2008.)&lt;/p&gt; &lt;p&gt;When you talk about “watching a video,” you’re probably talking about a combination of one video stream, one audio stream, and possibly some subtitles or captions. But you probably don’t have two different files; you just have “the video.” Maybe it’s an AVI file, or an MP4 file. These are &lt;a href="http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats/"&gt;just container formats&lt;/a&gt;, like a ZIP file that contains multiple kinds of files within it. The container format defines how to store the video and audio streams in a single file (and subtitles too, if any).&lt;/p&gt; &lt;p&gt;When you “watch a video,” your video player is doing several things at once:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Interpreting the container format to find out which video and audio tracks are available, and how they are stored within the file so that it can find the data it needs to decode next&lt;/li&gt; &lt;li&gt;Decoding the video stream and displaying a series of images on the screen&lt;/li&gt; &lt;li&gt;Decoding the audio stream and sending the sound to your speakers&lt;/li&gt; &lt;li&gt;Possibly decoding the subtitle stream as well, and showing and hiding phrases at the appropriate times while playing the video&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;A &lt;i&gt;video codec&lt;/i&gt; is an algorithm by which a video stream is encoded, i.e. it specifies how to do #2 above. Your video player &lt;i&gt;decodes&lt;/i&gt; the video stream according to the &lt;i&gt;video codec&lt;/i&gt;, then displays a series of images, or “frames,” on the screen. Most modern video codecs use all sorts of tricks to minimize the amount of information required to display one frame after the next. For example, instead of storing each individual frame (like a screenshot), they will only store the differences between frames. Most videos don’t actually change all that much from one frame to the next, so this allows for high compression rates, which results in smaller file sizes. (There are many, many other complicated tricks too, which I’ll dive into in a future article.)&lt;/p&gt; &lt;p&gt;There are &lt;i&gt;lossy&lt;/i&gt; and &lt;i&gt;lossless&lt;/i&gt; video codecs; today’s article will only deal with lossy codecs. A &lt;i&gt;lossy video codec&lt;/i&gt; means that information is being irretrievably lost during encoding. Like copying an audio cassette tape, you’re losing information about the source video, and degrading the quality, every time you encode. Instead of the “hiss” of an audio cassette, a re-re-re-encoded video may look blocky, especially during scenes with a lot of motion. (Actually, this can happen even if you encode straight from the original source, if you choose a poor video codec or pass it the wrong set of parameters.) On the bright side, lossy video codecs can offer amazing compression rates, and many offer ways to “cheat” and smooth over that blockiness during playback, to make the loss less noticeable to the human eye.&lt;/p&gt; &lt;p&gt;There are &lt;a href="http://samples.mplayerhq.hu/V-codecs/"&gt;&lt;em&gt;tons&lt;/em&gt; of video codecs&lt;/a&gt;. Today I’ll discuss five modern lossy video codecs: &lt;a href="http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs#mpeg4asp"&gt;MPEG-4 ASP&lt;/a&gt;, &lt;a href="http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs#h264"&gt;H.264&lt;/a&gt;, &lt;a href="http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs#vc1"&gt;VC-1&lt;/a&gt;, &lt;a href="http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs#theora"&gt;Theora&lt;/a&gt;, and &lt;a href="http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs#dirac"&gt;Dirac&lt;/a&gt;.&lt;/p&gt; &lt;h3&gt;&lt;a href="http://en.wikipedia.org/wiki/MPEG-4_Part_2"&gt;MPEG-4 ASP&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;a.k.a. “MPEG-4 Advanced Simple Profile.” MPEG-4 ASP was developed by &lt;a href="http://en.wikipedia.org/wiki/Moving_Picture_Experts_Group"&gt;the MPEG group&lt;/a&gt; and standardized in 2001. You may have heard of &lt;a href="http://en.wikipedia.org/wiki/DivX"&gt;DivX&lt;/a&gt;, &lt;a href="http://en.wikipedia.org/wiki/Xvid"&gt;Xvid&lt;/a&gt;, or &lt;a href="http://en.wikipedia.org/wiki/3ivx"&gt;3ivx&lt;/a&gt;; these are all competing implementations of the MPEG-4 ASP standard. &lt;a href="http://www.xvid.org/"&gt;Xvid is open source&lt;/a&gt;; DivX and 3ivx are closed source. The company behind DivX has had some mainstream success in branding “DivX” as synonymous with “MPEG-4 ASP.” For example, this &lt;a href="http://www.amazon.com/Philips-DVP642-DivX-Certified-Progressive-Scan-Player/dp/B000204SWE"&gt;“DivX-certified” DVD player&lt;/a&gt; can actually play &lt;a href="http://www.jarnot.com/twiki/bin/view/Public/DVP642LisaBsAVIGuide"&gt;most MPEG-4 ASP videos&lt;/a&gt; in an AVI container, even if they were created with a competing encoder. (To confuse things even further, the company behind DivX has now &lt;a href="http://en.wikipedia.org/wiki/DivX#DivX_Media_Format_.28DMF.29"&gt;created their own container format&lt;/a&gt;.)&lt;/p&gt; &lt;p&gt;&lt;b&gt;MPEG-4 ASP is patent-encumbered&lt;/b&gt;; licensing is brokered through the &lt;a href="http://www.mpegla.com/"&gt;MPEG LA group&lt;/a&gt;. MPEG-4 ASP video can be embedded in most popular &lt;a href="http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats"&gt;container formats&lt;/a&gt;, including AVI, MP4, and MKV.&lt;/p&gt; &lt;h3&gt;&lt;a href="http://en.wikipedia.org/wiki/H.264"&gt;H.264&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;a.k.a. “MPEG-4 part 10,” a.k.a. “MPEG-4 AVC,” a.k.a. “MPEG-4 Advanced Video Coding.” H.264 was also developed by &lt;a href="http://en.wikipedia.org/wiki/Moving_Picture_Experts_Group"&gt;the MPEG group&lt;/a&gt; and standardized in 2003. It aims to provide a single codec for low-bandwidth, low-CPU devices (cell phones); high-bandwidth, high-CPU devices (modern desktop computers); and everything in between. To accomplish this, the H.264 standard is split into “&lt;a href="http://en.wikipedia.org/wiki/H.264#Profiles"&gt;profiles&lt;/a&gt;,” which each define a set of optional features that trade complexity for file size. Higher profiles use more optional features, offer better visual quality at smaller file sizes, take longer to encode, and require more CPU power to decode in real-time.&lt;/p&gt; &lt;p&gt;To give you a rough idea of the range of profiles, &lt;a href="http://www.apple.com/iphone/specs.html"&gt;Apple’s iPhone supports Baseline profile&lt;/a&gt;, the &lt;a href="http://www.apple.com/appletv/specs.html"&gt;AppleTV set-top box supports Baseline and Main profiles&lt;/a&gt;, and &lt;a href="http://www.kaourantin.net/2007/08/what-just-happened-to-video-on-web_20.html"&gt;Adobe Flash on a desktop PC supports Baseline, Main, and High profiles&lt;/a&gt;. YouTube (owned by Google, my employer) now uses H.264 to encode &lt;a href="http://blog.wired.com/business/2008/12/youtube-adds-hd.html"&gt;high-definition videos&lt;/a&gt;, playable through Adobe Flash; Youtube also provides H.264-encoded video to mobile devices, including Apple’s iPhone and phones running Google’s &lt;a href="http://code.google.com/android/"&gt;Android mobile operating system&lt;/a&gt;. Also, H.264 is one of the video codecs mandated by the Blu-Ray specification; Blu-Ray discs that use it generally use the High profile.&lt;/p&gt; &lt;p&gt;Most non-PC devices that play H.264 video (including iPhones and standalone Blu-Ray players) actually do the decoding on a dedicated chip, since their main CPUs are nowhere near powerful enough to decode the video in real-time. Recent high-end desktop graphics cards also support decoding H.264 in hardware. There are &lt;a href="http://compression.ru/video/codec_comparison/mpeg-4_avc_h264_2007_en.html"&gt;a number of competing H.264 encoders&lt;/a&gt;, including the open source &lt;a href="http://www.videolan.org/developers/x264.html"&gt;x264 library&lt;/a&gt;. &lt;b&gt;The H.264 standard is patent-encumbered&lt;/b&gt;; licensing is brokered through the &lt;a href="http://www.mpegla.com/"&gt;MPEG LA group&lt;/a&gt;. H.264 video can be embedded in most popular &lt;a href="http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats"&gt;container formats&lt;/a&gt;, including MP4 (used primarily by &lt;a href="http://www.apple.com/itunes/whatson/movies.html"&gt;Apple’s iTunes Store&lt;/a&gt;) and MKV (used primarily by video pirates).&lt;/p&gt; &lt;h3&gt;&lt;a href="http://en.wikipedia.org/wiki/VC-1"&gt;VC-1&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;VC-1 evolved from Microsoft’s WMV9 codec and was &lt;a href="http://www.betanews.com/article/Microsoft_VC1_Codec_Now_a_Standard/1144097224"&gt;standardized in 2006&lt;/a&gt;. It is primarily used and promoted by Microsoft for high-definition video, although, like H.264, it has &lt;a href="http://www.microsoft.com/windows/windowsmedia/howto/articles/vc1techoverview.aspx#OverviewofVC1"&gt;a range of profiles&lt;/a&gt; to trade complexity for file size. Also like H.264, it is mandated by the Blu-Ray specification, and all Blu-Ray players are required to be able to decode it. &lt;b&gt;The VC-1 codec is patent-encumbered&lt;/b&gt;, with licensing brokered through the &lt;a href="http://www.mpegla.com/"&gt;MPEG LA group&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Wikipedia has a brief &lt;a href="http://en.wikipedia.org/wiki/Comparison_of_H.264_and_VC-1"&gt;technical comparison of VC-1 and H.264&lt;/a&gt;; Microsoft &lt;a href="http://www.microsoft.com/windows/windowsmedia/howto/articles/vc1techoverview.aspx#VC1ComparedtoOtherCodecs"&gt;has their own comparison&lt;/a&gt;; Multimedia.cx &lt;a href="http://wiki.multimedia.cx/index.php?title=H.264"&gt;has a pretty Venn diagram outlining the similarities and differences&lt;/a&gt;. Multimedia.cx also &lt;a href="http://wiki.multimedia.cx/index.php?title=VC-1"&gt;discusses the technical features of VC-1&lt;/a&gt;. I also found &lt;a href="http://www.avsforum.com/avs-vb/showthread.php?p=9931723#post9931723"&gt;this history of VC-1 and H.264&lt;/a&gt; to be interesting (as well as &lt;a href="http://archive2.avsforum.com/avs-vb/showthread.php?p=6594314#post6594314"&gt;this rebuttal&lt;/a&gt;).&lt;/p&gt; &lt;p&gt;VC-1 is designed to be container-independent, although it is most often embedded in an ASF container. An open source decoder for VC-1 video was &lt;a href="http://code.google.com/soc/2006/ffmpeg/appinfo.html?csaid=5AA777DB19E2BB24"&gt;a 2006 Google Summer of Code project&lt;/a&gt;, and the resulting code was added to the multi-faceted &lt;a href="http://ffmpeg.mplayerhq.hu/"&gt;ffmpeg library&lt;/a&gt;.&lt;/p&gt; &lt;h3&gt;&lt;a href="http://en.wikipedia.org/wiki/Theora"&gt;Theora&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;Theora evolved from the &lt;a href="http://en.wikipedia.org/wiki/Theora#History"&gt;VP3 codec&lt;/a&gt; and has subsequently been developed by the &lt;a href="http://xiph.org/"&gt;Xiph.org Foundation&lt;/a&gt;. &lt;b&gt;Theora is a royalty-free codec and is not encumbered by any known patents&lt;/b&gt; other than the original VP3 patents, which have been irrevocably licensed royalty-free. Although the standard has been “frozen” since 2004, the Theora project (which includes an open source reference encoder and decoder) &lt;a href="http://lists.xiph.org/pipermail/theora-dev/2008-November/003736.html"&gt;only hit 1.0 in November 2008&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Theora video can be embedded in any container format, although it is most often seen in an Ogg container. All major Linux distributions support Theora out-of-the-box, and Mozilla Firefox 3.1 &lt;a href="https://developer.mozilla.org/web-tech/2008/10/14/firefox-31-beta-1-an-overview-of-features-for-web-developers/"&gt;will include native support for Theora video&lt;/a&gt; in an Ogg container. And by “native”, I mean “available on all platforms without platform-specific plugins.” You can also play Theora video &lt;a href="http://www.xiph.org/dshow/"&gt;on Windows&lt;/a&gt; or &lt;a href="http://xiph.org/quicktime/"&gt;on Mac OS X&lt;/a&gt; after installing Xiph.org’s open source decoder software.&lt;/p&gt; &lt;p&gt;The reference encoder included in Theora 1.0 is widely criticized for being slow and poor quality, but Theora 1.1 will include a new encoder that takes better advantage of Theora’s features, while staying backward-compatible with current decoders. (Info: &lt;a href="http://web.mit.edu/xiphmont/Public/theora/demo.html"&gt;1&lt;/a&gt;, &lt;a href="http://web.mit.edu/xiphmont/Public/theora/demo2.html"&gt;2&lt;/a&gt;, &lt;a href="http://web.mit.edu/xiphmont/Public/theora/demo3.html"&gt;3&lt;/a&gt;, &lt;a href="http://web.mit.edu/xiphmont/Public/theora/demo4.html"&gt;4&lt;/a&gt;, &lt;a href="http://web.mit.edu/xiphmont/Public/theora/demo5.html"&gt;5&lt;/a&gt;, &lt;a href="http://svn.xiph.org/branches/theora-thusnelda/"&gt;source code&lt;/a&gt;.)&lt;/p&gt; &lt;h3&gt;&lt;a href="http://en.wikipedia.org/wiki/Dirac_(codec)"&gt;Dirac&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;Dirac was &lt;a href="http://www.bbc.co.uk/rd/projects/dirac/"&gt;developed by the BBC&lt;/a&gt; to provide a royalty-free alternative to H.264 and VC-1 that the BBC could use to stream high-definition television content in Great Britain. Like H.264, Dirac aims to provide a single codec for the full spectrum of very low- and very high-bandwidth streaming. &lt;b&gt;Dirac is not encumbered by any known patents&lt;/b&gt;, and there are two open source implementations, &lt;a href="http://diracvideo.org/download/dirac-research/"&gt;dirac-research&lt;/a&gt; (the BBC’s reference implementation) and &lt;a href="http://www.diracvideo.org/download/schroedinger/"&gt;Schroedinger&lt;/a&gt; (optimized for speed).&lt;/p&gt; &lt;p&gt;The Dirac standard was only finalized in 2008, so there is very little mainstream use yet, although &lt;a href="http://www.ibc.org/cgi-bin/ibc_dailynews_cms.cgi?story_no=25368&amp;amp;issue=4"&gt;the BBC did use it internally during the 2008 Olympics&lt;/a&gt;. Dirac-encoded video tracks can be embedded in several popular &lt;a href="http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats"&gt;container formats&lt;/a&gt;, including &lt;a href="http://www.diracvideo.org/wiki/index.php/DiracInISOM"&gt;MP4&lt;/a&gt;, &lt;a href="http://www.diracvideo.org/wiki/index.php/DiracInOgg"&gt;Ogg&lt;/a&gt;, &lt;a href="http://www.diracvideo.org/wiki/index.php/DiracInMatroska"&gt;MKV&lt;/a&gt;, and &lt;a href="http://www.diracvideo.org/wiki/index.php/DiracInAVI"&gt;AVI&lt;/a&gt;. &lt;a href="http://www.videolan.org/vlc/"&gt;VLC&lt;/a&gt; 0.9.2 (&lt;a href="http://www.diracvideo.org/node/19"&gt;released in September 2008&lt;/a&gt;) can play Dirac-encoded video within an Ogg or MP4 container.&lt;/p&gt; &lt;h3&gt;And on and on…&lt;/h3&gt; &lt;p&gt;Of course, this is only scratching the surface of all the available video codecs. Video encoding goes way back, but my focus in this series is on the present and near-future, not the past. If you like, you can read about &lt;a href="http://en.wikipedia.org/wiki/MPEG-2"&gt;MPEG-2&lt;/a&gt; (used in DVDs), &lt;a href="http://en.wikipedia.org/wiki/MPEG-1"&gt;MPEG-1&lt;/a&gt; (used in Video CDs), older versions of Microsoft’s &lt;a href="http://en.wikipedia.org/wiki/Windows_Media_Video#Windows_Media_Video"&gt;WMV&lt;/a&gt; family, &lt;a href="http://en.wikipedia.org/wiki/Sorenson_codec"&gt;Sorenson&lt;/a&gt;, &lt;a href="http://en.wikipedia.org/wiki/Indeo"&gt;Indeo&lt;/a&gt;, and &lt;a href="http://en.wikipedia.org/wiki/Cinepak"&gt;Cinepak&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Tomorrow: audio codecs!&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1229619020605">
+		<id gr:original-id="tag:diveintomark.org,2008-12-18:/archives/20081218155422">
+			tag:google.com,2005:reader/item/25d8bd977b8ff850
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="asf" scheme="http://diveintomark.org" /><category term="avi" scheme="http://diveintomark.org" /><category term="encoding" scheme="http://diveintomark.org" /><category term="flv" scheme="http://diveintomark.org" /><category term="GIVE" scheme="http://diveintomark.org" /><category term="mp4" scheme="http://diveintomark.org" /><category term="ogg" scheme="http://diveintomark.org" /><category term="video" scheme="http://diveintomark.org" />
+		<title type="html">
+			A gentle introduction to video encoding, part 1: container formats
+		</title>
+		<published>
+			2008-12-18T15:54:22Z
+		</published>
+		<updated>
+			2009-01-11T19:39:22Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" xml:lang="en" type="html">
+			&lt;p&gt;[&lt;a rel="alternate" hreflang="es" href="http://triptico.com/docs/give_part_1.html"&gt;en Español&lt;/a&gt;]&lt;/p&gt; &lt;p&gt;[These notes will eventually become part of a tech talk on video encoding. &lt;a href="http://diveintomark.org/tag/give"&gt;List of all articles in this series&lt;/a&gt;.]&lt;/p&gt; &lt;p&gt;You may think of video files as “AVI files” or “MP4 files.” In reality, “AVI” and “MP4″ are just container formats. Just like a ZIP file can contain any sort of file within it, video container formats only define &lt;em&gt;how&lt;/em&gt; to store things within them, not &lt;em&gt;what&lt;/em&gt; kinds of data are stored. (It’s a little more complicated than that, because not all video streams are compatible with all container formats, but never mind that for now.) A video file usually contains multiple &lt;em&gt;tracks&lt;/em&gt; — a video track (without audio), one or more audio tracks (without video), one or more subtitle/caption tracks, and so forth. Tracks are usually interrelated; an audio track contains markers within it to help synchronize the audio with the video, and a subtitle track contains time codes marking when each phrase should be displayed. Individual tracks can have metadata, such as the aspect ratio of a video track, or the language of an audio or subtitle track. Containers can also have metadata, such as the title of the video itself, cover art for the video, episode numbers (for television shows), and so on.&lt;/p&gt; &lt;p&gt;There are &lt;em&gt;lots&lt;/em&gt; of video container formats. Some of the most popular include&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/MPEG-4_Part_14"&gt;MPEG 4&lt;/a&gt;, usually with an &lt;code&gt;.mp4&lt;/code&gt; extension. The MPEG 4 container is &lt;a href="http://www.chiariglione.org/mpeg/technologies/mp04-ff/index.htm"&gt;based on Apple’s older QuickTime container&lt;/a&gt; (&lt;code&gt;.mov&lt;/code&gt;). &lt;a href="http://www.apple.com/trailers/"&gt;Movie trailers on Apple’s website&lt;/a&gt; still use the older QuickTime container, but movies that you rent from iTunes are delivered in an MPEG 4 container, although Apple likes to use the &lt;code&gt;.m4v&lt;/code&gt; file extension instead of &lt;code&gt;.mp4&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Advanced_Systems_Format"&gt;Advanced Systems Format&lt;/a&gt;, usually with an &lt;code&gt;.asf&lt;/code&gt; or &lt;code&gt;.wmv&lt;/code&gt; extension. ASF was &lt;a href="http://msdn.microsoft.com/en-us/library/ms983668.aspx"&gt;invented by&lt;/a&gt; and is primarily used by Microsoft in their Windows Media Player and their handheld Zune media device.&lt;/li&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Flash_Video"&gt;Flash Video&lt;/a&gt;, usually with an &lt;code&gt;.flv&lt;/code&gt; extension. Flash Video is, unsurprisingly, used by Adobe Flash. Prior to Flash 9.0.60.184 (a.k.a. Flash Player 9 Update 3), this was the only container format that Flash supported. More recent versions of Flash also support the MPEG 4 container.&lt;/li&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Matroska"&gt;Matroska&lt;/a&gt;, usually with an &lt;code&gt;.mkv&lt;/code&gt; extension. Matroska is an open standard, unencumbered by any known patents, and there are open source reference implementations for doing everything you might want to do with MKV files. It is primarily used by Free Software-loving hippies and, oddly enough, pirates who rip high-definition movies and television shows and release them in The Scene.&lt;/li&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Ogg"&gt;Ogg&lt;/a&gt;, usually with an &lt;code&gt;.ogv&lt;/code&gt; extension. Like Matroska, Ogg is an open standard, open-source-friendly, and unencumbered by any known patents. Like Matroska, it is used primarily by Free Software-loving hippies, but that may begin to change once Mozilla ships their Firefox 3.1 browser. Firefox 3.1 will support — natively, without platform-specific plugins — the Ogg container format, the Ogg video codec (Theora), and the Ogg audio codec (Vorbis). On the desktop, Ogg is supported out-of-the-box by all major Linux distributions, and you can use it on Mac and Windows by installing the &lt;a href="http://www.xiph.org/quicktime/"&gt;QuickTime components&lt;/a&gt; or &lt;a href="http://www.xiph.org/dshow/"&gt;DirectShow filters&lt;/a&gt;, respectively.&lt;/li&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/AVI"&gt;Audio Video Interleave&lt;/a&gt;, usually with an &lt;code&gt;.avi&lt;/code&gt; extension. Also known as “the crappy, obsolete format that just won’t die.” The AVI container format was invented by Microsoft in a simpler time when the fact that computers could play video at all was considered pretty amazing. It does not officially support many of the features of more recent container formats; it does not officially support any sort of video metadata; it does not even officially support most of the modern video and audio codecs in use today. Over time, various companies have tried to extend it in generally incompatible ways to support this or that, and it is still the default container format for popular encoders such as &lt;a href="http://www.mplayerhq.hu/DOCS/HTML/en/encoding-guide.html"&gt;MEncoder&lt;/a&gt;.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;This is the briefest of overviews; there are literally dozens of other container formats in use today. DV, NUT, 3GP… the list goes on and on. And there are many others littering the landscape of failed or obsolete technologies, from companies that tried to corner the nascent digital video market by defining their own formats. Wikipedia has a good &lt;a href="http://en.wikipedia.org/wiki/Comparison_of_container_formats"&gt;roundup of video container formats&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Tomorrow: video codecs!&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1229356265038">
+		<id gr:original-id="tag:diveintomark.org,2008-12-15:/archives/20081215152044">
+			tag:google.com,2005:reader/item/5586a27ba595bf4d
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" />
+		<title type="html">
+			Caption contest
+		</title>
+		<published>
+			2008-12-15T15:20:44Z
+		</published>
+		<updated>
+			2008-12-15T15:21:41Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/12/15/caption-contest" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/12/15/caption-contest" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://wearehugh.com/public/2008/12/beau-on-a-bed.jpg" alt="Dog on a bed" width="452" height="640"&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1226683895970">
+		<id gr:original-id="tag:diveintomark.org,2008-11-14:/archives/20081114171636">
+			tag:google.com,2005:reader/item/c0c0dd149d5ec0bd
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="beau" scheme="http://diveintomark.org" /><category term="dogpictures" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			Woods
+		</title>
+		<published>
+			2008-11-14T17:16:36Z
+		</published>
+		<updated>
+			2008-11-14T17:16:36Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/11/14/woods" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/11/14/woods" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://wearehugh.com/public/2008/11/beau-woods.jpg" alt="Beau in the woods" width="640" height="480"&gt;&lt;/p&gt; &lt;p&gt;The local lake has a small patch of woods nearby. To say we took Beau for a walk in the woods might be stretching the definition of “walk”; it looked more like &lt;a href="http://xkcd.com/100/"&gt;Family Circus map&lt;/a&gt; than a straight line. I sometimes wish I could “see” the woods the way he does, like if the entire woods were dark and I could wear blacklight glasses and see all the spots where other dogs had left their mark. Beau seems to ramble until he catches wind of another dog’s scent, then pisses all over it. Until I got a male dog, I’d only ever seen that figuratively.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1225918455197">
+		<id gr:original-id="tag:diveintomark.org,2008-11-05:/archives/20081105203732">
+			tag:google.com,2005:reader/item/40b4c6926d8f123c
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="election" scheme="http://diveintomark.org" /><category term="politics" scheme="http://diveintomark.org" />
+		<title type="html">
+			Election results
+		</title>
+		<published>
+			2008-11-05T20:37:32Z
+		</published>
+		<updated>
+			2008-11-05T20:37:32Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/11/05/election-results" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/11/05/election-results" xml:lang="en" type="html">
+			&lt;p&gt;&lt;code&gt;sha1("Obama wins by 100 delegates") = &lt;a href="http://diveintomark.org/archives/2008/06/07/geeky-us-election-predictions"&gt;91E7FDF9FD7C1BD287A47EF6344700FD79EE13D6&lt;/a&gt;&lt;/code&gt;&lt;/p&gt; &lt;p&gt;Not sure why I called them “delegates” instead of “electors,” but there it is. Assuming Obama squeaks out a win in NC and McCain squeaks out a win in Missouri, the final count will be 364 to 174, meaning Obama will win by 190. I wasn’t even close.&lt;/p&gt; &lt;p&gt;And you?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1225723919716">
+		<id gr:original-id="tag:diveintomark.org,2008-11-03:/archives/20081103140149">
+			tag:google.com,2005:reader/item/ad994c5e01fd302f
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="stuff" scheme="http://diveintomark.org" />
+		<title type="html">
+			The pursuit of happiness
+		</title>
+		<published>
+			2008-11-03T14:01:49Z
+		</published>
+		<updated>
+			2008-11-03T22:46:57Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/11/03/the-pursuit-of-happiness" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/11/03/the-pursuit-of-happiness" xml:lang="en" type="html">
+			&lt;ol&gt; &lt;li&gt;Stop buying stuff you don’t need&lt;/li&gt; &lt;li&gt;Pay off all your credit cards&lt;/li&gt; &lt;li&gt;Get rid of all the stuff that doesn’t fit in your house/apartment (storage lockers, etc.)&lt;/li&gt; &lt;li&gt;Get rid of all the stuff that doesn’t fit on the first floor of your house (attic, garage, etc.)&lt;/li&gt; &lt;li&gt;Get rid of all the stuff that doesn’t fit in one room of your house&lt;/li&gt; &lt;li&gt;Get rid of all the stuff that doesn’t fit in a suitcase&lt;/li&gt; &lt;li&gt;Get rid of all the stuff that doesn’t fit in a backpack&lt;/li&gt; &lt;li&gt;Get rid of the backpack&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;I’m working on step 4.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1225222022847">
+		<id gr:original-id="tag:diveintomark.org,2008-10-28:/archives/20081028184526">
+			tag:google.com,2005:reader/item/cc2f200330ebfc94
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="essentials" scheme="http://diveintomark.org" /><category term="linux" scheme="http://diveintomark.org" />
+		<title type="html">
+			Essentials, 2008 edition
+		</title>
+		<published>
+			2008-10-28T18:45:26Z
+		</published>
+		<updated>
+			2008-10-28T18:45:26Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/10/28/essentials-2008" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/10/28/essentials-2008" xml:lang="en" type="html">
+			&lt;p&gt;Via email, “Chris” asks:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Enjoyed the 2006 Linux essentials list. … Do you have any plans to update the Essentials list for the latest and greatest that Linux 2008 has to offer?&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Well, I do now.&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;a href="http://www.debian.org/"&gt;Debian GNU/Linux&lt;/a&gt;, because of &lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354622"&gt;Firefox bug 354622&lt;/a&gt;. In particular, &lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=39;bug=354622"&gt;comment 39&lt;/a&gt; outlines Debian’s position. (Yes, I know &lt;a href="http://www.news.software.coop/the-shape-of-debian-lenny/288/"&gt;Debian still ships with non-free firmware&lt;/a&gt;, so Debian’s position on Firefox is inconsistent. But no firmware developer has ever tried to force Debian to “&lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=59;bug=354622"&gt;bend the DFSG a little&lt;/a&gt;.”)&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.gnu.org/software/emacs/"&gt;GNU Emacs&lt;/a&gt;, still.&lt;/li&gt; &lt;li&gt;&lt;a href="http://packages.debian.org/sid/iceweasel"&gt;Iceweasel&lt;/a&gt; (see above) + &lt;a href="http://adblockplus.mozdev.org/"&gt;Adblock Plus&lt;/a&gt; + &lt;a href="http://www.noscript.net/"&gt;NoScript&lt;/a&gt; + &lt;a href="http://urandom.ca/nosquint/"&gt;NoSquint&lt;/a&gt; + &lt;a href="http://www.greasespot.net/"&gt;Greasemonkey&lt;/a&gt;.&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.pidgin.im/"&gt;Pidgin&lt;/a&gt; (formerly GAIM).&lt;/li&gt; &lt;li&gt;&lt;a href="http://pyropus.ca/software/getmail/"&gt;getmail&lt;/a&gt; instead of Thunderbird. It turns out I don’t actually want a desktop email client. I use Google Apps For Your Domain to manage my own address @ my own domain, and I archive it with a nightly cron job using &lt;kbd&gt;getmail&lt;/kbd&gt;.&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.gphoto.org/"&gt;gPhoto 2&lt;/a&gt; instead of &lt;a href="http://www.digikam.org/"&gt;digiKam&lt;/a&gt;. It turns out I don’t actually want a photo library, just dated directories of image files imported directly from my camera.&lt;/li&gt; &lt;li&gt;On the other hand, I &lt;em&gt;do&lt;/em&gt; want a music library, and &lt;a href="http://amarok.kde.org/"&gt;amaroK&lt;/a&gt; is still best-of-breed.&lt;/li&gt; &lt;li&gt;&lt;a href="http://freshmeat.net/projects/ksnapshot/"&gt;KSnapshot&lt;/a&gt;, &lt;a href="http://ktorrent.org/"&gt;KTorrent&lt;/a&gt;, &lt;a href="http://konversation.kde.org/"&gt;Konversation&lt;/a&gt;, &lt;a href="http://www.k3b.org/"&gt;k3b&lt;/a&gt;, and &lt;a href="http://k9copy.sourceforge.net/"&gt;k9copy&lt;/a&gt; are also best-of-breed.&lt;/li&gt; &lt;li&gt;There is still no good iMovie clone for Linux, but &lt;a href="http://www.openmovieeditor.org/"&gt;OpenMovieEditor&lt;/a&gt; looks promising. I learned about it &lt;a href="http://fsoss.senecac.on.ca/2008/?q=node/33"&gt;at FSOSS last week&lt;/a&gt;. I fear that Linux video editing will always just “look promising.”&lt;/li&gt; &lt;li&gt;I’ve warmed up to &lt;a href="http://www.gimp.org/"&gt;GIMP&lt;/a&gt;, which has largely replaced &lt;a href="http://www.koffice.org/krita/"&gt;Krita&lt;/a&gt; for my (very light) graphic editing needs. At FSOSS, I learned about &lt;a href="http://ingimp.org/"&gt;ingimp&lt;/a&gt;, which allows you to opt-in to collect and aggregate detailed statistics on how real people use GIMP.&lt;/li&gt; &lt;li&gt;&lt;a href="http://do.davebsd.com/"&gt;GNOME Do&lt;/a&gt;, a Quicksilver-inspired launcher++.&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.mplayerhq.hu/"&gt;mplayer&lt;/a&gt;, specifically the version provided by &lt;a href="http://debian-multimedia.org/"&gt;the awesome debian-multimedia.org&lt;/a&gt;.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;On the command line side, I now use &lt;a href="http://software.schmorp.de/pkg/rxvt-unicode.html"&gt;urxvt&lt;/a&gt;, &lt;a href="http://www.gnu.org/software/screen/"&gt;screen&lt;/a&gt;, &lt;a href="http://www.zsh.org/"&gt;ZSH&lt;/a&gt;, and &lt;a href="http://diveintomark.org/archives/2007/03/15/good-easy-2007"&gt;these configuration files&lt;/a&gt;. If you use the command line more than once a day and haven’t learned about &lt;kbd&gt;screen&lt;/kbd&gt; yet, you’re missing out. I still use &lt;a href="http://www.openssh.com/"&gt;SSH&lt;/a&gt; heavily, in too many ways to count. If you use SSH and haven’t learned about &lt;a href="http://howto.diveintomark.org/remote-mac/"&gt;SSH keys and SSH tunneling&lt;/a&gt; yet, you’re &lt;em&gt;really&lt;/em&gt; missing out. Also: &lt;a href="http://fuse.sourceforge.net/sshfs.html"&gt;sshfs&lt;/a&gt;, &lt;a href="http://sial.org/howto/rsync/#s5"&gt;rsync and SSH&lt;/a&gt;, &lt;a href="https://help.ubuntu.com/community/SSH_VPN"&gt;SSH VPN&lt;/a&gt;, &lt;a href="http://en.wikipedia.org/wiki/Ssh#Uses_of_SSH"&gt;&amp;amp;c&lt;/a&gt;. (Note: most of these work on Mac OS X too, and Windows with &lt;a href="http://www.cygwin.com/"&gt;cygwin&lt;/a&gt; or &lt;a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/"&gt;PuTTY&lt;/a&gt;.)&lt;/p&gt; &lt;p&gt;I still use &lt;a href="http://samba.anu.edu.au/rsync/"&gt;rsync&lt;/a&gt; for &lt;a href="http://diveintomark.org/archives/2006/05/08/backup"&gt;backups to my NAS&lt;/a&gt;, even though I have two &lt;a href="http://krook.net/archives/217"&gt;Drobo enclosures&lt;/a&gt; that I manage with &lt;a href="http://drobo-utils.sourceforge.net/"&gt;drobo-utils&lt;/a&gt;. &lt;a href="http://www.2brightsparks.com/resources/articles/RAID-is-not-a-backup-solution.html"&gt;RAID is not a backup solution&lt;/a&gt;, and &lt;a href="http://zfs-on-fuse.blogspot.com/"&gt;ZFS on Linux&lt;/a&gt; isn’t quite there yet.&lt;/p&gt; &lt;p&gt;Things I don’t use anymore:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;A desktop email client. As mentioned above, I use Gmail (on my own domain, so I keep my email address).&lt;/li&gt; &lt;li&gt;OpenOffice.org, or any other desktop office suite. I use &lt;a href="http://docs.google.com/"&gt;Google Docs&lt;/a&gt;, which exports to Open Document format. I keep studious local backups in ODF/ODS/etc.&lt;/li&gt; &lt;li&gt;VLC. There is very little that mplayer can’t handle.&lt;/li&gt; &lt;li&gt;Democracy Player. Ze frank doesn’t post daily anymore, and I don’t particularly follow other video podcasts.&lt;/li&gt; &lt;li&gt;KMyMoney. It’s good, but I fell behind in organizing my finances and it got left on the wayside.&lt;/li&gt; &lt;li&gt;EasyUbuntu (now Medibuntu). Debian-multimedia.org satisfies all my illicit patent-encumbered needs.&lt;/li&gt; &lt;li&gt;Beagle. GNOME Do is more than enough for my local search needs.&lt;/li&gt; &lt;li&gt;Konsole. RXVT-Unicode instead.&lt;/li&gt; &lt;li&gt;AllTray.&lt;/li&gt; &lt;li&gt;Brightside.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;I also no longer use the &lt;a href="http://www.nongnu.org/ratpoison/"&gt;ratpoison&lt;/a&gt; window manager. I’ve settled on &lt;a href="http://www.xfce.org/"&gt;XFCE&lt;/a&gt; instead, with the &lt;a href="http://pcmanfm.sourceforge.net/"&gt;PCMan&lt;/a&gt; file manager. I encourage every Linux user to try an &lt;a href="http://xwinman.org/"&gt;alternate window manager&lt;/a&gt; for at least a month. Find one that fits your brain and customize the hell out of it.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1225154210828">
+		<id gr:original-id="tag:diveintomark.org,2008-10-28:/archives/20081028003141">
+			tag:google.com,2005:reader/item/815d1b5979e4e3ec
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="beau" scheme="http://diveintomark.org" /><category term="dogpictures" scheme="http://diveintomark.org" /><category term="dogs" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			Well, that didn’t take long
+		</title>
+		<published>
+			2008-10-28T00:31:41Z
+		</published>
+		<updated>
+			2008-10-28T00:31:41Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/10/27/well-that-didnt-take-long" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/10/27/well-that-didnt-take-long" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img alt="[Beauregard on the sofa]" src="http://wearehugh.com/public/2008/10/beauregard-sofa.jpg" width="640" height="456"&gt;&lt;/p&gt; &lt;p&gt;Beau has found his spot.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1225078880932">
+		<id gr:original-id="tag:diveintomark.org,2008-10-27:/archives/20081027030418">
+			tag:google.com,2005:reader/item/4c2087edadc02989
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="beau" scheme="http://diveintomark.org" /><category term="dogpictures" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			Beauregard
+		</title>
+		<published>
+			2008-10-27T03:04:18Z
+		</published>
+		<updated>
+			2008-10-27T03:05:35Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/10/26/beauregard" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/10/26/beauregard" xml:lang="en" type="html">
+			&lt;p&gt;Our dog Adagio finally succumbed to old age several weeks ago. She was 16. &lt;a href="http://diveintomark.org/archives/2006/04/14/dogs"&gt;I grieved, I sulked, and then I picked myself up and got another dog&lt;/a&gt;. His name is Beauregard:&lt;/p&gt; &lt;p&gt;&lt;img alt="[Beauregard]" src="http://wearehugh.com/public/2008/10/beauregard-640x640.jpg" width="640" height="640"&gt;&lt;/p&gt; &lt;p&gt;As you can probably tell, Beauregard is a beagle/basset mix. We got him through the local beagle rescue center. We were not looking for a beagle, but you can’t choose the ones you love.&lt;/p&gt; &lt;p&gt;More pictures will be, you know, forthcoming.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1222793046557">
+		<id gr:original-id="tag:diveintomark.org,2008-09-30:/archives/20080930154114">
+			tag:google.com,2005:reader/item/e1af8b5a9fcc09cc
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="html5" scheme="http://diveintomark.org" /><category term="webstandards" scheme="http://diveintomark.org" /><category term="whatwg" scheme="http://diveintomark.org" />
+		<title type="html">
+			Dive into HTML 5
+		</title>
+		<published>
+			2008-09-30T15:41:14Z
+		</published>
+		<updated>
+			2008-09-30T15:41:14Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/09/30/dive-into-html-5" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/09/30/dive-into-html-5" xml:lang="en" type="html">
+			&lt;p&gt;In case you missed it, I’ve started a new column at the WHATWG blog called &lt;a href="http://blog.whatwg.org/category/weekly-review"&gt;This Week in HTML 5&lt;/a&gt;. The story thus far:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;a href="http://blog.whatwg.org/this-week-in-html5-episode-1"&gt;Episode 1&lt;/a&gt;: Web Workers, and how to specify alternate text for images you know nothing about.&lt;/li&gt; &lt;li&gt;&lt;a href="http://blog.whatwg.org/this-week-in-html5-episode-2"&gt;Episode 2&lt;/a&gt;: the window.navigator object, meta http-equiv=”Content-Language”, the &lt;code&gt;Worker&lt;/code&gt; object, &lt;code&gt;outerHTML&lt;/code&gt;, &lt;code&gt;insertAdjacentHTML()&lt;/code&gt;, and the continuing saga of the &lt;code&gt;alt&lt;/code&gt; attribute.&lt;/li&gt; &lt;li&gt;&lt;a href="http://blog.whatwg.org/this-week-in-html-5-episode-3"&gt;Episode 3&lt;/a&gt;: the event loop, the &lt;code&gt;onhashchange&lt;/code&gt; event, and content sniffing for SVG images.&lt;/li&gt; &lt;li&gt;&lt;a href="http://blog.whatwg.org/this-week-in-html-5-episode-4"&gt;Episode 4&lt;/a&gt;: the W3C’s HTML 5 validator, SVG-in-HTML, and the proper way to provide alternate text for Rorschach inkblots.&lt;/li&gt; &lt;li&gt;&lt;a href="http://blog.whatwg.org/this-week-in-html-5-episode-5"&gt;Episode 5&lt;/a&gt;: XSLT, MathML, Web Forms 2, and some light reading on character encoding.&lt;/li&gt; &lt;li&gt;&lt;a href="http://blog.whatwg.org/this-week-in-html-5-episode-6"&gt;Episode 6&lt;/a&gt;: multimedia accessibility, Ogg Theora, and the year 2022.&lt;/li&gt; &lt;li&gt;&lt;a href="http://blog.whatwg.org/this-week-in-html-5-episode-7"&gt;Episode 7&lt;/a&gt;: clickjacking.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;There is &lt;a href="http://blog.whatwg.org/category/weekly-review/feed/"&gt;a feed available&lt;/a&gt; for people who like that sort of thing.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1222188467203">
+		<id gr:original-id="tag:diveintomark.org,2008-09-23:/archives/20080923161048">
+			tag:google.com,2005:reader/item/1726c69d76304799
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="ibm" scheme="http://diveintomark.org" /><category term="standards" scheme="http://diveintomark.org" />
+		<title type="html">
+			Irony-free zone
+		</title>
+		<published>
+			2008-09-23T16:10:48Z
+		</published>
+		<updated>
+			2008-09-23T16:10:48Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/09/23/irony-free-zone" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/09/23/irony-free-zone" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://www.marketwire.com/press-release/Ibm-NYSE-IBM-902622.html"&gt;IBM announces new I.T. standards policy&lt;/a&gt;.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;IBM today announced that, effective immediately, it is instituting a new corporate policy that formalizes the company’s behavior when helping to create open technical standards.&lt;/p&gt; &lt;p&gt;… The tenets of IBM’s new policy are to:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Begin or end participation in standards bodies based on the quality and openness of their processes, membership rules, and intellectual property policies.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;… An invitation-only summit is planned for November.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Let me know how that works out for you.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1222116334457">
+		<id gr:original-id="tag:diveintomark.org,2008-09-22:/archives/20080922202540">
+			tag:google.com,2005:reader/item/65cec3bfb36921e7
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="lighthouse" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="security" scheme="http://diveintomark.org" />
+		<title type="html">
+			Security questions
+		</title>
+		<published>
+			2008-09-22T20:25:40Z
+		</published>
+		<updated>
+			2008-09-22T20:48:40Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/09/22/security-questions" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/09/22/security-questions" xml:lang="en" type="html">
+			&lt;div style="width:239px"&gt; &lt;img src="http://wearehugh.com/public/2008/09/poi-circles.jpg" alt="[dancer with glow stick]" title="" width="239" height="240"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/hendrik/6060913/"&gt;Poi Circles&lt;/a&gt; © &lt;a href="http://flickr.com/people/hendrik/"&gt;Hendrik Kueck&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;In the wake of the &lt;a href="http://blog.wired.com/27bstroke6/2008/09/palin-e-mail-ha.html"&gt;much-publicized hacking of a webmail account&lt;/a&gt;, I thought I’d share my own anecdote about security questions. Sometime last year, I decided to consolidate my finances and roll over all my past employer 401(k) accounts to a new firm. Some companies make this easier than others, since, you know, they’d really like to continue holding your money for you. Most of them require you to call them up and get them to mail you some forms. And all of them have multiple layers of security.&lt;/p&gt; &lt;p&gt;In the process of convincing one of these firms to send me the requisite paperwork, a customer service rep challenged me to answer a custom security question that I had set up when I opened the account (close to 10 years ago now). This is a &lt;em&gt;good&lt;/em&gt; thing, in theory. Most of the “canned” security questions (birthplace, mother’s maiden name) are easily answered with a quick web search these days, and even 10 years ago I was vaguely aware of this possibility. Thus, I had opted for a custom security question, in which I got to define both the question and the answer.&lt;/p&gt; &lt;p&gt;Like most people, I dated other people before meeting the woman who is now my wife. Like most people, I did not know when I met her that she would eventually become my wife. I had other relationships, some good, some bad, some that never quite got off the ground. One of those “never quite got off the ground” girls was a co-worker of mine who had come to work with me a few months after I had started dating my future wife. We became fast friends with a shared passion for electronic music (although she was &lt;em&gt;way&lt;/em&gt; more into the “scene” than I was), but we never got around to dating because things were going so well with my future wife.&lt;/p&gt; &lt;p&gt;You see where this is going.&lt;/p&gt; &lt;p&gt;Nigh on ten years later, I find myself on the phone with a bored customer service rep who says, “All right, Mr. Pilgrim, I’d be happy to send you this rollover form as soon as you can answer the security question you set up with us: ‘Who is the queen of trance?’”&lt;/p&gt; &lt;p&gt;There was — literally — 45 seconds of dead air before I could come up with the name of the girl I didn’t marry.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1220976502641">
+		<id gr:original-id="tag:diveintomark.org,2008-09-09:/archives/20080909160329">
+			tag:google.com,2005:reader/item/6d4e5b86cb3563b1
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="fonts" scheme="http://diveintomark.org" /><category term="helvetica" scheme="http://diveintomark.org" /><category term="typography" scheme="http://diveintomark.org" />
+		<title type="html">
+			The typography of Myrtle Beach
+		</title>
+		<published>
+			2008-09-09T16:03:29Z
+		</published>
+		<updated>
+			2008-09-09T16:03:29Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/09/09/the-typography-of-myrtle-beach" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/09/09/the-typography-of-myrtle-beach" xml:lang="en" type="html">
+			&lt;p&gt;For the second year in a row, we vacationed in Springs Towers in North Myrtle Beach. It’s an oceanfront condo with a pool and a hot tub. The beach was wonderful, the pool was wonderful, the weather was wonderful (except for a little one-day hurricane). There was only one problem: it was a typographical disaster.&lt;/p&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/please-do-not-feed-seagulls-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/please-do-not-feed-seagulls-small.jpg" alt="[Please do not feed seagulls...]" width="196" height="300"&gt;&lt;/a&gt; 3 signs, 3 fonts (click to zoom, then look at the “G” in each sign) &lt;/div&gt; &lt;div&gt; &lt;img src="http://wearehugh.com/public/2008/09/units-701-703-small.jpg" alt="[Springs Towers, Units 701-703 to the left, units 704-706 to the right]" width="328" height="300"&gt; 1 sign, 3 fonts &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/emergencies-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/emergencies-small.jpg" alt="[Emergencies: In case of builder and water leaks, call...]" width="303" height="300"&gt;&lt;/a&gt; 3 fonts, no waiting &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/broker-in-charge-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/broker-in-charge-small.jpg" alt="[Carolina Resorts Realty Property Management, Keith Hellmer, Broker In Charge]" width="259" height="300"&gt;&lt;/a&gt; Could it be… &lt;a href="http://www.linotype.com/526/helvetica-family.html?subviewmode=FONTS&amp;amp;samplestr=BROKER+IN+CHARGE"&gt;Helvetica Bold Condensed&lt;/a&gt;? No, looks like a knock-off. &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/daily-rentals-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/daily-rentals-small.jpg" alt="[Daily Rentals]" width="310" height="300"&gt;&lt;/a&gt; I write like this sometimes, scrunching the last few lines because I’m running out of room. You don’t have to type like this, though. &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/no-furniture-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/no-furniture-small.jpg" alt="[Notice: No furniture between rails and pool]" width="300" height="300"&gt;&lt;/a&gt; I’m beginning to think that restricting the web to 6 fonts wasn’t such a bad thing &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/dhec-prohibits-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/dhec-prohibits-small.jpg" alt="[DHEC Prohibits the use of this spa to persons under the age of 14 years]" width="299" height="300"&gt;&lt;/a&gt; It’s not the only thing &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/emergency-fire-alarm-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/emergency-fire-alarm-small.jpg" alt="Emergency fire alarm]" width="485" height="300"&gt;&lt;/a&gt; Bad typography is free &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/caution-elderly-persons-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/caution-elderly-persons-small.jpg" alt="[Caution: Elderly persons ... should consult their physician before using the spa]" width="399" height="300"&gt;&lt;/a&gt; My blood pressure was lower before I watched “Helvetica, the movie” &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/enter-4-diget-code-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/enter-4-diget-code-small.jpg" alt="[Enter 4 diget code, turn knob right]" width="214" height="300"&gt;&lt;/a&gt; “diget” &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/maximum-number-of-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/maximum-number-of-small.jpg" alt="[Maximum # of 8 people in spa]" width="305" height="300"&gt;&lt;/a&gt; Fail on so many levels &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/place-all-trash-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/place-all-trash-small.jpg" alt="[Please place all trash in dumpsters located on street]" width="373" height="300"&gt;&lt;/a&gt; Please place all your fonts in dumpsters &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/shallow-water-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/shallow-water-small.jpg" alt="Shallow water, no diving allowed]" width="305" height="300"&gt;&lt;/a&gt; Shallow water, condensed font. There’s a perverse logic here. Perhaps I’m overthinking it. &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/pool-equipment-room-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/pool-equipment-room-small.jpg" alt="[Pool equipment room, authorized persons only]" width="598" height="300"&gt;&lt;/a&gt; It’s like typography bingo night &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/turn-timer-off-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/turn-timer-off-small.jpg" alt="[Turn timer off after leaving jacuzzi]" width="455" height="300"&gt;&lt;/a&gt; Make it stop &lt;/div&gt; &lt;div&gt; &lt;a href="http://wearehugh.com/public/2008/09/in-case-of-fire-large.jpg"&gt;&lt;img src="http://wearehugh.com/public/2008/09/in-case-of-fire-small.jpg" alt="[In case of fire, do not use elevators, use stairways]" width="247" height="300"&gt;&lt;/a&gt; Could it be… Helvetica? &lt;/div&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1218756919949">
+		<id gr:original-id="tag:diveintomark.org,2008-08-14:/archives/20080814215936">
+			tag:google.com,2005:reader/item/0db44c23ad7ab214
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="css" scheme="http://diveintomark.org" /><category term="fonts" scheme="http://diveintomark.org" /><category term="linux" scheme="http://diveintomark.org" /><category term="typography" scheme="http://diveintomark.org" />
+		<title type="html">
+			The ampersands of Linux
+		</title>
+		<published>
+			2008-08-14T21:59:36Z
+		</published>
+		<updated>
+			2008-08-14T23:08:54Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/08/14/the-ampersands-of-linux" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/08/14/the-ampersands-of-linux" xml:lang="en" type="html">
+			&lt;p&gt;Taking an idea from &lt;a href="http://www.simplebits.com/notebook/2008/08/14/ampersands.html"&gt;Use the Best Available Ampersand&lt;/a&gt; and a list of pre-installed fonts from the &lt;a href="http://www.apaddedcell.com/web-fonts"&gt;Complete Guide to Pre-Installed Fonts in Linux, Mac, and Windows&lt;/a&gt;, I present “The Ampersands of Linux”:&lt;/p&gt; &lt;p&gt;&lt;img src="http://wearehugh.com/public/2008/08/ampersands-of-linux3.png" alt="[ampersands in 28 fonts]" height="900" width="600"&gt;&lt;/p&gt; &lt;p&gt;(&lt;a href="http://wearehugh.com/public/2008/08/ampersands-of-linux.html"&gt;&lt;abbr&gt;HTML&lt;/abbr&gt;&lt;/a&gt;)&lt;/p&gt; &lt;p&gt;Please try to contain your excitement.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1218559197634">
+		<id gr:original-id="tag:diveintomark.org,2008-08-12:/archives/20080812160843">
+			tag:google.com,2005:reader/item/00261938a4ce45d4
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="apple" scheme="http://diveintomark.org" /><category term="freedom0" scheme="http://diveintomark.org" /><category term="iphone" scheme="http://diveintomark.org" />
+		<title type="html">
+			Hello darkness my old friend
+		</title>
+		<published>
+			2008-08-12T16:08:43Z
+		</published>
+		<updated>
+			2008-08-12T16:08:43Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/08/12/year-of-what-now" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/08/12/year-of-what-now" xml:lang="en" type="html">
+			&lt;div style="width:300px"&gt; &lt;img src="http://wearehugh.com/public/2008/08/crow.jpg" alt="[crow and moon]" title="" width="300" height="300"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/luchilu/2414457426/"&gt;The bird and the moon II&lt;/a&gt; © &lt;a href="http://flickr.com/people/luchilu/"&gt;Luz A. Villa&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;My parents &lt;a href="http://diveintomark.org/archives/2008/01/04/my-parents-desktop"&gt;gave up on Linux&lt;/a&gt; and bought a Mac Mini. We bought an AppleTV for the kids and &lt;a href="http://handbrake.fr/"&gt;filled it with their favorite DVDs&lt;/a&gt;. I stood in line for three hours to buy my wife an iPhone 3G for her birthday. And &lt;a href="http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines"&gt;nobody gives a shit&lt;/a&gt; about freedom 0.&lt;/p&gt; &lt;p&gt;Discuss.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1218155700696">
+		<id gr:original-id="tag:diveintomark.org,2008-08-07:/archives/20080807233337">
+			tag:google.com,2005:reader/item/6c722d8dc630f488
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="apple" scheme="http://diveintomark.org" /><category term="drm" scheme="http://diveintomark.org" /><category term="iphone" scheme="http://diveintomark.org" /><category term="rant" scheme="http://diveintomark.org" />
+		<title type="html">
+			A very serious question
+		</title>
+		<published>
+			2008-08-07T23:33:37Z
+		</published>
+		<updated>
+			2008-08-12T01:23:03Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/08/07/a-very-serious-question" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/08/07/a-very-serious-question" xml:lang="en" type="html">
+			&lt;p&gt;So, hypothetically speaking, let’s say you want to design a system where you had &lt;a href="http://www.mikeash.com/?page=pyblog/welcome-to-iphone-your-crappy-mac-of-tomorrow-today.html"&gt;absolute control&lt;/a&gt; over which applications your customers were allowed to install on &lt;a href="http://www.russellbeattie.com/blog/iphone-reconciliation"&gt;your device&lt;/a&gt;. Certainly you would want to &lt;a href="http://blogs.oreilly.com/iphone/2008/07/one-little-article.html"&gt;ensure that you were the only source for applications&lt;/a&gt;. But for extraordinary cases, you might also need to create &lt;a href="http://arstechnica.com/journals/apple.ars/2008/08/07/the-goings-on-behind-the-iphone-application-blacklist"&gt;a blacklist of applications&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Each entry in the blacklist would also need a human-readable &lt;b&gt;title&lt;/b&gt; — presumably the name of the app — and perhaps even a human-readable &lt;b&gt;description&lt;/b&gt; to explain why the app was blacklisted. But each entry would also need a &lt;b&gt;unique identifier&lt;/b&gt;, of course, so you don’t accidentally get confused between six apps named “TODO.” Finally, you would probably want to include the &lt;b&gt;date&lt;/b&gt; that the entry was added to the list.&lt;/p&gt; &lt;p&gt;Furthermore, since you anticipate &lt;a href="http://www.wsu.edu/~brians/errors/continual.html"&gt;continually&lt;/a&gt; &lt;a href="http://www.macrumors.com/2008/08/01/netshare-tethering-app-reappears-on-app-store/"&gt;adding&lt;/a&gt; &lt;a href="http://forums.macrumors.com/showpost.php?p=5953784&amp;amp;postcount=24"&gt;new&lt;/a&gt; &lt;a href="http://www.alleyinsider.com/2008/8/worthless-1000-i-am-rich-iphone-app-disappears"&gt;applications&lt;/a&gt; to this blacklist to &lt;a href="http://diveintomark.org/archives/2007/10/16/oh-good-grief#comment-10497"&gt;protect your and your partners’ business model&lt;/a&gt;, you would need your proprietary &lt;a href="http://earthlingsoft.net/ssp/blog/2006/10/itunes_store_sucks"&gt;non-browser-based&lt;/a&gt; client to &lt;a href="http://www.appleinsider.com/articles/08/08/06/researcher_discovers_long_publicized_iphone_app_kill_switch.html"&gt;periodically poll the list for changes&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;All of which raises a very serious question: &lt;b&gt;&lt;i&gt;what data format should you use for the list?&lt;/i&gt;&lt;/b&gt;&lt;/p&gt; &lt;p&gt;If you answered &lt;abbr&gt;“JSON”&lt;/abbr&gt; then congratulations, you &lt;del&gt;win the &lt;a href="https://iphone-services.apple.com/clbl/unauthorizedApps"&gt;Trendy Tech of the Month Award&lt;/a&gt;&lt;/del&gt; &lt;a href="http://diveintomark.org/archives/2008/08/07/a-very-serious-question#comment-12525"&gt;lose&lt;/a&gt;! To collect your prize, please proceed through the door marked “&lt;a href="http://en.wikipedia.org/wiki/Barnum%27s_American_Museum"&gt;This way to the egress&lt;/a&gt;.” Some restrictions apply.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Update&lt;/b&gt;: OK, OK, &lt;a href="http://daringfireball.net/2008/08/core_location_blacklist"&gt;it’s a “Core Location” blacklist&lt;/a&gt;. Big deal. I’ll see your tree and &lt;a href="http://online.wsj.com/article/SB121842341491928977.html?mod=googlenews_wsj"&gt;raise you a forest&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;… an independent engineer discovered code inside the iPhone that suggested iPhones routinely check an Apple Web site that could, in theory trigger the removal of the undesirable software from the devices.&lt;/p&gt; &lt;p&gt;Mr. Jobs confirmed such a capability exists, but argued that Apple needs it in case it inadvertently allows a malicious program — one that stole users’ personal data, for example — to be distributed to iPhones through the App Store.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;As &lt;a href="http://diveintomark.org/archives/2007/10/16/oh-good-grief#comment-10497"&gt;I’ve said before&lt;/a&gt;, “protecting users from malicious programs” is code for “cryptographically enforcing restrictions on applications to protect our and our partners’ business model.” The bullshit about “stealing personal data” is just a rhetorical sleight of hand, like the &lt;abbr&gt;RIAA&lt;/abbr&gt; claiming that piracy hurts “artists and other rights holders” when 99% of artists don’t own the rights to their own songs. How many apps has Apple de-listed over privacy concerns? &lt;a href="http://gizmodo.com/5028459/aurora-feint-iphone-app-delisted-for-lousy-security-practices"&gt;Only one that I know of&lt;/a&gt;, and it was quickly reinstated after a quick update. How many apps has Apple de-listed (or prevented being written in the first place) to protect their business? &lt;a href="http://gizmodo.com/5027790/why-we-still-need-the-iphone-app-black-market"&gt;Lots&lt;/a&gt; and &lt;a href="http://lifehacker.com/400148/iphone-20-jailbreak-apps-you-cant-find-in-the-itunes-store"&gt;lots&lt;/a&gt;.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1218082348460">
+		<id gr:original-id="tag:diveintomark.org,2008-08-07:/archives/20080807025755">
+			tag:google.com,2005:reader/item/e1383c0b9f3c24f8
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="family" scheme="http://diveintomark.org" />
+		<title type="html">
+			The 4 “B”s
+		</title>
+		<published>
+			2008-08-07T02:57:55Z
+		</published>
+		<updated>
+			2008-08-07T02:57:55Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/08/06/b" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/08/06/b" xml:lang="en" type="html">
+			&lt;div style="width:240px"&gt; &lt;img src="http://wearehugh.com/public/2008/08/blocks.jpg" alt="[colored blocks]" title="" width="240" height="159"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/jamoker/1258248356/"&gt;prehistoric toys&lt;/a&gt; © &lt;a href="http://flickr.com/people/jamoker/"&gt;The Jamoker&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;Little boys are so easy. It’s amazing how many games you can play with nothing but the 4 “B”s: blocks, balls, boxes, and bears.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1218034597885">
+		<id gr:original-id="tag:diveintomark.org,2008-08-06:/archives/20080806144009">
+			tag:google.com,2005:reader/item/9e0919d385a41f3c
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="security" scheme="http://diveintomark.org" />
+		<title type="html">
+			Little drummer boy
+		</title>
+		<published>
+			2008-08-06T14:40:09Z
+		</published>
+		<updated>
+			2008-08-06T14:40:09Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/08/06/little-drummer-boy" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/08/06/little-drummer-boy" xml:lang="en" type="html">
+			&lt;div style="width:240px"&gt; &lt;img src="http://wearehugh.com/public/2008/08/snare-drums.jpg" alt="[snare drums]" title="" width="240" height="292"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/fayjo/338585382/"&gt;Pearl Masters&lt;/a&gt; © &lt;a href="http://flickr.com/people/fayjo/"&gt;Jeremy Pharo&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;For reasons that are not particularly interesting, I found myself reading &lt;a href="http://www.jwz.org/xscreensaver/faq.html"&gt;the XScreensaver &lt;abbr&gt;FAQ&lt;/abbr&gt;&lt;/a&gt; last night, which answers the question, “&lt;a href="http://www.jwz.org/xscreensaver/faq.html#toolkits"&gt;The unlock dialog is funny looking, why not use GTK?&lt;/a&gt;” That led me to JWZ’s mini-rant &lt;a href="http://www.jwz.org/xscreensaver/toolkits.html"&gt;On Toolkits&lt;/a&gt;, which reminded me of &lt;a href="http://secunia.com/advisories/9184/"&gt;this ancient vulnerability in the OS X screensaver&lt;/a&gt; where you could unlock the screen by typing 1280 characters in the password dialog. I remember reading about it at the time, but I never really understood how people found bugs like this until I had kids.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1217952715871">
+		<id gr:original-id="tag:diveintomark.org,2008-08-05:/archives/20080805155619">
+			tag:google.com,2005:reader/item/4bbebb3a511d42d7
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="google" scheme="http://diveintomark.org" /><category term="licensing" scheme="http://diveintomark.org" />
+		<title type="html">
+			Placating people with options
+		</title>
+		<published>
+			2008-08-05T15:56:19Z
+		</published>
+		<updated>
+			2008-08-05T19:09:22Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/08/05/placating" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/08/05/placating" xml:lang="en" type="html">
+			&lt;p&gt;&lt;cite&gt;Matthew Paul Thomas&lt;/cite&gt;: &lt;a href="http://mpt.net.nz/archive/2008/08/01/free-software-usability"&gt;Why Free Software has poor usability, and how to improve it&lt;/a&gt;. Many of the problems he lists apply to all software. Here’s one that’s been on my mind recently:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;10. Placating people with options.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;In other news, &lt;a href="http://www.linuxtoday.com/news_story.php3?ltsn=2008-08-01-012-35-NW"&gt;Google Code blacklists Mozilla Public License&lt;/a&gt;. Some &lt;a href="http://redmonk.com/sogrady/2008/08/04/links-for-2008-08-04-deliciouscom/"&gt;smart&lt;/a&gt; &lt;a href="http://blogs.sun.com/webmink/entry/links_for_2008_08_04"&gt;people&lt;/a&gt; don’t seem to understand why Google would “reduce” users’ “choices.” This is like complaining that the &lt;abbr&gt;GPL&lt;/abbr&gt; is too “political” to be a software license because it “restricts” users’ “freedom” to take without giving back. You’re missing the point; the &lt;abbr&gt;GPL&lt;/abbr&gt; is &lt;em&gt;designed&lt;/em&gt; to be a political manifesto (cleverly disguised as a software license).&lt;/p&gt; &lt;p&gt;Another example: my &lt;a href="http://feedparser.org/"&gt;Universal Feed Parser&lt;/a&gt; was &lt;a href="http://diveintomark.org/archives/2002/08/13/ultraliberal_rss_parser"&gt;conceived as a weapon&lt;/a&gt; against what I considered the gravest error of XML: &lt;a href="http://diveintomark.org/archives/2004/01/16/draconianism"&gt;draconian error handling&lt;/a&gt;. Recently, someone asked me to implement a switch that makes it not fall back on lax parsing in the case of an XML wellformedness error. I said no, not because it would be difficult to implement, but because &lt;em&gt;that defeats its entire reason for being&lt;/em&gt;.&lt;/p&gt; &lt;p&gt;Google Project Hosting is — and has always been — &lt;a href="http://google-opensource.blogspot.com/2008/05/standing-against-license-proliferation.html"&gt;a tool to fight license proliferation&lt;/a&gt;. It is only incidentally useful.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1217902373451">
+		<id gr:original-id="tag:diveintomark.org,2008-08-05:/archives/20080805020410">
+			tag:google.com,2005:reader/item/17a34a9b8d066cf4
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="blogging" scheme="http://diveintomark.org" />
+		<title type="html">
+			Weblogs: content w/o context, collaboration, capital, or coruscation
+		</title>
+		<published>
+			2008-08-05T02:04:10Z
+		</published>
+		<updated>
+			2008-08-05T02:04:10Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/08/04/abysmal-failure" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/08/04/abysmal-failure" xml:lang="en" type="html">
+			&lt;p&gt;On her weblog, danah boyd writes:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;[Compared to Wikipedia,] weblogs take an entirely opposite approach to knowledge production. A weblog’s entire structure is built around single authors, control and individualism. There aren’t even mechanisms for multiple authors and the tools available for collaboration are extremely limited. “Collaboration” still assumes a primary author.&lt;/p&gt; &lt;p&gt;… Weblogs are quickly becoming a “unit of spam” instead of a unit of knowledge. Y’see - a system that is driven by individualism quickly becomes a tool for self-promoters.&lt;/p&gt; &lt;p&gt;… Frankly, from my POV, weblogs look like an abysmal failure. There’s no life to the content. Already articles are being forgotten and left to rot, along with a lot of other web content. There’s no common format or standards and there’s a lot more crap than gems.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Oops, no, I’m sorry. She was &lt;a href="http://www.zephoria.org/thoughts/archives/2008/08/01/knol_content_wo.html"&gt;talking about Google Knol&lt;/a&gt;. My bad.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CNOA6tjEko8C
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CJb85L2zjpEC" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2008-01-24T07:59:13Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1201161553657">
+		<id gr:original-id="tag:diveintomark.org,2008-01-24:/archives/20080124070916">
+			tag:google.com,2005:reader/item/650d1283eb38cc87
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="lighthouse" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			Attachments
+		</title>
+		<published>
+			2008-01-24T07:09:16Z
+		</published>
+		<updated>
+			2008-01-24T07:09:16Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/01/24/attachments-2" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/01/24/attachments-2" xml:lang="en" type="html">
+			&lt;p&gt;Since the new year, I have been on a cleaning kick. I cleaned the storage room behind the laundry room. I broke down all the empty boxes in the attic and rearranged the boxes that were left. I &lt;a href="http://www.apexnc.org/depts/pw/comp_recyc.cfm"&gt;recycled&lt;/a&gt; three old computers, a non-working scanner, and an Epson RX-80 dot matrix printer. I categorized my cables and recycled the ones that only connect to computers or devices I no longer own. I rearranged the holiday decorations and threw out non-working Christmas lights. I grouped old baby clothes, cribs, &lt;a href="http://diveintomark.org/archives/2007/05/22/gates"&gt;safety gates&lt;/a&gt;, baby monitors, and infant car seats and started the process of selling them on Craigslist. I shredded any paperwork older than 7 years: rent payment receipts for apartments I don’t live in, statements for credit cards I don’t have, bank receipts for accounts long since closed. I even convinced my wife to recycle 37 empty shoe boxes.&lt;/p&gt; &lt;p&gt;In the back of the attic were two boxes, curiously labeled “Attachments,” a wry perversion of &lt;a href="http://www.hsuyun.org/Dharma/zbohy/Literature/essays/fgs/attachment.html"&gt;the Buddhist principle&lt;/a&gt; of the same name. These boxes were hastily taped shut almost 15 years ago; I have not opened them since. I have moved many times, and I have always carried these boxes with me. From my parents’ house, to my first apartment, to my second apartment, my third, my fourth, and finally my current house. Every physical move presents a unique opportunity to shed physical attachments, but these boxes have survived every chance I had to leave them behind.&lt;/p&gt; &lt;p&gt;On each such occasion — and on several occasions in between — I have asked myself under what circumstances I would be willing to discard them, or open them, or both. Lacking an answer, I have carried them through my entire adult life, waiting to understand why.&lt;/p&gt; &lt;p&gt;And then, while I was standing in the center of my new found, meticulously organized attic, it hit me like a lightning bolt: &lt;b&gt;&lt;i&gt;I had been waiting for the facts inside these boxes to change.&lt;/i&gt;&lt;/b&gt; Of course facts do not change; only people change. And with that, I threw them in the garbage and hauled them to the curb, still unopened after all these years.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1201117524160">
+		<id gr:original-id="tag:diveintomark.org,2008-01-23:/archives/20080123184746">
+			tag:google.com,2005:reader/item/49140d7caf02846e
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="webstandards" scheme="http://diveintomark.org" /><category term="zen" scheme="http://diveintomark.org" />
+		<title type="html">
+			Microsoft koan
+		</title>
+		<published>
+			2008-01-23T18:47:46Z
+		</published>
+		<updated>
+			2008-01-23T18:47:46Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/01/23/microsoft-koan" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/01/23/microsoft-koan" xml:lang="en" type="html">
+			&lt;p&gt;Said the monk:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;If you give me non-standard markup, I will render it according to standards.&lt;/p&gt; &lt;p&gt;If you give me standard markup, &lt;a href="http://blogs.msdn.com/ie/archive/2008/01/21/compatibility-and-ie8.aspx"&gt;I will not render it according to standards&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;What do you do?&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The student sat for a long time and said nothing. Then, without looking up, he raised one finger and said, “&lt;a href="http://ln.hixie.ch/?start=1201080691&amp;amp;count=1"&gt;There is only one web&lt;/a&gt;.”&lt;/p&gt; &lt;p&gt;Many years later, the monk was enlightened, but by then it was too late.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1200612660205">
+		<id gr:original-id="tag:diveintomark.org,2008-01-17:/archives/20080117223239">
+			tag:google.com,2005:reader/item/2b2f3ae326aa89e5
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="apple" scheme="http://diveintomark.org" /><category term="circlejerk" scheme="http://diveintomark.org" /><category term="freedom0" scheme="http://diveintomark.org" /><category term="linux" scheme="http://diveintomark.org" />
+		<title type="html">
+			Of canaries and coal mines
+		</title>
+		<published>
+			2008-01-17T22:32:39Z
+		</published>
+		<updated>
+			2008-01-17T22:32:39Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" xml:lang="en" type="html">
+			&lt;p&gt;It’s been about 18 months since &lt;a href="http://apple.slashdot.org/article.pl?sid=06/07/03/1934251"&gt;Slashdot&lt;/a&gt; linked to &lt;a href="http://radar.oreilly.com/archives/2006/06/ubuntu_linux_a_threat_to_mac_o.html"&gt;Tim O’Reilly&lt;/a&gt; for linking to &lt;a href="http://www.kottke.org/remainder/06/06/11361.html"&gt;Jason Kottke&lt;/a&gt; for linking to &lt;a href="http://www.boingboing.net/2006/06/29/mark-pilgrims-list-o.html"&gt;Cory Doctorow&lt;/a&gt; for linking to &lt;a href="http://diveintomark.org/archives/2006/06/02/when-the-bough-breaks"&gt;me&lt;/a&gt; for switching from Mac to Linux. (Best comment: “this is just another A-list blogger circle-jerk.” As if that was &lt;i&gt;my&lt;/i&gt; fault!)&lt;/p&gt; &lt;p&gt;At the time, Jason said, “If I were Apple, I’d be worried about this. Two lifelong Mac fans are switching away from Macs to PCs running Ubuntu Linux: first it was Mark Pilgrim and now Cory Doctorow. Nerds are a small demographic, but they can also be the canary in the coal mine with stuff like this.”&lt;/p&gt; &lt;p&gt;18 months later, Apple has sold 4 million &lt;a href="http://diveintomark.org/archives/2007/10/04/if-wishes-were-iphones"&gt;crippled phones&lt;/a&gt;, billions of crippled songs, and people are predicting that &lt;a href="http://www.appleinsider.com/articles/08/01/14/mac_sales_up_over_40_percent_year_over_year.html"&gt;Mac sales are up 40% year over year&lt;/a&gt;. And I wouldn’t bet against their new movie rental venture either (although &lt;a href="http://www.engadget.com/2008/01/16/itunes-and-apple-tv-rentals-and-purchases-what-you-can-and-can/"&gt;this chart&lt;/a&gt; is amusing).&lt;/p&gt; &lt;p&gt;So after 18 months, I think we can safely say that no, Cory and I were not “canaries in the coal mine.” There are not hordes of fed-up consumers rejecting Apple’s vision of cryptographic lock-in. There are not mass graves where people ceremoniously dump their crippled, non-general-purpose computing devices. Outside of &lt;a href="http://planet.debian.org/"&gt;Planet Debian&lt;/a&gt; and my own personal echo chamber, nobody gives a shit about Freedom 0.&lt;/p&gt; &lt;p&gt;You knew this, of course, but I just wanted to let you know that I knew, too.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1200342106081">
+		<id gr:original-id="tag:diveintomark.org,2008-01-14:/archives/20080114200716">
+			tag:google.com,2005:reader/item/8d9137e93fc7490c
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="culture" scheme="http://diveintomark.org" /><category term="lottery" scheme="http://diveintomark.org" /><category term="mortgage" scheme="http://diveintomark.org" /><category term="politics" scheme="http://diveintomark.org" />
+		<title type="html">
+			HOWTO solve the sub-prime mortgage mess
+		</title>
+		<published>
+			2008-01-14T20:07:16Z
+		</published>
+		<updated>
+			2008-01-14T21:05:35Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/01/14/howto-solve-the-sub-prime-mortgage-mess" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/01/14/howto-solve-the-sub-prime-mortgage-mess" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2008/01/lottery-tickets.jpg" alt="[Lottery tickets]" title="" width="180" height="240"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/midweekpost/76741795/"&gt;Lottery Tickets&lt;/a&gt; © &lt;a href="http://flickr.com/people/midweekpost/"&gt;Eric E. Yang&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;Three seemingly unrelated articles came across my radar today:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;p&gt;&lt;a href="http://www.chron.com/disp/story.mpl/front/5451633.html"&gt;Not-so-rich buy Texas Lottery’s $50 ticket&lt;/a&gt;.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;“The lottery was never designed for rich people,” said Rep. Garnet Coleman, D-Houston. He called the $50 ticket a state-orchestrated scheme to entice people of limited means to spend more. “The people who play are still people who can least afford to spend $50 … they’re people who struggle to live off what they make.” … “The $50 ticket salvaged our entire fiscal year last year,” said Robert Tirloni, projects manager for the Texas Lottery Commission, bringing $137 million to state coffers since the game’s debut in May and helping the commission close a $93 million gap in revenue between 2006 and 2007.”&lt;/p&gt; &lt;/blockquote&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;&lt;a href="http://krugman.blogs.nytimes.com/2007/12/20/jingle-mail-jingle-mail-jingle-mail-eek/"&gt;Jingle mail, jingle mail, jingle mail — eek!&lt;/a&gt; “Jingle mail” is the practice of homeowners who have no equity (because of home equity loans, or interest-only mortgages, or whatever weird shit) simply mailing their keys to the bank and moving out. At least one person I know is considering doing this, &lt;a href="http://calculatedrisk.blogspot.com/2007/03/housing-short-sales-and-taxes.html"&gt;despite the tax consequences&lt;/a&gt;.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;[J]ingle mail could be explosive. People who might have been reluctant to walk away from underwater mortgages because it seems socially unacceptable may change their minds once they see their neighbors easing their financial burdens by checking out.&lt;/p&gt; &lt;/blockquote&gt; &lt;li&gt;&lt;p&gt;&lt;a href="http://online.wsj.com/article/SB120030610310488191.html"&gt;Beijing Blocks Deal For Citigroup Stake&lt;/a&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The Chinese government’s apparent rejection of a planned multibillion-dollar investment in Citigroup Inc. by state-owned China Development Bank suggests there may be limits to Beijing’s status as a cash source for Western banks … Citigroup had hoped to sell a stake valued at about $2 billion to China Development Bank as part of a second round of fund raising to improve its books, in the wake of losses from its exposure to U.S. subprime lending and its decision to fold off-balance-sheet investments into its own accounts.&lt;/p&gt; &lt;/blockquote&gt;&lt;/li&gt; &lt;/li&gt;&lt;/ol&gt; &lt;p&gt;So Citigroup et. al. are scrounging for cash because they gave houses to people who can’t afford to live in them, and people are dumping the houses because there’s no incentive for them to stay. I think it’s pretty obvious what needs to be done. &lt;b&gt;&lt;i&gt;Mortgage lenders need to stop sending people monthly statements and start selling $1000 lottery tickets instead.&lt;/i&gt;&lt;/b&gt; Scratch and win, and you can get free home repairs, upgraded appliances, hard-wood floors. A jackpot gets you a new address. Scratch and lose, and you still get to live in the piddly little 7,000-square-foot shack you’ve got now. All you have to do is keep playing.&lt;/p&gt; &lt;p&gt;Yeah, that’s harsh. I know not everybody starts life on the same starting line. And I feel for the people who did nothing but lose their job at the wrong time and got caught up in this whirlwind. The people I don’t have a lick of sympathy for are those idiots who make as much as I do, who are — on paper, at least — as educated as I am, who have no savings and no equity because they felt they just had to live in a McMansion and load up their credit cards with 60-inch home theater systems with 7.1 surround sound. No sir, not a lick of sympathy.&lt;/p&gt; &lt;p&gt;I’ve lived below my means for my entire adult life, from the day I got my first job. Living in a one-bedroom apartment when I could have afforded my own condo. Living in a nice, modestly-sized house on a 15-year fixed mortgage when I could have had one of those 7,000-square-foot monstrosities just down the street on a fucked-up balloon payment mortgage that brokers were trying to push on me not 4 years ago (when I refinanced one 15-year fixed into another — at almost exactly the lowest rates in 20 years, thankyouverymuch).&lt;/p&gt; &lt;p&gt;I know I spent a lot of money on my house last year, what with the renovation of the downstairs living room. Is this hypocritical? Well, it turns out it wasn’t really a lot of money. We paid roughly $15000 to add 150 square feet to our house. That’s $100 per square foot. We &lt;i&gt;bought&lt;/i&gt; the house in 2001 for $107 per square foot; now it’s worth $135. (I know this for a fact, because every house within 20 miles just got reappraised last year.) If it keeps appreciating until we sell it, it may turn out that we made money by renovating. Or it may not. We’re not counting on it, and that’s not why we did it. We had cash — because we live below our means — and we wanted to spend it on a little more living space for us and our kids.&lt;/p&gt; &lt;p&gt;That’s what you get to do when you’re the creditor instead of the debtor — spend it on you and yours. The Chinese understand that. What, you think they’re lending us money so they can blow the vig on lottery tickets?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1199844058044">
+		<id gr:original-id="tag:diveintomark.org,2008-01-09:/archives/20080109012826">
+			tag:google.com,2005:reader/item/e86d3e4c78eaed5d
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="tuba" scheme="http://diveintomark.org" />
+		<title type="html">
+			Tuba fever
+		</title>
+		<published>
+			2008-01-09T01:28:26Z
+		</published>
+		<updated>
+			2008-01-09T01:29:53Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/01/08/tuba-fever" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/01/08/tuba-fever" xml:lang="en" type="html">
+			&lt;p&gt;First, my lower brass credentials:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;I played the euphonium for 12 years&lt;/li&gt; &lt;li&gt;I made it into the Pennsylvania All-State Band three years in a row&lt;/li&gt; &lt;li&gt;In 2003, I hired the &lt;a href="http://triangletubas.com/"&gt;Triangle Tuba Quartet&lt;/a&gt; to &lt;a href="http://diveintomark.org/archives/2002/10/09/wedding_music"&gt;play at my wedding&lt;/a&gt;&lt;/li&gt; &lt;li&gt;I still own a double-belled euphonium&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;I mention this not to brag, but to assure you that I am not mocking anyone when I say that &lt;a href="http://www.tubanews.com/index.php"&gt;TubaNews.com&lt;/a&gt; is the most exciting discovery I have made this year. (OK, OK, the year is still young.) I have already added two tuba albums to &lt;a href="http://www.amazon.com/gp/registry/wishlist/FKOCSGX9HALB"&gt;my Amazon wishlist&lt;/a&gt;, added the TubaNews feed to my aggregator (&lt;i&gt;a tuba site with RSS autodiscovery&lt;/i&gt;), and I am busily reading their back issues. &lt;a href="http://www.tubanews.com/articles/contentid-295.html"&gt;This interview with Tommy Johnson&lt;/a&gt; is both interesting and poignant, especially considering &lt;a href="http://www.tubanews.com/articles/contentid-296.html"&gt;he has since passed away&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Joe called these “&lt;a href="http://bitworking.org/news/283/impromptu-guerrilla-tuba-ensembles"&gt;communities of passion&lt;/a&gt;,” thus missing the obvious coinage, “&lt;a href="http://www.thelongtail.com/"&gt;long valve&lt;/a&gt; communities.” Either way, it’s news you’re not going to read on TechMeme anytime soon.&lt;/p&gt; &lt;p&gt;TubaNews also led me to &lt;a href="http://bomaestro.blogspot.com/"&gt;Roger Bobo’s blog&lt;/a&gt;. &lt;i&gt;A tubist with an Atom feed&lt;/i&gt;. 2008 is coming along nicely.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1199470464519">
+		<id gr:original-id="tag:diveintomark.org,2008-01-04:/archives/20080104180004">
+			tag:google.com,2005:reader/item/1a8007784d91300d
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="linux" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="ubuntu" scheme="http://diveintomark.org" />
+		<title type="html">
+			2008 is the year of Linux on the desktop
+		</title>
+		<published>
+			2008-01-04T18:00:04Z
+		</published>
+		<updated>
+			2008-01-04T18:00:04Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/01/04/my-parents-desktop" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/01/04/my-parents-desktop" xml:lang="en" type="html">
+			&lt;p&gt;…At least in the Pilgrim family.&lt;/p&gt; &lt;p&gt;Over Christmas break, we did a three-way computer upgrade: my sons got my parents’ old Mac, my parents got my old desktop, and I got a new desktop. Of course I’m still running Debian Sid (I just moved my old hard drive to the new computer), but the big news is that my parents asked me to migrate them to Linux. They are now happy users of Ubuntu 7.10 with Firefox, Thunderbird, Picasa, OpenOffice.org, Amarok, and gnome-games.&lt;/p&gt; &lt;p&gt;Most of their complaints about Apple and their Mac were really quite minor, but you know how these things go. They add up, and some get inflated out of proportion, and “we only bought a Mac because you bought a Mac, if you’re on Linux now and you say it would work for us, we believe you.” But for the record, here are some of their specific gripes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;iPhoto was “slow”. They had an old version (I believe they were two versions behind) which was indeed slow with their collection of ~8000 pictures. I told them they could upgrade to a more recent version which would be faster and would have new features to boot, but they weren’t interested in the new features and they felt vaguely cheated at the suggestion of paying just for performance upgrades. (I know that iPhoto comes standard on new Macs, see below for more on new Macs.)&lt;/li&gt; &lt;li&gt;Also, iPhoto lost all of their albums one day for no apparent reason. It seems to do that a lot, though apparently &lt;a href="http://diveintomark.org/archives/2006/06/02/when-the-bough-breaks"&gt;it only happens to people who deserve it&lt;/a&gt;. Or something.&lt;/li&gt; &lt;li&gt;iTunes was “annoying”. And they didn’t even use iTunes that much; they had neither the disk space nor the inclination to rip their entire music collection. iTunes is great if you have an iPhone and 3 iPods and buy music and TV shows from the iTunes Store and subscribe to podcasts to listen to and watch on your morning commute and this and that and the other damn thing… but otherwise it’s kinda bloated and slow and keeps changing appearance for no reason. And then there’s the constant stream of meaningless upgrades, each with their own new EULA to click through. To a casual observer like my father, it’s pretty obvious that Apple has completely lost the plot on usability and simplicity — two of their strengths, historically — but they don’t care because they’re making so much damn money on ringtones. My father does have an iPod, though. Which brings me to…&lt;/li&gt; &lt;li&gt;Using an iPod was “frustrating”. Seriously. OK, the first one was DOA, but my father returned it to the Apple Store without incident. But because he didn’t have a music collection, he relied on me to fill his iPod with new music every so often. The first time he went to recharge it, he plugged it into his Mac and iTunes “helpfully” wiped it and refilled it with the few songs that were in his iTunes library. Of course he didn’t realize what had actually happened until he went to the gym the next day and had virtually no music (and certainly no good exercise music). His next thought was that I should refill it, and then he would just copy the music from the iPod to his iTunes library. This led to a long discussion of why iTunes wouldn’t let you do that, and how this was technically different from me letting him borrow one of my CDs, and how if he really wanted to do that there were utilities but not from Apple, and so on and so forth. So yeah, my parents switched to Linux because — among other reasons — it was easier to use with their iPod. That’s how badly Apple has lost the plot.&lt;/li&gt; &lt;li&gt;Their Apple keyboard stopped working one day for no apparent reason. OK, it was five years old (it came with the computer), but my father is from an era where he expects things to last longer than five years. And then I told him that he really needed a Mac-specific keyboard replacement because their CD drive had no physical eject button, which led to a red-faced rant about how “Steve doesn’t like buttons ruining his precious f!@#ing curves.” (&lt;a href="http://intertwingly.net/blog/2005/06/29/Undecipherable-Specification-Error#c1120140634"&gt;Like father, like son&lt;/a&gt;, no?) Luckily I had an old Mac keyboard they could borrow.&lt;/li&gt; &lt;li&gt;They constantly dealt with random crashes and freezes using an old version of Microsoft Office. Not Apple’s fault, but there it is. I tried to sell them on NeoOffice, but it ran extremely slowly on their 700 MHz G4. I quoted them a good online price for the latest version of Microsoft Office and their eyes bulged out. I know this isn’t a fair comparison — the only reason that OpenOffice.org meets their needs on their new Linux desktop is because the underlying computer is so much faster than their old Mac. But those were their options: upgrade Microsoft Office and hope it was less buggy, migrate to NeoOffice, buy a new Mac, or migrate to Linux and run OpenOffice.org. (Windows was never a serious option.) Which brings me to…&lt;/li&gt; &lt;li&gt;They didn’t want to buy a Mac Pro because they felt it was too expensive for them (they never do “number crunching” or video editing or anything that would require the sort of expansion capabilities that a Mac Pro provides), and they didn’t want to buy a new iMac because the screen isn’t adjustable enough. This complaint isn’t really Apple’s fault either — it’s rooted in the layout of their desk, which has a raised shelf along the back half of the desk. They had their “desktop lamp” iMac up on the shelf, but with the neck tilted all the way down so they could read the screen without craning their heads back. (They both wear bifocals.) A new iMac would basically require them to buy a new desk. Don’t laugh; this was really important to them. Someday you’ll be old, too. Just you wait.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Now, this is not to say that migrating to Linux was pain-free. I spent quite some time researching their requirements and finding the right applications for them, and then I spent more time migrating their important documents and data. Picasa, in particular, was a difficult choice for me, what with being completely closed source and all that. But it is blazingly fast on any hardware, and it is well-supported, and I simply refuse to subject my parents to the horror that is F-Spot. (Digikam was a close second to Picasa. They may still end up there if they don’t like Picasa for some reason.)&lt;/p&gt; &lt;p&gt;I had originally chosen Kontact/Kmail for their email needs, but I ran into some strange bug where Kmail refused to send messages. Basic functionality, right? You’d think someone would, you know, &lt;a href="http://ubuntuforums.org/showthread.php?t=554041"&gt;notice&lt;/a&gt;. I realize email standards are wide and complicated, but still. An email program that can’t send email is pretty fucking useless. And no, it wasn’t a server problem; I switched to Thunderbird (&lt;a href="http://weblogs.mozillazine.org/mitchell/archives/2007/09/mozillas_new_focus_on_thunderb.html"&gt;yeah, I know&lt;/a&gt;) and suddenly email worked flawlessly. Still not happy with that solution, but there it is.&lt;/p&gt; &lt;p&gt;My mother used the Address Book extensively on the old Mac. Credit where credit is due: exporting an address book from the Address Book app is really easy and standards-based, and I was able to import all the addresses into Kmail (and later Thunderbird) &lt;a href="http://diveintomark.org/archives/2006/06/16/juggling-oranges"&gt;with full fidelity&lt;/a&gt;. Thanks, Apple.&lt;/p&gt; &lt;p&gt;Setting up to print to their Epson Stylus C62 was easy. Ubuntu automatically detected the printer and offered to install the appropriate driver, and I printed a full-color test page on the first try. But then my father threw me for a loop and asked how he could realign the print heads and check the ink levels. I have owned printers for many decades and I have never done this, but apparently it’s a regular occurrence for him, and the Mac printer driver let him do it. So OK, I poke around Google, and lo and behold, &lt;a href="http://packages.ubuntu.com/escputil"&gt;there’s a package for that&lt;/a&gt;. But it doesn’t work. Oh wait, I need to install gimp-print too (God knows why). Now it aligns the print heads, but it gives an error message while checking ink levels. But it works from the command line. But only as root. Weird. Unresolved. Grr.&lt;/p&gt; &lt;p&gt;I think that was it, though. Everything else “just worked,” including opening all their Microsoft Office documents — word processing, spreadsheet, and presentations — in OpenOffice.org, connecting to their wireless network (served by an Apple Airport Express, natch), and of course playing Mahjongg (part of gnome-games). I know the wireless thing isn’t a fair test, since &lt;a href="http://diveintomark.org/archives/2006/11/06/gnewsense"&gt;I’d already thoroughly tested their hardware&lt;/a&gt; for Linux compatibility and had been running Debian on it for a year and a half. Still — different distro, clean install, no driver problems. Thanks, Canonical (and Debian, and all the upstream driver hackers). And thanks to Sun and others for reverse-engineering Microsoft’s proprietary formats and building a free office suite that even my mother could love. Kudos all around. 2008 is the year of Linux on the desktop. My parents’ desktop.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1198886384936">
+		<id gr:original-id="tag:diveintomark.org,2007-12-28:/archives/20071228230138">
+			tag:google.com,2005:reader/item/77d0d8048265d14b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			Receipts
+		</title>
+		<published>
+			2007-12-28T23:01:38Z
+		</published>
+		<updated>
+			2007-12-28T23:02:20Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/12/28/receipts" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/12/28/receipts" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/12/dining-car-receipt.jpg" alt="[Southern Railway dining car receipt]" title="" width="179" height="240"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/76283671@N00/157828850/"&gt;Dining Car Receipt&lt;/a&gt; © &lt;a href="http://flickr.com/people/76283671@N00/"&gt;Laineys Repertoire&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;“What is &lt;b&gt;that&lt;/b&gt;?” she exclaimed.&lt;/p&gt; &lt;p&gt;“It’s all the paperwork we’ve collected this year.”&lt;/p&gt; &lt;p&gt;“In one big pile?”&lt;/p&gt; &lt;p&gt;“Well…”&lt;/p&gt; &lt;p&gt;“This is where all our bills go?”&lt;/p&gt; &lt;p&gt;“Well, our paid bills. Unpaid bills go into a pile on my desk.”&lt;/p&gt; &lt;p&gt;“Your system sucks.”&lt;/p&gt; &lt;p&gt;“It’s a perfectly good system. It’s just optimized for writes.”&lt;/p&gt; &lt;p&gt;“Rights?”&lt;/p&gt; &lt;p&gt;“No, &lt;i&gt;writes&lt;/i&gt;. As in, INSERT BILL INTO PILE.” My wife is a business coder; she understands the world in terms of SQL.&lt;/p&gt; &lt;p&gt;“What if you need to find a bill you’ve paid?” she asked.&lt;/p&gt; &lt;p&gt;“No, it’s not optimized for reads. Reads require a table scan.”&lt;/p&gt; &lt;p&gt;“Don’t you index them into folders?”&lt;/p&gt; &lt;p&gt;“Yes, once a year, I take the big pile of paperwork and organize them into separate piles, and file them.”&lt;/p&gt; &lt;p&gt;“Why don’t you file them as they come in?”&lt;/p&gt; &lt;p&gt;“But that would slow down the writes.”&lt;/p&gt; &lt;p&gt;“We need a better system.”&lt;/p&gt; &lt;p&gt;&lt;b&gt;&lt;i&gt;Many hours and one shredder later…&lt;/i&gt;&lt;/b&gt;&lt;/p&gt; &lt;p&gt;“OK,” she explained, “this is the box for unpaid bills. This is the box for things that need to be filed. Once a month, you will empty the box and file them. And this is the box for receipts.”&lt;/p&gt; &lt;p&gt;“Receipts?”&lt;/p&gt; &lt;p&gt;“Upon entering the house, all receipts go in this box.” She points to a small blue box. “Once a month, I’ll sort them into medical, saveable, and chuckable. Medical receipts get filed under FSA, saveable receipts get filed into folders, and chuckable receipts go into the shredder.” I eye the shredder with disbelief.&lt;/p&gt; &lt;p&gt;“What’s that?” I asked, pointing to a three-page flowchart.&lt;/p&gt; &lt;p&gt;“That’s the flowchart that explains where everything goes.”&lt;/p&gt; &lt;p&gt;“And where does the flowchart go?” I asked not-innocently.&lt;/p&gt; &lt;p&gt;“I’m just going to put it on top of this box for the time being.”&lt;/p&gt; &lt;p&gt;“I have the utmost confidence in the longevity of this system.”&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1198778623148">
+		<id gr:original-id="tag:diveintomark.org,2007-12-27:/archives/20071227171757">
+			tag:google.com,2005:reader/item/d7838cb1d00c55bf
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="culture" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="sesamestreet" scheme="http://diveintomark.org" />
+		<title type="html">
+			Old School
+		</title>
+		<published>
+			2007-12-27T17:17:57Z
+		</published>
+		<updated>
+			2007-12-27T17:17:57Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/12/27/old-school" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/12/27/old-school" xml:lang="en" type="html">
+			&lt;div&gt; &lt;a href="http://store.sesameworkshop.org/product/show/30214"&gt;&lt;img src="http://diveintomark.org/public/2007/12/sesame-street-old-school.jpg" alt="[Sesame Street Old School DVD]" title="" width="241" height="300"&gt;&lt;/a&gt; &lt;span&gt;&lt;a href="http://store.sesameworkshop.org/product/show/30214"&gt;Sesame Street Old School&lt;/a&gt; © Sesame Workshop&lt;/span&gt; &lt;/div&gt; &lt;p&gt;&lt;b&gt;These early ‘Sesame Street’ episodes are intended for grown-ups, and may not suit the needs of today’s preschool child.&lt;/b&gt;&lt;/p&gt; &lt;p&gt;So spoke a cuddly animated typewriter on Christmas morning, as three generations of Pilgrims gathered around the television to watch &lt;a href="http://store.sesameworkshop.org/product/show/30214"&gt;Sesame Street ‘Old School’&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;“Oh my God, why?” my father exclaimed. “Mark, what have you done?” my wife chided. “Where’s Elmo?” my son asked.&lt;/p&gt; &lt;p&gt;“Ethan, Elmo’s not in this one. Dora, trust me. Dad, I don’t know, but I’ll find out.”&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.post-gazette.com/pg/06299/732534-352.stm"&gt;This article from last year&lt;/a&gt; claims it’s because the characters look different:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Rosemarie Truglio, vice president of education and research for Sesame Workshop, said reasons for the disclaimer were many. She said the changing mores and dangers of today’s kids emulating the on-screen children playing in the dump was part of it, but not the primary motivation.&lt;/p&gt; &lt;p&gt;“To kids today watching ‘Sesame Street,’ this [’Old School’ DVD] looks significantly different,” she said. “This ‘Sesame Street’ is not their reality. Kids have no concept of time, so for parents to tell them, ‘This is the “Sesame Street” I watched growing up,’ would be a disconnect. It has a different Gordon, Oscar is orange, not green. Big Bird looks significantly different.”&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;But &lt;a href="http://www.asiaone.com/News/Education/Story/A1Story20071203-39301.html"&gt;this more recent article&lt;/a&gt; claims it’s because the characters act differently:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Sesame Street executive producer Carol-Lynn Parente told the New York Times that Alistair Cookie (Cookie Monster’s alter-ego) used to appear with a pipe and eat it on Monsterpiece theatre and ‘that modelled the wrong behaviour’.&lt;/p&gt; &lt;p&gt;So the scenes were reshot, this time pipe-free, and then the parody was dropped.&lt;/p&gt; &lt;p&gt;Oscar The Grouch was another problem. The filthy, trash can-dwelling muppet was, well, too grouchy.&lt;/p&gt; &lt;p&gt;‘We might not be able to create a character like Oscar now,’ Ms Parente said.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;When two spokespeople give you two different answers to a simple question, chances are that both of them are lying.&lt;/p&gt; &lt;p&gt;The real reason is hidden in the DVD liner notes, under “A Salute to Jon Stone”:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;“Jon had a very clear vision on what the show should be,” recalls his former assistant, Dulcy Singer. His influence and insight was seen and felt throughout the entire set, which was largely designed based on his ideas. He didn’t want the show to feel too magical or other-worldly; instead, he wanted it to reflect an urban child’s reality. Stone lobbied for the now-familiar city street, creating a world that many children in the target audience recognized.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;i&gt;An urban reality.&lt;/i&gt; Sesame Street originally aired on PBS, a free television program viewable by anyone with a TV and some rabbit ears. According to some reports, in its heyday the show reached 95% of its demographic in places like Harlem and Washington DC. But the latte-sipping parents&lt;sup&gt;&lt;a href="http://diveintomark.org/archives/2007/12/27/old-school#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt; who buy these DVDs at Barnes and Noble now (retail price: $39.95) will probably not share the “urban reality” that Sesame Street portrayed 30+ years ago. And make no mistake: the early Sesame Street was &lt;i&gt;filthy&lt;/i&gt;. Row houses of decaying brownstone, laundry hung outside the windows, trash cans on the sidewalk, unswept leaves in the street. Interspersed with furry blue monsters, but still.&lt;/p&gt; &lt;p&gt;After a little more online digging, I found &lt;a href="http://www.nytimes.com/2007/11/18/magazine/18wwln-medium-t.html"&gt;this article in the New York Times&lt;/a&gt;, which finally gets to the point &lt;a href="http://www.nytimes.com/2007/11/18/magazine/18wwln-medium-t.html?pagewanted=2"&gt;on page 2&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The concept of the “inner city” — or “slums,” as The Times bluntly put it in its first review of “Sesame Street” — was therefore transformed into a kind of Xanadu on the show: a bright, no-clouds, clear-air place where people bopped around with monsters and didn’t worry too much about money, cleanliness or projecting false cheer. The Upper West Side, hardly a burned-out ghetto, was said to be the model.&lt;/p&gt; &lt;p&gt;People on “Sesame Street” had limited possibilities and fixed identities, and (the best part) you weren’t expected to change much. The harshness of existence was a given, and no one was proposing that numbers and letters would lead you “out” of your inner city to Elysian suburbs. Instead, “Sesame Street” suggested that learning might merely make our days more bearable, more interesting, funnier. It encouraged us, above all, to be nice to our neighbors and to cultivate the safer pleasures that take the edge off — taking baths, eating cookies, reading. Don’t tell the kids.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;So it’s not about language, and it’s not about “modeling the wrong behavior,” and it’s not about the color of your skin or your fur. It’s about class — the one subject that’s still taboo in America, after all these years.&lt;/p&gt; &lt;p&gt;For the record, my preschool children sat mesmerized for the entire hour-long show. The other generations of Pilgrims did too, each for our own reasons.&lt;/p&gt; &lt;div&gt; &lt;ol&gt; &lt;li&gt;Technically, I was sipping a mocha. &lt;a href="http://diveintomark.org/archives/2007/12/27/old-school#from-footnote1"&gt;↺&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1198378523640">
+		<id gr:original-id="tag:diveintomark.org,2007-12-23:/archives/20071223023207">
+			tag:google.com,2005:reader/item/dc871935ed49a735
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			Gifts
+		</title>
+		<published>
+			2007-12-23T02:32:07Z
+		</published>
+		<updated>
+			2007-12-23T02:32:07Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/12/22/gifts" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/12/22/gifts" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/12/ethan-and-wesley-2007.jpg" alt="Ethan and Wesley studio portrait" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;Happy holidays to you and yours.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1197942316519">
+		<id gr:original-id="tag:diveintomark.org,2007-12-18:/archives/20071218004538">
+			tag:google.com,2005:reader/item/b3f78c1a108d3f3e
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="politics" scheme="http://diveintomark.org" />
+		<title type="html">
+			Let a thousand Mules bloom
+		</title>
+		<published>
+			2007-12-18T00:45:38Z
+		</published>
+		<updated>
+			2007-12-18T01:43:36Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/12/17/let-a-thousand-mules-bloom" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/12/17/let-a-thousand-mules-bloom" xml:lang="en" type="html">
+			&lt;p&gt;I don’t follow politics very closely, but Jesus H. Christ is it hard to avoid Ron Paul stories on the internet. Here’s one from Wired: &lt;a href="http://blog.wired.com/27bstroke6/2007/12/ron-paul-suppor.html"&gt;Ron Paul Supporters Make History with $6 Million Online Haul&lt;/a&gt;. One offhand comment especially struck me:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The record fundraising boost, as well as an associated blimp advertising project, has in addition earned the candidate attention &lt;i&gt;at a time when the media is focusing on newspaper editorial endorsements&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;&lt;small&gt;(emphasis added)&lt;/small&gt;&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I get this image of every traditional news outlet in the country looking at their collective calendars and going, “Hmm, if it’s December, it must be time for newspapers to start making endorsements.” And suddenly I am overwhelmed by a sense of Asimo-vu — a rare but legitimate medical condition whereby the subject has a distinct feeling that he has read something like this before in an Isaac Asimov story. And behold, &lt;a href="http://en.wikipedia.org/wiki/The_Foundation_Series"&gt;Wikipedia to the rescue&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The premise of the [Foundation] series is that scientist Hari Seldon spent his life developing a branch of mathematics known as psychohistory, a concept devised by Asimov and Campbell. Using the law of mass action, it can predict the future, but only on a large scale; it is error-prone for anything smaller than a planet or an empire. Using these techniques, Seldon foresees the fall of the Galactic Empire, which encompasses the entire Milky Way, and a dark age lasting thirty thousand years before a second great empire arises. To shorten the period of barbarism, he creates two Foundations, small secluded havens of art and science, on opposite ends of the galaxy.&lt;/p&gt; &lt;p&gt;… Hari Seldon’s plan is often treated as an inevitable mechanism of society, a vast mindless mob mentality of quadrillions of humans across the galaxy, and many in the series struggle against it only to fail. However, the plan itself is reliant upon cunning individuals like Salvor Hardin and Hober Mallow to make wise decisions, and capitalize on the trends. The Mule, a single individual with remarkable powers, topples the Foundation and nearly destroys the Seldon plan with his special, unforeseen abilities.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;In the &lt;i&gt;Foundation&lt;/i&gt; books, the prerecorded ghost of Hari Seldon appears periodically, to discuss current events and how they fit into his grand plan. I specifically remember the scene shortly after The Mule started wreaking havoc with the Empire, where Seldon appeared and started talking about the grave issues of the day… which, as it happened, were the grave issues that the political leaders had put off dealing with because The Mule had started wreaking havoc. This was their first clear sign that The Mule was not, in fact, part of the Seldon plan, and that they were on their own.&lt;/p&gt; &lt;p&gt;You might think that Ron Paul is The Mule. But he’s not. If I’m right, he’s much, much more than that — he’s &lt;i&gt;A&lt;/i&gt; Mule, one of thousands of potential disruptive forces that are just now able to get traction through internet-enabled grassroots volunteerism. I say this in spite of the fact that the phrase “internet-enabled grassroots volunteerism” makes me want to vomit. Whether Ron Paul’s campaign ultimately succeeds or goes the way of the Howard Dean dodo bird, I can not say. But I’m pretty sure that he — and his getting this far — wasn’t part of the plan.&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1197575103289">
+		<id gr:original-id="tag:diveintomark.org,2007-12-13:/archives/20071213190703">
+			tag:google.com,2005:reader/item/55afaf03c7c34064
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="blogging" scheme="http://diveintomark.org" /><category term="freedom0" scheme="http://diveintomark.org" /><category term="gpl" scheme="http://diveintomark.org" /><category term="licensing" scheme="http://diveintomark.org" /><category term="movabletype" scheme="http://diveintomark.org" /><category term="opensource" scheme="http://diveintomark.org" /><category term="wordpress" scheme="http://diveintomark.org" />
+		<title type="html">
+			0 + 1307
+		</title>
+		<published>
+			2007-12-13T19:07:03Z
+		</published>
+		<updated>
+			2007-12-13T19:11:05Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/12/13/mtos" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/12/13/mtos" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;Days between writing “&lt;a href="http://diveintomark.org/archives/2004/05/14/freedom-0"&gt;freedom 0 is the freedom to run a program for any purpose&lt;/a&gt;” and reading “&lt;a href="http://www.movabletype.org/2007/12/movable_type_open_source.html"&gt;you can freely modify, redistribute, and use Movable Type for any purpose&lt;/a&gt;“: &lt;b&gt;1,307&lt;/b&gt;&lt;/li&gt; &lt;li&gt;Amount I donated to the fledgling Wordpress movement in 2004, just before writing that: &lt;b&gt;$535&lt;/b&gt;&lt;/li&gt; &lt;li&gt;Number of hits I’ve gotten on that post in the past 1,307 days: &lt;b&gt;283,361&lt;/b&gt;&lt;/li&gt; &lt;li&gt;Number of times Wordpress 2.3.1 has been downloaded: &lt;a href="http://wordpress.org/download/counter/"&gt;&lt;b&gt;448,472&lt;/b&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;Number of times Anil used the words “free”, “freedom”, or “freely available” in the MTOS announcement: &lt;b&gt;9&lt;/b&gt;&lt;/li&gt; &lt;li&gt;Number of times he used the words “free”, “freedom”, or “freely available” to refer to something other than freedom 0: &lt;b&gt;8&lt;/b&gt;&lt;/li&gt; &lt;li&gt;Number of times he mentioned “those who are quick to judge or quick to question whether the intention of openness was ever there”: &lt;b&gt;1&lt;/b&gt;&lt;/li&gt; &lt;li&gt;Number of times he used “open” or “openness” to refer to something other than open source: &lt;b&gt;9&lt;/b&gt;&lt;/li&gt; &lt;li&gt;Number of words he used before finally stating “Movable Type Open Source is being released under the standard GPL license”: &lt;b&gt;1,178&lt;/b&gt;&lt;/li&gt; &lt;li&gt;Number of times he mentioned “community”, not including the page header or the name of the blog itself: &lt;b&gt;11&lt;/b&gt; &lt;li&gt;Number of times Wordpress has been downloaded since I began writing this list: &lt;b&gt;316&lt;/b&gt;&lt;/li&gt; &lt;/li&gt;&lt;/ul&gt; &lt;p&gt;&lt;small&gt;(with apologies to &lt;a href="http://harpers.org/subjects/HarpersIndex"&gt;Harper’s&lt;/a&gt;)&lt;/small&gt;&lt;/p&gt; &lt;p&gt;There is an episode of “Sex and the City” where Charlotte befriends a group of “power lesbians” who seem to run everything in her little corner of the art world. The lesbians are friendly and chummy and accommodating, up to a point — the point at which they finally confront Charlotte about her sexuality:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Charlotte: I do so much enjoy the company of all these women. Everyone’s so smart and funny. I’ve been spending way too much time and attention on men. It feels like such a safe, warm environment. While sexually I feel that I am straight, there’s a very powerful part of me that connects to the female spirit.&lt;/p&gt; &lt;p&gt;Patty: Sweetheart, that’s all very nice, but if you’re not going to eat pussy, you’re not a dyke.&lt;/p&gt; &lt;p&gt;Sex and the City s02e06, &lt;a href="http://www.tv.com/sex-and-the-city/the-cheating-curve/episode/26617/summary.html"&gt;The Cheating Curve&lt;/a&gt;&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;So anyway, congratulations to Six Apart for finally joining the open community of freedom-loving pussy eaters. There may be those who are quick to judge or quick to question whether this move is a day late and a dollar short, or indeed 1,307 days late and 535 dollars short. I assure you I am not one of those people.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1196105402571">
+		<id gr:original-id="tag:diveintomark.org,2007-11-26:/archives/20071126184058">
+			tag:google.com,2005:reader/item/f2181b0b743be436
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="adobe" scheme="http://diveintomark.org" /><category term="wtf" scheme="http://diveintomark.org" />
+		<title type="html">
+			WTF: Adobe Reader 8
+		</title>
+		<published>
+			2007-11-26T18:40:58Z
+		</published>
+		<updated>
+			2007-12-09T18:54:23Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/11/26/wtf-adobe-reader-8" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/11/26/wtf-adobe-reader-8" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/11/adobe-reader-8.jpg" alt="Adobe Reader 8 displaying XML source instead of license agreement" title="" width="672" height="568"&gt;&lt;/p&gt; &lt;p&gt;&lt;p&gt;I have no idea how it got there in the first place. Yes, I know about &lt;a href="http://www.foxitsoftware.com/pdf/reader_2/down_reader.htm"&gt;Foxit Reader&lt;/a&gt;. For the record, I declined and uninstalled it (which required a reboot, argh). The plugin installer license-agreement thingie was quite apoplectic about it, too. Declining, I mean. Have you ever had the feeling that you’re suddenly venturing into a code path that has only ever been tested by disgruntled interns?&lt;/p&gt; &lt;blockquote&gt; &lt;pre&gt;&amp;gt; DECLINE LICENSE Um, are you sure? &amp;gt; YES Like, really really sure? &amp;gt; YES You are whisked away to a dusty code path. &lt;b&gt;Path Without User Consent&lt;/b&gt; &amp;gt; LOOK The path goes nowhere. There are no exits. You see a disgruntled intern here. &amp;gt; EXAMINE INTERN The intern looks weary, as if crushed by the weight of a thousand shattered dreams. &amp;gt; GO WEST You can’t go that way. &amp;gt; GO EAST You can’t go that way. &amp;gt; GO NORTH You can’t go that way. &amp;gt; GO SOUTH You can’t go that way. &amp;gt; INTERN, MAKE ME A SANDWICH The intern sighs and shrugs his shoulders. &amp;gt; WAIT Time passes. It is getting dark. You are likely to be eaten by a competitor.&lt;/pre&gt;&lt;/blockquote&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1195533108134">
+		<id gr:original-id="tag:diveintomark.org,2007-11-20:/archives/20071120035227">
+			tag:google.com,2005:reader/item/bf53625fc2c2ac04
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="amazon" scheme="http://diveintomark.org" /><category term="drm" scheme="http://diveintomark.org" /><category term="ebooks" scheme="http://diveintomark.org" /><category term="kindle" scheme="http://diveintomark.org" />
+		<title type="html">
+			The Future of Reading (A Play in Six Acts)
+		</title>
+		<published>
+			2007-11-20T03:52:27Z
+		</published>
+		<updated>
+			2007-12-09T18:54:10Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/11/19/the-future-of-reading" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/11/19/the-future-of-reading" xml:lang="en" type="html">
+			&lt;h4&gt;Act I: The act of buying&lt;/h4&gt; &lt;blockquote&gt; &lt;p&gt;When someone buys a book, they are also buying the right to resell that book, to loan it out, or to even give it away if they want. Everyone understands this.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Jeff Bezos, &lt;a href="http://www.oreillynet.com/pub/wlg/1291"&gt;Open letter to Author’s Guild&lt;/a&gt;, 2002&lt;/cite&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;You may not sell, rent, lease, distribute, broadcast, sublicense or otherwise assign any rights to the Digital Content or any portion of it to any third party, and you may not remove any proprietary notices or labels on the Digital Content. In addition, you may not, and you will not encourage, assist or authorize any other person to, bypass, modify, defeat or circumvent security features that protect the Digital Content.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Amazon, &lt;a href="http://www.amazon.com/gp/help/customer/display.html?ie=UTF8&amp;amp;nodeId=200144530"&gt;Kindle Terms of Service&lt;/a&gt;, 2007&lt;/cite&gt;&lt;/p&gt; &lt;h4&gt;Act II: The act of giving&lt;/h4&gt; &lt;blockquote&gt; &lt;p&gt;[I]f he lent her his computer, she might read his books. Aside from the fact that you could go to prison for many years for letting someone else read your books, the very idea shocked him at first. Like everyone, he had been taught since elementary school that sharing books was nasty and wrong…&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Richard Stallman, &lt;a href="http://www.gnu.org/philosophy/right-to-read.html"&gt;The Right to Read&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;[Y]ou can’t give them as gifts, and due to restrictive antipiracy software, you can’t lend them out or resell them.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Newsweek, &lt;a href="http://www.newsweek.com/id/70983/page/4"&gt;The Future of Reading&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;h4&gt;Act III: The act of lending&lt;/h4&gt; &lt;blockquote&gt; &lt;p&gt;As you may have read in the newspapers over the past few days, we’ve been criticized by the leadership of a small, but vocal organization because we sell used books on our website. This group (which, by the way, is the same organization that from time to time has advocated charging public libraries royalties on books they loan out) claims that we’re damaging the book industry and authors by offering used books to our customers.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Jeff Bezos, &lt;a href="http://www.oreillynet.com/pub/wlg/1291"&gt;Open letter to Author’s Guild&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Libraries, though, have developed lending procedures for previous versions of e-books — like the tape in “Mission: Impossible,” they evaporate after the loan period — and Bezos says that he’s open to the idea of eventually doing that with the Kindle.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Newsweek, &lt;a href="http://www.newsweek.com/id/70983/page/4"&gt;The Future of Reading&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;h4&gt;Act IV: The act of reading&lt;/h4&gt; &lt;blockquote&gt; &lt;p&gt;It was terribly dangerous to let your thoughts wander when you were in any public place or within range of a telescreen. The smallest thing could give you away. A nervous tic, an unconscious look of anxiety, a habit of muttering to yourself — anything that carried with it the suggestion of abnormality, of having something to hide. In any case, to wear an improper expression on your face… was itself a punishable offense. There was even a word for it in Newspeak: &lt;i&gt;facecrime…&lt;/i&gt;&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;George Orwell, &lt;a href="http://www.gerenser.com/1984/quote.html"&gt;“1984″, Book One, Chapter 5&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The Device Software will provide Amazon with data about your Device and its interaction with the Service (such as available memory, up-time, log files and signal strength) and information related to the content on your Device and your use of it (such as automatic bookmarking of the last page read and content deletions from the Device). Annotations, bookmarks, notes, highlights, or similar markings you make in your Device are backed up through the Service.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Amazon, &lt;a href="http://www.amazon.com/gp/help/customer/display.html?ie=UTF8&amp;amp;nodeId=200144530"&gt;Kindle Terms of Service&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;h4&gt;Act V: The act of remembering&lt;/h4&gt; &lt;blockquote&gt; &lt;p&gt;Another possible change: with connected books, the tether between the author and the book is still active after purchase. Errata can be corrected instantly. Updates, no problem.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Newsweek, &lt;a href="http://www.newsweek.com/id/70983/page/5"&gt;The Future of Reading&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Day by day and almost minute by minute the past was brought up to date. In this way every prediction made by the Party could be shown by documentary evidence to have been correct; nor was any item of news, or any expression of opinion, which conflicted with the needs of the moment, ever allowed to remain on record. All history was a palimpsest, scraped clean and reinscribed exactly as often as was necessary.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;George Orwell, &lt;a href="http://www.netcharles.com/orwell/articles/col-1984quotes.htm"&gt;“1984″, Book One, Chapter 3&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;h4&gt;Act VI: The act of learning&lt;/h4&gt; &lt;blockquote&gt; &lt;p&gt;If they can somehow strike a deal with textbook publishers, I could see a lot of college students switching to this. Get rid of all your text books and have this single electronic device.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;&lt;a href="http://blog.guykawasaki.com/2007/11/amazon-announce.html#comment-90505948"&gt;Ankit Gupta&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;School policy was that any interference with their means of monitoring students’ computer use was grounds for disciplinary action. It didn’t matter whether you did anything harmful — the offense was making it hard for the administrators to check on you. They assumed this meant you were doing something else forbidden, and they did not need to know what it was.&lt;/p&gt; &lt;p&gt;Students were not usually expelled for this — not directly. Instead they were banned from the school computer systems, and would inevitably fail all their classes.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Richard Stallman, &lt;a href="http://www.gnu.org/philosophy/right-to-read.html"&gt;The Right to Read&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Your rights under this Agreement will automatically terminate without notice from Amazon if you fail to comply with any term of this Agreement. In case of such termination, you must cease all use of the Software and Amazon may immediately revoke your access to the Service or to Digital Content without notice to you and without refund of any fees.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;cite&gt;Amazon, &lt;a href="http://www.amazon.com/gp/help/customer/display.html?ie=UTF8&amp;amp;nodeId=200144530"&gt;Kindle Terms of Service&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt; &lt;br&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1195095941816">
+		<id gr:original-id="tag:diveintomark.org,2007-11-15:/archives/20071115022719">
+			tag:google.com,2005:reader/item/4eaa522adafe1ebf
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="google" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" />
+		<title type="html">
+			Default search engines
+		</title>
+		<published>
+			2007-11-15T02:27:19Z
+		</published>
+		<updated>
+			2007-11-15T03:00:32Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/11/14/default-search-engines" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/11/14/default-search-engines" xml:lang="en" type="html">
+			&lt;p&gt;On the matter of Mozilla’s independence from Google (my employer), &lt;a href="http://slashdot.org/comments.pl?sid=360773&amp;amp;cid=21356231"&gt;Asa Dotzler writes&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Google is the best right now so we chose them as the default. Yahoo is still a favorite of some people, and so it’s included in Firefox as an alternative. Some countries have other popular search services and we include those — &lt;i&gt;even defaulting to them in some cases&lt;/i&gt;, when it makes sense for the users. [emphasis added]&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;This intrigued me, so I set out to find the default search engine for each locale. There doesn’t seem to be a definitive list, but as with all things Mozilla, the code is definitive. Thus…&lt;/p&gt; &lt;p&gt;According to &lt;a href="http://wiki.mozilla.org/Firefox3/L10n_Requirements#Search_Plugins"&gt;the Mozilla localization wiki&lt;/a&gt;, the default search engine is stored in a &lt;code&gt;region.properties&lt;/code&gt; file in the localization bundle. (If you’re running a XUL-based Mozilla browser, you can visit &lt;code&gt;chrome://browser-region/locale/region.properties&lt;/code&gt; to see yours.) As I understand it, localization bundles are distributed like extensions, but they override strings instead of code. &lt;a href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0.0.9/win32/xpi/"&gt;Here are the official bundles for 2.0.0.9&lt;/a&gt;, &lt;a href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/latest/win32/xpi/"&gt;here are the ones for trunk&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Installing all of these and testing them would be a pain, but luckily there’s an easier way. XPI files are just ZIP archives, so you can decompress them with standard tools. Inside each is a JAR file, which is also a standard ZIP file. Unzipping everything down to bare files lets you use &lt;code&gt;grep&lt;/code&gt; to search through all locales in one shot.&lt;/p&gt; &lt;p&gt;&lt;kbd&gt;$ grep -R "browser.search.defaultenginename" 2.0.0.9/*&lt;/kbd&gt;&lt;/p&gt; &lt;p&gt;&lt;a href="http://diveintomark.org/public/2007/11/2.0.0.9-search-engines.txt"&gt;Hmm. All Google.&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Ah, well, perhaps things are going to change in 3.0…&lt;/p&gt; &lt;p&gt;&lt;kbd&gt;$ grep -R "browser.search.defaultenginename" 3.0-20071114/*&lt;/kbd&gt;&lt;/p&gt; &lt;p&gt;&lt;a href="http://diveintomark.org/public/2007/11/3.0-20071114-search-engines.txt"&gt;Nope. Still all Google.&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Am I missing something? Perhaps I misunderstood the data structures and I’m looking in the wrong place? Perhaps there are other localization bundles lurking on some other site?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1194759720167">
+		<id gr:original-id="tag:diveintomark.org,2007-11-11:/archives/20071111045411">
+			tag:google.com,2005:reader/item/7f341149fc6650ba
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="howto" scheme="http://diveintomark.org" /><category term="mysql" scheme="http://diveintomark.org" /><category term="rant" scheme="http://diveintomark.org" /><category term="ubuntu" scheme="http://diveintomark.org" />
+		<title type="html">
+			Installing MySQL on Ubuntu (the NSFW way)
+		</title>
+		<published>
+			2007-11-11T04:54:11Z
+		</published>
+		<updated>
+			2007-11-11T18:45:37Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/11/11/installing-mysql-on-ubuntu" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/11/11/installing-mysql-on-ubuntu" xml:lang="en" type="html">
+			&lt;p&gt;What follows are instructions for building and installing MySQL 5 on Ubuntu. These instructions should work perfectly on both Feisty (7.04) and Gutsy (7.10).&lt;/p&gt; &lt;p&gt;If you’re a pro at this type of thing already, if you’re impatient, or just feeling lucky, just shut the fuck up and read through to the end. It’s not that complicated, and nobody cares about your l33t skillz anyway.&lt;/p&gt; &lt;h3&gt;Why you don’t want to build MySQL yourself&lt;/h3&gt; &lt;ol&gt; &lt;li&gt;You don’t have to. Experts have already built and optimized an installer that integrates with the rest of your system. And by “experts,” I mean “people way fucking smarter than you.” And by “integrates with the rest of your system,” I mean it puts configuration files in the right place, it starts up the service the right way, and most importantly, it integrates with your system’s upgrade manager so you’ll get security updates automatically.&lt;/li&gt; &lt;li&gt;It totally sucks having one-off standalone installations of software. Why? Because when some fucker finds a security hole in the version you compiled yourself, it’ll be up to you to recompile and reconfigure your software. Yourself. Oh, and the fucker won’t tell you that you need to do it. You’ll have to go out onto the wild, wooly interweb and subscribe to BugTraq or SecurityFocus or some dumb-ass developer mailing list. Does that sound like fun? Huh, does it punk?&lt;/li&gt; &lt;li&gt;&lt;a href="http://web.archive.org/web/20040603174302/http://funroll-loops.org/"&gt;Watching shit scroll by for hours does not make you a UNIX expert overnight&lt;/a&gt;.&lt;/li&gt; &lt;/ol&gt; &lt;h3&gt;Prerequisites&lt;/h3&gt; &lt;p&gt;None. That’s right, none. Your Ubuntu “desktop” is fully capable of installing and running hundreds of different “server” programs. You don’t need to buy a special “server” version for $1000. Other things you don’t need: a compiler or a bunch of developer tools. And you sure as fuck don’t need to &lt;a href="http://developer.apple.com/"&gt;sign up for some confusing “developer program”&lt;/a&gt; that forces you to &lt;a href="http://store.apple.com/Catalog/US/Images/ADC_terms.html"&gt;surrender your rights&lt;/a&gt; and your personal information.&lt;/p&gt; &lt;h3&gt;Terminal&lt;/h3&gt; &lt;p&gt;We’re not going to be typing archaic commands into a window like they do in the movies. Sorry to disappoint you. That shit’s reserved for impressing boy toys and dumb blondes. Have you ever been fucking a blonde up the ass and then, like, pushed her face into your monitor filled with a maximized terminal window and shouted “SUDO MAKE ME A SANDWICH, BITCH!” That’s hawt. But I digress…&lt;/p&gt; &lt;h3&gt;Setting the path&lt;/h3&gt; &lt;p&gt;&lt;b&gt;&lt;i&gt;Do not skip this step! Most everything else will fail if you do.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt; &lt;p&gt;No, I’m just kidding. There’s nothing to this step either.&lt;/p&gt; &lt;h3&gt;Download, extract, etc.&lt;/h3&gt; &lt;p&gt;Run &lt;i&gt;Synaptic Package Manager&lt;/i&gt;. Click &lt;b&gt;Search&lt;/b&gt; and type &lt;kbd&gt;mysql server&lt;/kbd&gt;. Select the &lt;i&gt;mysql-server-5.0&lt;/i&gt; package. A dialog will pop up saying that installing the MySQL Server package requires installing a bunch of other packages too. See how it did that? It’s called &lt;i&gt;dependency management&lt;/i&gt;, and it’s built into all modern Linux distributions. Computers are smart like that. Click &lt;b&gt;Apply&lt;/b&gt; and Ubuntu will download, extract, and install everything for you. Along the way it will ask you to enter a password for the MySQL “root” user. You should do that. Blank passwords are bad, mmkay?&lt;/p&gt; &lt;h3&gt;Auto-starting MySQL&lt;/h3&gt; &lt;p&gt;Nothing to do here. Ubuntu set this part up for you too, because, you know, it’s a server thingie, and server thingies are supposed to start automatically. Computers are smart like that.&lt;/p&gt; &lt;h3&gt;Starting and stopping MySQL manually&lt;/h3&gt; &lt;p&gt;From your &lt;i&gt;System&lt;/i&gt; menu, run &lt;i&gt;Services&lt;/i&gt; and check or uncheck &lt;i&gt;Database server (mysql)&lt;/i&gt;. Sorry, still no terminal required.&lt;/p&gt; &lt;h3&gt;A note about security&lt;/h3&gt; &lt;p&gt;The package installer automatically set up MySQL so that it can only be accessed from your local machine, which is almost certainly what you want. Don’t go fucking around with strange configuration files. They won’t respect you in the morning.&lt;/p&gt; &lt;h3&gt;Updating MySQL in the event of a security hole&lt;/h3&gt; &lt;p&gt;Your installation of MySQL Server is automatically integrated with Ubuntu’s update manager. If there is a security problem with MySQL Server, Ubuntu will notify you with a cute little bubble alert as soon as a fix is available. Don’t be a dumbass; always install security updates promptly. The updater will take care of stopping and restarting your MySQL service and all that shit. Just clicky clicky and go back to watching “Ow My Balls.”&lt;/p&gt; &lt;h3&gt;Uninstalling MySQL&lt;/h3&gt; &lt;p&gt;Run &lt;i&gt;Synaptic Package Manager&lt;/i&gt;, click &lt;b&gt;Status&lt;/b&gt;, then &lt;b&gt;Installed&lt;/b&gt;, uncheck the &lt;i&gt;mysql-server-5.0&lt;/i&gt; package, and click &lt;b&gt;Apply&lt;/b&gt;.&lt;/p&gt; &lt;h3&gt;My sincerest apologies…&lt;/h3&gt; &lt;p&gt;…to &lt;a href="http://hivelogic.com/narrative/articles/installing-mysql-on-mac-os-x"&gt;Dan Benjamin&lt;/a&gt;, who is a very nice chap and doesn’t deserve this sort of snark. But Jesus H. Christ, it must suck giant wet donkey balls to be stuck on an archaic OS where you need to be dropping into the terminal and tweaking configuration files and compiling shit all the time. I hope the translucent menu bar is worth it. But please, please stay up to date with MySQL security patches; I wasn’t kidding about that, it’s really fucking important.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1193391471994">
+		<id gr:original-id="tag:diveintomark.org,2007-10-26:/archives/20071026083918">
+			tag:google.com,2005:reader/item/90f7069460141dcd
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="rant" scheme="http://diveintomark.org" />
+		<title type="html">
+			Stuck in LAX
+		</title>
+		<published>
+			2007-10-26T08:39:18Z
+		</published>
+		<updated>
+			2007-10-26T21:25:25Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/10/26/stuck-in-lax" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/10/26/stuck-in-lax" xml:lang="en" type="html">
+			&lt;p&gt;Airlines suck.&lt;/p&gt; &lt;p&gt;Discuss.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Update&lt;/b&gt;: so here’s what happened. We all got on the plane. We taxied to the runway. The captain announced that there was a problem and we were going back to the gate to get it looked at. We taxied back to the gate. The maintenance crew came to look at the problem. The maintenance crew told the captain, who told us, that the problem was that the light that indicated that there could be a problem with the plane was not functioning properly. That’s right — they couldn’t tell if there was a problem with the plane because the “hey there’s a problem with the plane” light wasn’t working. More of an epistemological problem than a metaphysical one, but the result was the same: we all got off the plane and waited for them to find another plane. They found another plane. We all got on the other plane and waited for them to transfer all the baggage from the first plane.&lt;/p&gt; &lt;p&gt;By this time it was 2 AM and we were two hours late. We arrived in Dallas ten minutes too late for me to catch my connection. Luckily there was another flight two hours later, and I did finally arrive home on the same day that I was originally scheduled. It could have been much worse.&lt;/p&gt; &lt;p&gt;Feel free to relate similar stories in the comments.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1193241808741">
+		<id gr:original-id="tag:diveintomark.org,2007-10-24:/archives/20071024154544">
+			tag:google.com,2005:reader/item/9e3cf35a64f78870
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="bike" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="renovation" scheme="http://diveintomark.org" />
+		<title type="html">
+			Ruminations on the intersection of fine art, bicycles, and spandex
+		</title>
+		<published>
+			2007-10-24T15:45:44Z
+		</published>
+		<updated>
+			2007-10-24T15:50:29Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/10/24/intersection" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/10/24/intersection" xml:lang="en" type="html">
+			&lt;p&gt;Following the renovation thread, after &lt;a href="http://diveintomark.org/archives/2007/05/16/renovation-neverending"&gt;these pictures of blank walls&lt;/a&gt; and &lt;a href="http://diveintomark.org/archives/2007/10/17/buying-art-online"&gt;this post about filling blank walls&lt;/a&gt;, I present: non-blank walls.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/10/renovation.jpg" alt="living room fully furnished with art" title="" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;I’d show you the other side, but we’re still waiting on the blinds so we can finally &lt;del&gt;have sex on the couch&lt;/del&gt;enjoy a little privacy.&lt;/p&gt; &lt;p&gt;Also, and completely unrelatedly, &lt;a href="http://diveintomark.org/archives/2007/10/15/american-buddha#comment-10473"&gt;Zach wrote&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;You can’t leave us bicycle geeks hanging without some more background on your bike. We got a few entire posts about your car, and that is far less interesting. What type of bike (in as much detail as you would like to provide of course), how you got started riding again, stuff that gives you bike envy, that sort of thing.&lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;To which I’ll bubble up my original reply, and add a picture:&lt;/p&gt; &lt;p&gt;It’s red. I believe it is called a “Raleigh Retroglide,” which is one of those brand names that sounds dirty but isn’t. I bought it used, via craigslist, and then had the local bike shop fix the chain and replace the tubes.&lt;/p&gt; &lt;p&gt;I started riding after Chris DiBona shanghaied me into riding one of the communal bikes on Google’s Mountain View campus. (Frumpy-looking bikes are available all over — just pick one up at the entrance outside your building and drop it off at the entrance to wherever you’re going.) Then I started riding them everywhere around campus. Then I came home and decided to buy one.&lt;/p&gt; &lt;p&gt;I try to ride 30 minutes every day. Last week was the exception because I was sick.&lt;/p&gt; &lt;p&gt;Nothing really gives me bike envy yet. Except I’d like to have a biker’s physique so I could look good in spandex. But not actually to wear spandex, just to be able to without feeling depressed. I’ve promised myself that when I hit 200 pounds, I’ll buy a new bike that doesn’t look like a holdover from the 1950s.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/10/retroglide.jpg" alt="Raleigh Retroglide bicycle, in red" title="" width="350" height="221"&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1192764290921">
+		<id gr:original-id="tag:diveintomark.org,2007-10-19:/archives/20071019023321">
+			tag:google.com,2005:reader/item/4286c4ca86a6c9f5
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="firefox" scheme="http://diveintomark.org" /><category term="gobuntu" scheme="http://diveintomark.org" /><category term="licensing" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" /><category term="ubuntu" scheme="http://diveintomark.org" />
+		<title type="html">
+			Gobuntu has already failed
+		</title>
+		<published>
+			2007-10-19T02:33:21Z
+		</published>
+		<updated>
+			2007-10-22T22:54:28Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/10/18/gobuntu-has-already-failed" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/10/18/gobuntu-has-already-failed" xml:lang="en" type="html">
+			&lt;p&gt;&lt;strong&gt;Update 10/22/2007&lt;/strong&gt;. A poster on the gobuntu-devel mailing list &lt;a href="https://lists.ubuntu.com/archives/gobuntu-devel/2007-October/000395.html"&gt;asks for an official response&lt;/a&gt; to this, and &lt;a href="https://lists.ubuntu.com/archives/gobuntu-devel/2007-October/000408.html"&gt;Mark Shuttleworth responds&lt;/a&gt;: “Swapping Firefox for Epiphany in Gobuntu sounds like a reasonable way to address this issue.” A Canonical developer &lt;a href="https://lists.ubuntu.com/archives/gobuntu-devel/2007-October/000412.html"&gt;has already implemented this fix&lt;/a&gt;, which will resolve the issue entirely in Gobuntu Gutsy+1.&lt;/p&gt; &lt;p&gt;Original post follows…&lt;/p&gt; &lt;hr&gt; &lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/10/redpanda4.jpg" alt="[red panda]" title="" width="240" height="144"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/sorenshaman/541268295/in/set-72157600339783817/"&gt;red panda 021&lt;/a&gt; © &lt;a href="http://flickr.com/people/sorenshaman/"&gt;sorenshaman&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;I’m disappointed with Canonical. I &lt;a href="http://diveintomark.org/archives/2007/04/12/super-strict"&gt;got all excited&lt;/a&gt; when Mark Shuttleworth announced that Ubuntu “Gutsy Gibbon” would be available in a super-strict, 100% open source flavor (now called “Gobuntu”). Later &lt;a href="http://www.markshuttleworth.com/archives/130"&gt;he clarified this goal&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;a number of comments have asked what Gobuntu is. It is a flavour of Ubuntu (like Kubuntu or Xubuntu) that is basically the same desktop environment as Ubuntu (a GNOME desktop) and a very strict set of restrictions on the licences of code &lt;strong&gt;and content&lt;/strong&gt;. This means that we try to strip out ANYTHING which is not modifiable and redistributable, including firmware, PDF’s, video footage, sounds etc.&lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;But what’s the point of Gobuntu’s existence if it &lt;a href="https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/83118"&gt;still contains non-free components&lt;/a&gt;? Apparently, Canonical even went to the trouble of &lt;a href="https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/121734"&gt;removing everything &lt;em&gt;except&lt;/em&gt; the copyrighted-all-rights-reserved image files&lt;/a&gt;. i’m left scratching my head, wondering why they bothered with this farce if they weren’t prepared to go all the way?&lt;/p&gt; &lt;div style="float:left;text-align:left;margin:20px 30px 20px 0"&gt; &lt;img src="http://diveintomark.org/public/2007/10/redpanda2.jpg" alt="[red panda]" title="" width="240" height="160"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/sorenshaman/541160776/in/set-72157600339783817/"&gt;red panda 023&lt;/a&gt; © &lt;a href="http://flickr.com/people/sorenshaman/"&gt;sorenshaman&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;And before you say it, no, this is not a trademark issue. Anyone who thinks it’s a trademark issue has been baffled by the bullshit emanating from the Mozilla Corporation. Maybe you heard about how the copyright license didn’t matter, because the images were also trademarked (as if additional restrictions somehow made them &lt;em&gt;more&lt;/em&gt; free). Or maybe you heard about how trademarks and open source are “fundamentally incompatible” because trademarks imposed a “single-source” restriction. Bullshit, every word. There are &lt;a href="http://en.wikipedia.org/wiki/List_of_trademarked_open_source_software"&gt;plenty of trademarked open source applications&lt;/a&gt;, and not a single one of them share the issue that the Mozilla Corporation has created for Firefox. The issue is so simple, I can explain it in 12 words: &lt;strong&gt;the copyright license governing &lt;a href="http://lxr.mozilla.org/seamonkey/source/other-licenses/branding/firefox/"&gt;these files&lt;/a&gt; does not permit modification or redistribution&lt;/strong&gt;. That’s it. Really. Anyone who claims the issue is more complicated than that is either misinformed or lying.&lt;/p&gt; &lt;p&gt;Still confused by the trademark misdirection? Steve Langasek &lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354622#39"&gt;explained the distinction&lt;/a&gt; better than I can:&lt;/p&gt; &lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/10/redpanda3.jpg" alt="[red panda]" title="" width="240" height="166"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/sorenshaman/541266513/in/set-72157600339783817/"&gt;red panda 004&lt;/a&gt; © &lt;a href="http://flickr.com/people/sorenshaman/"&gt;sorenshaman&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;blockquote&gt;&lt;p&gt;The distinction here is that the firefox name is just a name, covered only by trademark law (not by copyright law), but a logo is a work of art, covered both by copyright law and trademark law. Applying trademark-*like* restrictions on a work of art in its copyright license prevents our users from doing things with that work that they are allowed to do with other free artwork, *and* which are permitted under trademark law. For instance, a trademark is limited to a field of endeavour, so using the logo in an unrelated field is permitted by trademark law but not permitted by the copyright license; or, a logo may be used as a starting point for another work of art which is a derivative *work* under copyright law, but is not a derivative *mark* under trademark law.&lt;/p&gt;&lt;p&gt;These are corner cases, but they are nevertheless important to Debian.&lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;Keyser Söze was wrong. The greatest trick the devil ever pulled was convincing the world that Firefox is open source.&lt;/p&gt; &lt;p&gt;If you want a fuller explanation and a complete history of the issue as it has played out in the Debian community, read &lt;a href="http://en.wikipedia.org/wiki/Naming_conflict_between_Debian_and_Mozilla"&gt;Naming conflict between Debian and Mozilla&lt;/a&gt;. Pay special attention to this sentence: “However, because the artwork in Firefox has a proprietary copyright license which is not compatible with the Debian Free Software Guidelines, the substituted logo had to remain.” This issue was pointed out to the Mozilla Corporation &lt;a href="http://lists.debian.org/debian-legal/2005/01/msg00757.html"&gt;almost three years ago&lt;/a&gt; and &lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354622#25"&gt;reiterated last year&lt;/a&gt;, and as far as I know they have done nothing to remedy it.&lt;/p&gt; &lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/10/redpanda1.jpg" alt="[red panda]" title="" width="332" height="500"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/sorenshaman/541266937/in/set-72157600339783817/"&gt;red panda 007&lt;/a&gt; © &lt;a href="http://flickr.com/people/sorenshaman/"&gt;sorenshaman&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;I spoke with Mike Connor about this issue, in person, at the Firefox 2 release party last year. (Mike is the Mozilla Corporation employee who filed &lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354622"&gt;this bug&lt;/a&gt; that eventually led to Firefox’s removal from Debian.) Mike admitted to me that &lt;a href="http://lxr.mozilla.org/seamonkey/source/other-licenses/branding/firefox/"&gt;these files&lt;/a&gt; are not released under an open-source-compatible copyright license, and that this means that any build or package that includes those files is not open source. Furthermore, he does not have a problem with this (I believe his exact words were “I’m OK with that”), and it appears that his employer shares his apathy. The Mozilla Corporation’s solution to the “Linux problem” has been to pressure each major distributor to ensure that Mozilla’s non-free applications, complete with their non-free image files, make it into the default install. Debian refused to cave to this pressure (Mike literally told them to “&lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354622#59"&gt;bend the DFSG a little&lt;/a&gt;” — you can imagine how well that went over), so their only choice was to remove the Firefox package from Debian.&lt;/p&gt; &lt;p&gt;&lt;a href="http://lxr.mozilla.org/seamonkey/source/other-licenses/branding/firefox/"&gt;These files&lt;/a&gt; are not open source, therefore any package that includes &lt;a href="http://lxr.mozilla.org/seamonkey/source/other-licenses/branding/firefox/"&gt;these files&lt;/a&gt; is not open source. Canonical’s &lt;code&gt;firefox_2.0.0.6+2nobinonly-0ubuntu1&lt;/code&gt; package includes &lt;a href="http://lxr.mozilla.org/seamonkey/source/other-licenses/branding/firefox/"&gt;these files&lt;/a&gt;, therefore the package is not open source. Gobuntu includes the &lt;code&gt;firefox_2.0.0.6+2nobinonly-0ubuntu1&lt;/code&gt; package, therefore it has failed in its stated goal of providing a 100% modifiable and redistributable Ubuntu distribution. And that disappoints me.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1192641978625">
+		<id gr:original-id="tag:diveintomark.org,2007-10-17:/archives/20071017171814">
+			tag:google.com,2005:reader/item/72b1c51d9a7fbdde
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="art" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="renovation" scheme="http://diveintomark.org" />
+		<title type="html">
+			Buying art online
+		</title>
+		<published>
+			2007-10-17T17:18:14Z
+		</published>
+		<updated>
+			2007-10-17T17:18:14Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/10/17/buying-art-online" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/10/17/buying-art-online" xml:lang="en" type="html">
+			&lt;p style="float:right"&gt;&lt;a href="http://www.imagekind.com/Showartwork.aspx?IMID=IMA_K303"&gt;&lt;img src="http://diveintomark.org/public/2007/10/color-study-squares.jpg" alt="Kandinsky: Color Study-Squares" title="" width="350" height="262"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Now that the &lt;a href="http://diveintomark.org/archives/2007/05/16/renovation-neverending"&gt;never-ending renovation&lt;/a&gt; has finally ended, we are working on decorating. For reasons that are not entirely clear to me, knocking down two walls has left us with more wall space to fill, and we are filling it with art.&lt;/p&gt; &lt;p&gt;My wife’s sister’s husband is an artist, and we have several of his original works. My best friend’s wife is also an artist, and we have one of her works as well. We also have some homemade collages and posters derived from personal photos. After all that, we still have blank walls, so we wanted to get some reproductions of some of the fine art that we’ve always liked. To our mutual surprise, my wife and I share similar tastes in art, which made the whole shopping experience an order of magnitude less painful. Your mileage may vary.&lt;/p&gt; &lt;p&gt;All the major art sites offer posters, framed prints, and a (typically limited) selection of canvas prints. Canvas printing is the look we were going for — it looks less like a dorm room poster and more like an actual artist’s canvas. Framed prints are also nice, and you can choose the exact frame and mat style to match the art. For canvas, you typically buy the canvas “stretched,” which means that the art comes pre-installed on its own wooden frame and the canvas wraps around the edges. There are two variations of stretched canvas, which some sites call “museum wrap” and “gallery wrap”. Museum-wrapped canvas prints the picture on the canvas up to (and possibly slightly beyond) the front edge where the canvas wraps around the frame. Gallery-wrapped canvas prints the picture to the edge of the physical canvas and then wraps it around the frame, so if you look at the canvas from the side you’ll see some of the picture along the edges. I think gallery-wrapped looks better, but only for art where you can afford to lose an inch or so around each side. Good for &lt;a href="http://www.imagekind.com/Showartwork.aspx?IMID=SHD_40049"&gt;Sunrise&lt;/a&gt;, bad for &lt;a href="http://www.imagekind.com/Showartwork.aspx?IMID=ADL_AD-1706"&gt;Color Study&lt;/a&gt;.&lt;/p&gt; &lt;p style="float:left"&gt;&lt;a href="http://www.imagekind.com/Showartwork.aspx?IMID=SHD_40049"&gt;&lt;img src="http://diveintomark.org/public/2007/10/sunrise.jpg" alt="Monet: Sunrise (Blue)" title="" width="350" height="263"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;The top two contenders for buying art online are &lt;a href="http://art.com/"&gt;Art.com&lt;/a&gt; and &lt;a href="http://allposters.com/"&gt;AllPosters.com&lt;/a&gt;. Both have essentially the same catalog of prints; from my limited research, I found each print I cared about at both sites. Unfortunately, both have a limited selection of stretched canvas. I ended up buying two canvases from AllPosters.com, and I am not entirely happy with them. Both canvases were museum-wrapped; AllPosters does not appear to offer a choice about this. One of them was a black-and-white drawing by Picasso, but the edges of the canvas were painted black, which bothers me and detracts from the piece. The other was a Diego Rivera print which also came with black borders, but the colors are dark all around so you don’t notice the borders as much. However, the canvas itself appears shiny, almost glossy, like getting a glossy photograph when you were expecting a matte. Hard to describe exactly, but it doesn’t feel like a canvas. It feels like a poster on slightly different paper. It’s actually presented a practical problem, because it reflects light badly in the place where we thought we were going to hang it.&lt;/p&gt; &lt;p&gt;The other place I found, which I actually liked a lot, was &lt;a href="http://www.imagekind.com/"&gt;ImageKind.com&lt;/a&gt;. They offer a much wider selection of stretched canvas — almost everything they sell can be printed on canvas, as opposed to Art.com and AllPosters.com which had a separate section of canvas prints with very limited selection. And the canvases themselves were a better match for my expectations. The frame is about one inch deep, compared to two inches for the AllPosters.com canvases I bought. And the canvas itself seems to be much higher quality. The final product looks more like an original piece of art. &lt;p&gt;ImageKind also offers prints and framing services, neither of which I bought. Intriguingly, they offer a service where someone will apply additional brush strokes to the canvas after the digital transfer, for an additional (unspecified) fee. I did not buy this because I didn’t discover it until my canvases had arrived, so I don’t know how much of a difference it would make. I might try it if I buy anything else.&lt;/p&gt; &lt;p style="float:right"&gt;&lt;a href="http://www.imagekind.com/Showartwork.aspx?IMID=APP_253"&gt;&lt;img src="http://diveintomark.org/public/2007/10/loro-dellazzurro.jpg" alt="Miro: L&amp;#39;oro Dell&amp;#39;azzurro" title="" width="286" height="350"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;If fine art is not your thing, you can make canvas prints from your own photographs. I’ve used &lt;a href="http://www.winkflash.com/"&gt;WinkFlash.com&lt;/a&gt; for several homemade posters and one canvas print. I’m happy with all of them. The canvas prints are only available “gallery-wrapped,” and the site goes to great pains to explain this to you (since it results in part of the original being wrapped around the edges). The photograph I chose to print on canvas didn’t have much detail around the edges, so the wrapping wasn’t an issue. The canvas itself is good quality, and “feels” like a canvas (like the fine art reproductions I bought from ImageKind). Of course there is no “artist’s original” canvas, since the source was just a digital photograph. Still, it’s a nice way to make a special photograph into a keepsake. The posters I’ve printed have also come out well, and all arrived undamaged.&lt;/p&gt; &lt;p&gt;ImageKind offers some custom framing options, but I’ve never tried them. Two of the posters went into $5 plastic “frames” from Target; a third went into a nicer (but still pre-made) wooden frame that I bought at a local craft store. If you really want a custom frame, I’m not sure it would be any cheaper to go local; you may just want to buy it pre-framed and be done with it.&lt;/p&gt; &lt;p&gt;&lt;small&gt;I have no affiliation with any of these companies beyond buying the products I’ve mentioned here.&lt;/small&gt;&lt;/p&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1192589815400">
+		<id gr:original-id="tag:diveintomark.org,2007-10-17:/archives/20071017024205">
+			tag:google.com,2005:reader/item/9f7cfa8bbb4fd90e
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="apple" scheme="http://diveintomark.org" /><category term="rant" scheme="http://diveintomark.org" />
+		<title type="html">
+			Oh, good grief
+		</title>
+		<published>
+			2007-10-17T02:42:05Z
+		</published>
+		<updated>
+			2007-10-17T02:42:05Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/10/16/oh-good-grief" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/10/16/oh-good-grief" xml:lang="en" type="html">
+			&lt;p&gt;Almost two years ago, &lt;a href="http://intertwingly.net/blog/2006/01/18/Photocasting-Hyperbole#c1137652173"&gt;I wrote&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;And don’t even get me started on the user-agent-sniffing JavaScript-laden photocast.mac.com URLs that only work in Safari and iPhoto. (Did you know they work in iPhoto? If you paste that URL directly into iPhoto, it fetches the page and the server returns a 302 redirect to the real feed. No HTML, no JavaScript. But only if the user-agent is iPhoto/6.0. So not kidding.) I don’t attribute it to malice; I don’t think Apple is trying to “break to web” or anything so grandiose. It simply never occurred to them to do this any other way. &lt;strong&gt;They view the web as an annoyingly inadequate infrastructure on which to build their latest proprietary network&lt;/strong&gt;, in much the same way that old-school web designers view HTML as an annoyingly inadequate page layout language. Learning how the web works and going with its natural flow? It simply never occurred to them.&lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;Last week, in a stroke of breathtaking arrogance, &lt;a href="http://www.apple.com/webapps/whatarewebapps.html"&gt;Apple redefined “web apps”&lt;/a&gt; to mean sites designed for a single hardware platform:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;Web apps don’t just extend the functionality of iPhone and iPod touch, they do it in style. Since web apps are websites designed specifically for the 3.5-inch screen, you’ll find the viewing experience amazing.&lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;(Yes, yes, I realize the whole &lt;a href="http://www.apple.com/webapps/"&gt;gallery of web apps&lt;/a&gt; is just a smokescreen designed to fake you out and test your faith and hide the fact that they’re going to open up their platform to native development ANY MINUTE NOW. Because HOW COULD THEY NOT, and so on and so forth. I believe the phrase you’re looking for is “&lt;a href="http://www.snoopy.com/comics/peanuts/meet_the_gang/meet_charlie_brown.html"&gt;Oh, good grief&lt;/a&gt;.”)&lt;/p&gt; &lt;p&gt;I swear to God, I’m so tired of being right all the time. It was fun for a while, but now it’s just depressing.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

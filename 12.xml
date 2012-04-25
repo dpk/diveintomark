@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CPWjt73xmYoC
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=COTqme7exIoC" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2007-02-23T14:51:38Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1172242298205">
+		<id gr:original-id="tag:diveintomark.org,2007-02-23:/archives/20070223132107">
+			tag:google.com,2005:reader/item/e7e9cc29c3678eba
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-23
+		</title>
+		<published>
+			2007-02-23T13:21:07Z
+		</published>
+		<updated>
+			2007-02-23T13:21:07Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/23/links-for-2007-02-23" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/23/links-for-2007-02-23/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/23/links-for-2007-02-23" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.tbray.org/ongoing/When/200x/2007/02/22/Economist"&gt;ongoing · More Economist Trouble&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“If I want unsupported assertions, lame-ass Microsoft marketing, and lousy spelling, I have the whole Internet to choose from.”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/journalism"&gt;journalism&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blog.whatwg.org/meta-charset"&gt;The WHATWG Blog » Blog Archive » Declaring the Character Encoding&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/html5"&gt;html5&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/encoding"&gt;encoding&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/whatwg"&gt;whatwg&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://yuiblog.com/blog/2007/02/21/browser-history-manager/"&gt;Building the YUI Browser History Manager » Yahoo! User Interface Blog&lt;/a&gt;&lt;/div&gt; &lt;div&gt;unbelievably complex combination of hacks — makes css hacks look like child’s play&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/yui"&gt;yui&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/javascript"&gt;javascript&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/ajax"&gt;ajax&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/webdev"&gt;webdev&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ejohn.org/blog/thoughts-on-openajax/"&gt;John Resig - Thoughts on OpenAjax&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“if “jQuery was OpenAjax compliant”&amp;quot; — fire and motion, my friends, fire and motion&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/ajax"&gt;ajax&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="https://www.redhat.com/archives/fedora-devel-list/2007-February/msg01051.html"&gt;Re: Goodbye, Fedora&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“Consider an InfoGraphic for next year’s post.”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/esr"&gt;esr&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rant"&gt;rant&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.toothpastefordinner.com/journal/journal.php?user=toothpaste&amp;amp;id=573&amp;amp;readcomment=1"&gt;Toothpaste For Dinner: My adventures in Second Life&lt;/a&gt;&lt;/div&gt; &lt;div&gt;this almost exactly mirrors my SL experience, right down to getting kicked out of a virtual club&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/secondlife"&gt;secondlife&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rant"&gt;rant&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/humor"&gt;humor&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://developer.emusic.com/"&gt;eMusic Download Manager 4.0 - Alpha&lt;/a&gt;&lt;/div&gt; &lt;div&gt;cross-platform, xulrunner-based&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/emusic"&gt;emusic&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/xulrunner"&gt;xulrunner&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.kaply.com/weblog/2007/02/21/operator-source-code-is-finally-available/"&gt;Mike’s Musings » Operator Source Code is Finally Available&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/operator"&gt;operator&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/microformats"&gt;microformats&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://news-libraries.mit.edu/blog/archives/373"&gt;MIT Libraries News » Blog Archive » MIT Student Day of Action for Open Access&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/openaccess"&gt;openaccess&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/culturejamming"&gt;culturejamming&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://news-libraries.mit.edu/blog/archives/374"&gt;MIT Libraries News » Blog Archive » A Conversation with Benjamin Mako Hill, organizer of the MIT Student Day of Action for Open Access&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/openaccess"&gt;openaccess&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/culturejamming"&gt;culturejamming&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ianmurdock.com/?p=414"&gt;Ian Murdock’s Weblog » Blog Archive » I drank this—was that a bad idea?&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/microsoft"&gt;microsoft&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/humor"&gt;humor&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://wanderingbarque.com/nonintersecting/2007/02/22/petes-2nd-law-of-computing/"&gt;Pete Lacey’s Weblog :: Pete’s 2nd Law of Computing&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/tothefairest"&gt;tothefairest&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.boingboing.net/2007/02/22/puretracks_drmfree_m.html"&gt;Boing Boing: Puretracks “DRM-free music” mystery explained&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/drm"&gt;drm&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/macosx"&gt;macosx&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/puretracks"&gt;puretracks&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blogs.salon.com/0000014/2006/01/11.html"&gt;Hack your socks&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/lifehacks"&gt;lifehacks&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://lifehacker.com/software/firefox/firefox-tip--shiftdelete-mistyped-autocomplete-suggestions-238693.php"&gt;Firefox Tip: Shift-Delete mistyped autocomplete suggestions - Lifehacker&lt;/a&gt;&lt;/div&gt; &lt;div&gt;i live and die online by my browser history. this is a lifesaver.&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/hacks"&gt;hacks&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1172196007235">
+		<id gr:original-id="tag:diveintomark.org,2007-02-23:/archives/20070223012247">
+			tag:google.com,2005:reader/item/2c614b749a950ae6
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="lighthouse" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Late binding
+		</title>
+		<published>
+			2007-02-23T01:22:47Z
+		</published>
+		<updated>
+			2007-02-23T02:17:46Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/22/late-binding" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/22/late-binding/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/22/late-binding" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/02/socks.jpg" alt="[mismatched socks]" title="" width="240" height="180"&gt;&lt;br&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/jmacphotos/166249316/"&gt;Green socks&lt;/a&gt; © &lt;a href="http://flickr.com/people/jmacphotos/"&gt;ja_macd&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;“I have a system,” she sighs. I glance over with skepticism.&lt;/p&gt; &lt;p&gt;“A system?”&lt;/p&gt; &lt;p&gt;“I have a system for the socks.”&lt;/p&gt; &lt;p&gt;“A sock system.”&lt;/p&gt; &lt;p&gt;“A super sock system.”&lt;/p&gt; &lt;p&gt;“What is your super sock system?” I ask with obviously feigned enthusiasm.&lt;/p&gt; &lt;p&gt;“I put the mismatched socks in a secret drawer.”&lt;/p&gt; &lt;p&gt;“We have secret drawers?” I perk up. “Where?”&lt;/p&gt; &lt;p&gt;“I can’t tell you. It’s a secret.”&lt;/p&gt; &lt;p&gt;“That seems fair. Wait, no. What?” As I sit up in the bed, a knock-off Elmo doll cries out, &lt;i&gt;“Elmo loves you!”&lt;/i&gt;&lt;/p&gt; &lt;p&gt;“I sort all the socks into pairs, and I put the mismatched socks in the secret drawer. When I run out of socks, I look in the drawer and I find a match.”&lt;/p&gt; &lt;p&gt;“Your system sucks.” I go back to reading Digg. &lt;i&gt;“Elmo loves you more!”&lt;/i&gt; I throw the doll into the hallway. “I like my system.”&lt;/p&gt; &lt;p&gt;“You don’t have a system,” she huffs.&lt;/p&gt; &lt;p&gt;“I have a perfectly good system. I take all the socks out of the dryer and throw them into my sock drawer.”&lt;/p&gt; &lt;p&gt;“That’s not a system.”&lt;/p&gt; &lt;p&gt;“It’s a perfectly good system. It’s called ‘late binding.’” She stifles a laugh. “Now ask me how I handle mismatched socks.”&lt;/p&gt; &lt;p&gt;“You only ever buy one brand of socks.”&lt;/p&gt; &lt;p&gt;“Exactly.” From the hallway, Elmo cries out, &lt;i&gt;“Bye bye!”&lt;/i&gt;&lt;/p&gt; &lt;p&gt;“Your system sucks.”&lt;/p&gt; &lt;p&gt;“Can we go back to the part about your secret drawer?”&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1172152685299">
+		<id gr:original-id="tag:diveintomark.org,2007-02-22:/archives/20070222132011">
+			tag:google.com,2005:reader/item/507fd90c4331c4b7
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-22
+		</title>
+		<published>
+			2007-02-22T13:20:11Z
+		</published>
+		<updated>
+			2007-02-22T13:20:11Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/22/links-for-2007-02-22" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/22/links-for-2007-02-22/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/22/links-for-2007-02-22" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ascii.textfiles.com/archives/000321.html"&gt;ASCII by Jason Scott: The Beautiful Boot&lt;/a&gt;&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1172066326195">
+		<id gr:original-id="tag:diveintomark.org,2007-02-21:/archives/20070221132019">
+			tag:google.com,2005:reader/item/c2d255008e781eb5
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-21
+		</title>
+		<published>
+			2007-02-21T13:20:19Z
+		</published>
+		<updated>
+			2007-02-21T13:20:19Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/21/links-for-2007-02-21" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/21/links-for-2007-02-21/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/21/links-for-2007-02-21" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.mailonsunday.co.uk/pages/live/articles/news/news.html?in_article_id=436983&amp;amp;in_page_id=1770"&gt;First ‘ignore your sat nav’ roadsigns go up | the Mail on Sunday&lt;/a&gt;&lt;/div&gt; &lt;div&gt;sign of the times&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/culture"&gt;culture&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/maps"&gt;maps&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/gps"&gt;gps&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://entertainment.timesonline.co.uk/tol/arts_and_entertainment/film/article1403516.ece"&gt;And for my acting Oscar, I thank the special effects&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“Everyone feels a bit dirty about it.” You’ll get over it.&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/movies"&gt;movies&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/specialeffects"&gt;specialeffects&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://online.wsj.com/public/article/SB117168001288511981-euxzmjNFZTZhA_2z8OBtD6GK900_20070224.html?mod=blogs"&gt;How Steve Jobs Played Hardball In iPhone Birth - WSJ.com&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“telling them that they would never understand the Web and entertainment industry the way Apple did” Apple understands the web? Did I miss a memo?&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/apple"&gt;apple&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/iphone"&gt;iphone&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://mako.cc/fun/overpricetags/"&gt;Overprice Tags&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/culture"&gt;culture&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/culturejamming"&gt;culturejamming&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/openaccess"&gt;openaccess&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://yuiblog.com/blog/2007/02/20/yui-220-released/"&gt;YUI Version 2.2.0 Released: Browser History Manager, DataTable, and Button Components, New Versioning, and More » Yahoo! User Interface Blog&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/yui"&gt;yui&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/javascript"&gt;javascript&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/webdev"&gt;webdev&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1172044424271">
+		<id gr:original-id="tag:diveintomark.org,2007-02-21:/archives/20070221062357">
+			tag:google.com,2005:reader/item/b6b77ed82a161062
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="puzzles" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Circles of hell
+		</title>
+		<published>
+			2007-02-21T06:23:57Z
+		</published>
+		<updated>
+			2007-02-21T20:51:31Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/21/circles-of-hell" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/21/circles-of-hell/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/21/circles-of-hell" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://diveintomark.org/puzzles/circles-of-hell"&gt;Circles of Hell Puzzle&lt;/a&gt;. Because the web isn’t hellish enough, puzzling enough, or circular enough already.&lt;/p&gt; &lt;p&gt;For those of you too lazy to click through, here’s a sample puzzle:&lt;/p&gt; &lt;p&gt;&lt;img style="border:1px solid" src="http://diveintomark.org/public/2007/02/circles-of-hell-sample.png" alt="[sample puzzle]" title="" width="255" height="255"&gt;&lt;/p&gt; &lt;p&gt;The main puzzle page lets you pick different sizes and then reveal the matching tiles. &lt;strong&gt;Update:&lt;/strong&gt; no longer requires JavaScript. &lt;strong&gt;Update 2:&lt;/strong&gt; also try the &lt;a href="http://diveintomark.org/puzzles/circles-of-hell-large"&gt;large print edition&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;See also: my &lt;a href="http://diveintomark.org/archives/2003/05/07/matchmaker"&gt;matchmaker puzzle&lt;/a&gt; from 2003.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171891386656">
+		<id gr:original-id="tag:diveintomark.org,2007-02-19:/archives/20070219131929">
+			tag:google.com,2005:reader/item/5eca653f0bcbf6f7
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-19
+		</title>
+		<published>
+			2007-02-19T13:19:29Z
+		</published>
+		<updated>
+			2007-02-19T13:19:29Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/19/links-for-2007-02-19" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/19/links-for-2007-02-19/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/19/links-for-2007-02-19" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://groups.google.com/group/habari-dev/browse_thread/thread/fcfb31e9ce1785c5"&gt;Why XHTML? - habari-dev | Google Groups&lt;/a&gt;&lt;/div&gt; &lt;div&gt;same shit, different year&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/habari"&gt;habari&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/xhtml"&gt;xhtml&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/thingsihateaboutyou"&gt;thingsihateaboutyou&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.davidpashley.com/blog/2007/02/18#ogg-player-redux"&gt;Ogg Player Redux&lt;/a&gt;&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://gh3.ellequadro.net/wiip-team-interview/"&gt;wiip team interview » gh3log&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/wii"&gt;wii&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/modchip"&gt;modchip&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/opensource"&gt;opensource&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/interview"&gt;interview&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171807290184">
+		<id gr:original-id="tag:diveintomark.org,2007-02-18:/archives/20070218132023">
+			tag:google.com,2005:reader/item/bc663f7fbe23d5a7
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-18
+		</title>
+		<published>
+			2007-02-18T13:20:23Z
+		</published>
+		<updated>
+			2007-02-18T13:20:23Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/18/links-for-2007-02-18" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/18/links-for-2007-02-18/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/18/links-for-2007-02-18" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://forum.doom9.org/showthread.php?t=122363"&gt;Understanding AACS (including Subset-Difference) - Doom9’s Forum&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/aacs"&gt;aacs&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://en.wikipedia.org/wiki/Buttered_cat_paradox"&gt;Buttered cat paradox - Wikipedia, the free encyclopedia&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/wikipedia"&gt;wikipedia&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/humor"&gt;humor&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171723839229">
+		<id gr:original-id="tag:diveintomark.org,2007-02-17:/archives/20070217132236">
+			tag:google.com,2005:reader/item/0a32f5485d2832e8
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-17
+		</title>
+		<published>
+			2007-02-17T13:22:36Z
+		</published>
+		<updated>
+			2007-02-17T13:22:36Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/17/links-for-2007-02-17" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/17/links-for-2007-02-17/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/17/links-for-2007-02-17" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ejohn.org/blog/offline-events/"&gt;John Resig - Offline Events&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/mozilla"&gt;mozilla&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/whatwg"&gt;whatwg&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/javascript"&gt;javascript&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/offline"&gt;offline&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/webdev"&gt;webdev&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.melez.com/mykzilla/2007/02/content-preferences-architectureapi.html"&gt;mykzilla: Content Preferences - Architecture/API&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/mozilla"&gt;mozilla&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/extension"&gt;extension&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/development"&gt;development&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/preferences"&gt;preferences&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/api"&gt;api&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.kaply.com/weblog/2007/02/14/rearchitecting-operator/"&gt;Mike’s Musings » Rearchitecting Operator&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/microformats"&gt;microformats&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/mozilla"&gt;mozilla&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/extension"&gt;extension&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/operator"&gt;operator&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.1060.org/blogxter/entry?publicid=E736D3AC9269D49920CA4DC68089EE91"&gt;Steve: Developing on the Edge - Java6 breaks open office&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“This is quite a complicated failure.”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/java"&gt;java&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/openoffice"&gt;openoffice&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.nabble.com/popen-on-unices-doesn&amp;#39;t-like-%22rb%22-%22wb%22-t3130461.html"&gt;Nabble - popen on unices doesn’t like “rb”/”wb”&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/k9copy"&gt;k9copy&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/dvdauthor"&gt;dvdauthor&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ascii.textfiles.com/archives/000318.html"&gt;ASCII by Jason Scott: Generation TEXT&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“I guess if you stick around long enough, you become an institution.”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/textfiles"&gt;textfiles&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/jasonscott"&gt;jasonscott&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://daringfireball.net/2007/02/macrovision_translation"&gt;Daring Fireball: Translation From PR-Speak to English of Selected Portions of Macrovision CEO Fred Amoroso’s Response to Steve Jobs’s ‘Thoughts on Music’&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“I am high as a kite.”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/apple"&gt;apple&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/drm"&gt;drm&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/macrovision"&gt;macrovision&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/humor"&gt;humor&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171648170739">
+		<id gr:original-id="tag:diveintomark.org,2007-02-16:/archives/20070216171606">
+			tag:google.com,2005:reader/item/32b0f39a5ebe7972
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="digg" scheme="http://diveintomark.org/tag/" /><category term="humor" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			What your audience likes, brought to you by Digg
+		</title>
+		<published>
+			2007-02-16T17:16:06Z
+		</published>
+		<updated>
+			2007-02-16T17:16:06Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/16/what-your-audience-likes" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/16/what-your-audience-likes/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/16/what-your-audience-likes" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/02/what-your-audience-likes.jpg" alt="[Digg screenshot]" title="" width="728" height="376"&gt;&lt;/p&gt; &lt;p&gt;Sources: &lt;a href="http://digg.com/tech_news/How_Social_Sites_Reveal_What_Your_Audience_Likes"&gt;1&lt;/a&gt;, &lt;a href="http://digg.com/apple/There_is_No_Reason_To_Ever_Beat_Your_Childh"&gt;2&lt;/a&gt;, &lt;a href="http://digg.com/world_news/Toddler_fights_are_the_new_cock_fights_in_Britain"&gt;3&lt;/a&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171637369265">
+		<id gr:original-id="tag:diveintomark.org,2007-02-16:/archives/20070216132108">
+			tag:google.com,2005:reader/item/2f1d316bc41fb8c2
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-16
+		</title>
+		<published>
+			2007-02-16T13:21:08Z
+		</published>
+		<updated>
+			2007-02-16T13:21:08Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/16/links-for-2007-02-16" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/16/links-for-2007-02-16/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/16/links-for-2007-02-16" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://tieguy.org/blog/2007/02/15/canonical-putting-money-where-mouth-is-credit-where-credit-is-due-all-that/"&gt;Luis Villa’s Blog » Canonical: putting money where mouth is, credit where credit is due, all that.&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/ubuntu"&gt;ubuntu&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/licensing"&gt;licensing&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://journals.aol.com/panzerjohn/abstractioneer/entries/2007/02/15/aol-and-openid-where-we-are/1406"&gt;AOL and OpenID: Where we are&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/openid"&gt;openid&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://gizmodo.com/gadgets/feature/horseshoes-and-hand-grenades-joel-johnson-returnsto-spank-us-all-for-supporting-crap-236310.php"&gt;Horseshoes and Hand Grenades: Joel Johnson Returns…to Spank Us All for Supporting Crap - Gizmodo&lt;/a&gt;&lt;/div&gt; &lt;div&gt;pure gold&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/technology"&gt;technology&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rant"&gt;rant&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.freedom-to-tinker.com/?p=1121"&gt;Freedom to Tinker » Blog Archive » AACS: A Tale of Three Keys&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/aacs"&gt;aacs&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/drm"&gt;drm&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://lists.ibiblio.org/pipermail/cc-licenses/2006-June/003749.html"&gt;[cc-licenses] Etiquette regarding attributions and pseudonyms&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/creativecommons"&gt;creativecommons&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/licensing"&gt;licensing&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://digg.com/tech_news/Consumerist_com_Gawker_Media_using_Flickr_photos_without_attribution"&gt;Digg - Consumerist.com (Gawker Media) using Flickr photos without attribution&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/flickr"&gt;flickr&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/creativecommons"&gt;creativecommons&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/licensing"&gt;licensing&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/digg"&gt;digg&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.mydd.com/story/2007/2/15/161615/678"&gt;C-Span Backs Off Copyright Claims&lt;/a&gt;&lt;/div&gt; &lt;div&gt;committee coverage is copyrighted? really?&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/politics"&gt;politics&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/copyright"&gt;copyright&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/licensing"&gt;licensing&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/publicdomain"&gt;publicdomain&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171597419312">
+		<id gr:original-id="tag:diveintomark.org,2007-02-16:/archives/20070216024502">
+			tag:google.com,2005:reader/item/b4e475e3bc9052ed
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="creativecommons" scheme="http://diveintomark.org/tag/" /><category term="datafidelity" scheme="http://diveintomark.org/tag/" /><category term="htmljokes" scheme="http://diveintomark.org/tag/" /><category term="licensing" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			In which I simultaneously praise and criticize Creative Commons, and we all take predictable positions discussing it
+		</title>
+		<published>
+			2007-02-16T02:45:02Z
+		</published>
+		<updated>
+			2007-02-16T02:51:03Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/15/cc-vs-gpl" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/15/cc-vs-gpl/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/15/cc-vs-gpl" xml:lang="en" type="html">
+			&lt;p&gt;Inspired somewhat by &lt;a href="http://intertwingly.net/blog/"&gt;Sam’s SVG graphics&lt;/a&gt; and the general colorlessness of my archives, I’ve been sprucing up some of my favorite posts with photos. Of course, I take terrible photos myself, so I’ve been availing myself of the &lt;a href="http://flickr.com/creativecommons/"&gt;Flickr Creative Commons search&lt;/a&gt; to find CC-BY images that I can use without &lt;a href="http://digg.com/tech_news/Consumerist_com_Gawker_Media_using_Flickr_photos_without_attribution"&gt;getting called out on the front page of Digg&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Examples:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2007/01/16/spaceships"&gt;Spaceships&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2007/01/15/e"&gt;Not seeking enlightenment&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2006/04/07/bath"&gt;After the bath&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2004/03/29/direct-deposit"&gt;Direct deposit&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;I believe I am providing attribution properly. I have a title link to the Flickr photo page, an author link to the Flickr profile page, plus a link to the license summary on &lt;tt&gt;creativecommons.org&lt;/tt&gt;. It’s hard to be sure that this is either necessary or sufficient, because &lt;a href="http://wiki.creativecommons.org/Frequently_Asked_Questions#How_do_I_properly_attribute_a_Creative_Commons_licensed_work.3F"&gt;Creative Commons seems intentionally vague&lt;/a&gt; about what constitutes proper attribution. I wonder if someone in my audience has an opinion on this. I am more than willing to tweak my markup.&lt;/p&gt; &lt;p&gt;Another recent experiment which bears no relation to this post except that it involves Creative Commons, licensing, and Flickr, and I happen to be thinking of it at the moment: &lt;a href="http://flickr.com/photos/f8dy/tags/htmljokes/"&gt;HTML jokes&lt;/a&gt;. Specifically, taking CC-BY-SA-licensed photos and turning them into patheticly geeky visual jokes by adding markup to them. &lt;a href="http://flickr.com/photos/f8dy/347023948/"&gt;The &lt;tt&gt;&amp;lt;canvas&amp;gt;&lt;/tt&gt; one&lt;/a&gt; is my personal favorite. &lt;a href="http://flickr.com/groups/htmljokes/pool/"&gt;Lots more here&lt;/a&gt;, some properly licensed, some not.&lt;/p&gt; &lt;p&gt;These two experiments have highlighted an aspect of Creative Commons which has irritated me but which I have never been able to verbalize: the Creative Commons licenses don’t require source material. Even the “share-alike” licenses, which aim to make culture viral like the GPL makes code viral, do not require the cultural equivalent of source code. They don’t require original (”upstream”) authors to distribute source material in the first place, they don’t require other (”downstream”) distributors to maintain the upstream material at its original quality, and they don’t require authors of derivative works to maintain the original version. This means that, in the course of publishing, redistributing, or “mashing up” CC-licensed works, &lt;a href="http://diveintomark.org/archives/2006/06/16/juggling-oranges#fidelity"&gt;data fidelity&lt;/a&gt; can degrade over time.&lt;/p&gt; &lt;p&gt;As a concrete example, my HTML jokes started as full-size photographs, but I only uploaded my joke version at 640×480 — partly because I have (or had) a monthly bandwidth limit on Flickr, and partly because the jokes don’t require high resolution. The photos I’m reusing to spruce up my archives are even smaller, generally no larger than 240×180. Sure, I attribute the original, but what happens when it goes away? People can delete their photos from Flickr, or &lt;a href="http://www.onfocus.com/2007/02/3917"&gt;move them to private hosting&lt;/a&gt;, or whatever, and all you’d be left with is my 240×180 thumbnail. The license still allows you to do all the wild and crazy things I could have done with the original, but practically speaking, how much can you do with a thumbnail?&lt;/p&gt; &lt;p&gt;I’m sure I’m not the first person to notice this, but perhaps I can be the first to bumper-stickerize it: &lt;strong&gt;GPL mashups are like copying CDs; CC mashups are like copying tapes.&lt;/strong&gt; After a few generations, you may not have anything worthwhile left to work with.&lt;/p&gt; &lt;p&gt;This bothers me in a son-of-a-librarian, archival-quality-is-important kind of way, but it also bothers me as a creator who has seen the enormous advantages of “bit-exact copy” licenses in the programming world. A rough equivalent in code would be a decompiled version of a compiled object, like a Flash animation or a Java &lt;tt&gt;.class&lt;/tt&gt; file. No comments, no structure, no meaningful variables or function names. Of course you can “just” ask the upstream author to provide the original source files, but that’s missing the whole point of open licenses.&lt;/p&gt; &lt;p&gt;I don’t know. It just seems like a fundamental lack of vision that Creative Commons doesn’t enforce generational data integrity. Am I missing something here?&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171549013243">
+		<id gr:original-id="tag:diveintomark.org,2007-02-15:/archives/20070215132018">
+			tag:google.com,2005:reader/item/eac49e283d4e8b28
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-15
+		</title>
+		<published>
+			2007-02-15T13:20:18Z
+		</published>
+		<updated>
+			2007-02-15T13:20:18Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/15/links-for-2007-02-15" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/15/links-for-2007-02-15/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/15/links-for-2007-02-15" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://epeus.blogspot.com/2007/02/begoogled.html"&gt;Epeus’ epigone - Kevin Marks weblog&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“I joined Google this week” Congrats!&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/google"&gt;google&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ilias.ca/blog/2007/02/duration-of-the-new-mail-alert-in-thunderbird/"&gt;Chris Ilias’ Blog » Duration of the ‘New Mail’ alert in Thunderbird&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/accessibility"&gt;accessibility&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/thunderbird"&gt;thunderbird&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.crazyapplerumors.com/?p=791"&gt;Crazy Apple Rumors Site » Blog Archive » Zune Phone To Also Suck.&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“This comment was followed by a long pause as reporters waited for some sort of support for this contention.”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/apple"&gt;apple&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/humor"&gt;humor&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.infoworld.com/article/07/02/12/07OPopenent_1.html?source=NLC-OPENT&amp;amp;cgd=2007-02-13"&gt;Linux and Vista users share driver pain | InfoWorld | Column | 2007-02-12 | By Neil McAllister&lt;/a&gt;&lt;/div&gt; &lt;div&gt;it’s staggering how little sympathy i feel for vista users right now&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/vista"&gt;vista&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/hardware"&gt;hardware&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/drivers"&gt;drivers&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="https://lists.ubuntu.com/archives/ubuntu-announce/2007-February/000098.html"&gt;Technical Board decisions&lt;/a&gt;&lt;/div&gt; &lt;div&gt;no proprietary drivers installed by default in feisty&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/ubuntu"&gt;ubuntu&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/hardware"&gt;hardware&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/drivers"&gt;drivers&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.markshuttleworth.com/archives/95"&gt;Mark Shuttleworth » Blog Archive » Clarification on Feisty’s proprietary drivers&lt;/a&gt;&lt;/div&gt; &lt;div&gt;still plan to install proprietary drivers in feisty+1&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/ubuntu"&gt;ubuntu&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/hardware"&gt;hardware&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/drivers"&gt;drivers&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://googleblog.blogspot.com/2007/02/strawberries-are-red-stems-are-green.html"&gt;Official Google Blog: Strawberries are red, stems are green…&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/google"&gt;google&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.mattb.net.nz/blog/2007/02/14/dell-carbon-neutrality/"&gt;Matt’s Musings » Dell - Carbon Neutrality&lt;/a&gt;&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://mako.cc/copyrighteous/projects/20070214-00.comment"&gt;copyrighteous: A Definition of Free Cultural Works&lt;/a&gt;&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://freedomdefined.org/Announcements/1.0"&gt; New “Definition of Free Cultural Works” Challenges Authors to Rethink Copyright Law&lt;/a&gt;&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://tech.groups.yahoo.com/group/rest-discuss/message/7830"&gt;rest-discuss : Message: Sun proposes to apply Web service standardization principles to REST&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“If we can’t stop it, maybe we can at least limit the damage.”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/rest"&gt;rest&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/jcp"&gt;jcp&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/java"&gt;java&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rant"&gt;rant&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.1060.org/blogxter/entry?publicid=8C08746C8C0462CC6FB4E4D69098F1AE"&gt;Steve: Developing on the Edge - javax.ws.rest&lt;/a&gt;&lt;/div&gt; &lt;div&gt;just to be clear, i don’t give a rat’s ass about Java, or WS-*, or REST, or how any of them may or may not work together for the betterment of humanity&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/java"&gt;java&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rest"&gt;rest&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/webservices"&gt;webservices&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rant"&gt;rant&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.tbray.org/ongoing/When/200x/2007/02/14/WS-REST"&gt;ongoing · SOA, REST, Java&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/java"&gt;java&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rest"&gt;rest&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blogs.smugmug.com/onethumb/2007/02/14/this-is-your-mac-on-drugs/"&gt;SmugBlog: Don MacAskill » Blog Archive » This is your Mac on drugs&lt;/a&gt;&lt;/div&gt; &lt;div&gt;i find this sort of thing fascinating; i owned macs for 15 years and never understood a word about color profiles&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/color"&gt;color&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/apple"&gt;apple&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/photography"&gt;photography&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blog.technologeek.org/2007/02/14/53"&gt;MacBook Pro status update (Linux 2.6.20)&lt;/a&gt;&lt;/div&gt; &lt;div&gt;if you want linux, buy a linux box; if you want os x, buy a mac&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/apple"&gt;apple&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blog.drinsama.de/erich/en/2007021501-icalendar-is-broken"&gt;iCalendar is broken by design&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“RFC 2445 is on crack”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/ical"&gt;ical&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/standards"&gt;standards&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://wiki.mozilla.org/Gecko:Effective_TLD_Service"&gt;Gecko:Effective TLD Service - MozillaWiki&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/mozilla"&gt;mozilla&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://girtby.net/articles/2007/2/14/yahoo-stops-forwarding-mail"&gt;girtby.net: Yahoo! Stops! Forwarding! Mail!&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“And that, as you may have guessed, took the whole experience over the bloggable threshold.”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/yahoo"&gt;yahoo&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rant"&gt;rant&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://codecraft.info/index.php/archives/75/"&gt;Code Craft » Blog Archive » Coding from the Barka Lounger&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“Why will a company that pays an engineer a fully-loaded salary of nearly $10,000 per month spend only $150 a month on the physical work environment most critical to them?”&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/office"&gt;office&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/furniture"&gt;furniture&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/corporate"&gt;corporate&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://googleblog.blogspot.com/2007/02/from-gmail-with-3.html"&gt;Official Google Blog: From Gmail with &amp;lt;3&lt;/a&gt;&lt;/div&gt; &lt;div&gt;no comment, i just like blogging things with angle brackets in the title to watch the chaos in rss readers&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/google"&gt;google&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.bloglines.com/about/wallofimages"&gt;Bloglines | Image Wall&lt;/a&gt;&lt;/div&gt; &lt;div&gt;note: requires javascript&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/bloglines"&gt;bloglines&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/hacks"&gt;hacks&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171462423912">
+		<id gr:original-id="tag:diveintomark.org,2007-02-14:/archives/20070214132516">
+			tag:google.com,2005:reader/item/a4815e3523d8b17d
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-14
+		</title>
+		<published>
+			2007-02-14T13:25:16Z
+		</published>
+		<updated>
+			2007-02-14T13:25:16Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/14/links-for-2007-02-14" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/14/links-for-2007-02-14/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/14/links-for-2007-02-14" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://bitworking.org/news/119/draft-ietf-atompub-protocol-13-txt"&gt;Joe Gregorio | BitWorking | draft-ietf-atompub-protocol-13.txt&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/atom"&gt;atom&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/atomapi"&gt;atomapi&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/standards"&gt;standards&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://bitworking.org/projects/atom/draft-ietf-atompub-protocol-13.html#larksvomit"&gt;The Atom Publishing Protocol: Client Implementation Considerations&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/larksvomit"&gt;larksvomit&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://sporkmonger.com/articles/2007/01/12/blog-migration"&gt;Blog Migration&lt;/a&gt;&lt;/div&gt; &lt;div&gt;i’ve never used typo, but i’m always interested in why people switch between tools for tasks that matter greatly to them&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/blogging"&gt;blogging&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/migration"&gt;migration&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.cincomsmalltalk.com/blog/blogView?showComments=true&amp;amp;entry=3348845671"&gt;Speaking of Black hat SEO tricks…&lt;/a&gt;&lt;/div&gt; &lt;div&gt;conscience doesn’t grow on trees, ya know&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/seo"&gt;seo&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ascii.textfiles.com/archives/000314.html"&gt;ASCII by Jason Scott: Computer Camp&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/writing"&gt;writing&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/jasonscott"&gt;jasonscott&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blog.windfluechter.net/?q=node/159"&gt;Goodbye Drupal, Hello Serendipity! - Windfluechter.Net&lt;/a&gt;&lt;/div&gt; &lt;div&gt;another migration — this time because drupal isn’t/won’t be packaged in etch&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/drupal"&gt;drupal&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/blogging"&gt;blogging&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/migration"&gt;migration&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.intertwingly.net/blog/2007/02/12/Generation-Gap#c1171326682"&gt;“IM logs are just like home sex tapes…”&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/qotd"&gt;qotd&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.cadenhead.org/workbench/news/3122/launching-16-weblog-communities"&gt;Launching 16 Weblog Communities with WordPress MU | Workbench&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/wordpress"&gt;wordpress&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/blogging"&gt;blogging&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/hosting"&gt;hosting&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blog.whatwg.org/whatwgs-development-model"&gt;The WHATWG Blog » Blog Archive » WHATWG’s development model&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/whatwg"&gt;whatwg&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.456bereastreet.com/archive/200702/the_dutch_accessibility_law_is_awesome/"&gt;The Dutch accessibility law is awesome | 456 Berea Street&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/accessibility"&gt;accessibility&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://daringfireball.net/2007/02/command_option_control"&gt;Daring Fireball: Command, Option, Control&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/apple"&gt;apple&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/drm"&gt;drm&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://therealcrisp.xs4all.nl/blog/2007/02/12/ie-and-2-letter-domain-names/"&gt;crisp’s blog » Blog Archive » IE and 2-letter domain-names&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/ie"&gt;ie&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/webdev"&gt;webdev&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://weblogs.mozillazine.org/mitchell/archives/2007/02/the_mozilla_manifesto_introduc.html"&gt;mitchell’s blog: The Mozilla Manifesto&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/mozilla"&gt;mozilla&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="https://addons.mozilla.org/firefox/4066/"&gt;Content Preferences | Firefox Add-ons | Mozilla Corporation&lt;/a&gt;&lt;/div&gt; &lt;div&gt;site-specific text zoom, with persistence&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/accessibility"&gt;accessibility&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.gerv.net/software/fragment-search/"&gt;Fragment Search&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/greasemonkey"&gt;greasemonkey&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/url"&gt;url&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/hacks"&gt;hacks&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171287875657">
+		<id gr:original-id="tag:diveintomark.org,2007-02-12:/archives/20070212132148">
+			tag:google.com,2005:reader/item/f8089a645cd0a9a6
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-12
+		</title>
+		<published>
+			2007-02-12T13:21:48Z
+		</published>
+		<updated>
+			2007-02-12T13:21:48Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/12/links-for-2007-02-12" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/12/links-for-2007-02-12/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/12/links-for-2007-02-12" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://forum.doom9.org/showpost.php?p=952968&amp;amp;postcount=105"&gt;Doom9’s Forum - View Single Post - Processing Key, Media Key and Volume ID found!!!&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/aacs"&gt;aacs&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171060274521">
+		<id gr:original-id="tag:diveintomark.org,2007-02-09:/archives/20070209215615">
+			tag:google.com,2005:reader/item/823271e5f8cc9f9a
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="addiction" scheme="http://diveintomark.org/tag/" /><category term="lighthouse" scheme="http://diveintomark.org/tag/" /><category term="personal" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Wing Night
+		</title>
+		<published>
+			2007-02-09T21:56:15Z
+		</published>
+		<updated>
+			2007-02-09T21:57:09Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/09/wing-night" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/09/wing-night" xml:lang="en" type="html">
+			&lt;p&gt;Tuesdays are Wing Night. Local bar, 6–8, 10¢ wings. Three weeks sober, I say “yes” to Wing Night. At 5:45 a coworker I barely know needs a ride home. I volunteer and say “no” to Wing Night. On the way we listen to Philip Glass’ “Aguas da Amazonia” in silence.&lt;/p&gt; &lt;p&gt;Later I married her.&lt;/p&gt; &lt;p&gt;That’s a true story.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1171027871312">
+		<id gr:original-id="tag:diveintomark.org,2007-02-09:/archives/20070209132133">
+			tag:google.com,2005:reader/item/de466f22e80a5841
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-09
+		</title>
+		<published>
+			2007-02-09T13:21:33Z
+		</published>
+		<updated>
+			2007-02-09T13:21:33Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/09/links-for-2007-02-09" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/09/links-for-2007-02-09/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/09/links-for-2007-02-09" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://linuxformat.co.uk/waugh.html"&gt;Linux Format :: Interview with Jeff Waugh&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/ubuntu"&gt;ubuntu&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/interview"&gt;interview&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/gnome"&gt;gnome&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.miriamruiz.es/weblog/?p=20"&gt;Miriam Ruiz: Problems when packaging games&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/debian"&gt;debian&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/packaging"&gt;packaging&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.kryogenix.org/days/2007/02/07/form-usability"&gt;as days pass by » Blog Archive » Form usability&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/webdesign"&gt;webdesign&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/forms"&gt;forms&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/usability"&gt;usability&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/rant"&gt;rant&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.happycog.com/contact/"&gt;Happy Cog Studios: Contact&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“If you’d like to hire us to design a standards-compliant web site, fill out this Word document and email it to us.”&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blogs.sun.com/dancer/entry/what_sun_s_odf_plug"&gt;What Sun’s ODF plug-in looks like&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/sun"&gt;sun&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/odf"&gt;odf&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blog.mozilla.com/faaborg/2007/02/04/microformats-part-4-the-user-interface-of-microformat-detection/"&gt;Alex Faaborg - » Microformats - Part 4: The User Interface of Microformat Detection&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/ui"&gt;ui&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/microformats"&gt;microformats&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=18333"&gt;Bug 18333 – XML Content Sink should be incremental&lt;/a&gt;&lt;/div&gt; &lt;div&gt;RESOLVED FIXED&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/mozilla"&gt;mozilla&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/xhtml"&gt;xhtml&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/xml"&gt;xml&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/bugs"&gt;bugs&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ejohn.org/blog/getelementsbyclassname-in-firefox-3/"&gt;John Resig - getElementsByClassName in Firefox 3&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/mozilla"&gt;mozilla&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/firefox"&gt;firefox&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/html5"&gt;html5&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/whatwg"&gt;whatwg&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/javascript"&gt;javascript&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blog.unto.net/opensearch/add-opensearch-to-your-site-in-five-minutes/"&gt;DeWitt Clinton » Blog Archive » Add OpenSearch to your site in five minutes&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/opensearch"&gt;opensearch&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://lukewarmtapioca.com/2007/1/3/userscripts-org-opensource"&gt;life.i.think: Userscripts.org … Opensource!&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/greasemonkey"&gt;greasemonkey&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1170971357431">
+		<id gr:original-id="tag:diveintomark.org,2007-02-08:/archives/20070208210829">
+			tag:google.com,2005:reader/item/0d1c3c791994bad1
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="accessibility" scheme="http://diveintomark.org/tag/" /><category term="firefox" scheme="http://diveintomark.org/tag/" /><category term="metarefresh" scheme="http://diveintomark.org/tag/" /><category term="mozilla" scheme="http://diveintomark.org/tag/" /><category term="planetmozilla" scheme="http://diveintomark.org/tag/" /><category term="uaag" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			HOWTO block META refresh
+		</title>
+		<published>
+			2007-02-08T21:08:29Z
+		</published>
+		<updated>
+			2007-02-08T21:13:51Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/08/howto-block-meta-refresh" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/08/howto-block-meta-refresh/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/08/howto-block-meta-refresh" xml:lang="en" type="html">
+			&lt;p&gt;After 10 months, 17 rounds of patch and review, and two last-minute corrections, &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=83265"&gt;bug 83265&lt;/a&gt; has landed. Firefox 3 will include an option to block timed redirects (a.k.a. &lt;a href="http://en.wikipedia.org/wiki/Meta_refresh"&gt;META refresh&lt;/a&gt; tags). By default, Firefox 3 will act like Firefox 2, i.e. it will respect META refresh tags as it always has. But now the end user will have the option to block them:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/02/meta-refresh-pref.jpg" alt="screenshot of preference dialog to block meta refresh" title="" width="466" height="223"&gt;&lt;/p&gt; &lt;p&gt;I can not stress enough that this checkbox is off by default. Users who install or upgrade to Firefox 3 will not see any difference unless they intentionally select this checkbox to turn the warnings on.&lt;/p&gt; &lt;p&gt;This is primarily an accessibility feature. Browsers are supposed to &lt;a href="http://www.w3.org/TR/UAAG10-TECHS/guidelines.html#tech-time-independent"&gt;allow users to control all timeouts&lt;/a&gt;, but Firefox has never provided a way to control timed redirects. This is not a theoretical problem. &lt;a href="http://www.google.com/search?q=%22you+will+be+redirected%22"&gt;Millions of web pages use timed redirects&lt;/a&gt;, and blind users who use text-to-speech software get confused when the page changes before the software has a chance to read the explanation of what’s about to happen.&lt;/p&gt; &lt;p&gt;If you turn this option on and go to &lt;a href="http://www.northeastcapt.org/"&gt;a page that uses a timed redirect&lt;/a&gt;, you will see a notification bar at the top of your browser window:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/02/meta-refresh-notification.jpg" alt="screenshot of blocked redirect" title="" width="708" height="139"&gt;&lt;/p&gt; &lt;p&gt;As the notification bar says, the browser has completely blocked the timed redirect. The page &lt;em&gt;will not redirect automatically&lt;/em&gt;, no matter how long you wait. You must press the “Allow” button, at which point it will immediately redirect to the target page without any further delay.&lt;/p&gt; &lt;p&gt;Geeky technical footnotes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;The notification bar is exposed to assistive technologies as an ALERT, so it will be read immediately by compatible text-to-speech software.&lt;/li&gt; &lt;li&gt;If it looks familiar, that’s because it’s the same sort of notification bar you get when Firefox blocks a popup window.&lt;/li&gt; &lt;li&gt;If you have multiple types of notifications (like a page that tries to open a popup window &lt;em&gt;and&lt;/em&gt; redirect you), they will stack visually and queue aurally.&lt;/li&gt; &lt;li&gt;The “Allow” button is in the tab order and can be accessed by &lt;kbd&gt;AccessKey + A&lt;/kbd&gt;.&lt;/li&gt; &lt;li&gt;The option is global; it affects all sites. If you want site-specific control, download an extension like &lt;a href="https://addons.mozilla.org/firefox/992/"&gt;RefreshBlocker&lt;/a&gt;.&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1170942557356">
+		<id gr:original-id="tag:diveintomark.org,2007-02-08:/archives/20070208132029">
+			tag:google.com,2005:reader/item/f72e5d994101430e
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-08
+		</title>
+		<published>
+			2007-02-08T13:20:29Z
+		</published>
+		<updated>
+			2007-02-08T13:20:29Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/08/links-for-2007-02-08" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/08/links-for-2007-02-08/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/08/links-for-2007-02-08" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://debaday.debian.net/2007/02/07/krusader-twin-panel-commander-style-file-manager/"&gt;Debian Package of the Day » Blog Archive » krusader: twin-panel (commander-style) file manager&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/file"&gt;file&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/utilities"&gt;utilities&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.advogato.org/article/913.html"&gt;How Linux suspend and resume works in the ACPI age&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/powermanagemant"&gt;powermanagemant&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/acpi"&gt;acpi&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://ramblingfoo.blogspot.com/2007/02/debian-live-howto.html"&gt;Rambling around foo: Debian Live HOWTO&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/debian"&gt;debian&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/livecd"&gt;livecd&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/howto"&gt;howto&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://arstechnica.com/news.ars/post/20070206-8784.html"&gt;NVIDIA responds to complaints about state of Vista drivers&lt;/a&gt;&lt;/div&gt; &lt;div&gt;yeah, those closed source drivers are a bitch, aren’t they?&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/nvidia"&gt;nvidia&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/vista"&gt;vista&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://blogs.sun.com/webmink/entry/sun_announces_odf_plug_in"&gt;Simon Phipps, SunMink: Sun Announces ODF Plug-In for MS Office&lt;/a&gt;&lt;/div&gt; &lt;div&gt;touche.&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/sun"&gt;sun&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/odf"&gt;odf&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://nanocrew.net/2007/02/07/daap-licensing/"&gt;So sue me » Blog Archive » DAAP Licensing&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/apple"&gt;apple&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/itunes"&gt;itunes&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/drm"&gt;drm&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1170856129375">
+		<id gr:original-id="tag:diveintomark.org,2007-02-07:/archives/20070207132021">
+			tag:google.com,2005:reader/item/a45d07a16db610ac
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			links for 2007-02-07
+		</title>
+		<published>
+			2007-02-07T13:20:21Z
+		</published>
+		<updated>
+			2007-02-07T13:20:21Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/07/links-for-2007-02-07" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/07/links-for-2007-02-07/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/07/links-for-2007-02-07" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://landonf.bikemonkey.org/code/macosx/Tiger_PT_DENY_ATTACH.20051121020514.50199.zadder.html"&gt;Fixing ptrace(pt_deny_attach, …) on Mac OS X 10.4 Tiger&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/apple"&gt;apple&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/itunes"&gt;itunes&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/gdb"&gt;gdb&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/drm"&gt;drm&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://fabrice.bellard.free.fr/qemu/kqemu-changelog.html"&gt;KQEMU Changelog&lt;/a&gt;&lt;/div&gt; &lt;div&gt;“Changed license to GPL version 2″&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/emulation"&gt;emulation&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/virtualization"&gt;virtualization&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/qemu"&gt;qemu&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=404915"&gt;#404915 - iceweasel: Icon resembles booger - Debian Bug report logs&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/debian"&gt;debian&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/humor"&gt;humor&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://wordpress.com/blog/2007/02/06/new-blogger-importer/"&gt;New Blogger Importer « WordPress.com&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/blogging"&gt;blogging&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/blogger"&gt;blogger&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/wordpress"&gt;wordpress&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/import"&gt;import&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/export"&gt;export&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.burtonini.com/blog/computers/randr-2007-02-06-17-50"&gt;Ross Burton: Xrandr 1.2&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/xrandr"&gt;xrandr&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/xwindows"&gt;xwindows&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/linux"&gt;linux&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;li&gt; &lt;div&gt;&lt;a href="http://www.456bereastreet.com/archive/200702/new_css_properties_in_safari/"&gt;New CSS properties in Safari | 456 Berea Street&lt;/a&gt;&lt;/div&gt; &lt;div&gt;(tags: &lt;a href="http://del.icio.us/wearehugh/safari"&gt;safari&lt;/a&gt; &lt;a href="http://del.icio.us/wearehugh/css"&gt;css&lt;/a&gt;)&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1170795164050">
+		<id gr:original-id="tag:diveintomark.org,2007-02-06:/archives/20070206205211">
+			tag:google.com,2005:reader/item/39cdd7cb9a2dee25
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="digg" scheme="http://diveintomark.org/tag/" /><category term="humor" scheme="http://diveintomark.org/tag/" /><category term="microsoft" scheme="http://diveintomark.org/tag/" /><category term="security" scheme="http://diveintomark.org/tag/" /><category term="vista" scheme="http://diveintomark.org/tag/" /><category term="windows" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Windows Vista security, brought to you by Digg
+		</title>
+		<published>
+			2007-02-06T20:52:11Z
+		</published>
+		<updated>
+			2007-02-06T20:54:22Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/02/06/vista-security" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/02/06/vista-security/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/02/06/vista-security" xml:lang="en" type="html">
+			&lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/02/windows-security-cropped.jpg" width="728" height="420" alt="screenshot of three successive Digg articles about Windows Vista security" title=""&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://www.digg.com/software/Latest_Vista_Security_Hole_It_deletes_files_itself"&gt;Latest Vista Security Hole - It deletes files itself&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.digg.com/security/Screenshot_Tour_How_to_crack_a_Windows_password_with_Ophcrack_Live_CD"&gt;Screenshot Tour: How to crack a Windows password with Ophcrack Live CD&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.digg.com/tech_news/Bill_Gates_Vista_is_so_secure_it_could_run_life_support_systems"&gt;Bill Gates: Vista is so secure it could run life support systems.&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;I hope nobody talks in the hospital.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

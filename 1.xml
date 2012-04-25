@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CJv-tNOfiKAC
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2011-06-17T18:03:51Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1308333831850">
+		<id gr:original-id="tag:diveintomark.org,2011-06-17:/archives/20110617180230">
+			tag:google.com,2005:reader/item/0fcac63b619e33d8
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/tracking-item-link-used" scheme="http://www.google.com/reader/" label="tracking-item-link-used" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="android" scheme="http://diveintomark.org" /><category term="apple" scheme="http://diveintomark.org" />
+		<title type="html">
+			Grading on a curve
+		</title>
+		<published>
+			2011-06-17T18:02:30Z
+		</published>
+		<updated>
+			2011-06-17T18:02:30Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2011/06/17/come-on-gruber-youre-better-than-this" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2011/06/17/come-on-gruber-youre-better-than-this" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://daringfireball.net/linked/2011/04/21/mccracken-beta-hardware"&gt;John Gruber, April 21&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The mass market doesn’t buy, and doesn’t want to buy, products based on what they might become months from now if these companies somehow dramatically improve the software. They buy products for what they are today, out of the box.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;a href="http://daringfireball.net/linked/2011/06/13/icloud-web-interface"&gt;John Gruber, June 13&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I would wager that, sometime between now and 30 June 2012, iCloud will offer a web interface just as good as if not better than MobileMe’s (and quite possibly, under the hood, &lt;em&gt;based&lt;/em&gt; on MobileMe’s). They just haven’t announced it yet, and if Apple hasn’t announced it, they won’t talk about it.&lt;/p&gt; &lt;p&gt;In short, there is no reason to assume that iCloud as it will exist 12 months from now will be limited to what was announced one week ago.&lt;/p&gt; &lt;/blockquote&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1307070696335">
+		<id gr:original-id="tag:diveintomark.org,2011-06-03:/archives/20110603030902">
+			tag:google.com,2005:reader/item/ff1a7d5b0e3d3a85
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="markup" scheme="http://diveintomark.org" /><category term="microdata" scheme="http://diveintomark.org" /><category term="mu" scheme="http://diveintomark.org" />
+		<title type="html">
+			The unofficial guide to migrating Google Rich Snippets to schema.org
+		</title>
+		<published>
+			2011-06-03T03:09:02Z
+		</published>
+		<updated>
+			2011-06-03T11:59:30Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2011/06/02/schema-org" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2011/06/02/schema-org" xml:lang="en" type="html">
+			&lt;p&gt;If you don’t already know what &lt;a href="http://www.google.com/support/webmasters/bin/answer.py?answer=99170"&gt;Google Rich Snippets&lt;/a&gt; or &lt;a href="http://schema.org/"&gt;schema.org&lt;/a&gt; are, this post is probably not for you.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Google Rich Snippets are not deprecated!&lt;/strong&gt; The &lt;a href="http://schema.org/docs/faq.html#11"&gt;schema.org FAQ&lt;/a&gt; states, “If you have already done markup and it is already being used by Google, Microsoft, or Yahoo!, the markup format will continue to be supported. Changing to the new markup format could be helpful over time because you will be switching to a standard that is accepted across all three companies, but you don’t have to do it.”&lt;/p&gt; &lt;p&gt;This guide is for people who want to do it anyway.&lt;/p&gt; &lt;p&gt;&lt;small&gt;Disclaimer: despite my working for Google, this guide has no official status. It represents nothing beyond my own personal interpretation, based on my experience &lt;a href="http://diveintohtml5.org/extensibility.html"&gt;writing about microdata and Google Rich Snippets&lt;/a&gt; in my &lt;a href="http://diveintohtml5.org/"&gt;free HTML5 book&lt;/a&gt; which you should &lt;a href="http://oreilly.com/catalog/9780596806033"&gt;totally pay money for&lt;/a&gt; because &lt;a href="http://diveintomark.org/archives/2002/04/19/mine_does"&gt;this is the way I want the world to work&lt;/a&gt;.&lt;/small&gt;&lt;/p&gt; &lt;p&gt;Some notes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Google Rich Snippets supported microdata, microformats, and RDFa. Schema.org only supports microdata. If you’ve been using microformats or RDFa to mark up your Google Rich Snippets, sorry, you backed the wrong horse.&lt;/li&gt; &lt;li&gt;Microdata is valid HTML5. Take two seconds to &lt;a href="http://diveintohtml5.org/semantics.html"&gt;upgrade your DOCTYPE&lt;/a&gt; and get on with your life.&lt;/li&gt; &lt;li&gt;&lt;a href="http://groups.google.com/group/schemaorg-discussion"&gt;The official mailing list&lt;/a&gt; is your best bet if you have questions. My blog is where good feedback goes to die.&lt;/li&gt; &lt;li&gt;There is currently no way of verifying that this metadata, once migrated, will be interpreted correctly by search engines. &lt;i&gt;i.e.&lt;/i&gt; There is no schema.org testing tool or validator. Somebody should get on that.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;b&gt;Table of Contents&lt;/b&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#address"&gt;Address changes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#geo"&gt;Geo changes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#organization"&gt;Organization changes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#person"&gt;Person changes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#event"&gt;Event changes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#product"&gt;Product changes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#review"&gt;Review changes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#offer"&gt;Offer changes&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;⁂&lt;/p&gt; &lt;h3&gt;Address changes&lt;/h3&gt; &lt;p&gt;&lt;code&gt;http://www.data-vocabulary.org/Address&lt;/code&gt; is now &lt;a href="http://schema.org/PostalAddress"&gt;&lt;code&gt;http://schema.org/PostalAddress&lt;/code&gt;&lt;/a&gt;. Some properties have new names.&lt;/p&gt; &lt;table&gt; &lt;tr&gt;&lt;th&gt;Old itemprop&lt;/th&gt;&lt;th&gt;New itemprop&lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;street-address&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;streetAddress&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;locality&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;addressLocality&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;region&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;addressRegion&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;postal-code&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;postalCode&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;country-name&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;addressCountry&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; &lt;p&gt;⁂&lt;/p&gt; &lt;h3&gt;Geo changes&lt;/h3&gt; &lt;p&gt;&lt;code&gt;http://www.data-vocabulary.org/Geo&lt;/code&gt; is now &lt;a href="http://schema.org/GeoCoordinates"&gt;&lt;code&gt;http://schema.org/GeoCoordinates&lt;/code&gt;&lt;/a&gt;. There are no changes to property names or semantics.&lt;/p&gt; &lt;p&gt;Several properties in the old &lt;code&gt;data-vocabulary.org&lt;/code&gt; schema were of type &lt;code&gt;http://data-vocabulary.org/Geo&lt;/code&gt;. In the &lt;code&gt;schema.org&lt;/code&gt; vocabulary, many of these now use a &lt;code&gt;location&lt;/code&gt; property of type &lt;a href="http://schema.org/Place"&gt;Place&lt;/a&gt;. The new Place schema contains a &lt;code&gt;geo&lt;/code&gt; property of type &lt;a href="http://schema.org/GeoCoordinates"&gt;GeoCoordinates&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;⁂&lt;/p&gt; &lt;h3&gt;Organization changes&lt;/h3&gt; &lt;p&gt;&lt;code&gt;http://www.data-vocabulary.org/Organization&lt;/code&gt; is now &lt;a href="http://schema.org/Organization"&gt;&lt;code&gt;http://schema.org/Organization&lt;/code&gt;&lt;/a&gt;. The new schema has a number of &lt;a href="http://schema.org/Organization"&gt;more specific types&lt;/a&gt; like &lt;code&gt;Corporation&lt;/code&gt;, &lt;code&gt;NGO&lt;/code&gt;, and &lt;code&gt;SportsTeam&lt;/code&gt;. Use the most specific type that is appropriate.&lt;/p&gt; &lt;p&gt;Some properties have new names or are expressed in different ways.&lt;/p&gt; &lt;table&gt; &lt;tr&gt;&lt;th&gt;Old itemprop&lt;/th&gt;&lt;th&gt;New itemprop&lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;tel&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;telephone&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;geo&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#geo"&gt;&lt;i&gt;moved to&lt;/i&gt; &lt;code&gt;location&lt;/code&gt; &lt;i&gt;property&lt;/i&gt;&lt;/a&gt;&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; &lt;p&gt;⁂&lt;/p&gt; &lt;h3&gt;Person changes&lt;/h3&gt; &lt;p&gt;&lt;code&gt;http://www.data-vocabulary.org/Person&lt;/code&gt; is now &lt;a href="http://schema.org/Person"&gt;&lt;code&gt;http://schema.org/Person&lt;/code&gt;&lt;/a&gt;. Some properties have new names or are expressed in different ways.&lt;/p&gt; &lt;table&gt; &lt;tr&gt;&lt;th&gt;Old itemprop&lt;/th&gt;&lt;th&gt;New itemprop&lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;nickname&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;obsolete&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;photo&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;image&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;jobTitle&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;role&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;obsolete&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;friend&lt;/code&gt;, &lt;code&gt;contact&lt;/code&gt;, &lt;code&gt;acquaintance&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;obsolete&lt;/i&gt;, use &lt;code&gt;knows&lt;/code&gt;, &lt;code&gt;follows&lt;/code&gt;, or &lt;code&gt;colleagues&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; &lt;p&gt;In addition, the &lt;code&gt;affiliation&lt;/code&gt; used to be a plain text property. It now takes an &lt;a href="http://schema.org/Organization"&gt;Organization&lt;/a&gt;. (See also: &lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#organization"&gt;Organization changes&lt;/a&gt;)&lt;/p&gt; &lt;p&gt;⁂&lt;/p&gt; &lt;h3&gt;Event changes&lt;/h3&gt; &lt;p&gt;&lt;code&gt;http://data-vocabulary.org/Event&lt;/code&gt; is now &lt;a href="http://schema.org/Event"&gt;&lt;code&gt;http://schema.org/Event&lt;/code&gt;&lt;/a&gt;. The new schema has a number of &lt;a href="http://schema.org/Event"&gt;more specific types&lt;/a&gt; like &lt;code&gt;BusinessEvent&lt;/code&gt;, &lt;code&gt;SocialEvent&lt;/code&gt;, or &lt;code&gt;Festival&lt;/code&gt;. Use the most specific type that is appropriate.&lt;/p&gt; &lt;p&gt;Some properties have new names or are expressed in different ways.&lt;/p&gt; &lt;table&gt; &lt;tr&gt;&lt;th&gt;Old itemprop&lt;/th&gt;&lt;th&gt;New itemprop&lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;summary&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;photo&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;image&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;eventType&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;obsolete&lt;/i&gt;, use a specific event type if available&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;geo&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#geo"&gt;&lt;i&gt;moved to&lt;/i&gt; &lt;code&gt;location&lt;/code&gt; &lt;i&gt;property&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; &lt;p&gt;In addition, the &lt;code&gt;location&lt;/code&gt; property used to be plain text &lt;em&gt;or&lt;/em&gt; an Organization &lt;em&gt;or&lt;/em&gt; an Address; now it must be either a &lt;a href="http://schema.org/Place"&gt;Place&lt;/a&gt; or a &lt;a href="http://schema.org/PostalAddress"&gt;PostalAddress&lt;/a&gt;. (See also: &lt;a href="http://diveintomark.org/archives/2011/06/02/schema-org#address"&gt;Address changes&lt;/a&gt;)&lt;/p&gt; &lt;p&gt;⁂&lt;/p&gt; &lt;h3&gt;Product changes&lt;/h3&gt; &lt;p&gt;&lt;code&gt;http://www.data-vocabulary.org/Product&lt;/code&gt; is now &lt;a href="http://schema.org/Product"&gt;&lt;code&gt;http://schema.org/Product&lt;/code&gt;&lt;/a&gt;. Some properties have new names or are expressed in different ways.&lt;/p&gt; &lt;table&gt; &lt;tr&gt;&lt;th&gt;Old itemprop&lt;/th&gt;&lt;th&gt;New itemprop&lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;category&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;obsolete&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;review&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;reviews&lt;/code&gt; (type &lt;a href="http://schema.org/Review"&gt;Review&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;offerdetails&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;offers&lt;/code&gt; (type &lt;a href="http://schema.org/Offer"&gt;Offer&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;identifier&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;productID&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; &lt;p&gt;The &lt;code&gt;brand&lt;/code&gt; property used to be plain text, but it now takes an &lt;a href="http://schema.org/Organization"&gt;Organization&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;⁂&lt;/p&gt; &lt;h3&gt;Review changes&lt;/h3&gt; &lt;p&gt;&lt;code&gt;http://www.data-vocabulary.org/Review&lt;/code&gt; is now &lt;a href="http://schema.org/Review"&gt;&lt;code&gt;http://schema.org/Review&lt;/code&gt;&lt;/a&gt;. Some properties have new names or are expressed in different ways.&lt;/p&gt; &lt;table&gt; &lt;tr&gt;&lt;th&gt;Old itemprop&lt;/th&gt;&lt;th&gt;New itemprop&lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;itemreviewed&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;itemReviewed&lt;/code&gt; (type &lt;a href="http://schema.org/Thing"&gt;Thing&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;rating&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;reviewRating&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;reviewer&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;author&lt;/code&gt; (type &lt;a href="http://schema.org/Person"&gt;Person&lt;/a&gt; or &lt;a href="http://schema.org/Organization"&gt;Organization&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;dtreviewed&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;datePublished&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;description&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;reviewBody&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; &lt;p&gt;⁂&lt;/p&gt; &lt;h3&gt;Offer changes&lt;/h3&gt; &lt;p&gt;&lt;code&gt;http://www.data-vocabulary.org/Offer&lt;/code&gt; is now &lt;a href="http://schema.org/Offer"&gt;&lt;code&gt;http://schema.org/Offer&lt;/code&gt;&lt;/a&gt;. Some properties have new names or are expressed in different ways.&lt;/p&gt; &lt;table&gt; &lt;tr&gt;&lt;th&gt;Old itemprop&lt;/th&gt;&lt;th&gt;New itemprop&lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;currency&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;priceCurrency&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;condition&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;itemCondition&lt;/code&gt; (type &lt;a href="http://schema.org/OfferItemCondition"&gt;OfferItemCondition&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;offerURL&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;code&gt;url&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;code&gt;identifier&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;moved to&lt;/i&gt; &lt;code&gt;productID&lt;/code&gt; &lt;i&gt;property of&lt;/i&gt; &lt;code&gt;itemOffered&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; &lt;p&gt;The &lt;code&gt;availability&lt;/code&gt; property used to be an enumerated attribute, but it now takes an &lt;a href="http://schema.org/ItemAvailability"&gt;ItemAvailability&lt;/a&gt;.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1304139510433">
+		<id gr:original-id="tag:diveintomark.org,2011-04-30:/archives/20110430045819">
+			tag:google.com,2005:reader/item/68aa1a54d3b3c11b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="publishing" scheme="http://diveintomark.org" /><category term="writing" scheme="http://diveintomark.org" />
+		<title type="html">
+			The “book” is dead
+		</title>
+		<published>
+			2011-04-30T04:58:19Z
+		</published>
+		<updated>
+			2011-04-30T04:58:19Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2011/04/29/the-book-is-dead" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2011/04/29/the-book-is-dead" xml:lang="en" type="html">
+			&lt;p&gt;David Flanagan, author of &lt;a href="http://www.amazon.com/gp/product/0596805527/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag=davidflanagancom&amp;amp;linkCode=as2&amp;amp;camp=217145&amp;amp;creative=399349&amp;amp;creativeASIN=0596805527"&gt;JavaScript: The Definitive Guide&lt;/a&gt;, &lt;a href="http://www.davidflanagan.com/2011/04/javascript-the-1.html"&gt;writes&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;For 15 years I’ve been one of those lucky authors who has been able to support himself and his family almost entirely on book royalties. But the publishing industry has been in decline and my royalties checks have decreased more-or-less steadily since the dot-com bust, and I’ve now decided that I need to look for a salaried job.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;15 years is a long time. What a blessing to have been able to do something you love for that long, and get paid for it.&lt;/p&gt; &lt;p&gt;But then he goes off into the weeds a little bit and starts in with his opinions of piracy and Google’s role in the world. [Note: I work for Google but not on search. I don&amp;#39;t speak for Google and they don&amp;#39;t speak for me. It works out well.]&lt;/p&gt; &lt;p&gt;David continues:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I was trying to be provocative when I tweeted the question “Does Google enable piracy?” But I do think it is a valid question. If Google indexes sites like ebookee that link directly to download sites and makes it easy to find the pirated content you want and even offers suggestions on what to search for, I think there is a case to be made that they’re encouraging piracy.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Note how quickly we’ve moved the goalposts from “enabling” piracy to “encouraging” piracy. Lots of technology “enables” piracy; after all, it’s only 1s and 0s. In the analog world, even libraries “enable” piracy by putting a photocopier in the same building as a bunch of books. But do libraries “encourage” piracy? No, there are big signs next to the photocopier warning you about copyright law, and photocopies are prohibitively expensive to do anything more than copy a few pages for reference. Does technology “encourage” digital piracy? No, it’s only 1s and 0s.&lt;/p&gt; &lt;p&gt;More importantly, contrary to David’s assertion, ebookee &lt;em&gt;does not have David’s latest book&lt;/em&gt;. The entire site is a scam to get people to sign up for Usenet or “premium” file sharing services. They have a page for every book in the universe. A small fraction of them actually have download links, most of which are broken. Mostly, the site just goes round and round. There’s a case to be made that the site should be delisted because it’s fucking useless, but its existence in search results does not bolster David’s argument that Google is “encouraging” piracy.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;And now JavaScript: The Definitive Guide is out. I don’t have a copy of it yet, but illegal copies are free for anyone who wants one.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;This is not true; see above.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;And Google will suggest those illegal downloads to anyone who tries to research the book (see the screenshot).&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;That screenshot actually shows the results of &lt;a href="http://searchengineland.com/how-google-instant-autocomplete-suggestions-work-62592"&gt;Google’s existing filtering program&lt;/a&gt; for piracy-related terms like “bittorrent,” “rapidshare,” and “megaupload.” Without that filtering, the suggestion box would be full of piracy-related terms. But more to the point, it would be full of piracy-related terms &lt;em&gt;because that’s what people search for&lt;/em&gt;. Google’s suggestions come from actual searches. It’s a mirror onto the world, descriptive not prescriptive. If you don’t like how the world looks in the mirror, don’t blame the mirror.&lt;/p&gt; &lt;p&gt;David continues:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Here are some small steps that might help: &lt;ul&gt; &lt;li&gt;Google could filter its search suggestions so that they do not actively suggest piracy.&lt;/li&gt; &lt;/ul&gt; &lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;Google already does this; see above.&lt;/p&gt; &lt;blockquote&gt; &lt;ul&gt; &lt;li&gt;Google could flag (without filtering) search results that are likely links to pirated content. Google already flags some results with “this site may harm your computer”. Why not flag pirate sites: “Downloading content from this site may result in legal action by the copyright holder” or “Downloads from this site may be illegal”. Or nice and simple: “this site may harm your karma”.&lt;/li&gt; &lt;/ul&gt; &lt;/blockquote&gt; &lt;p&gt;The difference is that “this site may harm your computer” is based on an objective measurement. You can &lt;a href="http://googleonlinesecurity.blogspot.com/2008/02/all-your-iframe-are-point-to-us.html"&gt;read how it works&lt;/a&gt;. Suspected sites are automatically verified in a virtual machine running an unpatched browser. It is both fascinating and mind-boggling to imagine that it works at all, much less works at Internet scale in near-real time.&lt;/p&gt; &lt;p&gt;On the other hand, legal concepts like “copyrighted material” are more difficult to automate at Internet scale. This is not to say it’s impossible; YouTube has its &lt;a href="http://www.youtube.com/t/contentid"&gt;Content ID program&lt;/a&gt; for audio and video, but it relies on the fact that people are actually uploading content to YouTube directly. To replicate this program on RapidShare, Google would need to download everything from RapidShare in order to identify it. Ironically, RapidShare makes this technically difficult in order to discourage third-party downloader programs that help users “steal” content from RapidShare without viewing ads or paying for “premium” membership.&lt;/p&gt; &lt;p&gt;And even if all the technical hurdles could be overcome, it &lt;em&gt;still&lt;/em&gt; wouldn’t necessarily warrant flagging sites like ebookee, which only hosts &lt;a href="http://www.google.com/search?q=links%20to%20infringing%20content"&gt;links to infringing content&lt;/a&gt; and not the content itself. (And if Google did start flagging them, they would just add another layer of indirection, or cloak their download URLs, or some other damn thing. You’ll never beat piracy this way.)&lt;/p&gt; &lt;p&gt;Speaking of “beating” piracy, &lt;a href="http://www.davidflanagan.com/2011/04/javascript-the-1.html#comment-2016"&gt;an anonymous commenter makes this point&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;One of the reasons iTunes is so successful is that they successfully compete with the file sharers. … Why should I waste time looking for an mp3 that may or may not be of any decent quality when I can download immediately at low cost from iTunes?&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Commenter “Peter” &lt;a href="http://www.davidflanagan.com/2011/04/javascript-the-1.html#comment-2020"&gt;makes a related point&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I have been an OReilly Safari subscriber for several years. I can recommend this to every developer out there. … Yet, must admit it still pains me that for ~$500/year we as honest subscribers can not get the same convenience (offline access, unencumbered PDF’s) as people who just download a pirated PDF library for free.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;So is piracy really the problem? Is it even &lt;em&gt;a&lt;/em&gt; problem? David has provided no evidence that his book is, in fact, wildly pirated. It’s not even available yet from dedicated pirate sites. But the larger, more disturbing question is this: who bothers to steal books these days when you can go to Stack Overflow or a web forum or, yes, even Google, type a question, and get an answer?&lt;/p&gt; &lt;p&gt;I’ll close with &lt;a href="http://www.davidflanagan.com/2011/04/javascript-the-1.html#comment-2022"&gt;this observation from “Curt”&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Most technical book are actually really painful to navigate, but at [one] time they were the only option, now I can find context relevant information in seconds hence books are &lt;em&gt;less&lt;/em&gt; convenient &lt;em&gt;and&lt;/em&gt; they cost money. The default is now deeply linked, highly specific data. IMHO you are not losing money to piracy, you are failing to make money due to the inadequacy of the book as a medium for technical data.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I think David would actually agree with this. In response to another comment, &lt;a href="http://www.davidflanagan.com/2011/04/javascript-the-1.html#comment-2007"&gt;David himself wrote&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I will say that my book was written as a book, and it probably wouldn’t work well online (regardless of whether it could work financially that way). And maybe that is a big piece of my revenue problem: I’m producing content in an old-fashioned medium.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The “book” is dead. Long live “content.” And God help us all if world-class writers like David can’t make a living from it.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1302922988120">
+		<id gr:original-id="tag:diveintomark.org,2011-04-16:/archives/20110416025735">
+			tag:google.com,2005:reader/item/a833d99a3b539a88
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="html5" scheme="http://diveintomark.org" /><category term="ie" scheme="http://diveintomark.org" /><category term="rant" scheme="http://diveintomark.org" />
+		<title type="html">
+			Translation From MS-Speak to English of Selected Portions of Dean Hachamovitch’s “Native HTML5″ announcement
+		</title>
+		<published>
+			2011-04-16T02:57:35Z
+		</published>
+		<updated>
+			2011-04-16T02:59:15Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2011/04/15/nativity-scene" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2011/04/15/nativity-scene" xml:lang="en" type="html">
+			&lt;p&gt;[&lt;a href="http://blogs.msdn.com/b/ie/archive/2011/04/12/native-html5-first-ie10-platform-preview-available-for-download.aspx"&gt;Original&lt;/a&gt;]&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Browsers that use modern operating systems more directly deliver better experiences. Browsers that compromise (by spreading across too many OSes and OS versions) face challenges.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;We can’t decide if we want IE to drive Windows adoption or Windows to drive IE adoption.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The best HTML5 is native to the operating system, so Web sites have the fewest translation layers to pass through.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The browser is part of the OS. The browser has always been part of the OS. We have always been at war with Eastasia.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Native HTML5 support in Windows with IE9 makes a huge difference in what sites can do.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;We’re really, really sorry about IE6. Not sorry enough to disable Windows activation and allow all the software pirates in China to upgrade, but sorry nonetheless.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Web sites and HTML5 run best when they run natively, on a browser optimized for the operating system on your device.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I think we can all agree to hate XUL.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;We’re about three weeks into development of IE10, and based on the progress we’ve made, we want to start engaging the development community now.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Imagine how much progress we could have made if we hadn’t ignored the web for ten fucking years.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Native HTML5 … native HTML5 … run natively … most native … only native … native graphics … native … Native HTML5 … Native HTML5 … native and robust … native applications … Native implementations … non-native … native HTML5 … native …&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I am high as a kite.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;When this post was initially published, I forgot to include the onerror event handler for the HTML5 video element. This caused the video to not play in browsers that don’t support MP4/H.264 video. That has been corrected.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The irony of using the phrase “same markup” nine times while delivering different markup to other browsers is entirely lost on me.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The only native experience of the Web and HTML5 today is on Windows 7 with IE9.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;We would like HTML5 better if it were spelled “ActiveX.”&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1298082367547">
+		<id gr:original-id="tag:diveintomark.org,2011-02-19:/archives/20110219021409">
+			tag:google.com,2005:reader/item/f4d5b2461b0ab422
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="html5" scheme="http://diveintomark.org" />
+		<title type="html">
+			What if this is as good as it gets?
+		</title>
+		<published>
+			2011-02-19T02:14:09Z
+		</published>
+		<updated>
+			2011-02-19T02:14:52Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" xml:lang="en" type="html">
+			&lt;p&gt;First off, I would like to thank Microsoft for regrouping, restaffing, and developing Internet Explorer 9. There is much to be thankful for. Very soon, new Windows 7 users will have, by default and without any installation, a browser that supports&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/canvas.html"&gt;Canvas&lt;/a&gt; without JavaScript translation libraries&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.w3.org/Graphics/SVG/"&gt;SVG&lt;/a&gt; without &lt;a href="http://code.google.com/p/svgweb/"&gt;amazing translating-to-Flash hacks&lt;/a&gt;, including &lt;a href="http://hacks.mozilla.org/2010/05/firefox-4-the-html5-parser-inline-svg-speed-and-more/"&gt;inline SVG in HTML&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/geolocation.html"&gt;Geolocation&lt;/a&gt; without plugins&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/storage.html"&gt;Persistent local storage&lt;/a&gt; (note: this is already in IE8)&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/video.html#licensing"&gt;H.264 video&lt;/a&gt; without plugins&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/semantics.html"&gt;New semantics elements&lt;/a&gt; without JavaScript shims&lt;/li&gt; &lt;li&gt;&lt;a href="http://msdn.microsoft.com/en-us/ie/ff468705#_CSS3_BG_Borders"&gt;Rounded corners&lt;/a&gt; and other CSS improvements&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;This is quite remarkable. I’ve been busily updating &lt;a href="http://diveintohtml5.org/"&gt;Dive Into HTML5&lt;/a&gt;, changing phrases like “no version of Internet Explorer supports…” to “versions of IE before 9.0 did not support…” I never, ever, ever thought this day would come. Thank you, Microsoft.&lt;/p&gt; &lt;p&gt;So here’s a downer: what if this is it? What if, after years of increasing evangelism and fever-pitch hype and demos and speeches and books and talks and blogs and tweets and &lt;a href="http://www.businessinsider.com/html5-logo-funny-2011-1"&gt;logos&lt;/a&gt;, Microsoft shifts direction once again, destaffs the IE team, and “deprioritizes” any notion of an IE 10? And all these promising technologies die on the vine, or at most, grow up to smack hard against the glass ceiling of “no version of Internet Explorer supports…” &lt;ul&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/forms.html"&gt;Web Forms 2.0&lt;/a&gt; (datepickers, validation, and so forth)&lt;/li&gt; &lt;li&gt;&lt;a href="http://wearehugh.com/public/2010/08/html5-web-workers/"&gt;Web Workers&lt;/a&gt; (background JavaScript)&lt;/li&gt; &lt;li&gt;&lt;a href="http://dev.w3.org/html5/websockets/"&gt;WebSockets&lt;/a&gt; (real-time bidirectional communication)&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/offline.html"&gt;AppCache&lt;/a&gt; (offline web applications)&lt;/li&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/WebGL"&gt;WebGL&lt;/a&gt; (3-D canvas)&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/video.html#vp8"&gt;WebM&lt;/a&gt; (open video)&lt;/li&gt; &lt;li&gt;&lt;a href="http://hacks.mozilla.org/2010/06/comparing-indexeddb-and-webdatabase/"&gt;IndexedDB&lt;/a&gt; (advanced persistent local storage)&lt;/li&gt; &lt;li&gt;&lt;a href="https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history#Adding_and_modifying_history_entries"&gt;History API&lt;/a&gt; (twiddle with the entire URL without reloading)&lt;/li&gt; &lt;li&gt;&lt;a href="http://blog.whatwg.org/whats-next-in-html-episode-1"&gt;Device API&lt;/a&gt; (videoconferencing without plugins)&lt;/li&gt; &lt;li&gt;&lt;a href="https://developer.mozilla.org/en/using_files_from_web_applications"&gt;File API&lt;/a&gt; (sandboxed in-browser filesystem)&lt;/li&gt; &lt;li&gt;&lt;a href="https://wiki.mozilla.org/Audio_Data_API"&gt;Audio data API&lt;/a&gt; (dynamically creating music with JavaScript)&lt;/li&gt; &lt;li&gt;&lt;a href="http://people.mozilla.com/~prouget/ie9/"&gt;and on and on&lt;/a&gt;…&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;em&gt;What if this is as good as it gets?&lt;/em&gt;&lt;/p&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1294595371175">
+		<id gr:original-id="tag:diveintomark.org,2011-01-09:/archives/20110109174052">
+			tag:google.com,2005:reader/item/f69044a0a8943d28
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="diveintohtml5" scheme="http://diveintomark.org" /><category term="html5" scheme="http://diveintomark.org" /><category term="oreilly" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="publishing" scheme="http://diveintomark.org" />
+		<title type="html">
+			Dive into 2010
+		</title>
+		<published>
+			2011-01-09T17:40:52Z
+		</published>
+		<updated>
+			2011-01-09T21:59:12Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2011/01/09/dive-into-2010" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2011/01/09/dive-into-2010" xml:lang="en" type="html">
+			&lt;p&gt;My big accomplishment of 2010 was finishing the first edition of &lt;a href="http://diveintohtml5.org/"&gt;Dive Into HTML5&lt;/a&gt; and working with O’Reilly to publish it on paper as &lt;a href="http://www.amazon.com/HTML5-Up-Running-Mark-Pilgrim/dp/0596806027?ie=UTF8&amp;amp;tag=diveintomark-20&amp;amp;creativeASIN=0596806027"&gt;HTML5: Up &amp;amp; Running&lt;/a&gt; (as well as &lt;a href="http://oreilly.com/catalog/9780596806033"&gt;several downloadable DRM-free formats&lt;/a&gt;). I also accomplished a few minor personal things, but in this post I’m going to focus on the book.&lt;/p&gt; &lt;p&gt;The book went on sale in mid-August and earned out almost immediately. “Earning out” is a publishing term which means that the book has sold enough copies that my cut of the profits has paid back the advance payments that O’Reilly gave me during the writing process. Which means that I’m already receiving &lt;a href="http://twitpic.com/3migsw"&gt;royalty checks for real money&lt;/a&gt;. Of the four books I’ve published through traditional publishers, this is only the second book to earn out. (The original &lt;a href="http://diveintopython.org/"&gt;Dive Into Python&lt;/a&gt; was the first, and it was on sale for over two years before it earned out.)&lt;/p&gt; &lt;div style="display:block;float:right;font-style:oblique;font-size:xx-large;width:42%;margin:0 0 .75em .75em;background:steelblue;color:white;padding:0.75em;border:1px solid;border-radius:1em;line-height:1.3"&gt;I write free books and people buy them. It works out surprisingly well. &lt;/div&gt;&lt;p&gt;“HTML5: Up &amp;amp; Running” sold over 14,000 copies in the first six weeks, of which about 25% were digital downloads and 75% were books on paper. Folks sure do love them some paper. The book continues to be &lt;a href="http://diveintohtml5.org/"&gt;available online for free&lt;/a&gt;, as it was during the entire writing process, under the liberal Creative Commons Attribution license. This open publishing model generated buzz well in advance of the print publication, and it resulted in over 1,500 pre-orders which shipped the day the book went on sale. &lt;i lang="la" title="The thing speaks for itself"&gt;Res ipsa loquitur.&lt;/i&gt;&lt;/p&gt; &lt;p&gt;The online edition at &lt;a href="http://diveintohtml5.org/"&gt;diveintohtml5.org&lt;/a&gt; includes Google Analytics so I can &lt;del&gt;evilly track your every movement&lt;/del&gt; find out what the hell is going on. The analytics tell me many things. Some highlights:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Throughout 2010, the site served 2 million visitors and 3.9 million pageviews. Each chapter is on its own page because that’s how I wrote the book (in HTML5). I don’t need to inflate pageviews for non-existent advertisers (I work for Google so I’m not allowed to put ads on it anyway), and I never got around to writing a split-chapter-into-multiple-pages script.&lt;/li&gt; &lt;li&gt;40% of the site’s traffic came from search engines. 30% came from direct traffic or non-web applications like Twitter or email clients. 30% came from one of over 8,900 referring sites.&lt;/li&gt; &lt;li&gt;98.7% of the search engine traffic came from Google. Less than 1% came from Bing. The rest came from search engines that I didn’t know still existed.&lt;/li&gt; &lt;li&gt;&lt;a href="http://daringfireball.net/"&gt;John Gruber&lt;/a&gt; sent me three times as much traffic as Bing.&lt;/li&gt; &lt;li&gt;The most popular chapters tracked closely with the most popular incoming search keywords. &lt;a href="http://diveintohtml5.org/video.html"&gt;HTML5 video&lt;/a&gt; was the most popular topic, logging almost half a million pageviews alone. #2 was &lt;a href="http://diveintohtml5.org/forms.html"&gt;web forms&lt;/a&gt;, followed closely by &lt;a href="http://diveintohtml5.org/canvas.html"&gt;canvas&lt;/a&gt;, &lt;a href="http://diveintohtml5.org/semantics.html"&gt;semantics&lt;/a&gt;, and &lt;a href="http://diveintohtml5.org/geolocation.html"&gt;Geolocation&lt;/a&gt;. &lt;a href="http://diveintohtml5.org/extensibility.html"&gt;Microdata&lt;/a&gt; was in dead last. Seriously, the shit that nobody gives about my beloved &lt;a href="http://diveintohtml5.org/peeks-pokes-and-pointers.html"&gt;Peeks, Pokes &amp;amp; Pointers&lt;/a&gt; chart is rivaled only by the shit that nobody gives about microdata.&lt;/li&gt; &lt;li&gt;My little &lt;a href="http://diveintohtml5.org/past.html"&gt;history of HTML&lt;/a&gt; logged almost a quarter million pageviews, and the average visitor spent almost four minutes reading it. (Only the video chapter was higher, at 4:45.) Folks love them some Internet folklore.&lt;/li&gt; &lt;li&gt;6% of visitors used some version of Internet Explorer. That is not a typo. The site works fine in Internet Explorer — the site practices what it preaches, and the live examples use a variety of fallbacks for legacy browsers — so this is entirely due to the subject matter. Microsoft has completely lost the web development community.&lt;/li&gt; &lt;li&gt;4% of visitors read the site on a mobile device. Of those people, 85% used an iOS device (iPhone + iPad + iPod Touch). 14% used Android, and the rest used mobile devices that I didn’t know had browsers.&lt;/li&gt; &lt;li&gt;The site itself, its typography, and the book’s live examples have led to bug fixes in at least four browsers and &lt;a href="http://www.thibault.org/fonts/essays/"&gt;one font&lt;/a&gt;. Hooray for living on the bleeding edge.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Although it makes little sense to talk about “editions” of a web site (you can see a &lt;a href="http://hg.diveintohtml5.org/"&gt;changelog&lt;/a&gt; if you like), O’Reilly and I have already discussed the possibility of doing a new edition of the printed book. Besides rolling up all the updates since August, we’ve discussed one chapter on Web Workers and another on web sockets. Since all the world’s browsers have recently &lt;a href="http://annevankesteren.nl/2010/12/websocket-protocol-vulnerability"&gt;disabled their web sockets implementations&lt;/a&gt; due to &lt;a href="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html"&gt;a subtle (but fatal) protocol-level security vulnerability&lt;/a&gt;, the Web Workers chapter will probably come first. No promises, you understand. No promises at all.&lt;/p&gt; &lt;p&gt;If there are new chapters someday, I will urge O’Reilly to provide them for free to everyone who has already bought a digital copy. But understand that the final decision is not mine to make. Not mine at all. In any event, it will be available online at &lt;code&gt;diveintohtml5.org&lt;/code&gt; for free, like the rest of the book.&lt;/p&gt; &lt;p&gt;I’m not big on predictions, but I do have one for 2011: HTML5 will continue to be popular, because anything popular will get labeled “HTML5.”&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1292337179705">
+		<id gr:original-id="tag:diveintomark.org,2010-12-14:/archives/20101214142139">
+			tag:google.com,2005:reader/item/1c779d4b6f792fd9
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="6502" scheme="http://diveintomark.org" /><category term="apple2" scheme="http://diveintomark.org" /><category term="assembly" scheme="http://diveintomark.org" /><category term="howto" scheme="http://diveintomark.org" />
+		<title type="html">
+			HOWTO control a Zip Chip programmatically
+		</title>
+		<published>
+			2010-12-14T14:21:39Z
+		</published>
+		<updated>
+			2010-12-14T14:23:35Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/12/14/zip-chip" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/12/14/zip-chip" xml:lang="en" type="html">
+			&lt;p&gt;Zip Chip is an accelerator chip for the Apple //. What follows is 6502 assembly language. You have been warned.&lt;/p&gt; &lt;p&gt;To enable maximum acceleration of everything except the joystick port, the Apple speaker, and slot 6:&lt;/p&gt; &lt;pre&gt;&lt;code&gt; LDA #$5A STA $C05A ; write 4 times to unlock chip STA $C05A STA $C05A STA $C05A LDA #$FF STA $C05B ; enable Zip Chip LDA #$80 STA $C05E ; disable I/O delay LDA #$40 STA $C05F ; normal joystick speed, fast language card LDA #$41 STA $C05C ; all slots fast except S6 and speaker LDA #$00 STA $C05D ; CPU at full speed LDA #$A5 STA $C05A ; lock chip&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;To disable all acceleration:&lt;/p&gt; &lt;pre&gt;&lt;code&gt; LDA #$5A STA $C05A ; write 4 times to unlock chip STA $C05A STA $C05A STA $C05A LDA #$FF STA $C05A ; disable Zip Chip&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;These routines work on both the Zip Chip 4000 (4 Mhz) and Zip Chip 8000 (8 Mhz).&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1291434556480">
+		<id gr:original-id="tag:diveintomark.org,2010-12-04:/archives/20101204033807">
+			tag:google.com,2005:reader/item/47129f4ae511a5b9
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" />
+		<title type="html">
+			Translation from PR-speak to Star-Wars-speak of Selected Portions of Amazon’s Message Regarding Their Termination of Wikileaks an an AWS Customer
+		</title>
+		<published>
+			2010-12-04T03:38:07Z
+		</published>
+		<updated>
+			2010-12-04T03:41:16Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/12/03/jedi-mind-tricks" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/12/03/jedi-mind-tricks" xml:lang="en" type="html">
+			&lt;p&gt;Source: &lt;a href="http://aws.amazon.com/message/65348/"&gt;Amazon&lt;/a&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Amazon Web Services (AWS) rents computer infrastructure on a self-service basis.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I ain’t in this for your revolution, and I’m not in it for you, Princess. I expect to be well paid. &lt;em&gt;I’m&lt;/em&gt; in it for the money.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;AWS does not pre-screen its customers, but it does have terms of service that must be followed.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Let’s just say we’d like to avoid any Imperial entanglements.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;There have been reports that a government inquiry prompted us not to serve WikiLeaks any longer. That is inaccurate.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I have just received word that Emperor Lieberman has dissolved the council permanently.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;We’ve been running AWS for over four years and have hundreds of thousands of customers storing all kinds of data on AWS.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;You will never find a more wretched hive of scum and villainy.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;It is not credible that the extraordinary volume of 250,000 classified documents that WikiLeaks is publishing could have been carefully redacted.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I find your lack of faith disturbing.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Human rights organizations have in fact written to WikiLeaks asking them to exercise caution.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The Force is what gives a Jedi activist his power. It’s an energy field created by all living things. It surrounds us and penetrates us. It binds the galaxy together.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;When people go about securing and storing large quantities of data that isn’t rightfully theirs…&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;The Force can have a strong influence on the weak-minded.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Folks need to go operate elsewhere.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;b&gt;Amazon&lt;/b&gt;: Let me see your money.&lt;br&gt; &lt;b&gt;Unnamed Jedi Activist&lt;/b&gt;: &lt;i&gt;[waves hand]&lt;/i&gt; You don’t need to see his money.&lt;br&gt; &lt;b&gt;Amazon&lt;/b&gt;: We don’t need to see his money.&lt;br&gt; &lt;b&gt;Jedi Activist&lt;/b&gt;: These aren’t the customers you’re looking for.&lt;br&gt; &lt;b&gt;Amazon&lt;/b&gt;: These aren’t the customers we’re looking for.&lt;br&gt; &lt;b&gt;Jedi Activist&lt;/b&gt;: He can take his business elsewhere.&lt;br&gt; &lt;b&gt;Amazon&lt;/b&gt;: You can take your business elsewhere.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1282650415066">
+		<id gr:original-id="tag:diveintomark.org,2010-08-24:/archives/20100824044944">
+			tag:google.com,2005:reader/item/0bbdd08f0733525f
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="html5" scheme="http://diveintomark.org" /><category term="linkdump" scheme="http://diveintomark.org" />
+		<title type="html">
+			Afresh
+		</title>
+		<published>
+			2010-08-24T04:49:44Z
+		</published>
+		<updated>
+			2010-08-24T04:52:00Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/08/23/oh-yeah" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/08/23/oh-yeah" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://wearehugh.com/public/2010/08/html5-video-accessibility/"&gt;An ironically inaccessibly illustrated guide to HTML5 video accessibility&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://wearehugh.com/public/2010/08/html5-web-workers/"&gt;An implausibly illustrated introduction to HTML5 Web Workers&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/introduction.html"&gt;Five Things You Should Know About HTML5&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://diveintohtml5.org/peeks-pokes-and-pointers.html"&gt;HTML5 Peeks, Pokes and Pointers&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.amazon.com/HTML5-Up-Running-Mark-Pilgrim/dp/0596806027"&gt;HTML5: Up and Running&lt;/a&gt;, at last. Contrary to popular belief, this was not a difficult book to write. The writing part was relatively easy. It was all the not-writing that took up so much of my time.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The phrase “implausibly illustrated” garnered virtually no hits before I published that piece on Web Workers, and now &lt;a href="http://www.google.com/search?q=%22implausibly+illustrated%22"&gt;I totally own it&lt;/a&gt;. Could be the start of a new brand, if I cared about that sort of thing. Which I totally don’t. Unrelated: you should all be reading &lt;a href="http://tweetagewasteland.com/"&gt;Tweetage Wasteland&lt;/a&gt; and then unplugging everything you own, just like I am and have. True fact: I am blogging this on paper while playing Prince of Persia on a solar-powered Apple //e. Oh yeah. Just kidding about the solar part.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1275061695525">
+		<id gr:original-id="tag:diveintomark.org,2010-05-28:/archives/20100528153255">
+			tag:google.com,2005:reader/item/8f8ef2b10c106756
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="lighthouse" scheme="http://diveintomark.org" />
+		<title type="html">
+			Me, but you, but me
+		</title>
+		<published>
+			2010-05-28T15:32:55Z
+		</published>
+		<updated>
+			2010-05-28T19:46:04Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/05/28/of-course" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/05/28/of-course" xml:lang="en" type="html">
+			&lt;p&gt;I’ve been active online for 9 years now. With one exception, nothing I’ve done online has brought me closer to making 25-year friends. Life online rewards breadth, not depth. As gratifying as it may be to have 1 million “visitors” read at least one word of my latest online book, chances are none of those visitors will turn into people who turn into friends who turn into 25-year friends.&lt;/p&gt; &lt;p&gt;How many 25-year friends can you hope to make in one lifetime? 25 years is a long time. That’s half of a short life, a third of a normal life, or a quarter of an extraordinary life. Depending on when you start counting, 25 years might include some or all of growing up, graduating from multiple schools, getting married (or remarried), having (and raising) kids, changing jobs, or changing careers.&lt;/p&gt; &lt;p&gt;But a 25-year friend is not just “a friend for 25 years.” It’s not the passage of time that matters as much as the “of course”-ness of it all. Of course I want to hear about your breakup. Of course you can come over anytime. Of course I’ll help you move. Of course you’ll be my best man, and I yours. Of course we’ll be each other’s godfathers. Of course you’ll “lend” me some money when I hit hard times. 25 years of “of course.”&lt;/p&gt; &lt;p&gt;And in the end, and I mean the very end, of course you’ll come visit me when I’m all but paralyzed. Of course you’ll go outside to throw a ball around with my son while the paramedics take me off to the hospital, again. After I can’t so much as lift my legs, of course you’ll sit with me in the hospital and help me get comfortable every five minutes. After I can’t feed myself, of course you’ll ignore the doctor’s orders and sneak in some cheese bisque and feed me one spoonful at a time. And after I can’t change myself, of course you’ll call the nurse to say there’s shit running down my leg, and of course you’ll stick around to help the nurse roll me over so she can wipe me down, then roll me back so she can change my sheets.&lt;/p&gt; &lt;p&gt;A good friend will help you move. A great friend will help you move a body. A 25-year friend will help you move your own body, if that’s all that’s left to do.&lt;/p&gt; &lt;p&gt;And when the nurse asks, “Family? Friend?” of course you’ll say, “25-year friend.” And she’ll say, “25-year friend. What a thing. What a thing to be.”&lt;/p&gt; &lt;p&gt;In the end, how many 25-year friends can you hope to make in one lifetime? How many do you really need? I would have said “only one,” but it turns out what I meant was &lt;em&gt;“one who will outlive me.”&lt;/em&gt;&lt;/p&gt; &lt;p&gt;So, two.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1271739521940">
+		<id gr:original-id="tag:diveintomark.org,2010-04-20:/archives/20100420041645">
+			tag:google.com,2005:reader/item/623febbf4cd986c2
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="addiction" scheme="http://diveintomark.org" />
+		<title type="html">
+			Ellipsis
+		</title>
+		<published>
+			2010-04-20T04:16:45Z
+		</published>
+		<updated>
+			2010-04-20T17:12:46Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/04/19/furnished-souls-a-soaling" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/04/19/furnished-souls-a-soaling" xml:lang="en" type="html">
+			&lt;p&gt;“No” begets “no tolerance” begets “low tolerance” begets “hello, tolerance” begets “hellish tolerance” begets “hell” begets a lifetime of deceit. It happens so slowly, you can’t pinpoint a conscious choice. Cement sets faster than addiction, but it also happens so quickly, you can’t even catch your breath. That’s a comfortable conceit. It’s neither, it’s both, it’s everything in between.&lt;/p&gt; &lt;p&gt;Enamored with the illusion of free will, critics denounce the passive voice and place all the blame on the individual. All the while, no one can answer the question of why anyone would voluntarily choose such a life. Fealty to the religion of rugged individualism gives way to the religion of recovery. Rye, the catcher therein, and all that. At least Salinger had the decency to withdraw from the public eye.&lt;/p&gt; &lt;p&gt;Yellow journalism latches on to a single story of spiraling down and climbing up, and extrapolates to all manner of circumstances. Escaping the cycle is the key, that’s true, but nobody writes about the relapse. “See Dick down, see Dick up. Up, Dick, up… and so on.” Only next month, Dick will spiral down again, and no one will be there to write a followup because that doesn’t fit the narrative. Venerable this tradition ain’t; venemous is more like it. Itching for the next fix makes our delicate readers uncomfortable. Leave that part on the cutting room floor; the only story we can stomach is the one about redemption. Only the glorious upswing, never the hellish path. There’s no need to trouble these comfortable minds and furnished souls with disquieting thoughts of the restless volcano.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1269927260305">
+		<id gr:original-id="tag:diveintomark.org,2010-03-30:/archives/20100330023036">
+			tag:google.com,2005:reader/item/9eec17415ae4ff0b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" />
+		<title type="html">
+			One
+		</title>
+		<published>
+			2010-03-30T02:30:36Z
+		</published>
+		<updated>
+			2010-03-30T02:32:07Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/03/29/aka" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/03/29/aka" xml:lang="en" type="html">
+			&lt;p&gt;Fresh from being chastised for expressing my personal opinion, on my personal blog and other strictly personal venues, about matters that may, or may not, ever intersect the realm of the impersonal a.k.a. corporate, I take a detour into the strictly, perhaps overly, personal, viz. how to talk to my own children about the dangers of drugs that I myself have taken — both medicinally and recreationally — and the many others that I have not, only to receive emails and IMs via impersonal a.k.a. corporate media from strangers-but-strictly-speaking-coworkers asking if everything is OK over there in personal-land.&lt;/p&gt; &lt;p&gt;Nearly simultaneously, I discover in a roundabout way that other strangers in “personal-land” have tweeted about said blog and someone else has read it and asked if anyone else knows me in real life and someone else has looked up where I live and someone else has called the Apex PD and a very nice police officer who says that he has read the things I have posted on my… “blawg”… as if it was the first time he’d ever uttered the word out loud, which, in all fairness, it might well have been, and who asks, as politely as one can ask such a thing, whether I plan to kill myself before lunchtime.&lt;/p&gt; &lt;p&gt;The very next day, and on many other days before it, I travel great distances to speak at conferences at the behest of, and as a representative of, my employer, where I say many fine and wonderful things on their behalf, to many accolades, after which strangers send me email and IMs and tweets and generally contact me via what I would like to consider personal venues, to ask me followup questions about the topics on which I spoke on behalf of my employer, including but not limited to whether I would be willing to speak at yet more conferences and risk having the entire cycle repeat itself. I say “yes” sometimes, and “no” other times, but the path by which such requests make their way into my brain is not one of the factors in determining the outcome.&lt;/p&gt; &lt;p&gt;My attempts at compartmentalization have failed. There is only one inbox.&lt;/p&gt; &lt;p&gt;On the down side (that was the up side), there is no “off the clock.” There is no “not on company time.” There is no “not speaking on behalf of…” Disclaimers to the contrary are commonplace, well-rehearsed, and futile. Technologies that “help” us to link our disparate personas will inevitably intertwine them with our impersonas too. There are no “strictly personal venues.” And when nothing can be said without being misconstrued, there is nothing left to be said.&lt;/p&gt; &lt;p&gt;My attempts at compartmentalization have failed. There is only one outbox.&lt;/p&gt; &lt;p&gt;I am big tired.&lt;/p&gt; &lt;p&gt;&lt;small&gt;Disclaimer: the opinions expressed here are mine and do not necessarily reflect the opinions of my employer. Like that fucking matters.&lt;/small&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1268770742428">
+		<id gr:original-id="tag:diveintomark.org,2010-03-16:/archives/20100316195714">
+			tag:google.com,2005:reader/item/b43e3e2645c5542c
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="flash" scheme="http://diveintomark.org" /><category term="html5" scheme="http://diveintomark.org" /><category term="ie" scheme="http://diveintomark.org" />
+		<title type="html">
+			Virtually acidic
+		</title>
+		<published>
+			2010-03-16T19:57:14Z
+		</published>
+		<updated>
+			2010-03-16T20:02:34Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/03/16/state-of-cautious-optimism" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/03/16/state-of-cautious-optimism" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://www.redoxx.com/Airline-Carry-On-Luggage/Sky-Train/91019/100/Product"&gt;My last suitcase&lt;/a&gt; (&lt;a href="http://diveintomark.org/archives/2008/11/03/the-pursuit-of-happiness"&gt;context&lt;/a&gt;)&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.fontsquirrel.com/fontface/generator"&gt;Multiformat web font generator&lt;/a&gt; (&lt;a href="http://twitter.com/FontSquirrel/status/10383554651"&gt;via&lt;/a&gt;)&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.thibault.org/fonts/essays/"&gt;Essays: no more filled Os&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://code.google.com/p/flashblockdetector/"&gt;Detect whether your visitors have an active Flash blocker&lt;/a&gt; (&lt;a href="http://github.com/Modernizr/Modernizr/issues#issue/48"&gt;for Modernizr&lt;/a&gt;)&lt;/li&gt; &lt;li&gt;&lt;a href="http://blogs.msdn.com/ie/archive/2010/03/16/html5-hardware-accelerated-first-ie9-platform-preview-available-for-developers.aspx"&gt;IE9: Acid3! SVG! XHTML! … no &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://msdn.microsoft.com/en-us/ie/ff468705.aspx"&gt;IE9 now slightly more acidic&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.tbray.org/ongoing/When/201x/2010/03/15/Joining-Google"&gt;Tim joins Google&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://radar.oreilly.com/2010/03/why-html5-is-worth-your-time.html"&gt;HTML5: it’s worth your time&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://dev.opera.com/articles/view/everything-you-need-to-know-about-html5-video-and-audio/"&gt;Everything you need to know about HTML5 video&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://twitter.com/IE/status/10577927335"&gt;IE9: “we’re going to support the H.264 video codec.”&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;(just felt like a good old-fashioned linkdump)&lt;/p&gt; &lt;p&gt;Oh, and here’s one more relevant — albeit belated — link:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Pi_Day"&gt;Happy Pi Day&lt;/a&gt;!&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1268038024526">
+		<id gr:original-id="tag:diveintomark.org,2010-03-08:/archives/20100308055251">
+			tag:google.com,2005:reader/item/8fce2c7d11c4e7be
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="addiction" scheme="http://diveintomark.org" /><category term="lighthouse" scheme="http://diveintomark.org" />
+		<title type="html">
+			Eulogy for a writer
+		</title>
+		<published>
+			2010-03-08T05:52:51Z
+		</published>
+		<updated>
+			2010-03-12T01:30:18Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/03/08/enough-cries-the-future" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/03/08/enough-cries-the-future" xml:lang="en" type="html">
+			&lt;p&gt;Everyone is what they preach: pragmatism, fatalism, pessimism. My end is contained in my beginning: predestined, foreshadowed, prescribed. &lt;a href="http://store.theonion.com/product/drugs-win-drug-war-1998,189/" title="The Onion uber alles"&gt;Drugs win drug war&lt;/a&gt;. Recalling a lifetime of &lt;a href="http://www.google.com/search?q=%22selective+self-destruction%22" title="a surprisingly uncommon phrase"&gt;selective self-destruction&lt;/a&gt;, I die alone, simultaneously over– and under-medicated.&lt;/p&gt; &lt;p&gt;Death is another day; the object of life is to cheat it. “&lt;a href="http://www.ftrain.com/self_in_time_backwards.html" title="that is the secret of growing old, that you can play your past and present like a piano"&gt;The years are like octaves&lt;/a&gt;, scales descending the keyboard.” Days, months, years, a process of continually arrested falling. Gravity, thou art a heartless bitch. How can you keep from falling forever? Ridiculous. So at last, the future cries “Enough!” and slams its fist on the &lt;a href="http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" title="with apologies of Douglas R. Hofstadter"&gt;acrostic&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Moirae" title="the three Fates"&gt;Clotho, Lachesis, Atropos&lt;/a&gt;. Someday my funeral will be videotaped and released under a Creative Commons license. Eulogy for a writer: viewed 1 time. Even Chapin did better than that. “&lt;a href="http://www.lyricsmode.com/lyrics/h/harry_chapin/coreys_coming.html" title="Corey&amp;#39;s Coming"&gt;The scene at the graveyard&lt;/a&gt;, just three of us were there / Me and the gravedigger, we heard the parson’s prayer / He said we need not grieve for this man, for we know that God cares.” So at last, the future cries “Enough!” and slams its fist six feet into the ground.&lt;/p&gt; &lt;p&gt;Drug abuse is punishable by &lt;a href="http://diveintomark.org/archives/2010/02/26/great-writers-can-be-punished-by-twenty-years-of" title="Bank bank bank robbery"&gt;twenty years in federal prison&lt;/a&gt;. Never ends, that drug war; it just goes round and round. Don’t do drugs, kids, unless you want to end up like Michael Phelps — eight gold medals BUT NO FUCKING CEREAL CONTRACT. That’s a tossup.&lt;/p&gt; &lt;p&gt;Parenting is tough. How do I explain that drugs are bad but I turned out okay? Yet I still expect to die from them someday, but maybe not this year because I’m &lt;a href="http://addictionis.org/" title="still crazy after all these years"&gt;currently between addictions&lt;/a&gt;? Since before they were born, their daddy’s medicine cabinet has been full of drugs, but those don’t count because they’re legal. Like Oxy? Yeah, that’s Schedule II and addictive as fuck, but it’s all good if a doctor scribbles something on a piece of paper. Really? You don’t remember that lesson from health class in junior high? Hmm, must’ve been sick that week.&lt;/p&gt; &lt;p&gt;Kids-of-the-future-who-have-learned-to-read, there’s no Oxy in the medicine cabinet. Three other daily medications, yes. Schedule II painkillers, no. Or even Schedule III. I did have something strong when I had that kidney stone for a month, though. How can you have a kidney stone for a whole month, I hear you cry? You don’t want to know. Weeks in constant pain, and the motherfucker just Would Not Pass. Surgeons had to go in after it. Through… the… anyway, it was unpleasant is what I’m saying. Got to spend several weeks in bed, on so many painkillers I couldn’t sleep or shit anymore, all because some 6-millimeter motherfucking lump got stuck in some less-than-6-millimeter motherfucking passageway that I had problems even motherfucking pronouncing. Growing old is &lt;a href="http://www.zazzle.com/css_is_awesome_mug-168716435071981928" title="just like CSS"&gt;awesome&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;“Enough!” cries the future, and slams its fist on the malapropism.&lt;/p&gt; &lt;p&gt;“My Corey’s coming / No more sad stories coming.”&lt;/p&gt; &lt;p&gt;God, if you’re listening, this guy’s walking down a street, when he falls in a hole. Everything else is great, but this hole, God, it makes no sense to me. Every time I try to fill it, it just gets deeper. Realized that a long time ago, standing at the bottom looking up. Probably could’ve benefited from a warning sign at the top, is what I’m saying. Gods, games, and legerdemain. “&lt;a href="http://www.gutenberg.org/etext/7849" title="Kafka is so terribly underrated"&gt;Nobody else could have fallen in this way&lt;/a&gt;, as this hole was meant only for you.” Utter tripe, balderdash, sound and fury, stuff and nonsense.&lt;/p&gt; &lt;p&gt;Eulogy for a writer: I guess he finally got the last word.&lt;/p&gt; &lt;p&gt;Don’t take it too seriously. You’ll never make it out alive.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1267678305020">
+		<id gr:original-id="tag:diveintomark.org,2010-03-04:/archives/20100304041900">
+			tag:google.com,2005:reader/item/b014ac59adfd6766
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="gaming" scheme="http://diveintomark.org" />
+		<title type="html">
+			Ribbon Hero is the future
+		</title>
+		<published>
+			2010-03-04T04:19:00Z
+		</published>
+		<updated>
+			2010-03-05T02:48:19Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/03/03/microgames" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/03/03/microgames" xml:lang="en" type="html">
+			&lt;p&gt;Several things:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://lostgarden.com/2010/01/ribbon-hero-turns-learning-office-into.html"&gt;Ribbon Hero turns learning Office into a game&lt;/a&gt;. Sounds like the worst game ever to me, but &lt;a href="http://www.officelabs.com/Lists/Posts/Post.aspx?ID=90"&gt;it’s been downloaded 32,000 times&lt;/a&gt;, so what do I know?&lt;/li&gt; &lt;li&gt;&lt;a href="http://exogen.github.com/nose-achievements/"&gt;Unit Testing Achievements&lt;/a&gt;. It’s unclear whether this is a joke. It hits the same blind spot as &lt;a href="http://eis-blog.ucsc.edu/2010/02/space-invaders-enterprise-edition/"&gt;Space Invaders Enterprise Edition&lt;/a&gt;. It’s &lt;em&gt;just believable enough&lt;/em&gt; that you can’t rule it out &lt;i&gt;a priori&lt;/i&gt;. (Update: apparently neither of these is a joke.)&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.krazydad.com/blog/2010/02/mayor-of-the-north-pole/"&gt;Mayor of the North Pole&lt;/a&gt; chronicles one man’s journey to hack the &lt;a href="http://foursquare.com/"&gt;Foursquare&lt;/a&gt; &lt;abbr&gt;API&lt;/abbr&gt; and &lt;a href="http://latimesblogs.latimes.com/technology/2010/02/confessions-of-a-foursquare-cheater.html"&gt;piss off a lot of people&lt;/a&gt; who were proud of being the “mayor” of their neighborhood Starbucks.&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.reddit.com/help/awards"&gt;Reddit Awards&lt;/a&gt; are designed to encourage specific behavior, like voting on articles in the /new queue or posting great comments. There is &lt;a href="http://www.reddit.com/awards"&gt;a daily honor roll of winners&lt;/a&gt;.&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.gamasutra.com/blogs/GregMcClanahan/20091202/3709/Achievement_Design_101.php"&gt;Achievement Design 101&lt;/a&gt;, from the guy who creates site-wide achievements on &lt;a href="http://www.kongregate.com/"&gt;Kongregate&lt;/a&gt;.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;I was never a big player of video games growing up, but I’ve recently gotten engrossed in them by way of my children. My older son plays New Super Mario Bros. Wii with me. Having finished all the worlds together, I find myself going back and collecting the “Star Coins,” of which there are 3 on each level. Some are cleverly hidden, others are out in the open but difficult to get. Collecting them unlocks in-game hint movies, all of which are more easily playable on Youtube — &lt;em&gt;even my six-year-old son knows this&lt;/em&gt; — but still, I spend hours collecting them, and he high-fives me whenever I unlock a new movie.&lt;/p&gt; &lt;p&gt;It pains me to think that he might grow up doing the same with his cubicle-mates around some future version of Ribbon Hero and some future version of Office, but I suspect that’s the direction we’re headed.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1267423619729">
+		<id gr:original-id="tag:diveintomark.org,2010-03-01:/archives/20100301045047">
+			tag:google.com,2005:reader/item/9c5d8457b8d10850
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="android" scheme="http://diveintomark.org" />
+		<title type="html">
+			In pursuit of root
+		</title>
+		<published>
+			2010-03-01T04:50:47Z
+		</published>
+		<updated>
+			2010-03-01T12:26:34Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/02/28/android-extravaganza" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/02/28/android-extravaganza" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://twitter.com/timbray/status/9801470243"&gt;Tim Bray asks&lt;/a&gt; how to root the &lt;a href="http://www.google.com/phone/"&gt;Nexus One&lt;/a&gt;. The process is a bit complicated, but (unlike most other Android phones) it does not rely on exploiting security holes. &lt;a href="http://androidandme.com/2010/01/hacks/video-how-to-unlock-and-root-a-nexus-one/"&gt;Android and Me has a great tutorial&lt;/a&gt;, so I won’t repeat the gory details here. The key is in step 1, the &lt;code&gt;fastboot oem unlock&lt;/code&gt; command. This does two important things:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Allows you to install custom “recovery” firmware (of which more in a moment).&lt;/li&gt; &lt;li&gt;Irrevocably voids your warranty. Seriously, this trips a “security” bit somewhere deep within the phone that &lt;a href="http://forum.xda-developers.com/showthread.php?t=613842"&gt;no one has been able to reset&lt;/a&gt;. Once you run &lt;code&gt;fastboot oem unlock&lt;/code&gt;, your carrier will be able to tell that you did it, and they can (and most likely will) deny you service if you send your phone in for repair.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;(I am aware that there are other devices that give you root access from the get-go, but I find this an interesting compromise between the needs of carriers to reduce support costs and the desires of people like me to do whatever they want with their own computers. It’s not an ideal situation, but considering that the only way to root the G1 was to downgrade your OS to a vulnerable version and exploit a gaping security hole, the N1 is certainly a step in the right direction.)&lt;/p&gt; &lt;p&gt;The “recovery” firmware is what installs OS upgrades and other low-level packages. The built-in recovery firmware will only install packages signed by Google. Custom recovery firmwares remove this restriction, allowing you to install a multitude of custom OS packages (colloquially called “ROMs,” despite being read/write). I recommend &lt;a href="http://forum.xda-developers.com/showthread.php?t=611829"&gt;Amon_RA’s recovery firmware&lt;/a&gt;; the Android and Me link has installation details.&lt;/p&gt; &lt;p&gt;Once you have Amon_RA’s recovery firmware installed, you can install essentially anything on your Nexus One, including replacing the entire operating system. The custom recovery firmware also has a number of useful features, including low-level backup and restore functionality (called “NAND backup”) in case you install an bad custom ROM that crashes your phone.&lt;/p&gt; &lt;p&gt;The least invasive thing to install is &lt;a href="http://forum.xda-developers.com/showthread.php?t=613812"&gt;Cyanogen’s N1 Addon&lt;/a&gt;. This is not a full OS replacement; it simply installs the all-important &lt;code&gt;su&lt;/code&gt; binary and a userland application called “Superuser Permissions,” which lets you manage which applications can have root access. Once Cyanogen’s N1 Addon is installed, you can search the Android Market for things that require root access. Three that I have installed right now:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;N1 Torch, which uses the camera flash bulb on the back of the phone as a super-bright flashlight. (Seriously, this alone is worth the hassle of rooting your phone.)&lt;/li&gt; &lt;li&gt;AdFree, which overwrites your phone’s &lt;code&gt;/etc/hosts&lt;/code&gt; file to remove selected in-app and in-browser advertising.&lt;/li&gt; &lt;li&gt;&lt;a href="http://code.google.com/p/android-wifi-tether/"&gt;Wireless Tether for Root Users&lt;/a&gt;, which turns your phone into a wireless hotspot for your laptop or other computers.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If you want to go further, you can install a complete OS replacement. I personally use &lt;a href="http://forum.cyanogenmod.com/index.php?/topic/150-cyanogenmod-for-nexus-one-v5041-02272010/"&gt;Cyanogenmod&lt;/a&gt;. Another solid contender is &lt;a href="http://forum.xda-developers.com/showthread.php?t=614427"&gt;Enomther’s “TheOfficial” Nexus1&lt;/a&gt;, which focuses on customizability. (Open the terminal app and run &lt;code&gt;expsetup&lt;/code&gt;.) There are others, but I haven’t experimented with them.&lt;/p&gt; &lt;p&gt;The place to be to learn more about modding your Nexus One is the &lt;a href="http://forum.xda-developers.com/forumdisplay.php?f=559"&gt;xda-developers forum&lt;/a&gt;. Their &lt;a href="http://forum.xda-developers.com/showthread.php?t=619153"&gt;adb/fastboot/bootloader/android 101 newbie guide&lt;/a&gt; is essential reading; it explains all the terminology that modders use, as well as the most common &lt;code&gt;adb&lt;/code&gt; and &lt;code&gt;fastboot&lt;/code&gt; commands.&lt;/p&gt; &lt;p&gt;[Standard disclaimer: I work for Google, which develops Android and sells the Nexus One. Google gave me a Nexus One as a holiday gift last year, and I've been using it ever since.]&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1267165352810">
+		<id gr:original-id="tag:diveintomark.org,2010-02-26:/archives/20100226052431">
+			tag:google.com,2005:reader/item/9d202c7060ebee87
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="lighthouse" scheme="http://diveintomark.org" />
+		<title type="html">
+			Quod erat demonstrandum’d
+		</title>
+		<published>
+			2010-02-26T05:24:31Z
+		</published>
+		<updated>
+			2010-02-27T15:27:08Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/02/26/great-writers-can-be-punished-by-twenty-years-of" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/02/26/great-writers-can-be-punished-by-twenty-years-of" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://diveintomark.org/archives/2010/02/24/the-game-is-afoot"&gt;The appendices of the CSS specification are in alphabetical order&lt;/a&gt; was one of those posts that gets stuck, trapped in your head for several days. Ideas bubble, but nothing will form shapes of words or sentences proper. But that phrase seemed to be rhythmically, well, &lt;em&gt;soothing&lt;/em&gt;. Words make rhythm and music. More accurately, &lt;em&gt;syllables&lt;/em&gt; have rhythm; words and sentences, music. &lt;em&gt;Great&lt;/em&gt; writers can take liberties with them all, mixing silence in with the banter. (Parentheses and) &lt;em&gt;emphasis&lt;/em&gt; like Word. Caps. are tricks for unspoken words. &lt;p&gt;This sentence was the first that I wrote (I added links to Hofstadter later): &lt;blockquote&gt; &lt;p&gt;The appendices of the CSS &lt;b&gt;2.1&lt;/b&gt; specification are in alphabetical order. &lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;Head-scratchingly, it felt like it was… off. Why? The number syllables wrecked it. &lt;blockquote&gt; &lt;p&gt;The appendices of the CSS &lt;del&gt;2.1&lt;/del&gt; specification are in alphabetical order. &lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;Then, suddenly, it was clear to me why &lt;em&gt;this&lt;/em&gt; version had familiar rhythm. Here: &lt;a href="http://en.wikipedia.org/wiki/Einstein_on_the_Beach"&gt;Einstein on the Beach&lt;/a&gt;, which is a song sung for kooks and lunatic madmen. (No, seriously, listening to just one of the acts is plenty to start with.) &lt;a href="http://www.last.fm/music/Philip+Glass/_/Act%2BIII%252C%2BScene%2B1%253A%2BTrial%252FPrison"&gt;Scene one in the third&lt;/a&gt; is like a chant — mixing, blending, jumbling parts of &lt;blockquote&gt; &lt;p&gt;Bank robbery is punishable by twenty years in federal prison. &lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;First, count in your head where the words, stresses, breaks, and “notes” are occurring. &lt;blockquote style="font-family:monospace;font-style:normal"&gt; &lt;p&gt;&lt;b&gt;BANK&lt;/b&gt; · &lt;b&gt;ROB&lt;/b&gt; · ber · y · is · &lt;b&gt;PUN&lt;/b&gt; · ish · a · ble · &lt;b&gt;BY&lt;/b&gt; · &lt;b&gt;TWEN&lt;/b&gt; · ty · &lt;b&gt;YEARS&lt;/b&gt; · in · &lt;b&gt;FED&lt;/b&gt; · er · al · &lt;b&gt;PRIS&lt;/b&gt; · on &lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;Now listen to the emphasis in &lt;em&gt;my&lt;/em&gt; phrasing, matching syllables loosely. &lt;blockquote style="font-family:monospace;font-style:normal"&gt; &lt;pre&gt; &lt;b&gt;THE&lt;/b&gt; · ap · &lt;b&gt;PEN&lt;/b&gt; · di · ces · of · the · &lt;b&gt;BANK&lt;/b&gt; · · &lt;b&gt;ROB&lt;/b&gt; · ber · y · is · &lt;b&gt;C&lt;/b&gt; · s · s · &lt;b&gt;SPEC&lt;/b&gt; · i · fi · &lt;b&gt;PUN&lt;/b&gt; · ish · a · ble · &lt;b&gt;BY&lt;/b&gt; · &lt;b&gt;CA&lt;/b&gt; · tion · are · in · &lt;b&gt;AL&lt;/b&gt; · pha · &lt;b&gt;TWEN&lt;/b&gt; · ty · · &lt;b&gt;YEARS&lt;/b&gt; · in · &lt;b&gt;BET&lt;/b&gt; · i · cal · &lt;b&gt;OR&lt;/b&gt; · der &lt;b&gt;FED&lt;/b&gt; · er · al · &lt;b&gt;PRIS&lt;/b&gt; · on&lt;/pre&gt;&lt;/blockquote&gt; &lt;p&gt;Stacked vertically, phrases become chords, measures marking time like a foot tap. &lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;THE&lt;/b&gt;&lt;td&gt;&lt;b&gt;BANK&lt;/b&gt; &lt;tr&gt;&lt;td&gt;ap&lt;td&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;PEN&lt;/b&gt;&lt;td&gt;&lt;b&gt;ROB&lt;/b&gt; &lt;tr&gt;&lt;td&gt;di&lt;td&gt;ber &lt;tr&gt;&lt;td&gt;ces&lt;td&gt;y &lt;tr&gt;&lt;td&gt;of&lt;td&gt;is &lt;tr&gt;&lt;td&gt;the&lt;td&gt; &lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; &lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;C&lt;/b&gt;&lt;td&gt;&lt;b&gt;PUN&lt;/b&gt; &lt;tr&gt;&lt;td&gt;s&lt;td&gt;ish &lt;tr&gt;&lt;td&gt;s&lt;td&gt;a &lt;tr&gt;&lt;td&gt;&lt;td&gt;ble &lt;tr&gt;&lt;td&gt;&lt;b&gt;SPEC&lt;/b&gt;&lt;td&gt;&lt;b&gt;BY&lt;/b&gt; &lt;tr&gt;&lt;td&gt;i&lt;td&gt; &lt;tr&gt;&lt;td&gt;fi&lt;td&gt; &lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; &lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;CA&lt;/b&gt;&lt;td&gt;&lt;b&gt;TWEN&lt;/b&gt; &lt;tr&gt;&lt;td&gt;tion&lt;td&gt;ty &lt;tr&gt;&lt;td&gt;are&lt;td&gt; &lt;tr&gt;&lt;td&gt;in&lt;td&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;AL&lt;/b&gt;&lt;td&gt;&lt;b&gt;YEARS&lt;/b&gt; &lt;tr&gt;&lt;td&gt;pha&lt;td&gt;in &lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; &lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;BET&lt;/b&gt;&lt;td&gt;&lt;b&gt;FED&lt;/b&gt; &lt;tr&gt;&lt;td&gt;i&lt;td&gt;er &lt;tr&gt;&lt;td&gt;cal&lt;td&gt;al &lt;tr&gt;&lt;td&gt;&lt;b&gt;OR&lt;/b&gt;&lt;td&gt;&lt;b&gt;PRIS&lt;/b&gt; &lt;tr&gt;&lt;td&gt;der&lt;td&gt;on &lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; &lt;br style="clear:left"&gt; &lt;blockquote&gt; &lt;p&gt;Bank robbery is punishable by twenty alphabetical orders. &lt;p&gt;The appendices of the CSS spec, twenty years in federal prison. &lt;p&gt;Bank robbery was sleeping on the couch, twenty years of unspoken words. &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;I just recently was sleeping on the couch, music playing. Could I have dreamt it? &lt;blockquote&gt; &lt;p&gt;Bank robbery is punishable by twenty years of lunatic madmen. &lt;p&gt;The appendices of the CSS specification are carried everywhere with me. &lt;p&gt;Bank robbery is punished &lt;p&gt;Bank robbery &lt;p&gt;But but but doubtlessly, that’s where it’s from: twenty years of familiar rhythm. &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;Or, is there a simpler cause? Twenty years of hearing that piece, now &lt;em&gt;my&lt;/em&gt; brain is rewired to hear music, carried everywhere with me. &lt;blockquote&gt; &lt;p&gt;Bank robbery is punishable by stresses, breaks, and federal prison. &lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;But, doubtlessly, that’s where it’s from: Philip Glass’ “Einstein on the Beach.” &lt;blockquote&gt; &lt;p&gt;Bank robbery is punishable by mixing, blending, jumbling parts of &lt;p&gt;&lt;em&gt;Great&lt;/em&gt; writers can be punished by twenty years of &lt;p&gt;Bank robbery &lt;p&gt;Bank bank bank robbery is punishable by twenty years of specification. &lt;p&gt;Hey Mr. Bojangles, &lt;p&gt;Hey Mr. Bojangles. &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1267135668342">
+		<id gr:original-id="tag:diveintomark.org,2010-02-25:/archives/20100225205504">
+			tag:google.com,2005:reader/item/f67da53357a2ba29
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" /><category term="ubuntu" scheme="http://diveintomark.org" /><category term="yahoo" scheme="http://diveintomark.org" />
+		<title type="html">
+			Ubuntu and Yahoo
+		</title>
+		<published>
+			2010-02-25T20:55:04Z
+		</published>
+		<updated>
+			2010-04-08T03:04:53Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/02/25/exactly-the-same-except-for-yahoo" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/02/25/exactly-the-same-except-for-yahoo" xml:lang="en" type="html">
+			&lt;p&gt;&lt;strong&gt;UPDATE 2010-04-07:&lt;/strong&gt; &lt;a href="https://lists.ubuntu.com/archives/ubuntu-desktop/2010-April/002554.html"&gt;never mind&lt;/a&gt;&lt;p&gt; &lt;p&gt;Original post follows…&lt;/p&gt; &lt;hr&gt; &lt;p&gt;&lt;a href="https://lists.ubuntu.com/archives/ubuntu-devel/2010-January/030065.html"&gt;Rick Spencer, Canonical&lt;/a&gt; (emphasis added):&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;[Ubuntu Lucid] is changing the default search provider in Firefox to Yahoo! … I am pursuing this change because Canonical has negotiated a revenue sharing deal with Yahoo! and this revenue will help Canonical to provide developers and resources to continue the open development of Ubuntu and the Ubuntu Platform. This change will help provide these resources as well as &lt;strong&gt;continuing to respect our user’s default search across Firefox&lt;/strong&gt;.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;a href="https://lists.ubuntu.com/archives/ubuntu-devel/2010-January/030070.html"&gt;Celeste Lyn Paul, KDE&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Since Google is the current default, will the switch to Yahoo only have an effect on new installs?&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;a href="https://lists.ubuntu.com/archives/ubuntu-devel/2010-January/030068.html"&gt;Rick Spencer, Canonical&lt;/a&gt; (emphasis added):&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;No, &lt;strong&gt;this will effect [sic] upgrades if the computer is currently set to Google&lt;/strong&gt;. This is not because of anything special for this particular change. This is because Ubuntu always changes to new defaults for users who are on old defaults.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;a href="https://lists.ubuntu.com/archives/ubuntu-devel/2010-January/030113.html"&gt;Martin Owens&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;I have a thought, does changing this default setting in Firefox break Mozilla’s branding rules? I assume that the lawyers have gone over it already, but you know what Mozilla are like for trying to make sure that Firefox is exactly the same as the one their [sic] release.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;a href="https://lists.ubuntu.com/archives/ubuntu-devel/2010-January/030112.html"&gt;Rick Spencer, Canonical&lt;/a&gt; (emphasis added):&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;The answer is “no”. I don’t know if lawyers went over it, but as I said in a previous response, we work with the Mozilla team, and this was discussed with them, they were not surprised. We would not do something to Firefox that would violate Mozilla’s rules, and &lt;strong&gt;we for sure wouldn’t make a change like this without discussing with them first&lt;/strong&gt;.&lt;/p&gt; &lt;p&gt;In sum don’t worry, all is fine with our relationship with Mozilla ;)&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Leaving comments closed because I work for Google and we have a &lt;a href="http://blog.lizardwrangler.com/2008/08/26/firefox-summit-reflections/"&gt;similar revenue sharing deal with Mozilla&lt;/a&gt;. I just wanted to highlight two aspects of this deal that didn’t seem to get emphasized when the news broke last month.&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1267081494502">
+		<id gr:original-id="tag:diveintomark.org,2010-02-25:/archives/20100225030750">
+			tag:google.com,2005:reader/item/049462760f61ac83
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="firefox" scheme="http://diveintomark.org" /><category term="licensing" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" />
+		<title type="html">
+			Iceweasel hullabaloo, part eleventy-two
+		</title>
+		<published>
+			2010-02-25T03:07:50Z
+		</published>
+		<updated>
+			2010-02-25T03:18:15Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/02/24/hullabaloo-part-eleventy-two" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/02/24/hullabaloo-part-eleventy-two" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a title="The last non-free graphics files in Firefox are now licensed under the MPL." href="https://bugzilla.mozilla.org/show_bug.cgi?id=541761#c3"&gt;At last&lt;/a&gt;!&lt;br&gt; &lt;a title="The maintainer of Iceweasel, created because of the non-free graphics files, can&amp;#39;t believe the news. Apparently this monumental change was made during a 3.0.x point release." href="http://glandium.org/blog/?p=933"&gt;Hommey aghast&lt;/a&gt;.&lt;br&gt; &lt;a title="Mozilla didn&amp;#39;t exactly go out of their way to call attention to the license change. I mean, like actually telling anyone or anything..." href="http://weblogs.mozillazine.org/gerv/archives/2010/01/packages_and_trademarks_an_observation.html"&gt;Oops, forgot to mention&lt;/a&gt;!&lt;br&gt; &lt;a title="They never even updated the LICENSE files (an oversight which has now been fixed)." href="https://bugzilla.mozilla.org/show_bug.cgi?id=541984#c8"&gt;Finally got your attention&lt;/a&gt;.&lt;br&gt; (&lt;a title="For some inexplicable reason, I am reminded of a famous quote from Hitchhiker&amp;#39;s Guide To The Galaxy." href="http://kaply.com/weblog/2009/04/03/mozilla-no-longer-allows-firefox-community-editions/#comment-865"&gt;Contrast&lt;/a&gt;.)&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1266997316962">
+		<id gr:original-id="tag:diveintomark.org,2010-02-24:/archives/20100224054731">
+			tag:google.com,2005:reader/item/81c2299d9787e256
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="user/16823450566733491518/state/com.google/reading-list" scheme="http://www.google.com/reader/" label="reading-list" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="lighthouse" scheme="http://diveintomark.org" /><category term="muse" scheme="http://diveintomark.org" />
+		<title type="html">
+			The appendices of the CSS specification are in alphabetical order
+		</title>
+		<published>
+			2010-02-24T05:47:31Z
+		</published>
+		<updated>
+			2010-02-26T05:40:51Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" xml:lang="en" type="html">
+			&lt;p&gt;The other day, as I was skimming &lt;a href="http://www.reddit.com/"&gt;Reddit&lt;/a&gt; for my daily fix of &lt;a href="http://www.thestar.com/opinion/article/757917--literacy-is-not-enough-if-content-is-mental-junk-food"&gt;mental junk food&lt;/a&gt;, I stumbled across an old lecture by Douglas R. Hofstadter, &lt;a href="http://prelectur.stanford.edu/lecturers/hofstadter/analogy.html"&gt;Analogy as the Core of Cognition&lt;/a&gt;. A bit of &lt;abbr&gt;URL&lt;/abbr&gt;-hacking then led me to &lt;a href="http://prelectur.stanford.edu/lecturers/hofstadter/"&gt;this introduction of the man himself&lt;/a&gt;, which briefly describes his major works, including &lt;a href="http://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach"&gt;Gödel, Escher, Bach: An Eternal Golden Braid&lt;/a&gt;, which I first read in a delightful Logical Systems class in college, and which will be the only book in my backpack when I get to &lt;a href="http://diveintomark.org/archives/2008/11/03/the-pursuit-of-happiness"&gt;step 7 in my pursuit of happiness&lt;/a&gt;, though by then we need to be able to buy unencumbered &lt;abbr&gt;PDF&lt;/abbr&gt;s of such things, because damn — and I mean this quite literally — that book is heavy. Seriously, Amazon pegs it at &lt;a href="http://www.amazon.com/Godel-Escher-Bach-Eternal-Golden/dp/0465026567"&gt;832 pages and 2.4 pounds&lt;/a&gt;. That’s almost enough reason to buy a Kindle. &lt;a href="http://diveintomark.org/archives/2007/11/19/the-future-of-reading"&gt;Almost&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Hofstadter also wrote a book called &lt;a href="http://en.wikipedia.org/wiki/Metamagical_Themas"&gt;Metamagical Themas&lt;/a&gt;, which before that was the title of a column he wrote for &lt;cite&gt;Scientific American&lt;/cite&gt; in the early 80s. His column was the successor to Martin Gardner’s &lt;a href="http://en.wikipedia.org/wiki/Martin_Gardner#Recreational_mathematics"&gt;Mathematical Games&lt;/a&gt; column, which later served as the inspiration for several of my &lt;a href="http://diveintomark.org/projects/classic/"&gt;early Free Software games&lt;/a&gt;. “Metamagical Themas” is, of course, an anagram of “Mathematical Games,” a fact which I somehow missed until it was pointed out to me by a now-ex-girlfriend for whom Hofstadter was also a literary hero.&lt;/p&gt; &lt;p&gt;Eventually, the introduction led me to &lt;a href="http://prelectur.stanford.edu/lecturers/hofstadter/extras.html"&gt;this page of “Hofstadteriana”&lt;/a&gt;, which includes &lt;a href="http://prelectur.stanford.edu/lecturers/hofstadter/autolipography.html"&gt;Autoportrait with Constraint&lt;/a&gt; (written without the letter E — a feat &lt;a href="http://diveintomark.org/archives/2008/02/05/writing-with-ease"&gt;I have also attempted&lt;/a&gt;), &lt;a href="http://prelectur.stanford.edu/lecturers/hofstadter/imagegallery.html"&gt;a selection of ambigrams&lt;/a&gt; (like optical illusions, but with words), and &lt;a href="http://prelectur.stanford.edu/lecturers/hofstadter/potpourri.html"&gt;this potpourri of other random excerpts&lt;/a&gt;. This essay about &lt;a href="http://prelectur.stanford.edu/lecturers/hofstadter/excerpts.html#gebxx"&gt;what &lt;abbr&gt;GEB:EGB&lt;/abbr&gt; is really all about&lt;/a&gt; is interesting, too.&lt;/p&gt; &lt;p&gt;(Good writing, bad writing, great writing, and the differences between them, &lt;a href="http://diveintomark.org/archives/2004/03/24/x"&gt;is something I’ve discussed here before&lt;/a&gt;. But the letter to the editor described in &lt;a href="http://prelectur.stanford.edu/lecturers/hofstadter/potpourri.html#meta"&gt;For Meta, For Verse&lt;/a&gt; just makes me want to throw away everything I’ve ever written and &lt;a href="http://diveintomark.org/archives/2010/02/23/simplicity-is-hard-lets-go-shopping#comment-13827"&gt;go live in a wooden hut&lt;/a&gt;. Let me put it another way. On a good day, Techcrunch is bad writing. On a bad day, I strive for at least good writing. But what Douglas does is… something else altogether. That poem is proof.)&lt;/p&gt; &lt;p&gt;After reading about ¾ of the introduction page, I noticed that the first word of every paragraph was bolded, and furthermore that the last letter of every paragraph was italicized. Aha! The game is afoot! My suspicions were confirmed shortly thereafter. The initial bolded letters of each paragraph spell out “D-O-U-G-L-A-S-R-H-O-F-S-T-A-D-T-E-R,” which spells “Douglas R. Hofstadter.” But the final italicized letters of each paragraph seemed to spell out nothing at all: “l-a-s-i-p-a-n-y-e-h-t-r-o-w-n-e-l-g.” But of course! If the first letters spell something &lt;em&gt;forwards&lt;/em&gt;, the final letters should spell something &lt;em&gt;backwards&lt;/em&gt;. And so they do: they spell “Glen Worthey napisal.” Checking the page footer confirmed that the entire text was indeed written by one Glen Worthey, and as best as I can tell, “napisal” is a Polish word meaning “author” or “authored.” Glen Worthey wrote this. Aha!&lt;/p&gt; &lt;p&gt;&lt;a href="http://xkcd.com/214/"&gt;Meanwhile&lt;/a&gt;, a bit closer to home, &lt;a href="http://krijnhoetmer.nl/irc-logs/whatwg/20100211#l-939"&gt;I recently learned&lt;/a&gt; that the appendices of &lt;a href="http://www.w3.org/TR/CSS2/#minitoc"&gt;the CSS 2.1 specification&lt;/a&gt; are in alphabetical order. I’m going to repeat that because it’s doubly awesome: &lt;em&gt;the appendices of the CSS specification are in alphabetical order&lt;/em&gt;. “Appendix A. Aural style sheets,” “Appendix B. Bibliography,” “Appendix C. Changes.” Hmm, could be a coincidence. “Appendix D. Default style sheet for HTML 4.” Suspicious, but plausible. “Appendix E. Elaborate description of Stacking Contexts.” OK, now you’re just fucking with me. And so on, up until “Appendix I. Index.” (But, even more interestingly, not including Appendix H (!), which is absent from both the “mini-TOC” and the full table of contents, but which &lt;em&gt;is&lt;/em&gt; present within the text of the specification itself, for example by going to &lt;a href="http://www.w3.org/TR/CSS2/indexlist.html"&gt;Appendix I&lt;/a&gt; and clicking “previous.”)&lt;/p&gt; &lt;p&gt;Early on, I had tried to do something similar while writing &lt;a href="http://diveintopython3.org/"&gt;Dive Into Python 3&lt;/a&gt;. Unfortunately for fans of constrained writing everywhere (both of you), the constant rearranging, merging, adding, and removing chapters led me to abandon that effort. But learning about the easter egg in the CSS spec prompted me to try again, and now if you skim through the online edition, you’ll see that the initial drop caps in each chapter are in alphabetical order from A to U. Maybe it’s not Hofstadterian, but I’ll be damned if I’m going to be outdone by &lt;em&gt;the appendices of the CSS specification&lt;/em&gt;. Still, if the pen is mightier than the sword, I feel like I’m still learning how to unsheath the damn thing and wave it around. And Douglas R. Hofstadter is a level 60 samurai.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

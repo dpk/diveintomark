@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CIyP4vnpkIwC
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CJbCtcbmkI0C" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2007-07-05T16:09:55Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1183651795394">
+		<id gr:original-id="tag:diveintomark.org,2007-07-05:/archives/20070705152331">
+			tag:google.com,2005:reader/item/4939a821598d314c
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Juxtaposition
+		</title>
+		<published>
+			2007-07-05T15:23:31Z
+		</published>
+		<updated>
+			2007-07-05T15:23:31Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/07/05/juxtaposition" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/07/05/juxtaposition/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/07/05/juxtaposition" xml:lang="en" type="html">
+			&lt;p&gt;I was rummaging around the attic looking for my Apple ][e, and I found a 750 GB hard drive instead.&lt;/p&gt; &lt;p&gt;That’s disturbing on so many levels.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1183575415256">
+		<id gr:original-id="tag:diveintomark.org,2007-07-04:/archives/20070704185042">
+			tag:google.com,2005:reader/item/c01fe2e9d80e9a8b
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Baby needs a new pair of wheels
+		</title>
+		<published>
+			2007-07-04T18:50:42Z
+		</published>
+		<updated>
+			2007-07-06T02:43:50Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/07/04/wheels" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/07/04/wheels/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/07/04/wheels" xml:lang="en" type="html">
+			&lt;p&gt;My boy’s got his own bike.&lt;/p&gt; &lt;p&gt;We checked out the local Target and found a size chart but no bikes in his size.&lt;/p&gt; &lt;p&gt;We checked out Amazon.com and found pictures, prices, and free shipping if you can wait 9 days. Also, “some assembly required.” ← If those words don’t strike fear in your heart, just wait until you have kids.&lt;/p&gt; &lt;p&gt;We checked out eBay. L@@K! L@@K! I hate eBay! Moving on.&lt;/p&gt; &lt;p&gt;We checked out the classified ads in &lt;a href="http://www.newsobserver.com/"&gt;our local paper&lt;/a&gt;. No hits for “bicycle.” 11 hits for “bike” — 4 real estate properties (”accessible by bike”), two motorcycles, several adult bikes, and a lawn mower.&lt;/p&gt; &lt;p&gt;Then a friend suggested &lt;a href="http://www.craigslist.org/"&gt;Craigslist&lt;/a&gt;, which I had heard of but never used. Click on &lt;a href="http://raleigh.craigslist.org/"&gt;Raleigh&lt;/a&gt;, then &lt;a href="http://raleigh.craigslist.org/bik/"&gt;Bikes for sale&lt;/a&gt;, then search for &lt;a href="http://raleigh.craigslist.org/search/bik?query=16"&gt;16&lt;/a&gt; (as in 16 inch wheels). 25 bikes for sale. Sent two emails, made one phone call, got directions (go go gadget &lt;a href="http://diveintomark.org/archives/2007/06/20/gps-navigator"&gt;Garmin&lt;/a&gt;), met, tried, bought, went home happy. It even came with training wheels.&lt;/p&gt; &lt;p&gt;I’m sure this says something about something, but since I’m late to the party, I’m going to assume that other people have already made the point.&lt;/p&gt; &lt;p&gt;Seriously though, I would have paid full retail price to avoid assembling it. Ironically, that’s the only option that retail stores &lt;em&gt;don’t&lt;/em&gt; offer.&lt;/p&gt; &lt;p&gt;In all the machinations and excitement, I briefly lost sight of the incredibly amazing fact that &lt;em&gt;my boy’s got his own bike&lt;/em&gt;. He’s very excited. Well, he’s taking a nap now. With his helmet on. But when he wakes up, he’s going to be very excited.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Update&lt;/b&gt; — &lt;a href="http://www.youtube.com/watch?v=5I_cuiRa8rw"&gt;video&lt;/a&gt;:&lt;/p&gt; &lt;iframe src="http://reader.googleusercontent.com/reader/embediframe?src=http://www.youtube.com/v/5I_cuiRa8rw&amp;amp;width=425&amp;amp;height=350" width="425" height="350"&gt;&lt;/iframe&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1183487850308">
+		<id gr:original-id="tag:diveintomark.org,2007-07-03:/archives/20070703160322">
+			tag:google.com,2005:reader/item/2da75de0e59af481
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			The “Project Zero FAQ” FAQ
+		</title>
+		<published>
+			2007-07-03T16:03:22Z
+		</published>
+		<updated>
+			2007-07-03T18:07:01Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/07/03/mother-faq-er" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/07/03/mother-faq-er/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/07/03/mother-faq-er" xml:lang="en" type="html">
+			&lt;blockquote&gt; &lt;h4&gt;What is Project Zero?&lt;/h4&gt; &lt;p&gt;&lt;a href="http://projectzero.org/"&gt;Project Zero&lt;/a&gt; is an incubator project started within IBM that is focused on the agile development of the next generation of dynamic Web applications.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Think &lt;a href="http://www.andrewdavidson.com/gibberish/?companyname=Project+Zero"&gt;Corporate Gibberish Generator&lt;/a&gt; meets &lt;a href="http://www.emptybottle.org/bullshit/"&gt;Web 2.0 Bullshit Generator&lt;/a&gt;.&lt;/p&gt; &lt;blockquote&gt; &lt;h4&gt;Why is it called Project Zero?&lt;/h4&gt; &lt;p&gt;The name Zero is a reminder of the project’s aspirations.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;IBM: we took the “web” out of “web 2.0″. And the “2″. And the dot. And then we managed to make the “0″ more complicated.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Zero unnecessary overhead and complexity.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Pay no attention to the &lt;a href="http://www.projectzero.org/wiki/bin/view/Download/WebHome"&gt;191 MB of prerequisites&lt;/a&gt; behind the curtain. (51 MB Java SDK + 140 MB Eclipse SDK)&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Zero barriers to success.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;For some definition of “success” that &lt;a href="http://www.projectzero.org/wiki/bin/view/Documentation/ZeroFAQ#How_much_does_it_cost"&gt;precludes&lt;/a&gt; using more than 4 cores, running more than 4 instances, or making money.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Zero of what you don’t need.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;…like freedom!&lt;/p&gt; &lt;blockquote&gt; &lt;h4&gt;Can I contribute to Project Zero?&lt;/h4&gt; &lt;p&gt;Contributions to the Zero Core are limited to approved IBM committers. Others may propose changes to the Zero Core, but the changes must be approved and committed by IBM. All intellectual property on such suggestions is owned by IBM.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;In the true spirit of Web 2.0, we’ll let &lt;a href="http://diveintomark.org/archives/2006/10/31/ugc"&gt;you make all the content&lt;/a&gt;, and we’ll keep all the money.&lt;/p&gt; &lt;blockquote&gt; &lt;h4&gt;What is Community Driven Commercial Development?&lt;/h4&gt; &lt;p&gt;&lt;a href="http://www.projectzero.org/wiki/bin/view/Community/JerrysBlog/BlogEntry2"&gt;I see it&lt;/a&gt; as developing in a room with panoramic windows — You can see in, we can see out…&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Do not tap on glass. Stay behind the railing at all times. Avoid flash photography. Do not feed the developers after midnight.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;While the Community Driven Commercial Development process shares many of the benefits of open source projects,&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Except the freedom.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Project Zero is a Commercial endeavor and write access is restricted to IBM approved committers.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;As opposed to open source projects, where even the &lt;a href="http://intertwingly.net/blog/2007/06/29/GPL-Compatible#c1183236685"&gt;janitors&lt;/a&gt; have CVS access.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;In the future IBM may choose to provide commercial offerings if there is demand for support or for use beyond the limits of the current license.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;But dual licensing under the GPL is right out, because the GPL has cooties.&lt;/p&gt; &lt;blockquote&gt; &lt;h4&gt;Does this mean IBM will not be pursuing new open source activities?&lt;/h4&gt; &lt;p&gt;IBM remains committed to open source.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;For &lt;a href="http://mail.gnome.org/archives/gnome-accessibility-list/2007-June/msg00000.html"&gt;some definition of “committed”&lt;/a&gt; that involves taking but not giving.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;That fact that Project Zero is based on a number of open source technologies and that it represents such a significant investment on top of these technologies speaks to IBM’s commitment.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;More than you will ever know.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1183258939682">
+		<id gr:original-id="tag:diveintomark.org,2007-07-01:/archives/20070701023107">
+			tag:google.com,2005:reader/item/2841139e3743e434
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			iRony
+		</title>
+		<published>
+			2007-07-01T02:31:07Z
+		</published>
+		<updated>
+			2007-07-01T02:34:32Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/30/irony" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/30/irony/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/30/irony" xml:lang="en" type="html">
+			&lt;p&gt;1995 — Apple’s “&lt;a href="http://www.digibarn.com/collections/tshirts/big-t-collection/index.html"&gt;Been there, done that&lt;/a&gt;” t-shirt (which I still own, BTW):&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;&lt;b style="background:transparent;color:red"&gt;1984&lt;/b&gt; Macintosh · &lt;i&gt;Graphical User Interface&lt;/i&gt; cut, copy, paste, undo · &lt;i&gt;QuickDraw&lt;/i&gt; bit-mapped graphical display, &lt;b&gt;long file names&lt;/b&gt;, 3.5″ floppy&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;2006 — &lt;a href="http://diveintomark.org/archives/2006/05/30/bye-apple#comment-6527"&gt;anonymous fanboy hating on Linux&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;You’re going from “It just works” to “Hope it works”. … I want the OS to stay out of my way. No f’ing popups and no applications that look completely different from one another with nonstandard behaviors–there should be a standard way to copy and paste something from one window to another and it should work reliably.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;2007 — &lt;a href="http://daringfireball.net/2007/06/iphone_first_impressions"&gt;the iPhone debuts&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;One problem is that the iPhone doesn’t support the concept of selected text. That means you can’t just select a specific portion to quote of the message you’re replying to; nor can you select a chunk of the quoted message and delete it while editing. The only way to delete text is one character at a time (although the keyboard does let you press-and-hold to repeat).&lt;/p&gt; &lt;p&gt;… With no menu bar, there’s no Edit menu. With no keyboard, there’s no command-key shortcuts. The Newton solved this with magic gestures. The iPhone solves this by not having a clipboard at all. No copy, no paste.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;You gotta admit, that’s at least a little bit funny.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1183226528761">
+		<id gr:original-id="tag:diveintomark.org,2007-06-30:/archives/20070630173711">
+			tag:google.com,2005:reader/item/e50045a9a74ee1cb
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			iGroove for iPhone?
+		</title>
+		<published>
+			2007-06-30T17:37:11Z
+		</published>
+		<updated>
+			2007-06-30T21:05:11Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/30/give-the-gift-of-lockin" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/30/give-the-gift-of-lockin/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/30/give-the-gift-of-lockin" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/06/mac-plus-iphone.jpg" alt="[Mac and iPhone]" title="" width="160" height="240"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/kennejima/669257622/"&gt;untitled&lt;/a&gt; © &lt;a href="http://flickr.com/people/kennejima/"&gt;kennejima&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;A friend of mine is getting an iPhone for her birthday, and she has asked me to buy something like the &lt;a href="http://www.klipsch.com/products/details/igroove-hg.aspx"&gt;Klipsch iGroove&lt;/a&gt;, but for her iPhone. i.e. It acts as a charging station for the phone, and lets you play whatever music is on the phone through real speakers. Does such a thing exist? Or are the existing class of iPod speaker systems compatible with the iPhone?&lt;/p&gt; &lt;p&gt;While we’re on the subject, what brand of speakers should I buy? I am told by audiophile friends that Bose is not worth the money, but they have no other suggestions that don’t cost, you know, a thousand dollars. So let’s rephrase the question: what brand of iPhone-compatible speakers should I buy for under $200?&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1183143093240">
+		<id gr:original-id="tag:diveintomark.org,2007-06-29:/archives/20070629183301">
+			tag:google.com,2005:reader/item/2f21d4a97f42b27a
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			The persistence of memory
+		</title>
+		<published>
+			2007-06-29T18:33:01Z
+		</published>
+		<updated>
+			2007-06-29T23:02:56Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/29/duke" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/29/duke/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/29/duke" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/06/DukeWithHelmet240x240.jpg" alt="[Duke: the Java Mascot]" title="" width="240" height="240"&gt; &lt;span&gt;&lt;a href="https://duke.dev.java.net/images/JDK6/index.html"&gt;Duke with helmet&lt;/a&gt; © &lt;a href="http://www.sun.com/"&gt;Sun Microsystems&lt;/a&gt; / &lt;a title="used under BSD License" href="https://duke.dev.java.net/#faq"&gt;BSD&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;dt&gt;Her&lt;/dt&gt;&lt;dd&gt;Do we have an extra USB mouse anywhere?&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;(without looking up from keyboard) We have one with the open source Java mascot suspended inside it, that I got at ApacheCon 2003. It’s in the storage room behind the laundry room, in the blue infant bathtub on the floor in front of the filing cabinets.&lt;/dd&gt; &lt;p&gt;&lt;i&gt;… Scuffling ensues. She emerges triumphantly with a mouse and gives it to the kid.&lt;/i&gt;&lt;/p&gt; &lt;dt&gt;Her&lt;/dt&gt;&lt;dd&gt;That’s incredible.&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;Love me.&lt;/dd&gt; &lt;dt&gt;Kid&lt;/dt&gt;&lt;dd&gt;Look daddy, it has a penguin in it.&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;It’s not a penguin. It’s a… mascot.&lt;/dd&gt; &lt;dt&gt;Kid&lt;/dt&gt;&lt;dd&gt;“Mas-cot.”&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;His name is Duke.&lt;/dd&gt; &lt;dt&gt;Kid&lt;/dt&gt;&lt;dd&gt;“Duke.”&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;&lt;a href="https://duke.dev.java.net/"&gt;He’s open source now&lt;/a&gt;.&lt;/dd&gt; &lt;dt&gt;Her&lt;/dt&gt;&lt;dd&gt;Hey, why is this blanket here?&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;What blanket?&lt;/dd&gt; &lt;dt&gt;Her&lt;/dt&gt;&lt;dd&gt;This blanket. It’s supposed to be in his daycare. Did you take it to daycare?&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;When?&lt;/dd&gt; &lt;dt&gt;Her&lt;/dt&gt;&lt;dd&gt;On Monday.&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;I have no recollection whatsoever of events that transpired on Monday.&lt;/dd&gt; &lt;dt&gt;Her&lt;/dt&gt;&lt;dd&gt;You’re supposed to do it every Monday.&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;First I’ve heard of it.&lt;/dd&gt; &lt;dt&gt;Her&lt;/dt&gt;&lt;dd&gt;This is your children’s welfare. You should pay more attention.&lt;/dd&gt; &lt;dt&gt;Me&lt;/dt&gt;&lt;dd&gt;First I’ve heard of it. But hey, if I can ever enhance my children’s welfare with a USB mouse, let me know.&lt;/dd&gt; 
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1182894086166">
+		<id gr:original-id="tag:diveintomark.org,2007-06-26:/archives/20070626212347">
+			tag:google.com,2005:reader/item/8aadcbf7a83f11fc
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			5½ lessons that legitimate retailers can learn from pirates
+		</title>
+		<published>
+			2007-06-26T21:23:47Z
+		</published>
+		<updated>
+			2007-06-27T00:28:37Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/26/piracy-lessons" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/26/piracy-lessons/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/26/piracy-lessons" xml:lang="en" type="html">
+			&lt;p&gt;This is not the usual “DRM sucks, piracy rocks” screed. Everybody in my regular audience knows about DRM (I’ve been talking about it &lt;a href="http://diveintomark.org/archives/2001/07/29/my_crush_on_spyro_what_flash_animations_remind_me_of_and_what_the_past_will_look_like_someday"&gt;since my very first post&lt;/a&gt;), and everybody knows you can illegally download pirated material for free (until you get caught). There’s interesting stuff beyond that, if you’re willing to learn.&lt;/p&gt; &lt;p&gt;&lt;small&gt;Disclaimer: I have neither bought nor pirated this movie. Seriously. I saw it in the theater, and that was more than enough. Everything here is based on my personal analysis of public information.&lt;/small&gt;&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.binnews.info/_bin/nfo.php?id=131418"&gt;Here’s the NFO&lt;/a&gt; for a pirate release of “Pirates of the Caribbean: Dead Man’s Chest.” The NFO gives us:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Title&lt;/li&gt; &lt;li&gt;Genres&lt;/li&gt; &lt;li&gt;Plot summary&lt;/li&gt; &lt;li&gt;Exact theatrical release date&lt;/li&gt; &lt;li&gt;Running time&lt;/li&gt; &lt;li&gt;User-submitted rating&lt;/li&gt; &lt;li&gt;Link to movie page on IMDB&lt;/li&gt; &lt;li&gt;Source (retail Blu-ray)&lt;/li&gt; &lt;li&gt;Video codec&lt;/li&gt; &lt;li&gt;Video bitrate&lt;/li&gt; &lt;li&gt;Video resolution&lt;/li&gt; &lt;li&gt;Video framerate&lt;/li&gt; &lt;li&gt;Audio codec&lt;/li&gt; &lt;li&gt;Audio language&lt;/li&gt; &lt;li&gt;Audio bitrate&lt;/li&gt; &lt;li&gt;Subtitle languages (note: this release features subtitles in 11 languages)&lt;/li&gt; &lt;li&gt;Recommended playback software&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Granted, most of the information about the original movie is stolen from IMDB. (What did you expect? They’re pirates.) But the rest of the metadata — video, audio, subtitles — is unique to the release itself (more on this in a minute).&lt;/p&gt; &lt;p&gt;Some thoughts about the IMDB link. I have seen NFOs without a lot of this metadata, but I have never seen an NFO without an IMDB link. First, it serves as a unique indentifier in the case where the movie title is not unique (not a problem here, but think about “Hamlet” or “Pride and Prejudice” which have been remade a dozen times). Second, it effectively offloads the “research-y” part of the decision-making process. Commercial distributors can’t afford to link to IMDB because it’s a competitor (it’s owned by Amazon and offers links to buy things on Amazon). Which is a shame, because it’s &lt;em&gt;packed&lt;/em&gt; with information — everything from cast biographies to famous quotes to movie trailers. I often get lost in IMDB in the same way I get lost on Wikipedia, except without ending up reading about famous fictional dogs of the 1930s.&lt;/p&gt; &lt;p&gt;Some thoughts about video. Video is outrageously complex and technical, even when you’re doing it correctly and you have no commercial interest in confusing your customers. On my desk is a plain old DVD that I rented from the local video store over the weekend; it proudly proclaims to be “MASTERED IN HIGH DEFINITION!” Whatever that means, it does &lt;em&gt;not&lt;/em&gt; mean that it’s anything but a plain old DVD. The marketing of “high definition” content that actually &lt;em&gt;is&lt;/em&gt; high definition (at least, higher than plain old DVDs) is even worse. Will you get high definition video out of your Blu-ray disc? That depends on your player, your TV, the cables in between, and the phase of the moon. Is your cable TV high definition? That depends on what the meaning of the word “is” is. And so on.&lt;/p&gt; &lt;p&gt;It is against this backdrop that I appreciate the specificity of the video and audio codec information in this NFO. It is doubly relevant when you consider that pirates can and do redistribute stolen content in a wide variety of formats. You can only legitimately buy “Pirates of the Caribbean” in a preselected number of vague categories, generally limited by disc format (Blu-ray, HD-DVD, or DVD — but don’t forget “full screen” vs. “wide screen” vs. “Ultimate Edition” with enhanced audio). But pirates can choose to redistribute content in an infinite number of formats, each with its own features and strengths. Plain old DVDs can be re-encoded into a file that fits on a single CD (700 MB), two CDs, one DVD-R (4.4 GB), or untouched. High-definition discs like Blu-ray and HD-DVD can be re-encoded to fit on one DVD-R (4.4 GB), two DVD-Rs, untouched, or somewhere in between. Or they can be encoded to play on specific devices like PSPs, video iPods, or standalone DivX players. And that’s not even accounting for audio formats. (Some high definition discs only contain a new audio format that open-source video players don’t understand, so pirates combine high definition video with the matching audio track from a plain old DVD. Ingenious!)&lt;/p&gt; &lt;p&gt;This NFO tells us that this particular release comes from a retail Blu-ray disc, has a very high video quality at the same dimensions as the original, and features English audio in the (old, compatible) 5.1 DTS format. You will only be able to play it on an extremely fast computer and a high resolution monitor (maybe one of those new MacBook Pros with a 1920×1200 screen), but if your hardware can manage it, this will basically be the ultimate movie experience on your desktop.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Lesson 1: don’t bullshit me.&lt;/b&gt; 1080p is 1080p; 720p is 720p. You’d be surprised how many “average” customers know the difference. Ironically, it was the last generation of your marketing bullshit that forced us to learn.&lt;/p&gt; &lt;hr&gt; &lt;p&gt;So that’s what the pirates offer, in a nutshell. Highly technical, information-rich, and, of course, completely illegal.&lt;/p&gt; &lt;p&gt;Here’s what &lt;a href="http://www.bestbuy.com/site/olspage.jsp?skuId=8274798&amp;amp;lp=4&amp;amp;type=product&amp;amp;cp=1&amp;amp;id=1627140"&gt;Best Buy’s product page&lt;/a&gt; offers people wanting to buy the same movie:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Title&lt;/li&gt; &lt;li&gt;Disc format (Blu-ray)&lt;/li&gt; &lt;li&gt;Genre (breadcrumbs)&lt;/li&gt; &lt;li&gt;Plot summary&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;That’s it. No other information about the movie — not even a running time! No information about audio — not even whether it’s in English! No information about subtitles. No links to additional information, even on their own site.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Lesson 2: There is no shelf space on the Internet.&lt;/b&gt; I need to know more than just the title before I plonk down $35 for a movie, and you have infinite space to display it. If you don’t have the information I want, find someone who does and link to them. (And if you do have it, why the hell are you hiding it from me?)&lt;/p&gt; &lt;hr&gt; &lt;p&gt;Here’s &lt;a href="http://www.walmart.com/catalog/product.do?product_id=5871516"&gt;what Walmart.com offers&lt;/a&gt;:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Title&lt;/li&gt; &lt;li&gt;&lt;em&gt;Two incompatible listings of disc format&lt;/em&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;I’m not even going to bother listing the rest. (It’s funny though. “Product in Inches (L x W x H): 5.5 x 0.5 x 7.44.” Wow, thanks Walmart!)&lt;/p&gt; &lt;p&gt;Let’s go back to the part about the disc format. Two incompatible listings? WTF is he talking about? See for yourself: in the movie title it mentions “Blu-ray,” but in the details below it says “Format: DVD.” In the plot summary it mentions “Blu-ray,” but in the ultra-small print below it says (again) “Format: DVD.” Apparently no one had permissions to add another row in that “format” database table, so they’re making up for it every which way they can. Result: utter confusion.&lt;/p&gt; &lt;p&gt;Before you say I’m nitpicking, keep in mind that Walmart.com lists the disc format as “DVD” &lt;em&gt;twice&lt;/em&gt; in their search results (along with the movie title, which still says “Blu-ray”). So they recognize, at some level, that the disc format is important; they just don’t get it right.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Lesson 3: In this world of intentionally incompatible, mutually exclusive formats, make it clear what you’re selling.&lt;/b&gt; By the time I figure out you sold me the wrong thing, I probably can’t return it. I will only be burned by this once, and I will never forget who burned me.&lt;/p&gt; &lt;hr&gt; &lt;p&gt;Barnes and Noble &lt;a href="http://video.barnesandnoble.com/search/product.asp?EAN=786936735550"&gt;fares somewhat better&lt;/a&gt;:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Title&lt;/li&gt; &lt;li&gt;Disc format&lt;/li&gt; &lt;li&gt;Genres&lt;/li&gt; &lt;li&gt;Plot summary &amp;amp; reviews&lt;/li&gt; &lt;li&gt;Major actors&lt;/li&gt; &lt;li&gt;Theatrical release date (year)&lt;/li&gt; &lt;li&gt;Running time&lt;/li&gt; &lt;li&gt;User-submitted comments and ratings&lt;/li&gt; &lt;li&gt;List of extra on-disc features&lt;/li&gt; &lt;li&gt;Director, cast, and same-site links for more information&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;They mention the disc format up-front and give you a link to “learn more about formats.” They even let you search by format, which is simultaneously a nice touch and a sad necessity. The plot summaries are high quality, and their origins are clearly labeled (”Barnes &amp;amp; Noble,” “All Movie Guide,” “Customer Reviews”). The directors and cast listings are a nice touch, and they’re links to (same-site) searches for more information. In fact, Barnes and Noble replicates the core of what IMDB gives you — cast biographies, related links — while keeping you on-site. All in all, a job well done.&lt;/p&gt; &lt;p&gt;But notice what’s still missing: still no mention of audio, still no mention of subtitles. Am I the only one who likes to watch movies with subtitles? How many millions of people in the United States alone only speak English as a second language? I guess those people don’t shop at Barnes &amp;amp; Noble.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Lesson 4: “secondary” features like audio and subtitles can be a dealbreaker.&lt;/b&gt; Again, just be clear about what you’re offering. Not everyone speaks English. Not everyone who can speak English can hear perfectly. Not everyone who can hear perfectly can watch movies at full volume without waking up their kids upstairs. (When did you think we could find two hours to watch a movie, anyway?)&lt;/p&gt; &lt;hr&gt; &lt;p&gt;Finally, here’s &lt;a href="http://www.dvdempire.com/Exec/v4_item.asp?item_id=1305507"&gt;DVD Empire’s page for the same movie&lt;/a&gt;. They’ve got it all: title, disc format, running time, complete and accurate audio and subtitle information, on-disc extras, reviews, ratings, actors and directors and producers and writers and — God bless ‘em — links wrapped around every last one of them. They even list the video aspect ratio and the UPC code. I don’t think there’s a single bit of readily available information that they don’t list or link to. They’ve got it all.&lt;/p&gt; &lt;p&gt;And after all that, the pirate release is still better. Really. I don’t mean “it’s better because it doesn’t have DRM,” or “it’s better because it’s free (until you get caught).” It’s better because it has unique features that &lt;em&gt;you simply can not find&lt;/em&gt; from any legitimate distributor. Look at those subtitles: 11 of them! English, Spanish, French, Swedish, Finnish, Norwegian, Dutch, Czech, Hungarian, Romanian, and Portuguese. Holy crap, where did all those come from? The original disc only has 3!&lt;/p&gt; &lt;p&gt;Well, they come from people, real people who take the time to translate subtitle files into other languages and share them on communities like &lt;a href="http://www.opensubtitles.org/"&gt;OpenSubtitles.org&lt;/a&gt;. User-generated subtitles are a massive worldwide phenomenon that most English speakers don’t even know about. Ever since DVDs were cracked wide open, open-source video players have offered the capability to play retail DVDs but display subtitles from a separate file, which you could download without feeling too guilty about stealing anything. Translation quality varies widely, of course, but something is better than nothing. In this release, the pirates have gone to the trouble of locating all those subtitle files for you, and they ultimately provide a “total package” that even the best legitimate distributor can’t match.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Lesson 5: in the edge cases, you can’t compete with pirates because you don’t control what you’re selling.&lt;/b&gt; (Lesson 5½: there are more edge cases than you think.) Pirates aren’t just distributors; they can also be content creators. They can rip, mix, burn, and mashup content at will, and they have a twisted sense of pride in offering “the best” — whether that’s release speed, video quality, file format, or subtitles in 11 different languages. (What, you thought this was the only pirate release of this movie? There are dozens more, and they’re all optimized for different definitions of “best.”)&lt;/p&gt; &lt;p&gt;Every legitimate retailer could learn lessons 1 through 4. Some retailers have learned them already. But solving this last problem would require a complete overhaul of the content distribution network. More than that, it would require a rethinking of the fundamental roles of creator and distributor, to give retailers the sort of control that pirates take without asking. I don’t think it’s realistic that the copyright kings of the world would ever allow such an overhaul (after all, they designed the current system from top to bottom), but this is what we’re losing by not even trying.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1182715411035">
+		<id gr:original-id="tag:diveintomark.org,2007-06-24:/archives/20070624191020">
+			tag:google.com,2005:reader/item/820d2441434b4bff
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Translation From PR-Speak to English of Selected Portions of Federated Media Publishing Vice President Neil Chase’s Response to the “People-Ready” Ad Campaign
+		</title>
+		<published>
+			2007-06-24T19:10:20Z
+		</published>
+		<updated>
+			2007-06-24T21:24:25Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/24/fm-translation" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/24/fm-translation/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/24/fm-translation" xml:lang="en" type="html">
+			&lt;p&gt;Source: &lt;a href="http://valleywag.com/tech/spokesbloggers/microsoft-pays-star-writers-to-recite-slogan-271485.php#c1721352"&gt;Neil Chase’s comment on valleywag.com&lt;/a&gt;.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Welcome to the birth of conversational marketing.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;We’ve reinvented payola and given it five more syllables.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;It’s making people like you and me, who came from the world of traditional newspapers, have to learn about three-way conversations.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Three-way conversation is like three-way sex; it sounds good on paper, but in reality it’s awkward and you never know where to put your elbows.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;… So the next step, naturally, is for marketers to want to join the conversation.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;This has never happened before in the history of conversation.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;It can be done in ethical, responsible ways, and FM’s authors are among the first to figure out how to do it.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I am high as a kite.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;In the case of this Microsoft campaign, the marketers asked if our writers would join a discussion around their “people ready” theme. Microsoft is an advertiser on our authors’ sites, but it’s paying them only based on the number of ad impressions delivered.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Advertisers give us money.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;There was no payment for joining the conversation and they were not required to do it.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;We like money.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;They’re not writing about this on their blogs, and of course several of them have been known to be pretty hard on Microsoft at times as reporters. They’re talking about the topic, and readers joined that conversation.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Money money money.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;We’re carefully expanding conversational marketing based on all kinds of new ideas that are coming from authors, marketers and our sales reps.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Our advertisers shit all over us, then leave it to us to convince everyone else that shit is the new black.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;We’re drafting a set of principles for conversational marketing that will help everyone, inside FM and across the industry, frame the discussion about how we do this the right way.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;You too can be covered in the new black.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;And we’re taking care at every step of the process to make sure we don’t compromise the editorial integrity of our authors.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Integrity is the old black.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Because our authors are in constant conversation with their readers, they know how their audience feels.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;We’re hoping our audience can’t tell payola from Shinola.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;If a reader feels an author has crossed a line or betrayed the reader’s trust, that author will hear about it quickly.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;You can post a comment in our Can You Hear Me Now?™ section.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Best,&lt;br&gt; Neil Chase&lt;br&gt; Vice President&lt;br&gt; Federated Media Publishing&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Brought to you by Carl’s Jr.&lt;/p&gt; &lt;p style="text-align:right;font-style:oblique"&gt;&lt;small&gt;(with apologies to &lt;a href="http://daringfireball.net/2007/02/macrovision_translation"&gt;John Gruber&lt;/a&gt;,&lt;br&gt;who did it first and did it best)&lt;/small&gt;&lt;/p&gt; &lt;p&gt;&lt;small&gt;Disclosure: I work for a company with an &lt;a href="http://www.google.com/"&gt;advertising distribution network&lt;/a&gt;.&lt;/small&gt;&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1182359479354">
+		<id gr:original-id="tag:diveintomark.org,2007-06-20:/archives/20070620163629">
+			tag:google.com,2005:reader/item/f0a009a22caac819
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Best portable GPS navigator?
+		</title>
+		<published>
+			2007-06-20T16:36:29Z
+		</published>
+		<updated>
+			2007-06-20T16:36:29Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/20/gps-navigator" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/20/gps-navigator/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/20/gps-navigator" xml:lang="en" type="html">
+			&lt;p&gt;Let’s assume I have enough money to buy any GPS navigation system I want. I need to move it between two different vehicles, so the mounted-in-dashboard type is out. Apparently the type I need is “pocket” or “portable” version, plus some sort of mounting bracket for each vehicle.&lt;/p&gt; &lt;p&gt;The top three brands seem to be Garmin, Magellan, and TomTom.&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.gpsmagazine.com/buyers_guide.php"&gt;Here’s a “buyer’s guide”&lt;/a&gt; from a source I have no particular inclination to trust or distrust.&lt;/p&gt; &lt;p&gt;I don’t particularly care about non-navigation-related features like MP3s or audiobooks. (Audiobooks? Seriously?)&lt;/p&gt; &lt;p&gt;I live in an area with lots of ongoing development, so I am resigned to the fact that the maps will be 1 or 2 years out of date.&lt;/p&gt; &lt;p&gt;Hackability is a minor plus but not a requirement. What can you hack into these things?&lt;/p&gt; &lt;p&gt;The Garmin Nuvi 660 looks nice. Does anyone have experience with it or any similar high-end model?&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1181885021405">
+		<id gr:original-id="tag:diveintomark.org,2007-06-15:/archives/20070615045442">
+			tag:google.com,2005:reader/item/af8b81109b3778ef
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			A series of very small lists
+		</title>
+		<published>
+			2007-06-15T04:54:42Z
+		</published>
+		<updated>
+			2007-06-15T04:54:42Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/15/ol-li" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/15/ol-li/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/15/ol-li" xml:lang="en" type="html">
+			&lt;p&gt;List of words you don’t get to use very often unless you are a parent or a performance artist&lt;/p&gt; &lt;ol&gt; &lt;li&gt;“Smear”&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of things I have said at the dinner table, perhaps more loudly than was necessary to make my point&lt;/p&gt; &lt;ol&gt; &lt;li&gt;“Don’t smear cheese on your brother.”&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of free-with-purchase gifts I have received at the grocery store that retained their fun factor for more than two days&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Balloons&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of CSS colors which I will make every effort to use in my next website redesign&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;code&gt;PapayaWhip&lt;/code&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of colors whose Wikipedia entries suggest that they be merged into “Peach (color)”&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Papaya_whip"&gt;Papaya whip&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of &lt;a href="http://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors"&gt;Crayola colors&lt;/a&gt; which have been renamed to “Peach”&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Flesh&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of &lt;a href="http://en.wikipedia.org/wiki/Category:Shades_of_yellow"&gt;shades of yellow&lt;/a&gt; which do not appear to be at all yellow&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Olive_%28color%29"&gt;Olive&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of ways I can look up the RGB value of “PapayaWhip” right now without getting up or using the internet&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;kbd&gt;M-x list-colors-display&lt;/kbd&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of &lt;a href="http://en.wikipedia.org/wiki/List_of_colors#Fictional_colors"&gt;fictional colors&lt;/a&gt; which I immediately recognized many years after having earned a bachelor of arts degree in philosophy&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Grue and Bleen&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of unusual computer accessories which I recently purchased in the hopes of finding a use for them someday&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;a href="http://www.griffintechnology.com/products/powermate/"&gt;Griffin PowerMate&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of unusual computer accessories which I recently discovered I had been carrying in my pants pocket for an undetermined length of time&lt;/p&gt; &lt;ol&gt; &lt;li&gt;PS/2 to USB converter&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of notable Internet cranks whose Wikipedia entries have recently been deleted&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Archimedes_Plutonium_%28third_nomination%29"&gt;Archimedes Plutonium&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;List of reasons I am not making any sense whatsoever&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Severe sinus infection&lt;/li&gt; &lt;/ol&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1181713724464">
+		<id gr:original-id="tag:diveintomark.org,2007-06-13:/archives/20070613054446">
+			tag:google.com,2005:reader/item/6ef940b0364dd2a8
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Recent bullshit that doesn’t merit more than six words in response
+		</title>
+		<published>
+			2007-06-13T05:44:46Z
+		</published>
+		<updated>
+			2007-06-13T05:47:06Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/13/burned-out" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/13/burned-out/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/13/burned-out" xml:lang="en" type="html">
+			&lt;dl&gt; &lt;dt&gt;&lt;a href="http://www.apple.com/pr/library/2007/06/11safari.html"&gt;Apple releases Safari for Windows&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;Yawn. Good for testing, I guess.&lt;/dd&gt; &lt;dt&gt;&lt;a href="http://gizmodo.com/gadgets/fast-and-furious/no-iphone-sdk-means-no-iphone-killer-apps-267899.php"&gt;Steve to developers: fuck you&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;“…&lt;a href="http://diveintomark.org/archives/2007/01/12/sharecroppers"&gt;doesn’t build platforms, except by accident&lt;/a&gt;.”&lt;/dd&gt; &lt;dt&gt;&lt;a href="http://www.tbray.org/ongoing/When/200x/2007/06/10/So-Lame"&gt;Microsoft (well, Dare) rejects APP&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;Microsoft reinventing standards? Dare trolling? &lt;a href="http://www.imdb.com/title/tt0093779/quotes"&gt;Inconceivable&lt;/a&gt;!&lt;/dd&gt; &lt;dt&gt;&lt;a href="https://lists.ubuntu.com/archives/ubuntu-devel-announce/2007-June/000301.html"&gt;Ubuntu Gutsy Gibbon alpha 1&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;Still waiting for &lt;a href="http://diveintomark.org/archives/2007/04/12/super-strict"&gt;the ultraorthodox flavor&lt;/a&gt;.&lt;/dd&gt; &lt;dt&gt;&lt;a href="http://www.eff.org/deeplinks/archives/005282.php"&gt;EFF blasts Apple’s unDRMed downloads&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;&lt;a href="http://www.eff.org/deeplinks/archives/005292.php"&gt;Over nothing&lt;/a&gt;. I repeat: over nothing.&lt;/dd&gt; &lt;dt&gt;&lt;a href="http://juicystudio.com/article/html-scope-headers-debate.php"&gt;WHATWG considers dropping “&lt;code&gt;headers&lt;/code&gt;” attribute&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;Mass hysteria erupts. Pass the popcorn.&lt;/dd&gt; &lt;dt&gt;&lt;a href="http://mail.gnome.org/archives/gnome-accessibility-list/2007-June/msg00000.html"&gt;IBM abandons accessibility on Linux&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;“&lt;a href="http://mail.gnome.org/archives/gnome-accessibility-list/2007-June/msg00001.html"&gt;That was painful to read&lt;/a&gt;.” Word.&lt;/dd&gt; &lt;dt&gt;&lt;a href="http://youtube.com/watch?v=PKDdF6vfjoo"&gt;Bush loses watch (or not)&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;Ha ha. Now &lt;a href="http://andrewsullivan.theatlantic.com/the_daily_dish/2007/05/verschfte_verne.html"&gt;stop torturing people&lt;/a&gt;.&lt;/dd&gt; &lt;dt&gt;&lt;a href="http://arstechnica.com/articles/culture/ars-takes-a-field-trip-the-creation-museum.ars"&gt;Bible thumpers open Creation Museum&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;Scientific thought is &lt;a href="http://en.wikipedia.org/wiki/Scientific_Revolution"&gt;&lt;em&gt;so&lt;/em&gt; 16th century&lt;/a&gt;.&lt;/dd&gt; &lt;dt&gt;&lt;a href="http://thinkprogress.org/2007/06/07/cnn-the-most-trusted-name-in-paris-news/"&gt;Paris Hilton goes to jail&lt;/a&gt;&lt;/dt&gt;&lt;dd&gt;Ha ha. Seriously, &lt;a href="http://thesacredmoment.blogspot.com/2006/01/on-torture.html"&gt;stop torturing people&lt;/a&gt;.&lt;/dd&gt; &lt;/dl&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1181451326489">
+		<id gr:original-id="tag:diveintomark.org,2007-06-10:/archives/20070610043926">
+			tag:google.com,2005:reader/item/ef89951651c204d2
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Personal video rendering
+		</title>
+		<published>
+			2007-06-10T04:39:26Z
+		</published>
+		<updated>
+			2007-06-10T04:52:10Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/10/personal-video-rendering" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/10/personal-video-rendering/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/10/personal-video-rendering" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/06/mh.jpg" alt="[Bank teller]" title="" width="240" height="192"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/bluedino/205049791/"&gt;0001&lt;/a&gt; © &lt;a href="http://flickr.com/people/bluedino/"&gt;thebluedino&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;In an otherwise predictable Slashdot discussion of &lt;a href="http://hardware.slashdot.org/hardware/07/06/08/2115222.shtml"&gt;the only companies that manage to suck more than Microsoft&lt;/a&gt; in providing services that people want, I found &lt;a href="http://hardware.slashdot.org/comments.pl?sid=237897&amp;amp;cid=19446027"&gt;this gem&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;With the recent improvements to graphics cards, computers have now got enough power for the next level of PVR to become possible. I refer of course to Personal Video Rendering, ie locally generated real-time TV. Even modest AI can handle the retarded talk shows and formulaic sycophantic interviews.&lt;/p&gt; &lt;p&gt;Just imagine: you can watch computer generated random pointless drivel such as ‘my boyfriend left me for a transexual limbo dancer and now i am marrying his mother’ with 5.1 surround whooping and hollering from the audience for as long as you like (with artificial repetitive and annoying ‘advertisement’ breaks, of course), then decide to watch a blu-ray hd film. The software would automatically flip to rendering 20 minutes of a sports game, followed by 30 minutes of tedious analysis by virtual sports presenters before showing the film. Artificially intelligent filtering would then cut many of the scenes and redub profane dialog no matter what time it was being watched. Monitoring daemons would flag the kind of shows that you like to watch and then ‘cancel’ them.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;In related news, I canceled our DirecTV subscription last week, &lt;a href="http://diveintomark.org/archives/2007/05/09/whither-television"&gt;as planned&lt;/a&gt;. Wake me up when I can watch quality content, on my terms, for a reasonable price. Or when I can buy one of those Personal Video Renderers. They sound cool.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1181249048024">
+		<id gr:original-id="tag:diveintomark.org,2007-06-07:/archives/20070607193656">
+			tag:google.com,2005:reader/item/6f5dfceafb408d05
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			HOWTO batch encode video for iPod under Linux (2007 edition)
+		</title>
+		<published>
+			2007-06-07T19:36:56Z
+		</published>
+		<updated>
+			2007-06-07T19:41:31Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/07/howto-batch-encode-video-for-ipod-under-linux-2007-edition" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/07/howto-batch-encode-video-for-ipod-under-linux-2007-edition/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/07/howto-batch-encode-video-for-ipod-under-linux-2007-edition" xml:lang="en" type="html">
+			&lt;p&gt;An update to &lt;a href="http://diveintomark.org/archives/2006/08/30/ipod-video-howto"&gt;this post from 2006&lt;/a&gt;, I gave up on &lt;code&gt;ffmpeg&lt;/code&gt; and &lt;code&gt;mp4creator&lt;/code&gt; and switched to &lt;code&gt;mencoder&lt;/code&gt; and &lt;code&gt;MP4Box&lt;/code&gt;. The new-and-improved version also works properly with widescreen video. The new script is here: &lt;a href="http://diveintomark.org/public/2007/06/podencoder.txt"&gt;podencoder&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;See &lt;a href="http://diveintomark.org/archives/2006/08/30/ipod-video-howto"&gt;my original post&lt;/a&gt; for usage examples, which still work. One new feature is the &lt;code&gt;fitto4x3&lt;/code&gt; option (&lt;kbd&gt;-f&lt;/kbd&gt; flag on the command line, or &lt;samp&gt;fitto4×3=1&lt;/samp&gt; in the configuration file), which crops the left and right sides of widescreen video to fit on the iPod’s 320×240 screen. I like this; you might not. The option is off by default. Either way, widescreen video will display properly on the iPod (not be smooshed vertically or horizontally).&lt;/p&gt; &lt;p&gt;This script targets the 5G video iPod, which has a 2-inch screen with 320×240 pixel resolution. If Apple has released a widescreen iPod by the time you read this, this script is not for you. Sorry.&lt;/p&gt; &lt;p&gt;Prerequisites:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://untrepid.com/acidrip/lsdvd.html"&gt;&lt;code&gt;lsdvd&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.mplayerhq.hu/"&gt;&lt;code&gt;mplayer&lt;/code&gt;&lt;/a&gt;, compiled with MPEG-2 and AC3 support&lt;/li&gt; &lt;li&gt;&lt;a href="http://gpac.sourceforge.net/doc_mp4box.php"&gt;&lt;code&gt;MP4Box&lt;/code&gt;&lt;/a&gt;, part of the &lt;a href="http://gpac.sourceforge.net/"&gt;GPAC&lt;/a&gt; project&lt;/li&gt; &lt;li&gt;&lt;a href="http://freshmeat.net/projects/zenity"&gt;&lt;code&gt;zenity&lt;/code&gt;&lt;/a&gt;, if you want graphical dialogs and progress bars&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;On Debian Sid, you can install the prerequisites by adding the &lt;a href="http://www.debian-multimedia.org/"&gt;debian-multimedia repository&lt;/a&gt; and typing&lt;/p&gt; &lt;pre&gt;&lt;code&gt;$ sudo aptitude install lsdvd mplayer mencoder gpac zenity&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Please don’t ask me how to install these prerequisites on other operating systems. I can’t help you because I don’t know.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1181194259468">
+		<id gr:original-id="tag:diveintomark.org,2007-06-07:/archives/20070607051003">
+			tag:google.com,2005:reader/item/ab7139122b454679
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			HOWTO recursively rename files with a lowercase file extension
+		</title>
+		<published>
+			2007-06-07T05:10:03Z
+		</published>
+		<updated>
+			2007-06-07T05:35:22Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/07/zmv" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/07/zmv/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/07/zmv" xml:lang="en" type="html">
+			&lt;p&gt;In ZSH:&lt;/p&gt; &lt;pre&gt;&lt;code&gt;% autoload zmv % zmv '(**/)(*).(*)' '$1$2.${(L)3}'&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;Affects all files in the current directory and all subdirectories. For example, it turns &lt;samp&gt;Serenity.Ogg&lt;/samp&gt; into &lt;samp&gt;Serenity.ogg&lt;/samp&gt;, no matter where it is under the current directory.&lt;/p&gt; &lt;p&gt;First parenthetical matches current directory and all subdirectories, second group matches filename sans extension, third group matches extension. &lt;code&gt;${(L)3}&lt;/code&gt; transforms the extension to lowercase.&lt;/p&gt; &lt;p&gt;If you only care about a particular extension, you can simplify&lt;sup&gt;&lt;a href="http://diveintomark.org/archives/2007/06/07/zmv#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt; it to this:&lt;/p&gt; &lt;pre&gt;&lt;code&gt;% zmv -W '(#i)**/*.mp3' '**/*.mp3'&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;The &lt;code&gt;(#i)&lt;/code&gt; matches case-insensitively (&lt;code&gt;.Mp3&lt;/code&gt;, &lt;code&gt;.MP3&lt;/code&gt;, and so on). The &lt;code&gt;-W&lt;/code&gt; flag lets you use regular &lt;code&gt;*&lt;/code&gt; and &lt;code&gt;**&lt;/code&gt; wildcards in both the source and target patterns, and automagically turns them into groups and backreferences like the first example.&lt;/p&gt; &lt;p&gt;If you only care about a particular extension in the current directory (not subdirectories), it’s even easier:&lt;/p&gt; &lt;pre&gt;&lt;code&gt;% zmv -W '(#i)*.mp3' '*.mp3'&lt;/code&gt;&lt;/pre&gt; &lt;p&gt;That’s all I know.&lt;/p&gt; &lt;p&gt;Further reading:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href="http://grml.org/zsh/zsh-lovers.html"&gt;ZSH lovers&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://rayninfo.co.uk/tips/zshtips.html"&gt;ZSH tips&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div&gt; &lt;ol&gt; &lt;li&gt;For some definition of “simple” that includes enough line noise to choke a German Shepherd. &lt;a href="http://diveintomark.org/archives/2007/06/07/zmv#from-footnote1"&gt;↺&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1180816763169">
+		<id gr:original-id="tag:diveintomark.org,2007-06-02:/archives/20070602201634">
+			tag:google.com,2005:reader/item/8228f49a8af0c781
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			One year with Linux
+		</title>
+		<published>
+			2007-06-02T20:16:34Z
+		</published>
+		<updated>
+			2007-06-03T03:10:06Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/06/02/one-year-with-linux" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/06/02/one-year-with-linux/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/06/02/one-year-with-linux" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/06/pretty-package.jpg" alt="[pretty package]" title="" width="180" height="240"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/fbz/388329695/"&gt;pretty package!&lt;/a&gt; © &lt;a href="http://flickr.com/people/fbz/"&gt;Fabienne&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;One year ago, &lt;a href="http://diveintomark.org/archives/2006/05/30/bye-apple"&gt;I switched to Linux&lt;/a&gt; for a &lt;a href="http://diveintomark.org/archives/2006/06/02/when-the-bough-breaks"&gt;variety&lt;/a&gt; of &lt;a href="http://diveintomark.org/archives/2006/06/16/juggling-oranges"&gt;reasons&lt;/a&gt; revolving around software freedom, choice, and data preservation. At the time, an anonymous commenter &lt;a href="http://diveintomark.org/archives/2006/06/02/when-the-bough-breaks#comment-6556"&gt;shared this piece of wisdom&lt;/a&gt;:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;What exactly do you think you will be doing with Linux when you install it on that fancy ThinkCentre? You’ll be tweaking MORE, configuring MORE, installing MORE because NOTHING is as packaged and polished. … Enjoy your time with Linux, and when the endless Google searches to fix some miniscule package dependancy version problems finally drive you away, you will of course be welcomed back.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;I am happy to report that that has not been my experience. I have &lt;a href="http://diveintomark.org/archives/2007/03/15/good-easy-2007"&gt;spent some time tweaking&lt;/a&gt;, but only by choice — not to make things work, but to try some radically different ideas about workspaces and workflow that quite frankly would have been impossible to accomplish on a Mac. There were several weeks where I tried to do everything in a framebuffer console. Now I run a &lt;a href="http://www.nongnu.org/ratpoison/"&gt;distinctly odd window manager&lt;/a&gt;. In between, I tried GNOME, KDE, XFCE, Ion3, FluxBox, and that whole &lt;a href="http://www.beryl-project.org/"&gt;wobbly window composite window manager thing&lt;/a&gt; that’s all the rage. None of these experiments required compiling anything, and none required editing configuration files to get them to work.&lt;/p&gt; &lt;p&gt;(I realize that most people will not bother to experiment as much as I have in the past year, and that’s OK. Any modern Linux distribution presents a good “out of the box” experience, with friendly defaults and familiar metaphors. But a year ago, several people recommended that I try alternative window managers, and at the time, I didn’t understand why. Now I do. It’s difficult to explain. People say that Ruby On Rails is “opinionated software.” I suppose all software reflects the opinions of its authors, but some are certainly more opinionated than others, and window managers, as a class, are more opinionated than most. If you have strong opinions about software — and I do — then it is worth your time to find software that shares them.)&lt;/p&gt; &lt;p&gt;In fact, none of the usual complaints about Linux (hardware drivers, X configuration, package dependencies) have affected me in any significant way. It helps that I researched and bought a computer that worked well with Linux, though it’s not like I haven’t been &lt;a href="http://diveintomark.org/archives/2006/11/06/gnewsense"&gt;buying hardware&lt;/a&gt; and &lt;a href="http://diveintomark.org/archives/2006/06/26/essentials-2006"&gt;installing software&lt;/a&gt; like a crazed weasel since then. (A year later, such research is &lt;a href="http://dell.com/open"&gt;easier than ever&lt;/a&gt;.) On the contrary, working on a Linux system has made the weaknesses of other operating systems more painful to deal with.&lt;/p&gt; &lt;p&gt;The most glaring example of this is package management. Keeping a system up to date is essential, especially a laptop that travels to different untrusted networks on a regular basis. I still have a Mac in the house — my old laptop, which I gave to my wife — and I am still tasked with keeping it up to date. Obviously Apple Software Update is helpful as far as it goes, but it only covers essential system upgrades, Apple applications, and a small handful of third party applications. To fill the third-party gap, I subscribe to VersionTracker’s update service, which provides the equivalent of Apple Software Upgrade for all the third party packages that VersionTracker knows about. It costs $50 per year for up to ten computers, which is a good deal even if you only have one or two Macs. (I use the same service to keep my parents’ Mac up to date.) However, “good deal” doesn’t mean “easy to use.”&lt;/p&gt; &lt;p&gt;Here’s the process of keeping my wife’s Mac up to date:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Apple Software Update checks for updates automatically and pops up a dialog when updates are available. I can install the available updates and reboot (if required, which is usually the case with most system upgrades, security patches, and QuickTime updates). If I’m in the middle of something, I can dismiss it and have it pop up again tomorow. And the next day. And the day after that.&lt;/li&gt; &lt;li&gt;Some third party programs have their own auto-update mechanisms which run when you launch the application. Some “smart” programs like QuickSilver and Firefox do offer integrated one-click auto-update which includes both the application and its plugins. Most just dump you onto the project’s home page and let you search for the appropriate updater yourself.&lt;/li&gt; &lt;li&gt;For the rest, I periodically run Version Tracker’s update program, which scans the disk looking for applications and then contacts their server to look for available updates. This process generally takes 1-5 minutes. Then the real fun begins.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;Each application has its own installer or install process, so updating multiple applications with Version Tracker’s client involves either downloading an image file or an installer application, and then figuring out what to do. Sometimes that entails copying an application, sometimes copying multiple folders, sometimes running an installer. Version Tracker has an option to automatically install applications, but it requires a certain configuration of image file or installer, and the option rarely seems to be available for the programs my wife uses.&lt;/p&gt; &lt;p&gt;(The situation on Windows is even worse — every vendor seems to create their own update service that’s always running whether you like it or not. I have Microsoft Windows Update Service, Apple Software Update Service, HP Printer Update Service, Sun Java Update Service… They all pop up at different times and offer to upgrade their particular subset. At least Apple had the clout and good sense to roll Java and printer drivers into Mac system updates.)&lt;/p&gt; &lt;p&gt;To make matters worse, an increasing number of applications “tracked” by Version Tracker don’t provide binaries, but instead redirect to a web page. This means that “downloading” the update really just opens a browser and (sometimes, but not always) automatically starts the download. This can happen for several reasons — binaries by OS revision, binaries by processor, or simply laziness The basic problem is that Version Tracker has no concept of matching up my processor or my OS revision (both of which it knows — it’s a client app running locally) with the available binaries for an application. It’s still stuck in the Dark Ages where 1 application == 1 binary. Universal binaries help, if the vendor offers them. Anything more complicated and Version Tracker punts.&lt;/p&gt; &lt;p&gt;(This points to the &lt;em&gt;real&lt;/em&gt; underlying problem: individual vendors provide their own packages, and there is no system-wide package management system beyond “you should make a disk image.” For closed source applications, no one else is even allowed to repackage them, but even for the open source Mac applications no one bothers to repackage them because there’s no system-wide package management system to fit them into. And don’t tell me about Fink or DarwinPorts; they’re for strict ports. I’m talking about open source Mac-only applications like iTerm, AdiumX, and Camino.)&lt;/p&gt; &lt;p&gt;So now I have two different programs (Version Tracker and my browser) downloading and post-processing files, in different ways, simultaneously, in the background, while I’m manually copying files from a disk image or clicking Next, Next, Agree, Next through an installer. I’m responsible for keeping track of which applications I’ve installed through which methods and then ejecting the disk image and/or removing the downloaded installer application when it’s done. Both downloaders automatically mount disk images, which means that new Finder windows are constantly opening and stealing focus. And naturally, some installers (*cough* Flash *cough*) require quitting all browsers, which I can’t do until the browser finishes downloading those applications that forced me to download via a web page!&lt;/p&gt; &lt;p&gt;I know, I know, I’m a big baby. Is it such a big deal to drag an application from a disk image into the Applications folder? Of course not, but it sure gets old quickly. Isn’t this the sort of gruntwork computers are supposed to be good at?&lt;/p&gt; &lt;p&gt;Here’s the process of keeping my Debian system up to date:&lt;/p&gt; &lt;p&gt;&lt;kbd&gt;sudo aptitude update &amp;amp;&amp;amp; sudo aptitude -y dist-upgrade&lt;/kbd&gt;&lt;/p&gt; &lt;p&gt;Of course I never really have to type that, because it’s in a cron job and runs every night while I’m asleep.&lt;/p&gt; &lt;p&gt;(To be fair, Iceweasel still checks for plugin updates on launch, just like Firefox on any other platform.)&lt;/p&gt; &lt;p&gt;No doubt the Linux haters will say “yeah, but make/compile/install is such a bitch.” And they’re right. I’m not going to blow smoke up your ass and say that manually handling dependencies and compiling isn’t a bitch. I’ve done it; it’s a bitch and always will be. That’s why, &lt;a href="http://www.debian.org/doc/manuals/project-history/ch-detailed.en.html#s4.1"&gt;for the past 13 years&lt;/a&gt;, Linux distributions have been working on package and dependency management. It’s a hard problem, and it will always require some level of ongoing human expertise. But each Linux distribution has now automated basically everything about the problem that can be automated — everything from worldwide mirrored and load-balanced distribution servers to filename and pathname standards to developer tools for the packagers themselves. I recognized &lt;a href="http://diveintomark.org/archives/2004/05/01/essentials"&gt;years ago&lt;/a&gt; that “the fanatical devotion of the Debian package maintainers makes the difference.” That’s still true: they’re still fanatical about package management, and it still makes the difference.&lt;/p&gt; &lt;p&gt;In 2006, &lt;a href="http://diveintomark.org/archives/2006/06/26/essentials-2006"&gt;the only thing I had to compile&lt;/a&gt; on Ubuntu was Mplayer. (Oh yeah, &lt;a href="http://diveintomark.org/archives/2006/12/18/supertux-milestone-19"&gt;and Supertux&lt;/a&gt;.) At the end of 2006, I switched from Ubuntu to Debian. In 2007, I don’t compile anything at all. (Especially since I discovered the &lt;a href="http://www.debian-multimedia.org/"&gt;Debian-Multimedia&lt;/a&gt; repository. Weekly builds of Mplayer, Mencoder, Ffmeg, libavcodec, and libavformat. Professionally packaged, for multiple platforms. If that doesn’t mean anything to you, don’t worry about it; it means a lot to me.) Let me repeat that: I. Don’t. Compile. Anything. I have 902 packages installed, and 0 compilers. Everything I need is already packaged.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Enjoy your time with Linux, and when the endless Google searches to fix some miniscule package dependancy version problems finally drive you away, you will of course be welcomed back.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;One year later, I look back on comments like this, and I just laugh. Sorry, Anonymous Commenter, you couldn’t have been more wrong. You got it exactly backwards. When &lt;em&gt;your&lt;/em&gt; operating system finally comes with a package management system that is both comprehensive and extensible, you will of course be welcomed… to the 1990s. In the meantime, I’ll continue to enjoy my time with Linux.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1180590220339">
+		<id gr:original-id="tag:diveintomark.org,2007-05-31:/archives/20070531052816">
+			tag:google.com,2005:reader/item/774c8d19c3219b0a
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			The BoingBoing household
+		</title>
+		<published>
+			2007-05-31T05:28:16Z
+		</published>
+		<updated>
+			2007-05-31T05:28:16Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/31/the-boingboing-household" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/31/the-boingboing-household/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/31/the-boingboing-household" xml:lang="en" type="html">
+			&lt;p&gt;I’ve been kicking around an idea for a short story about a guy who buys everything ever linked from &lt;a href="http://boingboing.net/"&gt;BoingBoing&lt;/a&gt;. That means furnishing his house with &lt;a href="http://www.boingboing.net/2007/05/30/wireless_video_teddy.html"&gt;a TeddyCam Baby Monitor&lt;/a&gt;, &lt;a href="http://www.boingboing.net/2007/05/30/cthulhuthemed_hot_do.html"&gt;a Cthulhu hot dog roaster&lt;/a&gt;, &lt;a href="http://www.boingboing.net/2007/05/30/gear_clock.html"&gt;a clock made out of gears&lt;/a&gt;, &lt;a href="http://www.boingboing.net/2007/05/29/spinal_column_goosen.html"&gt;a lamp that looks like a severely deformed spinal column&lt;/a&gt;, and &lt;a href="http://www.boingboing.net/2007/05/30/wifi_slurper_grabs_u.html"&gt;the mother of all wifi-stealing routers&lt;/a&gt;. (And that’s just in the last 24 hours.) I wonder how much space you would need to hold all this stuff, and how much money it would cost.&lt;/p&gt; &lt;p&gt;I can’t decide if the main character would buy all of this stuff out of some sort of obsessive-compulsive disorder, or a perceived necessity, or voices in his head telling him to buy, boing, buy, boing, buy. Perhaps they would all be gifts for his lover, who would eventually turn out to be a figment of his imagination. Yes, I like that. “I bought this for you, Rose. I know how much you like hot dogs. It’s hand-carved by the experts at RoastMyWeenie.com. No, really.” Then one day we would catch a glimpse of the room and realize he was just talking to himself. And dressed in a kilt. And typing.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1180493067802">
+		<id gr:original-id="tag:diveintomark.org,2007-05-30:/archives/20070530021544">
+			tag:google.com,2005:reader/item/7fc791f6c8fbbddb
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Unlucky in feeds
+		</title>
+		<published>
+			2007-05-30T02:15:44Z
+		</published>
+		<updated>
+			2007-05-30T02:15:44Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/29/unlucky-in-feeds" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/29/unlucky-in-feeds/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/29/unlucky-in-feeds" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://diveintomark.org/public/2007/05/unlucky-in-feeds.html"&gt;You have got to be fucking kidding me&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;&lt;code&gt;content&lt;/code&gt; attribute? &lt;code&gt;type="Photo Matt"&lt;/code&gt;? RFC 822-style dates‽&lt;/p&gt; &lt;p&gt;We waited &lt;a href="http://trac.wordpress.org/ticket/1526"&gt;two years&lt;/a&gt; for &lt;em&gt;this&lt;/em&gt;?&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1179892524353">
+		<id gr:original-id="tag:diveintomark.org,2007-05-23:/archives/20070523033721">
+			tag:google.com,2005:reader/item/61a6cea87d68bc34
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Gates
+		</title>
+		<published>
+			2007-05-23T03:37:21Z
+		</published>
+		<updated>
+			2007-05-23T03:37:21Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/22/gates" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/22/gates/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/22/gates" xml:lang="en" type="html">
+			&lt;p&gt;The big news of the day is the gate at the head of the stairs on the deck:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/05/deck-gate.jpg" alt="gate at top of stairs leading up to the deck" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;Not shown, but there is an identical set of stairs on the far side of the deck, with an identical gate.&lt;/p&gt; &lt;p&gt;The gates were my wife’s idea. She envisioned letting our 3-year-old and 18-month-old play on the deck, semi-supervised (from inside). I opposed the gates on the grounds that they would be ineffective and would cause more problems than they solved. Like a firewall, they give you a false sense of security.&lt;/p&gt; &lt;p&gt;Case in point: we have metal gates at the head and foot of the stairs inside the house, and the 3-year-old has been able to open those gates since he was 2. I see no reason why a motivated 3-year-old would not be able to open these new gates as well. Or hurt himself trying. In fact, the worst accident we’ve ever had on the inside stairs was when I slipped while carrying my younger son. We slid down the stairs and rammed into the bottom gate, bruising my knee and warping the gate. (The kid, &lt;i lang="la"&gt;mirabile dictu&lt;/i&gt;, came out unscathed.)&lt;/p&gt; &lt;p&gt;I argued my viewpoint as best I could, and I lost. Our contractor installed the gates this afternoon. My wife picked up the kids from daycare. While she was outside admiring the new gates, the 3-year-old slipped out the garage and ran over to our neighbor’s house.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1179371969096">
+		<id gr:original-id="tag:diveintomark.org,2007-05-17:/archives/20070517024854">
+			tag:google.com,2005:reader/item/abf7ba36accfeef5
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Renovation neverending
+		</title>
+		<published>
+			2007-05-17T02:48:54Z
+		</published>
+		<updated>
+			2007-05-17T02:48:54Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/16/renovation-neverending" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/16/renovation-neverending/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/16/renovation-neverending" xml:lang="en" type="html">
+			&lt;p&gt;Still not finished, but getting there.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/05/living-room-2-60.jpg" alt="living room overlooking kitchen" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;We have art for these walls, but we’re waiting for the ceiling to be completely finished.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/05/living-room-1-60.jpg" alt="living room" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;The dog has adjusted.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/05/dog-60.jpg" alt="dog in beanbag chair" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;The kids have adjusted.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/05/kids-sofa-60.jpg" alt="kids on sofa" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;We have discovered one small new problem.&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2007/05/behind-sofa-60.jpg" alt="Wesley stuck behind the sofa" width="728" height="546"&gt;&lt;/p&gt; &lt;p&gt;In a house with 5 computers, I’ve managed to carve out 500 square feet without electronics of any kind.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1179346769204">
+		<id gr:original-id="tag:diveintomark.org,2007-05-16:/archives/20070516192400">
+			tag:google.com,2005:reader/item/3e92699712206938
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			It’s 2007. Do you know where your spec is?
+		</title>
+		<published>
+			2007-05-16T19:24:00Z
+		</published>
+		<updated>
+			2007-05-16T19:24:13Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/05/16/hilarity-ensues" type="text/html" /><link rel="replies" href="http://diveintomark.org/archives/2007/05/16/hilarity-ensues/feed/" />
+		<content xml:base="http://diveintomark.org/archives/2007/05/16/hilarity-ensues" xml:lang="en" type="html">
+			&lt;p&gt;As far as I can tell, it went like this:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Mark Nottingham wrote an RFC called &lt;a href="http://www.mnot.net/drafts/draft-nottingham-atompub-feed-history/draft-nottingham-atompub-feed-history-09.txt"&gt;Feed Paging and Archiving&lt;/a&gt;.&lt;/li&gt; &lt;li&gt;In order to publish an RFC through the IETF, you need to &lt;a href="http://www.ietf.org/tao.html#anchor42"&gt;get your references in order&lt;/a&gt;.&lt;/li&gt; &lt;li&gt;Since feed paging and archiving can be added to an RSS feed, &lt;a href="http://www.imc.org/atom-syntax/mail-archive/msg19655.html"&gt;one of those references is RSS 2.0&lt;/a&gt;.&lt;/li&gt; &lt;li&gt;There appears to be &lt;a href="http://intertwingly.net/blog/2007/05/16/Rank-Gamesmanship"&gt;a difference of opinion&lt;/a&gt; as to which of the many &lt;a href="http://diveintomark.org/archives/2004/02/04/incompatible-rss"&gt;incompatible&lt;/a&gt; RSS 2.0 specs should be cited. Hilarity ensues.&lt;/li&gt; &lt;li&gt;As of this writing, &lt;a href="http://www.imc.org/atom-syntax/mail-archive/msg19680.html"&gt;the citation will look like this&lt;/a&gt;.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;As fate would have it, I read the latest feed-history draft just last week, after someone asked about adding support for it in &lt;a href="http://feedparser.org/"&gt;feedparser&lt;/a&gt;. This problem actually occurred to me in passing. Then I took a nice satisfying shit and forgot all about it.&lt;/p&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

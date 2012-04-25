@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CPShtreNkZMC
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CKjo5_GP5JQC" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2008-07-29T03:11:16Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1217301076112">
+		<id gr:original-id="tag:diveintomark.org,2008-07-29:/archives/20080729021401">
+			tag:google.com,2005:reader/item/f7bfe925ffd25da0
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="dogs" scheme="http://diveintomark.org" /><category term="howto" scheme="http://diveintomark.org" />
+		<title type="html">
+			HOWTO feed medication to your dog
+		</title>
+		<published>
+			2008-07-29T02:14:01Z
+		</published>
+		<updated>
+			2008-08-01T00:05:25Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/07/28/howto-feed-medication-to-your-dog" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/07/28/howto-feed-medication-to-your-dog" xml:lang="en" type="html">
+			&lt;ol style="list-style:none;margin-left:0;padding-left:0"&gt; &lt;li&gt;&lt;p&gt;Take a quarter slice of American cheese.&lt;/p&gt; &lt;p&gt;&lt;img src="http://wearehugh.com/public/2008/07/01-cheese.jpg" alt="[cheese slice in hand]" width="640" height="188"&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;Roll the cheese into a ball and insert the pills.&lt;/p&gt; &lt;p&gt;&lt;img src="http://wearehugh.com/public/2008/07/02-pills.jpg" alt="[cheese ball with pills inside]" width="640" height="188"&gt;&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;Feed the cheese ball to your dog.&lt;/p&gt; &lt;p&gt;&lt;img src="http://wearehugh.com/public/2008/07/03-feed.jpg" alt="[feeding the cheese to the dog]" width="640" height="188"&gt;&lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;I’m told that peanut butter also works, but it’s messier.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1216784492118">
+		<id gr:original-id="tag:diveintomark.org,2008-07-23:/archives/20080723030709">
+			tag:google.com,2005:reader/item/2ce28462fbaa88eb
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="law" scheme="http://diveintomark.org" /><category term="lighthouse" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			A helluva thing
+		</title>
+		<published>
+			2008-07-23T03:07:09Z
+		</published>
+		<updated>
+			2008-07-23T16:55:41Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/07/22/a-helluva-thing" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/07/22/a-helluva-thing" xml:lang="en" type="html">
+			&lt;p&gt;It’s a helluva thing, a trial by jury. It was a radical notion 200 years ago, and it’s still a radical notion today.&lt;/p&gt; &lt;p&gt;I served on a jury once. Getting called for jury duty sucks, because most of the time you just sit in the jury lounge all day and then go home. But actually serving on a jury is a totally different thing. I think everyone should experience it at least once. In one sense, it’s just like you see on TV, except everything takes longer and you can’t go to the bathroom every 12 minutes. But it’s weird, if you’ve seen it on TV, because you realize that you already know the script. “Burden of proof,” “innocent until proven guilty,” “proof beyond a reasonable doubt.” The judge lays it all out for you, from scratch, even though most people have seen the scene and heard the speech and read the words a hundred times.&lt;/p&gt; &lt;p&gt;Everything is slanted towards the defense. Big stuff, little stuff, process stuff, everything. We learned later (during sentencing) that the defendant in our case had several prior convictions, but the &lt;abbr&gt;DA&lt;/abbr&gt; wasn’t allowed to bring them up during the trial. Witnesses were always being cut off in mid-sentence, but the defendant was given a wide berth to tell his version of events. We didn’t even know exactly what the charge meant until the defense lawyer made his closing argument. That, in particular, was incredibly frustrating. I made all sorts of notes like “is this important? don’t know, check later.” The judge said it was to force us to listen to everyone and everything as fairly as possible. It was frustrating on purpose, but it worked.&lt;/p&gt; &lt;p&gt;And I remember thinking at the time, “This thing. Right here, this thing. This is what we say America is about.” Everyone is innocent until proven guilty, and everybody gets their day in court. We suspected that &lt;a href="http://en.wikipedia.org/wiki/Hans_Reiser"&gt;Hans Reiser killed his wife&lt;/a&gt;. What did we give him? A trial. We suspected that &lt;a href="http://en.wikipedia.org/wiki/Oklahoma_City_bombing"&gt;Timothy McVeigh blew up a building and killed 168 people&lt;/a&gt;. What did we give him? A trial. (&lt;abbr&gt;BTW&lt;/abbr&gt;, this is why &lt;a href="http://www.aclu.org/safefree/detention/commissions.html"&gt;people get so upset over our mishandling of terror suspects&lt;/a&gt;. What could possibly be more un-American than saying that some people don’t deserve a fair trial?)&lt;/p&gt; &lt;p&gt;The case I served on wasn’t anything you’ll ever hear about, or read about, or see on TV. Just some neighbors who had ongoing petty feuds for years and years, until one day one of them went too far and made a real death threat. You’d say he “crossed the line.” I think the actual charge was called “commencement of threats,” which basically means he crossed one of the invisible lines that holds society together.&lt;/p&gt; &lt;p&gt;Some people spend their whole life right on the edge of being able to function in a civilized society. I knew a guy like that, growing up outside Philadelphia. His name was Eric. He always seemed to be in trouble with the law. Never anything serious, and not your standard crimes like robbery or drugs or weapons. Just… not quite understanding the boundaries between himself and everyone else. He could make friends quickly, but then he lost them just as quickly. He never had a steady girlfriend. He couldn’t maintain any sort of long-term relationship. I think an ex-girlfriend got a restraining order against him one time. And he’d get arrested for stuff like “criminal trespass” and “commencement of threats.”&lt;/p&gt; &lt;p&gt;Society is about drawing lines that everyone acknowledges and respects. Some people see the lines and cross them anyway and hope they don’t get caught. Eric didn’t even see the lines. They didn’t make any sense to him, so when he crossed them, he didn’t understand why he got in trouble. And you just wanted to smack him and say, “Just stay out of trouble, Eric! Just leave people alone.” And he did, most of the time. But “most of the time” is not “all of the time.” And it’s a crude word, but I think he was a little bit crazy. Not really crazy, like Hannibal Lecter crazy. He just… couldn’t see the lines. You don’t have to be crazy all the time, to be crazy.&lt;/p&gt; &lt;p&gt;Anyway, our case came and went. The wheels of justice grind slowly, but there’s only so much you can say about neighbors yelling at each other. I think the whole trial only lasted a day and a half, from jury selection to sentencing. In the end, we deliberated and found the defendant guilty beyond a reasonable doubt. The victim asked, and the judge agreed, and we the jurors were pleased to hear, that he should get a suspended sentence and a mental health assessment, with mandatory followup counseling. I’d guess he was offered deals and plea bargains, and I’d guess that everyone in his life begged him to take it. But he wanted his day in court, and he wanted a trial by a jury of his peers, and so that’s what we did. And he mounted a vigorous defense, and he was innocent right up until the moment we decided he was guilty.&lt;/p&gt; &lt;p&gt;I’m not going to get all puffed up about the glory of the system or the honor of performing my civic duty or whatever. The system is broken in a lot of ways, and there’s a reason they call it a duty — because it sounds a lot better in the abstract than it feels in the particular, slogging through downtown traffic and standing in line at the metal detectors and sitting quietly while people go on and on about their fucked up lives. But I also got a glimpse of a marvelous and precarious machine, built up and crusted over from two centuries of radical tradition, grinding ever so slowly forward. And it’s a helluva thing.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1216272137898">
+		<id gr:original-id="tag:diveintomark.org,2008-07-17:/archives/20080717044506">
+			tag:google.com,2005:reader/item/b537e7a46b46c01e
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="fonts" scheme="http://diveintomark.org" /><category term="goats" scheme="http://diveintomark.org" /><category term="java" scheme="http://diveintomark.org" /><category term="linux" scheme="http://diveintomark.org" /><category term="software" scheme="http://diveintomark.org" /><category term="wordle" scheme="http://diveintomark.org" />
+		<title type="html">
+			Things that are awesome
+		</title>
+		<published>
+			2008-07-17T04:45:06Z
+		</published>
+		<updated>
+			2008-07-17T04:47:24Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/07/17/things" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/07/17/things" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://fontmatrix.net/"&gt;FontMatrix&lt;/a&gt;, which helped me pick the God-awful fonts I’m foisting on the world&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.lesswatts.org/projects/powertop/"&gt;PowerTOP&lt;/a&gt;, because I love viewing new cross-sections of my computing environment&lt;/li&gt; &lt;li&gt;&lt;a href="http://wordle.net/"&gt;Wordle&lt;/a&gt; (&lt;a href="http://bigpicture.typepad.com/comments/2008/07/bernanke-word-c.html"&gt;example&lt;/a&gt;), despite being a &lt;i&gt;Java applet written in 2008&lt;/i&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://openjdk.java.net/"&gt;OpenJDK&lt;/a&gt;, which is &lt;a href="http://packages.debian.org/openjdk"&gt;now in Debian main&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://developer.yahoo.com/yslow/"&gt;YSlow&lt;/a&gt;, which proved that my &lt;code&gt;Cache-Control&lt;/code&gt; headers really did blow goats&lt;/li&gt; &lt;li&gt;&lt;a href="http://ocaoimh.ie/wp-super-cache/"&gt;WP-SuperCache&lt;/a&gt;, which fixed them (sorry, goats)&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.youtube.com/watch?v=WGoi1MSGu64"&gt;Flight of the Conchords&lt;/a&gt; (note: they are actually &lt;a href="http://www.youtube.com/watch?v=wd8yxDivs5g"&gt;twice as awesome&lt;/a&gt; as everything else on this list)&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.traderjoes.com/"&gt;Trader Joe’s&lt;/a&gt;, because food wasn’t expensive enough already&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.toblerone.com/"&gt;Toblerone&lt;/a&gt;, just because&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;And you?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1215915173376">
+		<id gr:original-id="tag:diveintomark.org,2008-07-13:/archives/20080713011654">
+			tag:google.com,2005:reader/item/8e04a4121a186853
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="asn.1" scheme="http://diveintomark.org" /><category term="c++" scheme="http://diveintomark.org" /><category term="google" scheme="http://diveintomark.org" /><category term="java" scheme="http://diveintomark.org" /><category term="json" scheme="http://diveintomark.org" /><category term="programming" scheme="http://diveintomark.org" /><category term="python" scheme="http://diveintomark.org" /><category term="scalability" scheme="http://diveintomark.org" /><category term="xml" scheme="http://diveintomark.org" />
+		<title type="html">
+			Protocol buffers: the early reviews are in
+		</title>
+		<published>
+			2008-07-13T01:16:54Z
+		</published>
+		<updated>
+			2008-07-13T04:19:40Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/07/12/protobuf" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/07/12/protobuf" xml:lang="en" type="html">
+			&lt;p&gt;Google (my current employer) has finally &lt;a href="http://google-opensource.blogspot.com/2008/07/protocol-buffers-googles-data.html"&gt;open sourced protocol buffers&lt;/a&gt;, the data interchange format we use for internal server-to-server communication. The blogosphere’s response? “&lt;a href="http://www.oreillynet.com/xml/blog/2008/07/google_hates_xml.html?CMP=OTC-TY3388567169&amp;amp;ATT=Google+hates+XML"&gt;No wireless&lt;/a&gt;. &lt;a href="http://blogs.tedneward.com/CommentView,guid,98ba2332-0f84-4697-b165-87ee357309cb.aspx"&gt;Less space than a Nomad&lt;/a&gt;. &lt;a href="http://steve.vinoski.net/blog/2008/07/11/protocol-buffers-no-big-deal/"&gt;Lame&lt;/a&gt;.”&lt;/p&gt; &lt;p&gt;Aaaaanyway…&lt;/p&gt; &lt;p&gt;Protocol buffers are “&lt;a href="http://c2.com/cgi/wiki?JustIsaDangerousWord"&gt;just&lt;/a&gt;” cross-platform data structures. &lt;a href="http://www.coriolinus.net/2008/07/08/protocol-buffers/"&gt;All you have to write is the schema&lt;/a&gt; (a &lt;code&gt;.proto&lt;/code&gt; file), then generate bindings in &lt;a href="http://code.google.com/apis/protocolbuffers/docs/cpptutorial.html"&gt;C++&lt;/a&gt;, &lt;a href="http://code.google.com/apis/protocolbuffers/docs/javatutorial.html"&gt;Java&lt;/a&gt;, or &lt;a href="http://code.google.com/apis/protocolbuffers/docs/pythontutorial.html"&gt;Python&lt;/a&gt;. (Or &lt;a href="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/protocol-buffers-0.0.5"&gt;Haskell&lt;/a&gt;. Or &lt;a href="http://groups.google.com/group/protobuf-perl"&gt;Perl&lt;/a&gt;.) The &lt;code&gt;.proto&lt;/code&gt; file is &lt;a href="http://www.betanews.com/article/Google_releases_its_data_encoding_format_to_compete_with_XML/1215530589"&gt;just a schema&lt;/a&gt;; it doesn’t contain any data except default values. All getting and setting is done in code. The serialized over-the-wire format is designed to minimize network traffic, and deserialization (especially in C++) is designed to maximize performance. I can’t begin to describe how much effort Google spends maximizing performance at every level. We would tear down our data centers and rewire them with &lt;a href="http://news.cnet.com/8301-17938_105-9967991-1.html"&gt;$500 ethernet cables&lt;/a&gt; if you could prove that it would reduce latency by 1%.&lt;/p&gt; &lt;p&gt;Besides being blindingly fast, protocol buffers have lots of neat features. &lt;a href="http://scottkirkwood.blogspot.com/2008/07/google-opensources-protocol-buffers.html"&gt;A zero-size &lt;abbr&gt;PB&lt;/abbr&gt; returns default values&lt;/a&gt;. &lt;a href="http://zunger.livejournal.com/164024.html"&gt;You can nest &lt;abbr&gt;PB&lt;/abbr&gt;s inside each other&lt;/a&gt;. And most importantly, &lt;abbr&gt;PB&lt;/abbr&gt;s are &lt;a href="http://news.ycombinator.com/item?id=239445"&gt;both backward and forward compatible&lt;/a&gt;, which means you can &lt;a href="http://www.mattcutts.com/blog/google-releases-protocol-buffers/"&gt;upgrade servers gradually&lt;/a&gt; and they can still talk to each other in the interim. (When you have as many machines as Google has, it’s always the interim somewhere.)&lt;/p&gt; &lt;p&gt;Comparisons to other data formats was, I suppose, inevitable. &lt;a href="http://www.thenewsbeforethenews.com/2008/07/10/everything-old-is-new-again/"&gt;Old-timers may remember &lt;abbr&gt;ASN.1&lt;/abbr&gt;&lt;/a&gt; or &lt;a href="http://tech.slashdot.org/tech/08/07/08/201245.shtml"&gt;&lt;abbr&gt;IIOP&lt;/abbr&gt;&lt;/a&gt;. Kids these days seem to &lt;a href="http://www.webmasterworld.com/xml/3693285.htm"&gt;compare everything to &lt;abbr&gt;XML&lt;/abbr&gt;&lt;/a&gt; or &lt;a href="http://www.freshblurbs.com/google-protocol-buffers-good-bad-and-ugly"&gt;&lt;abbr&gt;JSON&lt;/abbr&gt;&lt;/a&gt;. They’re actually closer to Facebook’s &lt;a href="http://stuartsierra.com/2008/07/10/thrift-vs-protocol-buffers"&gt;Thrift&lt;/a&gt; (&lt;a href="http://news.ycombinator.com/item?id=239276"&gt;written by ex-Googlers&lt;/a&gt;) or &lt;a href="http://www.25hoursaday.com/weblog/CommentView.aspx?guid=898f56ef-0439-4100-90da-08701be03c13"&gt;SQL Server’s &lt;abbr&gt;TDS&lt;/abbr&gt;&lt;/a&gt;. Protocol buffers won’t &lt;a href="http://zimboe.wordpress.com/2008/07/10/farewell-xml/"&gt;kill &lt;abbr&gt;XML&lt;/abbr&gt;&lt;/a&gt; (no matter how much &lt;a href="http://www.sharms.org/blog/?p=168"&gt;you wish they would&lt;/a&gt;), nor will they replace &lt;abbr&gt;JSON&lt;/abbr&gt;, &lt;abbr&gt;ASN.1&lt;/abbr&gt;, or &lt;a title="the world&amp;#39;s first and only implementation of RFC 1149" href="http://www.blug.linux.no/rfc1149/"&gt;carrier pigeon&lt;/a&gt;. But they’re simple and they’re fast and &lt;a href="http://www.webmonkey.com/blog/Google_s_Open_Source_Protocol_Buffers_Offer_Scalability__Speed"&gt;they scale like crazy&lt;/a&gt;, and that’s the way Google likes it.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1215840847930">
+		<id gr:original-id="tag:diveintomark.org,2008-07-12:/archives/20080712042845">
+			tag:google.com,2005:reader/item/6ace01e1dba0625d
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="culture" scheme="http://diveintomark.org" /><category term="politics" scheme="http://diveintomark.org" /><category term="thinkofthechildren" scheme="http://diveintomark.org" />
+		<title type="html">
+			NY’s top child porn
+		</title>
+		<published>
+			2008-07-12T04:28:45Z
+		</published>
+		<updated>
+			2008-07-12T04:28:45Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/07/12/nystopchildporn" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/07/12/nystopchildporn" xml:lang="en" type="html">
+			&lt;p&gt;Despite the promising URL, &lt;a rel="nofollow" href="http://www.nystopchildporn.com/"&gt;NYsTopChildPorn.com&lt;/a&gt; does not, in fact, contain NY’s top child porn. (”Package contained bobcat. &lt;a href="http://xkcd.com/325/"&gt;Would not buy again&lt;/a&gt;.”) It will, however, be blocked by &lt;em&gt;every web filtering program ever&lt;/em&gt; based solely on the domain name — an irony which will sadly be lost on the Attorneys General. I bet they bring in a metric buttload of weird search traffic before they fold, though.&lt;/p&gt; &lt;p&gt;Yeah, I know, I’m joking about child porn. Carlin is dead, Pesci bless him, and somebody’s gotta start &lt;a href="http://www.youtube.com/watch?v=3av_qRR_DWc"&gt;picking up the slack&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;(The site itself is not notable in any way except as a reason to point out the obvious design flaw — that &lt;em&gt;you’re declaring war on a protocol&lt;/em&gt;, and, you know, good luck with that.)&lt;/p&gt; &lt;p&gt;(I really like pluralizing “Attorney General.” And verbing nouns. And parenthesizing.)&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1215312474922">
+		<id gr:original-id="tag:diveintomark.org,2008-07-06:/archives/20080706022239">
+			tag:google.com,2005:reader/item/06aeb8aa7e6ed445
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			New Orc City
+		</title>
+		<published>
+			2008-07-06T02:22:39Z
+		</published>
+		<updated>
+			2008-07-06T04:12:31Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/07/05/new-orc-city" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/07/05/new-orc-city" xml:lang="en" type="html">
+			&lt;div style="width:180px"&gt; &lt;img src="http://wearehugh.com/public/2008/07/papyrus.jpg" alt="[example of Papyrus font]" title="" width="180" height="240"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/semarr/125189245/"&gt;I found this example of Papyrus on my doorstep last night&lt;/a&gt; © &lt;a href="http://flickr.com/people/semarr/"&gt;Sarah Marriage&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;The wife and the first born are in New York City for the long weekend, except the second born pronounces it “New Orc City,” which sounds much more interesting if you ask me. This is not the first time Ethan has traveled, but it’s the first time that he and his brother have been separated for more than 8 hours. It has also given them their first opportunity to talk to each other on the telephone, long distance. I assume it won’t be the last.&lt;/p&gt; &lt;p&gt;Wesley and I have been having a wonderful time doing all manner of things without, you know, competition. Watching his &lt;a title="actually just one movie over and over" href="http://www.imdb.com/title/tt0055254/"&gt;favorite movies&lt;/a&gt;, wading in the &lt;a href="http://www.enoriver.org/Festival/"&gt;Eno River&lt;/a&gt;, and spotting butterflies at the &lt;a href="http://www.ncmls.org/"&gt;Museum of Life and Science&lt;/a&gt;. No pics, sorry (the wife has the camera in New Orc City), but here’s some pictures from our trip 2 years ago: a &lt;a href="http://flickr.com/photos/f8dy/121701744/"&gt;butterfly&lt;/a&gt;, a &lt;a href="http://flickr.com/photos/f8dy/121701637/"&gt;sheep&lt;/a&gt;, and a &lt;a href="http://flickr.com/photos/f8dy/121701704/"&gt;pot-bellied pig&lt;/a&gt;. I swear the pig hasn’t moved in 2 years.&lt;/p&gt; &lt;p&gt;On a coming-full-circle kind of note, the Festival of the Eno uses &lt;a href="http://diveintomark.org/archives/2008/06/21/minimalism#comment-12293"&gt;Papyrus&lt;/a&gt; in their video materials. We saw it on the shuttle bus on the way back to the parking lot. My mother was sitting next to me, and I got all excited and poked her and pointed to the screen above us and said, “Hey, I know that font! Everybody hates that font!” Who says designers are useless?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1215149084985">
+		<id gr:original-id="tag:diveintomark.org,2008-07-04:/archives/20080704050619">
+			tag:google.com,2005:reader/item/43cd419edfdfc740
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="adobe" scheme="http://diveintomark.org" /><category term="sillyseason" scheme="http://diveintomark.org" />
+		<title type="html">
+			Adobe 9
+		</title>
+		<published>
+			2008-07-04T05:06:19Z
+		</published>
+		<updated>
+			2008-07-04T20:18:42Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/07/04/adobe-9" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/07/04/adobe-9" xml:lang="en" type="html">
+			&lt;div style="width:240px"&gt; &lt;img src="http://wearehugh.com/public/2008/07/upgrade-are-failed.jpg" alt="[upgrade are failed]" title="" width="240" height="180"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/collinanderson/2413624779/"&gt;Upgrade are failed!&lt;/a&gt; © &lt;a href="http://flickr.com/people/collinanderson/"&gt;Collin Anderson&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;Adobe&lt;a title="you may think I&amp;#39;m intentionally overusing the marks for comedic effect, but I&amp;#39;m not (overusing them, that is)" href="http://www.adobe.com/misc/trade.html"&gt;®&lt;/a&gt; Reader® 9 is &lt;a href="http://gusmueller.com/blog/archives/2008/07/adobe_reader_9_is_out!.html"&gt;out&lt;/a&gt;. It’s now almost half as fast as &lt;a href="http://www.foxitsoftware.com/pdf/reader_2/down_reader.htm"&gt;Foxit Reader&lt;/a&gt;. It lets you &lt;a href="http://www.download.com/8301-2007_4-9982192-12.html"&gt;embed Flash in PDF&lt;/a&gt; and &lt;a href="http://blogs.adobe.com/loridefurio/2008/07/pdf_widget_on_a.html"&gt;embed PDF in Flash&lt;/a&gt;. Adobe supports both kinds of music, &lt;a href="http://www.microsoft.com/"&gt;country&lt;/a&gt; and &lt;a href="http://www.apple.com/"&gt;western&lt;/a&gt;. They’ve also “&lt;a href="http://blogs.adobe.com/adobereader/2008/06/adobe_reader_9_is_here_1.html"&gt;conveniently&lt;/a&gt;” bundled Adobe® AIR™ &lt;a href="http://www.tuaw.com/2008/07/02/adobe-reader-9-released/#c12973868"&gt;for no apparent reason&lt;/a&gt; and added synergistic integration with &lt;a href="https://www.acrobat.com/"&gt;their cloud&lt;/a&gt;, which claims it doesn’t support my browser and then requires both Javascript and Flash to sign up for an Adobe® ID, the use of which is governed by this &lt;a href="http://www.adobe.com/go/acrobat_com_tou_en"&gt;draconian service agreement&lt;/a&gt;, which is a PDF.&lt;/p&gt; &lt;p&gt;You can’t make this stuff up. And apparently it gets worse if you try to, you know, &lt;a href="http://blog.micropledge.com/2008/07/adobe-reader-9/"&gt;actually install it&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;It occurs to me that, at some point in the not-too-&lt;a href="http://www.youtube.com/watch?v=WGoi1MSGu64"&gt;distant future&lt;/a&gt;, we’re going to achieve a harmonic convergence with these mega-platforms. “Adobe® Acrobat® version 9 with Adobe® Flash® version 10 with Adobe® Photoshop® CS3 with Adobe® AIR™ beta 3″ will get truncated to “Adobe 9.” Coming soon on &lt;a href="http://www.overheardinnewyork.com/"&gt;Overheard in New York&lt;/a&gt;: “Hey, are you on Adobe 9?” “No, I’m on Microsoft 14.” “Pity. I was hoping we could have sex.” Or something like that. Who knows, with these wacky kids today and their vendor-specific runtimes?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1214718180177">
+		<id gr:original-id="tag:diveintomark.org,2008-06-29:/archives/20080629044756">
+			tag:google.com,2005:reader/item/7bd937cd45396c6a
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="accessibility" scheme="http://diveintomark.org" /><category term="bbc" scheme="http://diveintomark.org" /><category term="microformats" scheme="http://diveintomark.org" /><category term="rant" scheme="http://diveintomark.org" /><category term="rdf" scheme="http://diveintomark.org" />
+		<title type="html">
+			Microformats and accessibility: the soap opera that never ends
+		</title>
+		<published>
+			2008-06-29T04:47:56Z
+		</published>
+		<updated>
+			2008-06-29T04:55:43Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/29/microformats-accessibility" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/29/microformats-accessibility" xml:lang="en" type="html">
+			&lt;div style="width:240px"&gt; &lt;img src="http://wearehugh.com/public/2008/06/ducks-butt.jpg" alt="[duck with its head underwater]" title="" width="240" height="160"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/spacepleb/249761636/"&gt;ducks butt&lt;/a&gt; © &lt;a href="http://flickr.com/people/spacepleb/"&gt;Dave Gough&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;As far as I can tell, the only thing that leading accessibility experts agree on is that &lt;a href="http://adactio.com/journal/1451/"&gt;nobody listens to leading accessibility experts&lt;/a&gt;, especially not &lt;a href="http://www.webstandards.org/2008/06/23/haccessibility-redux/#comment-71549"&gt;the microformats cabal&lt;/a&gt;, which &lt;a href="http://microformats.org/wiki/datetime-design-pattern#Accessibility_issues"&gt;has never cared about accessibility&lt;/a&gt;, &lt;a href="http://microformats.org/wiki/assistive-technology-abbr-results"&gt;has never bothered to test it&lt;/a&gt;, and &lt;a href="http://www.isolani.co.uk/blog/access/AccessibilityOfDateTimeMicroformat"&gt;has never acknowledged&lt;/a&gt; those &lt;a href="http://lab.dotjay.co.uk/tests/screen-readers/microformats/datetime-design-pattern/"&gt;who have tested it&lt;/a&gt;. In fact, &lt;a href="http://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml"&gt;the BBC recently removed one microformat&lt;/a&gt; from their site because one piece of it may be confusing to some screen reader users with a certain non-default configuration. This proves what leading accessibility experts have been saying all along, that &lt;a href="http://adactio.com/journal/1457/"&gt;all microformats are inaccessible&lt;/a&gt;, and we should &lt;a href="http://ejohn.org/blog/bbc-removing-microformat-support/"&gt;all just use RDF&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Meanwhile, the devilish cabal is &lt;a href="http://microformats.org/wiki/datetime-design-pattern#date_and_time_separation_using_value_excerption"&gt;secretly solving the problem&lt;/a&gt; on their public wiki page, their public mailing list, and their public IRC channel. But will it be &lt;a href="http://www.bbc.co.uk/blogs/radiolabs/2008/06/microformats_and_rdfa_and_rdf.shtml"&gt;enough for the BBC&lt;/a&gt;? Be sure to tune in next week, when we’ll &lt;a href="http://www.imdb.com/title/tt0071853/quotes"&gt;drown a leading accessibility expert&lt;/a&gt; to see if she’s a witch.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1214282745255">
+		<id gr:original-id="tag:diveintomark.org,2008-06-24:/archives/20080624041300">
+			tag:google.com,2005:reader/item/2494c5c810b872c8
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="nostalgia" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			Property of
+		</title>
+		<published>
+			2008-06-24T04:13:00Z
+		</published>
+		<updated>
+			2008-06-24T15:26:43Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/24/property-of" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/24/property-of" xml:lang="en" type="html">
+			&lt;div style="width:240px"&gt; &lt;img src="http://wearehugh.com/public/2008/06/dot-matrix.jpg" alt="[dot matrix screenshot]" title="" width="240" height="173"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/blakespot/2379280059/"&gt;Mac Finder screendump via ImageWriter II printer&lt;/a&gt; © &lt;a href="http://flickr.com/people/blakespot/"&gt;Blake Patterson&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;&lt;a href="http://mako.cc/copyrighteous/20080623-00"&gt;Benjamin Mako Hill is awesome&lt;/a&gt;. That reminds me of a story.&lt;/p&gt; &lt;p&gt;During my brief tenure at Cornell University, I worked at the campus computing labs. It was just grunt work — keeping the waiting list during peak hours, refilling printer paper, and playing Tetris-as-a-desk-accessory (because the Macs were all on System 6 without MultiFinder). I was technically employed by &lt;acronym&gt;CIT&lt;/acronym&gt;, which I think stood for “Cornell Information Technologies.” They were the organization that ran the computer labs. But nobody except employees really knew that; people assumed I worked for The University and didn’t know or care about internal bureaucratic structures.&lt;/p&gt; &lt;p&gt;Anyway, in the back of the computer labs, we kept boxes and boxes of printer paper. This was dot-matrix paper, with the edges that you had to thread into the (ImageWriter) printers and then tear off after you printed. CIT could never seem to keep printer paper in the labs that needed it, and about once a week we would get a call from another lab across campus crying that they were out of paper and could we please send some over right away? And by “send some over,” of course I mean “carry some over.”&lt;/p&gt; &lt;p&gt;In an effort to deter theft (because &lt;i&gt;everybody&lt;/i&gt; steals printer paper), we were told to write “Stolen From CIT” on the outside of each box. The thinking being, if someone were to break into the (locked!) cabinet and make off with an unwieldy box of near-worthless paper, they would be foiled by Good Samaritans who saw this insignia on the outside of the box and reported the crime. Seriously, that’s exactly how it was explained to me.&lt;/p&gt; &lt;p&gt;Of course, nobody knew what “CIT” stood for, nobody wanted our printer paper except other CIT labs, and and nobody ever took the boxes out into the open air except us, the hapless CIT employees, who had to carry said boxes to said labs.&lt;/p&gt; &lt;p&gt;Pierre-Joseph Proudhon would be proud.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1214108434016">
+		<id gr:original-id="tag:diveintomark.org,2008-06-22:/archives/20080622034542">
+			tag:google.com,2005:reader/item/30de52ccc1e42b2f
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="blogging" scheme="http://diveintomark.org" /><category term="design" scheme="http://diveintomark.org" /><category term="philipglass" scheme="http://diveintomark.org" />
+		<title type="html">
+			Minimalism
+		</title>
+		<published>
+			2008-06-22T03:45:42Z
+		</published>
+		<updated>
+			2008-06-23T02:11:17Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/21/minimalism" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/21/minimalism" xml:lang="en" type="html">
+			&lt;p&gt;Normal people remember episode 110 of South Park as the one that introduced &lt;a href="http://www.southparkstudios.com/guide/110/"&gt;Mr. Hankey the Christmas Poo&lt;/a&gt;. I remember it as the one where the South Park students performed a non-denominational holiday dance “&lt;a href="http://www.southparkstudios.com/clips/103765"&gt;with music and lyrics by Philip Glass&lt;/a&gt;.” I was at a party when this episode first aired, and everyone had stopped partying long enough to watch South Park together. When faux-Philip Glass came on, I and one other person in the room starting laughing uncontrollably, while the rest of the partygoers alternated staring at us and at the TV in utter confusion.&lt;/p&gt; &lt;p&gt;11 years later, I still like Philip Glass and I still like minimalism, although I don’t get invited to nearly as many parties. My approach to web design has always tended towards minimalism, but that was just because I wasn’t very good at it (design, that is).&lt;/p&gt; &lt;p&gt;Last week, I was talking with &lt;a href="http://bitworking.org/"&gt;Joe&lt;/a&gt; about how certain things have made the leap from content to chrome. (”Chrome” is what Mozilla developers call the browser interface around the content pane — the tabs and menus and location bar and so on.) It used to be that you could only find feeds by looking for special icons within web pages themselves. Now all modern browsers support feed autodiscovery tags, and they expose the feeds in menus and icons within the chrome area of the browser. So you don’t need to litter your pages with feed icons; feed autodiscovery allowed them to make the jump from content to chrome.&lt;/p&gt; &lt;p&gt;Along the same lines: &lt;a href="http://universaleditbutton.org/Universal_Edit_Button"&gt;Universal Edit Button&lt;/a&gt;. It appears to be mired in bikeshed syntax discussions at the moment, but the idea is simple enough: “edit this page” links in wikis and such have always been included directly in the web pages themselves. This sucks for a variety of reasons, not the least of which is that there’s no machine-readable way to know for sure whether a page is editable or not. So some people got together to create a standard for machine-readable “edit this page” links, and they wrote some supporting software to expose those links… where? In the browser’s chrome, of course.&lt;/p&gt; &lt;p&gt;It was in this context that I stumbled upon James Bennett’s &lt;a href="http://www.b-list.org/weblog/2008/jun/15/minimal/"&gt;Minimal&lt;/a&gt;, and from there Ryan Tomayko’s &lt;a href="http://tomayko.com/writings/administrative-debris"&gt;Administrative Debris&lt;/a&gt;. And it got me thinking about how much of my “design” I could simplify by moving things out of the page and into the browser.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Feed icons? Already exposed via feed autodiscovery. Axed.&lt;/li&gt; &lt;li&gt;Previous/next links between posts? Already exposed via &lt;code&gt;rel=prev/next&lt;/code&gt; links. Axed. (What’s that you say? Your browser is run by megalomaniacs who decided you don’t deserve to be informed about navigation links? Never fear, &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/2933"&gt;there’s an extension for that&lt;/a&gt;! Or you could, you know, switch to Opera. Or &lt;a href="http://www.icab.de/"&gt;iCab&lt;/a&gt;. Or &lt;a href="http://www.seamonkey-project.org/"&gt;SeaMonkey&lt;/a&gt;.)&lt;/li&gt; &lt;li&gt;Site search? Already exposed via OpenSearch. Axed. (This is a bit harsh. I suspect very few people know what it means when their search box starts blushing blue — that they can drop down the list of search providers and add a site search. But my access logs show very few people use my site search in the first place; many, many more people simply use a general-purpose search engine with the words “diveintomark” or “mark pilgrim” appended to their query.)&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;That was enough to get me started on a full-on redesign, which is still technically in progress (so if you see something’s broken, well, it’s “beta”). Along the way, I found &lt;a href="http://webtypography.net/toc/"&gt;The Elements of Typographic Style Applied To The Web&lt;/a&gt; and &lt;a href="http://www.alistapart.com/articles/settingtypeontheweb/"&gt;Setting Type on the Web to a Baseline Grid&lt;/a&gt;, which reminded me just how much I hate designers. But I think I got the hang of it, at least for my post archives. I honestly can’t see the difference, but maybe you can.&lt;/p&gt; &lt;p&gt;Also, I have a new &lt;a href="http://diveintomark.org/archives"&gt;archives page&lt;/a&gt; that lists every post ever, an idea I stole shamelessly (and with permission) from &lt;a href="http://bitworking.org/"&gt;Joe&lt;/a&gt;. This is so unbelievably useful and obvious, I can’t imagine why I never did it before. It is optimized for exactly one use case: every now and then I get in the mood to read my old writing, and this page lets me skim my entire body of writing and reminisce efficiently. If you like it too, that’s nice, but I don’t care about your opinion nearly as much as you might think. I was initially worried about page size, but it turns out it’s only 46K after 7 years of blogging.&lt;/p&gt; &lt;p&gt;I made a bunch of other changes too, some obvious, some not. &lt;a href="http://diveintomark.org/archives/2007/06/15/ol-li"&gt;As promised&lt;/a&gt;, I have integrated &lt;code&gt;PapayaWhip&lt;/code&gt; into my design, as the background color for &lt;a href="http://diveintomark.org/archives/2008/05/07/when-the-fall-is-all-thats-left#comment-11920"&gt;comments I leave on my own posts&lt;/a&gt;. This is a long-running inside joke that is funny to about three people, one of whom doesn’t even read this site. I haven’t really tackled Ryan’s inline editing ideas yet, but I did add a little “edit this page” link (but only for me, when I’m logged into Wordpress already). Come to think of it, that should really be Universal Edit Button markup instead. See? This minimalism thing, there’s a lot to it. You think you’re done, and then you find one more thing to take away.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1214009094666">
+		<id gr:original-id="tag:diveintomark.org,2008-06-21:/archives/20080621002634">
+			tag:google.com,2005:reader/item/5e85d3d26102eda3
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="politics" scheme="http://diveintomark.org" />
+		<title type="html">
+			Four boxes
+		</title>
+		<published>
+			2008-06-21T00:26:34Z
+		</published>
+		<updated>
+			2008-06-21T01:09:56Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/20/four-boxes" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/20/four-boxes" xml:lang="en" type="html">
+			&lt;blockquote&gt; &lt;p&gt;“There are four boxes to be used in defense of liberty: soap, ballot, jury, and ammo. Please use in that order.”&lt;br&gt; — Ed Howdershelt&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;a href="http://www.nytimes.com/2005/12/16/politics/16program.html"&gt;Soap box&lt;/a&gt;? No effect.&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.cnn.com/2006/POLITICS/11/08/election.house/index.html"&gt;Ballot&lt;/a&gt; &lt;a href="http://www.cnn.com/2006/POLITICS/11/08/election.main/index.html"&gt;box&lt;/a&gt;? No effect.&lt;/p&gt; &lt;p&gt;&lt;a href="http://blog.wired.com/27bstroke6/2008/06/dems-agree-to-e.html"&gt;Jury box&lt;/a&gt;? No effect.&lt;/p&gt; &lt;p&gt;I’m not really looking forward to box #4.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1213935438824">
+		<id gr:original-id="tag:diveintomark.org,2008-06-20:/archives/20080620031720">
+			tag:google.com,2005:reader/item/3c5a8ed4b4e2b415
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			It works better when you plug it in
+		</title>
+		<published>
+			2008-06-20T03:17:20Z
+		</published>
+		<updated>
+			2008-06-20T03:17:20Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/19/it-works-better-when-you-plug-it-in" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/19/it-works-better-when-you-plug-it-in" xml:lang="en" type="html">
+			&lt;div style="width:240px"&gt; &lt;img src="http://wearehugh.com/public/2008/06/lightning.jpg" alt="[lightning storm]" title="" width="240" height="180"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/evdaimon/79050918/"&gt;CG lightning strike&lt;/a&gt; © &lt;a href="http://flickr.com/people/evdaimon/"&gt;Axel Rouvin&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;“Where’s the new lawn mower?”&lt;/p&gt; &lt;p&gt;“In the dining room.”&lt;/p&gt; &lt;p&gt;“What’s it doing in the dining room?”&lt;/p&gt; &lt;p&gt;“&lt;a href="http://www.blackanddecker.com/ProductGuide/Product-Details.aspx?ProductID=16345"&gt;Charging&lt;/a&gt;.”&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1213887783832">
+		<id gr:original-id="tag:diveintomark.org,2008-06-19:/archives/20080619143649">
+			tag:google.com,2005:reader/item/029b1b7cb46b1b4d
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="email" scheme="http://diveintomark.org" /><category term="obama" scheme="http://diveintomark.org" /><category term="parody" scheme="http://diveintomark.org" /><category term="politics" scheme="http://diveintomark.org" />
+		<title type="html">
+			Teach The Controversy About Barack Obama
+		</title>
+		<published>
+			2008-06-19T14:36:49Z
+		</published>
+		<updated>
+			2008-06-19T14:36:49Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/19/teach-the-controversy" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/19/teach-the-controversy" xml:lang="en" type="html">
+			&lt;p&gt;&lt;tt&gt;There are many things people do not know about BARACK OBAMA. It is every American’s PATRIOTIC DUTY to read this message and pass it along to all of their friends and loved ones.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama is a PATRIOTIC AMERICAN. He has one HAND over his HEART at all times. He occasionally switches when one arm gets tired, which is almost never because he is STRONG.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama wears a FLAG PIN at all times, even in the shower. One time he DROPPED THE PIN down the drain, and he PATRIOTICALLY disassembled his entire plumbing to retrieve it.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama says the PLEDGE OF ALLEGIANCE every time he sees an American flag, and he has an American flag in EVERY ROOM in his house. Some days it takes him OVER 45 MINUTES to get out of his house. He also ends every sentence by saying, “WITH LIBERTY AND JUSTICE FOR ALL.” On the INTERNET there is video of Obama quietly mouthing the PLEDGE OF ALLEGIANCE in his sleep.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama has the DECLARATION OF INDEPENDENCE tattooed on his stomach. It’s upside-down, so he can read it while doing sit-ups. He does FIFTY SITUPS every morning, which is the same number as OUR FOUNDING FATHERS did to commemorate our FIFTY STATES.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama take his daughters HUNTING every weekend — HUNTING LIBERALS, that is. Liberals are ALWAYS IN SEASON.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama is a DEVOUT CHRISTIAN. His favorite book is the BIBLE, which he has memorized. His name means HE WHO LOVES JESUS in the ancient language of Aramaic, which is the language JESUS SPOKE before he learned English. He is PROUD that Jesus was an American.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama goes to church every morning. He goes to church every afternoon. He goes to church every evening. He is IN CHURCH RIGHT NOW. If elected, he has pledged to build a MEGACHURCH inside AIR FORCE ONE.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama’s skin is the color of AMERICAN SOIL. His blood is the color of the AMERICAN FLAG. His fingernails are the color of APPLE PIE. He rubs AMERICAN SOIL on his chest every 20 minutes, then cleanses himself with HOLY WATER.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;Barack Obama buys only AMERICAN GOODS. His sole possessions are a FORD PICK-UP TRUCK, a GEORGE FOREMAN GRILL, and HALF THE STATE OF MONTANA. He drinks only APPALACHIAN MOONSHINE, eats only FREEDOM FRIES, and travels exclusively by JOHN DEERE TRACTOR.&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;tt&gt;PLEASE FORWARD THIS EMAIL TO EVERYONE YOU KNOW! SPREAD THE TRUTH ABOUT BARACK OBAMA!!!!!&lt;/tt&gt;&lt;/p&gt; &lt;p&gt;&lt;small&gt;[source: &lt;a href="http://www.slate.com/id/2193798/"&gt;slate.com&lt;/a&gt; and then improved upon]&lt;/small&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1213806348097">
+		<id gr:original-id="tag:diveintomark.org,2008-06-18:/archives/20080618141744">
+			tag:google.com,2005:reader/item/3eeb3cfda7934d28
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="firefox" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" /><category term="webkit" scheme="http://diveintomark.org" />
+		<title type="html">
+			About that world record
+		</title>
+		<published>
+			2008-06-18T14:17:44Z
+		</published>
+		<updated>
+			2008-06-19T18:46:11Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/18/about-that-world-record" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/18/about-that-world-record" xml:lang="en" type="html">
+			&lt;div style="width:180px"&gt; &lt;img src="http://wearehugh.com/public/2008/06/trophy-small.jpg" alt="[trophy]" title="" width="180" height="240"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/irinaslutsky/2171148684/"&gt;who made this trophy for micki?&lt;/a&gt; © &lt;a href="http://flickr.com/people/irinaslutsky/"&gt;irina slutsky&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;Despite &lt;a href="http://twitter.com/diveintomark/statuses/837141783"&gt;my snarky comment yesterday&lt;/a&gt;, I &lt;a href="http://diveintomark.org/archives/2008/05/07/when-the-fall-is-all-thats-left#comment-11920"&gt;loves me some PR stunts&lt;/a&gt;, and I think &lt;a href="http://www.spreadfirefox.com/en-US/worldrecord/"&gt;Mozilla setting an official world record&lt;/a&gt; is a brilliant PR stunt. It’s a great hook to convince journalists to write a story — or even &lt;a href="http://www.comedycentral.com/colbertreport/videos.jhtml?videoId=174083"&gt;mention it on TV&lt;/a&gt; — and that’s one less story they’ll write about &lt;a href="http://diveintomark.org/archives/2007/05/02/silly-season"&gt;shiny proprietary systems&lt;/a&gt;. That’s not &lt;a href="http://glandium.org/blog/?p=198"&gt;useless&lt;/a&gt;, and it’s not &lt;a href="http://np237.livejournal.com/18484.html"&gt;stupid&lt;/a&gt; (and it’s most certainly not &lt;a href="http://en.wikipedia.org/wiki/Michel_Lotito"&gt;the stupidest world record ever&lt;/a&gt;, a designation for which there is &lt;a href="http://www.google.com/search?q=stupidest+world+record"&gt;ample competition&lt;/a&gt;). Hurrah to the Mozilla marketing genius that thought it up and made it happen.&lt;/p&gt; &lt;p&gt;That said, I’m posting this in the &lt;a href="http://nightly.webkit.org/"&gt;nightly Webkit build for Windows&lt;/a&gt;, which is just &lt;a href="http://ariya.blogspot.com/2008/06/javascript-speed-race.html"&gt;incredibly, unbelievably, inhumanly fast&lt;/a&gt;. One might even call it “world record” fast.&lt;/p&gt; &lt;p&gt;Unofficially, of course.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1213201192178">
+		<id gr:original-id="tag:diveintomark.org,2008-06-11:/archives/20080611152715">
+			tag:google.com,2005:reader/item/b0c3cd87df60a598
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="cartoon" scheme="http://diveintomark.org" />
+		<title type="html">
+			Purity
+		</title>
+		<published>
+			2008-06-11T15:27:15Z
+		</published>
+		<updated>
+			2008-06-13T05:09:50Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/11/purity" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/11/purity" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://xkcd.com/435/"&gt;&lt;img src="http://wearehugh.com/public/2008/06/philosophers.png" alt="[Philosophers]" title="True story: I decided to become a philosophy major while sitting on Libe Slope at Cornell, looking up at the clouds" width="650" height="535"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p style="text-align:right;font-style:oblique"&gt;&lt;small&gt;(with apologies to &lt;a href="http://xkcd.com/435/"&gt;Randall Munroe&lt;/a&gt;; bubble from &lt;a href="http://openclipart.org/media/files/nicubunu/7392"&gt;Open Clip Art&lt;/a&gt;)&lt;/small&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1212853399059">
+		<id gr:original-id="tag:diveintomark.org,2008-06-07:/archives/20080607152437">
+			tag:google.com,2005:reader/item/da73d0eea10e40a1
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="politics" scheme="http://diveintomark.org" />
+		<title type="html">
+			Geeky U.S. election predictions
+		</title>
+		<published>
+			2008-06-07T15:24:37Z
+		</published>
+		<updated>
+			2008-06-07T15:24:37Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/06/07/geeky-us-election-predictions" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/06/07/geeky-us-election-predictions" xml:lang="en" type="html">
+			&lt;p&gt;Here’s mine for the presidential race:&lt;/p&gt; &lt;pre&gt;91E7FDF9FD7C1BD287A47EF6344700FD79EE13D6&lt;/pre&gt; &lt;p&gt;Leave your prediction in comments or trackbacks. Then come back the day after the election and post your plaintext prediction and the hash algorithm you used. The commenter who comes closest to the actual results gets an autographed copy of &lt;cite&gt;Greasemonkey Hacks&lt;/cite&gt;.&lt;/p&gt; &lt;p&gt;(&lt;a href="http://www.hashemall.com/"&gt;HashEmAll.com&lt;/a&gt; for those of you on inferior operating systems.)&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1210631705988">
+		<id gr:original-id="tag:diveintomark.org,2008-05-12:/archives/20080512221756">
+			tag:google.com,2005:reader/item/11db14de7d4f29cf
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="culture" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="sesamestreet" scheme="http://diveintomark.org" />
+		<title type="html">
+			Invisibility
+		</title>
+		<published>
+			2008-05-12T22:17:56Z
+		</published>
+		<updated>
+			2008-06-21T01:28:09Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/05/12/invisibility" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/05/12/invisibility" xml:lang="en" type="html">
+			&lt;p&gt;As sort of a followup to &lt;a href="http://diveintomark.org/archives/2007/12/27/old-school"&gt;this post about Sesame Street Old School&lt;/a&gt;…&lt;/p&gt; &lt;p&gt;I bought the “Old School” volume 1 box set, to complement our already-purchased “Old School” volume 2 box set. We just got to an episode where Big Bird is trying to introduce Snuffleupagus to his friends but his friends don’t see him. This was one of the “differences” in the early episodes that soulless executives were “concerned” about — Snuffleupagus was cast as a figment of Big Bird’s imagination until 1985.&lt;/p&gt; &lt;p&gt;I recognized what was going on and told my older son that Snuffleupagus was invisible in this story and only Big Bird could see him. Contrary to the “concerns” of the aforementioned soulless executives, this did not faze my 4-year-old. In fact, he spent the rest of the evening running around the house with his hands over his eyes saying “You can’t see me! You can’t see me!” and laughing hysterically.&lt;/p&gt; &lt;p&gt;Perhaps their “concern” was rooted in the fact that exposure to early Sesame Street episodes would turn our nation’s youth into &lt;a href="http://en.wikipedia.org/wiki/Races_and_species_in_The_Hitchhiker%27s_Guide_to_the_Galaxy#Ravenous_Bugblatter_Beast_of_Traal"&gt;the Ravenous Bugblatter Beast of Traal&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;&lt;img src="http://wearehugh.com/public/2008/05/dont-panic.jpg" alt="Don&amp;#39;t Panic" title="" width="728" height="526"&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1210562347892">
+		<id gr:original-id="tag:diveintomark.org,2008-05-12:/archives/20080512025233">
+			tag:google.com,2005:reader/item/b3dce2ae505dca4e
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="fudge" scheme="http://diveintomark.org" /><category term="lighthouse" scheme="http://diveintomark.org" /><category term="recipes" scheme="http://diveintomark.org" />
+		<title type="html">
+			HOWTO make the perfect fudge and get laid
+		</title>
+		<published>
+			2008-05-12T02:52:33Z
+		</published>
+		<updated>
+			2008-06-19T18:46:56Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/05/11/five-minute-fudge-recipe" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/05/11/five-minute-fudge-recipe" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://wearehugh.com/public/2008/05/fudge.jpg" alt="[Fudge]" title="" width="300" height="200"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/57989723@N00/2136467455/"&gt;Would you like some fudge?&lt;/a&gt; © &lt;a href="http://flickr.com/people/57989723@N00/"&gt;Jolene Van Laar&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;ul&gt; &lt;li&gt;4 Tbsp. butter&lt;/li&gt; &lt;li&gt;14 oz. sweetened condensed milk&lt;/li&gt; &lt;li&gt;12 oz. semi-sweet chocolate chips&lt;/li&gt; &lt;li&gt;1 tsp. vanilla extract&lt;/li&gt; &lt;li&gt;8-inch square pan&lt;/li&gt; &lt;li&gt;Medium saucepan&lt;/li&gt; &lt;li&gt;Bottle of full-bodied red wine (optional)&lt;/li&gt; &lt;/ul&gt; &lt;h4&gt;The cooking part&lt;/h4&gt; &lt;p&gt;Cooking fudge is like having sex: five minutes of frenzied activity, followed by an hour of awkward silence. No, I’m not going to sugar-coat that; just let it sit in the back of your mind and fester.&lt;/p&gt; &lt;p&gt;Grease square pan with butter. Melt butter in saucepan over medium-high heat. Add condensed milk. Add chocolate chips and stir until fully melted, while quietly repeating “It puts the lotion in the basket” under your breath. Add vanilla and stir briefly. Pour into greased square pan. Let sit for 1 hour. Cut and serve with red wine. Alternately, smear on private parts and &lt;a title="with apologies to Karen Finley" href="http://www.villagevoice.com/news/0045,carr,19637,1.html"&gt;apply for NEA grant&lt;/a&gt;.&lt;/p&gt; &lt;div style="float:left;text-align:left;margin:20px 30px 20px 0"&gt; &lt;img src="http://diveintomark.org/public/2008/05/spices.jpg" alt="[wall of spices]" title="" width="300" height="225"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/mckaysavage/1685043792/"&gt;Spice shop in Kandy Market&lt;/a&gt; © &lt;a href="http://flickr.com/people/mckaysavage/"&gt;McKay Savage&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;h4&gt;An alliterative interlude on the importance of ingredients&lt;/h4&gt; &lt;p&gt;For Christ’s sake, use real ingredients. You’re making fudge, not “I Can’t Believe It’s Not Fudge.” When you’re standing in the spices aisle looking for vanilla extract and thinking “holy shit, I had no idea there were so many spices‽” and suddenly it dawns on you why Columbus was willing to risk &lt;i&gt;falling off the edge of the freakin’ planet&lt;/i&gt; to get his hands on some new spices — remember the Sarcastic Gourmet told you to buy &lt;i&gt;real&lt;/i&gt; vanilla extract, not the imitation stuff. Yes, I know it costs twice as much for a bottle half the size, and you’re wondering if it’s really worth it, and after all you &lt;i&gt;have&lt;/i&gt; been looking for ways to save money ever since you sold your dog’s kidneys on the black market to pay rent. The Sarcastic Gourmet does not care about your problems. Real vanilla. Real butter. Real condensed milk. Dear God, why do they even make low-fat condensed milk? That’s just… bad milk. &lt;i&gt;[shakes head in disbelief]&lt;/i&gt;&lt;/p&gt; &lt;h4&gt;The getting laid part&lt;/h4&gt; &lt;div&gt; &lt;img src="http://wearehugh.com/public/2008/05/wine.jpg" alt="[Red wine]" title="" width="225" height="300"&gt; &lt;p&gt;&lt;a href="http://flickr.com/photos/bhollar/1203101219/"&gt;Libation Horizon&lt;/a&gt; © &lt;a href="http://flickr.com/people/bhollar/"&gt;bhollar&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;You’re holding a bottle of red wine in one hand and a pan of the world’s best fudge — &lt;i&gt;that you cooked yourself&lt;/i&gt; — in the other. If that doesn’t get you laid, I can’t help you.&lt;/p&gt; &lt;h4&gt;The morning after&lt;/h4&gt; &lt;p&gt;If you have leftovers, put them in a resealable bag and refrigerate. If you have leftovers after a week, you’re not eating them fast enough. What the fuck is wrong with you? I swear to God, if I could live on fudge and red wine, I’d never leave the house. Seriously though, week-old fudge is nasty — it goes all dry and crusty and there’s no saving it. Throw it out and make more.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1210143400772">
+		<id gr:original-id="tag:diveintomark.org,2008-05-07:/archives/20080507062345">
+			tag:google.com,2005:reader/item/903637266b657955
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="apple" scheme="http://diveintomark.org" /><category term="firefox" scheme="http://diveintomark.org" /><category term="mozilla" scheme="http://diveintomark.org" /><category term="opera" scheme="http://diveintomark.org" /><category term="webkit" scheme="http://diveintomark.org" /><category term="webstandards" scheme="http://diveintomark.org" />
+		<title type="html">
+			When the fall is all that’s left
+		</title>
+		<published>
+			2008-05-07T06:23:45Z
+		</published>
+		<updated>
+			2008-05-07T16:19:00Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/05/07/when-the-fall-is-all-thats-left" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/05/07/when-the-fall-is-all-thats-left" xml:lang="en" type="html">
+			&lt;p&gt;Not for nothing, but I’ve had my share of bad reviews in my professional career. Some I’ve taken well, and some I’ve taken… poorly. Some were my fault and others honestly weren’t. There isn’t a manager on Earth who hasn’t had to give a bad review to somebody, sometime. It’s always awkward and it’s never fun and in the end you’re left with a low score on a piece of paper and a sinking feeling in your chest.&lt;/p&gt; &lt;p&gt;And yet, if you rounded up all the managers in the world and shot them… no wait, that’s not where I was going with this. If you rounded up all the managers in the world and got them drunk — yes, I think that would work — you got them drunk and you asked them one question, they’d all tell you the same thing: the score that they give and you get doesn’t mean a damn thing. Oh, you’ll fixate on the score, since it means no salary bump or no bonus or no promotion or — jackpot! — all three at the same time, but it truly, truly, truly doesn’t mean a damn thing. The only thing that truly matters is the conversation that follows.&lt;/p&gt; &lt;p&gt;And it is in this context that I am somewhat embarrassed on behalf of the Mozilla Corporation. They certainly didn’t ask for my opinion or my guilt-by-proxy, but they apparently haven’t noticed that they ought to be embarrassed, so by God somebody needs to step up. I refer, of course, to the &lt;a href="http://acid3.acidtests.org/"&gt;Acid 3 test&lt;/a&gt; cooked up by the inimitable &lt;a href="http://ln.hixie.ch/"&gt;Ian Hickson&lt;/a&gt; and his motley crew of meddling minions. The test gives a numerical score that purports to rank a browser’s compatibility with a potpourri of well-established web standards. Of course any such test is guaranteed to be unfair to somebody, but this one was especially unfair to everybody since the makers intentionally sought out bugs in major browsers to highlight their incompatibilities.&lt;/p&gt; &lt;p&gt;That, by itself, is not the story. First there was the Acid test, then there was the Acid 2 test, and there will no doubt be an Acid 4 test and so on. The fact that the testmakers had to work so damn hard to find compatibility bugs to highlight speaks volumes by itself, but that is not the story either. The story is that two browser vendors — &lt;a href="http://dev.opera.com/"&gt;Opera&lt;/a&gt; and &lt;a href="http://webkit.org/blog/"&gt;Apple&lt;/a&gt; — somehow got into a bit of a race over who could reach a perfect score first. This, on top of their already insane release schedules (Safari 3.1, Opera 9.5), shocked and awed the web standards community, who for the first time in recent memory were put in the enviable position of arguing about which browser had increased its standards compliance the most and the fastest.&lt;/p&gt; &lt;p&gt;The funny thing is, I don’t even know who won. There were some inconsistencies about which builds passed what, and then &lt;a href="http://ln.hixie.ch/?start=1206578003&amp;amp;count=1"&gt;they found some last-minute bugs in the tests themselves&lt;/a&gt;, and despite minute-by-minute updates on programming.reddit.com, I don’t really know or care who “won” the race. But I’ll tell you one thing: &lt;a href="http://shaver.off.net/diary/2008/03/27/the-missed-opportunity-of-acid-3/"&gt;it sure as hell wasn’t Mozilla&lt;/a&gt;, because they were too busy complaining that the tests were just designed to highlight bugs (duh)… and they didn’t see any real worth in the feature tests (like &lt;a href="http://www.alistapart.com/articles/cssatten"&gt;downloadable web fonts&lt;/a&gt;, which is a &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=70132"&gt;five-digit Bugzilla bug&lt;/a&gt; that has been open since 2001)… and they felt they should get partial credit for still being ahead of Internet Explorer (new working slogan: “Firefox: We’re Not Dead Last”)… and anyway, they’re really busy right now — unlike the fine young minds at Apple and Opera, who, unbeknownst to &lt;i&gt;their&lt;/i&gt; managers, have outsourced all their browser development to summer interns and are spending their newfound free time reenacting Roman toga parties. And oh, by the way, didn’t you hear that &lt;a href="http://trac.webkit.org/changeset/31322"&gt;the other guys cheated&lt;/a&gt;? Also, their toga parties are, like, &lt;i&gt;totally&lt;/i&gt; inaccurate when viewed from a psycho-historical perspective.&lt;/p&gt; &lt;p&gt;C’mon, guys. It’s not the score that matters, it’s the followup. It’s the conversation you have, the promises you make, the progress you show the next day and the day after that and the day after that. And bitching about &lt;a href="http://shaver.off.net/diary/2008/03/27/the-missed-opportunity-of-acid-3/#comment-135276"&gt;an openly developed test suite&lt;/a&gt; whose ultimate goal was just to get people excited about web standards for a few minutes — man, you should all be embarrassed with yourselves. But you’re not, so here I am stepping up, publicly being embarrassed on your behalf. No need to thank me.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Update&lt;/b&gt;: once again, &lt;a href="http://diveintomark.org/archives/2008/05/07/when-the-fall-is-all-thats-left#comment-11920"&gt;I explain myself better the next morning&lt;/a&gt;.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1210116922065">
+		<id gr:original-id="tag:diveintomark.org,2008-05-06:/archives/20080506231243">
+			tag:google.com,2005:reader/item/e6e5856d85be54ac
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="parenting" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" />
+		<title type="html">
+			I voted
+		</title>
+		<published>
+			2008-05-06T23:12:43Z
+		</published>
+		<updated>
+			2008-05-06T23:18:12Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2008/05/06/i-voted" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2008/05/06/i-voted" xml:lang="en" type="html">
+			&lt;p&gt;&lt;b&gt;E&lt;/b&gt; (4-year-old): Why does Mommy have a sticker?&lt;br&gt; &lt;b&gt;D&lt;/b&gt;: Because I voted today.&lt;br&gt; &lt;b&gt;E&lt;/b&gt;: Why does Daddy have a sticker? Did Daddy voted too?&lt;br&gt; &lt;b&gt;Me&lt;/b&gt;: That’s right.&lt;br&gt; &lt;b&gt;E&lt;/b&gt;: Why did you voted?&lt;br&gt; &lt;b&gt;Me&lt;/b&gt;: Well, tell me this: who’s in charge of your clothes?&lt;br&gt; &lt;b&gt;E&lt;/b&gt; (uncertain): Um, me?&lt;br&gt; &lt;b&gt;Me&lt;/b&gt;: That’s right. And who’s in charge of this house?&lt;br&gt; &lt;b&gt;E&lt;/b&gt;: Mommy and Daddy.&lt;br&gt; &lt;b&gt;Me&lt;/b&gt;: That’s right. And who’s in charge of the roads outside?&lt;br&gt; &lt;b&gt;E&lt;/b&gt;: Um… somebody else’s Mommy and Daddy?&lt;br&gt; &lt;b&gt;Me&lt;/b&gt;: Well, that’s right, I guess. The people in charge of the roads are part of the “government.” And today we voted, which means we chose who we wanted to be in charge of the roads.&lt;br&gt; &lt;b&gt;E&lt;/b&gt;: Like the men in the trucks?&lt;br&gt; &lt;b&gt;Me&lt;/b&gt;: The garbage trucks, right, that’s part of it. And who do you think tells the garbage truck drivers what to do?&lt;br&gt; &lt;b&gt;E&lt;/b&gt; (more confident than ever): Bob the Builder!&lt;/p&gt; &lt;p&gt;Well anyway, I thought that was pretty good for a spur-of-the-moment explanation. How would &lt;i&gt;you&lt;/i&gt; explain government to a 4-year-old?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

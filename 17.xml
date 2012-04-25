@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CPvW5uXii4UC" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2006-05-22T10:43:36Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1148294616689">
+		<id gr:original-id="tag:diveintomark.org,2006-05-08:/archives/20060508144414">
+			tag:google.com,2005:reader/item/465ebf42730543d3
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="backup" scheme="http://diveintomark.org/tag/" /><category term="dvdr" scheme="http://diveintomark.org/tag/" /><category term="s3" scheme="http://diveintomark.org/tag/" /><category term="storage" scheme="http://diveintomark.org/tag/" /><category term="tapebackup" scheme="http://diveintomark.org/tag/" /><category term="video" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Long-term backup
+		</title>
+		<published>
+			2006-05-08T14:44:14Z
+		</published>
+		<updated>
+			2006-05-21T12:37:44Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/05/08/backup" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;I spent 18 hours this weekend recovering 600 GB of extremely valuable data after a catastrophic hard drive crash. I highly recommend &lt;a href="http://www.alsoft.com/DiskWarrior/"&gt;DiskWarrior&lt;/a&gt;. It worked. Nothing else worked.&lt;/p&gt; &lt;p&gt;I spent another 6 hours backing up as much of the data as can reasonably be backed up onto 4GB DVD-R discs. Twice. Once to keep in a safe place somewhere in the house, and once to keep in a safe place in my parents’ house. This should cover not only hard drive failures, but other catastrophic events like my house burning down or being broken into. And make no mistake: if my house were burning down, I would get my wife and children to safety, and then I would try to go back and get this data.&lt;/p&gt; &lt;p&gt;But it’s not enough. I’m creating a lot of data, and I want to keep most of it for the rest of my life. This includes video of my children growing up, but also things like &lt;a href="http://diveintomark.org/archives/2006/04/23/the-rhythm-of-new-orleans"&gt;video footage of New Orleans after Hurricane Katrina&lt;/a&gt;. In 2004, I generated 35 GB of such data. In 2005, I generated just shy of 150 GB. This year I’m on track to generate about 100 GB. I foresee doing this for about 20 more years, and then maintaining the archive for another 30 years after that. After that I’ll be dead and it will be &lt;a href="http://en.wikipedia.org/wiki/SEP_field"&gt;Somebody Else’s Problem&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;I don’t know how to back up 100 GB of video.&lt;/p&gt; &lt;p&gt;I have the original Mini DV tapes, of course, which I currently keep in a drawer, which now strikes me as an incredibly poor strategy. I could at least keep it in a safety deposit box. I rent a safety deposit box; it has things like my marriage certificate and my children’s birth certificates. This does not scale to decades. In fact, it probably won’t even scale to a single decade, due to a combination of physical space limitations and media degradation. I suppose I could invest in a larger safety deposit box when I run out of space, but by then I’ll need to transfer it all to newer media, which (one would hope) will be more space-efficient.&lt;/p&gt; &lt;p&gt;But that doesn’t solve my problem either, because that’s not really the data I want to keep. Every year I take the footage from the previous year and edit it down to a few hours and create a DVD out of it, which I distribute to family members and a few trusted friends who graciously pretend to care. Editing takes about two weeks, so I’d like to save the edits along with the raw digital footage. I currently do the editing in iMovie, which now strikes me as an incredibly poor strategy as well, due to the combination of closed-source software and undocumented data formats.&lt;/p&gt; &lt;p&gt;It’s not quite as bad as that sounds, since iMovie stores the raw footage in individual .DV files, which I have successfully read and converted to various other formats with open source software. I have no idea how iMovie stores the edits. I can at least mitigate this problem by exporting the entire edited movie in .DV format. Assuming I get smart and start editing with a program that respects my long-term aspirations, I still have the problem of storing the raw footage I generate every year.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;How do you back up 100 GB of data &lt;em&gt;per year&lt;/em&gt; for 50 years?&lt;/strong&gt; Or even 10 years?&lt;/p&gt; &lt;p&gt;Right now, I keep everything on a &lt;a href="http://www.lacie.com/products/product.htm?pid=10188"&gt;Lacie 1 TB hard drive&lt;/a&gt;, which is OK for short-term storage. But the drive is really a combination of two 500 GB drives in a RAID 0 configuration, which means that if one drive fails, all the data is lost. At a higher level, it is susceptible to OS-level failures which cause invalid volume header errors and make the drive unmountable. Disk Utility couldn’t fix it. &lt;kbd&gt;fsck&lt;/kbd&gt; in single-user mode couldn’t fix it. Tech Tool Pro couldn’t fix it. DiskWarrior fixed it… this time. Who knows if it will save me again? It was certainly worth the $80 though, even if I never use it again.&lt;/p&gt; &lt;p&gt;I’ve done &lt;a href="http://www.tomshardware.com/2003/02/25/backing_up_with_tape_drives/index.html"&gt;a little research into tape backup&lt;/a&gt;, specifically &lt;a href="http://baheyeldin.com/linux/using-tape-backup-on-linux-for-a-home-network.html"&gt;tape backup under Free Software operating systems&lt;/a&gt; (like Linux) &lt;a title="PDF link" href="http://www.dlt.com/storage/whitepapers/quantum/dlt/DLT%208000%20on%20Linux.pdf"&gt;with Free Software archiving tools&lt;/a&gt; (like &lt;kbd&gt;tar&lt;/kbd&gt;). The high end tape drives can record 80 GB per tape (”160 GB with compression”), but these drives cost about $4000. The “sweet spot” of tape backup today seems to be 40 GB per tape. Hardware interfaces may also be a problem; most tape drives only have SCSI interfaces, although there are a few with FireWire ports.&lt;/p&gt; &lt;p&gt;I’ve also explored the possibility of &lt;a href="http://www.tomshardware.com/2005/02/25/backups_to_disk/"&gt;using hard drives instead of tape&lt;/a&gt;. External FireWire hard drives are less than $1 per GB. I could buy two 100 GB hard drives, put a year’s worth of data on each one, and store each of them in different attics. Of course, with lower prices comes fewer guarantees. Today’s hard drives are warrantied for one year, two tops. Two years from now I could buy two 300 GB hard drives for the same price and copy everything over.&lt;/p&gt; &lt;p&gt;Just for kicks, I calculated what it would cost to pay someone else to store it. Amazon offers &lt;a href="http://www.amazon.com/gp/browse.html/102-0111373-1677754?node=16427261"&gt;HTTP-based storage for $0.15 per GB per month&lt;/a&gt;. Transferring 600 GB at $0.20 per GB would cost $120, and storing it would cost $90 per month. That’s over $1200 for the first year. Assuming I transfer an additional 100 GB each year, my storage costs accumulate and increase by $200 every year. (This naively assumes that Amazon never raises — or lowers — their prices. And never mind the privacy and trust issues.) I could buy a lot of hard drives for $1200 this year, and even more for $1400 next year.&lt;/p&gt; &lt;p&gt;And let’s not forget, I could “just” buy a spindle of 4GB DVD-R discs and burn everything onto… 150 discs. Twice.&lt;/p&gt; &lt;p&gt;So, to my illustrious audience, I throw out this question: how do you back up 100 GB of data per year for 50 years?&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1148294616689">
+		<id gr:original-id="tag:diveintomark.org,2006-04-25:/archives/20060425211939">
+			tag:google.com,2005:reader/item/fb1de53c3fc12825
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="accessibility" scheme="http://diveintomark.org/tag/" /><category term="firefox" scheme="http://diveintomark.org/tag/" /><category term="mozilla" scheme="http://diveintomark.org/tag/" /><category term="planetmozilla" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			New focus indicator for Firefox
+		</title>
+		<published>
+			2006-04-25T21:19:39Z
+		</published>
+		<updated>
+			2006-05-21T12:37:27Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/04/25/new-focus-indicator" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;We’re considering — &lt;em&gt;considering&lt;/em&gt; — changing the look of the focus indicator in Firefox. I’ve whipped up a Greasemonkey script (&lt;a href="http://diveintomark.org/projects/greasemonkey/brightfocus.user.js"&gt;Bright Focus&lt;/a&gt;) to demonstrate the proposal.&lt;/p&gt; &lt;p&gt;Screenshot of a link:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2006/04/focus1.jpg" alt="[focus indicator around a link]" width="459" height="78"&gt;&lt;/p&gt; &lt;p&gt;A text box:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2006/04/focus2.jpg" alt="[focus indicator around a text box]" width="458" height="76"&gt;&lt;/p&gt; &lt;p&gt;And a button:&lt;/p&gt; &lt;p&gt;&lt;img src="http://diveintomark.org/public/2006/04/focus3.jpg" alt="[focus indicator around a button]" width="460" height="74"&gt;&lt;/p&gt; &lt;p&gt;Love it? Hate it? Leave comments here or in &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=251198"&gt;bug 251198&lt;/a&gt;.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1144988558735">
+		<id gr:original-id="tag:diveintomark.org,2006-04-12:/archives/20060412011058">
+			tag:google.com,2005:reader/item/5da1cceaa2b07a8f
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="donottouchthetools" scheme="http://diveintomark.org/tag/" /><category term="personal" scheme="http://diveintomark.org/tag/" /><category term="surgery" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Frozen peas and valium
+		</title>
+		<published>
+			2006-04-12T01:10:58Z
+		</published>
+		<updated>
+			2006-04-12T01:10:58Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/04/11/frozen-peas-and-valium" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;Please take this opportunity to relate amusing anecdotes about your vasectomy.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark Pilgrim
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1144988558734">
+		<id gr:original-id="tag:diveintomark.org,2006-04-07:/archives/20060407162820">
+			tag:google.com,2005:reader/item/9b5b5af76c8f4f31
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="lighthouse" scheme="http://diveintomark.org/tag/" /><category term="parenting" scheme="http://diveintomark.org/tag/" /><category term="personal" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			After the bath
+		</title>
+		<published>
+			2006-04-07T16:28:20Z
+		</published>
+		<updated>
+			2006-04-08T13:19:49Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2006/04/07/bath" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;I put a towel on my lap, and you raise your hands towards me to be picked up. I open the drain and we listen to the water whooshwoosh gurglegurgle. I pick you up and put you on my lap, knees bent, facing me. I take a second towel and wrap it around you tightly. You lean forward and put your head on my chest and sigh quietly. I pull you close and hug you and rub your back and we listen to the whooshwoosh gurglegurgle until it’s all gone. You say “All gone!” And I say “Bath all gone.” And you say “Bath all gone.”&lt;/p&gt; &lt;p&gt;“All gone” is one word to you. You elide the “L” and it comes out as “ahgone.” Lots of things go ahgone. Chips go ahgone. Juice goes ahgone. Bath goes ahgone.&lt;/p&gt; &lt;p&gt;I unwrap the towel slightly and rub you down, first your back, then your arms, then your chest, then your legs, then your feet. You say “Oh, feet!” And I say “Feeeeet.” And you say “Feeeeeet.” Feet are always funny. Then you lean back onto my chest and steal a few more moments of warmth.&lt;/p&gt; &lt;p&gt;I ask, “Brush teeth?” And you say “Brush. Teeth.” I lean over to the sink and find your toothbrush and toothpaste. I say “Paste.” And you say “Paaaaste.” Toothpaste is always funny. I say “Brush brush brush,” and motion with my hand like I’m brushing. Sometimes you ask, “Dada brush?” and I take my own toothbrush and paste and brush my teeth along with you. You say “All done” but it comes out as “ahdone.” Lots of things are ahdone. Dinner is ahdone. Blue’s Clues is ahdone. Brush is ahdone.&lt;/p&gt; &lt;p&gt;You reach over to the faucet and turn on the water and rinse your toothbrush and put it back in its cup. I ask “Jammies?” and without a word you climb down off my lap and run naked out the door, down the hall, and into the future.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark Pilgrim
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1144988558734">
+		<id gr:original-id="tag:diveintomark.org,2004-10-18:/archives/20041018134649">
+			tag:google.com,2005:reader/item/631cdd347bf18e69
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="personal" scheme="http://diveintomark.org/tag/" />
+		<title type="html">
+			Every exit
+		</title>
+		<published>
+			2004-10-18T13:46:49Z
+		</published>
+		<updated>
+			2006-03-23T07:11:10Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2004/10/18/exit" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;It’s time for me to find a new hobby. Preferably one that doesn’t involve angle brackets. Or computers. Or electricity.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark Pilgrim
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>

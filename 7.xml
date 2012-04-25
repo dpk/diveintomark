@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<feed xmlns:media="http://search.yahoo.com/mrss/" xmlns:gr="http://www.google.com/schemas/reader/atom/" xmlns:idx="urn:atom-extension:indexing" xmlns="http://www.w3.org/2005/Atom" idx:index="no" gr:dir="ltr">
+<!--
+Content-type: Preventing XSRF in IE.
+
+-->
+	<generator uri="http://www.google.com/reader">
+		Google Reader
+	</generator>
+	<id>
+		tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+	</id>
+	<title>
+		dive into mark
+	</title>
+	<subtitle type="html">
+		once again between addictions
+	</subtitle>
+	<gr:continuation>
+		CP_J35q96Y4C
+	</gr:continuation>
+	<link rel="self" href="http://www.google.com/reader/atom/feed/http://diveintomark.org/feed?c=CNOA6tjEko8C" /><link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+	<updated>
+		2007-10-16T04:05:19Z
+	</updated>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1192507519696">
+		<id gr:original-id="tag:diveintomark.org,2007-10-16:/archives/20071016034255">
+			tag:google.com,2005:reader/item/fd64eb586a165249
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="openthread" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="politics" scheme="http://diveintomark.org" />
+		<title type="html">
+			American Buddha
+		</title>
+		<published>
+			2007-10-16T03:42:55Z
+		</published>
+		<updated>
+			2007-10-16T03:47:00Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/10/15/american-buddha" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/10/15/american-buddha" xml:lang="en" type="html">
+			&lt;div&gt; &lt;img src="http://diveintomark.org/public/2007/10/coffee-beans.jpg" alt="[coffee beans spilling out of a cup]" title="" width="240" height="180"&gt; &lt;span&gt;&lt;a href="http://flickr.com/photos/the_colmans/403915911/"&gt;Java Beans&lt;/a&gt; © &lt;a href="http://flickr.com/people/the_colmans/"&gt;digital_image_fan&lt;/a&gt; / &lt;a title="used under Creative Commons Attribution 2.0 License" href="http://creativecommons.org/licenses/by/2.0/"&gt;CC&lt;/a&gt;&lt;/span&gt; &lt;/div&gt; &lt;p&gt;I’m trying to ride my new bike to as many places as possible. Most days this involves riding past &lt;a href="http://www.boodabeans.com/"&gt;Booda Beans&lt;/a&gt;. It’s everything you would expect from a neighborhood coffee-shop-that-isn’t-Starbucks, offering coffee in various combinations of size, temperature, and artificial flavor. Plus pastries and bulk candy. On the dark side, the owner drives an Escalade and watches Fox News all day, while peddling caffeine and sugar to strung-out suburbanites. On the bright side, they offer free wireless.&lt;/p&gt; &lt;p&gt;Tangentially, I think liberals should thank Fox News for indirectly providing a valuable service. It is now possible to rank the batshit-craziness of American conservatives on a single linear scale, based on when they stopped watching Fox News.&lt;/p&gt; &lt;p&gt;Unrelatedly, I’ve made a few changes to my site footer, started redirecting my main feeds through Feedburner, and added an automated list of “related articles” links after each post. This has taught me that I do not write consistently enough for an automated “relatedness” algorithm to work its magic. Also, that both tables and CSS suck, but differently. And that it’s much easier to redesign when you don’t have ads. And that Feedburner’s subscriber counts vary from day to day by a factor of 4. One of the disadvantages of working for Google is that I feel somewhat obligated to report things like this and get them fixed. I helped get &lt;a href="http://intertwingly.net/blog/2007/03/15/Confirmed-Google-Hates-XHTML"&gt;one thing fixed&lt;/a&gt; already. I’ve done other things too, but they’re not ready yet. Not even “beta.”&lt;/p&gt; &lt;p&gt;I &lt;em&gt;enjoy&lt;/em&gt; riding my bike. I haven’t had this much fun exercising since, well, ever.&lt;/p&gt; &lt;p&gt;This is an open thread.&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191561985570">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-10-04">
+			tag:google.com,2005:reader/item/c44fdc15de82ff43
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-10-04 [del.icio.us]
+		</title>
+		<published>
+			2007-10-05T05:00:00Z
+		</published>
+		<updated>
+			2007-10-05T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-10-04" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://rambleon.org/2007/10/04/uphill-both-ways-with-a-timex-sinclair/"&gt;Ramble On - Uphill both ways with a Timex Sinclair&lt;/a&gt;&lt;br&gt; i hope i'm wrong too (but i fear i'm not)&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191531890978">
+		<id gr:original-id="tag:diveintomark.org,2007-10-04:/archives/20071004201419">
+			tag:google.com,2005:reader/item/10fadce3bd15f2ec
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="apple" scheme="http://diveintomark.org" /><category term="iphone" scheme="http://diveintomark.org" />
+		<title type="html">
+			If wishes were iPhones, then beggars would call
+		</title>
+		<published>
+			2007-10-04T20:14:19Z
+		</published>
+		<updated>
+			2007-10-04T21:26:01Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/10/04/if-wishes-were-iphones" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/10/04/if-wishes-were-iphones" xml:lang="en" type="html">
+			&lt;p&gt;I have nothing to say about the iPhone that hasn’t been said already. Apple made it very clear what they were offering: a carrier-locked, closed-development mobile computing device where every aspect of the user experience would be controlled by Apple. I’m told it can also make phone calls. If that’s what you want, then buy it. If not, then don’t. If you want an iPhone without the phone, buy an iPod Touch, but it doesn’t run third-party applications either. (So much for the “network security” argument, but never mind that.)&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Buy it for what it is, or don’t buy it at all. Your choices don’t get any more granular than that.&lt;/strong&gt; Apple has been unwaveringly clear that the iPhone is theirs. Not yours, not Ambrosia’s, not J. Random Hacker’s. You may own the hardware, but you only have a limited license to use the software, and an ongoing contract to use the network. If you don’t like those terms, your only recourse is to shop somewhere else to begin with.&lt;/p&gt; &lt;p&gt;I have a friend who purchased an iPhone on day 1. She will never hack it to add unauthorized applications or get it to work with another carrier. She uses it every day, raves about it, and says it has changed her life. She doesn’t even resent the $200 price drop. Her only regret is that she couldn’t buy it sooner.&lt;/p&gt; &lt;p&gt;Apple is betting that there are a lot of people like her, and not a lot of people like… well, like me. Or, if you hacked your iPhone, &lt;a href="http://www.appleinsider.com/articles/07/10/04/report_10_percent_of_september_iphones_sold_to_unlocking_teams.html"&gt;like you either&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Once upon a time, I bought an iPod Video 5G. It did what I wanted. It was based on documented video standards, so I could &lt;a href="http://handbrake.m0k.org/"&gt;make my own videos&lt;/a&gt;. I still use it every day (connected to an iGroove in my home office). But it’s been a bit of a hassle to continue using it after leaving the Apple universe and switching to Linux on my primary workstation. Smart people have reverse-engineered the undocumented iPod database and allowed it to work (syncing music with Amarok or videos with gtkPod), but I view these as temporary hacks to get me through this transition period, after upgrading my desktop but before upgrading my music device. (That reverse-engineering &lt;a href="http://arstechnica.com/news.ars/post/20070916-gtkpod-coders-crack-apples-new-ipod-checksum.html"&gt;is an ongoing effort&lt;/a&gt;, by the way. I don’t know or care if Apple was intentionally malicious or if it was just collateral damage, the end result is the same: time and effort spent chasing Apple’s tail.) When this iPod dies, I won’t buy another; I’ll buy &lt;a href="http://virtuelvis.com/archives/2007/01/my-ipod-is-dying"&gt;something that works out-of-the-box&lt;/a&gt; with my Linux workstation. Live by the penguin, die by the penguin. Apple doesn’t want my business, so why reward them?&lt;/p&gt; &lt;p&gt;&lt;strong&gt;I don’t understand this continuing obsession with buying things that you need to break before they do what you want.&lt;/strong&gt; It’s not just the iPhone; people did the &lt;a href="http://wiki.awkwardtv.org/wiki/Main_Page"&gt;exact same thing with the AppleTV&lt;/a&gt; too. Primarily to add support for other video codecs, like DivX and XviD. Why? (No seriously, why? I bought a &lt;a href="http://www.amazon.com/Philips-DVP5960-Player-Upscaling-direct/dp/B000G18DR0"&gt;Philips DVP 5960&lt;/a&gt; for $60. It’s a DivX-certified DVD player with a USB port. Out of the box, it’ll play a DVD-R full — or a thumb drive full — of AVI files.) I thought the big draw for Apple hardware was that “It Just Works.” By breaking it, you must know you’re giving up the “Just Works” factor, so what’s left? Rounded corners?&lt;/p&gt; &lt;p&gt;My current theory is that it’s some twisted form of wish fulfillment. “I wish this company understood the value of openness, but they don’t, so I’m going to keep buying their closed, crippled shit until they get it.” Yeah, let me know how that works out for you. And while you were waiting breathlessly for them to “get it,” Apple &lt;a href="http://lists.mplayerhq.hu/pipermail/ffmpeg-devel/2006-September/015930.html"&gt;locked out third-party videos&lt;/a&gt;. And &lt;a href="http://ilounge.com/index.php/news/comments/apple-locks-tv-out-in-new-ipods-breaks-video-add-ons/"&gt;third-party hardware&lt;/a&gt;. And &lt;a href="http://www.tuaw.com/2007/10/03/tuaw-interview-ambrosias-andrew-welch-on-the-iphone-update-and/"&gt;third-party ringtones, applications, and carriers&lt;/a&gt;. &lt;del&gt;Prosperity&lt;/del&gt;Openness is just around the corner!&lt;/p&gt; &lt;p&gt;&lt;a href="http://daringfireball.net/2007/10/forever_is_a_long_time"&gt;John Gruber makes this point&lt;/a&gt;, perhaps more constructively:&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;There’s only one way to pressure Apple into opening up iPhone development, and it isn’t by developing underground iPhone apps. It’s by not buying iPhones. Money talks, and right now, there doesn’t seem to be a shortage of people willing to give Apple money in exchange for a completely closed iPhone.&lt;/p&gt; &lt;/blockquote&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191475533483">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-10-03">
+			tag:google.com,2005:reader/item/18bd0ef3a6b393bb
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-10-03 [del.icio.us]
+		</title>
+		<published>
+			2007-10-04T05:00:00Z
+		</published>
+		<updated>
+			2007-10-04T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-10-03" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://www.thespanner.co.uk/2007/10/03/iphone-safari-zero-day/"&gt;The Spanner - iPhone Safari zero day&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.tuaw.com/2007/10/03/tuaw-interview-ambrosias-andrew-welch-on-the-iphone-update-and/"&gt;TUAW Interview: Ambrosia's Andrew Welch on the iPhone update and iToner - The Unofficial Apple Weblog (TUAW)&lt;/a&gt;&lt;br&gt; the sharecroppers are restless&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191446714684">
+		<id gr:original-id="tag:flickr.com,2005:/photo/347059067">
+			tag:google.com,2005:reader/item/d29c4b2260fdc07d
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="baby" /><category term="holding" /><category term="hands" /><category term="htmljokes" />
+		<title type="html">
+			&amp;lt;link&amp;gt; [Flickr]
+		</title>
+		<published>
+			2007-01-05T22:24:38Z
+		</published>
+		<updated>
+			2007-01-05T22:24:38Z
+		</updated>
+		<link rel="alternate" href="http://www.flickr.com/photos/f8dy/347059067/" type="text/html" /><link rel="enclosure" href="http://farm1.static.flickr.com/152/347059067_59f3e90f5a_o.jpg" type="image/jpeg" length="0" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://www.flickr.com/people/f8dy/"&gt;Mark.Pilgrim&lt;/a&gt; posted a photo:&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.flickr.com/photos/f8dy/347059067/" title="&amp;lt;link&amp;gt;"&gt;&lt;img src="http://farm1.static.flickr.com/152/347059067_59f3e90f5a_m.jpg" width="240" height="180" alt="&amp;lt;link&amp;gt;"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;original: &lt;a href="http://www.flickr.com/photos/yogi/920884/"&gt;www.flickr.com/photos/yogi/920884/&lt;/a&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark.Pilgrim
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191446714684">
+		<id gr:original-id="tag:flickr.com,2005:/photo/347050172">
+			tag:google.com,2005:reader/item/6a0955c7e1235435
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="pregnancy" /><category term="htmljokes" />
+		<title type="html">
+			&amp;lt;pre&amp;gt; [Flickr]
+		</title>
+		<published>
+			2007-01-05T22:14:51Z
+		</published>
+		<updated>
+			2007-01-05T22:14:51Z
+		</updated>
+		<link rel="alternate" href="http://www.flickr.com/photos/f8dy/347050172/" type="text/html" /><link rel="enclosure" href="http://farm1.static.flickr.com/141/347050172_d9ea2cf8ed_o.jpg" type="image/jpeg" length="0" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://www.flickr.com/people/f8dy/"&gt;Mark.Pilgrim&lt;/a&gt; posted a photo:&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.flickr.com/photos/f8dy/347050172/" title="&amp;lt;pre&amp;gt;"&gt;&lt;img src="http://farm1.static.flickr.com/141/347050172_d9ea2cf8ed_m.jpg" width="240" height="180" alt="&amp;lt;pre&amp;gt;"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;original: &lt;a href="http://www.flickr.com/photos/yogi/56950117/"&gt;www.flickr.com/photos/yogi/56950117/&lt;/a&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark.Pilgrim
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191446714683">
+		<id gr:original-id="tag:flickr.com,2005:/photo/347044331">
+			tag:google.com,2005:reader/item/aff29ad11310e2f9
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="eyeglasses" /><category term="htmljokes" />
+		<title type="html">
+			&amp;lt;iframe&amp;gt; [Flickr]
+		</title>
+		<published>
+			2007-01-05T22:08:24Z
+		</published>
+		<updated>
+			2007-01-05T22:08:24Z
+		</updated>
+		<link rel="alternate" href="http://www.flickr.com/photos/f8dy/347044331/" type="text/html" /><link rel="enclosure" href="http://farm1.static.flickr.com/160/347044331_4bd4d7aa47_o.jpg" type="image/jpeg" length="0" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://www.flickr.com/people/f8dy/"&gt;Mark.Pilgrim&lt;/a&gt; posted a photo:&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.flickr.com/photos/f8dy/347044331/" title="&amp;lt;iframe&amp;gt;"&gt;&lt;img src="http://farm1.static.flickr.com/160/347044331_4bd4d7aa47_m.jpg" width="240" height="180" alt="&amp;lt;iframe&amp;gt;"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;original: &lt;a href="http://www.flickr.com/photos/striatic/6433705/"&gt;www.flickr.com/photos/striatic/6433705/&lt;/a&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark.Pilgrim
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191446714683">
+		<id gr:original-id="tag:flickr.com,2005:/photo/347037057">
+			tag:google.com,2005:reader/item/f2c7bebbc00db951
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="jamesbrown" /><category term="htmljokes" />
+		<title type="html">
+			&amp;lt;/legend&amp;gt; [Flickr]
+		</title>
+		<published>
+			2007-01-05T22:00:52Z
+		</published>
+		<updated>
+			2007-01-05T22:00:52Z
+		</updated>
+		<link rel="alternate" href="http://www.flickr.com/photos/f8dy/347037057/" type="text/html" /><link rel="enclosure" href="http://farm1.static.flickr.com/123/347037057_7403d9990e_o.jpg" type="image/jpeg" length="0" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://www.flickr.com/people/f8dy/"&gt;Mark.Pilgrim&lt;/a&gt; posted a photo:&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.flickr.com/photos/f8dy/347037057/" title="&amp;lt;/legend&amp;gt;"&gt;&lt;img src="http://farm1.static.flickr.com/123/347037057_7403d9990e_m.jpg" width="240" height="180" alt="&amp;lt;/legend&amp;gt;"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;original: &lt;a href="http://www.flickr.com/photos/fabiovenni/41684429/"&gt;www.flickr.com/photos/fabiovenni/41684429/&lt;/a&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark.Pilgrim
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191446714683">
+		<id gr:original-id="tag:flickr.com,2005:/photo/347030943">
+			tag:google.com,2005:reader/item/e760dd3baef55e3e
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="snow" /><category term="denver" /><category term="htmljokes" />
+		<title type="html">
+			&amp;lt;br&amp;gt; [Flickr]
+		</title>
+		<published>
+			2007-01-05T21:55:01Z
+		</published>
+		<updated>
+			2007-01-05T21:55:01Z
+		</updated>
+		<link rel="alternate" href="http://www.flickr.com/photos/f8dy/347030943/" type="text/html" /><link rel="enclosure" href="http://farm1.static.flickr.com/130/347030943_2080cfc299_o.jpg" type="image/jpeg" length="0" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;p&gt;&lt;a href="http://www.flickr.com/people/f8dy/"&gt;Mark.Pilgrim&lt;/a&gt; posted a photo:&lt;/p&gt; &lt;p&gt;&lt;a href="http://www.flickr.com/photos/f8dy/347030943/" title="&amp;lt;br&amp;gt;"&gt;&lt;img src="http://farm1.static.flickr.com/130/347030943_2080cfc299_m.jpg" width="240" height="180" alt="&amp;lt;br&amp;gt;"&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;original: &lt;a href="http://www.flickr.com/photos/jzb/328733380/"&gt;www.flickr.com/photos/jzb/328733380/&lt;/a&gt;&lt;/p&gt;
+		</content>
+		<author>
+			<name>
+				Mark.Pilgrim
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191387938522">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-10-02">
+			tag:google.com,2005:reader/item/180cfcbf8e080668
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-10-02 [del.icio.us]
+		</title>
+		<published>
+			2007-10-03T05:00:00Z
+		</published>
+		<updated>
+			2007-10-03T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-10-02" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://scottaaronson.com/blog/?p=277"&gt;Australian actresses are plagiarizing my quantum mechanics lecture to sell printers&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://code.google.com/p/writertools/"&gt;writertools - Google Code&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.chrisjdavis.org/fanboydom-the-end"&gt;Sillyness, pink. » The post I never thought I would write&lt;/a&gt;&lt;br&gt; everyone reaches enlightenment at their own pace&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191303547810">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-10-01">
+			tag:google.com,2005:reader/item/76aeda37a068196d
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-10-01 [del.icio.us]
+		</title>
+		<published>
+			2007-10-02T05:00:00Z
+		</published>
+		<updated>
+			2007-10-02T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-10-01" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://blog.persistent.info/2007/10/feed-proxy-view-raw-rssatom-feed-data.html"&gt;persistent.info: Feed Proxy: View Raw RSS/Atom Feed Data in Firefox 2.0&lt;/a&gt;&lt;br&gt; look robert, people still hate your arrogant, user-hostile design decisions&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191215294173">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-09-30">
+			tag:google.com,2005:reader/item/d11ec5749aa70cfb
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-09-30 [del.icio.us]
+		</title>
+		<published>
+			2007-10-01T05:00:00Z
+		</published>
+		<updated>
+			2007-10-01T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-09-30" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://nanocr.eu/2007/09/29/think-closed/"&gt;nanocr.eu » Blog Archive » Think Closed&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191129185111">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-09-29">
+			tag:google.com,2005:reader/item/50cdcf11026d2714
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-09-29 [del.icio.us]
+		</title>
+		<published>
+			2007-09-30T05:00:00Z
+		</published>
+		<updated>
+			2007-09-30T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-09-29" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://css-discuss.incutio.com/?page=IE7"&gt;IE7 - css-discuss&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191107570190">
+		<id gr:original-id="tag:diveintomark.org,2007-09-29:/archives/20070929221259">
+			tag:google.com,2005:reader/item/ed2c423d87bddadb
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" />
+		<title type="html">
+			Mattresses
+		</title>
+		<published>
+			2007-09-29T22:12:59Z
+		</published>
+		<updated>
+			2007-09-29T22:12:59Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/09/29/mattresses" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/09/29/mattresses" xml:lang="en" type="html">
+			Discuss.
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191096761183">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-09-27">
+			tag:google.com,2005:reader/item/40e6519585e0a40a
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-09-27 [del.icio.us]
+		</title>
+		<published>
+			2007-09-28T05:00:00Z
+		</published>
+		<updated>
+			2007-09-28T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-09-27" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://www.linux.com/feature/119212"&gt;Linux.com :: The trouble with artwork and free software licenses&lt;/a&gt;&lt;br&gt; cc + gpl = headaches&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.engadget.com/2007/09/27/iphone-update-re-locking-handsets-disabling-3rd-party-apps/"&gt;iPhone update re-locking handsets, disabling 3rd-party apps? - Engadget&lt;/a&gt;&lt;br&gt; &amp;quot;Doctor, it hurts when I buy Apple products.&amp;quot;&lt;/li&gt; &lt;li&gt;&lt;a href="http://photomatt.net/photos/log/9-26-2007/IMG_0587"&gt;Photo Matt » photos » log » 9-26-2007 » IMG_0587&lt;/a&gt;&lt;br&gt; kevin convinced me to go to the wordpress release party, where matt helped me upgrade to wp2.3&lt;/li&gt; &lt;li&gt;&lt;a href="http://awesome.naquadah.org/doc/setup/"&gt;awesome setup&lt;/a&gt;&lt;br&gt; look, a new window manager. how often do you get to say that?&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.lucas-nussbaum.net/blog/?p=253"&gt;Lucas Nussbaum’s Blog » Blog Archive » Compiz interest&lt;/a&gt;&lt;br&gt; haven't tried compiz in a while, interesting to see what's matured and what hasn't&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191096761183">
+		<id gr:original-id="tag:diveintomark.org,2007-09-27:/archives/20070927202920">
+			tag:google.com,2005:reader/item/4a29016e5822a278
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" /><category term="unfiled" scheme="http://diveintomark.org" /><category term="personal" scheme="http://diveintomark.org" /><category term="photos" scheme="http://diveintomark.org" /><category term="vacation" scheme="http://diveintomark.org" />
+		<title type="html">
+			Alligators everywhere
+		</title>
+		<published>
+			2007-09-27T20:29:20Z
+		</published>
+		<updated>
+			2007-09-27T22:07:29Z
+		</updated>
+		<link rel="alternate" href="http://diveintomark.org/archives/2007/09/27/alligators-everywhere" type="text/html" />
+		<content xml:base="http://diveintomark.org/archives/2007/09/27/alligators-everywhere" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2002.JPG" title="Two scary-looking alligators"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2002.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2004.JPG" title="John says this is also an alligator"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2004.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2005.JPG" title="Albino alligators, the only two known to exist"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2005.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2020.JPG" title="Alligators during feeding time"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2020.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2029.JPG" title="An alligator hiding in the water"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2029.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2032.JPG" title="An alligator chilling on the beach"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2032.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2047.JPG" title="Two parrots. They really talked!"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2047.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2065.JPG" title="A Galapagos turtle can live up to 2 centuries"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2065.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2066.JPG" title="Horn-billed something or other"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2066.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2068.JPG" title="Two toucans can!"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2068.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2074.JPG" title="This bird grasped its cage with its mouth to quickly climb up to look at visitors"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2074.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2078.JPG" title="Also, and somewhat randomly, they had a water buffalo"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2078.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2079.JPG" title="&amp;#39;Do not sit or lift children above rail!&amp;#39; No kidding!"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2079.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2087.JPG" title="A scary-looking iguana"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2087.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2089.JPG" title="More lizards"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2089.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2094.JPG" title="Possibly a chameleon"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2094.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2099.JPG" title="More lizards"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2099.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2112.JPG" title="Baby alligators flopping all over each other"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2112.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2113.JPG" title="Baby alligator detail"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2113.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2114.JPG" title="Apparently baby alligators don&amp;#39;t eat turtles"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2114.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2123.JPG" title="Ring-tailed lemurs"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2123.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;li&gt;&lt;a rel="lightbox[alligator]" href="http://diveintomark.org/public/2007/09/alligator-adventure/IMG_2188.JPG" title="Myrtle Beach at sunset, view from our balcony"&gt;&lt;img src="http://diveintomark.org/public/2007/09/alligator-adventure/thumb-IMG_2188.JPG" width="80" height="60"&gt;&lt;/a&gt; &lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/li&gt;&lt;/ul&gt; &lt;br&gt;
+		</content>
+		<author>
+			<name>
+				Mark
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191096761182">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-09-26">
+			tag:google.com,2005:reader/item/0f3d0c4251a11ec9
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-09-26 [del.icio.us]
+		</title>
+		<published>
+			2007-09-27T05:00:00Z
+		</published>
+		<updated>
+			2007-09-27T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-09-26" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://ftrain.com/wedding-guests.html"&gt;The Guests (Ftrain.com)&lt;/a&gt;&lt;br&gt; &amp;quot;No one was arrested.&amp;quot;&lt;/li&gt; &lt;li&gt;&lt;a href="http://groups.google.com/group/jquery-dev/browse_thread/thread/517dd87b61515162"&gt;IEContentLoaded article - jQuery Development | Google Groups&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.kryogenix.org/days/2007/09/26/shortloaded"&gt;as days pass by » Blog Archive » DOMContentLoaded for IE, Safari, everything, without document.write&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191096761182">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-09-25">
+			tag:google.com,2005:reader/item/8fd09864ba33fa86
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-09-25 [del.icio.us]
+		</title>
+		<published>
+			2007-09-26T05:00:00Z
+		</published>
+		<updated>
+			2007-09-26T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-09-25" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://www.randsinrepose.com/archives/2007/09/25/the_button.html"&gt;Rands In Repose: The Button&lt;/a&gt;&lt;br&gt; &amp;quot;If you’re interviewing for a technical gig, this is the interview. This is the one you were losing sleep over. This is why you bought Dive into Python and read it over the weekend.&amp;quot;&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191096761182">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-09-24">
+			tag:google.com,2005:reader/item/030e56d717dfcf16
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-09-24 [del.icio.us]
+		</title>
+		<published>
+			2007-09-25T05:00:00Z
+		</published>
+		<updated>
+			2007-09-25T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-09-24" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://playlistmag.com/weblogs/ipodblog/2007/09/networkdreckwork/"&gt;Playlist: Network dreckwork&lt;/a&gt;&lt;br&gt; outstanding&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.appleinsider.com/articles/07/09/24/apple_says_iphone_unlocking_may_cause_permanent_damage.html"&gt;AppleInsider | Apple says iPhone unlocking may cause permanent damage&lt;/a&gt;&lt;br&gt; why am i having flashbacks from &amp;quot;brazil&amp;quot;?&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+	<entry gr:is-read-state-locked="true" gr:crawl-timestamp-msec="1191096761181">
+		<id gr:original-id="http://del.icio.us/wearehugh#2007-09-21">
+			tag:google.com,2005:reader/item/ff2c1f5b445ed77a
+		</id>
+		<category term="user/16823450566733491518/state/com.google/read" scheme="http://www.google.com/reader/" label="read" />
+		<title type="html">
+			Links for 2007-09-21 [del.icio.us]
+		</title>
+		<published>
+			2007-09-22T05:00:00Z
+		</published>
+		<updated>
+			2007-09-22T05:00:00Z
+		</updated>
+		<link rel="alternate" href="http://del.icio.us/wearehugh#2007-09-21" type="text/html" />
+		<content xml:base="http://diveintomark.org/" xml:lang="en" type="html">
+			&lt;ul&gt; &lt;li&gt;&lt;a href="http://blogsecurity.net/wordpress/blogwatch/"&gt;BlogSecurity » WordPress BlogWatch&lt;/a&gt;&lt;br&gt; a handy list of wordpress vulnerabilities&lt;/li&gt; &lt;li&gt;&lt;a href="http://www.nextthing.org/archives/2007/03/12/robotstxt-adventure"&gt;nextthing.org » robots.txt Adventure&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;
+		</content>
+		<author gr:unknown-author="true">
+			<name>
+				(author unknown)
+			</name>
+		</author>
+		<source gr:stream-id="feed/http://diveintomark.org/feed">
+			<id>
+				tag:google.com,2005:reader/feed/http://diveintomark.org/feed
+			</id>
+			<title type="html">
+				dive into mark
+			</title>
+			<link rel="alternate" href="http://diveintomark.org/" type="text/html" />
+		</source>
+	</entry>
+</feed>
