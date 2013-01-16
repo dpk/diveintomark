@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Should Safari be intentionally buggy? [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110714062533/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110714062533/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110714062533/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110714062533/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110714062533im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110714062533/http://diveintomark.org/archives/2003/01/08/small_world" title="Small world">
+<link rel=next href="/web/20110714062533/http://diveintomark.org/archives/2003/01/11/how_to_hide_css_from_safari" title="How to hide CSS from Safari">
+<link rel=up href="/web/20110714062533/http://diveintomark.org/archives#p1233" title="January 2003">
+<link rel='index' title='dive into mark' href='/web/20110714062533/http://diveintomark.org/' />
+<link rel='prev' title='Small world' href='/web/20110714062533/http://diveintomark.org/archives/2003/01/08/small_world' />
+<link rel='next' title='How to hide CSS from Safari' href='/web/20110714062533/http://diveintomark.org/archives/2003/01/11/how_to_hide_css_from_safari' />
+<link rel='canonical' href='/web/20110714062533/http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy' />
+<link rel='shortlink' href='/web/20110714062533/http://diveintomark.org/?p=1233' />
+<meta name="description" content="What if the Safari developers developed a way for web designers to hide CSS only from Safari? A specific invalid CSS syntax that it understood, or a specific valid but rare syntax that it intentionally did not understand. I am aware that this is inherently evil, but consider the situation.">
+<meta name="keywords" content="apple,css,safari">
+<link href="/web/20110714062533cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110714062533/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110714062533/http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/01\/09\/should_safari_be_intentionally_buggy";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "Jul";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110714062533" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607205338/http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 6:25:33 Jul 14, 2011">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110912231517/http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="12 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110607205338/http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy" title="20:53:38 Jun 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 6:25:33 Jul 14, 2011">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110912231517/http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy" title="23:15:17 Sep 12, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620005837/http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 6:25:33 Jul 14, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110714062533*/http://diveintomark.org/archives/2003/01/09/should_safari_be_intentionally_buggy" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>24 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">26 Jun 06 - 21 Jan 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001100001_2007:-1:000011000111_2008:-1:111010001101_2009:-1:000010000000_2010:-1:000001000111_2011:6:000001101000_2012:-1:100000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110714062533/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110714062533/http://diveintomark.org/archives#p1233">January 9, 2003</a> &#8227;
+<h2>Should Safari be intentionally buggy?</h2> (<a href="/web/20110714062533/http://diveintomark.org/tag/apple" rel="tag">apple</a>, <a href="/web/20110714062533/http://diveintomark.org/tag/css" rel="tag">css</a>, <a href="/web/20110714062533/http://diveintomark.org/tag/safari" rel="tag">safari</a>)</div>
+<p><a href="/web/20110714062533/http://www.mozillazine.org/weblogs/hyatt/"><cite>Dave Hyatt</cite></a>, one of the developers of Apple&#8217;s new <a href="/web/20110714062533/http://www.apple.com/safari/">Safari</a> web browser, is <a href="/web/20110714062533/http://www.mozillazine.org/weblogs/hyatt/2003_01_05_mozillian_archive.html#90163946" title="Safari response: diveintomark.org problem #1">publicly responding to bug reports</a>, including some of my <a href="/web/20110714062533/http://diveintomark.org/safari/">Safari test cases</a>.  This is wonderful.  Apple is making lots of friends in the design community by promptly and publicly responding to these early issues.</p>
+
+<p>Problems reportedly resolved in internal builds: <a href="/web/20110714062533/http://www.mozillazine.org/weblogs/hyatt/2003_01_05_mozillian_archive.html#90160076">now using 96dpi instead of 72dpi</a>, <a href="/web/20110714062533/http://www.mozillazine.org/weblogs/hyatt/2003_01_05_mozillian_archive.html#90160374">low frame rates in Flash are fixed</a>, and <a href="/web/20110714062533/http://www.mozillazine.org/weblogs/hyatt/2003_01_05_mozillian_archive.html#90160599"><code>object type="text/html"</code> is now supported</a>.  As far as I know, the only site which uses <code>object type="text/html"</code> is the W3C, but they&#8217;re important, because they host the <a href="/web/20110714062533/http://www.w3.org/Style/CSS/Test/CSS1/current/">CSS Test Suite</a>.  I actually already found a workaround and have been browsing through the CSS Test Suite with Safari and found several additional issues.  These are all documented on my <a href="/web/20110714062533/http://diveintomark.org/safari/">Safari test cases</a> page.</p>
+
+<p>One issue which Dave Hyatt brought to my attention privately, and which deserves public discussion, is the issue of CSS hiding tricks.  There are many <a href="/web/20110714062533/http://css-discuss.incutio.com/?page=CssHacks">known CSS hacks</a> which web designers use to hide CSS from various browsers.  This is an evil but widely used (and in my opinion necessary) practice, since all browsers have different sets of features and bugs.  (The alternatives are to have HTML-based hacks, which you would need to reproduce on every page, or to use server-side scripting to serve different stylesheets to different browsers, which adds load to the server and is just as complex to maintain.)</p>
+
+<p>You can hide CSS from the public beta of Safari with any of the following hacks:</p>
+
+<ol>
+<li><a href="/web/20110714062533/http://centricle.com/ref/css/filters/tests/sbmh/">Simplified Box Model Hack</a></li>
+<li><a href="/web/20110714062533/http://centricle.com/ref/css/filters/tests/fabrice/">Fabrice&#8217;s inversion</a></li>
+<li><a href="/web/20110714062533/http://centricle.com/ref/css/filters/tests/star_html/">Star HTML bug</a></li>
+<li><a href="/web/20110714062533/http://www.tantek.com/CSS/Examples/inlinehpf.html">Inline High Pass Filter</a></li>
+</ol>
+
+<p>The problem is that all of these hacks affect other browsers as well; there are no known hacks that <em>only</em> affect Safari.  The Inline High Pass Filter hides CSS from IE 5/Win and possibly others.  The Simplified Box Model Hack hides CSS from IE 5/Win, Opera 5 on all platforms, Opera 6/Mac, and OmniWeb 4.  Fabrice&#8217;s Inversion hides CSS from all browsers except Netscape 4.</p>
+
+<p>Dave Hyatt has suggested fixing these <q>bugs</q>, so that Safari would not be susceptible to any known CSS hiding tricks.  I pleaded with him not to do this, and told him the story of OmniWeb, which for years had horrendous CSS support but had no bugs that web designers could exploit to hide CSS from that browser.  (The community has since found <a href="/web/20110714062533/http://macedition.com/cb/cb_20021118.php">a way to hide CSS from OmniWeb</a>.)  Last I heard, Dave was still on the fence about this; he views them as bugs (which they are), and wants to fix them.  The problem is that fixing them may do more harm than good in the long run, by reducing options for web designers and forcing us back to the days of maintaining multiple browser-specific stylesheets.</p>
+
+<p>I am wondering if we shouldn&#8217;t go to the opposite extreme.  What if the Safari developers developed a way for web designers to hide CSS only from Safari: a specific valid but rare syntax that it intentionally did not understand.  Or a way to hide CSS from every browser except Safari: a specific invalid CSS syntax that it did understand.  I am aware that this is inherently evil, but consider the situation: Safari will presumably become the default browser on Mac OS X at some indeterminate point in the future, so lots of people will use it.  And it is already known to have a different set of bugs and features than any other browser.  Even if all known bugs are resolved in this current beta testing period, others will inevitably be found.  CSS hiding hacks are evil, but the alternatives are worse.</p>
+
+<p><em>If</em> the community decided this was a good idea, <em>and</em> we could convince the Safari team to implement it, what would such a hack look like?</p>
+
+<ins datetime="2003-01-09T21:30-0500">
+<p>Suggestions so far:</p>
+
+<p><cite>Scott Reynen</cite> suggests <a href="/web/20110714062533/http://weblog.randomchaos.com/index.php?date=2003-01-10&title=bugging+CSS">using fake selectors</a> like <code>onlysafari body {display: none;}</code>.</p>
+
+<p><cite>Adrian Holovaty</cite> <a href="/web/20110714062533/http://holovaty.com/blog/archive/2003/01/09/2152">suggests a comment hack</a>, like <code>/* begin_safari_hide 1.0 */ body {display: none;} /* end_safari_hide 1.0 */</code>.</p>
+
+<p><cite>Aaron Swartz</cite> thinks <a href="/web/20110714062533/http://www.aaronsw.com/2002/browserHack">Safari should define its own media type</a> (like <code>khtmlhack</code>) so designers could define styles (or entire stylesheets) with Safari-specific overrides.</p>
+
+<p><cite>Chris Adams</cite> suggests <a href="/web/20110714062533/http://improbable.org/chris/index.php?ID=98">using Java-style references for namespaces with a <code>requires-fix</code> element</a>.  Now that&#8217;s out there.</p>
+
+<p>Anyone think it&#8217;s just a wretched idea in any form?</p>
+
+<p><cite>codepoetry</cite> <a href="/web/20110714062533/http://www.codepoetry.net/archives/2003/01/09.php#000319">thinks it&#8217;s just a wretched idea in any form</a>.  <a href="/web/20110714062533/http://archipelago.phrasewise.com/2003/01/09#When:10:29:33PM">So does <cite>Daniel Berlinger</cite></a>.  <a href="/web/20110714062533/http://www.papascott.de/2003/01/10/2071.php">And Scott Hanson</a>.</p>
+</ins>
+
+<ins datetime="2003-01-10T10:25-0500">
+<p><cite>Alastair Campbell</cite> thinks Safari should pick a browser and <a href="/web/20110714062533/http://www.alastairc.ac/development/safari_comments.asp">try to match it bug-for-bug</a>.</p>
+</ins>
+
+<ins datetime="2003-01-10T04:01-0500">
+<p><cite>Dave Hyatt</cite> <a href="/web/20110714062533/http://www.mozillazine.org/weblogs/hyatt/2003_01_05_mozillian_archive.html#90166083">is open to the idea</a>, if a suitable solution can be found.  Later: he has <a href="/web/20110714062533/http://www.mozillazine.org/weblogs/hyatt/2003_01_12_mozillian_archive.html#90175169">proposed a solution</a>.</p>
+</ins>
+
+<ins datetime="2003-01-10T09:12-0500">
+<p><cite>Kevin Smith</cite> has <a href="/web/20110714062533/http://centricle.com/archive/2003/01/#extending_safari">an analysis of the solutions suggested so far</a>.</p>
+</ins>
+
+<ins datetime="2003-01-10T02:43-0500">
+<p>Update: In the last few hours, I&#8217;ve discovered <a href="/web/20110714062533/http://diveintomark.org/safari/#importtests">at least a dozen parsing bugs</a> that cause Safari to improperly apply (or improperly ignore) CSS.  No word yet on which other browsers are also susceptible to these bugs.  But at least we have choices.</p>
+</ins>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110714062533/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110714062533/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110714062533/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110714062533/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110714062533/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.315 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:58:10 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 6:25:33 Jul 14, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:16:45 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,618 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>How to consume RSS safely [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110810122628/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110810122628/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110810122628/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110810122628/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110810122628im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110810122628/http://diveintomark.org/archives/2003/06/11/in_brief_independent_reality_edition" title="In brief: independent reality edition">
+<link rel=next href="/web/20110810122628/http://diveintomark.org/archives/2003/06/15/fathers_day" title="Father&#8217;s Day">
+<link rel=up href="/web/20110810122628/http://diveintomark.org/archives#p1357" title="June 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; How to consume RSS safely Comments Feed" href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely/feed" />
+<link rel='index' title='dive into mark' href='/web/20110810122628/http://diveintomark.org/' />
+<link rel='prev' title='In brief: independent reality edition' href='/web/20110810122628/http://diveintomark.org/archives/2003/06/11/in_brief_independent_reality_edition' />
+<link rel='next' title='Father&#8217;s Day' href='/web/20110810122628/http://diveintomark.org/archives/2003/06/15/fathers_day' />
+<link rel='canonical' href='/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely' />
+<link rel='shortlink' href='/web/20110810122628/http://diveintomark.org/?p=1357' />
+<meta name="description" content="Now that RSS is moving into the mainstream, the design decisions that got it there are becoming more and more of a problem.">
+<meta name="keywords" content="html,rss,security">
+<link href="/web/20110810122628cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110810122628/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/06\/12\/how_to_consume_rss_safely";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "10";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110810122628" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514123253/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 12:26:28 Aug 10, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111105165702/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="5 Nov 2011"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514123253/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely" title="12:32:53 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 12:26:28 Aug 10, 2011">10</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110902041826/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely" title="4:18:26 Sep 2, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620091620/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 12:26:28 Aug 10, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110810122628*/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>106 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Apr 06 - 21 Jan 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000402442331_2007:-1:433221100111_2008:-1:111121fd3202_2009:-1:000000000000_2010:-1:001111000010_2011:7:000020011010_2012:-1:100000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110810122628/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110810122628/http://diveintomark.org/archives#p1357">June 12, 2003</a> &#8227;
+<h2>How to consume RSS safely</h2> (<a href="/web/20110810122628/http://diveintomark.org/tag/html" rel="tag">html</a>, <a href="/web/20110810122628/http://diveintomark.org/tag/rss" rel="tag">rss</a>, <a href="/web/20110810122628/http://diveintomark.org/tag/security" rel="tag">security</a>)</div>
+<p>First of all, I apologize to those of you who subscribe to my RSS feed and use web-based or browser-based news aggregators.  If you checked your news page in the last 12 hours, you no doubt saw my little prank: an entire screen full of platypuses.  (Please, let&#8217;s not turn this into a discussion of proper pluralization.  Try to stay with me.)  They&#8217;re gone from my feed now, although depending on your software you may need to delete the post in question from your local news page as well.</p>
+
+<p>Now that the contrition is out of the way, let&#8217;s face facts: if this prank affected you, your software is dangerously broken.  It accepts arbitrary HTML from potentially 100s of sources and blindly republishes it all on a single page on your own web server (or desktop web server).  This is fundamentally dangerous.</p>
+
+<p>Now, the current situation is not entirely your software&#8217;s fault.  RSS, by design, is difficult to consume safely.  The RSS specification allows for <code>description</code> elements to contain arbitrary entity-encoded HTML.  While this is great for RSS publishers (who can just <q>throw stuff together</q> and make an RSS feed), it makes writing a safe and effective RSS consumer application exceedingly difficult.  And now that RSS is moving into the mainstream, the design decisions that got it there are becoming more and more of a problem.</p>
+
+<p>HTML is nasty.  Arbitrary HTML can carry nasty payloads: scripts, ActiveX objects, remote image <q>web bugs</q>, and arbitrary CSS styles that (as you saw with my platypus prank) can take over the entire screen.  Browsers protect against the worst of these payloads by having different rules for different <q>zones</q>.  For example, pages in the general Internet are marked <q>untrusted</q> and may not have privileges to run ActiveX objects, but pages on your own machine or within your own intranet can.  Unfortunately, the practice of republishing remote HTML locally eliminates even this minimal safeguard.</p>
+
+<p>Still, dealing with arbitrary HTML is not impossible.  Web-based mail systems like Hotmail and Yahoo allow users to send and receive HTML mail, and they take great pains to display it safely.  It&#8217;s a lot of work, and there have been several high-profile failures over the years, but they&#8217;re coping.</p>
+
+<p>Let me be clear: by design, RSS forces <em>every single consumer application</em> to cope with this problem.</p>
+
+<p>So, to anyone who wants to write a safe RSS aggregator (or who has already written an unsafe one), I offer this advice:</p>
+
+<ol>
+<li>Strip <code>script</code> tags.  This almost goes without saying.  Want to see <a href="/web/20110810122628/http://diveintomark.org/public/2003/06/matrix-prank.html">the prank I didn&#8217;t pull</a>?  More seriously, <code>script</code> tags can be used by unscrupulous publishers to insert pop-up ads onto your news page.  Think it won&#8217;t happen?  Some larger commercial publishers are already inserting text ads and banner ads into their feeds.</li>
+<li>Strip <code>embed</code> tags.</li>
+<li>Strip <code>object</code> tags.</li>
+<li>Strip <code>frameset</code> tags.</li>
+<li>Strip <code>frame</code> tags.</li>
+<li>Strip <code>iframe</code> tags.</li>
+<li>Strip <code>meta</code> tags, which can be used to hijack a page and redirect it to a remote URL.</li>
+<li>Strip <code>link</code> tags, which can be used to import additional style definitions.</li>
+<li>Strip <code>style</code> tags, for the same reason.</li>
+<li>Strip <code>style</code> attributes from every single remaining tag.  My platypus prank was based entirely on a single rogue <code>style</code> attribute.</li>
+</ol>
+
+<p>Alternatively, you can simply strip all but a known subset of tags.  Many comment systems work this way.  You&#8217;ll still need to strip <code>style</code> attributes though, even from the known good tags.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Seventy six comments here (<a href=/web/20110810122628/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-2701"><p>I do allow img tags because every rss feed I do pull, the image&#8217;s are many times part of the content. Guess I have to rethink it, but it doesn&#8217;t bother me at the moment.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://john.beimler.org/' rel='external nofollow' class='url'>John Beimler</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2701" title="June 12, 2003 @ 11:20 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2702"><p>The as-of-last-week-fresh Syndirella weekly build did not take offense.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2702" title="June 12, 2003 @ 11:33 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2703"><p>I should be refreshing the RSS Bandit release within the hour. God, I hate you. :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.kuro5hin.org/user/Carnage4Life/diary/' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2703" title="June 12, 2003 @ 11:35 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2704"><p>Alternately:</p>
+<p>1.  Give up on Dive Into Mark, since the amount valuable content has decreased considerably and you don&#8217;t want to be a victim of another &#8220;prank&#8221; at the expense of the readers.</p>
+<p>And, I wasn&#8217;t even affected by the platypuses.</p>
+<p>&#8211;Kynn</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://kynn.com/' rel='external nofollow' class='url'>Kynn</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2704" title="June 12, 2003 @ 11:35 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2705"><p>As for reading rss feeds: My combination of nntp//rss ( <a href="/web/20110810122628/http://www.methodize.org/nntprss/">http://www.methodize.org/nntprss/</a> ) and Opera&#8217;s news/mail-client, M2 ( <a href="/web/20110810122628/http://www.opera.com/">http://www.opera.com/</a> ) handled this beatuifully. By default the Opera mail/news client won&#8217;t fetch any external resources, like images (not even from style=&#8221;&#8230;&#8221;) or &lt;link /&gt;, neither will it display frames/objects, nor will it &#8220;obey&#8221; meta redirects. Of course it won&#8217;t run scripts</p>
+<p>One thing I&#8217;m curious about, however: how should an aggregator handle embedded content with the &#038;lt:enclosure /&gt; element of RSS2.0?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2705" title="June 12, 2003 @ 11:59 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2706"><p>You wouldn&#8217;t by any chance be talking about this<br />
+<a href="/web/20110810122628/http://diveintomark.org/archives/2002/03/04/radio_escaping_bugs.html">http://diveintomark.org/archives/2002/03/04/radio_escaping_bugs.html</a><br />
+would you Mark?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.patandkat.com/pat/weblog/' rel='external nofollow' class='url'>Patrick Berry</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2706" title="June 12, 2003 @ 12:00 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2707"><p>Patrick: no.  That was a bug (which has long since been fixed): the publisher meant for markup to be displayed, but the consuming application interpreted it instead.</p>
+<p>In this case, the publisher meant for markup to be interpreted, but that was not in the consumer&#8217;s best interests.</p>
+<p>The point here is that the spec explicitly allows for this, so consumers need to look out for their own interests.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2707" title="June 12, 2003 @ 12:06 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2708"><p>Arve: I don&#8217;t know.  I don&#8217;t use the enclosure element, and my homegrown news aggregator simply ignores it.  Off the top of my head, I would say to look at the file extension and warn the user about opening potentially unsafe files like .exe or .doc.  Like mail clients do with attachments.  If the user has a virus scanner installed, maybe try to auto-scan enclosures as they come in.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2708" title="June 12, 2003 @ 12:14 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2709"><p>Mark, although I&#8217;m happy that you documented this exploit and that you are offering some sort of solution against it, I wonder, did you first alerted privately UserLand and other aggregators vendors affected by this exploit?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://blog.scriptdigital.com/' rel='external nofollow' class='url'>Emmanuel</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2709" title="June 12, 2003 @ 12:17 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2765"><cite><a href='/web/20110810122628/http://www.intertwingly.net/blog/1462.html' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;(trackback)</li>
+<li id="comment-2710"><p>I don&#8217;t have time to write my own news aggregator, and I have my own reasons for using Radio UserLand, which was affected by the prank. My solution to badly behaving feeds is unsubscribing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://radio.weblogs.com/0123037/' rel='external nofollow' class='url'>Gregory Graham</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2710" title="June 12, 2003 @ 12:25 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2711"><p>Sensible advice for description.  Does the same advice hold for content:encoded?  Some news readers automatically display this instead of description.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.dellah.com/orient/' rel='external nofollow' class='url'>Paul</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2711" title="June 12, 2003 @ 12:38 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2712"><p>You forgot two important ones:</p>
+<p>1) If you strip style attributes, you want to strip event handlers too.</p>
+<p>Otherwise:</p>
+<p>&#8230; onLoad=&#8221;location.href=&#8217;<a href="/web/20110810122628/http://www.playboy.com'"><a href="/web/20110810122628/http://www.playboy.com'" rel="nofollow">http://www.playboy.com&#039;</a>&#8220;</a> &#8230;</p>
+<p>2) Plus, there are the layout-breaking tags, like a closing DIV or closing TABLE.</p>
+<p>Joe<br />
+<a href="/web/20110810122628/http://www.joegrossberg.com/archives/000596.html">http://www.joegrossberg.com/archives/000596.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.joegrossberg.com/' rel='external nofollow' class='url'>Joe Grossberg</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2712" title="June 12, 2003 @ 12:44 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2713"><p>Great article, as usual, but I don&#8217;t really understand why you consider the inclusion of popup ads in an RSS feed as unscrupulous (as much as I hate such ads personally, and would drop such a feed from my subscription list in a hot second).  One of the objections I&#8217;ve seen to including the full text of posts in a feed is that then there&#8217;s less of a reason to visit the site proper, reducing ad-impressions.  Putting the ads (however obnoxious) in the feed seems like a fine workaround to me (if you&#8217;re running an ad-supported site and think (misguidedly) that popups are a good idea).  If I, as a subscriber, don&#8217;t think the feed is worth the ads, then I can unsubscribe.  Just a quibble though, and it doesn&#8217;t detract from your main point about potential RSS exploits.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.biancolo.com/' rel='external nofollow' class='url'>Jim Biancolo</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2713" title="June 12, 2003 @ 12:44 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2714"><p>Emmanuel: the issue has been raised many times in many forums.  See, for instance:</p>
+<p><a href="/web/20110810122628/http://www.intertwingly.net/blog/940.html">http://www.intertwingly.net/blog/940.html</a><br />
+<a href="/web/20110810122628/http://feeds.archive.org/validator/docs/warning/ContainsScript.html">http://feeds.archive.org/validator/docs/warning/ContainsScript.html</a><br />
+<a href="/web/20110810122628/http://webservices.xml.com/pub/a/ws/2002/11/19/rssfeedquality.html?page=2">http://webservices.xml.com/pub/a/ws/2002/11/19/rssfeedquality.html?page=2</a><br />
+<a href="/web/20110810122628/http://www.securiteam.com/unixfocus/6L00H205PY.html">http://www.securiteam.com/unixfocus/6L00H205PY.html</a><br />
+<a href="/web/20110810122628/http://project.antville.org/stories/200348/">http://project.antville.org/stories/200348/</a><br />
+<a href="/web/20110810122628/http://www.peerfear.org/rss/permalink/1028943207.shtml">http://www.peerfear.org/rss/permalink/1028943207.shtml</a><br />
+<a href="/web/20110810122628/http://diveintomark.org/archives/2002/10/10/more_on_evolvable_formats.html">http://diveintomark.org/archives/2002/10/10/more_on_evolvable_formats.html</a><br />
+<a href="/web/20110810122628/http://philringnalda.com/blog/2002/04/thinking_about_rss.php">http://philringnalda.com/blog/2002/04/thinking_about_rss.php</a><br />
+<a href="/web/20110810122628/http://groups.yahoo.com/group/radio-userland/message/9965">http://groups.yahoo.com/group/radio-userland/message/9965</a><br />
+<a href="/web/20110810122628/http://radio.weblogs.com/0100887/categories/rss/2002/05/23.html#a265">http://radio.weblogs.com/0100887/categories/rss/2002/05/23.html#a265</a><br />
+<a href="/web/20110810122628/http://vyom.org/cat_internet/rss_security_vulnerabilities.php">http://vyom.org/cat_internet/rss_security_vulnerabilities.php</a></p>
+<p>A Google search for &#8220;rss strip html tags&#8221; will turn up dozens more.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2714" title="June 12, 2003 @ 12:54 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2715"><p>Speaking of exploits, Torsten copied a feature from SharpReader where it automatically jumps to the Web Page if there is a link and no description which I had misgivings about but now realize is a security issue. </p>
+<p>*sigh*  </p>
+<p>PS: When is your blog going to support the CommentAPI? I hate having to switch modes to post to your blog. :(</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.kuro5hin.org/user/Carnage4Life/diary' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2715" title="June 12, 2003 @ 12:55 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2716"><p>Oh, and let&#8217;s not forget browser specific-bugs, such as doing:</p>
+<p>[input type foo]</p>
+<p>somewhere in your HTML.</p>
+<p>A malicious person could screw you over and, if you didn&#8217;t know about that bug previously, it&#8217;d take hours to figure out why it was happening.</p>
+<p>Joe<br />
+<a href="/web/20110810122628/http://www.joegrossberg.com/archives/000623.html">http://www.joegrossberg.com/archives/000623.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.joegrossberg.com/' rel='external nofollow' class='url'>Joe Grossberg</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2716" title="June 12, 2003 @ 12:59 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2717"><p>And you should use regular expressions to remove them.<br />
+/&lt;(script|noscript|object|embed|style|frameset|frame|iframe)[&gt;\s\S]*&lt;\/\1&gt;/i<br />
+/&lt;\/?!?(param|link|meta|doctype|div|font)[^&gt;]*&gt;/i<br />
+/(class|style|id)=&#8221;[^"]*&#8221;/i</p>
+<p>Use these to remove them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://ctrlalt.com/' rel='external nofollow' class='url'>Mattias</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2717" title="June 12, 2003 @ 1:06 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2718"><p>Thanks Mark for the reply.</p>
+<p>Then, would have been more nice to set a distinct RSS feed just to show this exploit?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://blog.scriptdigital.com/' rel='external nofollow' class='url'>Emmanuel</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2718" title="June 12, 2003 @ 1:09 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2719"><p>One more tag to be wary off: &lt;body&gt;. When IE encounters a &lt;body onload&gt; inside the main &lt;body&gt;-section, it will execute that script as if it was on the outer-&lt;body&gt;. </p>
+<p>I&#8217;m not sure how other browsers handle this&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.hutteman.com/weblog/' rel='external nofollow' class='url'>Luke Hutteman</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2719" title="June 12, 2003 @ 1:21 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2720"><p>Mark, how many comments and emails do you get on a regular basis exclaiming how you have, in some way or another, wronged a valuable member and they&#8217;re never coming back?</p>
+<p>I don&#8217;t do RSS, so wasn&#8217;t affected this time, but part of what makes this site enjoyable is that you like to play with technology.  This is done by pushing and tinkering, and the results make for a bumpier, far more fascinating ride.</p>
+<p>So my vote in this unabashed dictatorship is to keep it up.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.ardenstone.com/' rel='external nofollow' class='url'>ardenstone</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2720" title="June 12, 2003 @ 1:26 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2721"><p>Luke: holy crap!  I never knew that.  No wonder most bulletin board systems just allow a known subset of tags and attributes.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2721" title="June 12, 2003 @ 1:29 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2722"><p>It&#8217;s Mark&#8217;s site, he can do as he wishes.  Everyone is free to start a diveinto$name.org site, if they wish 8)</p>
+<p>BTW, nice hack.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://socialistsushi.com/' rel='external nofollow' class='url'>Bryan L. Fordham</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2722" title="June 12, 2003 @ 1:33 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2723"><p>ardenstone: I received a few emails asking what was going on, and whether I was aware of it, but I apologized to each of those people individually and I&#8217;ve received no replies suggesting that I lost subscribers over it.  There have been a smattering of negative comments here, and one reader posting about it on his own weblog, but I think most people saw the humor in it.</p>
+<p>Of course, I could be wrong.  Time will tell whether my readership numbers suffer for it.  Luckily, I&#8217;m not in this for the numbers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2723" title="June 12, 2003 @ 1:35 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2766"><cite><a href='/web/20110810122628/http://www.shell.linux.se/kahlin/nucleus/index.php?itemid=55' rel='external nofollow' class='url'>Kalles Klätterträd</a></cite>&#160;(trackback)</li>
+<li id="comment-2724"><p>Mark:</p>
+<p>Even if you didn&#8217;t do your image hack/prank, you&#8217;d still have people complaining that you&#8217;re provided &#8220;hackers&#8221; with a cookbook for messing up others&#8217; RSS aggregators.</p>
+<p>An actual image of a Plat. is much more likely to get noticed, of course. And it&#8217;s not like you did something truly malicious to drive the point home.</p>
+<p>So keep up the good work, and please keep informing people of these security loopholes.</p>
+<p>Thanks,<br />
+Joe</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.joegrossberg.com/' rel='external nofollow' class='url'>Joe Grossberg</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2724" title="June 12, 2003 @ 1:52 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2725"><p>Um, by that I meant that it didn&#8217;t work in it. I suck at forming phrases that can only be interpreted one way (well, one non-sexual way).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2725" title="June 12, 2003 @ 2:41 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2726"><p>Jesper: &#8220;suck&#8221; is probably not the verb you want to use to apologize for double entendres.  :D</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2726" title="June 12, 2003 @ 3:12 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2727"><p>I&#8217;m working in PHP and have been using strip_tags() to limit tags for both outgoing and incoming for ages. But I got caught out by My Platypus. Guess I&#8217;ll have to add some regex to catch that one.</p>
+<p>What I do have problems with is unmatched starting and ending tags. If anyone&#8217;s got some php code to auto-close unmatched tags I&#8217;d really appreciate it.<br />
+julian_bond at voidstar.com</p>
+<p>ps. I do think it was a bit mean of Mark to dump this on us. But I&#8217;ll forgive him. This time.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.ecademy.com/' rel='external nofollow' class='url'>Julian Bond</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2727" title="June 12, 2003 @ 3:28 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2728"><p>Thanks Mark, now I get to spend the day up to my neck in regex-hell :)</p>
+<p>Here is what I have so far for an algorithm:</p>
+<p>1. Escape every  &lt; into  &amp;lt;<br />
+2. Only convert &amp;lt; back into &lt; if it is followed by an acceptable tag type:(a|b|img|i|em|strong|code|p|div).<br />
+3. Remove all style attributes.</p>
+<p>After having done all that should I still strip onload, onclick, etc attributes?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://bitworking.org/' rel='external nofollow' class='url'>Joe</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2728" title="June 12, 2003 @ 3:37 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2729"><p>BottomFeeder &#8211; <a href="/web/20110810122628/http://www.cincomsmalltalk.com/BottomFeeder">http://www.cincomsmalltalk.com/BottomFeeder</a> &#8211; is immune to this kind of prank.  Not to mention cross platform&#8230;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.cincomsmalltalk.com/blog/blogView' rel='external nofollow' class='url'>James Robertson</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2729" title="June 12, 2003 @ 4:34 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2730"><p>I&#8217;d be surprised if this problem can be solved properly using regular expressions &#8211; for example, the examples regexps pasted in above would miss out on tags that don&#8217;t have a closing tag and unquoted attributes. I know from experience ( <a href="/web/20110810122628/http://simon.incutio.com/archive/2003/02/23/safeHtmlChecker">http://simon.incutio.com/archive/2003/02/23/safeHtmlChecker</a>  ) that there are a huge number of HTML &#8220;tricks&#8221; for causing problems, especially if your browser is IE (which is reknowned for accepting pretty much any garbage markup).</p>
+<p>To be truly safe, you need to use a proper HTML parser to pre-process the markup. Even worse, the parser can&#8217;t just be a standard HTML parser &#8211; it will need to closely match the parser of the eventual consuming browser (generally IE) as otherwise it could miss stuff that IE will still process.</p>
+<p>It&#8217;s a very nasty problem.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://simon@incutio.com/' rel='external nofollow' class='url'>Simon Willison</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2730" title="June 12, 2003 @ 4:53 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2731"><p>Re: Emmanuael&#8217;s The Devil&#8217;s Feed from #19: if you don&#8217;t do it, I will.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://philringnalda.com/' rel='external nofollow' class='url'>Phil Ringnalda</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2731" title="June 12, 2003 @ 5:40 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2732"><p>This was one of the reasons I&#8217;d asked for a subset of acceptable HTML tags for use within RSS items.  I&#8217;m less interested in an ever-growing list of what to avoid.  I&#8217;d rather see a short list of what&#8217;s allowed.  At least within the limited context of an RSS item&#8217;s title and description elements.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.ideaspace.net/users/wkearney' rel='external nofollow' class='url'>Bill Kearney</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2732" title="June 12, 2003 @ 5:44 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2733"><p>I&#8217;m thinking that a test suite for RSS aggregator authors would be very, very nice&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.chompy.net/blogs/jacob/' rel='external nofollow' class='url'>jacob</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2733" title="June 12, 2003 @ 7:10 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2734"><p>Mark: Thanks for bringing this up at a moment when I could actually do something about it. </p>
+<p>There are limits to what I can strip from posts by default; people are posting blog entries as well as comments, after all. But I&#8217;ve got a &#8220;strip tags&#8221; toggle in there for just these kinds of situations, and your prank got me to update it to kill inline styles and even handlers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://admin.support.journurl.com/' rel='external nofollow' class='url'>Roger Benningfield</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2734" title="June 12, 2003 @ 7:14 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2735"><p>Mark: Uh-oh. Well, to reprase that, I blow at forming phra&#8230; Oh crap.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2735" title="June 12, 2003 @ 8:00 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2736"><p>Hi Mark&#8230;<br />
+thanks for the education.<br />
+woa, this really messed up my Radioland aggregator. I quickly figured out where it came from:<br />
+<a href="/web/20110810122628/http://diveintomark.org/archives/2003/06/11/in_brief_independent_reality_edition.html">http://diveintomark.org/archives/2003/06/11/in_brief_independent_reality_edition.html</a><br />
+and I was planning to hunt the miscreant down who hacked my page&#8230;. phew&#8230; just a prank. You had me ready to wipe my hard drive and get new firewalls. </p>
+<p>I knew xml was full of security holes. I had just read an article about it, but I just didn&#8217;t expect it to be demonstrated on my computer&#8230; thanks for the education and please,<br />
+I hope no one else follows suit&#8230; okay, Mark, I hope no hackers are reading your very informative weblog.<br />
+this could be the end of open aggregators&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://radio.weblogs.com/0107233/' rel='external nofollow' class='url'>M. Ford</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2736" title="June 12, 2003 @ 8:01 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2737"><p>M. Ford,<br />
+ How does the classic flaw of trusting arbitrary user input translate to &#8220;xml was full of security holes&#8221;? </p>
+<p>I&#8217;m also extremely curious about what kind of article could be written about security flaws in XML that wouldn&#8217;t be just be more noise about the billion laughs exploit via recursive entities.</p>
+<p>Do you have a link to this article?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.kuro5hin.org/user/Carnage4Life/diary/' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2737" title="June 12, 2003 @ 8:12 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2738"><p>XML isn&#8217;t a program or even a language&#8230; it&#8217;s a set of language rules to build your own markup language with&#8230; I guess you meant RSS.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2738" title="June 12, 2003 @ 8:21 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2767"><cite><a href='/web/20110810122628/http://www.snellspace.com/blog/archives/000503.html' rel='external nofollow' class='url'>snellspace</a></cite>&#160;(trackback)</li>
+<li id="comment-2739"><p>Interesting&#8230; I have Radio Userland, and I never got the platypusen. My install doesn&#8217;t display the content:encoded, only the description.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://radio.weblogs.com/0105501/' rel='external nofollow' class='url'>Matthew Ernest</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2739" title="June 12, 2003 @ 9:54 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2740"><p>Hmm.. well, I can think of one way an XML mechanism can open up these security holes, Dare. Surprisingly, it won&#8217;t affect IE. [div xmlns:h="<a href="/web/20110810122628/http://www.w3.org/1999/xhtml"><a href="/web/20110810122628/http://www.w3.org/1999/xhtml" rel="nofollow">http://www.w3.org/1999/xhtml</a>"]</a> [h:object &#8230;</p>
+<p>Any browser that understands the xhtml namespace (say Mozilla) will use the object, and most parsers which are stripping out specific items, as per Mark&#8217;s list above won&#8217;t match h:object as opposed to object.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2740" title="June 12, 2003 @ 10:30 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2741"><p>Mark &#8211; have you given any thought to publishing an RSS feed of &#8220;test cases&#8221; of exploits? It may be useful to the aggregator/consumer developers. Or is there one already available elsewhere.</p>
+<p>As a reply to 26 &#8211; about &#8220;people complaining that you�re provided &#8216;hackers&#8217; with a cookbook for messing up others&#8217; RSS aggregators&#8221;, the simple explanation is that security through obscurity is no security at all. As evidenced by a rather large software company.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.isolani.co.uk/blog/' rel='external nofollow' class='url'>Isofarro</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2741" title="June 13, 2003 @ 4:37 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2768"><cite><a href='/web/20110810122628/http://www.aquarionics.com/journal/1970/01/01/Other_Stuff' rel='external nofollow' class='url'>Aquarionics</a></cite>&#160;(trackback)</li>
+<li id="comment-2742"><p>The only major problem here is the  tag and *maybe* the embed and object tag.</p>
+<p>NewsMonster will strip &#8230; even if it didn&#8217;t it really isn&#8217;t a big deal.</p>
+<p>Do something stupid, get unsubscribed :)</p>
+<p>Script is the big issue because I can&#8217;t think of a single good reason (worth keeping around) to have a script in RSS but there are tons of DoS attacks and potential security issues.</p>
+<p>Kevin</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.peerfear.org/' rel='external nofollow' class='url'>Kevin Burton</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2742" title="June 13, 2003 @ 6:00 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2743"><p>Another note&#8230; I requested that this be added to the RSS 1.0 spec a long time ago as an implementation note.</p>
+<p><a href="/web/20110810122628/http://www.peerfear.org/rss/permalink/1025904432.shtml">http://www.peerfear.org/rss/permalink/1025904432.shtml</a></p>
+<p>The group decided to veto the proposal.  Obviously I wasn&#8217;t happy :)</p>
+<p>Kevin</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.peerfear.org/' rel='external nofollow' class='url'>Kevin Burton</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2743" title="June 13, 2003 @ 6:06 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2744"><p>Do you strip the word &#8216;javascript&#8217; ???</p>
+<p>Looks like you did after I read my previous comments&#8230;</p>
+<p>Lets see&#8230; this is a test post </p>
+<p>  javascript</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.peerfear.org/' rel='external nofollow' class='url'>Kevin Burton</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2744" title="June 13, 2003 @ 6:12 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2745"><p>Wow&#8230; that is strange&#8230; Didn&#8217;t strip javascript from my previous post but it looks like it was stripped from the one above that&#8230;.</p>
+<p>Anyway.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.peerfear.org/' rel='external nofollow' class='url'>Kevin Burton</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2745" title="June 13, 2003 @ 6:13 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2746"><p>Kevin, it strips all tags. If you want to make a tag show, use &amp;lt;tagname&amp;gt;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2746" title="June 13, 2003 @ 7:35 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2747"><p>Meanwhile back in the real world&#8230; </p>
+<p>There are a lot of feeds out there that blindly copy out the bad html that has been entered by someone else in a comments box. Either that or they include all the formatting used on the blog itself. To avoid the item being too long they then chop after N characters and add &#8220;&#8230;&#8221;. The end result of this is &lt;description> containing not malicious but annoying tags like &lt;font and &lt;table and because this isn&#8217;t cleaned up before chopping these are often unmatched. I think all this is much more of a problem than the rare occasions where someone deliberately tries an exploit, dangerous though that might be.</p>
+<p>So I can strip_tags() selectively, and use some simple regex to get rid of the worst of the tag attributes. But I&#8217;ve still got to build an HTML tidy to catch the unmatched tags.</p>
+<p>It&#8217;s enough to make me want to exclude everything except &lt;a href, &lt;img and I&#8217;m not too sure about those either.</p>
+<p>It&#8217;s easy to say just ignore the feed and unsub. But some of the most worthwhile blogs are some of the worst offenders. (Are you listening, Doc? Howard? David?)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.ecademy.com/' rel='external nofollow' class='url'>Julian Bond</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2747" title="June 13, 2003 @ 8:16 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2748"><p>Mark, I recommend that you change your &#8220;list of things to remove&#8221; to say &#8220;remove/defang everything except the following tags&#8230;&#8221;  You should also include a list of acceptable attributes for each of these tags.</p>
+<p>The approach you&#8217;re recommending at the moment is inherently futile, as some people have pointed out in the comments above.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://mar.anomy.net/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2748" title="June 13, 2003 @ 10:13 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2749"><p>Lach, </p>
+<p> &#8220;Any browser that understands the xhtml namespace (say Mozilla) will use the object, and most parsers which are stripping out specific items, as per Mark�s list above won�t match h:object as opposed to object.&#8221;</p>
+<p>a.) RSS Bandit does. </p>
+<p>b.) This still doesn&#8217;t sound like an &#8220;XML hack&#8221; to me but a case of blindly trusting arbitrary user input which has been a known security flaw for decades.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.kuro5hin.org/user/Carnage4Life/diary/' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2749" title="June 13, 2003 @ 10:34 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2769"><cite><a href='/web/20110810122628/http://www.nicomorgan.com/2parchives/2003/06/rss_aggregator_removed.php' rel='external nofollow' class='url'>My 2p</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2770"><cite><a href='/web/20110810122628/http://www.radwin.org/michael/blog/archives/000246.html' rel='external nofollow' class='url'>Michael J. Radwin's blog</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2771"><cite><a href='/web/20110810122628/http://www.radwin.org/michael/blog/archives/000246.html' rel='external nofollow' class='url'>Michael J. Radwin's blog</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2772"><cite><a href='/web/20110810122628/http://www.radwin.org/michael/blog/archives/000246.html' rel='external nofollow' class='url'>Michael J. Radwin's blog</a></cite>&#160;(trackback)</li>
+<li id="comment-2750"><p>Stepping back from the details for a moment, it would seem to me that the right long-term approach is to make sure that the commonly used rendering components (the IE COM thingee, Gecko, etc) expose programming APIs that let you specify the trust level when making a rendering request.  My claim: we should be able to achieve better security with a handful of widely used rendering components than with fifty tag strippers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.grumet.net/weblog/' rel='external nofollow' class='url'>Andrew Grumet</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2750" title="June 13, 2003 @ 2:52 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2751"><p>Alternatively and in the same train of thought, users of browser-based aggregrators could be directed to set a low trust level for the URL(s) where they read aggregated content.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.grumet.net/weblog/' rel='external nofollow' class='url'>Andrew Grumet</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2751" title="June 13, 2003 @ 3:01 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2752"><p>Andrew: browsers already have a trust level; IE calls it &#8220;zones&#8221;.  Different zones have different default privileges, and can be tweaked independently.  I mentioned this in my article.  The problem with desktop-browser-based RSS readers is that they subvert this system by taking content from remote zones (by default, the least trusted) and blindly republishing it in the local zone (by default, the most trusted).</p>
+<p>This problem is not specific to RSS as a data format; any program that took any kind of potentially harmful remote content and republished it on a local web server would have the same problem.  But lots of RSS readers do exactly this, so I&#8217;m focusing on them.</p>
+<p>The more general problem of &#8220;trusting arbitrary user input&#8221; is, as others have correctly noted, been a problem for decades.  This is just the latest specific case that I care enough to write about.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2752" title="June 13, 2003 @ 3:20 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2773"><cite><a href='/web/20110810122628/http://tcpo.org/archives/000008.html' rel='external nofollow' class='url'>tcpo.org</a></cite>&#160;(trackback)</li>
+<li id="comment-2753"><p>Mark: &#8220;The problem with desktop-browser-based RSS readers is that they subvert this system by taking content from remote zones (by default, the least trusted) and blindly republishing it in the local zone (by default, the most trusted).&#8221;  Exactly.  Do you think it would be easy/hard/impossible to modify these desktop-browser-based readers so that they republish in a non-trusted zone?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.grumet.net/weblog/' rel='external nofollow' class='url'>Andrew Grumet</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2753" title="June 13, 2003 @ 3:35 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2754"><p>To illustrate what I&#8217;m getting at, consider a program  that could register with the OS that &#8220;<a href="/web/20110810122628/http://127.0.0.1:5335/path/to/aggregator"><a href="/web/20110810122628/http://127.0.0.1:5335/path/to/aggregator" rel="nofollow">http://127.0.0.1:5335/path/to/aggregator</a>&#8220;</a> should be considered untrustworthy when rendering.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.grumet.net/weblog/' rel='external nofollow' class='url'>Andrew Grumet</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2754" title="June 13, 2003 @ 3:45 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2755"><p>To Dare: No, I read it, forgot about it, until now, but I&#8217;ll go back and try to track back to the article on the web&#8230; it was about xml (not as a language) and exploits&#8230; I&#8217;m pretty sure it was a few steps away from dailyrotation.com&#8217;s many feeds&#8230; or what it a few steps away from a subscribed feed&#8230;</p>
+<p>I turn javascript off when I read from Radioland&#8217;s aggregator &#8230; and always have. But I still got the blacked out link to the platypus jpg at the top of the aggregator page&#8230; and that&#8217;s scary&#8230; </p>
+<p>To Dare and all, I know next to nothing about progamming languages compared to you&#8230; &#8230; thanks for the education</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://radio.weblogs.com/0107233/' rel='external nofollow' class='url'>M. Ford</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2755" title="June 13, 2003 @ 4:10 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2756"><p>Lach,</p>
+<p>Unless I&#8217;m greatly mistaken, your proposed exploit will only work if the aggregator spits out the page with an XML content-type; in text/html Mozilla should just chew it into tag-soup (no namespace handling for that content-type). So it&#8217;s possible, but not terribly likely.</p>
+<p class=sig>&#8212;&#8201;<cite>Chris Hoess</cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2756" title="June 13, 2003 @ 7:53 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2774"><cite><a href='/web/20110810122628/http://www.sharkbitten.com/archives/2003_06.php#000122' rel='external nofollow' class='url'>Sharkbitten</a></cite>&#160;(trackback)</li>
+<li id="comment-2757"><p>Interesting. I feel left out &#8211; my aggregator only displayed one platypus. But I do a lot of tag stripping and I also clip descriptions at an arbitrary length. As others have mentioned, a test suite would be enormously useful, as would suggestions for safely dealing with links and images (since I want to keep these displayed).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.downes.ca/' rel='external nofollow' class='url'>Stephen Downes</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2757" title="June 13, 2003 @ 11:23 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2775"><cite><a href='/web/20110810122628/http://www.aquasition.net/archive/2003/06/13/in_brief_boston_edition.php' rel='external nofollow' class='url'>Aquasition.Net</a></cite>&#160;(trackback)</li>
+<li id="comment-2758"><p>Chris: Hmm&#8230; does that mean I&#8217;ve just come up with an arguement for sticking to html in aggregators? Or just for ignoring the &#8216;should&#8217; mime-type of xhtml?</p>
+<p>Dare: I&#8217;d never dream of calling that a hole in XML itself, but M. Ford&#8217;s comment and your reply made me think of using that as a way around tag strippers, since I&#8217;d imagine most would just use simple regex&#8217;s. It&#8217;s not too hard to fix your regex, of course, you just have to strip &lt;.+:tagname as well as &lt;tagname, but I thought it was worth pointing out for people who are stripping tags.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2758" title="June 14, 2003 @ 2:01 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2759"><p>/&lt;(script|noscript|object|embed|style|frameset|frame|iframe)[&gt;\s\S]*&lt;\/\1&gt;/i</p>
+<p>This regex could be improved:<br />
+running it on the HTML of this very page, it caught the first &lt;script type=&#8221;text/javascript&#8221; src=&#8221;/js/common.js&#8221;&gt;&lt;/script&gt;, the following few tags and the next &lt;script&gt;&#8230;&lt;/script&gt; block&#8230; :(</p>
+<p>Moreover, you can reduce the number of alternatives in the first part of the regex, which speeds things up.</p>
+<p>&lt;((no)?script|object|embed|style|frameset|i?frame)[^&gt;]*&gt;[^&lt;]*&lt;\/\1&gt;</p>
+<p>&gt; I�d be surprised if this problem can be solved properly using regular expressions &#8211; for example, the examples regexps pasted in above would miss out on tags that don�t have a closing tag and unquoted attributes&#8230;</p>
+<p>I am pretty sure it CAN be fixed just with regexes (be a long list), even if it might require a lot of firepower &#8212; making it in the end more trouble than necessary. Remember Jeff Friedl&#8217;s 6KB regex to validate an email address?</p>
+<p>Most probably a mixture of regexes and code should do the trick.<br />
+And there is no such thing as regex-hell&#8230; only a regex-paradise ;-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.sungnyemun.org/weblog2/' rel='external nofollow' class='url'>dda</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2759" title="June 14, 2003 @ 2:29 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2760"><p>> Most probably a mixture of regexes and code should do the trick</p>
+<p>The regex you gave is a good reason that it isn&#8217;t easy to use regexes to parse html. </p>
+<p>You forgot to take into account that html may have optional spaces before the tag name and that you can&#8217;t rely on the closing tag to not have either white space or attributes (of course that&#8217;s invalid, but browsers would accept it and it would sneak past your regexp). Also you could have an attribute that contained a non-escaped &#8216;>&#8217;.</p>
+<p>You really need to use a proper HTML parser. If you&#8217;re a perl user, you may find HTML::TagFilter handy.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.estey.com/' rel='external nofollow' class='url'>Gavin Estey</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2760" title="June 14, 2003 @ 6:34 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2761"><p>Also, be sure to restrict the URLs of images, links, etc.  For Mozilla, you must disallow links to javascript: and data: URLs.  For IE and NS4, I think there are a few synonyms for javascript: you also have to disallow.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.squarefree.com/' rel='external nofollow' class='url'>Jesse Ruderman</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2761" title="June 14, 2003 @ 11:22 pm"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2762"><p>Gavin, you&#8217;re right. It is not easy to do it properly with just regexes (and for the record, &#8220;my&#8221; regex wasn&#8217;t aiming at foolproof parsing: as I said, we&#8217;ll need code, ie &#8216;intelligence&#8217;, on top of the regexes to catch everything&#8230;<br />
+The optional spaces are catched easily enough (\s*), but that has a tendency to slow down dramatically NFA engines, which is what most of us will use &#8212; Perl, PHP, Python&#8230;</p>
+<p>Since I am a PHP guy, I guess I&#8217;ll have to hack my own HTML Parser (Not!).</p>
+<p>Re-reading the comments, the lists of things to disable is so long, I think it&#8217;s a better (as in &#8220;I am lazy&#8221;) idea to disable everything and re-enable only a selected few :(</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://www.sungnyemun.org/weblog2/' rel='external nofollow' class='url'>dda</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2762" title="June 15, 2003 @ 3:48 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2763"><p>I&#8217;ve only used Javascript in a blog entry once, but it was with good reason: OCN-linking a movie file.</p>
+<p>OCN is Open Content Network, a way of swarming downloads of popular web-served files. (Basically a web-based BitTorrent that doesn&#8217;t require all that tedious mucking about with trackers and seeders). See:<br />
+<a href="/web/20110810122628/http://www.open-content.net/">http://www.open-content.net/</a></p>
+<p>The method of publishing stuff on OCN is to provide a normal link but include some Javascript on the page that does automatic detection/install of the OCN client and translates the link to an OCN download. Admittedly, using an interstitial download page would solve this problem.</p>
+<p>However, I think that Andrew&#8217;s comment (#62) is easily the best solution. Moreover, it could also solve a stupid problem common to many RSS readers: not setting the BASE of the HTML correctly so that relative links work.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://cheerleader.yoz.com/' rel='external nofollow' class='url'>Yoz</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2763" title="June 15, 2003 @ 4:52 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2764"><p>Lately, I have moved away from rss readers. Reading a site on a RSS aggregator doesnt feel like the real thing somehow.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810122628/http://itismylife.com/' rel='external nofollow' class='url'>anand</a></cite>&#160;<a class=p href="/web/20110810122628/http://diveintomark.org/archives/2003/06/12/how_to_consume_rss_safely#comment-2764" title="June 15, 2003 @ 7:02 am"><img alt="#" src=/web/20110810122628im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2776"><cite><a href='/web/20110810122628/http://www.wilddog.com/mt/archives/000181.html' rel='external nofollow' class='url'>Jim Mangan's Weblog</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110810122628/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110810122628/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110810122628/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110810122628/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110810122628/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.463 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:37:02 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 12:26:28 Aug 10, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:14:08 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,580 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Redesign [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806112057/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806112057/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806112057/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806112057/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806112057im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806112057/http://diveintomark.org/archives/2003/03/21/confessions_of_a_platypus_creator" title="Confessions of a platypus creator">
+<link rel=next href="/web/20110806112057/http://diveintomark.org/archives/2003/03/24/band" title="Band">
+<link rel=up href="/web/20110806112057/http://diveintomark.org/archives#p1292" title="March 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Redesign Comments Feed" href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806112057/http://diveintomark.org/' />
+<link rel='prev' title='Confessions of a platypus creator' href='/web/20110806112057/http://diveintomark.org/archives/2003/03/21/confessions_of_a_platypus_creator' />
+<link rel='next' title='Band' href='/web/20110806112057/http://diveintomark.org/archives/2003/03/24/band' />
+<link rel='canonical' href='/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign' />
+<link rel='shortlink' href='/web/20110806112057/http://diveintomark.org/?p=1292' />
+<meta name="description" content="In progress.">
+<meta name="keywords" content="redesign">
+<link href="/web/20110806112057cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806112057/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/03\/22\/redesign";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/03/22/redesign" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806112057" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115346/http://diveintomark.org/archives/2003/03/22/redesign" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 11:20:57 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115346/http://diveintomark.org/archives/2003/03/22/redesign" title="11:53:46 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 11:20:57 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620120239/http://diveintomark.org/archives/2003/03/22/redesign" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 11:20:57 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806112057*/http://diveintomark.org/archives/2003/03/22/redesign" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>17 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Jun 06 - 6 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001202100_2007:-1:010100000101_2008:-1:010000000001_2009:-1:000000000000_2010:-1:000001000011_2011:7:000010010000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806112057/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806112057/http://diveintomark.org/archives#p1292">March 22, 2003</a> &#8227;
+<h2>Redesign</h2> (<a href="/web/20110806112057/http://diveintomark.org/tag/redesign" rel="tag">redesign</a>)</div>
+<p>In progress.  Discuss.</p>
+
+<p><strong>Later:</strong> thanks for the lively discussion.  It&#8217;s over now.  It was fun while it lasted.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Sixty four comments here (<a href=/web/20110806112057/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-878"><p>I&#8217;m first!</p>
+<p>As with previous incarnations, the CSS navbar misbehaves in IE5 on Mac OS 9.</p>
+<p>Um&#8230; Courier? TheSans Mono, please.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-878" title="March 22, 2003 @ 11:33 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-879"><p>Very &#8220;generic-blog&#8221; looking.  Last version had much more personality.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-879" title="March 22, 2003 @ 11:44 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-880"><p>Looks great in Mozilla 1.3, but it feels like there&#8217;s something missing and I can&#8217;t put my finger on it.</p>
+<p class=sig>&#8212;&#8201;<cite>Devon</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-880" title="March 22, 2003 @ 11:49 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-881"><p>reminds me of a previous incarnation&#8230; not neccessarily a good thing, not neccessarily a bad thing&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://jason.verberweb.com/' rel='external nofollow' class='url'>Jason</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-881" title="March 22, 2003 @ 11:51 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-882"><p>I dig it, minus the background image in the logo/navbar. It hurts my eyes.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://algorhythm.org/' rel='external nofollow' class='url'>Shawn</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-882" title="March 22, 2003 @ 11:58 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-883"><p>IE users can blow me.  It&#8217;s the inline lists.  I can either maintain proper markup, or I can make it look right in IE.  I don&#8217;t know how to do both.</p>
+<p>And yes, this is a previous incarnation, slightly revised.  The logo background is a Hilbert curve, a deceptively simple repeating pattern that can fill an infinite amount of space.  It seemed appropriate.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-883" title="March 23, 2003 @ 12:00 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-884"><p>I dig this better than the Zen-circle design.  I also like the background image in the navbar&#8230;maybe you should have an animated Pacman come through on occasion. ;-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-884" title="March 23, 2003 @ 12:03 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-885"><p>Not the slightest bit &#8220;generic-blog&#8221; looking. Elegance + simplicity = personality.</p>
+<p>Background pattern took a while to load first time round and I thought the plain blue background was kind of &#8220;plain.&#8221; When I came back from looking at another blog, there was this gorgeous, intricate pattern that added just the right touch of understated elegance.</p>
+<p>Not necessarily a good idea to ask for feedback since only a relatively small number of people &#8212; such as Joe and myself &#8212; will be able to offer well-informed and constructive criticism. Heh.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://weblog.delacour.net/' rel='external nofollow' class='url'>Jonathon Delacour</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-885" title="March 23, 2003 @ 12:10 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-886"><p>I love the navy blue background pattern. It reminds me of the rug I had in my bedroom when I was in junior high.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://tima.mplode.com/' rel='external nofollow' class='url'>Timothy Appnel</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-886" title="March 23, 2003 @ 12:19 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-887"><p>&#8220;IE users can blow me&#8221;</p>
+<p>Wow, that&#8217;s a lot of head.</p>
+<p class=sig>&#8212;&#8201;<cite>CIAwallst</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-887" title="March 23, 2003 @ 12:40 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-888"><p>Hey. I like it. A little more robust than the minimalist zen edition. The placement of the text is also more comfortable than previous editions.</p>
+<p>But site design aside, the information you provide is what keeps bringing us back. </p>
+<p>Thank you.</p>
+<p>p.s. The Nav bar is working fine for me. IE 6.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://ihorace.com/' rel='external nofollow' class='url'>Marty</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-888" title="March 23, 2003 @ 12:58 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-889"><p>I like this better than the Zen-inspired design. The only suggestion I have for you is to move the About, Archives, etc. links to the side, and reduce the height of the blue banner across the top of the page. </p>
+<p>While it may make your site look more like the typical weblog (nuBlog, Kottke) I like the clean, modern look it affords.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.poochkiss.com/' rel='external nofollow' class='url'>Yoey</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-889" title="March 23, 2003 @ 1:46 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-890"><p>The comments form doesn&#8217;t work in camino (although when you click preview it shows the text), my text is all white, i can&#8217;t see a thing i&#8217;m typing!!!! This is the 0.7 release, not a nightly build.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://noeljackson.com/' rel='external nofollow' class='url'>noel</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-890" title="March 23, 2003 @ 2:03 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-891"><p>>&#8221;The comments form doesn&#8217;t work in camino&#8221;</p>
+<p>You know the drill:<br />
+&#8220;[Browser Name] users can blow me.&#8221; &#8211; Mark</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-891" title="March 23, 2003 @ 2:10 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-892"><p>&#8211;IE users can blow me.</p>
+<p>Camino users give better head.</p>
+<p>&#8211;It&#8217;s the inline lists. I can either maintain<br />
+&#8211;proper markup, or I can make it look right in<br />
+&#8211;IE. I don&#8217;t know how to do both.</p>
+<p>Just a question: Yay for proper markup, but is there a particular reason why a navbar *must* be a list in order to be &#8216;proper?&#8217;  I notice your breadcrumb trails are just paragraphs, so I was wondering what makes them different to a navbar.</p>
+<p>Also, I&#8217;m not sure if this is a once-off Camino quirk or not, but the text on the preview/post buttons is kind of bollocked&#8230; the text is far too low on the button and half-cut-off.</p>
+<p>I liked the circular design better, but that&#8217;s just personal taste.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://blog.raena.net/' rel='external nofollow' class='url'>Raena</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-892" title="March 23, 2003 @ 2:27 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-893"><p>OK, that&#8217;s creepy: NOW I can&#8217;t see the form contents in Camino. (Safari is ok.)</p>
+<p>I couldn&#8217;t even click preview.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://blog.raena.net/' rel='external nofollow' class='url'>Raena</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-893" title="March 23, 2003 @ 2:35 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-894"><p>&#8220;particular reason why a navbar *must* be a list in order to be &#8216;proper?&#8217;&#8221;</p>
+<p>Its sort of become &#8220;accepted practice&#8221; among the &#8220;semantic elite&#8221; as it seems to be more &#8220;semantic&#8221; than done any other way (did I use &#8220;semantic&#8221; enough times?).  </p>
+<p>Also, there&#8217;s the gee whiz factor involved when you toggle CSS on and off&#8230;seeing a vertical list of items with bullets suddenly transform into a bulletless, horizontal menu: Its a great example of CSS influencing layout. But as Eric Meyer explained a while back (and its just the way I read it and not necessarily what he meant), practically anything can be put into a list, so the actual semantic value in creating menus in this way is a bit questionable.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-894" title="March 23, 2003 @ 2:50 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-895"><p>Mark, I like the design but it can use some refining.</p>
+<p>Suggestion #1: varying the hue of the background pattern is nice, but make sure they match in value and saturation. Currently the background of the &#8216;About&#8217; section is the outlier (brighter than the others). Either make the rest as bright, or darken the background on the &#8216;About&#8217; section to match the others.</p>
+<p>#2: The tabs need to be easier to spot, read, and click. So, make their background color solid instead of transparent, and add a bit of vertical padding (try a half em, and see if that helps). This will help them pop off the background a bit. Also, The &#8216;hover&#8217; color (for the tabs you&#8217;re not &#8216;on&#8217;) should probably be a very light grey, not white.</p>
+<p>#2a: *Consider* adding a &#8216;Home&#8217; tab. While the cognitive dissonance of a tab representing what is actually the container directory for the rest of the subdirectories is annoying to some purists, this is only a usability problem when using *nested* tabs below the top level. Navigation tabs are a metaphor borrowed from desktop software, where you can&#8217;t *not* be on a tab.</p>
+<p>#3: I&#8217;d suggest changing the &lt;h1&gt; font to a proportional sans-serif, the same font progression you&#8217;re using for the rest of the page would be fine.</p>
+<p>#4: As far as typography is concerned, I generally like what you&#8217;ve done here especially the generous use of whitespace, with one exception. You&#8217;ve gone a bit overboard with the leading (line-height) in the main part of the page. 200% is high enough that it becomes difficult to &#8216;track&#8217; from one line to the next within a paragraph. Try scaling it down to 150%.</p>
+<p>I hope these suggestions help.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.michaelberstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-895" title="March 23, 2003 @ 3:02 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-896"><p>&#8211;Its sort of become &#8220;accepted practice&#8221; among the<br />
+&#8211;&#8221;semantic elite&#8221; as it seems to be more &#8220;semantic&#8221; than<br />
+&#8211;done any other way (did I use &#8220;semantic&#8221; enough times?).  </p>
+<p>Yeah, I get that (and fully appreciate gee-whiz, and semantics, etc), but the meaningful difference between the nav bar and the other stuff isn&#8217;t clear to me.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://blog.raena.net/' rel='external nofollow' class='url'>Raena</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-896" title="March 23, 2003 @ 3:44 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-897"><p>I much prefer the previous design</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-897" title="March 23, 2003 @ 3:49 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-898"><p>Yay. :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-898" title="March 23, 2003 @ 4:02 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-899"><p>I like it. It has some sort of old retro amiga feel to it, which is quite refreshing. Although it  kind of doesn&#8217;t fit into the style of blogs that I have seen in some way.</p>
+<p>I like how colours changes depending where you are on the site. That is useful. I am not too sure about white background, period.<br />
+A yellowy background like useit.com is preferred.</p>
+<p>It makes better use of space, than that Japanese look before. Well, now after previewing this, I am not too sure&#8230;</p>
+<p>Mark, you have been through a few redesigns lately. There is no pleasing everyone. But then again, the hardest person to please is probably yourself.</p>
+<p>Can I just say, I am *so* not a style authority. I have abandoned my own style for the ye old W3C&#8217;s ultramarine.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.cs.helsinki.fi/u/hendry/' rel='external nofollow' class='url'>Kai</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-899" title="March 23, 2003 @ 4:19 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-900"><p>I guess I can blow, since I use Opera/W2k&#8230;</p>
+<p>Anyway, I think there is too much contrast and no real harmony. I don&#8217;t know what the fonts are supposed to look like, but I reckon it beats what I see (my name links to a screenshot).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://hem.passagen.se/hedonism/mark_redesign_opera7.png' rel='external nofollow' class='url'>Matt</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-900" title="March 23, 2003 @ 4:49 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-901"><p>Michael Bernstein: since you&#8217;re not Jonathan Delacour or Joe Clark, your words have no weight. See comment 8. Join the blogerati before you speak, would you?</p>
+<p>Hmm&#8230; wait&#8230; am I correcting you, or am I correcting Jonathan Delacour for being disconcertingly arrogant?</p>
+<p>&#8230;hmm. Yeah, I&#8217;m thinking the latter.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.alanmacdougall.com/' rel='external nofollow' class='url'>Alan</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-901" title="March 23, 2003 @ 5:14 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-902"><p>Liked the previous better.</p>
+<p class=sig>&#8212;&#8201;<cite>Thijs</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-902" title="March 23, 2003 @ 5:38 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-903"><p>I&#8217;ve noticed that a blogroll, or a link list, that is not on the front page, fades into oblivion eventually. It&#8217;s not a big loss, I guess, and not one that I would cry for. (And probably it&#8217;s a deliberate choice anyway.) But I don&#8217;t visit those sites that often anymore. </p>
+<p>Now you might say that I should add those sites to my bookmarks or RSS reader list, but that&#8217;s not what I want or will do (or, indeed, have done). They have served as a nice distraction when there&#8217;s nothing else to read. They&#8217;re like at the edge of my interests. Very well written and slightly interesting for me, but not at the center of my world.</p>
+<p>It seems to me, and I am walking on thin ice here, that there&#8217;s unnecessary emphasis on visual look on the (very minor) expense of usability. A page that has lots of whitespace looks visually appealing (depending on the visual design, of course). But human mind is not distracted by lots of information if the information is well organized. (This is because of the selective attention mechanism, but we all know this.) Therefore, in general, it&#8217;s better for the user to have as much information as possible on the screen  and let the mind do the selection and ignore the unimportant information (for the processing, that is). So, while more information might look restless, it&#8217;s not a problem for the human mind. </p>
+<p>Still, all that was really not fair at all, because Mark&#8217;s site is among the best regarding design, usability and accessibility. (And it&#8217;s a personal website anyway.) It&#8217;s just that I&#8217;ve had this thought in my mind and just had to let that out. Sorry. </p>
+<p>Nevertheless, it would be interesting to see whether there are any statistics supporting my personal observation. Meaning that a front page blogroll generates significantly more traffic to the rolled blogs than a blogroll behind a single click. (Regarding statistics for the selective attention refer to the literature on cognitive psychology. I might have misunderstood it, though. :-)</p>
+<p class=sig>&#8212;&#8201;<cite>Jarno Virtanen</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-903" title="March 23, 2003 @ 5:53 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-904"><p>Have you considered fixing the coloured part at the top of the screen onto that page? It would create a subtle &#8220;oooooh aaaaaaaaah&#8221; factor, but there are doutbless 25 different CSS bugs, usability concerns  and accesibility problems.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-904" title="March 23, 2003 @ 6:09 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-905"><p>I may risk a good kicking by saying this&#8230;</p>
+<p>It looks terrible. I&#8217;m looking at Zeldman&#8217;s too, and  trying this designing by standards and accessibility thing myself. In my opinion, Zeldman had a pretty, &#8216;generally usable&#8217; site &#8211; as did you &#8211; and then by redesigning to a more rigid doctrine you lost that.<br />
+It may conform to all the right standards, it may be accessible to the one hundredth percentile of the population &#8211; but it sure don&#8217;t look good. I think what I&#8217;m trying to say is that if you design by standards *completely* you have to kiss goodbye to nice design, and a more flexible approach may be better for the masses?</p>
+<p>Maybe I&#8217;m wrong. Don&#8217;t kick me too hard?</p>
+<p>(I wasn&#8217;t going to put a link to my blog, but that&#8217;s cowardice. I&#8217;m not recommending it as an example of what I mean though.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://green.carisenda.com/' rel='external nofollow' class='url'>Beowulf</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-905" title="March 23, 2003 @ 6:35 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-906"><p>Well, I like it. Personally, I like the line heights and whitespace, and the orangey &#8211; red links are a good contrasting colour. Courier, however, is the spawn of the devil.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.mencybaby.com/' rel='external nofollow' class='url'>Menc</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-906" title="March 23, 2003 @ 7:03 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-907"><p>I want the old version back. I know it is not about what I want, but you said discuss and thats what I did. The previous design had much more uniqueness, I liked that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://smi.twoday.net/' rel='external nofollow' class='url'>smi</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-907" title="March 23, 2003 @ 7:09 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-908"><p>&#8211;Hmm&#8230; wait&#8230; am I correcting you, or am I<br />
+&#8211;correcting Jonathan Delacour for being<br />
+&#8211;disconcertingly arrogant?</p>
+<p>Alan: I was wondering if I was the only who noticed that. Considering the lack of response here, though, I&#8217;m guessing that either: 1) Jonathan was joking and we&#8217;re just being too sensitive, or 2) everyone is just cowed by his brilliance.</p>
+<p>I&#8217;m hoping for the former, personally. :-)</p>
+<p>As for the redesign, it&#8217;s easy to look at, which is always a plus. Oh, except for the Courier title. Yup, that kind of hurts to look at.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.liminality.org/' rel='external nofollow' class='url'>CDL</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-908" title="March 23, 2003 @ 7:36 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-909"><p>Sorry, but I don&#8217;t like it much either. The logo area is too big: it&#8217;s distracting from the body content. The Hilbert curve is pretty, but somewhat wasted as unless you squint up close it just looks like a bit of dithering. And ditto to everyone else&#8217;s &#8220;ugh&#8221; on the giant Courier: it&#8217;s like 1980&#8242;s MacWrite all over again.</p>
+<p>I like the styling of the body, though; I always found the static &#8220;circle&#8221; background of the Zen design rather visually distracting.</p>
+<p>Finally &#8212; what&#8217;s happened to the 100? The page is still there, but there&#8217;s no easy way to get to it any more&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>James Kew</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-909" title="March 23, 2003 @ 9:31 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-910"><p>Um, no, I won&#8217;t be blowing you, Mark, old bean.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-910" title="March 23, 2003 @ 9:36 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-911"><p>The Hilbert pattern is subtle and effective (as well as being a great example of a lovely geometric effect), navigation is clearer and easier than the last design, especially in terms of usability where the last design was more, er, &#8220;unique&#8221; in this respect.</p>
+<p>Really nice to see you not only requesting but listening to feedback and acting on it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://pipthepixie.tripod.com/' rel='external nofollow' class='url'>Phil Wilson</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-911" title="March 23, 2003 @ 9:47 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-912"><p>The Courier is out, the logo is smaller, the line-height is smaller, the 100 is back, the tabs are left-aligned, the tab hover is gray, and I added a Home tab.</p>
+<p>I don&#8217;t really care about using a list as opposed to a paragraph of links.  I don&#8217;t understand why your copy of Opera 7 on Windows renders standard fonts shittily when my copy of Opera 7 on Windows works fine.  I don&#8217;t understand why Camino suddenly can&#8217;t render the comments section when Mozilla works fine.  I can&#8217;t find a good color for the about section.  I&#8217;m not fixing the logo to the top of the screen because it&#8217;s not that important.  I may or may not move the blogroll back to the front page, or I may put a little linkdump side blog there instead.  I don&#8217;t really want any of you to blow me; that&#8217;s just something our DBA used to say.  (Those DBAs; they&#8217;re wacky.)</p>
+<p>And finally, accessibility and standards compliance have no correlation to visual design; if you don&#8217;t like my design-in-progress, don&#8217;t blame standards.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-912" title="March 23, 2003 @ 9:51 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-913"><p>Was the head in Courier? It&#8217;s in Georgia as of this reading.</p>
+<p>Nothing at all wrong with Courier (unless in memories of Linotronic postscript errors and failed Type 1 font downloads). I&#8217;d say it&#8217;d be an appropriate carry-over from previous diveintomark designs. In the old white-blue ALA-ish layout, the large display Courier was perfect: kind of coltish and gawky but still on message as they say.</p>
+<p>Agree that the leading is a tad generous; p&#8217;raps something in the 140-160% range would suit sir better.</p>
+<p>Lucida Grande is doing okay as long as antialiasing is on, but it really falls apart when it isn&#8217;t, particularly in bold (check out any y, e or r in the linked commenter names on this page without any smoothing &#8211; disastrous), and it really really falls apart when small, like in this textbox I&#8217;m typing in. Lucida does well big and proud on OS X, but it&#8217;s not hinted well enough to be a flexible enough for the range of sizes required for a webpage.</p>
+<p>Proportions on the page are otherwise superb, as ever.</p>
+<p>Someone said the nav tabs needed to be more obviously tabs &#8211; bunkum. No ambiguity there at all, and any more delineation would be overkill. Words make potent clip art.</p>
+<p>Intriguing pattern in the header, though I can&#8217;t quite discern why it&#8217;s there. Glancing at the breadcrumb trail, I don&#8217;t see a navigation aid, but rather one pattern fighting with another underneath. It&#8217;s not a glaring conflict, but there&#8217;s enough of a pause there while one sorts out what has useful meaning and what doesn&#8217;t that I wonder why the impediment is added. Patterns &#8211; just as drawings and photographs &#8211; can be lovely, but they don&#8217;t coexist with text at all well, especially when one must wander through one to get to the other.</p>
+<p>There&#8217;s a natural hesitancy to look at space occupied only by text with suspicion: it looks too bare, too lonely. It needs bolstering, emphasis, support. While this suspicion comes naturally to those evaluating how something looks (the designer or the one paying the designer, let&#8217;s say), it almost never comes to the person busy reading what the text means, or trying to find his or her way around.</p>
+<p>I love ornament: the more striking the better. Just keep it at a safe distance from what I&#8217;m trying to read.</p>
+<p>Also the ordered list item numerals in comments are getting clipped by the main div edge in Safari. They&#8217;re fine in Camino.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.textism.com/' rel='external nofollow' class='url'>Dean Allen</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-913" title="March 23, 2003 @ 10:14 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-914"><p>NUblog looks like a typical Weblog?</p>
+<p>I want my money back.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-914" title="March 23, 2003 @ 10:14 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-915"><p>It looks fine generally; I&#8217;m in awe of the amount of time you can find to work on this whole endeavor; congratulations.</p>
+<p>This is just a quibble: I find the background color on the title/banner area overbalances the content. A less saturated version or something lighter would be more to my taste.</p>
+<p>And&#8230; fonts are a mystery to me except to say they seem to be a mystery generally. I wish there were a more universal and robust solution.</p>
+<p>I think it&#8217;s good to go sans in the content for legibility versus serif in the titles and headings; I don&#8217;t care for this serif that I&#8217;m seeing. However, I&#8217;m not sure which one it would be for Mozilla on Win2K with a bunch of Adobe software installed. The only semi-articulate thing I might say is that it&#8217;s too blocky with too much x-height.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.lynnparkplace.org/' rel='external nofollow' class='url'>ed nixon</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-915" title="March 23, 2003 @ 10:21 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-916"><p>Should anyone be interested in all-lists navigation that looks just peachy on IE5 for Macintosh, why, all you have to do is &#8220;check,&#8221; as the kids say, <a href="/web/20110806112057/http://www.westermann.nl/">http://www.westermann.nl/</a> as designed by everyone&#8217;s fave new whiz kids, cinnamon.nl.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-916" title="March 23, 2003 @ 10:39 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-917"><p>I don&#8217;t like the heading too much, as it the courier and the tiled background is too much a reminder of Windows 3.11 and the hundreds of crashes I had to live through writing technical reports in MS Word.</p>
+<p>For a &#8216;fun&#8217; bug in Opera 7.0x/Win, try opening for instance <a href="/web/20110806112057/http://diveintomark.org/archives/2003/03/21/confessions_of_a_platypus_creator.html">http://diveintomark.org/archives/2003/03/21/confessions_of_a_platypus_creator.html</a> and resize the window so that the link to &#8220;Cory&#8221; is at the beginning of the second line. Then try hovering over the right part of the link to &#8220;Glenn&#8221; at the line above.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-917" title="March 23, 2003 @ 11:46 am"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-918"><p>&#8211;And finally, accessibility and standards<br />
+&#8211;compliance have no correlation to visual design</p>
+<p>I disagree, all design is influenced by the engineering behind it &#8211; that&#8217;s why Volvo&#8217;s look they way they do. My point may be that this is all engineering and little design.</p>
+<p>Design-wise it sort of feels a bit like the emperor&#8217;s new clothes to me, I mean, Dean Allen is waxing lyrical about the merits of serif fonts on 3 words in your header! Maybe this is the web equivalent of a Tracey Emin, and I&#8217;m just to populist to appreciate it.</p>
+<p>And I regret saying it was terrible, that wasn&#8217;t nice or true.</p>
+<p class=sig>&#8212;&#8201;<cite>Beowulf</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-918" title="March 23, 2003 @ 1:06 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-919"><p>Joe, <a href="/web/20110806112057/http://www.westermann.nl/">http://www.westermann.nl/</a> cheats by setting each list item to &#8220;display: block&#8221; and using absolute positioning (with pixels) to put them all in the right place.  Which means it breaks horribly the minute you try to make the text size larger.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-919" title="March 23, 2003 @ 1:28 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-920"><p>Re: roots of design.  People say I&#8217;m a good &#8220;designer&#8221; (in fact, a few people have paid me to design their sites), but what I really am is a technical designer, not a graphic designer.  I hand-code markup and CSS and I&#8217;ve memorized dozens of CSS tricks and hacks, and people who know to be impressed are impressed when they look under the hood and see such clean markup&#8230; but I have to rely on people like Dean and Jonathon to tell me when I&#8217;ve made obvious visual blunders.  So what you&#8217;re seeing is the result of some technical exploration, nothing more.</p>
+<p>I still vehemently disagree that accessible, standards-compliant sites can not be visually appealing, like a Porsche is visually appealing.  But it takes a graphic designer to make one, and that&#8217;s not me.  I make Volvos.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-920" title="March 23, 2003 @ 1:37 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-921"><p>I&#8217;m willing to bet someone&#8217;s already said this, but ditch the busy pattern. It sucks. Verily.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.zenaku.net/' rel='external nofollow' class='url'>kami</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-921" title="March 23, 2003 @ 1:44 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-922"><p>I haven&#8217;t tested it in anything but Camino 0.7 and IE5 for Mac, but if you add this</p>
+<p>#nav li:hover {<br />
+  background-color:#cecbc6;<br />
+  color: #000044;<br />
+  }</p>
+<p>to your stylesheet, and then adjust the appropriate paddings and margins, you can make the tab highlighting work in both browsers. It&#8217;s not perfect (careful rollovers of the mouse will see what I mean) but it mostly achieves the desired effect. IE5 ignores the li:hover, and if you adjust the margins and paddings as follows:</p>
+<p>#nav a { padding: 0 0.5em 0 0.5em; }<br />
+#nav li { padding: 0 0.5 em 0 0.5em;<br />
+  margin 0 -0.5em 0 0.5em;}</p>
+<p>then the tabs are filled in both cases. Spacings of the tabs are not consistent between browsers, but that&#8217;s because one or the other&#8217;s box model appears to be inconsistent &#8211; to me it looks like IE5 does not recognize that the padding of the a element should be inside the border of the li element.</p>
+<p>Don&#8217;t know if this helps or not, as I have not tried this in any other browsers. In any case, thanks for writing informative stuff&#8230; I&#8217;ve learned a lot from your site!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.falsecognate.org/' rel='external nofollow' class='url'>D.L.</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-922" title="March 23, 2003 @ 2:50 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-923"><p>Mark,</p>
+<p>The courier seems to be back.</p>
+<p>The tabs are definitely improved, but I would still suggest a) adding a half-em padding to the top, and b) making the tab backgrounds non-transparent. The background pattern interferes with their legibility even more now the tab are smaller.</p>
+<p>This is just a matter of personal taste, but I liked it better when the tab row was centered like the main text. consider centering both or left-aligning both (to match the &lt;h1&gt;).</p>
+<p>Concerning the color for the about section, you already have two other green tabs. Have you tried a rust color like #663300 or #993300?</p>
+<p>Finally, I think you under-appreciate your design skills. You meet the foremost requirement: an understanding of the constraints of the medium. Design is, in many ways, a craft, not an art. If you want to gain a better understanding of the rules and best practices for visual communication, that&#8217;s easier to remedy than a misunderstanding of the medium you&#8217;re trying to use.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-923" title="March 23, 2003 @ 3:18 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-924"><p>The pattern is good. I liked it when it briefly appeared before the Zen design, and was sorry to see it go. Welcome Back Hilbert.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-924" title="March 23, 2003 @ 3:21 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-925"><p>Still have the yin-yang for your favicon? :x</p>
+<p>I like the links much better than the default &#8220;blue/purple&#8221; scheme.</p>
+<p>Great work.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://spork.niff.us/' rel='external nofollow' class='url'>Stephen Lester</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-925" title="March 23, 2003 @ 3:32 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-926"><p>In response to 28 (following standards = giving up on visual design), you&#8217;re quite wrong. I&#8217;ve never seen a non-standards compliant site that can&#8217;t be replicated (and usually bettered) while following standards.<br />
+Was it Microsoft who pulled this same argument, only to have someone do an XHTML mock-up by the end of the next day?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://soltiude.vkps.co.uk/' rel='external nofollow' class='url'>GaryF</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-926" title="March 23, 2003 @ 3:32 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-927"><p>Honey, I shrunk the buttons.</p>
+<p>Trebuchet paragraph sized and in the middle was best. Trebuchet for the logo too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-927" title="March 23, 2003 @ 3:53 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-928"><p>This is just and idea, but would spatially help your visitors figure out where they were on your site. At least a tad.</p>
+<p>Right now, when you hover over a tab, the background-color is gray. What if you had this background-color correlate with the color of that sections repeating pattern? Might look good, maybe not. Who knows, just and idea.</p>
+<p>Also, you are using three body fonts on one page. While I don&#8217;t mind what you have going at all. The general rule is stick to two. I would say, throw the Verdana out in place of the Lucida Grande, or vice versa. It would look better, in my opinion, with only the Georgia and Lucida. One of my personal favorite combinations.</p>
+<p>I like the design, it&#8217;s very you.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://noeljackson.com/' rel='external nofollow' class='url'>noel</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-928" title="March 23, 2003 @ 4:00 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-929"><p>I liked the intermin stripped-down zen blog design much better.</p>
+<p>Don&#8217;t take out your frustration with IE and your balancing act around purism on the hapless IE user base!</p>
+<p>Weird, the Preview, Post buttons below have the copy dropping off the bottoms of the buttons (in Camino). Trippy!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://radiofreeblogistan.com/' rel='external nofollow' class='url'>xian</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-929" title="March 23, 2003 @ 4:32 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-930"><p>Nice and crisp!</p>
+<p>My user stylesheet includes &#8220;body { line-height: 1.5; }&#8221; to override the browser default and improve general readability.  Unfortunately, it makes your tabs float a few pixels above the white page.</p>
+<p>Would you consider explicitly setting line-height: 100% on the body or on #nav?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://zajac.ca/' rel='external nofollow' class='url'>Michael Z.</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-930" title="March 23, 2003 @ 4:41 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-931"><p>Well, I guess the Cinnamon kidz can add themselves to the list of people to  blow you.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-931" title="March 23, 2003 @ 4:56 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-932"><p>Oh, I just thought of another refinement. Add this:</p>
+<p>#nav li:hover{border-bottom: 1px solid #666666;}</p>
+<p>This should add a little more dimensionality to the tabs when hovering.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-932" title="March 23, 2003 @ 5:09 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-933"><p>Again?</p>
+<p>I also quite like the blue design thing you&#8217;ve got going on at the top.  I was sad to see it leave a couple months ago when you re-did things.</p>
+<p class=sig>&#8212;&#8201;<cite>Brock</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-933" title="March 23, 2003 @ 5:30 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-934"><p>All in all I like it a lot.  I think a Garamond-type font would work better for the title, but that&#8217;s just me.</p>
+<p>Jonathon Delacour:  Shut up.  Pretty please.  Oh, and I think your site design is rather boring.  But I guess I&#8217;m not well-informed enough to say something like that- I apologize.</p>
+<p class=sig>&#8212;&#8201;<cite>Yaha</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-934" title="March 23, 2003 @ 5:53 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-935"><p>You say:<br />
+&#8220;I still vehemently disagree that accessible, standards-compliant sites can not be visually appealing, like a Porsche is visually appealing.  But it takes a graphic designer to make one, and that&#8217;s not me.&#8221;</p>
+<p>That&#8217;s why I have the idea for a long time, to  work together with a graphic designer to make websites.<br />
+I still wasn&#8217;t able to do so, but I work on this right now.<br />
+My opinion is, that it might be important for many people to be aware of the own capabilities &#8212; but its most important to know about the lack of the own capabilities. Then you know /who/ to ask for /what/.<br />
+(Possibly I should ask someone to re-read my manner of expression in english ;-)</p>
+<p>Besides all that techtalk and the idea of graphic design:<br />
+bevor your idea of redesign, my subliminal eye always knew, that I&#8217;m reading Mark&#8217;s Weblog. Now, it&#8217;s just one of many &#8212; sorry to say that in such a rude way.<br />
+Well, you want to have a redesign, a change. Otherwise you wouldn&#8217;t have started this. So: keep on moving.<br />
+We all have to let loose visual habbits.</p>
+<p>I&#8217;ll keep the clean structure and some other things (that I can&#8217;t express) in mind and try to adapt it for my own side on my own way.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.in-my-humble-opinion.de/' rel='external nofollow' class='url'>clemens</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-935" title="March 23, 2003 @ 7:28 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-936"><p>The design is simplistic and nice with more style than the previouse version.  My only suggestion is that &#8216;nav&#8217; is could be made to be &#8216;position: fixed&#8217;</p>
+<p class=sig>&#8212;&#8201;<cite>J. Porter</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-936" title="March 23, 2003 @ 8:25 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-937"><p>The tabs at the top are far too small.  The absolute minimum I&#8217;d consider would be 100%, but I think tabs should be bigger than normal text.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-937" title="March 23, 2003 @ 9:40 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-938"><p>I take it the background pattern is derived from your intense love of pac-man maps? :-D</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112057/http://www.db79.com/' rel='external nofollow' class='url'>Shawn</a></cite>&#160;<a class=p href="/web/20110806112057/http://diveintomark.org/archives/2003/03/22/redesign#comment-938" title="March 23, 2003 @ 10:35 pm"><img alt="#" src=/web/20110806112057im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-939"><cite><a href='/web/20110806112057/http://slackerbit.ch/archives/2003/03/25/enough_is_enough.html' rel='external nofollow' class='url'>SLACKERBIT.CH</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-940"><cite><a href='/web/20110806112057/http://green.carisenda.com/legend/000566.shtml' rel='external nofollow' class='url'>Carisenda</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-941"><cite><a href='/web/20110806112057/http://www.engel5.net/weblog/archives/2003/04/298.php' rel='external nofollow' class='url'>A young man's Weblog</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806112057/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806112057/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806112057/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806112057/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806112057/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.447 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:57:40 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 11:20:57 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:33 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Microsoft web services, brought to you by the letter L and the number 0 [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110514120443/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110514120443/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110514120443/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110514120443im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110514120443/http://diveintomark.org/archives/2003/08/29/semantics" title="Won&#8217;t somebody please think of the gerbils?">
+<link rel=next href="/web/20110514120443/http://diveintomark.org/archives/2003/09/04/msweb" title="Go go Gadget printf">
+<link rel=up href="/web/20110514120443/http://diveintomark.org/archives#p1406" title="September 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Microsoft web services, brought to you by the letter L and the number 0 Comments Feed" href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services/feed" />
+<link rel='index' title='dive into mark' href='/web/20110514120443/http://diveintomark.org/' />
+<link rel='prev' title='Won&#8217;t somebody please think of the gerbils?' href='/web/20110514120443/http://diveintomark.org/archives/2003/08/29/semantics' />
+<link rel='next' title='Go go Gadget printf' href='/web/20110514120443/http://diveintomark.org/archives/2003/09/04/msweb' />
+<link rel='canonical' href='/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services' />
+<link rel='shortlink' href='/web/20110514120443/http://diveintomark.org/?p=1406' />
+<meta name="description" content="Microsoft is offering an exciting new web service which apparently requires Windows, Internet Explorer, Visual Studio .NET, sight, the ability to distinguish between a lowercase L and the number 1, and patience to wait until they fix their broken registration server. I have all but one of these things.">
+<meta name="keywords" content="microsoft,webservices">
+<link href="/web/20110514120443cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110514120443/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/09\/02\/microsoft-web-services";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "May";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/09/02/microsoft-web-services" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110514120443" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110218063210/http://diveintomark.org/archives/2003/09/02/microsoft-web-services" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Feb 2011"><strong>FEB</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 12:04:43 May 14, 2011">MAY</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120114112424/http://diveintomark.org/archives/2003/09/02/microsoft-web-services" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 Jan 2012"><strong>JAN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110218063210/http://diveintomark.org/archives/2003/09/02/microsoft-web-services" title="6:32:10 Feb 18, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 12:04:43 May 14, 2011">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120114112424/http://diveintomark.org/archives/2003/09/02/microsoft-web-services" title="11:24:24 Jan 14, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090202083511/http://diveintomark.org/archives/2003/09/02/microsoft-web-services" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 Feb 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 12:04:43 May 14, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110514120443*/http://diveintomark.org/archives/2003/09/02/microsoft-web-services" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>26 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Jun 06 - 20 Jan 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001121100_2007:-1:010100000101_2008:-1:111110001000_2009:-1:010000000000_2010:-1:000001000111_2011:4:010010000000_2012:-1:300000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110514120443/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110514120443/http://diveintomark.org/archives#p1406">September 2, 2003</a> &#8227;
+<h2>Microsoft web services, brought to you by the letter L and the number 0</h2> (<a href="/web/20110514120443/http://diveintomark.org/tag/microsoft" rel="tag">microsoft</a>, <a href="/web/20110514120443/http://diveintomark.org/tag/webservices" rel="tag">webservices</a>)</div>
+<p><a href="/web/20110514120443/http://msdn.microsoft.com/webservices/building/livewebservices/mscomservices/default.aspx">Microsoft Web Services 1.0</a>.  <q cite="http://msdn.microsoft.com/webservices/building/livewebservices/mscomservices/default.aspx">The Microsoft.com Web Service is an XML Web service that will enable you to integrate information and services from MSDN, Technet, other Microsoft.com sites, and Microsoft Support. As a way to test the new architecture, we present version 1.0 of the Microsoft.com Web Service, which allows you to integrate information about the Microsoft.com top downloads.  Future releases will build on this architecture to provide access to a broader variety of Microsoft content and services.</q></p>
+
+<p>According to the page, you need to sign up for a developer token (similar to a Google API key).  <q cite="http://msdn.microsoft.com/webservices/building/livewebservices/mscomservices/default.aspx">The developer&#8217;s token and password are used to authenticate you to the Web service using a WS-Security SOAP header.</q>  No further information is available, because the documentation for the web service is wrapped in a Windows installer which will only install over Visual Studio .NET.</p>
+
+<p>I&#8217;m going to repeat that, in case you missed it: <em>the <strong>documentation</strong> for the <strong>web service</strong> is wrapped in a <strong>Windows installer</strong> which will <strong>only install over Visual Studio .NET</strong></em>.</p>
+
+<p>Luckily for me, my next project for my day job involves VS.NET, so I happen to have installed it recently.  Unluckily, the application form to get a developer token is totally broken.  First, it&#8217;s an SSL site with an apparently invalid security certificate.  Luckily for me, I have Internet Explorer, which helpfully ignores this sort of problem.  Second, it requires me to read the random series of numbers and letters out of an image (a technique which is completely inaccessible, and for which no audio-based fallback technique is provided).  Luckily for me, I have a working pair of eyes.  Unluckily, my image included the lowercase letter &#8220;L&#8221; and the number &#8220;0&#8243;.  Needless to say, there are 4 combinations (&#8220;L&#8221;, &#8220;1&#8243;, &#8220;o&#8221;, &#8220;0&#8243;).  Luckily for me, I got it right on the fourth try.  Unluckily, once I got it right, I got a new error message saying <q>Internal Service Error, please try again after sometime.</q></p>
+
+<p>Presumably these first-day jitters will eventually be ironed out and I will be able to write the inevitable Python wrapper for the exciting new Microsoft Web Services so that you can, from any platform and without paying $1000 for Microsoft developer tools, be able to programmatically determine the top Microsoft downloads of the day.  I can hardly wait.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty comments here (<a href=/web/20110514120443/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-4526"><p>There&#8217;s an interesting side point in there, the other day I was using a site that required the &#8220;type the text you see in this goofy image&#8221; authentication method, and I was wondering about how sight impaired users could deal with that.  You can&#8217;t use alt text on the image, because that would give the game away.  Is there a way to make this technique accessible?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://radio.weblogs.com/0106046' rel='external nofollow' class='url'>Gordon Weakliem</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4526" title="September 2, 2003 @ 2:19 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4527"><p>Considering MSDN has one of the worst navigation schemes I&#8217;ve ever tried to dig through (not to mention a terrible search engine as well), the sooner the aforementioned Python web service wrapper arrives the better. It does sound like they&#8217;ve excelled themselves with the &#8220;embrace and extend&#8221; philosophy on this one though.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://simon.incutio.com/' rel='external nofollow' class='url'>Simon Willison</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4527" title="September 2, 2003 @ 2:27 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4528"><p>I&#8217;m suspecting this is a combination of only supporting their own products and only supporting their recent products. I&#8217;m fairly convinced Visual Studio 6.0 isn&#8217;t being actively supported anymore, and pushing out sample code for this would be them violating their own policy. Similarly, you don&#8217;t see PHP source code along with ASP+VBScript source code in MSDN.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4528" title="September 2, 2003 @ 2:35 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4529"><p>At ~$1000 for a license, it&#8217;s more like &#8220;embling and extend&#8221;.</p>
+<p>&lt;/got_nothing&gt;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.sidesh0w.com/' rel='external nofollow' class='url'>Ethan</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4529" title="September 2, 2003 @ 2:35 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-4530"><p>re: &#8220;is there a way to make this technique accessible&#8221;?  No, but you can provide a more accessible fallback technique, such as &#8220;listen to this recording and type what you hear&#8221;, which only discriminates against the deaf-blind.  And then provide an alternative fallback technique, such as &#8220;call us up and we&#8217;ll give you your developer token&#8221;.  Naturally, companies are hesitant to do that, since it requires additional non-web infrastructure and opens the door to massive additional expense and abuse.  Absolute accessibility is expensive, just like absolute security.  You have to decide how much you care, at what level.</p>
+<p>In this case, I&#8217;m not sure why they&#8217;re doing it at all.  Spambots want to sign up for multiple developer tokens?  Um, why?  You can use a single token 10 times a second.  Developers want to write and deploy high-volume web services applications that rotate through auto-generated developer keys to integrate Microsoft web services and serve hundreds of customers per second?  The potential problems here seem vanishingly small and certainly handle-able later, rather than forcing everyone to go through all this up-front rigamarole.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4530" title="September 2, 2003 @ 2:36 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4531"><p>&#8220;Can this be made accessible?&#8221;</p>
+<p>I expect that an OCR program, hooked up to a screen-reader might work. :-)</p>
+<p>This is an interesting variant on the Turing Test.<br />
+Can one distinguish a human respondent from a machine? Pretty easily, if a human is administering the test. But what if you want a *machine* to administer the test? Can a *machine* distinguish a human respondent from a machine?</p>
+<p>I suspect that, in general, the answer is &#8220;no.&#8221; Which makes this exercise stupid, in addition to being an impediment to accessibility.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4531" title="September 2, 2003 @ 2:39 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4532"><p>Mark,<br />
+I seem to remember being in an email thread with some of the folks involved with implementing this. I&#8217;ll try to dig it up and forward your post to the appropriate parties.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.kuro5hin.org/user/Carnage4Life/diary/' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4532" title="September 2, 2003 @ 2:44 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4533"><p>Another interesting point: the restrictions on redistribution of sample code. Specifically, if you want to redistribute original or modified included sample code, it can only be with a package that only runs on Windows. As a shareholder and Microsoft employee, this makes sense to me; as a cross-platform hobbyist developer, I&#8217;m less convinced.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.jarretthousenorth.com/' rel='external nofollow' class='url'>Tim Jarrett</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4533" title="September 2, 2003 @ 4:37 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4534"><p>You were being sarcastic in this article, right? </p>
+<p>*big honking grin and sly eyes slowly appear on face while head slightly turns to cough falsely*</p>
+<p>I&#8217;ll be returning to read about what cool things you may be able to do with this service, cause it&#8217;s much  better learning things second hand from really smart people who get frustrated by &#8220;crap that sort-of smart people just give up on in 5 minutes&#8221;. You&#8217;ve saved us many headaches by sharing yours and handing out your version of sarcastic asprin. I love it. Thanks Mark.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.jaiandbecky.com/' rel='external nofollow' class='url'>Jai</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4534" title="September 2, 2003 @ 5:02 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4535"><p>What, you want it to work through something other than an MS product? And distribute it for free?</p>
+<p>You&#8217;re one of those commies, right?</p>
+<p class=sig>&#8212;&#8201;<cite>kami</cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4535" title="September 2, 2003 @ 5:07 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4536"><p>re: &#8220;is there a way to make this technique accessible&#8221;? (1)</p>
+<p>and re: &#8220;This is an interesting variant on the Turing Test.&#8221; (6)</p>
+<p>Why not ask the &#8220;user&#8221; (human, spambot, or otherwise) a question that AI can&#8217;t solve as of yet?</p>
+<p>Remember those cognition tests in grade school?  The ones that presented four images and asked which doesn&#8217;t belong?  You can use four images with four alt tags, and a computer shouldn&#8217;t be able to figure that one out.</p>
+<p>Or, a &#8220;finish this sentence&#8221; type of question&#8230;Present the user with four words to finish a very common-sense type sentence.  Create a few dozen of these and randomize them, and I&#8217;d imagine that a spambot wouldn&#8217;t be able to break through.</p>
+<p>It seems to me that there are perfectly accessible alternatives to this letters-inside-of-graphics thing, so long as you spend a minute or two thinking about it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken Walker</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4536" title="September 2, 2003 @ 6:07 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4537"><p>Without wanting to get into a big flamewar, the &#8220;read this graphic and type the letters&#8221; accessibility issue is miniscule compared to the &#8220;read this english graphic and type the english letters&#8221; i18n issue.</p>
+<p>By making these characters English-only, you&#8217;re requiring that a user has a keyboard that contains western characters.  Keycaps or no, that is a complete PITA for non-western users.</p>
+<p>Rather than try to authenticate by viewing a graphic or listening to a song, or typing the answer to an English question (how nonsensical is that?) the site should authenticate based upon an end-user certificate.  Eg, if you don&#8217;t have a personal certificate, you don&#8217;t get the goods.</p>
+<p class=sig>&#8212;&#8201;<cite>Mark2</cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4537" title="September 2, 2003 @ 6:31 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4538"><p>End-user certificate is a non-starter. never. </p>
+<p>I think it&#8217;s time to un-hook computers from the .net</p>
+<p class=sig>&#8212;&#8201;<cite>wp</cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4538" title="September 2, 2003 @ 7:12 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4539"><p>Tim &#8211; I take it that it&#8217;s OK to write sample code for other platforms, as long as it&#8217;s not derived from the code included in the SDK?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.myelin.co.nz/post/' rel='external nofollow' class='url'>Phillip Pearson</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4539" title="September 2, 2003 @ 7:27 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4540"><p>top ten downloads from microsoft.com &#8230; hmm &#8230; patches, security fixes, hotfixes<br />
+you may as well write a function that randomly selects between any ubiquitous part of windows, and add &#8220;buffer overflow vulnerability fix&#8221; to it&#8230;<br />
+on a serious note: Mark2&#8242;s comment took the words pretty much out of my mouth.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.photographia.co.uk/' rel='external nofollow' class='url'>Patrick H. Lauke</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4540" title="September 2, 2003 @ 7:44 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4541"><p>Phillip, good question. The EULA has two relevant sections. Section 2 grants the right to use and modify the Samples source code &#8220;for the sole purposes of designing, developing, and testing your software product(s), and to reproduce and distribute the Sample Code, along with any modifications thereof, in object and/or source code form.&#8221; Section 3 then places restrictions on redistribution if you choose to exercise your Section 2 rights, for instance section 3.1(ii) which specifies &#8220;that the Sample Code [being redistributed] only operate in conjunction with Microsoft Windows platforms.&#8221;</p>
+<p>By which I take it that using sample code and modifying it for another platform is fine as long as you don&#8217;t redistribute the modified version that runs on another platform. What is unclear is if you write clean sample code that is not derivative of the provided samples, but that runs on another platform. I will be investigating this before I release any software based on this release, and will discuss anything I learn on my blog.</p>
+<p>Obligatory disclaimer provided by our lawyers: This posting is provided &#8220;AS IS&#8221; with no warranties, and confers no rights</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.jarretthousenorth.com/' rel='external nofollow' class='url'>Tim Jarrett</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4541" title="September 2, 2003 @ 8:11 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4542"><p>I can&#8217;t think of any questions that an AI couldn&#8217;t solve that another computer could ask. There would always have to be a finite number of types of questions that would be asked. Then it would just be some random variation of parameters. </p>
+<p>To use the &#8220;find the one which doesn&#8217;t match&#8221; problem as an example, you could change the group and the individual items. Some items could even fit in more than one group. For example, glass is clear, hard and fragile. There would still only be a limited number of groups, and a limited number of items to fit in them. If you had too many subtle groupings, even a human would start to have trouble guessing correctly. </p>
+<p>A spammer could write a tool which would get help for the first 100 or so problems and then learn enough to function on its own from then on. Even if it only got it right half the time, who cares? It&#8217;s a machine and can try repeatedly for as long as you like.</p>
+<p>On the other hand, I don&#8217;t think that most people who write spambots are into artificial intelligence. It might work after all.</p>
+<p class=sig>&#8212;&#8201;<cite>Theran</cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4542" title="September 2, 2003 @ 8:17 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4543"><p>The &#8220;read this graphic and type in the letters&#8221; is much more usable if done with words than with random characters. Native speakers of whichever language is used generally need only look at the graphic once and can type from memory. Non-native speakers have no worse of a time than they would with random characters. Non-western equipment might require something else.</p>
+<p>The accessiblity to blind users is kinda ridiculous. Couldn&#8217;t blind users just ask someone for 15 seconds of assistance?</p>
+<p>These images generally include &#8220;noise&#8221; so as to be immune from OCR.</p>
+<p>But the whole thing seems a bit overdone inmost cases considering that an individual could open at least 1000 accounts per day manually. I can see that it makes sense for Ticketmaster wher scrip-kiddies pound away trying to tie up Springsteen tix.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://pb@pb.com/' rel='external nofollow' class='url'>pb</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4543" title="September 2, 2003 @ 8:56 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4555"><cite><a href='/web/20110514120443/http://www.illuminated.co.uk/blog/archives/000452.html' rel='external nofollow' class='url'>Blah on steroids</a></cite>&#160;(trackback)</li>
+<li id="comment-4544"><p>a python wrapper for this would be awesome, but knowing microsoft, they might not take to kindly to someone doing something that will allow people to avoid buying their crap.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://vlad.neosurge.net/' rel='external nofollow' class='url'>vlad</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4544" title="September 2, 2003 @ 9:42 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4545"><p>A software company that builds dev tools requires a license to download sample code! And he includes a legal disclaimer at the end of his comment. Talk about a company run by lawyers&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Troy Hakala</cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4545" title="September 2, 2003 @ 10:38 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4546"><p>I&#8217;ve managed to get it downloaded here, and have started on a Python wrapper.  However, it looks like it uses WS-Security for the authentication, and I can&#8217;t find any Python SOAP libraries that support that, so it looks like this is going to be a little trickier than PyGoogle or PyTechnorati &#8230;</p>
+<p>BTW about those images-with-text (&#8220;CAPTCHAs&#8221;): the one that&#8217;s being used for this looks _extremely_ OCRable.  Check out the PARC site for some harder ones:</p>
+<p><a href="/web/20110514120443/http://www2.parc.xerox.com/istl/projects/captcha/">http://www2.parc.xerox.com/istl/projects/captcha/</a></p>
+<p>examples here:</p>
+<p><a href="/web/20110514120443/http://www2.parc.xerox.com/istl/projects/captcha/captchas.htm">http://www2.parc.xerox.com/istl/projects/captcha/captchas.htm</a></p>
+<p>Their new one, &#8220;BaffleText&#8221;, uses a language model to generate plausible-sounding words, so it doesn&#8217;t have the problem Mark&#8217;s talking about (without being vulnerable to dictionary-based attacks).  They still suck for blind people, though.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.myelin.co.nz/post/' rel='external nofollow' class='url'>Phillip Pearson</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4546" title="September 3, 2003 @ 12:12 am"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4547"><p>Progress: I have the Microsoft site responding to a request from Python, using the ZSI SOAP library and a hand-written WS-Security header.  Currently GetVersion() and GetCultures() work.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.myelin.co.nz/post/' rel='external nofollow' class='url'>Phillip Pearson</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4547" title="September 3, 2003 @ 6:40 am"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4548"><p>Progress: GetTopDownloads() works.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.myelin.co.nz/post/' rel='external nofollow' class='url'>Phillip Pearson</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4548" title="September 3, 2003 @ 6:56 am"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4549"><p>Phillip: please share!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.intertwingly.net/blog/' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4549" title="September 3, 2003 @ 8:52 am"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4550"><p>Even the suggestions I made for password-verification systems aren&#8217;t so hot, but there *is* a literature on the topic.</p>
+<p><a href="/web/20110514120443/http://joeclark.org/book/sashay/serialization/Chapter06.html#h2-6620">http://joeclark.org/book/sashay/serialization/Chapter06.html#h2-6620</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://joeclark.org/access/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4550" title="September 3, 2003 @ 9:11 am"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4551"><p>Sam: Sure!</p>
+<p><a href="/web/20110514120443/http://www.myelin.co.nz/microsoft_com_py/">http://www.myelin.co.nz/microsoft_com_py/</a></p>
+<p>I&#8217;ve tested it on Python 2.2 and 2.3 on Debian woody and Python 2.2 on Windows XP Pro.</p>
+<p>Supports all four methods.  Returns reasonably Python-like objects.</p>
+<p>Suggestions / improvements welcome.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.myelin.co.nz/post/' rel='external nofollow' class='url'>Phillip Pearson</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4551" title="September 3, 2003 @ 9:32 am"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4552"><p>Announcement and comments: <a href="/web/20110514120443/http://www.myelin.co.nz/post/2003/9/4/#200309041">http://www.myelin.co.nz/post/2003/9/4/#200309041</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://www.myelin.co.nz/post/' rel='external nofollow' class='url'>Phillip Pearson</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4552" title="September 3, 2003 @ 10:12 am"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4553"><p>You don&#8217;t need VS.Net to read the documentation.  You can use a tool like Helpware&#8217;s Far<br />
+(<a href="/web/20110514120443/http://www.helpware.net/)"><a href="/web/20110514120443/http://www.helpware.net/" rel="nofollow">http://www.helpware.net/</a>)</a> that will decompile those .HxS files into the underlying set of HTML, JS, images, etc.</p>
+<p class=sig>&#8212;&#8201;<cite>Eric Promislow</cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4553" title="September 3, 2003 @ 9:20 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-4554"><p>Actually, you can&#8217;t get that far, because the .HxS files are installed by an installer that will only install over VS.NET.</p>
+<p>Phil found this, though: <a href="/web/20110514120443/http://ws.microsoft.com/MsComService/MsCom.asmx">http://ws.microsoft.com/MsComService/MsCom.asmx</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514120443/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514120443/http://diveintomark.org/archives/2003/09/02/microsoft-web-services#comment-4554" title="September 3, 2003 @ 9:45 pm"><img alt="#" src=/web/20110514120443im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110514120443/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110514120443/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110514120443/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110514120443/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110514120443/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 2.431 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-11 16:29:43 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 12:04:43 May 14, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:12:55 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

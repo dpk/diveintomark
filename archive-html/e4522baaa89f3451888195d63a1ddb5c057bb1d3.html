@@ -1,0 +1,600 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Redesign (again) [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110714062705/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110714062705/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110714062705/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110714062705/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110714062705im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110714062705/http://diveintomark.org/archives/2003/11/01/power-tools" title="Power tools">
+<link rel=next href="/web/20110714062705/http://diveintomark.org/archives/2003/11/06/bah" title="Redesign: squares">
+<link rel=up href="/web/20110714062705/http://diveintomark.org/archives#p1434" title="November 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Redesign (again) Comments Feed" href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated/feed" />
+<link rel='index' title='dive into mark' href='/web/20110714062705/http://diveintomark.org/' />
+<link rel='prev' title='Power tools' href='/web/20110714062705/http://diveintomark.org/archives/2003/11/01/power-tools' />
+<link rel='next' title='Redesign: squares' href='/web/20110714062705/http://diveintomark.org/archives/2003/11/06/bah' />
+<link rel='canonical' href='/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated' />
+<link rel='shortlink' href='/web/20110714062705/http://diveintomark.org/?p=1434' />
+<meta name="description" content="New home page. Love it? Hate it? Be honest.">
+<meta name="keywords" content="css,redesign">
+<link href="/web/20110714062705cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110714062705/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/11\/05\/overrated";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "Jul";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/11/05/overrated" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110714062705" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215045057/http://diveintomark.org/archives/2003/11/05/overrated" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 6:27:05 Jul 14, 2011">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215045057/http://diveintomark.org/archives/2003/11/05/overrated" title="4:50:57 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 6:27:05 Jul 14, 2011">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620083326/http://diveintomark.org/archives/2003/11/05/overrated" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 6:27:05 Jul 14, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110714062705*/http://diveintomark.org/archives/2003/11/05/overrated" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>18 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">3 May 06 - 14 Jul 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000012001000_2007:-1:010100000101_2008:-1:001020200000_2009:-1:000000000100_2010:-1:000001000011_2011:6:000000100000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110714062705/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110714062705/http://diveintomark.org/archives#p1434">November 5, 2003</a> &#8227;
+<h2>Redesign (again)</h2> (<a href="/web/20110714062705/http://diveintomark.org/tag/css" rel="tag">css</a>, <a href="/web/20110714062705/http://diveintomark.org/tag/redesign" rel="tag">redesign</a>)</div>
+<p>New home page (<a href="/web/20110714062705/http://diveintomark.org/public/2003/11/diveintomark.org.html">mirror</a>).  It came to me in a dream, literally.  Usability is overrated.</p>
+
+<p>Love it?  Hate it?  Be honest.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Ninety four comments here (<a href=/web/20110714062705/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-5111"><p>i dig it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.inluminent.com/weblog/' rel='external nofollow' class='url'>john</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5111" title="November 5, 2003 @ 12:17 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5112"><p>That&#8217;s terrifying. And I&#8217;m stealing it. :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.westfieldnetwork.com/malcontents/' rel='external nofollow' class='url'>John Kenneth Fisher</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5112" title="November 5, 2003 @ 12:17 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5113"><p>I kind of liked having direct access to the latest post.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://spencerwinters.com/blog/' rel='external nofollow' class='url'>Spencer</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5113" title="November 5, 2003 @ 12:21 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5114"><p>I think that&#8217;s the best presentation of linkspew I&#8217;ve seen yet!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.decafbad.com/blog/' rel='external nofollow' class='url'>l.m. orchard</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5114" title="November 5, 2003 @ 12:28 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5115"><p>You&#8217;ll revert in about a week: when you get sick of it, and not a moment sooner.</p>
+<p>That said, left-field stuff&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.mezzoblue.com/' rel='external nofollow' class='url'>Dave S.</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5115" title="November 5, 2003 @ 12:33 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5116"><p>Hate it. It&#8217;s nice to look at, but it&#8217;s just a splash page at its core, even if it is a HTML 4.01 Strict splash page. At least <a href="/web/20110714062705/http://www.tantek.com/log/">http://www.tantek.com/log/</a> provides a way to get straight to the blog without intermediary clicking.</p>
+<p>&#8230;so I don&#8217;t really have a problem with the splash page per se&#8230;it&#8217;s just that I don&#8217;t have a URL for the blog with the most recent post(s) on it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.cyclooctane.com/' rel='external nofollow' class='url'>Nathan Sharfi</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5116" title="November 5, 2003 @ 12:34 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5117"><p>I&#8217;m trying to figure out how Google will cope with this.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://port80.neominds.net/' rel='external nofollow' class='url'>Zach Heaton</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5117" title="November 5, 2003 @ 12:35 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5118"><p>it should be linked to a cookie and options (see it, don&#8217;t see it).</p>
+<p class=sig>&#8212;&#8201;<cite>anon</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5118" title="November 5, 2003 @ 12:39 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5119"><p>I like the background, but the buttons could stand a little transparency.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://jemimap.ficml.org/' rel='external nofollow' class='url'>Jemima</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5119" title="November 5, 2003 @ 12:44 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5120"><p>Seriously, it&#8217;s a neat idea as a background to base something off of, but as it is, it&#8217;s way too limiting and awkward. In my opinion, at least</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.westfieldnetwork.com/malcontents/' rel='external nofollow' class='url'>John Kenneth Fisher</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5120" title="November 5, 2003 @ 12:48 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5121"><p>Usability aside, sweet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5121" title="November 5, 2003 @ 12:48 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5122"><p>Others have mentioned that it was better when typing the URL revealed the latest posts, but now it&#8217;s much harder to use those external links on the front page too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.ujournal.org/users/fd' rel='external nofollow' class='url'>Firas</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5122" title="November 5, 2003 @ 12:59 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5123"><p>Sucks.</p>
+<p class=sig>&#8212;&#8201;<cite>Jarno Virtanen</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5123" title="November 5, 2003 @ 1:06 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5124"><p>I dig it. I don&#8217;t know that I&#8217;ve ever actually seen your home page before, though, so I don&#8217;t know what it used to look like.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.hdconsultants.us/' rel='external nofollow' class='url'>Shannon J Hager</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5124" title="November 5, 2003 @ 1:17 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5125"><p>Well&#8230;it&#8217;s unique, I&#8217;ll give you that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.7nights.com/asterisk/' rel='external nofollow' class='url'>Keith</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5125" title="November 5, 2003 @ 1:53 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5126"><p>I agree with Spencer, &#8220;I kind of liked having direct access to the latest post.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5126" title="November 5, 2003 @ 2:45 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5127"><p>Google will love it ! The title&#8217;s link are well used, thanks.</p>
+<p>I think it&#8217;s a good job and a nice idea.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.switchback.ch/webgreut/' rel='external nofollow' class='url'>greut</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5127" title="November 5, 2003 @ 2:57 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5128"><p>Artistically, love it.</p>
+<p>But to actually do anything with it, first thing I do is kill all the styling with a Firebird extension&#8230;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.accessibleinter.net/' rel='external nofollow' class='url'>Bill Mason</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5128" title="November 5, 2003 @ 3:12 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5129"><p>Hate it. There isn&#8217;t a page for the blog itself any more &#8211; just the latest posts &#8211; and I have to squint to read the b-links.</p>
+<p>And I think it&#8217;s&#8230; lacking a little on the artistic side. Technically speaking, it&#8217;s great, but I really, really, don&#8217;t like it.</p>
+<p class=sig>&#8212;&#8201;<cite>Daniel Walker</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5129" title="November 5, 2003 @ 3:28 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5130"><p>Hate it, hate it, hate it.</p>
+<p>Unusable invisible b-links &#8212; I quite liked those and used to follow them when they appeared in a list on the old home page, but the new home page drove me away to their RSS feed.</p>
+<p>(Embarassing confession: I actually had to view-source to before I realised the background *was* the b-links. @import &#8220;/css/usability-is-overrated.css&#8221; made me giggle, though&#8230;)</p>
+<p>And no list of recent posts &#8212; just the single most recent post &#8212; which is a step backwards: it was useful to be able to see the last 5 or so because you could see at a glance whether they&#8217;d attracted any new comments.</p>
+<p class=sig>&#8212;&#8201;<cite>James Kew</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5130" title="November 5, 2003 @ 3:34 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5131"><p>How about a permanent <a href="/web/20110714062705/http://diveintomark.org/latest/">http://diveintomark.org/latest/</a> leading to the latest entry? I would rather like to link to the blog instead of the home page, just like I link to index pages instead of Flash intros: Beautiful, but not for the returning visitor.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.wortfeld.de/' rel='external nofollow' class='url'>Alexander</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5131" title="November 5, 2003 @ 3:38 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5132"><p>Wow.  So have you, like Gallileo, decided that the Sun really does orbit the Earth?  Usability is only an excercise in mental masturbation?</p>
+<p>In the case of empty design, your splash page is a winner.  However, if you actually wanted people to be able to make sense of/use it&#8230;. You lose.</p>
+<p class=sig>&#8212;&#8201;<cite>Dr. Fu</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5132" title="November 5, 2003 @ 3:40 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5133"><p>It&#8217;s pretty, but it&#8217;s no complete redesign. Hint, hint.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5133" title="November 5, 2003 @ 3:41 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5134"><p>It must be horror to keep all those links up to date.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://jeroensangers.com/' rel='external nofollow' class='url'>Jeroen</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5134" title="November 5, 2003 @ 4:00 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5135"><p>It&#8217;s alright, but now I can&#8217;t find the b-links and the associated RSS feed. Do they still exist?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.manuzhai.nl/' rel='external nofollow' class='url'>Manuzhai</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5135" title="November 5, 2003 @ 4:36 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5136"><p>It&#8217;s good, although I do wish the &#8220;latest&#8221; button went to the &#8220;last 5 posts&#8221; like it was previously.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.iamsparticus.co.uk/' rel='external nofollow' class='url'>sparticus</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5136" title="November 5, 2003 @ 4:37 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5137"><p>When I saw the new design for the first time, I supposed your site was hacked! ;-) Seriously.</p>
+<p>If you want me to be honest, I have to say that I don&#8217;t quite like the new design. But to be even more honest, I didn&#8217;t particulary like the previous design either. The accessibility and usability is good, so I don&#8217;t bother, but from the artistic point of view, nothing earth-shaking yet.</p>
+<p class=sig>&#8212;&#8201;<cite>Peto</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5137" title="November 5, 2003 @ 4:38 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5138"><p>It&#8217;s quite funky, but I hate that blo.gs now takes me to the splash screen rather than your latest post. Somebody made a suggestion about that already</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://blog.meriwilliams.com/' rel='external nofollow' class='url'>Meri</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5138" title="November 5, 2003 @ 4:39 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5139"><p>Is there any way you could disable the hover on the b-links when one hovers on the squares? Or, perhaps create some dead space around the squares.</p>
+<p>I like it generally, b-links as a background is figurative and literaI, clever. Can&#8217;t seem to find the RSS feed for the b-links and from a previous comment it must exist, right?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5139" title="November 5, 2003 @ 4:43 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5140"><p>I like it when weblogs don&#8217;t look boring. Your old design was pretty boring! People who like boring pages can still get your rss feed.</p>
+<p class=sig>&#8212;&#8201;<cite>andi</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5140" title="November 5, 2003 @ 4:49 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5141"><p>Why isn&#8217;t the menu an unordered list?</p>
+<p>It&#8217;s a nice/cute idea, but I stopped reading mark&#8217;s b-links through the site.. it&#8217;s not usable.</p>
+<p class=sig>&#8212;&#8201;<cite>S�rgio</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5141" title="November 5, 2003 @ 4:57 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5142"><p>How about fixing those links in the RSS feed?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.timbru.com/' rel='external nofollow' class='url'>Gabriel Radic</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5142" title="November 5, 2003 @ 5:02 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5143"><p>Looks great. Makes it hard for me to tell when you have a new post up. Perhaps it could do with a bit of tweaking &#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.sevitz.com/' rel='external nofollow' class='url'>Adrian Sevitz</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5143" title="November 5, 2003 @ 5:12 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5144"><p>I hate it, and already wrote about it a few days ago: <a href="/web/20110714062705/http://www.virtuelvis.com/archives/124.html">http://www.virtuelvis.com/archives/124.html</a></p>
+<p>It would be a tiny bit better if you</p>
+<p>a) Had a /latest/ pointing to the latest entry.<br />
+b) Added &lt;link /&gt; to your RSS feed, so I wouldn&#8217;t have to see the awful front page.</p>
+<p>Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5144" title="November 5, 2003 @ 5:29 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5145"><p>Never really liked splash pages, and this one is no exception. Granted, there&#8217;s the &#8220;woah, what&#8217;s this?&#8221; factor the first time, but it gets old very quickly.</p>
+<p>Not to mention the fact that it doesn&#8217;t really fit with the rest of the site. It definitely looks like it&#8217;s just slapped on there. Definitely does *not* qualify as a redesign.</p>
+<p>And then there&#8217;s usability, but there&#8217;s no need to rehash that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.liminality.org/' rel='external nofollow' class='url'>CDL</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5145" title="November 5, 2003 @ 6:19 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5146"><p>It promotes serendipity, which is fun. It is very &#8220;linked&#8221;, which is appropriate. It has obviosu usability drawbacks, but as you say: sometimes usability is &#8230;whisper&#8230; overrated.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.headshift.com/' rel='external nofollow' class='url'>Lee Bryant</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5146" title="November 5, 2003 @ 6:25 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5147"><p>Dislike. It&#8217;s a neat idea that doesn&#8217;t quite work.</p>
+<p>I don&#8217;t usually comment on peoples site redesigns, because generally they&#8217;re cosmetic and any negative comment ends up being a gripe about change itself. </p>
+<p>In this case, it&#8217;s a real reduction in the utility of the site. I miss having an unchanging URL that takes me to the latest post. On top of that, I was starting to enjoy having that easy-to-follow column of b-links, and now they&#8217;re a chore to keep up to date with.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://fishbowl.pastiche.org/' rel='external nofollow' class='url'>Charles Miller</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5147" title="November 5, 2003 @ 7:01 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5148"><p>Interesting concept, but completely annoying beyond &#8220;ooh look at what Mark has done&#8221;.  I have to &#8220;select all&#8221; just to see the background text, and even then I have to squint to see it.  I can no longer simply load up your website to see if there&#8217;s new content &#8211; I have to:</p>
+<p>a) Load up your website<br />
+b) Select all<br />
+c) Squint to see if there are any new links<br />
+d) Click through to your &#8220;latest&#8221;</p>
+<p>I hate it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.jimdabell.com/' rel='external nofollow' class='url'>Jim Dabell</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5148" title="November 5, 2003 @ 7:11 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5149"><p>Umm&#8230;. Is it an ode to Vincent Flanders?  <a href="/web/20110714062705/http://www.webpagesthatsuck.com/">http://www.webpagesthatsuck.com/</a> &#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://cvs.apache.org/~acoliver' rel='external nofollow' class='url'>Andy</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5149" title="November 5, 2003 @ 7:14 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5150"><p>Came in a dream? Hmmm. What did you do or eat for dinner that evening?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://cowpi.com/journal/' rel='external nofollow' class='url'>CowPi</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5150" title="November 5, 2003 @ 7:20 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5151"><p>Neat to look at (the first time). Usability may be overrated, but total unusability is hardly an improvement.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://bill.simonifamily.net/' rel='external nofollow' class='url'>Bill</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5151" title="November 5, 2003 @ 7:52 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5152"><p>The web page is completely unreadable on Pocket Internet Explorer on the Pocket PC.<br />
+ (The old version of the site rendered great).</p>
+<p class=sig>&#8212;&#8201;<cite>Peter Craigmile</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5152" title="November 5, 2003 @ 7:53 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5153"><p>It doesn&#8217;t look like a blog, and that&#8217;s a *very* good thing.</p>
+<p>Two suggestions: make the b-links a little easier to browse and include at least *some* content.  The latest entry would be nice.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://unraveled.com/' rel='external nofollow' class='url'>Joshua Kaufman</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5153" title="November 5, 2003 @ 8:05 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5154"><p>I don&#8217;t like it.  It would be good but the navigation is horrible.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://kbreit.dyndns.org:8080/' rel='external nofollow' class='url'>Kevin Breit</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5154" title="November 5, 2003 @ 8:06 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5155"><p>Hate it. I can&#8217;t use my keyboard in any obvious way to skip past it, it makes some of the b-links unusable (behind the boxes) and the rest of them light gray on dark gray (not the easiest to read). I hate having to use the mouse and take an extra step to get to your actual site. The old setup with the latest post and b-links down the side was much more functional.</p>
+<p>That said, it&#8217;s cool design, etc. Just not very functional. I guess usability really isn&#8217;t all that overrated after all.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5155" title="November 5, 2003 @ 8:10 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5156"><p>Sorry, don&#8217;t like it.  Clever, but not as usable.  I want to see the latest blog entry by default.  And where are the B-links?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.superluminal.com/dave/weblog/' rel='external nofollow' class='url'>Dave Seidel</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5156" title="November 5, 2003 @ 8:23 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5157"><p>You can find the b-link RSS feed through the site map &#8212; link at the bottom of this and all (except home) pages &#8212; under &#8220;Syndicated Feeds&#8221;.</p>
+<p>And on the subject of  in Mark&#8217;s RSS feeds: <a href="/web/20110714062705/http://diveintomark.org/archives/2003/07/01/leave_rss_alone">http://diveintomark.org/archives/2003/07/01/leave_rss_alone</a> explains all.</p>
+<p class=sig>&#8212;&#8201;<cite>James Kew</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5157" title="November 5, 2003 @ 8:51 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5158"><p>hate it. found it very ironic given your usability bent. thought the browser didn&#8217;t like your html.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://hofo.com/' rel='external nofollow' class='url'>Hofo</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5158" title="November 5, 2003 @ 9:04 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5159"><p>hate it, i&#8217;m afraid&#8230;simon says meets the net</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.photographia.co.uk/' rel='external nofollow' class='url'>Patrick H. Lauke</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5159" title="November 5, 2003 @ 9:06 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5160"><p>Man, you people have zero sense of humor.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://waxy.org/' rel='external nofollow' class='url'>Andy Baio</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5160" title="November 5, 2003 @ 9:31 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5161"><p>Depends what you&#8217;re going for..<br />
+If usability, well you already know.<br />
+If you mean to have a front page that&#8217;s more than a blog, than yah, that works..but you should consider having a front-blog page as well.. the unnecessary click is providing me with more exercise than I intended for the day, I&#8217;ll send a bill over for burned calories.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.unix-girl.com/blog' rel='external nofollow' class='url'>kasia</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5161" title="November 5, 2003 @ 9:50 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5162"><p>Hate it.  Sorry.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://allierogers.typepad.com/' rel='external nofollow' class='url'>Allie</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5162" title="November 5, 2003 @ 10:10 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5163"><p>You can find the main feed and the B-link feed on the home page through RSS auto-discovery, which all good aggregators support.  Just point your aggregator to diveintomark.org and it should give you a choice of subscribing to the main feed or the B-link feed.  If your aggregator doesn&#8217;t do that, complain to the vendor/author.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5163" title="November 5, 2003 @ 10:39 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5164"><p>you should add some of them dancing hamsters.  everybody loves a site with dancing hamsters.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.boringguys.com/' rel='external nofollow' class='url'>Rich</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5164" title="November 5, 2003 @ 10:53 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5165"><p>The site works fine in Blazer on my Palm.  (Ha, even the mobile IE sucks :-)</p>
+<p>As far as the design, I love it.</p>
+<p>As far as the usability&#8230; well, since I use Opera, all I had to do was press Control+G to drop the page style sheet and voila!  Or I could use the Links Panel (<a href="/web/20110714062705/http://tntluoma.com/opera/lover/7/09/)"><a href="/web/20110714062705/http://tntluoma.com/opera/lover/7/09/" rel="nofollow">http://tntluoma.com/opera/lover/7/09/</a>)</a> and browse the list of links, or press Control+J to get list of the links in a panel.</p>
+<p>So I&#8217;d say keep it&#8230; it&#8217;s just another great reason to use Opera :-)</p>
+<p>ps &#8211; a /latest/ link would be good, as would a /last5/</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://tntluoma.com/opera/lover/' rel='external nofollow' class='url'>TjL</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5165" title="November 5, 2003 @ 10:59 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5166"><p>I liked old way better(direct access to the latest post). That page is ugly(IMHO) and slow.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://wizactive.com/' rel='external nofollow' class='url'>Jorma Tuomainen</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5166" title="November 5, 2003 @ 11:10 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5167"><p>Fun idea, glad that you showed it to all of us &#8212; but definitely not a good long-term design for the site.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5167" title="November 5, 2003 @ 11:18 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5168"><p>Love it. Or rather, I will love it when the oft-requested &#8220;where&#8217;s the /latest/ url?&#8221; is added.</p>
+<p>To most of the commenters: man, you people are harsh.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://maphew.freeshell.org/' rel='external nofollow' class='url'>matt wilkie</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5168" title="November 5, 2003 @ 11:36 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5169"><p>MP: So, this is my new home page design.<br />
+GP: Ah, I get it&#8230; very clever.<br />
+MP: Thanks.<br />
+GP: How&#8217;s that working out for you?<br />
+MP: What?<br />
+GP: Being clever.<br />
+MP: Great.<br />
+GP: Keep it up, then&#8230; right up.</p>
+<p>Guess the movie reference! :-P</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.mycgiserver.com/~gpiancastelli/' rel='external nofollow' class='url'>Giulio Piancastelli</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5169" title="November 5, 2003 @ 11:38 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5170"><p>Nice piece of art.</p>
+<p>Bad web page.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.nosuch.org/' rel='external nofollow' class='url'>Mr. Nosuch</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5170" title="November 5, 2003 @ 11:40 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5171"><p>I think this is a cry for help.  (grin)</p>
+<p>Very cool effect.  I&#8217;m guessing this is fed from the same source as the mini-link bar you had on the left  previously?  Autogenerated from bookmarks, perhaps?</p>
+<p>Also- useablity is relative to purpose.  If the purpose is to provide list of links for purusal, then yes, usability is fairly low.  But if the purpose is a link-dartboard  (just close your eyes, swirl your mouse around a bit, and click;  then see what kind of link-goodness you&#8217;ve found) then usability is excellent.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://jclark.org/weblog' rel='external nofollow' class='url'>Jason Clark</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5171" title="November 5, 2003 @ 11:43 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5172"><p>Hate it. Sorry. Love (almost) everything you have to say, but if that sort of design were to catch on it would be the #1 reason to switch to reading sites exclusively through NetNewsWire. :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://blog.bhess.net/' rel='external nofollow' class='url'>Brian Hess</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5172" title="November 5, 2003 @ 11:48 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5173"><p>according to my asst: &#8220;what a nerd!&#8221;</p>
+<p>I don&#8217;t know if I love it or hate it.  hate hate hate that I have to squint to read the b-links.  love the unbloggishness of it.  </p>
+<p>would like much better with a hair more contrast between the b-link text and the actual background color, and if the latest box included the excerpt (because yours are usually actually well-written) and maybe how many comments.</p>
+<p>would be very curious to see the visual concept, to some extent, extended to the rest of the site.  it might actually be an innovation in personal site design!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.epersonae.com/' rel='external nofollow' class='url'>Elaine</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5173" title="November 5, 2003 @ 11:49 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5174"><p>Hate it. Requires additional mouse click and it&#8217;s harder to see if there&#8217;s actually something new there. Nice concept though.</p>
+<p>And sorry for echoing what most other people have said, but you did invite comments ;).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.neilturner.me.uk/' rel='external nofollow' class='url'>Neil T.</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5174" title="November 5, 2003 @ 12:05 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5175"><p>Conceptually: Neat.<br />
+Visually: So-so. (a literal symmetry is the other hobgoblin of little minds.)<br />
+Usability- wise I have two problems:<br />
+1. Nothing to indicate what the links are (are they your personal bookmarks, or trackbacks, or what?)<br />
+2. I often read an article, neglect to bookmark it, and then two days later want to find it again. I usually remember the path I took to find it (Let&#8217;s see, I remember I went to Dive into Mark then to Simon Willison then&#8230;) . But the layout of this page makes it much harder to re-find a link that I visited.</p>
+<p class=sig>&#8212;&#8201;<cite>Mike H</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5175" title="November 5, 2003 @ 12:06 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5176"><p>Hate it&#8230; hard to navigate &#8216;b&#8217; links, no quick access to your latest posts&#8230;</p>
+<p>but, if your goal was to get people to switch to NetNewsWire, you succeeded</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://blogs.bwerp.net/matt/' rel='external nofollow' class='url'>Matt</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5176" title="November 5, 2003 @ 12:25 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5177"><p>I&#8217;m afraid I&#8217;ll have to vote with those that hate it. I liked having the main page with the latest post at the top plus links to the few most recent posts&#8230; that way I can easily find out if I missed something since the last time I stopped by. Its a pain to dig through the archives.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.thornvalley.com/' rel='external nofollow' class='url'>Nathaniel</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5177" title="November 5, 2003 @ 12:30 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5178"><p>yes for the idea, it&#8217;s very cool looking, haven&#8217;t seen it done before.</p>
+<p>no for the fact that it distracts me and makes me seizure because of the fast changing links ;-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.leftinfront.com/' rel='external nofollow' class='url'>Brendyn</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5178" title="November 5, 2003 @ 12:36 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5179"><p>Love it!!!!!  Very inventive.<br />
+And&#8230;.as far as usability goes &#8211; know your audience.<br />
+My grandma might have trouble with this page, but my grandma likely won&#8217;t be reading your site.</p>
+<p class=sig>&#8212;&#8201;<cite>Emily</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5179" title="November 5, 2003 @ 12:45 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5180"><p>unique but annoying as all hell. i, like many others, liked coming directly to your latest post. you could keep the splash page if i could go to say, diveintomark.org/blog/ or something to also get to the latest post easily.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://starjewel.org/' rel='external nofollow' class='url'>kim</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5180" title="November 5, 2003 @ 12:51 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5181"><p>Talk about a site map. This is just another example of a functional, alternate display in webspace, within a digital world.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://skebrown.com/' rel='external nofollow' class='url'>skebrown</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5181" title="November 5, 2003 @ 1:02 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5182"><p>Sorry. Sure, it&#8217;s different, and &#8220;cool&#8221;, but I don&#8217;t like it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.456bereastreet.com/' rel='external nofollow' class='url'>Roger</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5182" title="November 5, 2003 @ 1:06 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5183"><p>10 out of 10 points for style, but negative one million for good thinking.</p>
+<p>Sorry, don&#8217;t like it.  The front page doesn&#8217;t match the rest of the site, which disturbs me.  Also, don&#8217;t visit every day, so sometimes I&#8217;ll want a list of the last few posts since last visited.  Your old style had a list of about 5 of the last posts and if I hadn&#8217;t read it I could backtrack.  This was better than a calendar because if I hadn&#8217;t read in a while, flipping through the previous days to see if I remember the posts takes too long.</p>
+<p>That, and it totally is not you Mark :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://thedevilsadvocate.org/' rel='external nofollow' class='url'>Adrian</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5183" title="November 5, 2003 @ 1:30 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5184"><p>Asthetically, it&#8217;s one of the cooler things I&#8217;ve seen.</p>
+<p>That said, I would definitely like an way to jump to the most recent post directly with a Web Browser without having to see the front page every time.</p>
+<p>I also found it kind of funny that the #4 result on google for the b-link &#8220;things people build with blackjack and hookers&#8221; is a circular reference to diveintomark.org&#8217;s front page (from which I clicked the link), which matches against the text of that particular link.</p>
+<p class=sig>&#8212;&#8201;<cite>Cameron Watters</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5184" title="November 5, 2003 @ 1:57 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5185"><p>Also:</p>
+<p>Maybe you already know&#8230;and maybe I missed the part where you mentioned it previously, but are you going to do anything about the funky way the navigation displays in Safari on Panther? Not that you owe it to me or anyone else;just curious.</p>
+<p class=sig>&#8212;&#8201;<cite>Cameron Watters</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5185" title="November 5, 2003 @ 2:00 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5186"><p>It would be even better if the B-links in the background were to &lt;BLINK>. Or even better, doesn&#8217;t Safari support the marquee tag now?&#8230;</p>
+<p>Actually I do like it. I read the b-links with via RSS anyway, so they just turn into a cool background and I don&#8217;t suffer any great usability issues. A URL which always points to the latest entry is missing.</p>
+<p>The tabs look nice with their new rounded corners, but once I roll over them in Camino they become square. They work correctly in Firebird, though.</p>
+<p class=sig>&#8212;&#8201;<cite>Chris Burkhardt</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5186" title="November 5, 2003 @ 2:03 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5187"><p>It&#8217;s cool, but not at all useful.  If I want to find an old article, I&#8217;ll use Google.  I don&#8217;t want to try to find a title in a sea of little grey letters.</p>
+<p>I&#8217;d get rid of it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.tim.buchheim.name/' rel='external nofollow' class='url'>Tim Buchheim</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5187" title="November 5, 2003 @ 2:39 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5188"><p>I like it a lot. I like the concept with all the links representing the web, and your link buttons representing your site as a drop in the ocean. Very simple, very striking and very effective.</p>
+<p>Looks terrible in Lynx, though.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.softwolves.pp.se/blog/' rel='external nofollow' class='url'>Peter Karlsson</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5188" title="November 5, 2003 @ 2:46 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5189"><p>looks cool.  not as usable as your siite usually is, but I like it.  I wouldn&#8217;t put it on my site, mind you, but I like it on yours 8)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://socialistsushi.com/' rel='external nofollow' class='url'>Bryan L. Fordham</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5189" title="November 5, 2003 @ 2:59 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5190"><p>sucks sucks sucks. and sucks in a very webby way!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.franklinmint.fm/' rel='external nofollow' class='url'>Robert Sayre</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5190" title="November 5, 2003 @ 3:25 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5191"><p>Ick. Fine (quite striking, actually) as a one-time &#8220;isn&#8217;t that cool&#8221; site to visit, but it obscures the content&#8211;which is the reason I come here. :/</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://mamamusings.net/' rel='external nofollow' class='url'>Liz Lawley</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5191" title="November 5, 2003 @ 3:30 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5192"><p>Definitely one to vote for the hating aspect of the game. Mainly because, as many before me have said, I really liked have one link to go to for the latest post.</p>
+<p>And the links on the splash spage seem mostly useless to me other than eye candy, since no way in hell am I going to try to read what it says.</p>
+<p>And I won&#8217;t be arsed to start reading <a href="/web/20110714062705/http://www.diveintomark.org/mobile/">http://www.diveintomark.org/mobile/.</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.mirell.org/' rel='external nofollow' class='url'>Mark Miller</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5192" title="November 5, 2003 @ 3:39 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5204"><cite><a href='/web/20110714062705/http://www.chriscurtis.org/index/P703/' rel='external nofollow' class='url'>Lethargic Ramblings</a></cite>&#160;(trackback)</li>
+<li id="comment-5193"><p>It looks great. It should take a week or two for the novelty to wear off, then the benefits of usability will be evident again. Until then, could you do us a service to make both a splash page and a post index?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://bloglenny.blogspot.com/' rel='external nofollow' class='url'>Lenny</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5193" title="November 5, 2003 @ 5:06 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5194"><p>welcome to the dark side!</p>
+<p>random: obviosu is one of my favorite typos.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://xianlandia.com/' rel='external nofollow' class='url'>xian</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5194" title="November 5, 2003 @ 7:18 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5195"><p>Yuck.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://monkeyx.com/' rel='external nofollow' class='url'>Seyed</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5195" title="November 5, 2003 @ 7:44 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5196"><p>You can keep it as long as there&#8217;s a URL to the latest posts. That extra click to get to the content is quite annoying.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://anythingapplies.com/' rel='external nofollow' class='url'>Rick</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5196" title="November 5, 2003 @ 8:12 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5197"><p>I&#8217;m not a fan. I think it looks cool, but I&#8217;m tempted to change my bookmark of your site just to avoid it. It would make a nice entry to a portfolio, or something like that.</p>
+<p>Jeez. A LOT of people commented on this, didn&#8217;t they?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://jessey.net/blog/' rel='external nofollow' class='url'>Simon Jessey</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5197" title="November 5, 2003 @ 8:14 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5198"><p>how &#8217;bout something like diveintomark.org/latest? save a click and a page load ;)</p>
+<p>looks good, though.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://vlad.neosurge.net/' rel='external nofollow' class='url'>vlad</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5198" title="November 5, 2003 @ 8:22 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5199"><p>I think it&#8217;s rude.  Why should reading your latest posts require any clicks at all?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5199" title="November 5, 2003 @ 9:06 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5200"><p>It was interesting the first couple of times, but please put things back the way they were.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.miskatonic.org/' rel='external nofollow' class='url'>William Denton</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5200" title="November 5, 2003 @ 11:50 pm"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5201"><p>Count me in with the &#8220;not having a latest page makes it unusable&#8221;. I right click on a folder, wash the dishes, bundle up my laptop and get on the ferry. By the time I read your page I&#8217;m well away from any net connection, so as I blow through my list of daily reads and prioritize for what I will actually take the time to click on when I am on line, it gets shut.</p>
+<p>A few more days where I notice such a page is consistently not getting read in my daily reads and it loses its hallowed place in that folder.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.flutterby.com/' rel='external nofollow' class='url'>Dan Lyke</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5201" title="November 6, 2003 @ 12:57 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5202"><p>If I could have commented in the first 30 I would have been incisive &#038; erudite. Right now all I can say is, where are the links to the old version so I can compare &#038; contrast?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://concretewerk.com/weblog' rel='external nofollow' class='url'>Fred</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5202" title="November 6, 2003 @ 1:29 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5203"><p>You&#8217;re MAD!! MAD I TELL YOU!!!!!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062705/http://www.macwebguru.com/' rel='external nofollow' class='url'>macguiguru@spamcop.net</a></cite>&#160;<a class=p href="/web/20110714062705/http://diveintomark.org/archives/2003/11/05/overrated#comment-5203" title="November 6, 2003 @ 2:35 am"><img alt="#" src=/web/20110714062705im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110714062705/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110714062705/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110714062705/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110714062705/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110714062705/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.750 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:56:31 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 6:27:05 Jul 14, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:12:22 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

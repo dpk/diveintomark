@@ -1,0 +1,507 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>The infinite hotel [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806093919/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806093919/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806093919/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806093919/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806093919im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806093919/http://diveintomark.org/archives/2003/12/03/cantor-sets" title="Cantor sets">
+<link rel=next href="/web/20110806093919/http://diveintomark.org/archives/2003/12/13/atom03" title="Atom 0.3 snapshot">
+<link rel=up href="/web/20110806093919/http://diveintomark.org/archives#p1450" title="December 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; The infinite hotel Comments Feed" href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806093919/http://diveintomark.org/' />
+<link rel='prev' title='Cantor sets' href='/web/20110806093919/http://diveintomark.org/archives/2003/12/03/cantor-sets' />
+<link rel='next' title='Atom 0.3 snapshot' href='/web/20110806093919/http://diveintomark.org/archives/2003/12/13/atom03' />
+<link rel='canonical' href='/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel' />
+<link rel='shortlink' href='/web/20110806093919/http://diveintomark.org/?p=1450' />
+<meta name="description" content="Imagine a hotel with an infinite number of rooms, numbered 1, 2, 3, and so on forever. All the rooms are full. A man comes in and asks the desk manager whether any rooms are available, and the desk manager replies, All our rooms are full, but I'd be happy to accomodate you. How does he do it?">
+<meta name="keywords" content="cantor,infinity,math">
+<link href="/web/20110806093919cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806093919/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/12\/04\/infinite-hotel";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/12/04/infinite-hotel" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806093919" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101030112337/http://diveintomark.org/archives/2003/12/04/infinite-hotel" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="30 Oct 2010"><strong>OCT</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:39:19 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111130111737/http://diveintomark.org/archives/2003/12/04/infinite-hotel" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="30 Nov 2011"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101030112337/http://diveintomark.org/archives/2003/12/04/infinite-hotel" title="11:23:37 Oct 30, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:39:19 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20111130111737/http://diveintomark.org/archives/2003/12/04/infinite-hotel" title="11:17:37 Nov 30, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615035516/http://diveintomark.org/archives/2003/12/04/infinite-hotel" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:39:19 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806093919*/http://diveintomark.org/archives/2003/12/04/infinite-hotel" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>29 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Apr 06 - 30 Nov 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000101131011_2007:-1:020101101101_2008:-1:111110110000_2009:-1:000000000100_2010:-1:000001000100_2011:7:000000010010_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806093919/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806093919/http://diveintomark.org/archives#p1450">December 4, 2003</a> &#8227;
+<h2>The infinite hotel</h2> (<a href="/web/20110806093919/http://diveintomark.org/tag/cantor" rel="tag">cantor</a>, <a href="/web/20110806093919/http://diveintomark.org/tag/infinity" rel="tag">infinity</a>, <a href="/web/20110806093919/http://diveintomark.org/tag/math" rel="tag">math</a>)</div>
+<p>Imagine a hotel with an infinite number of rooms, numbered 1, 2, 3, and so on forever.  All the rooms are full.  A man comes in and asks the desk manager whether any rooms are available, and the desk manager replies, &#8220;All our rooms are full, but I&#8217;d be happy to accommodate you.&#8221;  How does he do it?</p>
+
+<p>The answer: take the guest currently in room 1 and move him to room 2.  Take the guest currently in room 2 and move him to room 3.  And so forth.  Put the new guy in room 1.</p>
+
+<p>Infinity + 1 is still infinity.  There are just as many integers from 1 to infinity as there are from 2 to infinity.  If any finite number of new guests show up at the hotel, you can accommodate all of them.</p>
+
+<p>Now imagine the same hotel, same situation, all rooms are full, and an infinite number of people all show up at the same time and ask for their own rooms.  Once again, the desk manager replies, &#8220;All our rooms are full, but I&#8217;d be happy to accommodate all of you.&#8221;  How does he do it?</p>
+
+<p>Answer: take the guest currently in room 1 and move him to room 2.  Take the guest currently in room 2 and move him to room 4.  The guest in room 3 gets bumped to room 6, and so forth.  The guest in room N gets bumped to room 2 &#215; N.  Now take all the new guests and put them in the odd-numbered rooms that have just opened up.</p>
+
+<p>Infinity &#215; 2 is still infinity.  There are just as many even numbers as there are natural numbers, and there are just as many odd numbers as there are natural numbers.  If you combine the set of the evens with the set of the odds, you get a set that&#8217;s no larger than either of the sets you started with.  If an infinite number of new guests show up at the hotel, you can accommodate all of them.</p>
+
+<p>Actually that&#8217;s not always true.  I&#8217;m being lazy and using words poorly.  The infinite hotel can only accommodate a <em>countably</em> infinite number of guests, now or in the future.  If an uncountably infinite number of guests show up, you&#8217;re screwed and most of them are going to end up sleeping on the street.  But never mind that for a moment.</p>
+
+<p>If this surprises or disturbs you, you&#8217;re in good company.  Galileo, after pissing off the church and being sent into exile for being inappropriately right, accidentally discovered one day that there are as many perfect squares as there are integers.  This surprised and disturbed him very much, and he quietly and probably wisely decided not to make a big deal of it.</p>
+
+<p>Now imagine the same hotel, same situation, all rooms are full, and an infinite number of Infinity Tour Buses all show up at the same time.  The tour buses are numbered 1, 2, 3 and so on forever, and each of the buses has an infinite number of passengers sitting in seats 1, 2, 3 and so forth.</p>
+
+<p>The desk manager can still accommodate all of them by taking all the guests in room N and moving them to room 2 &#215; N, then putting each of the new guests in room P<sup>S</sup>, where P is the (B+1)-th prime number, B is the bus number, and S is the seat number.  Work it out on paper if you have to, but you&#8217;ll see that all the passengers will be accommodated and none of them will end up sharing a room with any of the old guests or any of the other passengers on any of the other buses.</p>
+
+<p>Infinity squared is still infinity.  Each passenger can be thought of as a rational number, with the bus number in the numerator and the seat number in the denominator, and there are as many rational numbers as there are natural numbers.  There are also as many prime numbers as there are natural numbers.  So this is really the same problem as the previous one, where an infinite number of people showed up on foot, but with slightly trickier math for the desk manager.  Poor guy.</p>
+
+<p>But not all infinities are the same.</p>
+
+<p>There are, for example, more real numbers between 0 and 1 then there are natural numbers from 1 to infinity.  There are more real numbers between 0 and 1 than there are even numbers, odd numbers, rational numbers, prime numbers, perfect squares, or all of these put together.</p>
+
+<p>I&#8217;d lay out the proof here, but there&#8217;s <a href="/web/20110806093919/http://en.wikipedia.org/wiki/Diagonal_argument">a wonderful proof on the Wikipedia</a>.  It&#8217;s called the diagonal argument, and it was invented by Georg Cantor, who also invented many of the other concepts we now use to talk about infinity and infinite sets.  The gist of it is this: two infinite sets are considered the same size (technically the same <q>cardinality</q>) if you can map each element of one set to an element of the other set with none left over on either side (technically called a <q>bijection</q>).  That&#8217;s why there as many even numbers as there are natural numbers: you can map one to the other with the function F(N) = 2 &#215; N, and you&#8217;ll hit all of them eventually.  Mapping the rationals to the natural numbers is a little trickier, and mapping the primes is even trickier, but both are doable.</p>
+
+<p>But mapping the real numbers to the natural numbers is not doable, because no matter how hard you try, there will always be reals left over.  That&#8217;s what Cantor&#8217;s diagonal argument proves.  Mathematicians express this by saying that the natural numbers are countable, but the reals are uncountable.  They have a name for the size of the set of natural numbers: <q>aleph-null</q>, written as &#8501;<sub>0</sub>.  There are &#8501;<sub>0</sub> natural numbers, &#8501;<sub>0</sub> even numbers, &#8501;<sub>0</sub> odd numbers, &#8501;<sub>0</sub> prime numbers, &#8501;<sub>0</sub> rational numbers, and &#8501;<sub>0</sub> perfect squares.</p>
+
+<p>But there are &#8501;<sub>1</sub> real numbers.  &#8501;<sub>1</sub> is, pardon the pun, infinitely larger than &#8501;<sub>0</sub>.  Asking exactly how much larger is a good way to get mathematicians to swear at each other, and combined with a few rounds at the bar, can lead to predictably disastrous results.  There is something called the continuum hypothesis that states that &#8501;<sub>1</sub> = 2<sup>&#8501;0</sup>.  Cantor tried in vain to prove this, but never succeeded.  In 1940, several decades after Cantor&#8217;s death, Kurt G&#246;del proved that the continuum hypothesis could not be disproven.  In 1963, Paul Cohen proved that it could not be proven either.</p>
+
+<p>As you might expect, there&#8217;s more to it than that, but you&#8217;ll have to get a real mathematician drunk to hear the gory details.  I&#8217;m all tapped out.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Fifty two comments here (<a href=/web/20110806093919/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-5514"><p>Thanks!</p>
+<p>If I understand, this says that integers (1,2,&#8230;) are infinite in one way because they can keep on going.</p>
+<p>And reals (1.35345346, 1.45645, etc) are infinite in this way, but also infinite in *another* way because they can keep on dividing.</p>
+<p>(integers aren&#8217;t infinite in the dividing way, because there&#8217;s a limit to the ways you can divide integers and still get integers).</p>
+<p>And the names of the ways are countable (&#8501;0) and uncountable (&#8501;1).</p>
+<p>Is there an &#8501;2?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.daltonlp.com/' rel='external nofollow' class='url'>Lloyd Dalton</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5514" title="December 5, 2003 @ 12:07 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5515"><p>Do each of these infinite hotel rooms have a mini-bar?  Assuming they do- this being the Infinite Hotel, there&#8217;s probably an infinite number of miniture bottles of whiskey in each minibar.  If I get a mathematician drunk in order to hear the gory details, and in the process burn through a dozen or so miniature bottles, how will the hotel be able to charge me for them?  If they count them, they&#8217;ll still find an infinite number.  They also can&#8217;t check for empty shelf space&#8230; I&#8217;ll be sure to move the bottle in slot 13 to slot 1, the bottle in slot 14 to slot 2&#8230;.  </p>
+<p>My head hurts and I haven&#8217;t had a drop to drink.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://jclark.org/weblog/' rel='external nofollow' class='url'>Jason Clark</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5515" title="December 5, 2003 @ 12:19 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5516"><p>There is an &#8501;2, and an &#8501;3 (though I don&#8217;t think &#8501;3 is useful for counting much, so &#8501;4 and so forth don&#8217;t get talked about much).  IIRC,&#8501;n is the set of all possible subsets of a set in &#8501;n-1, so &#8501;n is defined nicely for any integer.</p>
+<p>I believe &#8501;2 contains the set of all possible curves, and its cousin the set of all possible reasonably normal functions.  I can&#8217;t recall any proof of that though, so I could be remembering things completely wrong.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://jacob.barss-bailey.org/' rel='external nofollow' class='url'>jacob</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5516" title="December 5, 2003 @ 12:32 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5553"><cite><a href='/web/20110806093919/http://www.alpha-geek.com/2003/12/05/math_bloggin.html' rel='external nofollow' class='url'>Dichotomy's Purgatory</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-5517"><p>Lloyd is correct, Jacob is correct, and I suppose Jason is also correct, although the process of hiding the evidence in his infinite mini-bar is called a supertask, since it requires an infinite number of steps in a finite time.  (Moving the hotel guests around to accomodate newcomers is also a supertask, unless you want the newcomers waiting around forever.)</p>
+<p>We&#8217;re off to a roaring start.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5517" title="December 5, 2003 @ 1:45 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5518"><p>Have you read Rudy Rucker&#8217;s _White Light_, in which the narrator&#8217;s soul, on a journey to the place where zero and infinity meet, takes a stop at the Hilbert Hotel and has coffee with Georg Cantor in the lobby?</p>
+<p>It&#8217;s a wonderful fictional treatment of the wonderland beyond alef-null.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.cadence90.com/blogs/nixon.html' rel='external nofollow' class='url'>Lisa Williams</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5518" title="December 5, 2003 @ 2:52 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5519"><p>So x1 = 2^x0 is god? More! More!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.datatonia.com/' rel='external nofollow' class='url'>Huck</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5519" title="December 5, 2003 @ 2:52 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5520"><p>I&#8217;ve always liked this discussion. Hilbert&#8217;s Hotel is one of those &#8220;no-one believes it at first&#8221; sorts of topics, I think.<br />
+Minor correction, although I might be wrong, and if I am you can mock me mercilessly: the continuum hypothesis states that there is no set with a cardinality between &#8501;0 and &#8501;1, rather than that &#8501;1 = 2^&#8501;0, i.e., there&#8217;s not a &#8220;number&#8221; in between the two alephs. Of course, if we run off into G&ouml;del in the next post I&#8217;m gonna stop understanding it, but hey.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.kryogenix.org/' rel='external nofollow' class='url'>sil</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5520" title="December 5, 2003 @ 2:52 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5521"><p>Re: &#8220;And the names of the ways are countable (&#8501;0) and uncountable (&#8501;1).&#8221;</p>
+<p>&#8220;How do I love thee, let me count the ways&#8230;oh, I can&#8217;t, because they are uncountably infinite.&#8221; Heh. A Valentine&#8217;s Day message for those of you with mathematically-aware partners, perhaps. :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.kryogenix.org/' rel='external nofollow' class='url'>sil</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5521" title="December 5, 2003 @ 2:55 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5522"><p>Jacob,</p>
+<p>Aleph-n is *not* necessarily the set of all possible subsets in aleph-(n-1).  This is the &#8220;generalised continuum hypothesis&#8221; and, like the basic continuum hypothesis (aleph-1 = set of all subsets of aleph-0 (or equivalently, the set of reals)), GCH is neither provable nor disprovable within standard set theory.  You can come up with different &#8220;models&#8221; that satisfy all the axioms of set theory, and in some of them CH/GCH will be true and in others CH/GCH will be false.</p>
+<p>Sil,</p>
+<p>Aleph-1 is defined as the first cardinal after aleph-0, so by definition there is no cardinality between aleph-1 and aleph-0.  The continuum hypothesis is that there is no cardinality between the set of integers and the set of reals i.e. 2 ^ aleph-0 is the first cardinal after aleph-0 i.e. 2 ^ aleph-0 = aleph-1.</p>
+<p>Next stop, the large cardinals, the ones that can&#8217;t even be proven to exist: inaccessible cardinals, the subtle cardinals, the ineffable cardinals and the magnificently named &#8220;totally indescribable cardinals&#8221;&#8230; I love infinities&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://hestia.typepad.com/flatlander' rel='external nofollow' class='url'>Ivan Towlson</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5522" title="December 5, 2003 @ 4:26 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5523"><p>Sil, I think the two statements of the continuum hypothesis are equivalent. (No promises though.)</p>
+<p class=sig>&#8212;&#8201;<cite>Matthew</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5523" title="December 5, 2003 @ 4:29 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5524"><p>&#8220;I?ve always liked this discussion. Hilbert?s Hotel is one of those &#8220;no-one believes it at first&#8221; sorts of topics, I think.&#8221;</p>
+<p>I strongly disagree<br />
+No-one understands it at first. Or second. Or third. Possibly some Nth time later they understand it. Then comes the disbelief.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.iamsparticus.co.uk/' rel='external nofollow' class='url'>Sparticus</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5524" title="December 5, 2003 @ 4:33 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5554"><cite><a href='/web/20110806093919/http://hestia.typepad.com/flatlander/2003/12/when_infinities.html' rel='external nofollow' class='url'>Flatlander</a></cite>&#160;(trackback)</li>
+<li id="comment-5525"><p>I really enjoyed reading that. Thanks, Mark!</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5525" title="December 5, 2003 @ 5:08 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5526"><p>So, since you brought G�del up, I&#8217;m going to tell one of my favourite G�del related anecdotes so that one of the people who actually knows what they are talking about can tell me I&#8217;m wrong. Apparentley, G�del was both very logically inclined, as you might expect given his line of work, and also very antisocial. In fact, he supposedly hated meeting people and would go to extreme lengths to avoid seeing people he did not wish to. Applying logic to the problem, he realised that the only way to ensure that he did not  see someone who wanted to meet him was to make a definite arrangement of a time and place to meet, and then studiously avoid being anywhere near the specified place at that time by, for example, staying in his office instead.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://zeus.jesus.cam.ac.uk/~jg307/' rel='external nofollow' class='url'>jgraham</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5526" title="December 5, 2003 @ 5:25 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5527"><p>Anybody who enjoys reading stuff like what Marks been presenting us, should consider getting one of Smullyan&#8217;s Books. He has a couple of them where he talks about Logic, Infinity etc. in short stories and lots of riddles to choose, of course you can look up the solutions at the end of the book, but who is going to do that, since it takes out all the fun&#8230; *G*</p>
+<p>Here&#8217;s a link to one of them:</p>
+<p><a href="/web/20110806093919/http://www.amazon.com/exec/obidos/tg/detail/-/0679406883/">http://www.amazon.com/exec/obidos/tg/detail/-/0679406883/</a></p>
+<p>(Don&#8217;t know if Mark has an amazon-id to use? Feel free to adjust if you do.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.sencer.de/' rel='external nofollow' class='url'>Sencer</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5527" title="December 5, 2003 @ 5:27 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5555"><cite><a href='/web/20110806093919/http://www.iamsparticus.co.uk/archives/2003/12/because_i_probably_wont_blog_till_monday.php' rel='external nofollow' class='url'>i am sparticus v11. Sheep Everywhere</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-5556"><cite><a href='/web/20110806093919/http://www.ldodds.com/blog/archives/000093.html' rel='external nofollow' class='url'>Lost Boy</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-5557"><cite><a href='/web/20110806093919/http://www.vraal.com/MT/dan/archives/000021.html' rel='external nofollow' class='url'>Cranky Dan</a></cite>&#160;(trackback)</li>
+<li id="comment-5528"><p>This story come from this book:</p>
+<p><a href="/web/20110806093919/http://www.amazon.com/exec/obidos/asin/0393003388">http://www.amazon.com/exec/obidos/asin/0393003388</a></p>
+<p>Which I would highly recommend</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5528" title="December 5, 2003 @ 8:49 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5529"><p>This argument is only possible if you have an infinite number of desk managers with an infinite amount of patience!</p>
+<p>Do you realize how long it would take the average hotel employees to swap all those rooms! And the fuss the visitors would put up! I&#8217;m sorry, there is just no way this could happen. Israel and the Palestians will make up and kiss long before all those rooms are swapped.</p>
+<p class=sig>&#8212;&#8201;<cite>Jeff</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5529" title="December 5, 2003 @ 8:54 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5558"><cite><a href='/web/20110806093919/http://douweosinga.com/blog/0312/2003Dec05_1' rel='external nofollow' class='url'>Douwe Osinga's Blog</a></cite>&#160;(trackback)</li>
+<li id="comment-5530"><p>&#8220;Infinity +1&#8243; is a meaningless term and cannot be used to prove the point. &#8220;Infinity + 1&#8243; is more akin to &#8220;refridgerator + 1&#8243; than &#8220;5 + 1.&#8221;</p>
+<p>Yet somehow when me and my two friends got our money back for the 3 cameras we bought, the delivery boy made a $5 gain out of thin air. Maybe we shouldn&#8217;t have stayed at that hotel.</p>
+<p class=sig>&#8212;&#8201;<cite>SteveD</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5530" title="December 5, 2003 @ 9:18 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5559"><cite><a href='/web/20110806093919/http://blog.samdevore.com/2003/12/05.html#a1797' rel='external nofollow' class='url'>A Father and his two girls</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-5560"><cite><a href='/web/20110806093919/http://weblog.elwing.org/elwing/archives/000032.html' rel='external nofollow' class='url'>Elwing's weblog</a></cite>&#160;(trackback)</li>
+<li id="comment-5531"><p>there was a charming little educational tv programme late one night on the BBC (part of the Open University programmes) about the Hotel Infinity.<br />
+I think part of its script was based on this <a href="/web/20110806093919/http://www.c3.lanl.gov/mega-math/workbk/infinity/inhotel.html">http://www.c3.lanl.gov/mega-math/workbk/infinity/inhotel.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.photographia.co.uk/' rel='external nofollow' class='url'>Patrick H. Lauke</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5531" title="December 5, 2003 @ 10:36 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5532"><p>Infinitely interesting.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5532" title="December 5, 2003 @ 11:03 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5533"><p>&#8220;Galileo, after pissing off the church&#8230;&#8221;</p>
+<p>For some reason, this put some weird imagery into my head&#8211;that is, Galileo standing atop a church building and, well, pissing. (Which, I suppose, would be pissing off the church in more than one way.)</p>
+<p class=sig>&#8212;&#8201;<cite>Greg H.</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5533" title="December 5, 2003 @ 11:16 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5534"><p>Here&#8217;s a question about supertasks: what if you have an infinite amount of time? Is it still called a &#8220;supertask&#8221;, or does it get a new name?</p>
+<p>I&#8217;m serious, and here&#8217;s why: as a Buddhist, I believe in beginningless time, and that each of us has had &#8220;countless&#8221; (infinite? countably infinite or &#8501;1? that&#8217;s a bit over my head &#8230;) previous lives. I had this argument with a Christian in an airport who said that because infinity of any kind is uncountable, beginningless time is impossible. My counter-argument is that infinity is only uncountable in finite time, but given infinite time you could count, say, all the whole numbers. Similarly, given infinite time you could live every moment of infinite lives.</p>
+<p>I didn&#8217;t convince him and he didn&#8217;t convince me.</p>
+<p>Anyone care to comment?</p>
+<p>Thanks in advance &#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5534" title="December 5, 2003 @ 11:42 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5535"><p>&#8220;Galileo, after pissing off the church and being sent into exile for being inappropriately right,&#8221;</p>
+<p>Perhaps a bit of an oversimplification. Galileo wanted to push a scientific debate at the time (which the Church had no problem with) into the theological realm and was rather antgaonistic about it. More details at <a href="/web/20110806093919/http://catholic.com/library/galileo_controversy.asp">http://catholic.com/library/galileo_controversy.asp</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://bilikfamily.com/' rel='external nofollow' class='url'>Scott B.</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5535" title="December 5, 2003 @ 11:43 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5536"><p>Couple of BBC radio programmes well worth listening to:<br />
+<a href="/web/20110806093919/http://www.bbc.co.uk/radio4/science/5numbers.shtml">http://www.bbc.co.uk/radio4/science/5numbers.shtml</a><br />
+<a href="/web/20110806093919/http://www.bbc.co.uk/radio4/science/another5.shtml">http://www.bbc.co.uk/radio4/science/another5.shtml</a></p>
+<p>very interesting, including one on infinity that fits nicely in with your post here.</p>
+<p class=sig>&#8212;&#8201;<cite>David House</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5536" title="December 5, 2003 @ 12:06 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5537"><p>#29: even if you had an infinite amount of time, you would never &#8216;reach&#8217; infinity. You could spend all your time from here to &#8501;-null counting higher and higher, but would still be in the realm of finite, because you&#8217;d never *get* to &#8501;-null.</p>
+<p>Speaking of &#8220;really frickin&#8217; huge, yet finite:&#8221;</p>
+<p><a href="/web/20110806093919/http://www-users.cs.york.ac.uk/~susan/cyc/g/graham.htm">http://www-users.cs.york.ac.uk/~susan/cyc/g/graham.htm</a></p>
+<p>To quote Yudkowsky, (who&#8217;s referenced on that page,) &#8220;This number is far larger than most people&#8217;s conception of *infinity*.  I know that it was larger than mine.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://zenaku.net/' rel='external nofollow' class='url'>kami</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5537" title="December 5, 2003 @ 12:59 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5561"><cite><a href='/web/20110806093919/http://www.brethorsting.com/blog/archives/000101.html' rel='external nofollow' class='url'>brethorsting</a></cite>&#160;(trackback)</li>
+<li id="comment-5538"><p>Re the first problem (adding 1 guest to an infinite hotel), couldn&#8217;t you just add the new guest to room N0 + 1 (copy/pasting Aleph-null doesn&#8217;t work, doesn&#8217;t display properly when previewed, btw)?</p>
+<p>Or is this not commutative with having the guest in room 1 move to room 2, and domino-ing the rest upward, to move the new guest to room 1?</p>
+<p>I suppose N0 is not really a room number?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://homepage.mac.com/szpak/iblog' rel='external nofollow' class='url'>Mark Szpakowski</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5538" title="December 5, 2003 @ 2:12 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5539"><p>Amateurs, the lot of you.   Just sign up for a sophomore-level mathematical structures class and you&#8217;ll cover all this in a week or two.  Infinity is not nearly as exciting as non-mathematicians seem to think it is.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5539" title="December 5, 2003 @ 2:54 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5562"><cite><a href='/web/20110806093919/http://earthlingsoft.net/ssp/blog/2003/12/goldberg' rel='external nofollow' class='url'>Quarter Life Crisis</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-5540"><p>re: &#8220;Just sign up for a sophomore-level mathematical structures class&#8230;&#8221;</p>
+<p>Beware the word &#8220;just&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5540" title="December 5, 2003 @ 3:18 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5563"><cite><a href='/web/20110806093919/http://earthlingsoft.net/ssp/blog/2003/12/goldberg' rel='external nofollow' class='url'>Quarter Life Crisis</a></cite>&#160;(trackback)</li>
+<li id="comment-5541"><p>#34: to write &#8501;0 in your comments, use this fragment of HTML:</p>
+<p>&amp;#8501;&lt;sub&gt;0&lt;/sub&gt;</p>
+<p>but for some reason Mark&#8217;s comments system strips out the &lt;sub&gt; and &lt;/sub&gt;, so you&#8217;ll have to settle for the non-subscripted version as in the first line of this comment.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5541" title="December 5, 2003 @ 3:35 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5542"><p>There is an infinite number of comments. One more person posts. Server explodes.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://hao2lian.blogspot.com/' rel='external nofollow' class='url'>hao2lian</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5542" title="December 5, 2003 @ 3:46 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5543"><p>#40: or not, 1+infinity = infinity ;)</p>
+<p class=sig>&#8212;&#8201;<cite>David House</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5543" title="December 5, 2003 @ 3:57 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5544"><p>Any chance this hotel is owned by an airline? I&#8217;ve been on many a flight where the seats have been reserved based on these exact calculations.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://db.org/' rel='external nofollow' class='url'>B. Johannessen</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5544" title="December 5, 2003 @ 4:30 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5545"><p>Infinity is a concept, not a number.  So &#8220;infinity + 1&#8243; is about as logical as saying &#8220;barbecue + 1&#8243;.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5545" title="December 5, 2003 @ 4:34 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5546"><p>Re: #43.  It&#8217;s a colloquial way of saying &#8220;for 2 sets A and B, if |A| = &#8501;0 and |B| = 1, then |A &#8746; B| = &#8501;0.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5546" title="December 5, 2003 @ 5:45 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5547"><p>&#8220;The infinite hotel can only accomodate a countably infinite number of guests, now or in the future.  If an uncountably infinite number of guests show up, you�re screwed and most of them are going to end up sleeping on the street.&#8221;</p>
+<p>Moral: if you are discrete, you will get a room.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://www.m14m.net/' rel='external nofollow' class='url'>Moss Collum</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5547" title="December 5, 2003 @ 7:10 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5548"><p>I&#8217;ve always had a big problem with the Hilbert Hotel scenario. It makes an invalid assumption, that the exchange of rooms are instant. This isn&#8217;t a problem when you just have one new guest, but it becomes a problem with the infinite number of new guests. I don&#8217;t consider the problem solved until EVERY guest gets a new room, and it would take an infinite amount of time to relocate an infinite number of guests, they can never be relocated fully within any finite time. That&#8217;s the whole reason for Cantor&#8217;s convoluted relocations, you can&#8217;t just tell the one new guest to check into Room Aleph+1, it would take him an infinite amount of time to get there. But you can tell the guy in room Aleph to go to Room Aleph+1, it takes him the same amount of time as it takes to move between Rm 1 and Rm 2. But I&#8217;m probably wrong on all this because cardinal infinites is not my specialty.</p>
+<p>Anyway, as Lisa (and I) have previously mentioned, you gotta read Rudy Rucker&#8217;s &#8220;White Light,&#8221; which partly takes place in Hilbert&#8217;s Hotel. He has an interesting solution to my objection, but I still don&#8217;t buy it.</p>
+<p>And now I&#8217;m going to make Lisa jealous, by telling her I own one of the infamous 100 preprint copies of White Light, it includes a cover letter by Bruce Sterling telling everyone to read this crazy new author.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://ceicher.homeunix.com/' rel='external nofollow' class='url'>Charles</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5548" title="December 5, 2003 @ 7:45 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5549"><p>I remember telling my (now spouse but then) boyfriend about a cartoon with two cats in an alley and the caption &#8220;if I had two dead rats I&#8217;d give you one&#8230;&#8221; He immediately replied &#8220;if I had an infinite number of dead rats, I&#8217;d give you an infinite number of dead rats &#8230; and I&#8217;d still have an infinite number of dead rats.&#8221;</p>
+<p>His explanation: &#8220;label the rats 1, 2, 3, 4&#8230; you take the odds, I&#8217;ll take the evens.&#8221;</p>
+<p>Ah, geeks in love.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://annmariabell.com/alternate/blog/blog.html' rel='external nofollow' class='url'>Ann Maria Bell</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5549" title="December 5, 2003 @ 7:54 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5564"><cite><a href='/web/20110806093919/http://www.tin-ear.net/blog/archives/000429.html' rel='external nofollow' class='url'>Tin Ear | Blog</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-5565"><cite><a href='/web/20110806093919/http://www.tin-ear.net/blog/archives/000429.html' rel='external nofollow' class='url'>Tin Ear | Blog</a></cite>&#160;(trackback)</li>
+<li id="comment-5550"><p>accommodate</p>
+<p class=sig>&#8212;&#8201;<cite>xiffix</cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5550" title="December 5, 2003 @ 10:22 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5551"><p>Yes indeed.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5551" title="December 5, 2003 @ 10:39 pm"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5552"><p>A shame Douglas Adams never crafted a hotel like this to accompany Milliways.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806093919/http://decafsilicon.blogspot.com/' rel='external nofollow' class='url'>Nick Douglas</a></cite>&#160;<a class=p href="/web/20110806093919/http://diveintomark.org/archives/2003/12/04/infinite-hotel#comment-5552" title="December 6, 2003 @ 4:47 am"><img alt="#" src=/web/20110806093919im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806093919/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806093919/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806093919/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806093919/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806093919/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.224 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:57:55 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:39:19 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:12:02 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Won&#8217;t somebody please think of the gerbils? [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110810184643/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110810184643/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110810184643/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110810184643/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110810184643im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110810184643/http://diveintomark.org/archives/2003/08/28/monument" title="These links we make">
+<link rel=next href="/web/20110810184643/http://diveintomark.org/archives/2003/09/02/microsoft-web-services" title="Microsoft web services, brought to you by the letter L and the number 0">
+<link rel=up href="/web/20110810184643/http://diveintomark.org/archives#p1405" title="August 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Won&#8217;t somebody please think of the gerbils? Comments Feed" href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics/feed" />
+<link rel='index' title='dive into mark' href='/web/20110810184643/http://diveintomark.org/' />
+<link rel='prev' title='These links we make' href='/web/20110810184643/http://diveintomark.org/archives/2003/08/28/monument' />
+<link rel='next' title='Microsoft web services, brought to you by the letter L and the number 0' href='/web/20110810184643/http://diveintomark.org/archives/2003/09/02/microsoft-web-services' />
+<link rel='canonical' href='/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics' />
+<link rel='shortlink' href='/web/20110810184643/http://diveintomark.org/?p=1405' />
+<meta name="description" content="There is a veritable plethora of overlapping concepts here, and enough snake oil to choke a crack-addled gerbil.">
+<meta name="keywords" content="accessibility,css,markup,rant,webstandards,xhtml">
+<link href="/web/20110810184643cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110810184643/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/08\/29\/semantics";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "10";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/08/29/semantics" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110810184643" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514120426/http://diveintomark.org/archives/2003/08/29/semantics" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 18:46:43 Aug 10, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111027210026/http://diveintomark.org/archives/2003/08/29/semantics" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Oct 2011"><strong>OCT</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514120426/http://diveintomark.org/archives/2003/08/29/semantics" title="12:04:26 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 18:46:43 Aug 10, 2011">10</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110811064929/http://diveintomark.org/archives/2003/08/29/semantics" title="6:49:29 Aug 11, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620031636/http://diveintomark.org/archives/2003/08/29/semantics" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 18:46:43 Aug 10, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110810184643*/http://diveintomark.org/archives/2003/08/29/semantics" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>45 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Apr 06 - 7 Jan 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000203112010_2007:-1:510211001101_2008:-1:111111003200_2009:-1:000000000000_2010:-1:000002000111_2011:7:000010030100_2012:-1:100000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110810184643/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110810184643/http://diveintomark.org/archives#p1405">August 29, 2003</a> &#8227;
+<h2>Won&#8217;t somebody please think of the gerbils?</h2> (<a href="/web/20110810184643/http://diveintomark.org/tag/accessibility" rel="tag">accessibility</a>, <a href="/web/20110810184643/http://diveintomark.org/tag/css" rel="tag">css</a>, <a href="/web/20110810184643/http://diveintomark.org/tag/markup" rel="tag">markup</a>, <a href="/web/20110810184643/http://diveintomark.org/tag/rant" rel="tag">rant</a>, <a href="/web/20110810184643/http://diveintomark.org/tag/webstandards" rel="tag">webstandards</a>, <a href="/web/20110810184643/http://diveintomark.org/tag/xhtml" rel="tag">xhtml</a>)</div>
+<p>I can&#8217;t think of a single topic that could be considered a more trivially unimportant form of navel-gazing than arguing about the semantics of HTML.  (Oh wait, <a href="/web/20110810184643/http://www.kottke.org/03/08/030826its_weblog_n.html" title="It's &quot;weblog&quot;, not &quot;web log&quot;">here&#8217;s one</a>.)  I personally think Greg Knauss&#8217; definition of <a href="/web/20110810184643/http://www.eod.com/devil/archive/web_standards.html">web standards</a> is all you need to know on the subject, but all the weird markup-obsessed Alpha Geek freaks in the world seem to have decided that I&#8217;m worth reading because every few months or so I have a semi-enlightening rant on the subject.  This is not one of those rants, but out of sympathy for those members of my audience who keep hitting refresh every few minutes like gerbils on crack, hoping for a repeat of <q>Semantic Obsolescence</q>, here is some light reading on the fascinating subjects of syntax, semantics, structure, validation, CSS, accessibility, and markup:</p>
+
+<ul>
+<li><cite>Jason Kottke</cite>: <a href="/web/20110810184643/http://www.kottke.org/03/08/030826standards_do.html">Standards don&#8217;t necessarily have anything to do with being semantically correct</a>.</li>
+<li><cite>Dave Shea</cite>: <a href="/web/20110810184643/http://www.mezzoblue.com/cgi-bin/mt/mezzo/archives/000239.asp">Semantics and bad code</a>.</li>
+<li><cite>Douglas Bowman</cite>: <a href="/web/20110810184643/http://www.stopdesign.com/log/2003/08/26/semantics.html">On Standards and Semantics</a>.</li>
+<li><cite>Paul Scrivens</cite>: <a href="/web/20110810184643/http://www.itnextgen.net/pseudo/archives/web_design/semantic_markup.php">Semantic Markup</a>.</li>
+<li><cite>Simon Willison</cite>: <a href="/web/20110810184643/http://simon.incutio.com/archive/2003/08/28/structuralVsSemantic">HTML: More structural than semantic</a>.</li>
+<li><cite>Dan Cederholm</cite>: <a href="/web/20110810184643/http://www.simplebits.com/archives/2003/08/27/this_validates.html">This validates!</a> and <a href="/web/20110810184643/http://www.simplebits.com/archives/2003/08/27/simplequiz_part_i_headings.html">SimpleQuiz part 1: headings</a>.</li>
+<li><cite>Jeffrey Zeldman</cite>: <a href="/web/20110810184643/http://www.zeldman.com/daily/0803a.shtml#spelling">Spelling and grammar not the same</a>.</li>
+<li><cite>Tim Bray</cite>: <a href="/web/20110810184643/http://www.tbray.org/ongoing/When/200x/2003/08/11/SymbolGrounding">Markup, Namespaces, and Meaning</a>.</li>
+<li><cite>Sam Ruby</cite>: <a href="/web/20110810184643/http://intertwingly.net/blog/1559.html">What Does Markup Mean?</a></li>
+</ul>
+
+<p>Now then.  There is a veritable plethora of overlapping concepts here, and enough snake oil to choke a crack-addled gerbil.</p>
+
+<dl>
+<dt>XHTML</dt>
+<dd><p>The successor to HTML, XHTML 1.0 is a tag-for-tag reformulation of HTML 4 in XML, and comes in several flavors (just like HTML 4).  XHTML 1.1 comes in only one flavor (strict), adds a few things you&#8217;ll never use, and removes several things you use all the time (like the <code>name</code> attribute on <code>A</code> tags).  XHTML 2.0 is not done yet, but current drafts are not backwardly compatible with either XHTML 1.0 or 1.1.  Despite what you might have heard, XHTML is <em>not</em> treated as XML by modern browsers, unless you use the proper MIME type (which <a href="/web/20110810184643/http://www.goer.org/Markup/TheXPhiles/">only about 2 dozen people do</a>).</p></dd>
+<dt>Validation</dt>
+<dd><p>Means that your markup declares itself as a particular markup specification (using a <code>DOCTYPE</code>), and that it conforms to the rules of that specification.  No more, no less.  A validator will tell you that the <em>structure</em> of your markup is correct (or not); it says nothing about whether you&#8217;re using tags properly, or semantically, or accessibly, or whatever.</p>
+<p>Validation is completely independent of whether you&#8217;re using XHTML or HTML, or whether you&#8217;re using the XHTML MIME type correctly.  You can write valid XHTML 1.1, or XHTML 1.0 Strict, or XHTML 1.0 Transitional, or HTML 4.01 Strict, or HTML 4.01 Transitional, or HTML 3.2, or HTML 2.</p>
+<p><a href="/web/20110810184643/http://validator.w3.org/">The W3C Validator</a> is the most widely-used (X)HTML validator, although <a href="/web/20110810184643/http://validator.w3.org:8001/">the upcoming beta version</a> goes beyond validation-against-the-spec with something called <q>fussy parsing</q>, and checks for common problems which, while technically valid, are known to cause problems in popular browsers.  This crosses the line into being more of a <q>linter</q> than a pure validator.  (<a href="/web/20110810184643/http://feeds.archive.org/validator/">The Feed Validator</a> also crosses this line by flagging things like SCRIPT elements, ambiguously relative URLs, and invalid date values.)</p>
+<p>The biggest reason to validate your markup are that, after you do it once, you can use the validator as a debugging tool to catch stupid mistakes.  The second biggest reason is that <a href="/web/20110810184643/http://diveintomark.org/archives/2003/05/05/why_we_wont_help_you">if you don&#8217;t, we won&#8217;t help you</a>.  Yes, we&#8217;re elitist snobs, but we increasingly have a monopoly on talent, and we&#8217;ve all decided that valid markup is a baseline.</p>
+</dd>
+<dt>CSS</dt>
+<dd><p>Means that you are separating the structure of your document from the presentation of your document.  It is technically possible to have a perfectly valid XHTML Transitional document that uses tables for layout, <code>FONT</code> tags for styling, and spacer GIFs for pixel-perfect positioning.  As long as you put ALT attributes on your all spacer images and close all your <code>FONT</code> and <code>TABLE</code> tags, it can be valid.  But it sucks, because table-based layouts and FONT tags and spacer GIFs are an ongoing nightmare, while CSS is only an up-front nightmare.</p>
+<p>Also, you can do cool things like dynamic style switchers, ala <a href="/web/20110810184643/http://www.csszengarden.com/">CSS Zen Garden</a>, and <a href="/web/20110810184643/http://www.intertwingly.net/blog/1579.html">printer stylesheets</a> and so forth, if you care about that sort of thing.</p>
+<p>But am-I-CSS-or-not is independent of whether your markup validates.  You can use CSS and not validate your markup, or you can validate your markup and not use CSS, or you can do both, or neither.  The primary reason CSS and validation have historically been conflated is that the sort of people who have taken the time to learn about validation are also generally the sort of people who have taken the time to learn about CSS, and who use CSS for their own designs, and who advocate CSS to others.  (To further confuse the issue, there is a <a href="/web/20110810184643/http://jigsaw.w3.org/css-validator/validator-uri.html">CSS validator</a> which checks whether your stylesheets conform to the CSS specification.  Whether your (X)HTML is valid is completely independent of whether your CSS is valid, since they&#8217;re separate specifications.)</p>
+<p>CSS is almost completely independent of XHTML-vs-HTML.  The rules for parsing CSS in an HTML environment are slightly different from parsing CSS in an XHTML environment, but keep in mind that unless you&#8217;re using the proper XHTML MIME type, you&#8217;re not in an XHTML environment anyway.</p>
+</dd>
+<dt>Semantic markup</dt>
+<dd><p>Means (among a variety of definitions) that you are using tags that have specific meaning assigned to them, either in the (X)HTML specification, or in generally accepted use.  As opposed to generic tags like <code>DIV</code> and <code>SPAN</code>, or Tag Soup whose result happens to look the same in one class of browsers.</p>
+<p>HTML is flexible enough that there&#8217;s usually more than one way to do something.  If you want a simple vertical list of items, you can use <code>UL</code> and <code>LI</code> tags (plus some CSS to eliminate the default bullets), or you can simply put <code>BR</code> tags at the end of each item.  Both accomplish the same result (in a popular class of visual browsers), and both are valid, and both may or may not be styled with CSS, but one is semantically better.  <code>UL</code> <em>means</em> a list of things; <code>BR</code> doesn&#8217;t.  <code>P</code> <em>means</em> a paragraph; <code>H1</code>, <code>H2</code>, <code>H3</code> etc. <em>mean</em> different levels of nested headings.</p>
+<p>In visual browsers it doesn&#8217;t really matter whether you use semantically correct markup or generic markup that happens to look the same, because the meaning of your page is going to be determined by the human being with eyes who reads it on a screen.  But in other environments, it matters a great deal.  (More on this in a second.)</p>
+<p>Semantic markup is independent of XHTML-vs-HTML (which makes sense, since there aren&#8217;t any new tags in XHTML that could provide new meaning).  Semantic markup is independent of validation; you can produce shitty non-semantic markup that validates.  Semantic markup and CSS are loosely joined, as described below.</p>
+</dd>
+<dt>Accessibility</dt>
+<dd><p>Means that your content is accessible to a wide range of browsers, platforms, and users using assistive technology.  Most accessibility discussion focuses on the blind and partially sighted, and the #1 important accessibility feature is ALT attributes on images, since blind people can&#8217;t see them.  But there are lots of types of disabilities that intersect the web; I would say that the #2 important accessibility feature is complete keyboard navigability, since not everyone reading your page can use a mouse.</p>
+<p>Accessibility also has nothing to do with validation; no assistive technology requires valid markup.  But it does have some overlap with CSS and semantic markup.  You think I&#8217;m going to say <q>table-based layouts suck for accessibility</q>, but I&#8217;m not; table-based layouts suck <em>for maintenance</em>, but they can be perfectly accessible.  No, the way that accessibility intersects CSS is that CSS allows you to use proper semantic markup but make it look like what you wanted it to look like in the first place, and some of that semantic markup is specifically interpreted by assistive technology better than the non-semantic (but visually identical) alternatives.</p>
+<p>Example: if you use real <code>H1</code>, <code>H2</code>, <code>H3</code> tags to build an outline of nested headers on your page, the Home Page Reader screen reader has an option to present that outline to a blind user, to read just the header tags and let the user skip to a particular one within the page.  If you wanted to get a sense of the overall structure of a page, you would visually scan it, and the bolder/larger headers and surrounding whitespace would jump out at you, and you would start reading where you wanted to start reading.  Blind people can&#8217;t just scan the whole page at once; they need to accomplish the same thing in other ways, and the assistive technology they use relies on (among other things) good semantic markup to mimic the things we can do at a glance.</p>
+<p>Another example: some screen readers have an option to announce the number of items in a list before they start to read it, so the user can know how long it is before they listen to each item being read.  If the <q>list</q> is really just text separated by <code>BR</code> tags, this feature won&#8217;t work.</p>
+</dd>
+</dl>
+
+<p>I take an extremely pragmatic view of semantic markup.  Semantic markup is useful as long as I can pinpoint a specific use for it, in a specific tool.  Otherwise I don&#8217;t care.  Proper header tags are useful for accessibility.  <em>It&#8217;s an actual menu item in Home Page Reader; if you use real header tags, that menu item works, and otherwise it doesn&#8217;t.</em>  ALT attributes are important because I&#8217;ve heard what JAWS sounds like when it tries to read images without them (it reads the filename instead, which is generally meaningless).</p>
+
+<p>ALT attributes can also increase search engine relevance.  After all, Googlebot is just another blind user with 100 million friends.  People search by typing in keywords.  If you don&#8217;t tag your images with text, Google can&#8217;t see them and match them up with those keywords, and they may as well not be there.  This isn&#8217;t rocket science, but apparently most people think that Google operates by loading up your page in IE and taking screenshots.</p>
+
+<p>Then there&#8217;s some semantic markup that I personally make use of, even if there isn&#8217;t a wide market for it.  I mark up names of people I link to (like in the list above) with the <code>CITE</code> tag, and I have a script that runs every night that aggregates those tags and creates <a href="/web/20110810184643/http://diveintomark.org/archives/citations/">posts by citation</a>.  I do a similar thing with the <code>cite</code> attribute of <code>BLOCKQUOTE</code> and <code>Q</code>, and create <a href="/web/20110810184643/http://diveintomark.org/archives/quotations/">posts by quotation</a>.  (Some people also use CSS and Javascript tricks to automatically format the cite URL, if CSS and Javascript are available.  A cute trick that helps some people and doesn&#8217;t harm anyone else.)  I use the <code>ACRONYM</code> to mark up acronyms and then pull them out and list them on my <a href="/web/20110810184643/http://diveintomark.org/about/accessibility/">accessibility statement</a>.  This is all very geeky and not of general interest, and some of it could probably be replicated with smarter code and dumber markup, but this is the balance I&#8217;ve found that works for me.</p>
+
+<p>However, there are lots of recurring discussions about semantics that <em>I have no interest in whatsoever</em>.  I do not, for example, care about the distinction between <code>ACRONYM</code> and <code>ABBR</code>.  I do not care about the distinction between <code>STRONG</code> and <code>B</code>, or <code>EM</code> and <code>I</code>.  I know of no mainstream tool that supports one and not the other (except Internet Explorer for Windows, which brilliantly only supports <code>ACRONYM</code> and not <code>ABBR</code>).  I also don&#8217;t care about the distinction between <code>UL</code> and <code>OL</code>, since general use has contradicted the spec definition for so long that the distinction is meaningless.  A <code>UL</code> is an ordered list with bullets, because that&#8217;s how everyone uses it.</p>
+
+<p>So where&#8217;s the problem?  Well, there&#8217;s a lot of snake oil out there.  Anyone who tells you that validation buys you semantics is selling you snake oil.  You can have an entire page full of <code>DIV</code> and <code>SPAN</code> tags and be perfectly valid, and it may look perfectly good to the human eye, but it doesn&#8217;t mean anything, and any tool that relies on semantic markup won&#8217;t be able to make heads or tails of it.</p>
+
+<p>Anyone who tells you that CSS guarantees you accessibility is selling you snake oil.  Most accessibility techniques have nothing to do with CSS (remember, the #1 accessibility technique is marking up images with text that&#8217;s normally invisible).  And where accessibility and CSS <em>do</em> overlap, it&#8217;s still easy to screw up if you don&#8217;t know what you&#8217;re doing, or simply go through a lot of pain for no real-world gain.</p>
+
+<p>Anyone who tells you that XHTML is easier to parse, consume, or validate because it&#8217;s XML is selling you snake oil (or isn&#8217;t using the right tools).  The stuff I do with citations, quotations, and acronyms, I do it with HTML 4, a standard that has been around since 1997.  Headers and lists have been around since HTML 1.  Anyone who tells you that XHTML buys you anything at all is most likely selling you snake oil.  The only possible use I&#8217;ve seen for it is directly embedding it in syndicated feeds (in other words, in another XML vocabulary).  Whether this idea has legs or not is an open question.</p>
+
+<p>A common misconception is that XHTML is better because you can use XML tools (such as XSLT) to generate it (from a database, from another XML source, whatever).  Unless you are using XHTML as <em>input</em> to some further processing, this is a bogus argument.  XSLT <a href="/web/20110810184643/http://www.w3.org/TR/xslt#section-HTML-Output-Method">can output HTML</a> as easily as it can output XML.  It&#8217;s only when you want to take XHTML and use it as input to some other transformation that it matters that it&#8217;s XML (and even then, it only matters to the extent that you want to use existing XML tools instead of existing SGML tools).  (It has been pointed out to me that there is a growing developer community that is doing exactly this: providing add-on tools that take XHTML as input and do interesting things with it.  Like the design community that simply won&#8217;t talk to you unless your markup validates, the developer community may all collectively decide not to talk to you unless you&#8217;re using XHTML.  This may end up being the strongest argument for using XHTML.)</p>
+
+<p>And finally, anyone who tells you that any of these concepts will make your web site look better on mobile devices is selling you snake oil.  Older mobile devices only supported a weird fucked up subset of HTML 3.2, and newer mobile devices have ultra-smart browsers that reflow even the most rigid designs and parse even the most fucked up Tag Soup markup.  Every new mobile device that comes out seems to trip up on CSS in its own way, and apparently nobody told the mobile vendors about XHTML Basic (don&#8217;t ask).</p>
+
+<p>So there are a lot of overlapping concepts here, and if you are the sort of person who is trying to push one of them, you&#8217;re probably going to try to push all of them.  Despite the fact that it shares 100% of its tags with HTML 4, people are pushing XHTML as a <q>fresh start</q>, a <q>better way of doing things</q>.  There are people who are (intentionally or not) conflating all of these issues, advocating XHTML but then trying to slip validation, CSS, accessibility, and semantics in under the radar at the same time.  Everything is loosely related anyway, and if you&#8217;re going to make a <q>fresh start</q> and make the leap to standards-based design (and it is quite the leap, if you&#8217;ve been doing Tag Soup design all your professional life), you may as well go whole hog.</p>
+
+<p>And there&#8217;s nothing wrong with this argument, per se.  HTML has been historically branded with the stigma of cowboy coders, anything-goes, forcing round pegs into square Netscape browsers, and just generally being a wild woolly mess.  If XHTML can be branded so as to <em>create the association</em> with validation, separating structure and presentation, accessibility, and other techniques that have worth in their own right, then maybe they can all get traction together.  But that&#8217;s not a technical argument, it&#8217;s a social one, and anyone who claims that these loosely coupled concepts are really tightly coupled is either misinformed or lying.</p>
+
+<p>OK, so I guess this was one of those rants.  I promise not to speak of such things for another six months.  Save the gerbils.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty one comments here (<a href=/web/20110810184643/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-4494"><p>And I thought I was the only one that thought the world was becoming quite so sickeningly focused on something that doesn&#8217;t require nor deserve quite so much focus.</p>
+<p>Well said Mark, quite well said.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://leavesrustle.com/' rel='external nofollow' class='url'>Noel D. Jackson</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4494" title="August 29, 2003 @ 2:52 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4495"><p>Interesting is also this rant at USS Clueless about being forced to use XHTML when updating one&#8217;s CMS.</p>
+<p><a href="/web/20110810184643/http://denbeste.nu/cd_log_entries/2003/08/Intrusivetools.shtml">http://denbeste.nu/cd_log_entries/2003/08/Intrusivetools.shtml</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.papascott.de/' rel='external nofollow' class='url'>Scott</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4495" title="August 29, 2003 @ 3:24 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4515"><cite><a href='/web/20110810184643/http://www.23pools.com/~CarlGarland?topic_id=00006C' rel='external nofollow' class='url'>Never Give Up</a></cite>&#160;(trackback)</li>
+<li id="comment-4496"><p>NE China is being devastated by Giant Gerbils (<a href="/web/20110810184643/http://news.bbc.co.uk/1/hi/world/asia-pacific/3162743.stm)"><a href="/web/20110810184643/http://news.bbc.co.uk/1/hi/world/asia-pacific/3162743.stm" rel="nofollow">http://news.bbc.co.uk/1/hi/world/asia-pacific/3162743.stm</a>)</a></p>
+<p>If these things discover crack, (or semantic markup) they could take over the world.</p>
+<p>I for one, welcome our new masters.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.voidstar.com/' rel='external nofollow' class='url'>Julian Bond</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4496" title="August 29, 2003 @ 3:34 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4497"><p>Methinks this hole AmISemanticOrNot discussion is a very healthy sign in the community and should be welcomed. It is the sign of ambitious young minds (and old farts too) taking pride in their job, striving to improve the quality of their work.</p>
+<p>I say, who cares if the discussion is a little at times, It&#8217;s the thought that really counts. I&#8217;d much rather want to work in a culture of quality-obsessed navel-gazing, than the who-cares-lets-make-tag-soup culture we&#8217;ve had so far. :-)</p>
+<p>P.S. Nice rant though, Mark.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://mar.anomy.net/' rel='external nofollow' class='url'>Mar</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4497" title="August 29, 2003 @ 6:02 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4498"><p>Anyone who teaches you HTML tables to control design or layout is selling you snake oil. Anyone who also claims that it&#8217;s the only way and will work everywhere is selling you bad quality snake oil for three times the price.</p>
+<p>What we need to do is to teach people about &lt;div&gt;content&lt;/div&gt;+CSS and not &lt;table cellpadding=&#8221;1&#8243; cellspacing=&#8221;0&#8243; width=&#8221;100%&#8221; height=&#8221;100%&#8221; bgcolor=&#8221;black&#8221;&gt;&lt;tr&gt;&lt;td&gt;table cellpadding=&#8221;4&#8243; cellspacing=&#8221;0&#8243; width=&#8221;100%&#8221; height=&#8221;100%&#8221; bgcolor=&#8221;white&#8221;&lt;&gt;td&gt;content&lt;/table&gt;&lt;/table&gt;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4498" title="August 29, 2003 @ 7:09 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4516"><cite><a href='/web/20110810184643/http://ko.offroadpakistan.com/links/cat_mtphpcssxhtml.html#000536' rel='external nofollow' class='url'>Links</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-4517"><cite><a href='/web/20110810184643/http://arthur.is.verweg.com/archief/2003/08/29/over_sematiek_en_standaarden' rel='external nofollow' class='url'>Arthur is verweg!</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-4518"><cite><a href='/web/20110810184643/http://www.innoq.com/blog/st/archives/000302.html' rel='external nofollow' class='url'>Random Stuff</a></cite>&#160;(trackback)</li>
+<li id="comment-4499"><p>> I do not, for example, care about the distinction between ACRONYM and ABBR. I do not care about the distinction between STRONG and B, or EM and I. I know of no tool that supports one and not the other</p>
+<p><a href="/web/20110810184643/http://harvest.sourceforge.net/">http://harvest.sourceforge.net/</a><br />
+<a href="/web/20110810184643/http://www.thunderstone.com/site/texisman/">http://www.thunderstone.com/site/texisman/</a><br />
+<a href="/web/20110810184643/http://www.namazu.org/">http://www.namazu.org/</a></p>
+<p>All local search engines that rank emphasised/strongly emphasised text higher than text that is in italics or bold.  Of course, they still &#8220;support&#8221; i and b elements, but they treat them differently (since they _are_ different).</p>
+<p>> Anyone who tells you that XHTML is easier to parse, consume, or validate because it&#8217;s XML is selling you snake oil (or isn&#8217;t using the right tools).</p>
+<p>Can you suggest the _right_ tool to replace this:</p>
+<p><a href="/web/20110810184643/http://www.throwingbeans.org/tech/postgresql_and_xml.html">http://www.throwingbeans.org/tech/postgresql_and_xml.html</a></p>
+<p>Part of the reason XML is easier to parse is because it is popular &#8211; people write tools for it when they might not when faced with SGML.  Is there an SGML parser that can be embedded in postgresql?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.jimdabell.com/' rel='external nofollow' class='url'>Jim Dabell</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4499" title="August 29, 2003 @ 7:49 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4519"><cite><a href='/web/20110810184643/http://www.rodentregatta.com/archives/004931.php' rel='external nofollow' class='url'>Rodent Regatta</a></cite>&#160;(trackback)</li>
+<li id="comment-4500"><p>To me, choosing HTML or XHTML depends on the requirements of the project. I wrote the Web Design Postcards in HTML 4 because it was (marginally) more lightweight, and I didn&#8217;t need any of the features that XHTML offered, like the ability to add RDF metadata, or do one of the small list of things you can do with XHTML and not with HTML. </p>
+<p>As far as I&#8217;m concerned, XHTML is a specialist tool that&#8217;s rarely necessary. I like to see governments adopting it and including metadata (the UK government&#8217;s e-GIF policy requires this), and there are a few other places it&#8217;s useful.  It&#8217;s good for software that wants to spit out &#8212; or intermix with &#8212; web code (e.g., databases), but pointless for just about anything else.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://lazycat.org/postcards/' rel='external nofollow' class='url'>Matt Robinson</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4500" title="August 29, 2003 @ 9:06 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4501"><p>Mark, you don&#8217;t think you&#8217;re an &#8220;weird markup-obsessed Alpha Geek freak&#8221;?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4501" title="August 29, 2003 @ 9:58 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4521"><cite><a href='/web/20110810184643/http://www.thirdculturedesign.com/weblog/archives/2003/08/29/google_and_accessibility/index.php' rel='external nofollow' class='url'>Third Culture Design | Weblog</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-4522"><cite><a href='/web/20110810184643/http://aries.etree.org/brian/archives/000364.php' rel='external nofollow' class='url'>Brian's Life</a></cite>&#160;(trackback)</li>
+<li id="comment-4502"><p>&#8220;I also don&#8217;t care about the distinction between UL and OL, since general use has contradicted the spec definition for so long that the distinction is meaningless. A UL is an ordered list with bullets, because that&#8217;s how everyone uses it.&#8221;</p>
+<p>A UL is an ordered list with bullets because that&#8217;s what the (original) spec actually says it is.  HTML 4.0 apparently dropped all mention of &#8220;bullets&#8221;, but in HTML 2.0 and Tim BL&#8217;s original informal spec, the intention was clear.</p>
+<p class=sig>&#8212;&#8201;<cite>Joe English</cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4502" title="August 29, 2003 @ 11:18 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4503"><p>ABBR vs ACRONYM:</p>
+<p>In an aural browser, the latter is meant to be READ, whereas the former is meant to be SPELLED-OUT. JAWS 4.51 is purported to support these tags properly now, so someone who cares about such things would want to distinguish between them. (And let&#8217;s leave aside modern, Standards-based screenreaders, like EmacsSpeak.)</p>
+<p>B and I vs STRONG and EM:</p>
+<p>As Comment 10 points out, these, too, are distinguishable, both in aural browsers and at that blind behemoth, Google.</p>
+<p>HTML vs XML Parsing:</p>
+<p>Using off-the-shelf XML parsing tools makes things like Comment-Validation trivially easy (see <a href="/web/20110810184643/http://www.agresticism.org/furrow/2003/8/24/valid_comments_script/">http://www.agresticism.org/furrow/2003/8/24/valid_comments_script/</a>  for a demo).</p>
+<p>If, however, Validation is bullshit, then Schema are irrelevant and Comment-Validation is a crock.</p>
+<p>Web authors should not waste their time with such irrelevancies. But they shouldn&#8217;t come whining to Pilgrim either ( <a href="/web/20110810184643/http://diveintomark.org/archives/2003/05/05/why_we_wont_help_you">http://diveintomark.org/archives/2003/05/05/why_we_wont_help_you</a> ).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4503" title="August 29, 2003 @ 11:53 am"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-4504"><p>Jacques may actually have a good point, underneath all that condescension.  While you can transform/convert/do cool things to XHTML with XML tools and HTML with SGML tools, *more people* are doing interesting things with XML tools.  If the development community that can write such add-on tools all decides that XML is the baseline, then you&#8217;ll be forced into using XHTML in order to take advantage of those tools.</p>
+<p>In other words, you can use HTML, but don&#8217;t come whining to Jacques.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4504" title="August 29, 2003 @ 12:09 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-4505"><p>re: &#8220;And let&#8217;s leave aside modern, Standards-based screenreaders, like EmacsSpeak&#8221;</p>
+<p>User base: 2.</p>
+<p>Yes, let&#8217;s.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4505" title="August 29, 2003 @ 12:15 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4506"><p>On the if-you-can&#8217;t-say-something-cogent-say-soemthing-trivial principle, I agree with Kottke that most people are writing weblogs, abbreviated blog, and not web logs.  On the other pseudopod, I believe <a href="/web/20110810184643/http://www.dm.net/~lnh/Log/log.html">http://www.dm.net/~lnh/Log/log.html</a> really is a web log and not a weblog (and contra the navigation don&#8217;t get to call it a blog).</p>
+<p>&#8212;L.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.dm.net/~lnh/' rel='external nofollow' class='url'>lnh</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4506" title="August 29, 2003 @ 12:32 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4507"><p>Let me take a crack at semantic pragmatism: when it comes to parsing, what cool things can you do with XHTML that you /can&#8217;t/ do with HTML?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken Walker</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4507" title="August 29, 2003 @ 12:38 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4508"><p>Ken,</p>
+<p>There are plenty of cool things you can do with XHTML that you cannot do with HTML.  XHTML+MATHML+SVG, for example.</p>
+<p>Semantics has nothing to do with parsing though.  That was one of Mark&#8217;s points.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.jimdabell.com/' rel='external nofollow' class='url'>Jim Dabell</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4508" title="August 29, 2003 @ 1:44 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4509"><p>Jim, I&#8217;m referring to Mark&#8217;s statement in comment 19:</p>
+<p>&#8220;While you can transform/convert/do cool things to XHTML with XML tools and HTML with SGML tools, *more people* are doing interesting things with XML tools.&#8221;</p>
+<p>I&#8217;d really like to see some concrete examples of what cool stuff can be done with SGML tools vs. what cool stuff can be done with XML tools. Use cases would interest me most.  When I read &#8220;XHTML+MATHML+SVG,&#8221; it brings to mind vague impressions of dynamically graphing 3D calculus&#8211;pretty nebulous and unexciting for me.</p>
+<p>My apologies for mixing concepts that are pretty, well, you know&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken Walker</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4509" title="August 29, 2003 @ 2:37 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4523"><cite><a href='/web/20110810184643/http://www.chriscurtis.org/index/P513/' rel='external nofollow' class='url'>Lethargic Ramblings</a></cite>&#160;(trackback)</li>
+<li id="comment-4510"><p>Comment 5 sums it up for me. Attempting to code with valid XHTML and CSS is an effort to try and add a touch of class and mark of quality to my work. I want to produce something that I personally can be proud of. When I do a single-pixel hack I feel dirty.</p>
+<p>I tend to agree with Mark that the issues above are indeed separate, but they are not mutually exclusive, which is why people might confuse them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://philsown.com/' rel='external nofollow' class='url'>Phillip Harrington</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4510" title="August 29, 2003 @ 5:05 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4511"><p>Well, you know, it was a pretty good rant, so I guess you&#8217;ll get more visits from the markup geeks indeed&#8230; But gerbil wannabees in search for a quick fix might want to get off your bandwidth and look at my extremely fresh (the pixels haven&#8217;t quite dried yet) rant on the Eolas/Microsoft suit.</p>
+<p>To cut a long story short, Eolas sued Microsoft over plugins and they might have to remove (or change) plugin support on IE, RIght now, it looks like as good an incentive as any to force people to adhere to proper web standards &#8211; too bad such a blunt weapon as the US patent legislation had to be used&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://mac.against.org/space' rel='external nofollow' class='url'>Rui Carmo</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4511" title="August 29, 2003 @ 6:45 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4512"><p>Oops. Missed the rant link (sorry): <a href="/web/20110810184643/http://mac.against.org/space/blog/2003-08-29.22%3A26">http://mac.against.org/space/blog/2003-08-29.22%3A26</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://mac.against.org/space' rel='external nofollow' class='url'>Rui Carmo</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4512" title="August 29, 2003 @ 6:47 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4513"><p>Good stuff Mark.</p>
+<p>The thing that facinated me about this was how the discussion spread like forrest fire to other blogs most of which were basically repeating the same point(s) of view and then linking to each other.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.smithpaul.com/' rel='external nofollow' class='url'>Paul Michael Smith</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4513" title="August 29, 2003 @ 6:51 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4524"><cite><a href='/web/20110810184643/http://earthlingsoft.net/ssp/blog/2003/08/30/semantics' rel='external nofollow' class='url'>Quarter Life Crisis</a></cite>&#160;(trackback)</li>
+<li id="comment-4514"><p>&#8220;spread like forrest fire to other blogs most of which were basically repeating the same point(s) of view and then linking to each other.&#8221;</p>
+<p>Sounds about right.  That&#8217;s blogging for you.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110810184643/http://www.zeit.ca/' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110810184643/http://diveintomark.org/archives/2003/08/29/semantics#comment-4514" title="August 29, 2003 @ 10:07 pm"><img alt="#" src=/web/20110810184643im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4525"><cite><a href='/web/20110810184643/http://leavesrustle.com/articles/29/index.html' rel='external nofollow' class='url'>Leaves Rustle</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110810184643/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110810184643/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110810184643/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110810184643/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110810184643/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.445 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 13:34:03 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 18:46:43 Aug 10, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:12:57 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Gmail accessibility [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806105904/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806105904/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806105904/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806105904/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806105904im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806105904/http://diveintomark.org/archives/2004/04/07/from" title="Grammar">
+<link rel=next href="/web/20110806105904/http://diveintomark.org/archives/2004/04/12/dream" title="I dream of Gmail">
+<link rel=up href="/web/20110806105904/http://diveintomark.org/archives#p1491" title="April 2004">
+<link rel='index' title='dive into mark' href='/web/20110806105904/http://diveintomark.org/' />
+<link rel='prev' title='Grammar' href='/web/20110806105904/http://diveintomark.org/archives/2004/04/07/from' />
+<link rel='next' title='I dream of Gmail' href='/web/20110806105904/http://diveintomark.org/archives/2004/04/12/dream' />
+<link rel='canonical' href='/web/20110806105904/http://diveintomark.org/archives/2004/04/10/gmail-accessibility' />
+<link rel='shortlink' href='/web/20110806105904/http://diveintomark.org/?p=1491' />
+<meta name="description" content="The only way to use Gmail is the way that the Gmail designers use Gmail. The only way Gmail could be less accessible is if the entire site were built in Flash.">
+<meta name="keywords" content="accessibility">
+<link href="/web/20110806105904cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806105904/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806105904/http://diveintomark.org/archives/2004/04/10/gmail-accessibility">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2004\/04\/10\/gmail-accessibility";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2004/04/10/gmail-accessibility" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806105904" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514114140/http://diveintomark.org/archives/2004/04/10/gmail-accessibility" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:59:04 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120516021112/http://diveintomark.org/archives/2004/04/10/gmail-accessibility" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="16 May 2012"><strong>MAY</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110709033956/http://diveintomark.org/archives/2004/04/10/gmail-accessibility" title="3:39:56 Jul 9, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:59:04 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110811211954/http://diveintomark.org/archives/2004/04/10/gmail-accessibility" title="21:19:54 Aug 11, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100107062703/http://diveintomark.org/archives/2004/04/10/gmail-accessibility" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jan 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:59:04 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121112010138/http://diveintomark.org/archives/2004/04/10/gmail-accessibility" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="12 Nov 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806105904*/http://diveintomark.org/archives/2004/04/10/gmail-accessibility" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>54 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">11 Apr 06 - 12 Nov 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000402222115_2007:-1:521011000211_2008:-1:111120201000_2009:-1:010000000000_2010:-1:100000000021_2011:7:000010120000_2012:-1:000011000010_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806105904/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806105904/http://diveintomark.org/archives#p1491">April 10, 2004</a> &#8227;
+<h2>Gmail accessibility</h2> (<a href="/web/20110806105904/http://diveintomark.org/tag/accessibility" rel="tag">accessibility</a>)</div>
+<p><a href="/web/20110806105904/http://gmail.google.com/">Gmail</a> is Google&#8217;s upcoming free webmail service.  The service is not open to the public and is still in active development, and this feedback may be obsolete by the time the service goes live.</p>
+
+<p>I tested with Mozilla Firefox 0.8, Microsoft Internet Explorer 6.0SP1 with all service packs and patches, JAWS 5.0, WindowEyes 4.5, and Lynx 2.8.4.</p>
+
+<h4>Global keyboard shortcuts</h4>
+
+<p>Gmail traps <code>&lt;body onkeypress&gt;</code> to provide global keyboard shortcuts.  <kbd>j</kbd> and <kbd>k</kbd> select the next and previous message in the current folder; <kbd>o</kbd> or <kbd>ENTER</kbd> opens the selected message; <kbd>c</kbd> composes a new message; <kbd>/</kbd> moves focus to the search box, and so forth.  Note that these keyboard shortcuts do not use modifier keys such as <kbd>CTRL</kbd> or <kbd>ALT</kbd>.  Just pressing <kbd>o</kbd> by itself opens the selected message.  (More on selecting messages in a minute.)</p>
+
+<p>Accessibility problems with this technique:</p>
+
+<ul>
+<li>It interferes with Mozilla&#8217;s <q>Find as you type</q> feature, which allows you to type the first few letters of a link to set focus on the link, and then type <kbd>ENTER</kbd> to follow the link.  Typing letters may trigger a Gmail global keyboard shortcut instead.</li>
+<li>If you change the <q>Find as you type</q> feature to allow Mozilla to highlight any text at all, rather than just links (an option in the browser preferences), it appears that the web page never gets the keypresses at all, so Gmail&#8217;s global keyboard shortcuts don&#8217;t work.</li>
+<li>The JAWS screen reader traps all browser keypresses by default and assigns its own actions to them.  This is called <q>Navigation Quick Keys</q>.  For example, while browsing with JAWS in Navigation Quick Keys mode, <kbd>p</kbd> jumps to (and starts reading) the next paragraph, <kbd>n</kbd> jumps to the next text after a list of links, and so forth.  In <q>Navigation Quick Keys</q> mode, JAWS will never send keypresses to the web page, which means that Gmail&#8217;s global keyboard shortcuts don&#8217;t work.</li>
+</ul>
+
+<p>Note: You can turn off Navigation Quick Keys temporarily by typing <kbd>INSERT+N</kbd>, but it will be turned back on with the next page load (following any link, or manually or automatically refreshing the current page).  You can turn it off permanently in a JAWS configuration dialog, but then your ability to navigate other web sites is severely reduced.</p>
+
+<h4>Global navigation bar</h4>
+
+<p>GMail has a global navigation bar along the left-hand side: <q>Compose Mail</q>, <q>Inbox</q>, <q>Starred</q>, <q>Sent Mail</q>, <q>All Mail</q>, <q>Spam</q>, and <q>Trash</q>.  Each element in the navigation bar looks like a link, but they are not real links.  They are merely text that has been styled to appear underlined and change the cursor appearance when hovering over them.  They are not <code>&lt;a href="..."&gt;</code> links; they are not even <code>&lt;a href="javascript:..."&gt;</code> links.  They are simply styled text.</p>
+
+<p>Accessibility problems with this technique:</p>
+
+<ul>
+<li>It prevents the use of Mozilla&#8217;s <q>Find as you type</q> feature, which finds links on the page.  Since these navigation elements are not real links, <q>Find as you type</q> does not find them.  Even tweaking the <q>Find as you type</q> feature to highlight any text on the page does not find them, for reasons that are not clear to me.</li>
+<li>It prevents tab-based keyboard navigation.  Tabbing through the GMail interface finds the Feedback, Contacts, Help, Sign out, search box, and search buttons along the top, then the Archive, More Actions, more (keyboard shortcut help), Terms of Use, Privacy Policy, Program Policies, and Google Home links along the bottom.  The navigation in the middle is passed over, because the elements are not real links.</li>
+<li>It prevents users from overriding the link style with a browser preference or user stylesheet, since they are not real links.</li>
+<li>It completely prevents JAWS from accessing these navigation elements at all.  JAWS will announce the text of the navigation elements as it&#8217;s reading the page, but it will not announce them as links (since they&#8217;re not links), and it will not provide any way to activate them.</li>
+<li>JAWS has a dialog box (activated by <kbd>INSERT+F7</kbd>) that lists all the links on the page and allows the user to select any link and activate it.  These navigation elements are not listed in that dialog, because they are not real links.</li>
+<li>Some of the navigation elements have global keyboard shortcut sequences which provide a means of accessing them.  For example, <q>Inbox</q> is <kbd>g</kbd>, then <kbd>i</kbd>; <q>All Mail</q> is <kbd>g</kbd>, then <kbd>a</kbd>.  In order to use these, Mozilla users must ensure that <q>Find as you type</q> is either off or only searching for real links, and JAWS users must turn off Navigation Quick Keys.</li>
+<li>Not all navigation elements have global keyboard shortcuts or sequences.  In the absence of real links, these navigation elements are completely inaccessible to JAWS users.</li>
+</ul>
+
+<p>Ironically, Gmail&#8217;s global keyboard shorcuts are off by default.  In order to turn them on (and get partial access to the global navigation bar), you must click the Settings link at the top of the page.  But the Settings link is not a real link either; you can&#8217;t tab to it, and JAWS does not announce it as a link (since it&#8217;s not) and provides no way to activate it.  In other words, turning on Gmail&#8217;s keyboard shortcuts requires a mouse.</p>
+
+<h4>Selecting messages</h4>
+
+<p>Message folders within Gmail are modal, in the sense that they have the concept of a currently selected message.  The currently selected message is indicated by a right bracket (<samp>&gt;</samp>).  Global keyboard shortcuts <kbd>j</kbd> and <kbd>k</kbd> move down and up the list to select a different message.  Typing <kbd>j</kbd> or <kbd>k</kbd> to select a message does not actually change the focus of any element on the page, so JAWS does not announce any change; it simply echoes the key pressed.  This means that JAWS users have no way of knowing which message is currently selected.</p>
+
+<h4>Viewing messages</h4>
+
+<p>Gmail message folders show a list of messages with a <q>clickable</q> title and optional excerpt.  Clicking on the title/excerpt opens the message for viewing.  But the title is not a real link.  Just like the global navigation elements, it is merely styled text designed to act like a link under a certain narrow set of circumstances.</p>
+
+<p>Accessibility problems with this technique:</p>
+
+<ul>
+<li>It prevents reading messages with Mozilla&#8217;s <q>Find as you type</q>.</li>
+<li>It prevents reading messages with tab-based keyboard navigation.</li>
+<li>It prevents JAWS users from selecting a message to read.  If Navigation Quick Keys is turned off, JAWS users can use <kbd>j</kbd> and <kbd>k</kbd> to select a message and <kbd>ENTER</kbd> to read it, but since message selection is not based on focus, JAWS users have no way of knowing which message they are about to read until they read it.</li>
+</ul>
+
+<h4>Options while viewing messages</h4>
+
+<p>While viewing a message in Gmail, there is a <q>More options</q> link which toggles the display of six other links: <q>Reply</q>, <q>Reply all</q>, <q>Forward</q>, <q>Print</q>, <q>Trash</q>, and <q>Show original</q>.  Neither the <q>More options</q> link nor any of the six toggled actions are real links, and they share all the same problems as the global navigation elements and messages within a folder:</p>
+
+<ul>
+<li>Inaccessible by any form of keyboard navigation.  You can not tab to them or activate them with the keyboard in any way.</li>
+<li>Inaccessible to JAWS users.  JAWS users are unable to use any of these features.</li>
+</ul>
+
+<h4>Composing messages</h4>
+
+<p>On the Gmail main screen, there is a global navigation element <q>Compose mail</q> (global keyboard shortcut <kbd>c</kbd>).  It is not a real link, so the only way to access it is with a mouse or with Gmail&#8217;s global keyboard shortcuts, which can not be turned on without a mouse.</p>
+
+<p>While composing a message, there are three links below the <q>To:</q> line: <q>Add CC</q>, <q>Add BCC</q>, and <q>Attach file</q>.  Again, these are not real links; they are merely styled text.  You can not tab to them, and the documentation lists no global keyboard shortcuts for these features.  These features are completely inaccessible by any form of keyboard navigation, and completely inaccessible to JAWS users.</p>
+
+<h4>Replying/forwarding messages</h4>
+
+<p>While viewing a message, there are <q>reply</q> and <q>forward</q> links at the end of the message.  These are not real links; they are merely styled text.  You can not tab to them.  They have global keyboard shortcuts <kbd>r</kbd> and <kbd>f</kbd> respectively, which only work for JAWS users once Navigation Quick Keys is turned off and Gmail global keyboard shortcuts are turned on.</p>
+
+<h4>Auto-refresh</h4>
+
+<p>All pages within Gmail auto-refresh after a certain period of time (it appears to be about 2 minutes).  There is no option to turn this off or to adjust the refresh frequency.  When the page reloads, JAWS users will lose their place on the page, JAWS will re-announce the page title, and start over reading from the top of the page.  JAWS users will need to re-navigate through the page to pick up where they left off.</p>
+
+<h4>Frames</h4>
+
+<p>Gmail makes extensive use of frames to reduce page loads and server round trips.  It has a total of 9 frames, most of which are hidden at any given time.  One of them contains the message folder view, and one of them contains the compose/read message view.  One of them contains nothing but 228 KB of Javascript, which is used by all other frames.</p>
+
+<p>Accessibility problems with this technique:</p>
+
+<ul>
+<li>Some screen readers (such as WindowEyes) will announce all 9 frames when loading the page.</li>
+<li>The frames do not have descriptive titles or names, and it is possible through tabbing to get lost in the wrong frame.</li>
+<li>When switching frames with global keyboard shortcuts (in this case g, then i), focus remains on the now-hidden frame.  For example, I was composing a message.  I typed <kbd>INSERT+N</kbd> to tell JAWS to turn off Navigation Quick Keys.  I typed <kbd>ESC</kbd> to remove focus from the message textarea.  I typed <kbd>G</kbd>, then <kbd>I</kbd> to return to the inbox folder view.  This makes the current frame invisible and the message folder frame visible.  Then I typed <kbd>TAB</kbd> and discovered that the message I had canceled composing still had focus (even though the frame was hidden), and tabbing around activated (and JAWS announced) the <q>Send</q> button, <q>Cancel</q> button, and other elements of the compose window.</li>
+<li>Frame switches (such as canceling a message and returning to the inbox) are not announced like a new page, because in fact the browser is not loading a new page.  When you load a new page, JAWS announces the window title of the page, but it does not do this when Gmail <q>switches</q> pages by switching frames.  No context change is announced at all, so JAWS users will have no indication of where they really are in the Gmail service.</li>
+</ul>
+
+<h4>Lynx</h4>
+
+<p>Gmail requires Javascript, and therefore does not work in Lynx.</p>
+
+<h4>Final thoughts</h4>
+
+<p>Gmail is the least web-like web application I have ever seen.  It requires both Javascript and cookies in order to load at all.  It uses frames in such a way that prevents bookmarking and breaks the back button, and frames can not be loaded in isolation because every frame relies on scripts defined in other frames.  The entire application appears to have been designed to thwart reverse engineering (of the YahooPops and Hotmail Popper variety).  
+
+<p>Furthermore, the most innovative feature of Gmail &#8212; the global keyboard shortcuts &#8212; appears to have been designed by vi users (<kbd>j</kbd> moves down, <kbd>k</kbd> moves up, and we are expected to memorize multi-key sequences for navigation).  Yet by using fake links everywhere, Gmail throws away the most basic web feature, breaks useful browser-level innovations like Mozilla&#8217;s <q>Find as you type</q>, and breaks third-party products like JAWS and WindowEyes.  So the target market for Gmail appears to be vi users who use Internet Explorer, and have a working pair of eyes.</p>
+
+<p>In short, the only way to use Gmail is the way that the Gmail designers use Gmail.  The only way Gmail could be less accessible is if the entire site were built in Flash.</p>
+
+<p><strong>Update April 13, 2004:</strong> Kevin Fox, a user interface designer at Google, says <a href="/web/20110806105904/http://fury.com/article/1994.php">Google is aware of these problems</a>, and that accessibility is very important to them.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806105904/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806105904/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806105904/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806105904/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806105904/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.345 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:24:06 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:59:04 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:11:18 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

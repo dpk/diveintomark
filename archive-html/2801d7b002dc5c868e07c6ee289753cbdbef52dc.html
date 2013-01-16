@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>RDF photo gallery [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110911075809/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110911075809/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110911075809/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110911075809/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110911075809im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110911075809/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging" title="The Ws of weblogging">
+<link rel=next href="/web/20110911075809/http://diveintomark.org/archives/2003/06/18/hello_your_name_is" title="Hello your name is">
+<link rel=up href="/web/20110911075809/http://diveintomark.org/archives#p1360" title="June 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; RDF photo gallery Comments Feed" href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery/feed" />
+<link rel='index' title='dive into mark' href='/web/20110911075809/http://diveintomark.org/' />
+<link rel='prev' title='The Ws of weblogging' href='/web/20110911075809/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging' />
+<link rel='next' title='Hello your name is' href='/web/20110911075809/http://diveintomark.org/archives/2003/06/18/hello_your_name_is' />
+<link rel='canonical' href='/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery' />
+<link rel='shortlink' href='/web/20110911075809/http://diveintomark.org/?p=1360' />
+<meta name="description" content="Photo cross-reference. In progress. Now, and this is a completely serious question, how do I express this in RDF?">
+<meta name="keywords" content="rdf">
+<link href="/web/20110911075809cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110911075809/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/06\/17\/rdf_photo_gallery";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "11";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110911075809" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101122134005/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 7:58:09 Sep 11, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Oct
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101122134005/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery" title="13:40:05 Nov 22, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 7:58:09 Sep 11, 2011">11</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620040131/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 7:58:09 Sep 11, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110911075809*/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>19 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Jun 06 - 11 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000003002100_2007:-1:011200000101_2008:-1:010110000000_2009:-1:000000000000_2010:-1:000001000110_2011:8:000000001000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110911075809/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110911075809/http://diveintomark.org/archives#p1360">June 17, 2003</a> &#8227;
+<h2>RDF photo gallery</h2> (<a href="/web/20110911075809/http://diveintomark.org/tag/rdf" rel="tag">rdf</a>)</div>
+<p><a href="/web/20110911075809/http://diveintomark.org/photos/xref/" title="dive into mark: Photos cross-reference">Photo cross-references</a>.  In progress.  Every photo may depict multiple people doing multiple activities, may be taken in multiple places, may show a variety of special things, and so forth.  Furthermore, people are organized into a loose categorization scheme; some people are family, some are friends, some are friends from a particular job, and so forth.  Ditto places.  Ditto events.</p>
+
+<p>I will soon be adding cross-references on each individual photo page.  So if you&#8217;re looking at a photo of me and Dora and my father in my house in front of the Christmas tree at Christmas, there would be links to see other pictures of me, other pictures of Dora, other pictures of my father, other pictures taken in our house, other pictures of Christmas trees, and other pictures taken around Christmas.</p>
+
+<p>Now.</p>
+
+<p>I do not know how to express all of this in RDF.  I am aware that I have maligned RDF in the past, and not without reason, and I will malign it a bit more in short order.  It&#8217;s complicated, and it&#8217;s not for everything.  However, this seems to me to be the perfect application for it.</p>
+
+<p>Thus.</p>
+
+<p>I have been looking at what <a href="/web/20110911075809/http://norman.walsh.name/">Norman Walsh</a> has done, setting up a <q>taxonomy</q> of topics, and then associating each log entry and photo with topics in that taxonomy.  It&#8217;s quite impressive.  I believe that&#8217;s what I want to do here.</p>
+
+<p>So.</p>
+
+<p>First, a taxonomy:</p>
+
+<blockquote>
+<p>[Reception] [is part of] [Wedding]</p>
+<p>[Wedding] [is a type of] [Event]</p>
+<p>[Lara] [is a] [friend-who-works-at-Prophet]</p>
+<p>[Friend-who-works-at-Prophet] [is a type of] [Friend]</p>
+<p>[Friend] [is a type of] [Person]</p>
+</blockquote>
+
+<p>Second, information about each photograph:</p>
+
+<blockquote>
+<p>[Photo X] [was taken on] [a specific date]</p>
+<p>[Photo X] [was taken at] [a specific place]</p>
+<p>[Photo X] [depicts] [a certain person]</p>
+<p>[Photo X] [depicts] [another person]</p>
+<p>[Photo X] [shows people doing] [a specific activity]</p>
+</blockquote>
+
+<p>That pseudocode looks suspiciously like RDF triples, but I don&#8217;t know how to make it into actual RDF.  My grasp of the RDF model is still shaky, my cumulative experience with the <code>rdflib</code> library can be measured in hours, and as almost everyone in the world will admit, the syntax of the RDF/XML seralization is opaque.  All of which is simply to say that RDF has a steep learning curve, and I am still on the bottom of it, and this is what that feels like.</p>
+
+<p>Taking the advice of those who say RDF is easier with the right tools, I have downloaded the latest development release of <a href="/web/20110911075809/http://rdflib.net/"><code>rdflib</code></a>, an RDF library for Python.  I have read through all the documentation and included examples, and parsed a few FOAF files with it, but I can&#8217;t quite make the leap into getting it to express what I want, probably because I&#8217;m not entirely sure what I want to express.</p>
+
+<p>Any constructive advice would be greatly appreciated.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty four comments here (<a href=/web/20110911075809/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-2812"><p>Scattershot thoughts:</p>
+<p>Is there a reason you&#8217;re not using FOAF to express your friend-related triples? (Not a rhetorical question, nor intended to be insulting. You may well have a perfectly good reason. I don&#8217;t know FOAF that well.)</p>
+<p>How much of this would XFML handle?</p>
+<p class=sig>&#8212;&#8201;<cite>Dorothea Salo</cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2812" title="June 17, 2003 @ 5:00 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2813"><p>Yup, might use FOAF.  2 things:</p>
+<p>1. don&#8217;t know how to express sub-types (&#8220;friend from Prophet&#8221;, &#8220;friend from Labcorp&#8221;)<br />
+2. don&#8217;t know how to express different relationship types (&#8220;friend&#8221;, &#8220;family&#8221;, &#8220;random person I met once&#8221;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2813" title="June 17, 2003 @ 5:08 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2814"><p>I&#8217;m happy to answer more specific requests. Here&#8217;s a translation of your psuedo-triples into N3.</p>
+<p>Wedding a Event .<br />
+Wedding contains Reception .</p>
+<p>Lara a Friend .<br />
+Lara employer Prophet .</p>
+<p>Friend rdfs:subClassOf Person .</p>
+<p>PhotoX dc:created &#8220;2003-02-11&#8243;;<br />
+       location Place ;<br />
+       foaf:depicts Person, OtherPerson;<br />
+       foaf:shows Kissing .</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2814" title="June 17, 2003 @ 5:09 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2815"><p>Oh, I see I got the Friend thing wrong. You meant:</p>
+<p>Lara a FriendFromProphet .<br />
+FriendFromProphet rdfs:subClassOf Friend .</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2815" title="June 17, 2003 @ 5:11 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2816"><p>Honestly though, why do you want to use RDF? This is very cool already. Are you looking just to export the data?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2816" title="June 17, 2003 @ 5:30 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2817"><p>Aaron: thanks, that helps a bit.  Subclasses are expressed with the predicate rdfs:subClassOf.  FriendFromProphet is simply a URI to a node within my own taxonomy.  Maybe Friend is too.</p>
+<p>I think it&#8217;s the predicates that are throwing me.  dc:created makes sense for dates.  foaf:depicts makes sense for people, and probably things (like Christmas trees).  I don&#8217;t see foaf:shows in the FOAF docs. ( <a href="/web/20110911075809/http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a> )  What about the other predicates?  Do I just make them up?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2817" title="June 17, 2003 @ 5:31 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2818"><p>Re: why RDF.  Um, because I want to learn more about RDF, and this is a good amount of real data to work with, and it seems like a good fit, and Norman Walsh did it, and Norman Walsh is cool.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2818" title="June 17, 2003 @ 5:33 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2819"><p>You might want to check out Protege (<a href="/web/20110911075809/http://protege.stanford.edu/)"><a href="/web/20110911075809/http://protege.stanford.edu/" rel="nofollow">http://protege.stanford.edu/</a>)</a> .</p>
+<p class=sig>&#8212;&#8201;<cite>Greg Schueler</cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2819" title="June 17, 2003 @ 5:34 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2820"><p>Protege looks very cool.  Will experiment.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2820" title="June 17, 2003 @ 6:04 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2821"><p>&#8220;and Norman Walsh did it, and Norman Walsh is cool.&#8221;<br />
+If Norman Walsh jumped off a cliff would you do it?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.iamsparticus.co.uk/' rel='external nofollow' class='url'>sparticus</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2821" title="June 17, 2003 @ 6:18 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2822"><p>I would just use a WikiName approach. Fuck the ontologies.</p>
+<p>You might be interested in FotoWiki, which combines this point with the idea of embedding areas/identities within JPEG files themselves.</p>
+<p><a href="/web/20110911075809/http://www.fotowiki.net/">http://www.fotowiki.net/</a><br />
+<a href="/web/20110911075809/http://fotonotes.net/index.php?action=DisplayPage&page=about">http://fotonotes.net/index.php?action=DisplayPage&#038;page=about</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://webseitz.fluxent.com/wiki' rel='external nofollow' class='url'>BillSeitz</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2822" title="June 17, 2003 @ 6:25 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2823"><p>Oooh I feel sorry for us living in this era.</p>
+<p>Manual content annotation is laborious, and hence costly. An alternative is (semi) automatic feature extraction, on which a lot of research has been done, but unfortunatily there is little hope for this to work well for arbritrary media formats in the near future.</p>
+<p>I do find it very cool what you are doing here Mark, it has to take you quite some time. Your long descriptions were a Good Thing &#8482;, but this sort of thing goes way beyond. And I also think images.google.com can enjoy this sort of work :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.cs.vu.nl/~mvermaat/' rel='external nofollow' class='url'>Martijn</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2823" title="June 17, 2003 @ 6:32 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2824"><p>Just a quick comment on your current hierarchy (as seen on the photos/xref page) : there&#8217;s no way of viewing all of the cat pictures! Considering your search engine statistics I see this as a pretty major limitation ;) I suppose cats ends up being a sub-thingy of pets.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://simon.incutio.com/' rel='external nofollow' class='url'>Simon Willison</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2824" title="June 17, 2003 @ 6:32 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2825"><p>Would the FOAF relationship module be useful for some o&#8217; this guff?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.tecknik.net/digiboy/' rel='external nofollow' class='url'>Marcus</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2825" title="June 17, 2003 @ 6:53 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2826"><p>I think there may be a foaf:Friend. I guess I misremembered foaf:shows. Feel free to make up your own predicates. If they&#8217;re useful, make a namespace for them (and a little page describing them).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2826" title="June 17, 2003 @ 7:19 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2827"><p>At Simon&#8217;s suggestion, I have subclassed Pets into Dogs and Cats, to make it easier to find all the cat pictures.</p>
+<p><a href="/web/20110911075809/http://diveintomark.org/photos/xref/pets/cats/">http://diveintomark.org/photos/xref/pets/cats/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2827" title="June 17, 2003 @ 7:38 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2828"><p>Shouldn&#8217;t it be:</p>
+<p>LongEvent isa Event<br />
+Wedding isa LongEvent<br />
+WeddingReception isa Event<br />
+WeddingCeremony isa Event<br />
+WeddingReception follows WeddingCeremony</p>
+<p>and so on.</p>
+<p>RDF can drive one crazy like an onion with multiple personality disorder.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.docuverse.com/blog/donpark/' rel='external nofollow' class='url'>Don Park</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2828" title="June 17, 2003 @ 8:47 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2829"><p>Have you seen this?  &#8220;A Semantic Web shoebox &#8211; annotating photos with RSS and RDF&#8221;</p>
+<p><a href="/web/20110911075809/http://www.hackdiary.com/archives/000020.html">http://www.hackdiary.com/archives/000020.html</a></p>
+<p>Just coincidence that I stumbled across that page and your post on the same day&#8230;  Lots of other RDF stuff on hackdiary too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://blog.germuska.com/' rel='external nofollow' class='url'>Joe Germuska</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2829" title="June 17, 2003 @ 11:54 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2830"><p>more random thoughts:</p>
+<p>When making up predicates, note that they too can be derived from other predicates, using rdfs:subPropertyOf</p>
+<p>foaf:depicts can be used with most any object: a person, an activity, a thing.</p>
+<p>An interesting use of Wordnet, <a href="/web/20110911075809/http://xmlns.com/2001/08/wordnet/">http://xmlns.com/2001/08/wordnet/</a> and <a href="/web/20110911075809/http://www.openhealth.org/RDDL/wnbrowse">http://www.openhealth.org/RDDL/wnbrowse</a></p>
+<p>I find it easier to visualize RDF using ER-style, node-centric views, like this one I did for RSS/RDF <a href="/web/20110911075809/http://bitsko.slc.ut.us/2003/06/dc_diag.png">http://bitsko.slc.ut.us/2003/06/dc_diag.png</a></p>
+<p>The entity relationships in RDF are dynamic though, <a href="/web/20110911075809/http://www.w3.org/DesignIssues/RDFnot.html#ER">http://www.w3.org/DesignIssues/RDFnot.html#ER</a> plus the ability to use sub-properties.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://ken@bitsko.slc.ut.us/' rel='external nofollow' class='url'>Ken MacLeod</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2830" title="June 17, 2003 @ 11:58 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2831"><p>This is one great cross-referencing. I am myself thinking about the possibilities to put photos on my server for all to admire, and xref is something I&#8217;d like to have but have yet to grasp how to achieve it.</p>
+<p>Also : a dog named Xavier ?!? ;)<br />
+<a href="/web/20110911075809/http://diveintomark.org/photos/xref/pets/dogs/xavier/">http://diveintomark.org/photos/xref/pets/dogs/xavier/</a></p>
+<p class=sig>&#8212;&#8201;<cite>Xavier</cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2831" title="June 18, 2003 @ 4:29 am"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2832"><p>While not quite as elaborate as you&#8217;ve suggested, I&#8217;ve tried some of this with a few rolls of film back in february: <a href="/web/20110911075809/http://www.wasab.dk/morten/2003/02/photos/1/">http://www.wasab.dk/morten/2003/02/photos/1/</a></p>
+<p>Some choices I&#8217;d perhaps make differently now, but the basics are there (inspired by Matt Biddulph&#8217;s work).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://xml.mfd-consult.dk/foaf/explorer/?foaf=http://xml.mfd-consult.dk/foaf/morten.rdf' rel='external nofollow' class='url'>Morten Frederiksen</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2832" title="June 18, 2003 @ 4:41 am"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2833"><p>The stuff I describe in <a href="/web/20110911075809/http://www.hackdiary.com/archives/000034.html">http://www.hackdiary.com/archives/000034.html</a> can be seen at <a href="/web/20110911075809/http://www.picdiary.com/">http://www.picdiary.com</a></p>
+<p>A picture collection like <a href="/web/20110911075809/http://www.picdiary.com/londoneye/">http://www.picdiary.com/londoneye/</a> has an associated RDF file at <a href="/web/20110911075809/http://www.picdiary.com/rss/londoneye.rss">http://www.picdiary.com/rss/londoneye.rss</a> with people markup from FOAF and keyword markup from wordnet (eg <a href="/web/20110911075809/http://xmlns.com/wordnet/1.6/Sunset-2">http://xmlns.com/wordnet/1.6/Sunset-2</a> ). Interesting vocabularies for geographic annotation are being developed by Jo Walsh at <a href="/web/20110911075809/http://space.frot.org/">http://space.frot.org/</a></p>
+<p>The RDF is linked from the HTML via a link tag in the head for autodiscovery.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.hackdiary.com/' rel='external nofollow' class='url'>Matt Biddulph</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2833" title="June 18, 2003 @ 5:42 am"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2843"><cite><a href='/web/20110911075809/http://stone.tuttlesvc.org:880/2003_06_18.html#000210' rel='external nofollow' class='url'>Tuttle SVC</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-2834"><p>Matt, thank you, that is freaking awesome.  Exactly the kind of concrete example I need to get my head around this.  You totally rock.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2834" title="June 18, 2003 @ 12:29 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2844"><cite><a href='/web/20110911075809/http://www.stuck-on-me.ch/weblog/archives/2003/06/18/rdf_with_photo.html' rel='external nofollow' class='url'>stuck-on-mobile-e-com ;-)</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2845"><cite><a href='/web/20110911075809/http://www.stuck-on-me.ch/weblog/archives/2003/06/18/rdf_with_photo.html' rel='external nofollow' class='url'>stuck-on-mobile-e-com ;-)</a></cite>&#160;(trackback)</li>
+<li id="comment-2835"><p>Mark, pretty cool and certainly near and dear to my heart.  After recently getting married myself and exceeding the 2000 mark for my digital photo archive, some sort of serious organization was in order.  I&#8217;ve taken a different approach and evaluated the major &#8220;thick-client&#8221; offerings like Adobe Photoshop Album, Picasa, etc.  I finally settled on Photoshop Album for its maturity with tagging over the rest.  It offers a mature way of defining a taxonomy and tagging photos, and it keeps all this in an MS Access Databasee format (their .psa files) that is easily accessible.</p>
+<p>Out of curiosity, how do you currently &#8220;tag&#8221; your photos?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://www.reuters.com/' rel='external nofollow' class='url'>Brian Theodore</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2835" title="June 18, 2003 @ 2:14 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2836"><p>Surprised that nobody has mentioned <a href="/web/20110911075809/http://www.w3.org/TR/photo-rdf/">http://www.w3.org/TR/photo-rdf/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://frost.infara.net/' rel='external nofollow' class='url'>Dylan Moreland</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2836" title="June 18, 2003 @ 6:29 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2837"><p>XFML would handle this perfectly except for the verbs: it doesn&#8217;t do [is part of], [is a type of] and so on. Then again, for your purposes, you don&#8217;t seem to need the verbs.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://poorbuthappy.com/ease' rel='external nofollow' class='url'>PeterV</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2837" title="June 19, 2003 @ 9:54 am"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2838"><p>Dylan, I found your comment when I was about to do it. I remember it from the Jigsaw java web server:</p>
+<p><a href="/web/20110911075809/http://www.w3.org/2002/Talks/0920-yl-qh/Overview.html">http://www.w3.org/2002/Talks/0920-yl-qh/Overview.html</a></p>
+<p>There was a working demo somewhere.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://memojo.com/memojowiki/Wiki.jsp?page=SantiagoGalaBlog' rel='external nofollow' class='url'>Santiago Gala</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2838" title="June 19, 2003 @ 7:56 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2839"><p>Santiago: <a href="/web/20110911075809/http://jigsaw.w3.org/Yves/Australia/1998/04/">http://jigsaw.w3.org/Yves/Australia/1998/04/</a></p>
+<p>But it&#8217;s fairly boring &#8212; he does nothing with people representation. Not a great example.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://frost.infara.net/' rel='external nofollow' class='url'>Dylan Moreland</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2839" title="June 20, 2003 @ 12:23 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2840"><p>For the record, I have no plans to jump of any cliffs.</p>
+<p>But I have to say, the suggestion that I might really, really makes me want to find some way to photograph just that event. A cliff over water, presumably. Or maybe I need to try parasailing or hang-gliding or something. Nah, that&#8217;d reduce the drama. I think it has to be a free-fall.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://norman.walsh.name/' rel='external nofollow' class='url'>Norman Walsh</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2840" title="June 21, 2003 @ 1:37 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2841"><p>Norm, I recommend skydiving.</p>
+<p><a href="/web/20110911075809/http://diveintomark.org/photos/xref/places/north_carolina/midair/">http://diveintomark.org/photos/xref/places/north_carolina/midair/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2841" title="June 21, 2003 @ 3:39 pm"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2842"><p>Hey Mark, I&#8217;ve been thinking about this and I have a question for you (or Norman, or whoever). Every predicate naturally has an associated predicate that expresses the statement in the opposite direction. (Image1 depicts Mark, Mark isDepictedBy Image1.)</p>
+<p>The question is this: Which do you store? Do you store both? If you only store Image1 depicts Mark, then to find all pictures of Mark you have to look at every image and see if it contains Mark. This seems inefficient. Then again, recording two statements for everything you wish to express also seems inefficient. </p>
+<p>Let me know if you have any thoughts on the matter.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075809/http://mattereaterlad.com/' rel='external nofollow' class='url'>Michael</a></cite>&#160;<a class=p href="/web/20110911075809/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery#comment-2842" title="June 27, 2003 @ 8:49 am"><img alt="#" src=/web/20110911075809im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110911075809/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110911075809/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110911075809/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110911075809/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110911075809/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.355 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 12:00:26 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 7:58:09 Sep 11, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:14:03 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

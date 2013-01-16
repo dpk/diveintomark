@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Atom API implementation [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806090538/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806090538/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806090538/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806090538/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806090538im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806090538/http://diveintomark.org/archives/2003/08/15/slugs" title="Cruft-free URLs in Movable Type">
+<link rel=next href="/web/20110806090538/http://diveintomark.org/archives/2003/08/19/headers" title="Headers and soul">
+<link rel=up href="/web/20110806090538/http://diveintomark.org/archives#p1399" title="August 2003">
+<link rel='index' title='dive into mark' href='/web/20110806090538/http://diveintomark.org/' />
+<link rel='prev' title='Cruft-free URLs in Movable Type' href='/web/20110806090538/http://diveintomark.org/archives/2003/08/15/slugs' />
+<link rel='next' title='Headers and soul' href='/web/20110806090538/http://diveintomark.org/archives/2003/08/19/headers' />
+<link rel='canonical' href='/web/20110806090538/http://diveintomark.org/archives/2003/08/18/atom_api_implementation' />
+<link rel='shortlink' href='/web/20110806090538/http://diveintomark.org/?p=1399' />
+<meta name="description" content="Here is a working implementation of the Atom API. It is entirely self-contained within a single CGI script and runs on a default Apache install with no .htaccess tricks.">
+<meta name="keywords" content="atom,autodiscovery,webservices">
+<link href="/web/20110806090538cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806090538/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806090538/http://diveintomark.org/archives/2003/08/18/atom_api_implementation">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/08\/18\/atom_api_implementation";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/08/18/atom_api_implementation" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806090538" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514131935/http://diveintomark.org/archives/2003/08/18/atom_api_implementation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:05:38 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514131935/http://diveintomark.org/archives/2003/08/18/atom_api_implementation" title="13:19:35 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:05:38 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100703091200/http://diveintomark.org/archives/2003/08/18/atom_api_implementation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="3 Jul 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:05:38 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806090538*/http://diveintomark.org/archives/2003/08/18/atom_api_implementation" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>24 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">17 Apr 06 - 6 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000202101100_2007:-1:010110001101_2008:-1:010111102100_2009:-1:000000000000_2010:-1:000000100000_2011:7:000010010000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806090538/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806090538/http://diveintomark.org/archives#p1399">August 18, 2003</a> &#8227;
+<h2>Atom API implementation</h2> (<a href="/web/20110806090538/http://diveintomark.org/tag/atom" rel="tag">atom</a>, <a href="/web/20110806090538/http://diveintomark.org/tag/autodiscovery" rel="tag">autodiscovery</a>, <a href="/web/20110806090538/http://diveintomark.org/tag/webservices" rel="tag">webservices</a>)</div>
+<p><a href="/web/20110806090538/http://diveintomark.org/atom/">Here is a working implementation of the Atom API</a>.  Well, part of it anyway.  It supports introspection (to discover what functions are supported), creating new entries, editing existing entries, deleting entries, retrieving entries, and searching for entries.  It does not support editing user preferences, getting or setting categories, or adding comments.</p>
+
+<p>This implementation is entirely self-contained within a single CGI script and runs on a default Apache install with no <code>.htaccess</code> tricks.  Hopefully this will clear up a number of misconceptions about REST APIs in general and the Atom API in particular, especially the one about it being impossible to implement as a single CGI script on a default Apache install with no <code>.htaccess</code> tricks.  It is possible; I&#8217;m doing it.</p>
+
+<p>The introspection file, which tells the client what functions this server supports, is pointed to by a LINK tag on the <a href="/web/20110806090538/http://diveintomark.org/atom/">home page</a>.  My introspection LINK tag looks like this:</p>
+
+<p style="text-align:left"><code>&lt;link rel="service.edit" type="application/x.atom+xml" href="/cgi-bin/atom.cgi/service=edit" /></code></p>
+
+<p style="text-align:left">This tells us that the introspection file is at <code>http://diveintomark.org/cgi-bin/atom.cgi/service=edit</code>.  Retrieving this URL with a normal HTTP GET returns this file:</p>
+
+<p><code>&lt;introspection xmlns="http://purl.org/atom/ns#"><br />
+&nbsp;&nbsp;&lt;create-entry>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14&lt;/create-entry><br />
+&nbsp;&nbsp;&lt;search-entries>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/service=search&lt;/search-entries><br />
+&lt;/introspection></code></p>
+
+<p>The <code>create-entry</code> line tells us that we can create a new entry by POSTing an Atom entry (as XML) to the URL <code>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14</code>.  This action requires authentication, which I&#8217;ll describe in a minute.  (For the purposes of this demonstration, reading the introspection file does not require authentication, although real implementations might require it.)</p>
+
+<p>The <code>search-entries</code> line tells us that we can get minimal information about entries (probably just <code>title</code> and <code>id</code>, although the server is allowed to return more information) using the URL <code>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/service=search</code>.  We can&#8217;t use this URL in isolation; it requires at least one query string parameter.  Any of the following syntaxes are supported:</p>
+
+<dl>
+<dt><code><a href="/web/20110806090538/http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/service=search?atom-all">http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/service=search?atom-all</a></code></dt>
+<dd>Returns information on all the entries</dd>
+<dt><code><a href="/web/20110806090538/http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/service=search?atom-recent=10">http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/service=search?atom-recent=5</a></code></dt>
+<dd>Returns information on the 5 most recent entries.  Takes any positive integer.  Note that this is not part of Atom API draft 7, but it will be added in draft 8.</dd>
+<dt><code><a href="/web/20110806090538/http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/service=search?atom-start-range=5&atom-end-range=14">http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/service=search?atom-start-range=5&amp;atom-end-range=14</a></code></dt>
+<dd>Returns information on entry 5 through 14, inclusive on both ends.  The most recent entry is 0, second-most-recent is 1, etc.  May return fewer than the requested number of entries, if there aren&#8217;t enough entries (atom-end-range is out of range).  This will not raise an error.  May return an empty list of entries, if atom-start-range is out of range, or if atom-start-range is greater than atom-end-range.  This will not raise an error either.</dd>
+</dl>
+
+<p>For the purposes of this demonstration, search results do not require authentication.</p>
+
+<p>Search results look like this:</p>
+
+<p><code>&lt;search-results xmlns="http://purl.org/atom/ns#"><br />
+&lt;entry><br />
+&nbsp;&nbsp;&lt;title>Unit Test 1&lt;/title><br />
+&nbsp;&nbsp;&lt;id>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/entry_id=2412&lt;/id><br />
+&lt;/entry><br />
+&lt;entry><br />
+&nbsp;&nbsp;&lt;title>Testing&lt;/title><br />
+&nbsp;&nbsp;&lt;id>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/entry_id=2408&lt;/id><br />
+&lt;/entry><br />
+&lt;/search-results></code></p>
+
+<p>The server may, at its discretion, include more information than that in search results, but <code>title</code> and <code>id</code> are required.</p>
+
+<p>To retrieve an existing entry, do an HTTP GET on the URL for that entry (as returned, for example, in the <code>id</code> for the entry in the search results).  The URL scheme for entries is completely server-dependent; for instance, the examples in the spec have completely separate URLs for each entry, but my server implements them as parameterized URLs served off a single CGI script.  The client has no way of knowing in advance what URL scheme the server will use, and it shouldn&#8217;t care, because all it has to do is look at the search results and use the URLs it&#8217;s been given.</p>
+
+<p style="text-align:left">For example, doing an HTTP GET on <a href="/web/20110806090538/http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/entry_id=2357">http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/entry_id=2357</a> returns this Atom entry:</p>
+
+<p><code>&lt;entry xmlns="http://purl.org/atom/ns#"><br />
+&nbsp;&nbsp;&lt;id>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/entry_id=2357&lt;/id><br />
+&nbsp;&nbsp;&lt;title>Automated post&lt;/title><br />
+&nbsp;&nbsp;&lt;link>http://diveintomark.org/atom/archives/002357.html&lt;/link><br />
+&nbsp;&nbsp;&lt;created>2003-08-12T23:53:03Z&lt;/created><br />
+&nbsp;&nbsp;&lt;issued>2003-08-12T23:53:03Z&lt;/issued><br />
+&nbsp;&nbsp;&lt;modified>2003-08-12T23:53:03Z&lt;/modified><br />
+&nbsp;&nbsp;&lt;summary>An automated post&lt;/summary><br />
+&nbsp;&nbsp;&lt;content type="text/html" mode="escaped">This is a test&lt;/content><br />
+&lt;/entry></code></p>
+
+<p>For the purposes of this demonstration, retrieving entries does not require authentication.</p>
+
+<p style="text-align:left">To edit an existing entry, do an HTTP PUT on the URL for that entry (the same URL you would use to retrieve it), with the complete updated Atom entry in the body.  (Editing existing entries requires authentication, which is described below.)  So to change the title of the above entry, you would do an HTTP PUT on <code>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/entry_id=2357</code> with this in the body of the HTTP message:</p>
+
+<p><code>&lt;entry xmlns="http://purl.org/atom/ns#"><br />
+&nbsp;&nbsp;&lt;id>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/entry_id=2357&lt;/id><br />
+&nbsp;&nbsp;<strong>&lt;title>Edited post&lt;/title></strong><br />
+&nbsp;&nbsp;&lt;link>http://diveintomark.org/atom/archives/002357.html&lt;/link><br />
+&nbsp;&nbsp;&lt;created>2003-08-12T23:53:03Z&lt;/created><br />
+&nbsp;&nbsp;&lt;issued>2003-08-12T23:53:03Z&lt;/issued><br />
+&nbsp;&nbsp;&lt;modified>2003-08-12T23:53:03Z&lt;/modified><br />
+&nbsp;&nbsp;&lt;summary>An automated post&lt;/summary><br />
+&nbsp;&nbsp;&lt;content type="text/html" mode="escaped">This is a test&lt;/content><br />
+&lt;/entry></code></p>
+
+<p>The server may, at its discretion, ignore certain fields that are not user-editable.  For example, some servers might not allow the user to change the creation date of a post (because the server maintains it internally), so even if the PUT message contained an <code>&lt;created&gt;</code> element, the server would not change the creation date of the entry.  This is not an error; the server should update the fields it can update, and ignore the rest.</p>
+
+<p>Vendors may add their own custom fields, in a namespace, that do not duplicate the functionality of core Atom elements.  For example, Movable Type has a number of entry-level flags, such as whether to allow comments.  This is not handled by the core Atom API, but SixApart could define a namespace to contain their vendor-specific flags, and clients that were aware of these flags could include them in the body of the message.  Servers should ignore any unknown namespaces.</p>
+
+<p style="text-align:left">To create a new entry, do an HTTP POST on the URL given for <code>&lt;create-entries&gt;</code> in the introspection file.  In this case, that was <code>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14</code>.  Put an Atom entry in the body of the HTTP message.  If the creation succeeded, the server will respond with an HTTP status code of &#8220;201 Created&#8221;, and the URL of the new entry will be in the Location: header.  For example, when I originally created the entry above, this is what the server returned:</p>
+
+<p><code>Status: 201 Created<br />
+Location: http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14/entry_id=2357</code></p>
+
+<p>To delete an existing entry, do an HTTP DELETE on the URL for that entry.  On successful deletion, the server simply responds with an HTTP status code 200.</p>
+
+<p>Now, I mentioned that several actions (creating a new entry, editing an existing entry, and deleting an entry) require authentication.  In my implementation, authentication is handled with a variation of <a href="/web/20110806090538/http://www.ietf.org/rfc/rfc2617.txt">HTTP Digest Authentication (RFC 2617)</a>.  It is important to note that, while HTTP Digest Authentication has been around for years, our variation of it is highly experimental.  Draft 7 of the Atom API defines no authentication mechanism at all.  This is a prototype of how we might implement an application-level authentication mechanism with the strength of HTTP Digest Authentication.</p>
+
+<p>We decided to use a scheme like HTTP Digest Authentication because</p>
+
+<ol>
+<li>It never sends plaintext passwords over the wire.</li>
+<li>It does not require either client or server to store plaintext passwords on disk.  They can both store a nonreversible (one-way) hash of the password in a specific format.</li>
+<li>It can protect against replay attacks, whereby an attacker can sniff one valid transaction and use that information to create another valid transaction, even though they don&#8217;t know your password.</li>
+</ol>
+
+<p>However, we decided against relying on Apache&#8217;s implementation of HTTP Digest Authentication as-is because</p>
+
+<ol>
+<li>It requires an Apache module that is not installed by default, and that many people (including myself) do not have installed.</li>
+<li>It is handled entirely by Apache; no authentication-related information is passed on to the script.  This means it must be maintained entirely with Apache-level tools (<code>.htaccess</code> and <code>.htpasswd</code> files), which is a major maintenance headache.  Server-side API implementations do not exist in a vacuum; they are almost certainly part of a larger application which already manages users and passwords (for example, by storing them in a database).  In an informal poll among vendors, the overwhelming consensus was that they wanted an application-level authentication mechanism so they could re-use their existing infrastructure that manages users and passwords.</li>
+</ol>
+
+<del>
+<p>So this implementation of the Atom API recreates HTTP Digest Authentication at the application level, with the following changes:</p>
+
+<ul>
+<li>When authentication is required, instead of sending a <code>WWW-Authenticate</code> header, the server sends an <code>Atom-Authenticate</code> header.</li>
+<li>To authenticate, instead of sending an <code>Authentication</code> header, the client sends an <code>Atom-Authentication</code> header.</li>
+<li>Upon successful authentication, instead of sending an <code>Authentication-Info</code> header on subsequent requests, the server sends an <code>Atom-Authentication-Info</code> header.</li>
+<li>For the <code>qop</code>, the server always specifies <code>qop="atom-auth"</code>, and the client must return this with its authentication response.</li>
+<li>Instead of MD5, the server always specifies <code>algorithm="SHA"</code>, and both client and server must use SHA1 for creating hashes.</li>
+</ul>
+
+<p>For those not familiar with the inner workings of Digest Authentication, here&#8217;s how Atom authentication works:</p>
+
+<ol>
+<li><p>The client tries to do something that requires authentication, for instance, POSTing a new entry to <code>http://diveintomark.org/cgi-bin/atom.cgi/blog_id=14</code>.  The server sends back and HTTP error code of &#8220;447 Atom unauthorized&#8221;, and an <code>Atom-Authenticate</code> header like this:</p>
+<p><code>Atom-Authenticate: Digest realm="dive into atom", qop="atom-auth", algorithm="SHA", nonce="some unique server-specific value"</code></p>
+</li>
+<li><p>The client takes the username, the realm given by the server, and the password, and concatenates them to create an intermediate value which we&#8217;ll call A1:</p>
+<p><code>A1 = username + ":" + realm + ":" + password</code></p>
+</li>
+<li><p>The client takes the HTTP verb it wants to use (in this case &#8220;POST&#8221;) and the path part of the URL it wants to post to (in this case &#8220;/cgi-bin/atom.cgi/blog_id=14&#8243;), and concatenates them into an intermediate value which we&#8217;ll call A2:</p>
+<p><code>A2 = verb + ":" + uri</code></p>
+</li>
+<li><p>The client creates a unique client-specific value, which we&#8217;ll call &#8220;cnonce&#8221;.  How this happens is completely client-specific, but it should change on every request, and future values should not be guessable.</p>
+<li><p>The client takes A1, A2, the qop given by the server, the nonce given by the server, and the cnonce created by the client, and creates a digest, which we&#8217;ll call &#8220;response&#8221;:</p>
+<p><code>response = sha(sha(A1) + ":" + nonce + ":" + "00000001" + ":" + cnonce + ":" + qop + ":" + sha(A2))</code></p>
+<p>(Thanks to Sjoerd Visscher for pointing out, while the implementation was correct, the original version of this documentation contained a critical error.  This is the updated version.)</p>
+</li>
+<li><p>The client resends its original request, with the addition of an <code>Atom-Authentication</code> header with all of the following values filled in:</p>
+<p><code>Atom-Authentication: Digest username="...", realm="...", nonce="...", uri="...", qop="atom-auth", nc="00000001", cnonce="...", response="..."</code></p>
+</li>
+<li><p>If the username/password is not valid, the server will respond with an HTTP error code 403, and a new <code>Atom-Authenticate</code> header, and the client starts all over.</p>
+<p>If the client screwed something up (forgot a value, sent a malformed authentication request), the server will respond with an HTTP error code 400, and a new <code>Atom-Authenticate</code> header.</p>
+<p>If the client successfully authenticated, the server will do what the client asked (in this case, post a new entry).  Every subsequent response from the server may contain an <code>Atom-Authentication-Info</code> header that includes a &#8220;nextnonce&#8221; value.  If present, the client must discard the previous nonce value and use the new nonce value to recalculate the digest response on the next request.  (This protects against replay attacks.)  The client should cache and reuse the other values given by the server (<code>realm</code>, <code>qop</code>, <code>algorithm</code>).  <strong>Either way, only one extra round trip is required per session (before the first action, to get the initial authentication challenge).  The client does not need to do additional round trips once they have successfully authenticated, as long as they stay current with their nonce values.</strong></p>
+<p>If the server does not return a new nonce value, the client should continue using the old one, and increment the value of <code>nc</code> as a hexadecimal number, and recalculate the digest response.  So on the second request, the client would recalculate the response like this:</p>
+<p><code>response = sha(A1) + ":" + nonce + ":" + <strong>"00000002"</strong> + ":" + cnonce + ":" + qop + ":" + sha(A2)</code></p>
+</li>
+</ol>
+</del>
+
+<p><strong>Update (2003-08-25):</strong> the algorithm has changed slightly in response to feedback from the PHP community and the Apache community.  <a href="/web/20110806090538/http://bitworking.org/news/New_AtomAPI_Implementation_Release2">This is the new algorithm</a>.</p>
+
+<p>This authentication scheme may appear convoluted at first glance, but anything simpler would be vulnerable to a variety of different attacks.  You can read <a href="/web/20110806090538/http://www.ietf.org/rfc/rfc2617.txt">RFC 2617</a> for all the details on those attacks, and how this system protects against them.</p>
+
+<p>This authentication scheme is not yet part of the Atom API.  It is a proposal for an authentication scheme that satisfies <a href="/web/20110806090538/http://intertwingly.net/blog/1539.html">the requirements we&#8217;ve discussed</a>.  Other authentication schemes could also satisfy those requirements, but I believe that this one is <a href="/web/20110806090538/http://xp.c2.com/DoTheSimplestThingThatCouldPossiblyWork.html">the simplest thing that could possibly work</a>.</p>
+
+<del>
+<p>Sample source code for this implementation (<code>atom.cgi</code>) is available in <a href="/web/20110806090538/http://diveintomark.org/public/2003/08/atom-api-20030818.py">atom-api-20030818.py</a>.  Also, <a href="/web/20110806090538/http://diveintomark.org/public/2003/08/minidomhack.py">minidomhack.py</a>, which works around a small bug in Python 2.2 (fixed in 2.3).  This is Python source code that is specific to my environment (for example, it does direct SQL queries to my Movable Type database), so it is not readily deployable on other servers without serious hacking.  This is my own implementation; is not associated with Movable Type or SixApart.</p>
+
+<p>Sample source code for a GUI client that works with this implementation is available in <a href="/web/20110806090538/http://bitworking.org/rfc/implementation/wxAtomClient_18Aug2003.zip">wxAtomClient_18Aug2003</a>.  It requires Python and wxPython, and has only been tested on Windows.</p>
+</del>
+
+<p><strong>Update (2003-08-25):</strong> updated <a href="/web/20110806090538/http://bitworking.org/rfc/implementation/wxAtomClient_25Aug2003.zip">client</a> and <a href="/web/20110806090538/http://diveintomark.org/public/2003/08/atom-api-20030825.py">server</a> code is now available.  See <a href="/web/20110806090538/http://bitworking.org/news/New_AtomAPI_Implementation_Release2">Joe&#8217;s latest post</a> for details on the changes.</p>
+
+<p>Discussion on <a href="/web/20110806090538/http://www.intertwingly.net/wiki/pie/RestEchoApiDiscuss">RestEchoApiDiscuss</a>, or <a href="/web/20110806090538/http://www.imc.org/atom-syntax/">atom-syntax</a>.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806090538/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806090538/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806090538/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806090538/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806090538/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.327 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:35:58 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:05:38 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:13:05 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

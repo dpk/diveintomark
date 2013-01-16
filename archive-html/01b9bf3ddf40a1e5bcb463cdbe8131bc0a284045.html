@@ -1,0 +1,668 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>robots.txt support for uber-aggregators [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806101114/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806101114/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806101114/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806101114/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806101114im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806101114/http://diveintomark.org/archives/2003/02/18/blog_poetry" title="Blog poetry">
+<link rel=next href="/web/20110806101114/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" title="NewsMonster day 2">
+<link rel=up href="/web/20110806101114/http://diveintomark.org/archives#p1280" title="February 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; robots.txt support for uber-aggregators Comments Feed" href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806101114/http://diveintomark.org/' />
+<link rel='prev' title='Blog poetry' href='/web/20110806101114/http://diveintomark.org/archives/2003/02/18/blog_poetry' />
+<link rel='next' title='NewsMonster day 2' href='/web/20110806101114/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2' />
+<link rel='canonical' href='/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators' />
+<link rel='shortlink' href='/web/20110806101114/http://diveintomark.org/?p=1280' />
+<meta name="description" content="NewsMonster is a preview of where personal news aggregation may be headed. It has one particularly disturbing feature: extracting full HTML content from linked RSS items.">
+<meta name="keywords" content="apache,blogging,htaccess,newsmonster,robotstxt,rss,wget">
+<link href="/web/20110806101114cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806101114/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/02\/20\/robotstxt_support_for_uberaggregators";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806101114" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514123827/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:11:14 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514123827/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators" title="12:38:27 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:11:14 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110901001018/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators" title="0:10:18 Sep 1, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620050121/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:11:14 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806101114*/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>34 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Apr 06 - 1 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000102111100_2007:-1:320200000111_2008:-1:111121001100_2009:-1:000010000000_2010:-1:000001000111_2011:7:000010011000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806101114/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806101114/http://diveintomark.org/archives#p1280">February 20, 2003</a> &#8227;
+<h2>robots.txt support for uber-aggregators</h2> (<a href="/web/20110806101114/http://diveintomark.org/tag/apache" rel="tag">apache</a>, <a href="/web/20110806101114/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20110806101114/http://diveintomark.org/tag/htaccess" rel="tag">htaccess</a>, <a href="/web/20110806101114/http://diveintomark.org/tag/newsmonster" rel="tag">newsmonster</a>, <a href="/web/20110806101114/http://diveintomark.org/tag/robotstxt" rel="tag">robotstxt</a>, <a href="/web/20110806101114/http://diveintomark.org/tag/rss" rel="tag">rss</a>, <a href="/web/20110806101114/http://diveintomark.org/tag/wget" rel="tag">wget</a>)</div>
+<p><a href="/web/20110806101114/http://www.newsmonster.org/">NewsMonster</a> (currently <q>beta 1</q>) is a preview of where personal news aggregation may be headed.  It is, for lack of imagination at this late hour, an uber-aggregator.  Ignoring for the moment <a href="/web/20110806101114/http://www.newsmonster.org/coming-soon.html" title="coming soon">all the things it doesn&#8217;t do yet</a> (which all sound quite cool), it has one particularly disturbing feature: extracting full HTML content from linked RSS items.  The feature is off by default, but once turned on (one checkbox during installation), every time it finds a new RSS item in your feed, it will automatically download the linked HTML page (as specified in the RSS item&#8217;s <code>link</code> element), along with all relevant stylesheets, Javascript files, and images.</p>
+
+<p>Clearly, we have crossed a line here.  Other aggregators have various options to reformat or display content from RSS feeds &#8212; even HTML content stored in the <code>description</code> or <code>content:encoded</code> elements.  That&#8217;s fine, that&#8217;s what RSS feeds are for.  You can include as much or as little content as you wish.  But NewsMonster goes a step further by essentially bundling a bulk auto-downloader with its aggregator.  (Hence <q>uber-aggregator</q>, a term which I&#8217;m intensely disliking already.)</p>
+
+<p>NewsMonster doesn&#8217;t care if you don&#8217;t provide full content in your feed.  In fact, it doesn&#8217;t care if you do; it will still download the original HTML pages and images anyway.  And, more disturbingly, it doesn&#8217;t respect <a href="/web/20110806101114/http://www.robotstxt.org/wc/exclusion-admin.html" title="Robot Exclusion Protocol"><code>robots.txt</code></a> like other well-behaved bulk-downloaders.  (For example, <a href="/web/20110806101114/http://www.gnu.org/software/wget/wget.html">Wget</a> is a Free Software program which can recursively retrieve web pages; it <a href="/web/20110806101114/http://www.gnu.org/manual/wget-1.8.1/html_node/wget_41.html" title="documentation on Wget's support for robots.txt">supports <code>robots.txt</code></a>).  In fact, NewsMonster doesn&#8217;t currently provide a unique User-Agent string (it just comes across as a standard Mozilla browser), so it couldn&#8217;t possibly support <code>robots.txt</code>.</p>
+
+<p>There is currently a discussion going on <a href="/web/20110806101114/http://www.benhammersley.com/archives/004118.html" title="NewsMonster cometh">over on Ben Hammersley&#8217;s site</a> about these issues, including the fundamental issue of whether uber-aggregators ought to respect <code>robots.txt</code>.  Obviously, I think they should, starting with NewsMonster.  Let&#8217;s review:</p>
+
+<ol>
+<li>A program retrieves a resource (RSS)</li>
+<li>It parses the resource for links (<code>link</code> elements)</li>
+<li>It follows those links and retrieves the linked resources (HTML pages)</li>
+<li>It parses each of <em>those</em> resources for links (to CSS, JS, images)</li>
+<li>It follows each of <em>those</em> links and retrieves <em>those</em> resources</li>
+</ol>
+
+<p>At this point, this certainly sounds like the sort of program that ought to be respecting <code>robots.txt</code>.  If I showed you a program that downloaded your home page (or any random page) and then followed all the links on that page, and downloaded all of those pages <em>and</em> all of the images on all of those pages, and then I told you that there was a simple standard way to control such programs but that this particular program didn&#8217;t support that standard, you&#8217;d scream bloody murder.  (<a href="/web/20110806101114/http://directory.google.com/Top/Computers/Software/Shareware/Windows/Internet/Download_Managers/?tc=1">There are such programs</a>, and they are considered the scourge of the industry, in the same league as spambots and image leechers.)  The fact that the initial resource is an XML file instead of an HTML file, and the links it follows are spelled <q><code>link</code></q> instead of <q><code>a</code></q>, is all completely beside the point.</p>
+
+<p>Fortunately, the current beta of NewsMonster sends a forged referrer, which we can use to deny access in a <code>.htaccess</code> file.  Note: for this to work, you&#8217;ll need <code>mod_rewrite</code> installed on your web server, and you&#8217;ll need privileges to define your own rules (probably <code>Override All</code>).  If you don&#8217;t know what this means, or if you don&#8217;t know whether you have them, don&#8217;t attempt this until you move to a better host (like <a href="/web/20110806101114/http://www.cornerhost.com/">Cornerhost</a>) that lets you do this sort of thing.  Defining <code>mod_rewrite</code> rules incorrectly, or when you don&#8217;t have privileges to do so, will instantly render your entire website inaccessible.</p>
+
+<p>Now then.  In your <code>.htaccess</code> file:</p>
+
+<blockquote>
+<p><code>RewriteEngine on<br />
+RewriteCond %{HTTP_REFERER} newsmonster\.org<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+
+<p>Which, in English, says to turn on <code>mod_rewrite</code> and, if any requests at all (<q>.*</q>) come in with the referer <q>newsmonster.org</q>, deny them (<q>F</q> flag) and don&#8217;t process any further rewrite rules (<q>L</q> flag).</p>
+
+<p>Note that this will also deny NewsMonster the chance to read your actual RSS feed.  You can deal with this in a number of ways, depending on your server setup.  I keep all my RSS feeds in a subdirectory, so in that directory I added a second <code>.htaccess</code> file with a single directive:</p>
+
+<blockquote>
+<p><code>RewriteEngine off</code></p>
+</blockquote>
+
+<p>Which is crude but effective.  Another solution, if your RSS feed is on your root level, is to add a special rule allowing anyone to download it, before the rule that says that NewsMonster can&#8217;t.  Like this:</p>
+
+<blockquote>
+<p><code>RewriteEngine on<br />
+<strong>RewriteRule ^index.xml$ - [L]</strong><br />
+RewriteCond %{HTTP_REFERER} newsmonster\.org<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+
+<p>Which, in English, says that if a request comes in for <code>index.xml</code> on the root level, process it without modification (the <q>-</q>), and don&#8217;t process any further rewrite rules (the <q>L</q> flag)&#8230; including the second rule, which would have denied access to NewsMonster, if we had gotten that far, which we won&#8217;t.</p>
+
+<p>This hack works for me, and to its credit, NewsMonster handles it quite well.  It downloads my RSS feed, attempts to follow the links, fails, and simply displays the content from the RSS feed without the extra <q>cache</q> link that would normally bring up the cached HTML page.  No incomprehensible error messages or anything.</p>
+
+<p>Note that this is all quite tentative, since the next version of NewsMonster may behave differently.  It may send a different referrer string or none at all, thus rendering this hack useless.  It may respect <code>robots.txt</code>, thus rendering this hack unnecessary.  (If it does, I&#8217;ll show you how to set <em>that</em> up, when the time comes.)  However, one thing is for sure: other uber-aggregators are coming, and maintaining control over your own content won&#8217;t get any easier.</p>
+
+<ins datetime="2003-02-20T14:57-0500">
+<p><strong>Update:</strong> my <a href="/web/20110806101114/http://diveintomark.org/projects/rss_finder/"><code>rssfinder.py</code></a> script now honors <code>robots.txt</code>.  It downloads the file once per domain and caches it for the rest of the session.  (Difficult searches may involve downloading pages from multiple domains, so it will only download <code>robots.txt</code> once per domain.)  Site owners who do not wish to allow <code>rssfinder</code> to search their site for RSS feeds may put the following in their <code>robots.txt</code> file:</p>
+
+<blockquote>
+<p><code>User-agent: rssfinder<br />
+Disallow: /</code></p>
+</blockquote>
+</ins>
+<p class=c>&#167;
+
+<h3 id=comments>Fifty one comments here (<a href=/web/20110806101114/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-461"><p>The thought that aggregators would begin to request non-RSS content in the same reptitive, bandwidth hogging manner they request RSS feeds has been bothering me ever since I saw the &#8220;web feed&#8221; feature of Syndirella and felt it was just a matter of time before aggregators took that one step further. </p>
+<p>I&#8217;m in the process of writing my column on RSS aggregators where I now keep getting torn between warning people about using or implementing such features in news aggregators and letting sleeping dogs lie. *sigh* </p>
+<p>This Newsmonster app looks very cool and I sincerely hope the author listens to reason by modifying his app to become better behaved instead of needing Apache config file hacking.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.kuro5hin.org/user/Carnage4Life/diary/' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-461" title="February 20, 2003 @ 2:45 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-462"><p>Yeah I wrote a small rant on my site the other day about referrer abuse where various search engine type things are sending what are basically fake referrer information. That is deliberate abuse whereas the problem you are talking about is merely a side effeect of what probably seemed like a good idea to the author of the program.</p>
+<p>Both problems are fairly easily solved by technological means at the moment but I fear that as weblogs become more popular that people will find ways to abuse them that aren&#8217;t so easily dealt with.</p>
+<p>Also &#8211; I&#8217;m not sure that downloading the site in the way you describe is necessarily a problem. For the sites I visit regularly I read all the pages anyway so the page needs to be downloaded one way or another. Does it really make any difference if it&#8217;s done when I look at the article or by a program doing so in advance? Or have I missed the point here?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.jbmail.com/' rel='external nofollow' class='url'>John Burton</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-462" title="February 20, 2003 @ 4:55 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-463"><p>On a more positive note, is that aggregator-within-Mozilla thing just awesome or what? That&#8217;s one form of browser integration I can live with.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.consumerwhore.biz/' rel='external nofollow' class='url'>Elvis X</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-463" title="February 20, 2003 @ 9:07 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-464"><p>aggro-gator, I think.</p>
+<p>John Burton, the problem arises in situations where you have the full post on the front page, full post in the feed and the full post on it&#8217;s own in a permalink.</p>
+<p>In current aggregators (if they have proper http header support) they download the feed once, and if the user finds the post interesting enough, he&#8217;ll go to the permalinked page once.</p>
+<p>The &#8216;monster, when it&#8217;s aggressive downloading thing is turned on, will download the feed and the post, no ifs or buts.</p>
+<p>The problem arises when you, for example, publish four or five posts in a day. The &#8216;monster will download the feed, all the posts as well as probably the front-page with all the posts in it (depending on your setup).</p>
+<p>Every post is effectively downloaded three times.</p>
+<p>It really turns into a problem when you have a dynamically generated site. Then you risk having the majority of your recent content, all downloaded three times every hour including all images and style-sheets.</p>
+<p>And if it downloads embedded movie-files automatically as well, you can see how having only a few &#8216;monster-enabled users with that optional feature turned on can cost sites real money.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.unishade.com/cgi-bin/index.cgi' rel='external nofollow' class='url'>Baldur Bjarnason</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-464" title="February 20, 2003 @ 9:09 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-465"><p>Would someone downloading your home page daily and reading everything you write bother you? The impact on your server would be the same.</p>
+<p>I suppose it&#8217;s a bandwidth problem, and NewsMonster redownloading everything every halfhour or something.</p>
+<p>If that&#8217;s the case then what you want is probably robust change indicators (etags, whatever) and a change rate estimator in the aggregator.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://duncan.focuseek.com/' rel='external nofollow' class='url'>Duncan Wilcox</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-465" title="February 20, 2003 @ 9:21 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-466"><p>__The fact that the initial resource is an XML file instead of an HTML file, and the links it follows are spelled �link� instead of �a�, is all completely beside the point.__</p>
+<p>FWIW, Mark, I think this is precisely the right way to look at this matter, in line with the TAG&#8217;s principles of the Web work, as I understand it. A resource is a resource is a resource, no matter the (often transient &#038; certainly variable) representation of it.</p>
+<p>I have NewsMonster in one of my browser tabs just now, waiting to find some time to play with it. But it not supporting robots.txt is a major faux pas and let&#8217;s hope something that the developer simply hasn&#8217;t implemented yet, rather than a conscious choice.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.monkeyfist.com/' rel='external nofollow' class='url'>Kendall Clark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-466" title="February 20, 2003 @ 9:49 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-467"><p>Re: #5. There is an extreme case, where someone came to my site and read absolutely everything I wrote, including all comments.  Of course, in that case, they would not have downloaded my RSS feed as well (which BTW contains full HTML of each post, *and* a plain-text description, both of which NewsMonster displays).  But fine, I will grant that in the extreme case, the difference is negligible.</p>
+<p>And NewsMonster makes sure that *every* *single* *reader* who subscribes to my RSS feed is the extreme case.</p>
+<p>You can say all you want that &#8220;I put it out there, so I should expect it to be downloaded&#8221;.  Yeah, I put it out there, but not necessarily for you.  That&#8217;s why we have robots.txt.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-467" title="February 20, 2003 @ 9:50 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-468"><p>Re: #6.  The developer has stated publicly that he has no plans to support robots.txt.  See comments of <a href="/web/20110806101114/http://www.benhammersley.com/archives/004118.html">http://www.benhammersley.com/archives/004118.html</a> (no permalinks, it&#8217;s the 3rd or 4th comment, a response to mine): &#8221; NewsMonster doesn&#8217;t support robots.txt. Of course, it isn&#8217;t a robot (IMO).  I also have no plans to support robots.txt in the future. NewsMonster is a user agent not a robot.&#8221;</p>
+<p>Hence this post.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-468" title="February 20, 2003 @ 9:56 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-508"><cite><a href='/web/20110806101114/http://www.dashes.com/links/archives/20030216.php#005184' rel='external nofollow' class='url'>anil dash's daily links</a></cite>&#160;(trackback)</li>
+<li id="comment-469"><p>Does NewsMonster download the linked pages for every feed, even if it includes the full content in the feed? If so, that&#8217;s a bug, IMO.</p>
+<p>But worrying about your bandwidth seems so petty.  Haven&#8217;t we gotten past that era? Maybe NewsMonster can use its P2P mojojojo to share the cached pages with other monsters.</p>
+<p>&#8220;maintaining control over your own content won&#8217;t get any easier&#8221;</p>
+<p>And that&#8217;s a good thing, no?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-469" title="February 20, 2003 @ 11:17 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-470"><p>&#8220;But worrying about your bandwidth seems so petty. Haven&#8217;t we gotten past that era?&#8221;</p>
+<p>Not unless you&#8217;re willing to cover the hosting fees. Bandwidth is still treated like a scarce resource, with the corresponding expense. For example: <a href="/web/20110806101114/http://www.thismodernworld.com/weblog/mtarchives/week_2003_02_16.html#000234">http://www.thismodernworld.com/weblog/mtarchives/week_2003_02_16.html#000234</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.andrewraff.com/' rel='external nofollow' class='url'>Andrew Raff</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-470" title="February 20, 2003 @ 11:44 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-471"><p>Re: #9.  Once this feature is enabled application-wide, it applies to all feeds, regardless of how much or how little information they include in description or content:encoded.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-471" title="February 20, 2003 @ 11:51 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-472"><p>There are lot of bloggers out there who write pretty well; and don&#8217;t have/want expensive hosting options.  For them, bandwidth is a concern.</p>
+<p>A robot is (IMO) anything that globs your content in an automated fashion. Which is why robots.txt is there as a standard to explain your preferences.</p>
+<p>Also, some people don&#8217;t put whole content in RSS &#8211; they just put relevant summary. I believe this is because RSS is *intended* towards enhancing readabiliy for machines &#8211; not humans.</p>
+<p>If it is a news aggregator, it should get aggregate what the news provider has set aside for aggregation. Not leaching the whole site.</p>
+<p>If there are 25 Newsmonster clients getting info from my site, a cheaper option for me would be to generate a tar ball of the whole site and ask people to download it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://vsbabu.org/' rel='external nofollow' class='url'>Babu</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-472" title="February 20, 2003 @ 12:13 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-473"><p>Methinks: &#8216;overaggregator&#8217;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://nowthis.com/log/' rel='external nofollow' class='url'>SteveB</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-473" title="February 20, 2003 @ 12:23 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-474"><p>Not to change the subject, but this seems to be a good place to show this.  I found this in my access logs recently:</p>
+<p>12.148.209.196 &#8211; - [16/Feb/2003:16:03:22 -0500] &#8220;GET /weblog/ HTTP/1.1&#8243; 200 8615 &#8220;-&#8221; &#8220;NPBot-1/2.0 (<a href="/web/20110806101114/http://www.nameprotect.com/botinfo.html)"><a href="/web/20110806101114/http://www.nameprotect.com/botinfo.html" rel="nofollow">http://www.nameprotect.com/botinfo.html</a>)&#8221;</a></p>
+<p>Quoted from the </p>
+<p>As a Digital Brand Asset Management company, NameProtect engages in crawling activity in search of a wide range of brand and other intellectual property violations that may be of interest to our clients.</p>
+<p>Scary.  They&#8217;ve already spidered my whole site, but NPBot has the proud title of being the first bot in my robots.txt file.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://manero.org/weblog/' rel='external nofollow' class='url'>Tony</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-474" title="February 20, 2003 @ 12:36 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-475"><p>#14 &#8211; yes. I too got NPBot hits. And that actually prompted me to put up a robots.txt file :-) Let us see if they honor robots.txt as they claim they do.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://vsbabu.org/' rel='external nofollow' class='url'>Babu</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-475" title="February 20, 2003 @ 12:50 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-476"><p>I have been analyzing my recent log files and researching User-Agents.  NPBot has visited repeatedly, along with several people using bulk-downloaders (or IE&#8217;s &#8220;offline content&#8221; feature) to download entire sections of my site (like my Safari test cases).  Preparations are underway to mitigate this sort of rude behavior.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-476" title="February 20, 2003 @ 1:38 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-477"><p>Er&#8230; I guess I&#8217;m missing the point here but what is wrong with somebody using a tool to download a group of files they want? If they didn&#8217;t use a bulk-downloader then presumabely they would just download each file seperately?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.boycottinfo.co.uk/' rel='external nofollow' class='url'>Matthew Pusey</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-477" title="February 20, 2003 @ 1:54 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-478"><p>I&#8217;ve posted a few comments on this topic over on Ben Hammersley&#8217;s weblog, but I wanted to make a quick response here to something the Mark said above. I agree that spambots and such are the scourge of the Internet, and should be blocked. But it seems unfair to lump NewsMonster and IE&#8217;s Offline Web Pages feature in with that lot. The latter are true &#8220;user agents&#8221; (too bad that term has already been taken) in that they are acting on an individual user&#8217;s behalf in order to improve their browsing experience. So even though they may function in a similar fashion, they are fundamentally different from the kinds of spiders that robot.txt was designed to control.</p>
+<p>BTW, I haven&#8217;t yet tried NewsMonster, so if I&#8217;ve mischaracterized it&#8217;s functionality in any way, I apologize in advance.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://radio.weblogs.com/0119523/' rel='external nofollow' class='url'>Scott Trotter</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-478" title="February 20, 2003 @ 2:22 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-479"><p>Baldur Bjarnason:</p>
+<p>> The problem arises when you, for example, publish four or five posts in a<br />
+> day. The &#8216;monster will download the feed, all the posts as well as probably the<br />
+> front-page with all the posts in it (depending on your setup).</p>
+<p>> Every post is effectively downloaded three times.</p>
+<p>> It really turns into a problem when you have a dynamically generated site. Then<br />
+> you risk having the majority of your recent content, all downloaded three times<br />
+> every hour including all images and style-sheets.</p>
+<p>What?  Did you do you research?  NewsMonster will NOT download content three<br />
+or four times!</p>
+<p>NewsMonster is very efficient and will ONLY download content once.</p>
+<p>Content fetches are even load balanced within the aggregator so that I don&#8217;t<br />
+swamp one site with multiple downloads at once.</p>
+<p>> And if it downloads embedded movie-files automatically as well, you can see how<br />
+> having only a few &#8216;monster-enabled users with that optional feature turned on<br />
+> can cost sites real money.</p>
+<p>No&#8230; you didn&#8217;t do you research!</p>
+<p>NewsMonster will not download large binaries.  Right now the max contentLength<br />
+that NM will download is 100,000.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.peerfear.org/' rel='external nofollow' class='url'>Kevin Burton</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-479" title="February 20, 2003 @ 2:52 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-480"><p>From Mark:<br />
+> And NewsMonster makes sure that *every* *single*<br />
+> *reader* who subscribes to my RSS feed is the<br />
+> extreme case.</p>
+<p>No!  This isn&#8217;t true either!  </p>
+<p>All of these features are DISABLED BY DEFAULT. </p>
+<p>If someone wants this functionality then there is a REASON they want it.  </p>
+<p>&#8230; they probably want to read your website on their PDA or on the train (on their laptop).</p>
+<p>&#8230; god forbid&#8230;.</p>
+<p class=sig>&#8212;&#8201;<cite>Kevin Burton</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-480" title="February 20, 2003 @ 2:57 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-481"><p>Aaron says:</p>
+<p>> But worrying about your bandwidth seems so<br />
+> petty. Haven&#8217;t we gotten past that era? Maybe<br />
+> NewsMonster can use its P2P mojojojo to share<br />
+> the cached pages with other monsters.</p>
+<p>I have plans to use ETags and ZeroConf to swarm NewsMonster downloads when  there are other NM users on the local subnet.</p>
+<p>I am also thinking about implementing similar functionality by building a DHT but this is in the future.</p>
+<p>The ZeroConf support will allow NewsMonster user to avoid killing a link when all of them are at a conference together.</p>
+<p class=sig>&#8212;&#8201;<cite>Kevin Burton</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-481" title="February 20, 2003 @ 3:01 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-482"><p>Yes, Kevin, as I made quite clear in my original post, this feature is disabled by default in NewsMonster.  A single checkbox during installation enables it, and it enables it application-wide (i.e. there are no per-feed settings).</p>
+<p>If someone wants this functionality, that&#8217;s fine, they are free to enable it.  And if I, as a site owner, wish to ask them politely not to do it, I am free to do so.  robots.txt is a compromise between the wishes of end users and the wishes of site owners.  Please play nicely.</p>
+<p>The other upcoming bleeding edge features you mention sound super-cool.  Please implement 10-year-old Internet standards first.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-482" title="February 20, 2003 @ 3:06 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-483"><p>In the spirit of leading by example, my rssfinder.py script now honors robots.txt.</p>
+<p><a href="/web/20110806101114/http://diveintomark.org/projects/rss_finder/version_11.html">http://diveintomark.org/projects/rss_finder/version_11.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-483" title="February 20, 2003 @ 3:09 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-484"><p>It&#8217;s worth noting that Mozilla now has a &#8216;link prefetching&#8217; feature:</p>
+<p><a href="/web/20110806101114/http://www.mozilla.org/projects/netlib/Link_Prefetching_FAQ.html">http://www.mozilla.org/projects/netlib/Link_Prefetching_FAQ.html</a></p>
+<p>This feature must be both explicitly enabled by the user in the browser&#8217;s preferences, *and* only follows [link rel="prefetch" href="/someurl"] or [link rel="next" href="2.html"] elements. What is does *not* do is automatically download all the linked content from a page.</p>
+<p>Using this as an appropriate model for a user agent, NewsMonster should only prefetch content linked from feeds that have some sort of indicator that it is allowed (LazyWeb: a &#8216;prefetch&#8217; RSS module).</p>
+<p>Furthermore, both NewsMonster and Mozilla should obey the relevant robots.txt file associated with the linked resource, to prevent DDOS attacks. (Mozilla&#8217;s prefetching is not limited to the originating server).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-484" title="February 20, 2003 @ 4:14 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-485"><p>Scott Trottler:</p>
+<p>> The way I used to use this feature was as follows: I have a half-hour train ride<br />
+> to and from work every day. I had my laptop set to download a list of sites<br />
+> every weekday morning at 5 a.m. and again in the afternoon at 4 p.m. The sites<br />
+> included CNET, NYT-Tech, Wired, GMSV and a few others. I could then read the<br />
+> news on the train using my laptop with IE in offline mode. This was a tremendous<br />
+> time-saver for me. I&#8217;ve since switched to using a Pocket PC for the train ride,<br />
+> but I still use Offline Web Pages for a few sites that I look at in the evenings<br />
+> at home.</p>
+<p>Yes.  This is exactly what the NewsMonster offline cache is designed to handle.</p>
+<p>It isn&#8217;t enabled by default and it is meant to be *used*&#8230; The goal isn&#8217;t to<br />
+waste network resources.</p>
+<p>&#8230;</p>
+<p>> KEY POINT: If Offline Web Pages obeyed the Robot Exclusion Protocol, it would<br />
+> render this valuable feature completely useless.</p>
+<p>&#8230;</p>
+<p>Yes.  It would.  My primary concern is for my users.  If my users WANT<br />
+robots.txt I will give it to them.  I highly doubt they would as it would render<br />
+large portions of the Internet unavailable to their PDAs and offline laptops.</p>
+<p>> First, the offline user agents need to be very smart and efficient. They<br />
+> shouldn&#8217;t try and download content that they already have in their cache. (Sites<br />
+> like CNET which have multiple CMS-generated URLs that point to the same article<br />
+> complicate this.)</p>
+<p>I don&#8217;t try to download content more than once.  </p>
+<p>Mark:</p>
+<p>> Going back into my logs (just for February), I have found several instances of<br />
+> abuse of this &#8220;feature&#8221;; for instance, downloading my entire Safari pages,<br />
+> complete with ~70 test cases (2 full-screen images apiece).</p>
+<p>I don&#8217;t see why you would have a problem with someone reading your website?  </p>
+<p>If you disable NewsMonster would you at least have the courage to disable<br />
+Mozilla and Internet Explorer too?</p>
+<p>Scott Trottler</p>
+<p>> As an aside, when Mozilla 1.0 was released, I switched to it as my primary,<br />
+> default browser away from Internet Explorer. The one feature that I miss most<br />
+> from IE, and which I still use IE for, is Offline Web Pages.</p>
+<p>Use NewsMonster ;)</p>
+<p class=sig>&#8212;&#8201;<cite>Kevin Burton</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-485" title="February 20, 2003 @ 4:45 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-486"><p>Re: &#8220;I don&#8217;t see why you would have a problem with someone reading your website?&#8221;</p>
+<p>I publish my home phone number online, but it&#8217;s unlisted in the local yellow pages.  When I do business with companies and they ask for it, I tell them it&#8217;s unlisted.  When telemarketers call, I tell them to put me on their do-not-call list.</p>
+<p>Just because I have a phone doesn&#8217;t mean I want anyone calling me for any reason.  Conventions of privacy (and, in some cases, laws) have evolved for those who wish to take advantage of them.  If I tell a company my number is unlisted and they sell it anyway, I can choose to stop doing business with them (and I have).  If a telemarketer refuses to abide by federal law when I tell them to put me on their do-no-call list, I can sue (luckily I have not had to do this).</p>
+<p>The robots.txt standard is similar.  It strikes a compromise between what end users want (everything, right away) and the realities that site owners must deal with (bandwidth is expensive, some visitors and usage patterns are more worthwhile than others).</p>
+<p>If you refuse to play by these rules &#8212; which, incidentally, have worked for many people for many years &#8212; then that&#8217;s fine, but don&#8217;t expect any courtesy in return.  By your refusal, you are putting your product in the same class as scumware and spambots, and we&#8217;ll act accordingly.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-486" title="February 20, 2003 @ 5:49 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-487"><p>Bottom line: Mark sees it as theft of his writing, as would any writer; Kevin sees it as providing a service.</p>
+<p>Writing is a deeply personal activity. Writers spend enormous amounts of time tailoring their content and their blogs to their users while providing the presentation they want to provide. Something which swipes large chunks of it at a time just feels somehow wrong to the writer.</p>
+<p>The problem here is, both of them are right. But neither one is necessarily more right than the other.</p>
+<p class=sig>&#8212;&#8201;<cite>Dave Cantrell</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-487" title="February 20, 2003 @ 6:08 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-488"><p>I just tried out newsmonster, and enabled the page fetching thing. I tested it out on a few RSS feeds, including MetaFilter&#8217;s. I was surprised to see that it not only grabbed the RSS file, it displayed a munged up view of the home page under every single entry&#8217;s &#8220;toggle visual content&#8221;. Also disturbing from a server admin angle was that the &#8220;content&#8221; link lead to a scraped version of the comment page. </p>
+<p>This would mean that not only did it grab the single RSS feed for the last 24 hours of metafilter, it also grabbed the 25-30 comment pages beneath, and the home page.</p>
+<p>Since the metafilter site is a community, and run on very little money and cheap hardware, the average page load times in the daylight hours are a bit slow. The index page typically takes a few seconds to load, and comment pages can take 5-10 seconds to load and render. Based on what I&#8217;m seeing, it appears that a single newsmonster refresh is pummeling my db server and site. </p>
+<p>Is there any compromise between simply giving people RSS feeds rendered as HTML, and downloading every possible link going off them, whether they want to read it or not, and then also grabbing the home page to attempt to render that as well? Can the &#8220;content&#8221; links lead to fresh grabs of data instead? That way people would only download what they want to read.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.metafilter.com/' rel='external nofollow' class='url'>mathowie</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-488" title="February 20, 2003 @ 6:18 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-489"><p>Matt, it seems clear from today&#8217;s discussion that NewsMonster will continue its rude and potentially crippling behavior.  So I would investigate options like mod_rewrite (see my original post).  Also, search Google for &#8220;mod_rewrite tutorial&#8221; or &#8220;spambot htaccess&#8221;.  If all your pages are dynamically generated, you could roll your own code to check User-Agent/Referer fields.  Wouldn&#8217;t stop them from hitting the page and running the script, but you could cut down on the database access, and not give them any links to follow.</p>
+<p>You should do some analysis on your logfiles, if you haven&#8217;t recently.  Chances are, you have similar problems from email harvesters like EmailSiphon and bulk downloaders like GetRight or FlashGet.  mod_rewrite can help handle those too (although most offer &#8220;helpful&#8221; options to spoof the User-Agent, but most users don&#8217;t know how or don&#8217;t bother). When I say NewsMonster is putting itself in bad company, this is the company I&#8217;m talking about.</p>
+<p>I&#8217;ll be publishing the results of my own logfile explorations soon.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-489" title="February 20, 2003 @ 6:34 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-490"><p>There&#8217;s another newsmonster feature I noticed. For one reason or another, some people have excerpted feeds, where only the first 200 characters, first sentence, or partial first paragraph are syndicated. Newsmonster seems to do a good job of grabbing the full posts for display in both the content and toggle visible areas, which would seem to be against the wishes of the site authors. </p>
+<p>If they only wanted you to see the first sentence, then click through to their site to see the rest of the entries you are interested in, it seems like pulling down the full page anyway is sort of crossing a line against their wishes.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.metafilter.com/' rel='external nofollow' class='url'>mathowie</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-490" title="February 20, 2003 @ 6:35 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-491"><p>Mark: Nice to see a civil list of complaints this time, instead of just calling the guy an idiot&#8230;.</p>
+<p>Kevin: ZeroConf? Wouldn&#8217;t that require telling other clients on your subnet what sites you&#8217;re subscribed to? ZeroConf is cool, but the privacy implications of asking your subnet peers &#8220;hey, do you have a copy of site X yet?&#8221; seem severe enough that such a feature should definitely be disabled by default, and have a warning when enabled.</p>
+<p>Mark: You don&#8217;t like people using IE&#8217;s browse offline mode on your site? Why not? I think you&#8217;re taking it a little far if you actively try to block that. I&#8217;m real tempted to start ripping your site regularly from different IP addresses, using wget, ignoring robots.txt, and forging my UA tag, just to keep you on your toes&#8230;. Btw, how would you stop something like that?</p>
+<p>I&#8217;ve watched this whole newsmonster thing very closely and will continue to. I&#8217;ve got mixed feelings about the subject, like many, but I think the end result will be an excellent piece of software. I hope Mark gets thanked in the NM  acknowledgements one of these days! :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://malformedurldetected/' rel='external nofollow' class='url'>xml dreamer</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-491" title="February 20, 2003 @ 6:36 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-492"><p>I&#8217;m glad this still works:<br />
+    curl -A &#8221; &#8221; <a href="/web/20110806101114/http://diveintomark.org/|less"><a href="/web/20110806101114/http://diveintomark.org/" rel="nofollow">http://diveintomark.org/</a>|less</a><br />
+&#8230;even though this doesn&#8217;t:<br />
+    curl <a href="/web/20110806101114/http://diveintomark.org/|less"><a href="/web/20110806101114/http://diveintomark.org/" rel="nofollow">http://diveintomark.org/</a>|less</a><br />
+Out of curiosity, Mark, how many spam bots do you seriously think send Curl as their UA string? And how many do you think send the UAs of legitimate browsers?</p>
+<p class=sig>&#8212;&#8201;<cite>xml dreamer</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-492" title="February 20, 2003 @ 6:41 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-493"><p>As I said (more fully on Ben Hammersley&#8217;s site), examination of my logfiles shows virtually no one using IE&#8217;s &#8220;offline content&#8221; feature the way it was intended (to subscribe to individual pages).  But I see lots of people abusing it to simply download entire sections of my site, such as my Safari information pages (which include many, many full-screen images of bug test cases, including test cases from previous builds that aren&#8217;t even relevant anymore).</p>
+<p>Obviously if someone were sufficiently determined and/or bored, they could spoof the User-Agent string and go about downloading things for no reason.  (This is not even terribly difficult in most programs.)  I am aware that, by bringing up the issue, I am opening myself up to this sort of attack (and I don&#8217;t use that word lightly).  If it becomes a problem, there are more drastic solutions I could explore to fight back against such attackers.  See, for example, <a href="/web/20110806101114/http://www.neilgunton.com/spambot_trap/">http://www.neilgunton.com/spambot_trap/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-493" title="February 20, 2003 @ 6:45 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-494"><p>Many users want to have content prefetched, because they don&#8217;t want to wait after every click, particularly if they have a slow link.<br />
+Many site owners want bandwidth to be minimized, because they pay for bandwidth.<br />
+There is clearly a middle ground which the robots.txt exclusion doesn&#8217;t solve: I know in advance that I read everything that Mark posts to diveintomark (Thanks, Mark!), so the bandwidth costs to Mark are exactly the same if it&#8217;s prefetched or not.  Yet if I would honor his wishes and not prefetch, he gains nothing and I lose time.<br />
+Even if NewsMonster doesn&#8217;t achieve the goal of only prefetching that which I will download anyway, some future user agent will.  We need something better than robots.txt, because as it stands it doesn&#8217;t make sense for that new user agent to honor it.</p>
+<p class=sig>&#8212;&#8201;<cite>Aryeh Sanders</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-494" title="February 20, 2003 @ 7:34 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-495"><p>A request.  I have recently made the decision not to have net access at home (gasp!).  The reason for this is that I love dinking around on the net too much.  There are non-net things I would like to spend my time at home doing, but I seem unable to stay away from my computer if it has net access. ;)</p>
+<p>As a compromise I&#8217;m working to get a nearby coffee shop hooked up with wireless access, so that when I need to get online I can semi-conveniently walk down there.</p>
+<p>One of the main reasons for this is that I send (and recieve) a lot of email.  Unfortunately email is a vicious cycle and the more email you send the more you recieve.  I am no longer willing to spend 3-5 hours a day reading and replying to email. Instead what I do is use Mozilla&#8217;s offline mode to sync my email to my laptop when I leave work, and then read/reply to it offline at home.  My hope (and so far it seems to be working) is that by limiting myself to responding to email in this way I break the cycle.</p>
+<p>Anyway, there are some web sites I&#8217;d like to read offline in this manner as well.  I have yet to pursue a tool to do this with but news monster had seemed a reasonable choice for a Linux laptop.  It would be a shame if I couldn&#8217;t read your site offline.</p>
+<p>Adam.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.spack.org/' rel='external nofollow' class='url'>adam</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-495" title="February 20, 2003 @ 8:09 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-509"><cite><a href='/web/20110806101114/http://www.maximumaardvark.com/archives/2003/02/20.html#001677' rel='external nofollow' class='url'>Maximum Aardvark</a></cite>&#160;(trackback)</li>
+<li id="comment-496"><p>Even God gave us the middlefinger despite the danger of its misuse.  An equivalent of a warning label around the middlefinger would separate type As from others.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.docuverse.com/blog/donpark' rel='external nofollow' class='url'>Don Park</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-496" title="February 20, 2003 @ 9:02 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-497"><p>NPBot update: I told NPBot to bugger off in my robots.txt file.  It came back later today, but it seems to be honoring the directive.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://manero.org/weblog/' rel='external nofollow' class='url'>Tony</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-497" title="February 20, 2003 @ 9:49 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-498"><p>Dave Cantrell: &#8220;Bottom line: Mark sees it as theft of his writing, as would any writer; Kevin sees it as providing a service.&#8221;</p>
+<p>This is a strawman argument. Mark has *not* objected to anyone &#8216;stealing&#8217; his content.</p>
+<p>He is objecting to rude robots *unnecessarily* hammering his (and other people&#8217;s) server(s). If a user agent (robots and spiders are a subcategory of user agents) downloads the rss and then proceeds to download the permalinked HTML version for every post, all stylesheets, images, and further linked pages, what exactly is the point of providing an RSS feed in the first place? You might as well go back to scraping the website directly.</p>
+<p>There may in fact be other webloggers who make this objection, and these are likely to be the same people who do not provide full content in their feed. Their wishes should be respected as well.</p>
+<p>The robots.txt file is a very well established mechanism for making the statement &#8220;don&#8217;t suck this stuff down automatically&#8221;, with whatever qualifications and exceptions you wish to add. Not paying attention to the robots.txt file is the equivalent of ignoring a prominently posted sign, whether it&#8217;s a &#8216;yield&#8217; sign governing traffic, or a &#8216;no-trespassing&#8217; sign refusing access.</p>
+<p>As for the application category name, how about &#8216;Hoggregator&#8217;?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-498" title="February 20, 2003 @ 10:02 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-499"><p>Holy shit! I have no idea WHAT you&#8217;re talking about, but I love robots! Yay for robots!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.staticboy.com/' rel='external nofollow' class='url'>Taylor</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-499" title="February 20, 2003 @ 10:26 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-500"><p>As a reader, my rule No. 1: respect the one who writes the thing I am reading. I don&#8217;t see it&#8217;s a problem if people can&#8217;t catch Mark&#8217;s site in a whole. If you do read DiveIntoMark everyday, you could easily save the main page (or comments) once per day for the offline reading.. Is it necessary to get all html contents of your subscribed blogs? Wouldn&#8217;t RSS is designed to be used for scanning(searching) for your interested read?</p>
+<p>I do doubt if one has enough time to read if NM&#8217;s prefetching feature is enabled. That&#8217;s the real waste of time.</p>
+<p class=sig>&#8212;&#8201;<cite>yowkee</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-500" title="February 20, 2003 @ 10:35 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-501"><p>Another way to describe this conflict is one between the provider of information wanting to be able to decide how that information will be accessed and a software author ignoring an established standard for the sake of a new feature.  If my new webpage-watcher downloads your entire site every 30 seconds to compare with a previous version so that I can notify users of changes to your site, am I being a considerate player in this game?</p>
+<p class=sig>&#8212;&#8201;<cite>Jim McCoy</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-501" title="February 20, 2003 @ 11:59 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-502"><p>Now you know what big media feels like.  Hey!  Stop ripping those MP3s!</p>
+<p>I happen to think this is more a social (law) problem than a technical one, but the chances of a reasonable law covering something this geeky are pretty darn low.</p>
+<p>What Mark&#8217;s doing here is a [club solution].</p>
+<p>What&#8217;s needed is [identity] and trust.</p>
+<p>Given that, you can FOAF (or otherwise meta-data) undesirables, and the server owner can make policies as she likes.</p>
+<p>No reliance on gentlemans&#8217; agreements (like robots.txt) that anyone watching closely knows can&#8217;t last.</p>
+<p>Now, lest I come off sounding pro-DRM, I am definitely not.  I am quite sure that TBL didn&#8217;t expect the web to explode like it did, and I&#8217;m also quite sure he expected social issues to be dealt with by the correct authorities in a more appropriate manner.</p>
+<p>So here we are.  We can lobby for the social solution (make it illegal to forge referrer, for example), or we can invent a (less-than-perfect, but maybe effective) technical one.</p>
+<p>[club solution]<br />
+<a href="/web/20110806101114/http://diveintomark.org/archives/2002/10/29/club_vs_lojack_solutions.html">http://diveintomark.org/archives/2002/10/29/club_vs_lojack_solutions.html</a></p>
+<p>[identity]<br />
+<a href="/web/20110806101114/http://www.oreillynet.com/pub/a/webservices/2002/07/09/udell.html">http://www.oreillynet.com/pub/a/webservices/2002/07/09/udell.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://dunck.us/' rel='external nofollow' class='url'>Jeremy Dunck</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-502" title="February 21, 2003 @ 12:35 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-503"><p>On MSIECrawler:<br />
+I see several hits in my logs of this &#8216;feature&#8217; that go to:<br />
+default.asp?pageid=2robots.txt</p>
+<p>Draw your own conclusions&#8230;<br />
+*shakes his head sadly*</p>
+<p class=sig>&#8212;&#8201;<cite>Sander</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-503" title="February 21, 2003 @ 3:40 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-510"><cite><a href='/web/20110806101114/http://danhon.com/ec/mtarchives/000422.shtml' rel='external nofollow' class='url'>ext|circ</a></cite>&#160;(trackback)</li>
+<li id="comment-504"><p>In regard to #38 (Michael Bernstein)</p>
+<p>>He is objecting to rude robots *unnecessarily*<br />
+>hammering his (and other people&#8217;s) server(s).<br />
+>If a user agent downloads the rss<br />
+>and then proceeds to download the permalinked<br />
+>HTML version for every post, all stylesheets,<br />
+>images, and further linked pages, what exactly<br />
+>is the point of providing an RSS feed in the<br />
+>first place?</p>
+<p>Is RSS a &#8220;Really Simple Syndication&#8221; or an &#8220;RDF Site Summary&#8221; &#8211; if both, how do you take one random RSS feed automatically determine which one it is? Is there some marker that says &#8220;This is just a syndication of my weblog entry&#8221; (hint: no need to actually use the HTML link), and is there one that says &#8220;This is a summary/glimpse of my entry&#8221; (hint: you probably want to read the HTML link)? </p>
+<p>If the content is identical between the RSS feed and the HTML feed &#8211; is that not confusing, since in effect you are linking from one &#8220;page&#8221; of content to itself. I understand the concept of permalinks &#8211; giving a permanent link in a dynamically generated &#8220;ticker&#8221; for future reference, but how is a script or aggregator supposed to differentiate it given only the RSS feed?</p>
+<p>Apologies if these seem to be rather basic or naive questions, but I&#8217;m currently experimenting with a proxy-based knowledgebase / aggregator ( <a href="/web/20110806101114/http://www.isolani.co.uk/blog/agents.html">http://www.isolani.co.uk/blog/agents.html</a> ), and I&#8217;d hate to have an abusive agent. I don&#8217;t quite see how robots.txt solves the particular problem with RSS &#8211; it certainly solves the symptom Mark is seeing, but the underlying problem remains.</p>
+<p>I want my little tool to be able to cache new pages that meet my interest profile, so I can snag an interesting article into my cache (on an IBM microdrive) while working on a laptop at home, unplug the microdrive and plug it into my Zaurus and read the article on my way to work whilst on the train. So &#8220;prefetching&#8221; a page is mandatory to be able to read it offline.</p>
+<p>Thanks for bringing up the point that following robots.txt should be a part of tools like these, I certainly will add it to my todo list. Although some clarification on the RSS issues above would certainly help.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.isolani.co.uk/' rel='external nofollow' class='url'>Isofarro</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-504" title="February 21, 2003 @ 6:18 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-505"><p>HTTrack ( <a href="/web/20110806101114/http://www.httrack.com/">http://www.httrack.com/</a> ) is another program that&#8217;s rude like this. I had an attack from some idiot using HTTrack a few weeks ago, from our national library of all places, a cursory scan on the logs seemed to indicate that it was grabbing many pages more than once. This went on for several hours. </p>
+<p>The other fun part was that HTTrack also followed outside links, and bizarrely, left proper referral data when chasing up those links. Which had the effect of spamming people&#8217;s referrer stats with URLs from my site.</p>
+<p>I don&#8217;t mind people pulling stuff off my pages for archiving, as seemed to be the case here as I have an  ISSN, but once every month or so ought to be enough. But not pulling the same files every ten seconds because the idiotic program can&#8217;t keep track of what it&#8217;s already sucked up, throttling the server in the process because of its amnesia.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://grudnuk.com/' rel='external nofollow' class='url'>Graham</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-505" title="February 21, 2003 @ 8:35 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-506"><p>Isofarro:</p>
+<p>&#8220;If the content is identical between the RSS feed and the HTML feed[...] how is a script or aggregator supposed to differentiate it given only the RSS feed?&#8221;</p>
+<p>This specific problem (identifying feeds that contain full content) could be solved once the site has been downloaded once.</p>
+<p>Unfortunately, because NewsMonster only has a single global preference for this behaviour rather than per-channel preferences, the information wouldn&#8217;t do much good.</p>
+<p>On the other hand, if NM had per-channel preferences for pre-fetching the HTML pages, then the user could only turn it on for those sites that do *not* provide full content. This would go a long way towards mitigating the bad behaviour NewsMonster exhibits towards most sites that do publish full content in their feed, and (presumably) would in fact be following the wishes of those site authors who do not (who want people to read their content in the context of their pages).</p>
+<p>Ignoring robots.txt would *still* be considered rude behaviour, though, as someone who does not publish their full content in their feed may still want to disallow robot access to certain sections of their site.</p>
+<p>If someone shoots themselves in the foot, by (a) not providing full content, and (b) disallowing all robot access, let them. Their readers will let them know soon enough.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101114/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-506" title="February 21, 2003 @ 6:10 pm"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-511"><cite><a href='/web/20110806101114/http://www.divagation.com/journal/2003/02/i_000090.php' rel='external nofollow' class='url'>divagation.com</a></cite>&#160;(trackback)</li>
+<li id="comment-507"><p>this kind of action by NewsMonster would seem to be self-defeating as a business-model. Gives you a leg-up in the short run ruins it for everyone in the long run.</p>
+<p class=sig>&#8212;&#8201;<cite>bryan</cite>&#160;<a class=p href="/web/20110806101114/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators#comment-507" title="February 27, 2003 @ 10:25 am"><img alt="#" src=/web/20110806101114im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806101114/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806101114/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806101114/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806101114/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806101114/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.266 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:57:46 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:11:14 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:48 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

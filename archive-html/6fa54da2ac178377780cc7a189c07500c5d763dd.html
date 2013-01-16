@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Crunch [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110608020349/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110608020349/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110608020349/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110608020349im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110608020349/http://diveintomark.org/archives/2002/01/04/eval_is_evil" title="eval() is evil">
+<link rel=next href="/web/20110608020349/http://diveintomark.org/archives/2002/01/06/aptitude" title="Aptitude">
+<link rel=up href="/web/20110608020349/http://diveintomark.org/archives#p186" title="January 2002">
+<link rel='index' title='dive into mark' href='/web/20110608020349/http://diveintomark.org/' />
+<link rel='prev' title='eval() is evil' href='/web/20110608020349/http://diveintomark.org/archives/2002/01/04/eval_is_evil' />
+<link rel='next' title='Aptitude' href='/web/20110608020349/http://diveintomark.org/archives/2002/01/06/aptitude' />
+<link rel='canonical' href='/web/20110608020349/http://diveintomark.org/archives/2002/01/05/crunch' />
+<link rel='shortlink' href='/web/20110608020349/http://diveintomark.org/?p=186' />
+<meta name="keywords" content="blogging,exercise,humor,microsoft,osx">
+<link href="/web/20110608020349cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110608020349/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110608020349/http://diveintomark.org/archives/2002/01/05/crunch">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/01\/05\/crunch";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "8";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/01/05/crunch" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110608020349" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215134500/http://diveintomark.org/archives/2002/01/05/crunch" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 2:03:49 Jun 8, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215134500/http://diveintomark.org/archives/2002/01/05/crunch" title="13:45:00 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 2:03:49 Jun 8, 2011">8</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090503023359/http://diveintomark.org/archives/2002/01/05/crunch" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="3 May 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 2:03:49 Jun 8, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110608020349*/http://diveintomark.org/archives/2002/01/05/crunch" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>14 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">21 Jun 06 - 8 Jun 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001000000_2007:-1:010000000100_2008:-1:101010000100_2009:-1:000010000000_2010:-1:000002000111_2011:5:000001000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110608020349/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110608020349/http://diveintomark.org/archives#p186">January 5, 2002</a> &#8227;
+<h2>Crunch</h2> (<a href="/web/20110608020349/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20110608020349/http://diveintomark.org/tag/exercise" rel="tag">exercise</a>, <a href="/web/20110608020349/http://diveintomark.org/tag/humor" rel="tag">humor</a>, <a href="/web/20110608020349/http://diveintomark.org/tag/microsoft" rel="tag">microsoft</a>, <a href="/web/20110608020349/http://diveintomark.org/tag/osx" rel="tag">osx</a>)</div>
+<p>Today is the last day to <a href="/web/20110608020349/http://www.scripting.com/awards/2001/">vote for me</a> in the Scripting News Awards 2001.</p>
+
+<p><a href="/web/20110608020349/http://www.winterspeak.com/2002_01_01_archive.html#8419864">Winterspeak</a> gets permalinks.</p>
+
+<p><cite>The Register</cite> readers <a href="/web/20110608020349/http://www.theregister.co.uk/content/35/23562.html">wish to register a complaint</a> about Mac OS X.  I&#8217;ve been watching my girlfriend learn how to use Mac OS X over the past few weeks.  She&#8217;s a completely new Mac user; never used Mac OS 9 or X before.  Observations:</p>
+<ul>
+<li>She uses Mac Help, which has apparently improved dramatically since the last time I used it (around Mac OS 7).  Generally the help is very good; the search engine finds results quickly and rates them by probable helpfulness.  Individual help pages are goal-oriented, not task-oriented.  There are hyperlinks at the bottom of pages that do things mentioned in the text (&#8220;open this for me&#8221;, etc).</li>
+<li>I set up her with <a href="/web/20110608020349/http://www.dragthing.com/">DragThing</a> for launching, since I love it and have been using it for years.  It was pretty much the only thing she liked when she saw me using Mac OS 9, and she loves it in Mac OS X.</li>
+<li>She spent a few days playing with all the settings (like the magnification level of the dock, and background images in Finder windows), but got them where she likes them and hasn&#8217;t changed them since.</li>
+<li>Applications that stay open after their last window is closed confuse her.  In Windows (which she&#8217;s used to), applications either have an MDI frame (Word) and therefore are quite obvious in their still being open, or they have individual windows (Internet Explorer) and quit when you close the last window.  (Yes, I know IE really stays in memory, but as far as the UI goes, it&#8217;s gone until you launch it again.)  On a Mac (9 or X), applications can be open with no windows and, of course, no MDI frame.  At the end of the day, she has 10 applications running with nothing open in any of them.</li>
+<li>System Preferences are well-designed, overall.  At one point she had downloaded Opera, which prompted her to make it her default browser.  She acquiesed, then decided a few days later that it just wasn&#8217;t working out (it is still early beta), and wanted to switch back to IE.  &#8220;Hmm, I bet that&#8217;s in System Preferences.  [click]  Hmm, Internet Preferences.  [click]  Hmm, &#8216;Web&#8217; tab.  [click]  Look, a default browser setting!  [click]  Look, Internet Explorer is in the drop-down list.  [click]&#8221;  Then, of course, &#8220;[close window]  [wonder 20 minutes later why 'system Preferences' is open in the Dock]&#8220;</li>
+<li>The Dock stumps her.  I mean really stumps her.  I took the liberty before giving her the iBook of removing all the static programs from it (since she had DragThing as a launcher), moving it to the right side of the screen, and setting it to autohide.  So now it only shows running applications, except it also shows the trash, and except it also shows minimized windows from any application (but not unminimized ones), and it&#8217;s always too crowded because she always leaves applications running (see above).  And you can&#8217;t see the names of programs without moving your mouse over them, and she can&#8217;t tell by the icon because she gave all her programs custom icons and now doesn&#8217;t know which is which.  So it&#8217;s a very cute dock, full of Harry Potter and Monsters Inc. and drop-dead gorgeous 128&#215;128 icons, but it&#8217;s not actually very useful.</li>
+<li>The Finder stumps her.  I mean really stumps her.  She has a horrible time managing documents, moving them into subfolders, or deleting them.  Hell, I have a hard time with this under Mac OS X, and I&#8217;ve been a Mac user for 13 years.  Spring-loaded folders (like Mac OS 9) would help a lot here, but she doesn&#8217;t know that that&#8217;s the right solution, since she&#8217;s never used Mac OS 9.  She just knows it&#8217;s too hard.</li>
+<li>iTunes rocks.  It&#8217;s just drop-dead simple, elegant, and all-encompassing.  All software should be this well designed.  Syncing with her iPod is so simple and quick, she simply didn&#8217;t believe it &#8212; she literally blinked and missed it the first time, and had to test it a few times to make sure that it was really that easy.  (Reminiscent of touching a &#8216;wet paint&#8217; sign.)</li>
+<li>Did I mention the Finder is confusing?  It also has caching bugs with icons.  I had downloaded a few high-quality icons from <a href="/web/20110608020349/http://www.iconfactory.com/">IconFactory</a> before I gave her the iBook, and the first time I showed her how &#8220;simple&#8221; it was to give her folders a custom icon, it didn&#8217;t work.  Except that it did work, it just didn&#8217;t look like it worked right away.  The icon showed up later (maybe after a reboot, I lost track).</li>
+<li>Mail needs a wizard to import both mail and addresses from a file exported from Outlook on Windows.  This may be too esoteric a request; I&#8217;m not sure how many people are upgrading to Mac OS X from Windows 2000.  But it would have been really, really sweet.  (To Mail&#8217;s credit, it does an excellent job of importing from legacy Mac mail programs.  It imported all my Outlook Express mail by launching Outlook Express in Classic and importing it all through Applescript.  Very slick, not too slow, and it worked flawlessly.)</li>
+<li>Opening .DOC files is a big thing for her, since she forwards them from work and needs to read them at home.  Appleworks (pre-installed on her iBook) can open .DOC files (via MacLinkPlus, also included), and can save .DOC files (again, via MacLinkPlus), but there is no way to set this as the preferred format.  (StarOffice 6 on Linux can do this.)  Also, double-clicking on .DOC files from the Finder (or from Mail) doesn&#8217;t work, even if you choose AppleWorks as the program to open them with; Appleworks complains that it can not open this type of file.  But opening them manually by launching AppleWorks first and doing &#8220;File/Open&#8221; runs it through MacLinkPlus and opens right up.  That&#8217;s a weird but important inconsistency.</li>
+<li>She doesn&#8217;t know any Mac keyboard shortcuts, and keeps bugging me for &#8220;what key can I use to do this&#8221;.  This is true even for things that are listed in the menus, either because she can&#8217;t find the right item in the menus, or because the menus use icons for non-alphabet keys (command, option, control, shift, delete) that she doesn&#8217;t understand.  Others, like Finder shortcuts for working with list views, aren&#8217;t documented in any place she or I can find.  We searched Google and found some Mac 101 articles; luckily, most of the keyboard shortcuts from Mac OS 9 also hold true for Mac OS X, so the articles hold up pretty well.</li>
+</ul>
+
+<p><a href="/web/20110608020349/http://news.bbc.co.uk/hi/english/sci/tech/newsid_1742000/1742654.stm">Concern over Antarctic cruise ships</a> [via <a href="/web/20110608020349/http://boingboing.net/2002_01_01_archive.html#8412362">BoingBoing</a>] <q cite="http://news.bbc.co.uk/hi/english/sci/tech/newsid_1742000/1742654.stm">[T]he numbers [of tourists per year] were forecast to rise to almost 30,000 by the year 2005. &#8230; we&#8217;re also seeing more and more adventure tourism. There&#8217;s jet-skiing, iceberg-climbing, marathons, even surfing.</q>  People who run marathons in Antarctica scare me.  It&#8217;s the Extreme Sport version of the Monty Python skit where the grumpy old men are sitting around trying to outdo each other with how hard they had it when they were kids.</p>
+<blockquote>
+<p>Runner #1: I run a marathon every day when I get home from work.</p>
+<p>Runner #2: That&#8217;s nothing.  When I was on vacation last month, I ran a marathon every day before breakfast.</p>
+<p>Runner #3: You had breakfast?  Luxury.  I vacationed in France last year, and I ran a marathon every day at 6 AM and didn&#8217;t eat a thing the entire week.</p>
+<p>Runner #4: You think you have it bad?  I vacationed in Antarctica!  Every day I would get up at 4 AM, having gone to bed at midnight, skip breakfast, and run a marathon in a tiny circle around my igloo, wearing nothing but my running shoes and spandex shorts.</p>
+<p>Runner #5: You had shoes?</p>
+<p>Runner #4: Aye.</p>
+<p>Runner #5: Luxury&#8230;</p>
+</blockquote>
+
+<p><cite>Dean Allen</cite>: <a href="/web/20110608020349/http://www.textism.com/article/434/">How to drive in France</a>.  <q cite="http://www.textism.com/article/434/">No matter the speed of traffic flow, or the narrowness of the streets, let this be your mantra: pass, pass, pass.</q>  And stay the hell out of Antarctica.</p>
+
+<p>OK, apparently everyone in the world but me heard that Bill Clinton&#8217;s dog Buddy <a href="/web/20110608020349/http://www.daypop.com/redirect?id=10951794">died on Thursday</a> by being hit by a car.  I almost cried.  My parents have the same type of dog.  They&#8217;re wonderful dogs.  <a href="/web/20110608020349/http://inq.philly.com/content/inquirer/2002/01/04/opinion/GORIN04.htm">Clinton-haters</a> can make cruel jokes if you want, but losing a dog is a great loss to a dog lover.  It&#8217;s like losing a member of your immediate family.  People who don&#8217;t own dogs just don&#8217;t understand.</p>
+
+<p><a href="/web/20110608020349/http://www.yomiuri.co.jp/newse/20020105wo11.htm">New OS would like PCs, gadgets</a>. [via <a href="/web/20110608020349/http://slashdot.org/article.pl?sid=02/01/05/1331226&mode=nested&threshold=3">Slashdot</a>] <q cite="http://www.yomiuri.co.jp/newse/20020105wo11.htm">Sony Computer Entertainment Inc. (SCE), Toshiba Corp. and IBM Corp. have reached a basic agreement on jointly developing a new operating system (OS) to be released in 2005 for computers capable of high-speed Internet connections.</q>  Pure vaporware.  Pipe dream.  Some Sony executive&#8217;s idea of what an operating system should be (totally closed box, digital rights management wired in at the lowest level, and owned by Sony instead of Microsoft).  I say again: vaporware.  Feh.</p>
+
+<p><cite>Paul Boutin</cite>: <a href="/web/20110608020349/http://paulboutin.weblogger.com/2002/01/04">I survived Windows XP</a> [via <a href="/web/20110608020349/http://scriptingnews.userland.com/backissues/2002/01/05">Dave Winer</a>] Apparently, Windows XP&#8217;s primary annoyances (forced product activation, memory hogging, .NET signup nags) pale in comparison to Real and MP3.com.  Faint praise, to say the least.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110608020349/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110608020349/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110608020349/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110608020349/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110608020349/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.319 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-24 10:14:15 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 2:03:49 Jun 8, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:36:17 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

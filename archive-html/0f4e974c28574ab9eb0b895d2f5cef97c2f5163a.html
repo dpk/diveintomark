@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Unicode Normalization Form C [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806112201/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806112201/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806112201/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806112201/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806112201im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806112201/http://diveintomark.org/archives/2004/07/03/feed-parser-32" title="Universal Feed Parser 3.2">
+<link rel=next href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/tough" title="XML is tough">
+<link rel=up href="/web/20110806112201/http://diveintomark.org/archives#p1514" title="July 2004">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Unicode Normalization Form C Comments Feed" href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806112201/http://diveintomark.org/' />
+<link rel='prev' title='Universal Feed Parser 3.2' href='/web/20110806112201/http://diveintomark.org/archives/2004/07/03/feed-parser-32' />
+<link rel='next' title='XML is tough' href='/web/20110806112201/http://diveintomark.org/archives/2004/07/06/tough' />
+<link rel='canonical' href='/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc' />
+<link rel='shortlink' href='/web/20110806112201/http://diveintomark.org/?p=1514' />
+<meta name="description" content="With apologies to Emo Philips.">
+<meta name="keywords" content="humor,markup,rest,soap,unicode,webservices,xml">
+<link href="/web/20110806112201cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806112201/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2004\/07\/06\/nfc";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2004/07/06/nfc" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806112201" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115354/http://diveintomark.org/archives/2004/07/06/nfc" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 11:22:01 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120114122731/http://diveintomark.org/archives/2004/07/06/nfc" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 Jan 2012"><strong>JAN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115354/http://diveintomark.org/archives/2004/07/06/nfc" title="11:53:54 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 11:22:01 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110811091053/http://diveintomark.org/archives/2004/07/06/nfc" title="9:10:53 Aug 11, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620051225/http://diveintomark.org/archives/2004/07/06/nfc" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 11:22:01 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121207100710/http://diveintomark.org/archives/2004/07/06/nfc" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Dec 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806112201*/http://diveintomark.org/archives/2004/07/06/nfc" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>50 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">9 Apr 06 - 7 Dec 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000201201023_2007:-1:811211101111_2008:-1:111110001100_2009:-1:010000000000_2010:-1:000011000011_2011:7:000010021000_2012:-1:300000000001_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806112201/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806112201/http://diveintomark.org/archives#p1514">July 6, 2004</a> &#8227;
+<h2>Unicode Normalization Form C</h2> (<a href="/web/20110806112201/http://diveintomark.org/tag/humor" rel="tag">humor</a>, <a href="/web/20110806112201/http://diveintomark.org/tag/markup" rel="tag">markup</a>, <a href="/web/20110806112201/http://diveintomark.org/tag/rest" rel="tag">rest</a>, <a href="/web/20110806112201/http://diveintomark.org/tag/soap" rel="tag">soap</a>, <a href="/web/20110806112201/http://diveintomark.org/tag/unicode" rel="tag">unicode</a>, <a href="/web/20110806112201/http://diveintomark.org/tag/webservices" rel="tag">webservices</a>, <a href="/web/20110806112201/http://diveintomark.org/tag/xml" rel="tag">xml</a>)</div>
+<p>I was walking across a bridge one day, and I saw a man standing on the edge, about to jump off.  So I ran over and said, &#8220;Stop!  Don&#8217;t do it!&#8221;</p>
+
+<p>&#8220;I can&#8217;t help it,&#8221; he cried.  &#8220;I&#8217;ve lost my will to live.&#8221;</p>
+
+<p>&#8220;What do you do for a living?&#8221; I asked.</p>
+
+<p>He said, &#8220;I create web services specifications.&#8221;</p>
+
+<p>&#8220;Me too!&#8221; I said.  &#8220;Do you use REST web services or SOAP web services?&#8221;</p>
+
+<p>He said, &#8220;REST web services.&#8221;</p>
+
+<p>&#8220;Me too!&#8221; I said.  &#8220;Do you use text-based XML or binary XML?&#8221;</p>
+
+<p>He said, &#8220;Text-based XML.&#8221;</p>
+
+<p>&#8220;Me too!&#8221; I said.  &#8220;Do you use XML 1.0 or XML 1.1?&#8221;</p>
+
+<p>He said, &#8220;XML 1.0.&#8221;</p>
+
+<p>&#8220;Me too!&#8221; I said.  &#8220;Do you use UTF-8 or UTF-16?&#8221;</p>
+
+<p>He said, &#8220;UTF-8.&#8221;</p>
+
+<p>&#8220;Me too!&#8221; I said.  &#8220;Do you use Unicode Normalization Form C or Unicode Normalization Form KC?&#8221;</p>
+
+<p>He said, &#8220;Unicode Normalization Form KC.&#8221;</p>
+
+<p>&#8220;Die, heretic scum!&#8221; I shouted, and I pushed him over the edge.</p>
+
+<p class="attribution">(with apologies to Emo Philips)</p>
+<p class=c>&#167;
+
+<h3 id=comments>Eighteen comments here (<a href=/web/20110806112201/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-6036"><p>Haha good one Mark, I&#8217;m guessing he&#8217;d still be over the side if he said KD too, but would you have spared him for D?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://www.ndunn.com/' rel='external nofollow' class='url'>Neil Dunn</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6036" title="July 6, 2004 @ 12:36 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6037"><p>I was following you until the Normalization form whatever bit, and then you lost me. What precisely is it?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://www.neilturner.me.uk/' rel='external nofollow' class='url'>Neil T.</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6037" title="July 6, 2004 @ 12:41 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6038"><p>Definition from the <a href="/web/20110806112201/http://www.unicode.org/glossary/#N">Unicode.org glossary</a>:</p>
+<p>A process of removing alternate representations of equivalent sequences from textual data, to convert the data into a form that can be binary-compared for equivalence. In the Unicode Standard, normalization refers specifically to processing to ensure that canonical-equivalent (and/or compatibility-equivalent) strings have unique representations.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://www.ndunn.com/' rel='external nofollow' class='url'>Neil Dunn</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6038" title="July 6, 2004 @ 12:49 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6039"><p>See also <a href="/web/20110806112201/http://www.unicode.org/reports/tr15/">Unicode Normalization Forms</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6039" title="July 6, 2004 @ 1:42 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6040"><p>:)</p>
+<p>So it is.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6040" title="July 6, 2004 @ 1:46 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6041"><p>Would anybody mind elaborating what&#8217;s bad about normalisation forms?</p>
+<p>When I first saw them, I went &#8220;Huh, who&#8217;d want even more ways to encode Unicode strings?&#8221; But then I was persuaded that programmers really like this kind of thing for string comparisons because the intelligence for normalising strings is right in Unicode rather than everybody having to reinvent the wheel and figure out that people may be using (MODIFIER LETTER SMALL A) when they actually mean (FEMININE ORDINAL INDICATOR) and others may just write an a.</p>
+<p>With this site traditionally being a place that values clean solutions over brief avoidance of programming pain, I wonder what would be a better solution to the problem.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://earthlingsoft.net/ssp/blog' rel='external nofollow' class='url'>ssp</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6041" title="July 6, 2004 @ 3:07 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6042"><p>It would be interesting to hear why you think KC is so much more evil than C. I&#8217;m not saying I will disagree. Having fought that fight in IDNs, I might agree with you, but I also found that different people have different things they love/hate about KC.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://lookit.proper.com/' rel='external nofollow' class='url'>Paul Hoffman</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6042" title="July 6, 2004 @ 4:10 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6043"><p>To ssp: both normalization forms C and KC are horridly complex. Programming them is prone to errors, and both take fairly large tables. Also, the Unicode Consortium has changed the rules for them even though they said they never would (and plan to do so again in the near future).</p>
+<p>The forms are needed for sane use of Unicode, but that is because of (in hindsight) bad decisions of what to include in Unicode. If someone was re-making Unicode today, they would simply not allow the characters that need to be normalized.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://lookit.proper.com/' rel='external nofollow' class='url'>Paul Hoffman</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6043" title="July 6, 2004 @ 4:14 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6044"><p>> With this site traditionally being a place that values clean solutions over brief avoidance of programming pain</p>
+<p>You must be new here.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6044" title="July 6, 2004 @ 4:57 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6045"><p>> If someone was re-making Unicode today, they would simply not allow the characters that need to be normalized.</p>
+<p>Paul, are you sure? One of Unicode&#8217;s goals was to losslessly handle legacy encodings. The need for normalization seems to naturally fall out of that. Am I wrong?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://keithdevens.com/' rel='external nofollow' class='url'>Keith</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6045" title="July 6, 2004 @ 6:42 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6046"><p>> Also, the Unicode Consortium has changed the rules for them even though they said they never would (and plan to do so again in the near future).</p>
+<p>I would be very interested to learn when they changed, and what the differences were.  Also, when they are expected to change again, and what the differences are expected to be.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6046" title="July 6, 2004 @ 6:49 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6048"><p>>> If someone was re-making Unicode today, they would simply not allow the characters that need to be normalized.</p>
+<p>>Paul, are you sure? One of Unicode’s goals was to losslessly handle legacy encodings. The need for normalization seems to naturally fall out of that. Am I wrong?</p>
+<p>You are right that that was one of their goals, and that normalization fell out of that goal. It turns out (again in hindsight) that the horrible mess that evolved out of that decision was not worth the pain. The legacy encodings could have been handled by a transfer algorithm instead of by codepoints.</p>
+<p>>> Also, the Unicode Consortium has changed the rules for them even though they said they never would (and plan to do so again in the near future).</p>
+<p>>I would be very interested to learn when they changed, and what the differences were. Also, when they are expected to change again, and what the differences are expected to be.</p>
+<p>Too busy to look up the old one now, but the upcoming one is documented <a href="/web/20110806112201/http://www.unicode.org/review/pr-29.html">here</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://lookit.proper.com/' rel='external nofollow' class='url'>Paul Hoffman</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6048" title="July 6, 2004 @ 9:51 pm"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6049"><p>To answer your original question, I have no informed opinion whatsoever about the relative merits of NFC vs. NFKC.  The only analogy I&#8217;ve read that makes any sense at all is that NFKC is kind of like converting everything to lowercase so you can do case-insensitive searching (like Google).  Except it&#8217;s not that; that&#8217;s just an analogy.  It actually involves subtle modifications to characters that only exist in languages I neither speak nor write, and I don&#8217;t hold out a lot of hope for understanding it in the near future.</p>
+<p>To the broader question of &#8220;why this post,&#8221; I simply like pointing out that abstractions leak, and that choices that seem simple and obvious (like &#8220;just use XML&#8221;) are usually complex and heart-wrenchingly difficult.</p>
+<p>In this vein, I am thrilled (in a perverse kind of way) to discover that Unicode Normalization Form C is itself an unstable concept.  When the foundations on which we build waver ever so slightly, we can only sit back and wonder whether our entire surroundings will come crashing down around us.  Will the upcoming changes to the NFC rules affect existing digital signatures which are build on Canonical XML?</p>
+<p>I have no solutions or better alternatives to offer.  But a week ago I didn&#8217;t even understand enough to ask annoying questions.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6049" title="July 7, 2004 @ 12:05 am"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6051"><p>Re: merits of NFC vs. NFKC</p>
+<p>NFKC causes data loss in the sense that it loses some presentationalism like character-level superscripts. (Applies to English, too.) </p>
+<p>According to the sample in the spec, it also converts the special character for ångström to a regular Å. What’s the point of having a separate character ANGSTROM SIGN in the first place?</p>
+<p>Besides, charmod mandates NFC, so someone speccing NFKC for use on the Web would run againt that spec. :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://iki.fi/hsivonen/' rel='external nofollow' class='url'>Henri Sivonen</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6051" title="July 7, 2004 @ 3:09 am"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6053"><p>LOL&#8230;<br />
+That was hilarious&#8230;<br />
+Good one mark :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://www.subzeroblue.com/' rel='external nofollow' class='url'>Subzero Blue</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6053" title="July 7, 2004 @ 3:45 am"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6056"><p>Re lowercase: In fact, I was wondering how it was decided exactly how far these &#8216;four letter normalisations&#8217; go. E.g.: Why is ½ equal to 1/2 but A not equal to a. Most of the searches I do are case insensitive. (But at least the information for conversion to lowercase is included in Unicode as well)</p>
+<p>I can see how there may be shortcomings in the existing conversion algorithms and how changes in them may be annoying. It may also be that the normalisations as they exist don&#8217;t do exactly what you want them to do. Yet, my gut feeling is that this may be better than every geek coming up with his own imperfect solution to this problem.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://earthlingsoft.net/ssp/blog' rel='external nofollow' class='url'>ssp</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6056" title="July 7, 2004 @ 5:34 am"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6057"><p>The difference from lower-casing is that both the C and KC forms are supposed to end up with a string that *looks* the same.  If you showed two strings, one with E followed by ACUTE and E-WITH-ACUTE, you would be surprised that they do not match, even though they look identical on the screen.  With internationalized URLs this becomes a big deal. </p>
+<p>Normalization form C would convert the former to look like the latter.  But Unicode has separate code points for a few symbols (like MICRO SIGN) that are expected to look the same as other letters (like small Greek MU), but *might* conceivably look different depending on what fonts you are using, but to most sane people would be considered the same letter.  Form C leaves these alone; form KC forces the use of the compatibility character (so I think MICRO gets changed to MU).  </p>
+<p>I believe Unicode has a whole other section discussing what it means to convert a string to lower-case, and how to mush strings up to make for string comparisons that are as unsurprising as possible&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://www.alleged.org.uk/pdc/' rel='external nofollow' class='url'>Damian Cugley</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6057" title="July 7, 2004 @ 6:03 am"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6071"><p><a href="/web/20110806112201/http://diveintomark.org/archives/blinks/2004/04/#b20040419033237">&#8220;queries for free&#8221;</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112201/http://www.intertwingly.net/blog/' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;<a class=p href="/web/20110806112201/http://diveintomark.org/archives/2004/07/06/nfc#comment-6071" title="July 8, 2004 @ 12:00 am"><img alt="#" src=/web/20110806112201im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806112201/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806112201/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806112201/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806112201/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806112201/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.392 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-14 05:29:21 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 11:22:01 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:10:46 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

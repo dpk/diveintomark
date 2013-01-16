@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>DeCSS, how do I love thee? [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110607174344/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110607174344/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110607174344/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110607174344im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110607174344/http://diveintomark.org/archives/2006/10/15/fish-fish-fish-fish-fish" title="Fish fish fish fish fish">
+<link rel=next href="/web/20110607174344/http://diveintomark.org/archives/2006/10/27/sunday-morning" title="Sunday morning">
+<link rel=up href="/web/20110607174344/http://diveintomark.org/archives#p1579" title="October 2006">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; DeCSS, how do I love thee? Comments Feed" href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm/feed" />
+<link rel='index' title='dive into mark' href='/web/20110607174344/http://diveintomark.org/' />
+<link rel='prev' title='Fish fish fish fish fish' href='/web/20110607174344/http://diveintomark.org/archives/2006/10/15/fish-fish-fish-fish-fish' />
+<link rel='next' title='Sunday morning' href='/web/20110607174344/http://diveintomark.org/archives/2006/10/27/sunday-morning' />
+<link rel='canonical' href='/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm' />
+<link rel='shortlink' href='/web/20110607174344/http://diveintomark.org/?p=1579' />
+<meta name="description" content="Here's a hint: it's NOT so that I could give all my friends a copy of .">
+<meta name="keywords" content="decss,drm,dvd,parenting">
+<link href="/web/20110607174344cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110607174344/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2006\/10\/23\/finding-drm";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "7";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2006/10/23/finding-drm" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110607174344" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110222011234/http://diveintomark.org/archives/2006/10/23/finding-drm" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Feb 2011"><strong>FEB</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 17:43:44 Jun 7, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110222011234/http://diveintomark.org/archives/2006/10/23/finding-drm" title="1:12:34 Feb 22, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 17:43:44 Jun 7, 2011">7</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20080517030915/http://diveintomark.org/archives/2006/10/23/finding-drm" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="17 May 2008"><strong>2008</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 17:43:44 Jun 7, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110607174344*/http://diveintomark.org/archives/2006/10/23/finding-drm" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>14 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">7 Nov 06 - 7 Jun 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000010_2007:-1:510000000000_2008:-1:000010000000_2009:-1:000000000000_2010:-1:000001000111_2011:5:010001000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110607174344/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110607174344/http://diveintomark.org/archives#p1579">October 23, 2006</a> &#8227;
+<h2>DeCSS, how do I love thee?</h2> (<a href="/web/20110607174344/http://diveintomark.org/tag/decss" rel="tag">decss</a>, <a href="/web/20110607174344/http://diveintomark.org/tag/drm" rel="tag">drm</a>, <a href="/web/20110607174344/http://diveintomark.org/tag/dvd" rel="tag">dvd</a>, <a href="/web/20110607174344/http://diveintomark.org/tag/parenting" rel="tag">parenting</a>)</div>
+<p><a href="/web/20110607174344/http://digg.com/apple/Unlocking_the_iPod_3#c3542274">Let me count the ways</a>:</p>
+
+<blockquote cite="http://digg.com/apple/Unlocking_the_iPod_3">
+<p>Why did I love DeCSS? Here&#8217;s a hint: it&#8217;s NOT so that I could give all my friends a copy of [enter movie here]. I have a 2 year old. Do you know how quickly a 2 year old learns how to eject a DVD from the player? Have you ever seen what a 2 year old can do to a now-ejected DVD?</p>
+
+<p>Having DRM on any of the products that I purchased only limit my ability to protect said investment. Sure, an 8-track/CD/DVD/Blue-Ray isn&#8217;t a Franklin &#8220;not-guaranteed-to-increase-in-value&#8221; Mint hand-painted plate set, but I don&#8217;t want to be forced to re-purchase &#8220;Finding Nemo&#8221; 8 times because my kid wants to take it to bed with him. [Yes, he does love the movie THAT much.]</p>
+</blockquote>
+
+<p>Word.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Fifteen comments here (<a href=/web/20110607174344/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-7569"><p>But but but&#8230;  that&#8217;s FAIR USE; what are you, some sort of communist?!? Think of all the starving industry executives who were counting on you buying all those extra copies! ;-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://members.shaw.ca/Limulus/' rel='external nofollow' class='url'>Limulus</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7569" title="October 23, 2006 @ 6:27 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7570"><p>I&#8217;m sure they&#8217;ll find some other way to co-erce your child into spending your money&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://gizo.wordpress.com/' rel='external nofollow' class='url'>gizo</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7570" title="October 23, 2006 @ 7:16 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7571"><p>Tell me about it&#8230; I am going to build a MythTV HTPC with the primary aim of ripping all the kids DVDs onto it purely to stop my cries of anguish whenever Nemo/Cinderella/Mulan gets scratched AGAIN&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Jim</cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7571" title="October 24, 2006 @ 4:37 am"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7572"><p>Someone needs to invent a DVD player that comes with those caddies, like early CD-ROM drives used, especially for parents.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://mattl.co.uk/' rel='external nofollow' class='url'>mattl</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7572" title="October 24, 2006 @ 9:40 am"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7573"><p>Blu-ray discs can apparently be scratched like hell and still play. They have a special coating on them. Even wire-wool cannot damage them by scratches I&#8217;ve read. Sounds kid-proof if you ask me. (Well, until they try and <em>bend</em> the darn things, that is.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://www.designdetector.com/' rel='external nofollow' class='url'>Chris Hester</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7573" title="October 24, 2006 @ 11:27 am"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7574"><p>Sounds like someone needs to invent a child-lock button sequence that prevents the disc from being ejected.</p>
+<p>P.S. now that he can eject stuff look forwards to finding food and miscellanea injected via the tray.</p>
+<p class=sig>&#8212;&#8201;<cite>Al</cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7574" title="October 24, 2006 @ 9:01 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7578"><p>A DVD player tray holds about 20 pennies. (And is worth less after that experiment.)</p>
+<p class=sig>&#8212;&#8201;<cite>Mark W.</cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7578" title="October 24, 2006 @ 11:00 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7579"><p>Could DeCSS make our children better human beings?</p>
+<p>Children often assert their ownership over every toy, movie, and video game they come across.  If one sibling plays with something belonging to another, a vicious struggle will follow.  But what if their digital diversions weren&#8217;t in single-copy, physical form, if they existed in multiple copies or on the family network?  Finding Nemo belongs to everyone; disagreeable children can watch the film in separate rooms at staggered times, never coming to blows over artificial scarcity.</p>
+<p>Separate, personal viewings don&#8217;t do much for a child&#8217;s social development, but ultimately DeCSS pulls through by giving children one less thing to fight about.  That&#8217;s world peace in the making.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://mikemariano.wordpress.com/' rel='external nofollow' class='url'>Mike Mariano</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7579" title="October 24, 2006 @ 11:32 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7580"><p>A single disc dvd player holds ~5 discs and you will have to take the machine apart to eject them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://seanroberts.org/' rel='external nofollow' class='url'>Sean R.</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7580" title="October 25, 2006 @ 7:26 am"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7581"><p>Don&#8217;t forget that toddlers also consider the VCR slot to be an excellent hiding place for their favorite DVDs. </p>
+<p>I found 2 lost DVDs that had been stuffed into our Sony VCR months ago, but they never interfered with using the tapes until the VCR was moved and the DVDs finally interfered with the tape mechanism, thus disclosing their presence in the wrong machine. ;-)</p>
+<p class=sig>&#8212;&#8201;<cite>D Zurn</cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7581" title="October 25, 2006 @ 2:42 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7584"><p>Since we&#8217;ve wandered completely off topic into the-things-kids-will-stuff-into-electronics&#8230;</p>
+<p>I once found a box of raisins in the VCR. </p>
+<p>A small box. </p>
+<p>A small <i>open</i> box.</p>
+<p>That was after finding over 20 pennies stuffed into the car&#8217;s cassette player. I was outside blissfully washing the car enjoying that fact that the kids were <i>quietly</i> entertaining themselves inside the car. </p>
+<p>This was one of those early parenting lessons where you learn that &#8220;quiet&#8221; is more trouble than &#8220;not quiet&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://bitworking.org/' rel='external nofollow' class='url'>Joe</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7584" title="October 27, 2006 @ 11:25 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7586"><p>Couldn&#8217;t agree more. I have at least 3 console games which are now worthless, thanks to scratched and cracked discs.</p>
+<p class=sig>&#8212;&#8201;<cite>Alok</cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7586" title="October 29, 2006 @ 7:13 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7589"><p>&gt;Don’t forget that toddlers also consider the VCR slot to be an excellent hiding place for their favorite DVDs.</p>
+<p>And sandwiches.</p>
+<p class=sig>&#8212;&#8201;<cite>Daryl Oidy</cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7589" title="October 31, 2006 @ 4:59 am"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7591"><p><i>Don’t forget that toddlers also consider the VCR slot to be an excellent hiding place for their favorite DVDs.</i></p>
+<p>And bananas. Seriously.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://www.whis.net/' rel='external nofollow' class='url'>Dr. Bonzo</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7591" title="October 31, 2006 @ 1:23 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7615"><p>But the original Digg poster is wrong. You don&#8217;t need DeCSS to make a backup copy of a DVD to toddler-proof your Finding Nemo. All you have to do is make a copy of the DVD with a DL burner; now that DL blank are getting inexpensive, it&#8217;s easy and cheap. You only need DeCSS if you want to re-encode the video, for your iPod, or to fit on a single-layer DVD. </p>
+<p>(I believe this same argument was used in the MPAA vs 2600 lawsuit: that keeping the CSS algorithm secret does NOT prevent copying of DVDs.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607174344/http://jimthompson.org/' rel='external nofollow' class='url'>Jim Thompson</a></cite>&#160;<a class=p href="/web/20110607174344/http://diveintomark.org/archives/2006/10/23/finding-drm#comment-7615" title="November 2, 2006 @ 1:25 pm"><img alt="#" src=/web/20110607174344im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110607174344/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110607174344/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110607174344/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110607174344/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110607174344/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.351 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-24 08:31:13 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 17:43:44 Jun 7, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:09:10 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

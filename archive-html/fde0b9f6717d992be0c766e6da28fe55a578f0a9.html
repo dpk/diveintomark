@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Those that belong to the emperor [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806092008/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806092008/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806092008/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806092008/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806092008im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806092008/http://diveintomark.org/archives/2003/08/05/atom02" title="Atom 0.2 snapshot">
+<link rel=next href="/web/20110806092008/http://diveintomark.org/archives/2003/08/12/attachments" title="Apple //e">
+<link rel=up href="/web/20110806092008/http://diveintomark.org/archives#p1395" title="August 2003">
+<link rel='index' title='dive into mark' href='/web/20110806092008/http://diveintomark.org/' />
+<link rel='prev' title='Atom 0.2 snapshot' href='/web/20110806092008/http://diveintomark.org/archives/2003/08/05/atom02' />
+<link rel='next' title='Apple //e' href='/web/20110806092008/http://diveintomark.org/archives/2003/08/12/attachments' />
+<link rel='canonical' href='/web/20110806092008/http://diveintomark.org/archives/2003/08/08/classification' />
+<link rel='shortlink' href='/web/20110806092008/http://diveintomark.org/?p=1395' />
+<meta name="description" content="UUIDs in Python. In defense of Fahrner Image Replacement. That famous quote from Jorge Luis Borges. New writing from Leslie, Michael, Michael, stavros, and JD.">
+<meta name="keywords" content="css,linkdump,muse,privacy">
+<link href="/web/20110806092008cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806092008/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806092008/http://diveintomark.org/archives/2003/08/08/classification">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/08\/08\/classification";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/08/08/classification" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806092008" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514111520/http://diveintomark.org/archives/2003/08/08/classification" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:20:08 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110714062654/http://diveintomark.org/archives/2003/08/08/classification" title="6:26:54 Jul 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:20:08 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110831053629/http://diveintomark.org/archives/2003/08/08/classification" title="5:36:29 Aug 31, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100430121617/http://diveintomark.org/archives/2003/08/08/classification" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="30 Apr 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:20:08 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806092008*/http://diveintomark.org/archives/2003/08/08/classification" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>24 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">19 Jun 06 - 31 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001121000_2007:-1:010100000111_2008:-1:101110001100_2009:-1:000000000000_2010:-1:000100000021_2011:7:000010120000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806092008/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806092008/http://diveintomark.org/archives#p1395">August 8, 2003</a> &#8227;
+<h2>Those that belong to the emperor</h2> (<a href="/web/20110806092008/http://diveintomark.org/tag/css" rel="tag">css</a>, <a href="/web/20110806092008/http://diveintomark.org/tag/linkdump" rel="tag">linkdump</a>, <a href="/web/20110806092008/http://diveintomark.org/tag/muse" rel="tag">muse</a>, <a href="/web/20110806092008/http://diveintomark.org/tag/privacy" rel="tag">privacy</a>)</div>
+<ul class="inbrief">
+<li><cite>Yahoo</cite>: <a href="/web/20110806092008/http://help.yahoo.com/groups/groups-56.html">Yahoo! Groups Service Changes</a>.  <q cite="http://help.yahoo.com/groups/groups-56.html">To ensure that all Yahoo! Groups members enjoy the same high-quality service</q>, we will be deleting all of your attachments.  Insert George Carlin <q>servicing the customer</q> quote here.  I once saw a sign at a bank on the outskirts of London: <q>For your convenience, we are now closed on Thursdays.</q></li>
+<li><cite>Python Cookbook</cite>: <a href="/web/20110806092008/http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/213761">Short and sweet UUID function</a>.  Beware the blanket exception.</li>
+<li><cite>Dave Shea</cite>: <a href="/web/20110806092008/http://www.digital-web.com/features/feature_2003-08.shtml">In Defense of Fahrner Image Replacement</a>.  <q cite="http://www.digital-web.com/features/feature_2003-08.shtml">Semantics conjures up images of narrow-minded professorial types arguing the definition of words like &#8216;this.&#8217;</q></li>
+<li><cite>Paul Ford</cite>: <a href="/web/20110806092008/http://www.ftrain.com/WebPidgin.html">Web Pidgin</a>.  <q cite="http://www.ftrain.com/WebPidgin.html">XML was going to add semantics to data so you could make smart searches, you could say, show me all the poems about red wheelbarrows, and boom, there you&#8217;d go.</q></li>
+<li><cite>Jorge Luis Borges</cite>: <a href="/web/20110806092008/http://agents.umbc.edu/misc/johnWilkins.html">The Analytical Language of John Wilkins</a>.  Actually, <a href="/web/20110806092008/http://www.themodernword.com/borges/borges_quotes.html">this quotes page</a> has a better translation of the part I want to quote: <q cite="http://www.themodernword.com/borges/borges_quotes.html">These ambiguities, redundances, and deficiences recall those attributed by Dr. Franz Kuhn to a certain Chinese encyclopedia entitled Celestial Emporium of Benevolent Knowledge. On those remote pages it is written that animals are divided into (a) those that belong to the Emperor, (b) embalmed ones, (c) those that are trained, (d) suckling pigs, (e) mermaids, (f) fabulous ones, (g) stray dogs, (h) those that are included in this classification, (i) those that tremble as if they were mad, (j) innumerable ones, (k) those drawn with a very fine camel&#8217;s hair brush, (l) others, (m) those that have just broken a flower vase, (n) those that resemble flies from a distance.</q></li>
+<li>I am now the <a href="/web/20110806092008/http://www.google.com/search?q=spanish+curse+words">#1 Google result for &#8220;spanish curse words&#8221;</a>, for a page that is indeed <a href="/web/20110806092008/http://diveintomark.org/archives/2003/06/19/teach_me_spanish_curse_words" title="Andrew Orlowski can bite my shiny metal ass">loaded with Spanish curse words</a>.  I get about 30 hits a day on this phrase, thus <a href="/web/20110806092008/http://www.intertwingly.net/blog/1477.html#c1056040421">fulfilling my own prophecy</a> and proving once again that the Internet is the greatest educational resource for our children since the peephole.</li>
+<li><cite>Richard Threadgill</cite>: <a href="/web/20110806092008/http://www.mit.edu/people/dpolicar/writing/netsam/givingGoodReports.html">Why do they keep yelling at me?</a>  <q cite="http://www.mit.edu/people/dpolicar/writing/netsam/givingGoodReports.html">Silence is bad. Management cannot differentiate between someone who&#8217;s gone off the deep end and is over their head, someone who is malingering, someone who&#8217;s trying to solve an intractable problem, and someone who is making progress on a hard design issue.</q></li>
+<li><cite>David D. Clark</cite>: <a href="/web/20110806092008/http://www.faqs.org/rfcs/rfc814.html">RFC 814: Name, Addresses, Ports, and Routes</a>.  <q cite="http://www.faqs.org/rfcs/rfc814.html">One  of the first questions one can ask about a naming mechanism is
+
+how many names one can expect to encounter.  In order to answer this, it
+
+is necessary to know something about the expected maximum  size  of  the
+
+internet.  Currently, the internet is fairly small.  It contains no more
+
+than  25  active  networks,  and no more than a few hundred hosts.  This
+
+makes it possible to install tables which exhaustively list all of these
+
+elements.  However, any implementation undertaken now should be based on
+
+an assumption of a much  larger  internet.    The  guidelines  currently
+
+recommended  are  an upper limit of about 1,000 networks.  If we imagine
+
+an average number of 25 hosts per net,  this  would  suggest  a  maximum
+
+number  of 25,000 hosts.  It is quite unclear whether this host estimate
+
+is high or low, but even if it is off by several  factors  of  two,  the
+
+resulting  number  is  still  large enough to suggest that current table
+
+management strategies are unacceptable.  Some fresh techniques  will  be
+
+required to deal with the internet of the future.</q></li>
+<li><cite>The History Buff</cite>: <a href="/web/20110806092008/http://www.historybuff.com/library/refbarnum.html">P.T. Barnum never said &#8220;There&#8217;s a Sucker Born Every Minute&#8221;</a>.</li>
+<li><cite>Leslie Harpold</cite>: <a href="/web/20110806092008/http://www.harpold.com/500/paddock/00000181.html">Secrets for Success</a>.  <q cite="http://www.harpold.com/500/paddock/00000181.html">Everything stops somewhere.</q></li>
+<li><cite>Michael Barrish</cite>: Song <a href="/web/20110806092008/http://oblivio.com/road/03080301.shtml">1</a>/<a href="/web/20110806092008/http://oblivio.com/road/03080401.shtml">2</a>/<a href="/web/20110806092008/http://oblivio.com/road/03080513.shtml">3</a>/<a href="/web/20110806092008/http://oblivio.com/road/03080601.shtml">4</a>/<a href="/web/20110806092008/http://oblivio.com/road/03080701.shtml">5</a>
+<li><cite>Michael McAllister</cite>: <q cite="http://www.dogpoet.com/2003_07_01_archives.html#105916850823812236"><a href="/web/20110806092008/http://www.dogpoet.com/2003_07_01_archives.html#105916850823812236">It&#8217;s a little upsetting to stumble across a friend in a porn movie from the 80&#8242;s</a>.</q></li>
+<li><cite>stavrosthewonderchicken</cite>: <a href="/web/20110806092008/http://weblog.burningbird.net/fires/001425.htm#comment7412">Re: Caricatures and Shadows</a>.  <q cite="http://weblog.burningbird.net/fires/001425.htm#comment7412">[I]n 10 or 20 years I hope I can go back and reread them with yet more beers, and remember, and feel like I had lived a life worth writing about.</q></li>
+<li><cite>Christian Crumlish</cite>: <a href="/web/20110806092008/http://radiofreeblogistan.com/2003/07/31/the_day_the_blogging_died.html">The day the blogging died</a>.  Sing it and <a href="/web/20110806092008/http://www.blogherald.com/archives/000103.html">win $20</a>.  No prize for just getting the tune stuck in your head for the rest of the day.</li>
+<li><cite>Jonathon Delacour</cite>: <a href="/web/20110806092008/http://weblog.delacour.net/archives/2003/08/did_you_miss_me.php">Did you miss me?</a>  Jonathon, the web has an empty space in it when you&#8217;re gone.</li>
+</ul>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806092008/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806092008/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806092008/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806092008/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806092008/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.348 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:58:43 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:20:08 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:13:12 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,1120 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>One year with Linux [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806090608/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806090608/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806090608/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806090608/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806090608im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806090608/http://diveintomark.org/archives/2007/05/31/the-boingboing-household" title="The BoingBoing household">
+<link rel=next href="/web/20110806090608/http://diveintomark.org/archives/2007/06/07/zmv" title="HOWTO recursively rename files with a lowercase file extension">
+<link rel=up href="/web/20110806090608/http://diveintomark.org/archives#p1694" title="June 2007">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; One year with Linux Comments Feed" href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806090608/http://diveintomark.org/' />
+<link rel='prev' title='The BoingBoing household' href='/web/20110806090608/http://diveintomark.org/archives/2007/05/31/the-boingboing-household' />
+<link rel='next' title='HOWTO recursively rename files with a lowercase file extension' href='/web/20110806090608/http://diveintomark.org/archives/2007/06/07/zmv' />
+<link rel='canonical' href='/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux' />
+<link rel='shortlink' href='/web/20110806090608/http://diveintomark.org/?p=1694' />
+<meta name="description" content="Three years ago, I wrote the fanatical devotion of the Debian package maintainers makes the difference. That's still true.">
+<meta name="keywords" content="debian,linux,packaging,ubuntu">
+<link href="/web/20110806090608cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806090608/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2007\/06\/02\/one-year-with-linux";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2007/06/02/one-year-with-linux" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806090608" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514113547/http://diveintomark.org/archives/2007/06/02/one-year-with-linux" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:06:08 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111105030626/http://diveintomark.org/archives/2007/06/02/one-year-with-linux" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="5 Nov 2011"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514113547/http://diveintomark.org/archives/2007/06/02/one-year-with-linux" title="11:35:47 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:06:08 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20111105030626/http://diveintomark.org/archives/2007/06/02/one-year-with-linux" title="3:06:26 Nov 5, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620011210/http://diveintomark.org/archives/2007/06/02/one-year-with-linux" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:06:08 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120806224914/http://diveintomark.org/archives/2007/06/02/one-year-with-linux" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="6 Aug 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806090608*/http://diveintomark.org/archives/2007/06/02/one-year-with-linux" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>118 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">4 Jun 07 - 11 Sep 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000002200211_2008:-1:111110001100_2009:-1:010000000000_2010:-1:100001000111_2011:7:000010010010_2012:-1:500001fed000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806090608/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806090608/http://diveintomark.org/archives#p1694">June 2, 2007</a> &#8227;
+<h2>One year with Linux</h2> (<a href="/web/20110806090608/http://diveintomark.org/tag/debian" rel="tag">debian</a>, <a href="/web/20110806090608/http://diveintomark.org/tag/linux" rel="tag">linux</a>, <a href="/web/20110806090608/http://diveintomark.org/tag/packaging" rel="tag">packaging</a>, <a href="/web/20110806090608/http://diveintomark.org/tag/ubuntu" rel="tag">ubuntu</a>)</div>
+<div class="punch">
+<img src="/web/20110806090608im_/http://diveintomark.org/public/2007/06/pretty-package.jpg" alt="[pretty package]" title="" width="180" height="240">
+<p><a href="/web/20110806090608/http://flickr.com/photos/fbz/388329695/">pretty package!</a> &copy; <a href="/web/20110806090608/http://flickr.com/people/fbz/">Fabienne</a>  / <a title="used under Creative Commons Attribution 2.0 License" href="/web/20110806090608/http://creativecommons.org/licenses/by/2.0/">CC</a></p>
+</div>
+
+<p>One year ago, <a href="/web/20110806090608/http://diveintomark.org/archives/2006/05/30/bye-apple">I switched to Linux</a> for a <a href="/web/20110806090608/http://diveintomark.org/archives/2006/06/02/when-the-bough-breaks">variety</a> of <a href="/web/20110806090608/http://diveintomark.org/archives/2006/06/16/juggling-oranges">reasons</a> revolving around software freedom, choice, and data preservation.  At the time, an anonymous commenter <a href="/web/20110806090608/http://diveintomark.org/archives/2006/06/02/when-the-bough-breaks#comment-6556">shared this piece of wisdom</a>:</p>
+
+<blockquote cite="http://diveintomark.org/archives/2006/06/02/when-the-bough-breaks#comment-6556">
+<p>What exactly do you think you will be doing with Linux when you install it on that fancy ThinkCentre? You’ll be tweaking MORE, configuring MORE, installing MORE because NOTHING is as packaged and polished.  &#8230;  Enjoy your time with Linux, and when the endless Google searches to fix some miniscule package dependancy version problems finally drive you away, you will of course be welcomed back.</p>
+
+</blockquote>
+
+<p>I am happy to report that that has not been my experience.  I have <a href="/web/20110806090608/http://diveintomark.org/archives/2007/03/15/good-easy-2007">spent some time tweaking</a>, but only by choice &#8212; not to make things work, but to try some radically different ideas about workspaces and workflow that quite frankly would have been impossible to accomplish on a Mac.  There were several weeks where I tried to do everything in a framebuffer console.  Now I run a <a href="/web/20110806090608/http://www.nongnu.org/ratpoison/">distinctly odd window manager</a>.  In between, I tried GNOME, KDE, XFCE, Ion3, FluxBox, and that whole <a href="/web/20110806090608/http://www.beryl-project.org/">wobbly window composite window manager thing</a> that&#8217;s all the rage.  None of these experiments required compiling anything, and none required editing configuration files to get them to work.</p>
+
+<p>(I realize that most people will not bother to experiment as much as I have in the past year, and that&#8217;s OK.  Any modern Linux distribution presents a good &#8220;out of the box&#8221; experience, with friendly defaults and familiar metaphors.  But a year ago, several people recommended that I try alternative window managers, and at the time, I didn&#8217;t understand why.  Now I do.  It&#8217;s difficult to explain.  People say that Ruby On Rails is &#8220;opinionated software.&#8221;  I suppose all software reflects the opinions of its authors, but some are certainly more opinionated than others, and window managers, as a class, are more opinionated than most.  If you have strong opinions about software &#8212; and I do &#8212; then it is worth your time to find software that shares them.)</p>
+
+<p>In fact, none of the usual complaints about Linux (hardware drivers, X configuration, package dependencies) have affected me in any significant way.  It helps that I researched and bought a computer that worked well with Linux, though it&#8217;s not like I haven&#8217;t been <a href="/web/20110806090608/http://diveintomark.org/archives/2006/11/06/gnewsense">buying hardware</a> and <a href="/web/20110806090608/http://diveintomark.org/archives/2006/06/26/essentials-2006">installing software</a> like a crazed weasel since then.  (A year later, such research is <a href="/web/20110806090608/http://dell.com/open">easier than ever</a>.)  On the contrary, working on a Linux system has made the weaknesses of other operating systems more painful to deal with.</p>
+
+<p>The most glaring example of this is package management.  Keeping a system up to date is essential, especially a laptop that travels to different untrusted networks on a regular basis.  I still have a Mac in the house &#8212; my old laptop, which I gave to my wife &#8212; and I am still tasked with keeping it up to date.  Obviously Apple Software Update is helpful as far as it goes, but it only covers essential system upgrades, Apple applications, and a small handful of third party applications.  To fill the third-party gap, I subscribe to VersionTracker&#8217;s update service, which provides the equivalent of Apple Software Upgrade for all the third party packages that VersionTracker knows about.  It costs $50 per year for up to ten computers, which is a good deal even if you only have one or two Macs.  (I use the same service to keep my parents&#8217; Mac up to date.)  However, &#8220;good deal&#8221; doesn&#8217;t mean &#8220;easy to use.&#8221;</p>
+
+<p>Here&#8217;s the process of keeping my wife&#8217;s Mac up to date:</p>
+
+<ol>
+<li>Apple Software Update checks for updates automatically and pops up a dialog when updates are available.  I can install the available updates and reboot (if required, which is usually the case with most system upgrades, security patches, and QuickTime updates).  If I&#8217;m in the middle of something, I can dismiss it and have it pop up again tomorow.  And the next day.  And the day after that.</li>
+<li>Some third party programs have their own auto-update mechanisms which run when you launch the application.  Some &#8220;smart&#8221; programs like QuickSilver and Firefox do offer integrated one-click auto-update which includes both the application and its plugins.  Most just dump you onto the project&#8217;s home page and let you search for the appropriate updater yourself.</li>
+<li>For the rest, I periodically run Version Tracker&#8217;s update program, which scans the disk looking for applications and then contacts their server to look for available updates.  This process generally takes 1-5 minutes.  Then the real fun begins.</li>
+</ol>
+
+<p>Each application has its own installer or install process, so updating multiple applications with Version Tracker&#8217;s client involves either downloading an image file or an installer application, and then figuring out what to do.  Sometimes that entails copying an application, sometimes copying multiple folders, sometimes running an installer.  Version Tracker has an option to automatically install applications, but it requires a certain configuration of image file or installer, and the option rarely seems to be available for the programs my wife uses.</p>
+
+<p>(The situation on Windows is even worse &#8212; every vendor seems to create their own update service that&#8217;s always running whether you like it or not.  I have Microsoft Windows Update Service, Apple Software Update Service, HP Printer Update Service, Sun Java Update Service&#8230;  They all pop up at different times and offer to upgrade their particular subset.  At least Apple had the clout and good sense to roll Java and printer drivers into Mac system updates.)</p>
+
+<p>To make matters worse, an increasing number of applications &#8220;tracked&#8221; by Version Tracker don&#8217;t provide binaries, but instead redirect to a web page.  This means that &#8220;downloading&#8221; the update really just opens a browser and (sometimes, but not always) automatically starts the download.  This can happen for several reasons &#8212; binaries by OS revision, binaries by processor, or simply laziness  The basic problem is that Version Tracker has no concept of matching up my processor or my OS revision (both of which it knows &#8212; it&#8217;s a client app running locally) with the available binaries for an application.  It&#8217;s still stuck in the Dark Ages where 1 application == 1 binary.  Universal binaries help, if the vendor offers them.  Anything more complicated and Version Tracker punts.</p>
+
+<p>(This points to the <em>real</em> underlying problem: individual vendors provide their own packages, and there is no system-wide package management system beyond &#8220;you should make a disk image.&#8221;  For closed source applications, no one else is even allowed to repackage them, but even for the open source Mac applications no one bothers to repackage them because there&#8217;s no system-wide package management system to fit them into.  And don&#8217;t tell me about Fink or DarwinPorts; they&#8217;re for strict ports.  I&#8217;m talking about open source Mac-only applications like iTerm, AdiumX, and Camino.)</p>
+
+<p>So now I have two different programs (Version Tracker and my browser) downloading and post-processing files, in different ways, simultaneously, in the background, while I&#8217;m manually copying files from a disk image or clicking Next, Next, Agree, Next through an installer.  I&#8217;m responsible for keeping track of which applications I&#8217;ve installed through which methods and then ejecting the disk image and/or removing the downloaded installer application when it&#8217;s done.  Both downloaders automatically mount disk images, which means that new Finder windows are constantly opening and stealing focus.  And naturally, some installers (*cough* Flash *cough*) require quitting all browsers, which I can&#8217;t do until the browser finishes downloading those applications that forced me to download via a web page!</p>
+
+<p>I know, I know, I&#8217;m a big baby.  Is it such a big deal to drag an application from a disk image into the Applications folder?  Of course not, but it sure gets old quickly.  Isn&#8217;t this the sort of gruntwork computers are supposed to be good at?</p>
+
+<p>Here&#8217;s the process of keeping my Debian system up to date:</p>
+
+<p><kbd>sudo aptitude update &#038;&#038; sudo aptitude -y dist-upgrade</kbd></p>
+
+<p>Of course I never really have to type that, because it&#8217;s in a cron job and runs every night while I&#8217;m asleep.</p>
+
+<p>(To be fair, Iceweasel still checks for plugin updates on launch, just like Firefox on any other platform.)</p>
+
+<p>No doubt the Linux haters will say &#8220;yeah, but make/compile/install is such a bitch.&#8221;  And they&#8217;re right.  I&#8217;m not going to blow smoke up your ass and say that manually handling dependencies and compiling isn&#8217;t a bitch.  I&#8217;ve done it; it&#8217;s a bitch and always will be.  That&#8217;s why, <a href="/web/20110806090608/http://www.debian.org/doc/manuals/project-history/ch-detailed.en.html#s4.1">for the past 13 years</a>, Linux distributions have been working on package and dependency management.  It&#8217;s a hard problem, and it will always require some level of ongoing human expertise.  But each Linux distribution has now automated basically everything about the problem that can be automated &#8212; everything from worldwide mirrored and load-balanced distribution servers to filename and pathname standards to developer tools for the packagers themselves.  I recognized <a href="/web/20110806090608/http://diveintomark.org/archives/2004/05/01/essentials">years ago</a> that &#8220;the fanatical devotion of the Debian package maintainers makes the difference.&#8221;  That&#8217;s still true: they&#8217;re still fanatical about package management, and it still makes the difference.</p>
+
+<p>In 2006, <a href="/web/20110806090608/http://diveintomark.org/archives/2006/06/26/essentials-2006">the only thing I had to compile</a> on Ubuntu was Mplayer.  (Oh yeah, <a href="/web/20110806090608/http://diveintomark.org/archives/2006/12/18/supertux-milestone-19">and Supertux</a>.)  At the end of 2006, I switched from Ubuntu to Debian.  In 2007, I don&#8217;t compile anything at all.  (Especially since I discovered the <a href="/web/20110806090608/http://www.debian-multimedia.org/">Debian-Multimedia</a> repository.  Weekly builds of Mplayer, Mencoder, Ffmeg, libavcodec, and libavformat.  Professionally packaged, for multiple platforms.  If that doesn&#8217;t mean anything to you, don&#8217;t worry about it; it means a lot to me.)  Let me repeat that: I. Don&#8217;t. Compile. Anything.  I have 902 packages installed, and 0 compilers.  Everything I need is already packaged.</p>
+
+<blockquote>
+<p>Enjoy your time with Linux, and when the endless Google searches to fix some miniscule package dependancy version problems finally drive you away, you will of course be welcomed back.</p>
+</blockquote>
+
+<p>One year later, I look back on comments like this, and I just laugh.  Sorry, Anonymous Commenter, you couldn&#8217;t have been more wrong.  You got it exactly backwards.  When <em>your</em> operating system finally comes with a package management system that is both comprehensive and extensible, you will of course be welcomed&#8230; to the 1990s.  In the meantime, I&#8217;ll continue to enjoy my time with Linux.</p>
+
+<p class=c>&#167;
+
+<h3 id=comments>One hundred thirty two comments here (<a href=/web/20110806090608/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-9470"><p>Good for you Mark. The anti-Linux arguments I hear these days feel a lot like the people who still think the Mac can&#8217;t read Word files and only works with one-button mice.</p>
+<p>I&#8217;ve been running gentoo a lot on servers, and you&#8217;re right &#8211; it&#8217;s ALL about the package management. I&#8217;m running MacPorts on this MacBook at the moment, and it&#8217;s good, but not great. One little thing though, `port search iterm` does indeed bring up the iTerm package, and there are other Mac-only packages in there. It&#8217;s not portage, though.</p>
+<p>I think what you really are getting at, though, is that package management and open source go hand in hand. The reason Linux is so much better for package management is because everyone&#8217;s on the same page. A single team (say the portage team) can pull source into their tree as often as they like. That&#8217;s just not going to happen with Microsoft and other proprietary vendors, which means that a robust, credible central package management system simply isn&#8217;t going to happen either.</p>
+<p>The only way forward would be for Apple and Microsoft to open up their System Update frameworks to allow third parties to opt-in, but that will probably bring more issues (maintenance overheads) than benefits (profit!), so I doubt that will happen.</p>
+<p>In the meantime, I&#8217;ll just keep worrying about my backups and open-format data exports, and wonder if Desktop Linux will ever quite work as well as OS X for my needs. I keep hoping.</p>
+<p class=sig>&#8212;&#8201;<cite>Jonathan Barrett</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9470" title="June 2, 2007 @ 5:00 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9471"><p>I&#8217;m happy that it has worked out for you. I&#8217;m not surprised that there&#8217;s a Linux distribution available that *could* work like this, but I am surprised that there&#8217;s one that *did* work like that for you, and that&#8217;s nothing but great news for anyone. It means that computers can suck less and do more in a way that pleases *you* personally. And that&#8217;s none too soon.</p>
+<p>As someone who is on Mac OS X (full-time: 29th month; part-time: right about four years), I&#8217;m still not tremendously tempted to switch, partially because I have recent experience with Ubuntu specifically and decided that it&#8217;s not something I&#8217;d like to use now, and partially because I&#8217;m enjoying the benefits of Mac OS X that you didn&#8217;t (say, Cocoa programming and actually liking iTunes, which doesn&#8217;t mean I think either is perfect). The parts of *nix I need, I can already get.</p>
+<p>I hope we won&#8217;t act like children this time around. I kinda did last time, and I&#8217;m sorry about it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9471" title="June 2, 2007 @ 5:14 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-9472"><p>> I hope we won’t act like children this time around.</p>
+<p>You must be n&#8230; oh, never mind.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9472" title="June 2, 2007 @ 5:25 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9473"><p>I don&#8217;t understand how one with a long mac experience end up using rat poison?</p>
+<p class=sig>&#8212;&#8201;<cite>Bilgehan</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9473" title="June 2, 2007 @ 5:27 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9474"><p>I said &#8216;hope&#8217;, not &#8216;predict&#8217;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9474" title="June 2, 2007 @ 5:32 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9475"><p>I love the ending, &#8220;&#8230; to the 1990s&#8221;.</p>
+<p>There&#8217;s theory that MS controlled package manager comes <a href="/web/20110806090608/http://disparitybit.supersized.org/archives/44-Windows-cant-be-secured,-because-it-lacks-package-management.html">with possible anti-trust stuffs</a> in the way. And the article&#8217;s title reads funny. Oh well.</p>
+<p>Mark, you&#8217;re in favor of a free world, so could you please call the system GNU/Linux, <a href="/web/20110806090608/http://www.gnu.org/philosophy/why-gnu-linux.html">not</a> just Linux. People reading that will be more aware of the <a href="/web/20110806090608/http://www.gnu.org/philosophy/philosophy.html">philosophy</a> of the system you&#8217;re using.</p>
+<p>P/s: I apologise for hijacking one of your personal blogs, I was kind of ignorant.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://hieu.d.hoanggmail.com/' rel='external nofollow' class='url'>Hiếu Hoàng</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9475" title="June 2, 2007 @ 5:38 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9477"><p>Here, here.</p>
+<p>A good rule of thumb for Debian/Ubuntu users is that if a package isn&#8217;t available via “apt-cache search foo” then it usually isn&#8217;t worth installing in the first place.</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9477" title="June 2, 2007 @ 5:59 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9479"><p>I was a Unix admin back in the 80&#8242;s and have seen the rather depressing &#8220;evolution&#8221; in the IT field. Back then, we were two guys administering a 200 client (Sun workstations) network, and we rarely had a problem. It was replaced by five guys running around all the time, fixing problems with Windows machines. Very strange, but that&#8217;s what happened.</p>
+<p>So, I&#8217;m sympathetic to your decision to go with Linux. But still, I don&#8217;t think I would do it. I love my Mac (I switched from Windows to Mac when OS X came out). I&#8217;m very happy to have OS X, Windows, Linux etc on the same machine, with OS X being my main OS.</p>
+<p class=sig>&#8212;&#8201;<cite>Ulf Dahlén</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9479" title="June 2, 2007 @ 6:14 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9480"><p>I recently switched to running Ubuntu Linux as my full-time desktop OS. The initial decision wasn&#8217;t based on anything profound &#8211; though I&#8217;ve since become very much an advocate of open source.</p>
+<p>The switch wasn&#8217;t <em>completely</em> painless for me, though relatively it was fine, and I enjoyed having to work through the small issues that came up. For full disclosure, I did run some version of RedHat several years ago and my university experience was all UNIX (Solaris).</p>
+<p>What I noticed almost immediately after installing Ubuntu is that, at least on Ubuntu, a lot of the initial decision making is done on behalf of the user in terms of what vertical applications to install. By vertical I mean internet, graphics, editors, etc. I of course installed plenty more via apt-get and through Synaptic, but a lot of the decisions I would have had to make in 2002 I did not have to make in 2007.</p>
+<p>I think this type of thing is argued <em>against</em> by Linux gurus who favor choice over a standard suite of vertical applications that should be installed with whatever flavor of Linux in question, mainly because they all have differing opinions, and rightfully so, about which software they will or will not use.</p>
+<p>But ultimately, in terms of a desktop operating system for the masses, as funny as this is to say, ordinary users get confused when given too many options. They would literally rather not think about installation options, let alone manually building an application from source.</p>
+<p>My experience with Ubuntu thus far is this: it appears to at least show the promise of how a Linux distribution can provide the best of both worlds, an environment suited for power users as well as moms. And that can only be a good thing for Linux.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://www.fiddlerelf.com/' rel='external nofollow' class='url'>Ryan</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9480" title="June 2, 2007 @ 6:32 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9481"><p>Many third-party Mac apps now—including Adium, on which I&#8217;m a developer—use a framework called Sparkle, developed by a man named Andy Matuschak. I think most of these didn&#8217;t have an auto-updater before, and Sparkle has certainly unified the experience. (Adium, for one, used to have its own updater until 1.0, wherein we replaced it with Sparkle.)</p>
+<p>He&#8217;s mentioned that he&#8217;d like to write an update-everything tool (presumably like VT&#8217;s) that would work for all the user&#8217;s Sparkle-supporting apps. If he does, I&#8217;ll be glad: the lack of a unified updater for all the user&#8217;s non-Apple apps is definite suck.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://boredzo.org/' rel='external nofollow' class='url'>Peter Hosey</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9481" title="June 2, 2007 @ 6:34 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9483"><p>Lately, I took the chance and installed Ubuntu and openSuSE Linux via Parallels Desktop (plus Windows, too, just to check my own website with different browsers on different platforms).<br />
+Ubuntu, though fine to look at, was a pain in the @ss to install, but using the “Live disk” helped; the standard installer failed to detect the optical drive, and wouldn’t just ignore it for the moment. SuSE worked just fine.<br />
+But when I wanted to deinstall OpenOffice (since I don’t mean to use it for anything else but browsing at the moment), I found deinstalling pretty annoying and difficult for the Newbie I am. On the Mac, I can delete an App as simple as I can (often) install it: by dragging it from one place to another—in this case from the Application folder to the trash. Both Linuxes feature a complex Package manager, that allows anything to be installed and deinstalled, but deinstalling (seemingly obvious) OpenOffice-belongings resulted sometimes in warnings, that other (seemingly core system related) items depend on them. Having made a copy of the Parallels file, I could take a chance—and would gladly revert to the backup, when the system wouldn’t boot anymore &#8230;<br />
+So keeping your system up to date might be easy on Linux, but you need to know a lot about dependencies between system parts and apps before you can effectively optimise it. On the Mac I could just dump an unwanted app, and never regret it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://stgd.de/' rel='external nofollow' class='url'>Sami</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9483" title="June 2, 2007 @ 6:56 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9484"><blockquote><p>I subscribe to VersionTracker’s update service, which provides the equivalent of Apple Software Upgrade for all the third party packages that VersionTracker knows about. It costs $50 per year for up to ten computers, which is a good deal even if you only have one or two Macs.</p></blockquote>
+<p><a href="/web/20110806090608/http://blog.gkaindl.com/downloads/app-update">App Update</a> is a free Dashboard Widget that can automatically check for updates to your installed software. It supports Apple&#8217;s software directory, MacUpdate and Version Tracker.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://selfdestruct.net/' rel='external nofollow' class='url'>toni</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9484" title="June 2, 2007 @ 7:02 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9486"><p>Obviously, using ratpoison goes a long way towards not having so many issues. The current trend is to go beryl on linux (and there is my gripe: Most people that move to Linux these days don&#8217;t do it in a thought-out way, after coming to a conclusion sprung for whatever needs that were not being fulfilled, as you did and with which we may disagree but have to at least respect) and that does open another whole can of worms.</p>
+<p>I have heard the argument about package management and, as one that runs more machines with Linux than Macs (althought I do have two macs at home) I can&#8217;t, really, find it as decisive as is usually hailed.</p>
+<p>Ok, I&#8217;ve been using Unix since before Linux existed. I&#8217;ve kept using several flavours along with Linux in different distros.</p>
+<p>When packages started making the rounds it was NEVER about having it easy to upgrade. There were two main problems package managers were supposed to solve: File Placement and Dependencies, with compilation in a now-forgotten third place. Their need was directly born of all the different distros and their need to reorganize things around. Upgrading software was a secondary effect of their existence.</p>
+<p>Trying to sell package managers nowadays and saying MacOS needs them is ignoring the differences between OSes. Few applications have dependencies (and NeXT&#8217;s package-based scheme deals with the simpler ones anyway) so that point is almost moot and nobody compiles apps in their macs that could have a need for a package manager.</p>
+<p>So the only advantage left is the update thingy. Now, admittedly, that&#8217;s your main point of complaint but I felt it was important to mention the real reasons package-based systems exist in Linux.</p>
+<p>It&#8217;s also necessary to admit that updates in MacOS are much less frequent than in Linux, in part because there aren&#8217;t as many small dependencies being updates all the time and the lifecycle of versions is much smaller in Linux.</p>
+<p>This having been said, and making it clear I don&#8217;t feel package-managers are that good of an update mechanism, recent developments for MacOS are handling this in a most elegant and attractive way. All because of Sparkle. The Sparkle guys have had their libraries implemented in a lot of programs (AdiumX is among them, along many others) and appfresh looks l ike a serious contender in the &#8220;best alternative to package managers for anally-retentive version-obsessed users :). Appfresh even used the sparkle information in apps and in the future will actually update them through it (currently it downloads the update).</p>
+<p>Another thing that&#8217;d make a package manager difficult in Mac (other than the sparkle and appfresh approches) is that in Mac it&#8217;s actually encouraged to have things placed in different places, depending on user preference.</p>
+<p>With apt you can&#8217;t easily control if something is installed for your user or not, or if an app is installed in a directory or other.</p>
+<p>Package managers, to me, exist in Linux for the same reason application launchers must: There&#8217;s no practical alternative. It&#8217;s not that they&#8217;re a better way of doing things, it&#8217;s that they are the only non-painful one.</p>
+<p>(about the app launchers: The fact that apps and icons are usually the same thing in MacOS is one of the best advantages of it, one of the reasons launchers and package managers are not that needed and a behaviour that should be made into a law as long as users are forced to deal with file managers where their apps reside)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://eduo.info/' rel='external nofollow' class='url'>Eduo</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9486" title="June 2, 2007 @ 7:11 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9487"><p>In the winter of 200(5|6) I tried &#8212; <i>tried</i>, as hard as I could try, irrationally stubborn &#8212; to get Ubuntu working on my Averatec notebook. My hope is that things have improved since then for notebook users; at the time there was simply no way to get any suspension to work, 3D acceleration was buggy, and there was this weird problem with the fans. They&#8217;d occasionally stop working until either I noticed and rebooted or the machine overheated and shut down. Only when using Linux, either then-current versions of Ubuntu or Debian or Fedora; Windows XP had no such problem. (On the bright side, my wireless card had vendor-provided drivers.)</p>
+<p>So. That&#8217;s why I bought a Mac. I suppose now that Dell is selling Ubuntu-bearing machines I could try to dip my toes into the water again, but I&#8217;m still a little weary.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9487" title="June 2, 2007 @ 7:13 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9488"><p>As a sysadmin responsible for about a hundred Macs, Sparkle doesn&#8217;t help me address the problem. Users who lack admin privileges (the majority) can&#8217;t update software installed centrally, and users who are admins or who install things in ~/Applications can run widespread updates at inconvenient times of day, degrading office bandwidth.</p>
+<p>I&#8217;d like to be able to mirror updates on our local network the way I can with Apple&#8217;s software update server in OSXS (at least for 10.4 clients; our remaining 10.3 clients have to be coddled). Drag-copyable updates like Firefox are manageable with some creative Apple Remote Desktop scripting. Installers like Office that require manual intervention get deferred, sometimes indefinitely. It sucks.</p>
+<p class=sig>&#8212;&#8201;<cite>Nat</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9488" title="June 2, 2007 @ 7:16 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9489"><p>Congrats.</p>
+<p>Re: ffmpeg on Debian, is it fully functional? The version in the Ubuntu repos is missing key encoding capabilities, which puts a crimp on producing small yet effective web videos. I had to compile the [marbles] out of it to close the gaps, and now I am paranoid about upgrading to Feisty or outright switching to Debian.</p>
+<p>I haven&#8217;t had to compile anything in several months, and even then, short of the ffmpeg mess noted above, I only compile when the spirit moves me.</p>
+<p>Linux (or the Kubuntu variant anyway) has come a long way.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://ethmar.com/' rel='external nofollow' class='url'>Ethan</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9489" title="June 2, 2007 @ 7:21 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-9490"><p>> Re: ffmpeg on Debian, is it fully functional?</p>
+<p>I know exactly what you&#8217;re talking about, and yes, it is fully functional.  <kbd>sudo aptitude install ffmpeg</kbd> and start encoding H.264+AAC iPod-compatible videos (or FLV, or whatever).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9490" title="June 2, 2007 @ 7:32 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9491"><p>Before people start drawing a general conclusion about this, it&#8217;s worth mentioning that Debian + ratpoison are pretty unlike Mac OS X.  It isn&#8217;t as though you&#8217;re saying they&#8217;re interchangeable.  Trying to use a more desktop-oriented distro like Ubuntu as if it were a drop-in replacement for Mac OS X (or Windows for that matter) is much more painful, IMHO.</p>
+<p class=sig>&#8212;&#8201;<cite>Nick</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9491" title="June 2, 2007 @ 7:58 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9492"><p>Glad to read it.. I was going to write basically the same things myself, but never found the time. Thanks for sparing me the effort :)</p>
+<p>Having a window manager that suits you, and one-click (or automated) updates that really work are two of the nicest things about Linux. In addition, having almost no nagware around is another thing (thank you, Apple community, for asking for $10 for every possible minor thing Apple thinks we can live without).</p>
+<p>Basically, Linux grows on you. Sure, it has a lot of rough edges but I find I can no longer use OSX or XP/Vista without cursing about something 20-years-old simple like Alt key window dragging. The only things I curse about now are Wifi and hardware support, and those are being worked on quite a lot.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://thomas.tanreisoftware.com/' rel='external nofollow' class='url'>BTreeHugger</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9492" title="June 2, 2007 @ 8:10 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9493"><p>Nick, no you are completely wrong on that count.</p>
+<p>I do not think Mark&#8217;s use of a tiling WM like Ratpoison was the main thrust of his argument, instead only listed as one of many benefits of switching.</p>
+<p>As to whether GNOME is interchangeable with OS X or not very much depends on your definition of interchangeable. If you mean that GNOME is not a &#8220;drop-in replacement&#8221; then of course you are correct &#8211; however OS X is not a &#8220;drop-in replacement&#8221; for Windows Vista either.</p>
+<p>You could equally rephrase your comment to read:</p>
+<p>&gt; Trying to use a more desktop-oriented distro like OS X as if it were a drop-in replacement for Mac Windows (or Debian GNU/Linux for that matter) is much more painful, IMHO.</p>
+<p>These are three different desktop environments each with their own characteristics &#8211; to try and merit them on &#8220;drop-in replacement&#8221;-ability is bogus. You try switching from PC to OS X and see how many complications it brings in the paradigm shift. You think you still know what happens when you drag a folder onto another one? <a href="/web/20110806090608/http://rixstep.com/2/20070211,00.shtml">Think again</a>.</p>
+<p>Your comment also seems to misconstrue Marks essay to mean that he is happy with GNU/Linux because he can MAKE DO with it instead of OS X. Correct me if I am wrong, but I get the impression that he is saying Debian is far better than OS X for his needs.</p>
+<p>Who needs a &#8220;drop-in replacement&#8221; for crummy software anyway?</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9493" title="June 2, 2007 @ 8:16 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9494"><p>Typo: Replace &#8220;Mac Windows&#8221; with &#8220;Microsoft Windows&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9494" title="June 2, 2007 @ 8:18 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9495"><p>I think everyone is ignoring the elephant in the room. You can really only have the kind of dead simple unobtrusive package management in Linux/BSD/etc when you use *free* (as in freedom) software. With, e.g. Debian, you can install, remove or update hundreds+ of packages at the same time effortlessly, without seeing a single EULA, or any &#8216;nag&#8217; screen at all. Everything stays the hell out of my way and does its job. You can&#8217;t do that with non-free software (at least the vast majority that don&#8217;t have at least freedom 0). </p>
+<p>On Windows (don&#8217;t know about OSX), most software is like a needy child, tugging at your shirt. &#8220;Install update?&#8221;. &#8220;Accept EULA?&#8221;. &#8220;Inane option that you really really have to configure now.&#8221; Ibid. &#8220;Restart now?&#8221;. Imagine dozens of those nagging little children. Seriously, how can you work like that? Or better yet, why would you choose to?</p>
+<p>With freedoms 1-3 a person could remove these irritations and make it &#8216;just work&#8217;. In Debian if a package does something annoying or obtrusive it can be remedied.</p>
+<p>Software freedom is not merely a &#8216;philosophical&#8217; issue.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9495" title="June 2, 2007 @ 8:30 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9496"><p>&gt; At the end of 2006, I switched from Ubuntu to Debian.</p>
+<p>Why?  Just curious&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Rob</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9496" title="June 2, 2007 @ 9:07 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9497"><p>Ditto from here in FreeBSD land. I also run a distinctly different window manager, much like Ratpoison &#8211; dwm.</p>
+<p><a href="/web/20110806090608/http://www.suckless.org/wiki/dwm" rel="nofollow">http://www.suckless.org/wiki/dwm</a></p>
+<p>Its status bar is simply a redirection of stdin &#8211; I feed it with a little python script.<br />
+<a href="/web/20110806090608/http://mikewatkins.ca/software/files/dwm/" rel="nofollow">http://mikewatkins.ca/software/files/dwm/</a></p>
+<p>As for Linux and FreeBSD vs Windows and Mac &#8211; software management is easy &#8212; in the FreeBSD case,  portmaster -B /usr/ports/foo/someport is about all I have to do and dependencies are almost always looked after for me. portsnap fetch and portsnap update retrieve and remerge the ports tree in not so many seconds.</p>
+<p>Don&#8217;t like the thought that you are compiling software? Redirect the output of portmaster to null and simply have it say &#8220;Installing&#8221; and you&#8217;ll be none the wiser.</p>
+<p>No chains.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://mikewatkins.ca/' rel='external nofollow' class='url'>Michael Watkins</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9497" title="June 2, 2007 @ 9:15 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9498"><p>Perhaps this will help:<br />
+sudo softwareupdate &#8211;install &#8211;all</p>
+<p class=sig>&#8212;&#8201;<cite>Harvey</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9498" title="June 2, 2007 @ 9:16 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9499"><blockquote><p>Trying to sell package managers nowadays and saying MacOS needs them is ignoring the differences between OSes. Few applications have dependencies</p></blockquote>
+<p>Actually, they do have dependencies. You just don’t notice, because the base system includes almost everything and the kitchen sink, and developers try hard to avoid requiring anything beyond it. If they do need something, they usually bundle it.</p>
+<p>Linux does not have any base system at all, and BSD (which OS X is based on) only has a marginal one.</p>
+<p>As for this:</p>
+<blockquote><p>When packages started making the rounds it was NEVER about having it easy to upgrade.</p></blockquote>
+<p>As a long-time Slackware user, I reject your thesis. Slackware had <code>upgradepkg</code> before anyone had even <em>dreamed</em> of RPM, much less Dpkg; to this day, the Slackware package tools do not do dependency resolution.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9499" title="June 2, 2007 @ 9:17 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9500"><p>Great, but what if you actually care about aesthetics? X is still behind the Mac (and now Windows Vista) in terms of window buffering and animation (what ratpoison users commonly disparage as &#8216;eye candy&#8217;).</p>
+<p>For one thing, can you make X fonts look good (where &#8216;good&#8217; == &#8216;like modern versions of OS X&#8217;)? I sure couldn&#8217;t, after messing with various freetype configuration files, upgrading freetype, etc. I don&#8217;t care whether anyone prefers Windows/OS 9 style antialiasing or thinks it&#8217;s more usable &#8212; I prefer OS X font antialiasing. Can I get it on Linux?</p>
+<p class=sig>&#8212;&#8201;<cite>Chris</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9500" title="June 2, 2007 @ 9:38 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9501"><p>This post is being made through the fug of alcohol intoxication &#8212; and what a wonderful drug where one can still use the word &#8220;intoxication&#8221; yet be entirely under its influence &#8212; but all the same, wow, linux be for nerds.</p>
+<p>Nerd. </p>
+<p>Get a usable OS.</p>
+<p class=sig>&#8212;&#8201;<cite>bonaldi</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9501" title="June 2, 2007 @ 9:58 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9502"><p>Im a little bit perplexed by Marks article. I also keep the MacBook of my girlfriend up-to-date, so I know the eye-rolling feeling if the &#8220;check for update&#8221; command in the menu takes one only to the programmers website. But it is not a big issue after all if some third-party app is a little dated. Will it stop working, will the world explode in a ball of fire, if one seldom used program is one or two revisions short and not up to date? If it is not selfupdating or use sparkle, most of the time it will be a stinker programm anyway, long forgotten and old and never used and just lazyness keeps one to drag it to the trash. </p>
+<p>And: If I want to use a packetmanager for open source software I can do it.</p>
+<p>Comment by Jonathan Barrett:<br />
+&gt; I’m running MacPorts on this MacBook at the moment, and it’s good, but not great.</p>
+<p>MacPorts is okay.</p>
+<p class=sig>&#8212;&#8201;<cite>Tyler</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9502" title="June 2, 2007 @ 10:07 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-9503"><p>I added a paragraph about window managers, for those of you who are hung up on the fact that I (currently) use ratpoison.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9503" title="June 2, 2007 @ 11:12 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9504"><p>Meh.  Free software is worth what you pay for it.  While some of it is good because *everyone* uses it and needs it to work &#8211; gcc, for example &#8211; much of it is unfinished, untested, and simply not commercial quality.  I prefer to use software made by people who rely on paying customers to keep the doors open, and who rely on their company staying in business to pay the mortgage.  Not all of us are grad school dilettantes who have the time to tweak things endlessly.  Real artists ship, kids.</p>
+<p class=sig>&#8212;&#8201;<cite>Richard</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9504" title="June 3, 2007 @ 12:00 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9505"><blockquote><p>much of it is unfinished, untested, and simply not commercial quality. I prefer to use software made by people who rely on paying customers to keep the doors open, and who rely on their company staying in business to pay the mortgage</p></blockquote>
+<p>Yeah, a random sampling of shareware sites shows me that all commercial software is of the highest quality. But just to be sure, I buy only Microsoft products, because they are known to be stellar in every way.</p>
+<p>Ho hum.</p>
+<p>Have you heard of Sturgeon’s law?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9505" title="June 3, 2007 @ 12:07 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9506"><p>&gt; Have you heard of Sturgeon’s law?</p>
+<p>Yes, which is why I prefer OS X (</p>
+<p class=sig>&#8212;&#8201;<cite>Richard</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9506" title="June 3, 2007 @ 12:11 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9507"><p>It&#8217;s pretty simple: Linux is (still) for zealots. If you want something that actually works, you still use OS X or Windows. If, instead, you&#8217;re worried about &#8220;oh, the software should be FREEEEEEEEEEEEEEEEE&#8230; nobody needs to make any money!&#8221; then you&#8217;ll put up with the shit in Linux. Just not if you actually want shit to work.</p>
+<p>Pretty much how it&#8217;s always been, really.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9507" title="June 3, 2007 @ 12:26 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9508"><blockquote><p>I prefer to use software made by people who rely on paying customers to keep the doors open, and who rely on their company staying in business to pay the mortgage. Not all of us are grad school dilettantes who have the time to tweak things endlessly. Real artists ship, kids. &#8211; Richard</p></blockquote>
+<p>Ha.</p>
+<p>I&#8217;m a systems integrator who has been in the biz since IBM first shipped a PC, and worked on most common platforms from IBM MF (and Hitachi and Fujitsu) to DEC (vaxen, an Alpha here and there) to HP and DG Unix and back to Intel PC&#8217;s and Unix. A big stint dealing with Microsoft wares too.</p>
+<p>My experience with software houses, as one who either authorized the purchase of millions of dollars worth, or was responsible for selling same and managing the customer from end to end &#8211; was quite roundly abysmal.</p>
+<p>My firm (before I sold out and semi-retired) were boutique specialists who knew our product class and customer needs far better than most of those who pretended to be product managers for these big software houses. The big software houses cared not so much about our mortgages or our partnership as they did quarterly results. </p>
+<p>They shipped crappy software, as we all do, but didn&#8217;t even try to care. </p>
+<p>Customers spent untold millions on crappy software that we had to fight day in and day out with various vendors to make work. Untold promises broken by large vendors. We did will because we would be completely candid with our clients and prospects about the flaws of the very software we were marketing. They knew we knew where the minefields were, but it still didn&#8217;t make complex deployments easier. I can point at vendors ranging from Microsoft to Computer Associates to a bunch of vendors in my space that I won&#8217;t name.</p>
+<p>Richard&#8217;s dismissive attitude towards the open source movement and free software in general reminds me very much of big vendors who don&#8217;t really care. The presumption that large houses are the only ones that know anything about the craft is both arrogant and completely wrong. </p>
+<p>In many cases the flaws were systemic. In some cases, simple fixes would have made huge wins for clients (and their systems integrators) but these vendors seemed universally stupid and avoided doing the *right thing* like it was their intention. Perhaps it was.</p>
+<p>After fighting one particular vendor for many years (and still managing to make a lot of money moving their product, despite its huge flaws) I can&#8217;t tell you how refreshing it was to take an open source product that had a problem, and either fix it myself or contact what tend to be very willing and generous developers who do it for little more than a thank you.</p>
+<p>Its a big ol&#8217; world out there and there is a place for quarterly driven software houses and a place for those who do it because they enjoy the craft, at whatever level they are in. People like Richard clearly believe in one shrink-wrap size fits all.</p>
+<p>It isn&#8217;t so, in the real world.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://mikewatkins.ca/' rel='external nofollow' class='url'>Michael Watkins</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9508" title="June 3, 2007 @ 12:44 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9509"><p>You wrote, &#8220;Here’s the process of keeping my Debian system up to date: [...] sudo aptitude [...].&#8221;</p>
+<p>So what about a new binary that I (or anybody else) writes and releases &#8212; will aptitude update it? Nope. Aptitude only updates what it has packages for. As long as a piece of software has a package, you&#8217;re golden, but if there&#8217;s no package, you&#8217;re stuck &#8212; you guessed it &#8212; compiling. Point me to where I can apt-get the commercial (but free) Splunk log-monitoring software, for instance. Let&#8217;s not even talk about variant compile-time configurations not found in packages.</p>
+<p>Now compare this to the Mac. On the Mac, you&#8217;re dealing with a bunch of shareware/freeware from thousands of different authors, some of which has source available, while some doesn&#8217;t. Yet you&#8217;re complaining that there *isn&#8217;t* a system-wide package management tool for OS X that would deal with all of these.</p>
+<p>The point is that Linux doesn&#8217;t have one either. What Linux *does* have is an overall software ecosystem, especially in the preponderance of free or open source software, that makes a system like Aptitude easier to pull off. The ecosystem of OS X is different, and thus so is the software update process.</p>
+<p>You also wrote of the aptitude upgrade, &#8220;it’s in a cron job and runs every night.&#8221; It&#8217;s a cute and seemingly easy way to keep your system &#8220;up to date,&#8221; but it&#8217;s simply not an option for servers or with software where a package update can significantly hork the box&#8217;s software setup. Apple and Microsoft don&#8217;t update third-party software because they don&#8217;t want the horked software setup to be their responsibility. Love it or hate it, the Debian and Ubuntu communities don&#8217;t have as much riding on it.</p>
+<p>It&#8217;s fine that *you* can survive on package management for your personal laptop; that doesn&#8217;t carry over to everybody&#8217;s experience. I run Linux servers at work and use a Mac personally. I have no problems with the way that software is upgraded on my Mac. Linux doesn&#8217;t have a *better* package-management system, it has a *different* package-management system. Each has its strengths and weaknesses.</p>
+<p class=sig>&#8212;&#8201;<cite>Christian</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9509" title="June 3, 2007 @ 1:01 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9510"><cite><a href='/web/20110806090608/http://redmonk.com/sogrady/2007/06/02/links-for-2007-06-03/' rel='external nofollow' class='url'>tecosystems &raquo; links for 2007-06-03</a></cite>&#160;(pingback)</li>
+<li id="comment-9511"><p>Might be alone in here, but I&#8217;m so going to love Leopard. (Plus new Parallels is coming out, yippie!!)</p>
+<p>So, I don&#8217;t care about all these programmers &#8220;emacs&#8221; BS geekery. Yeah, go for the rat window manager, look at the hex dump, find the error in the code. It&#8217;s all in there. Ok, I&#8217;m exaggerating. But this is what Mark&#8217;s post was all about. ^_^</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://plastik.hu/' rel='external nofollow' class='url'>angelday true</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9511" title="June 3, 2007 @ 3:41 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9512"><p>&gt; If you want something that actually works, you still use OS X or Windows. </p>
+<p>I don&#8217;t get it. How many times are we going to have to drum it into the OS X and Windows fanboy collective consciousness: GNU/Linux DOES work, here, now, today. Stop thinking like it&#8217;s 1994.</p>
+<p>GNU/Linux on the desktop is a viable option for non-geeks. It&#8217;s 2007. Wake up.</p>
+<p>&gt; If, instead, you’re worried about “oh, the software should be FREEEEEEEEEEEEEEEEE… nobody needs to make any money!” then you’ll put up with the shit in Linux.</p>
+<p>Funny, you strike me as just the sort of hypocritical person to have a large collection of Warez. Do you think we have warez in the GNU/Linux community? No, why do you think that it?</p>
+<p>&gt; As long as a piece of software has a package, you’re golden, but if there’s no package, you’re stuck — you guessed it — compiling.</p>
+<p>In 4 years of running Debian, and being a power user to boot, this has not happened yet. Also, if your only argument against Debian is that it&#8217;s package management system does not have all packages ever authored &#8211; I think that says more about how great it must be to have only been able to think of that negative point.</p>
+<p>&gt; Point me to where I can apt-get the commercial (but free) Splunk log-monitoring software, for instance.</p>
+<p>Most GNU/Linux users wouldn&#8217;t care, because we care about the four freedoms. There are plenty of software packages to meet our needs &#8211; and if there isn&#8217;t, we will write one. In addition, if you really did need to install a Splunk deb(5) package any experienced Debian hacker (my self included) could show you how to turn the the application download into a package so you can install/remove it as you wishes.</p>
+<p>&gt; Let’s not even talk about variant compile-time configurations not found in packages.</p>
+<p>If your interested in that, you should use Gentoo. Same idea, different approach.</p>
+<p>&gt; &#8230; it’s simply not an option for servers or with software where a package update can significantly hork the box’s software setup.</p>
+<p>Correct, but I do not think Mark was trying to say it was.</p>
+<p>&gt; Apple and Microsoft don’t update third-party software because they don’t want the horked software setup to be their responsibility.</p>
+<p>Totally bogus. Apply and Microsoft don&#8217;t update third-party software because they can&#8217;t. Most software on these systems is without the four freedoms, so they can&#8217;t. It&#8217;s that simple.</p>
+<p>&gt; Love it or hate it, the Debian and Ubuntu communities don’t have as much riding on it.</p>
+<p>Totally bogus. Your argument is now so far of track it&#8217;s funny. Are you suggesting that GNU/Linux is just a  toy OS &#8211; that no really company uses it in production. Please, try and clarify this point.</p>
+<p>&gt; I have no problems with the way that software is upgraded on my Mac. Linux doesn’t have a *better* package-management system, it has a *different* package-management system.</p>
+<p>Totally bogus. Mac OS X DOES NOT HAVE a native package-management system.</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9512" title="June 3, 2007 @ 3:54 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9513"><p>I&#8217;m a Mac user running a Web site on FreeBSD that was formerly on RedHat.</p>
+<p>I think you&#8217;ve been lucky with your updating. The problem I&#8217;ve found with those Unix updaters is that, because Unix programs are built from zillions of dependencies on other Unix programs, all of which get updated and affect all the other programs that depend on them, well, every once in a while the update just breaks stuff, badly. The dependency databases are sometimes not perfect, and everybody has a different selection of software on their machine.</p>
+<p>To fix and figure out a broken Unix installation takes a guru. This is not for the normal person.</p>
+<p class=sig>&#8212;&#8201;<cite>Mark VII</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9513" title="June 3, 2007 @ 4:41 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9514"><p>Hi!</p>
+<p>I&#8217;m glad you have fun with Linux.</p>
+<blockquote><p>Now I run a distinctly odd window manager.</p></blockquote>
+<p>If you&#8217;re into such window managers, maybe you would like Xmonad (<a href="/web/20110806090608/http://xmonad.org/" rel="nofollow">http://xmonad.org/</a>) ?</p>
+<p>Sincerely,<br />
+Gour</p>
+<p class=sig>&#8212;&#8201;<cite>Gour</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9514" title="June 3, 2007 @ 4:41 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9515"><p>I&#8217;m not sure that I agree with this package-managers-are-the-thing line. It&#8217;s a familiar line from Linux advocates, and I think it&#8217;s a little bogus myself.</p>
+<p>I haven&#8217;t used Red Hat, but I know esr came badly unstuck on that, owing to dependencies, and he&#8217;s not exactly a neophyte.</p>
+<p>What I have used, Synaptic on Ubuntu and whatever it was on Kubuntu (Adept, I think it was called) seemed better at handling dependencies. But it&#8217;s not all roses: the Kubuntu one doesn&#8217;t seem to have a history to allow you to easily undo what you just did, if it doesn&#8217;t work; and adding extra repositories under Kubuntu required configuration of text files. That&#8217;s solved under 7.04. Still and all, the whole process is a bit wonky. And what you omitted to mention is that these don&#8217;t just have programs in them, but nonsense like gstreamer-this-and-that. No end-user should see that in the 21st century.</p>
+<p>I don&#8217;t think package managers are a good in themselves but rather a desperate means of solving the problem that installation on current Linux distributions is completely borked. And, goodness, it must be a headache for the vendors having to maintain those repositories, and a worry since they&#8217;ve taken on more liability. What if something doesn&#8217;t get checked properly and they get sued for passing it on? And all because installation on current Linux distros doesn&#8217;t really work.</p>
+<p>IMO, the only desktop OS that gets installation/uninstallation right is the Mac. Support files for the most part are in the application bundle, not sprayed all over the machine, as in Windows/Linux, and if I want an up-to-date application off a developer&#8217;s site I can just drop it in without waiting for it to turn up in a repository.</p>
+<p>I think the data complaint is bogus, too. Mail might not store in the mbox format, but it will export to it, which is all that matters. And, despite what you claimed at the time, it _does_ add a control-character when you write a sentence in it that begins with &#8220;From&#8221;. It adds a space, just like Thunderbird does. Mail is a nice client; and it also supports the format=flowed standard from RFC3676, which Evolution does not.</p>
+<p>If people feel they&#8217;re &#8220;freer&#8221; on a Linux distro, good luck to them; but I don&#8217;t believe claims about ease of installation and maintenance and about data formats stand up to scrutiny.</p>
+<p>As for what &#8220;quite frankly would have been impossible to accomplish on a Mac&#8221;, why don&#8217;t you address the reverse, as you must know as well as anyone? For a start, Windows/GNOME/KDE can&#8217;t handle the target-action paradigm, which means window-handling in them is primitive compared to what&#8217;s in OS X:</p>
+<p><a href="/web/20110806090608/http://rixstep.com/2/20050529,03.shtml" rel="nofollow">http://rixstep.com/2/20050529,03.shtml</a></p>
+<p>I suppose one could use GNUstep on Linux, which is NeXT-based, too, but then installing that is no picnic, and there are very few applications available for it.</p>
+<p>I like Ubuntu well enough, but if I could afford to, I&#8217;d replace the machine I have running it with another OS X machine.</p>
+<p class=sig>&#8212;&#8201;<cite>Nick</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9515" title="June 3, 2007 @ 4:46 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9516"><p>Until something better shows up, you might want to try AppFresh (<a href="/web/20110806090608/http://metaquark.de/appfresh" rel="nofollow">http://metaquark.de/appfresh</a>) on your wife&#8217;s computer. It&#8217;s not perfect, but better than anything else on Mac OS X if you&#8217;re looking for central updates.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://konstochvanligasaker.se/' rel='external nofollow' class='url'>Markus Magnuson</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9516" title="June 3, 2007 @ 4:55 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9517"><p>Your mac update experience would be better without the version tracker program.<br />
+Good applications like Adium use Sparkle for updates, when a new version comes out the app will tell you on launch you click install and it downloads, installs and re-launches in under a minute.<br />
+All by itself.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9517" title="June 3, 2007 @ 7:27 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9519"><p>I recommend you don&#8217;t put dist-upgrade in a cron job, it can sometimes throw away one package to persuade another to install.</p>
+<p>A better solution is to &#8220;dist-upgrade -d&#8221; (download only mode), which fills your local cache with the upgrade files, and periodically use synaptic to cream off those upgrades you want.</p>
+<p class=sig>&#8212;&#8201;<cite>Julian Morrison</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9519" title="June 3, 2007 @ 7:56 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9520"><p>Nice to see that Linux worked well for you. I also can report that the only real reason I ever needed to tweak or adjust things on Linux (or FreeBSD for that matter, both of which I&#8217;ve used) was because I really explored the OS. That is also the sole way in which I&#8217;ve ever managed to really break my current Linux setup (I&#8217;m currently using Arch Linux, after several years with Mandrake/Mandriva). Shame about several of the comments you&#8217;ve received on this post and the original post (including the extremely ridiculous one you referenced at the beginning of this post), though. I take it that welcoming back will have to be cancelled?</p>
+<p class=sig>&#8212;&#8201;<cite>Rob Mills</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9520" title="June 3, 2007 @ 9:02 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9521"><p>I want so very much to run a system with xmonad as my window manager, one I can update with apt. I even set one up using ubuntu. I set it up, and then set it aside.</p>
+<p>Thing is, my eyes aren&#8217;t what they used to be. Looking at the crap fonts on linux for hours just doesn&#8217;t work for me. Looking at Emacs under linux is painful.</p>
+<p>I have tried and failed to fix this, so I mostly use a mac. It doesn&#8217;t hurt my eyes. Windows is next in line; doesn&#8217;t look as good as OS X, but it does not look actually horrible. If linux could ever fix its abysmal font handling and display, I would switch in a heartbeat. I&#8217;m not holding my breath.</p>
+<p class=sig>&#8212;&#8201;<cite>Ed Piman</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9521" title="June 3, 2007 @ 9:03 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9522"><p>A geek to use Linux is not news. It would be news if your wife could use, be productive and keep it up to date without YOU at the command line week in, week out. The day she sells the Mac and starts using a Linux laptot, you post again, please.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9522" title="June 3, 2007 @ 9:15 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9523"><p>I don&#8217;t understand one thing: if you update all your software automatically, how do you learn about new features in that software? I personally prefer to go to developer web page to read about new features so I can use them. Of course this takes more time, but I know what is new of fixed.</p>
+<p class=sig>&#8212;&#8201;<cite>Štěpán Kříž</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9523" title="June 3, 2007 @ 9:16 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9524"><p>I&#8217;ve been using Linux for 13 years now (since 1994).<br />
+I use mostly Debian and Ubuntu now.</p>
+<p>I use a custom sawfish window manager.</p>
+<p><a href="/web/20110806090608/http://perfectwm.blogspot.com/" rel="nofollow">http://perfectwm.blogspot.com/</a></p>
+<p>Companies are starting to pre-install Linux.</p>
+<p><a href="/web/20110806090608/http://lxer.com/module/forums/t/23168/" rel="nofollow">http://lxer.com/module/forums/t/23168/</a><br />
+<a href="/web/20110806090608/http://lxer.com/module/db/index.php?dbn=14" rel="nofollow">http://lxer.com/module/db/index.php?dbn=14</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://perfectwm.blogspot.com/' rel='external nofollow' class='url'>cyber_rigger</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9524" title="June 3, 2007 @ 9:27 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9525"><p>I suspect most people don&#8217;t worry much about upgrading individual applications, so the attractiveness of a fine open source packaging system isn&#8217;t much a selling point for them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://www.dayoldpie.com/' rel='external nofollow' class='url'>billg</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9525" title="June 3, 2007 @ 9:51 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9526"><cite><a href='/web/20110806090608/http://ryanabrams.net/2007/06/one-year-with-linux/' rel='external nofollow' class='url'>One Year With Linux</a></cite>&#160;(pingback)</li>
+<li id="comment-9527"><p>Hi, Mark. Welcome to Debian. I&#8217;ve been here for well over a decade (as a Debian developer), and it&#8217;s luverly. And fun.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://liw.iki.fi/liw/' rel='external nofollow' class='url'>Lars Wirzenius</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9527" title="June 3, 2007 @ 10:38 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9528"><p>Congrats on how well things are going for you, but I don&#8217;t think I could handle using an OS that is that ugly-looking (looking at screenshots of ratpoison).</p>
+<p>That&#8217;s great that is consumes less resources, but I just couldn&#8217;t handle staring at a screen for 10 hours a day that has some ugly monospaced bitmapped font all over the place.</p>
+<p class=sig>&#8212;&#8201;<cite>The Daily Smoke</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9528" title="June 3, 2007 @ 10:54 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9529"><p>People are really grasping at straws, trying to justify to themselves that their glorious OS isn&#8217;t deficient in terms of package management:</p>
+<p>&#8220;Who needs a package manager! I don&#8217;t even upgrade my applications!&#8221;<br />
+or<br />
+&#8220;Package managers are crap. I prefer installing my package using [much more intrusive method]&#8221;<br />
+or<br />
+&#8220;Package managers are essentially useless on $OS because most of $OS&#8217;s software is non-free (as in freedom) so it can&#8217;t be distributed in that way. Therefore systems that do use package managers are crap.&#8221;<br />
+or<br />
+&#8220;Package managers are crap because they are not perfect. Any flaw makes it just the same as having no package manager at all like on my OS.&#8221;<br />
+or<br />
+&#8220;I can find some application that doesn&#8217;t have a package for it. For some inexplicable reason it follows that package managers are crap.&#8221;<br />
+or<br />
+&#8220;The fact that anyone anywhere would ever compile anything deeply offends me. Therefore package managers are crap&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9529" title="June 3, 2007 @ 11:26 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9530"><p>| Here’s the process of keeping my Debian system up to date:<br />
+|<br />
+| sudo aptitude update &amp;&amp; sudo aptitude -y dist-upgrade<br />
+|<br />
+| Of course I never really have to type that, because it’s in a cron job and runs every night while | I’m asleep.</p>
+<p>This is dangerous, dist-upgrades sometimes fuck up things. I&#8217;ve seen them wanting to uninstall a bunch of useful packages conflicting with some new dependency. Fortunately it wasn&#8217;t in cron and didn&#8217;t have a -y switch. ;)  I think this happened with testing branch &#8211; stable branches usually don&#8217;t have such radical upgrades.</p>
+<p>If you like the upgrade-in-cron, use aptitude -y upgrade instead. And make sure that the apt sources refer to stable release by name, like &#8220;etch&#8221; (when it refers to &#8220;stable&#8221;, then apt will attempt to upgrade to new stable when it comes out &#8211; not a thing I would want to happen by cron).</p>
+<p class=sig>&#8212;&#8201;<cite>myzz</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9530" title="June 3, 2007 @ 11:56 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-9531"><p>> Hi, Mark. Welcome to Debian.</p>
+<p>Actually I&#8217;ve been experimenting with Debian for many years.  This site ran on it for about 18 months (<a href="/web/20110806090608/http://bytemark-hosting.co.uk/">Bytemark</a> still rocks).  But this is my first long-term experience using it as my primary desktop.</p>
+<p>> I&#8217;ve been here for well over a decade (as a Debian developer), and it&#8217;s luverly. And fun.</p>
+<p>I know, I follow your blog via <a href="/web/20110806090608/http://planet.debian.org/">Planet Debian</a>.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9531" title="June 3, 2007 @ 11:58 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9532"><p>How did you switch from Ubuntu to Debian? Is it possible to just switch repositories, or did you backup your data and reinstall?</p>
+<p>I bought my laptop from <a href="/web/20110806090608/http://system76.com/">System76</a>, which came with Ubuntu preinstalled. I love the laptop, but I&#8217;m not a fan of the eyecandy. I&#8217;m using ratpoison and loving it, so I&#8217;m thinking of switching to Debian. I used Debian on my servers already, so it would make sysadmin&#8217;ing that much easier.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://kurup.org/' rel='external nofollow' class='url'>Vinod Kurup</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9532" title="June 3, 2007 @ 12:23 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9533"><p>What&#8217;s the state of the world in general and Emacs in particular around anti-aliasing? -Tim</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://www.tbray.org/ongoing' rel='external nofollow' class='url'>Tim</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9533" title="June 3, 2007 @ 1:15 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-9534"><p>> How did you switch from Ubuntu to Debian?</p>
+<p>You can&#8217;t just switch repositories.  It&#8217;s a different distribution.</p>
+<p>In my case, I had a bunch of spare 250 GB drives when I upgraded my ReadyNAS from 1 TB to 2 TB, so I swapped one of them out and installed Debian from scratch.</p>
+<p>(There&#8217;s another story to tell from the past year&#8217;s experience, about maintaining a backup strategy and coping with ever-expanding storage requirements.  I would still recommend the ReadyNAS X6, except they&#8217;re not making them anymore (replaced with a newer model), but mine has never failed me so far.  I would expect that the newer model is of similiar quality.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9534" title="June 3, 2007 @ 1:54 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9535"><p>Mark, I echo the comments about blind dist-upgrades being dangerous without human intervention. I have hosed my system a few times because of that. Note to OS X fanboys, I run a highly customised set-up on some pretty exotic hardware &#8211; so it&#8217;s not that surprising.</p>
+<p>Anyway, you should check out cron-apt &#8211; it does exactly what you&#8217;re looking for.</p>
+<p>$ apt-cache show cron-apt</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9535" title="June 3, 2007 @ 2:41 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9536"><p>I love os X,  but ho boy  I miss Synaptic and update-manage from ubuntu/debian, and I hate versiontracker.</p>
+<p>update-manager is nice, so nice, it&#8217;s exactly like is the apple updater but for _ALL_ ,  ALL, ALL ALL ALL softwares and critical update of the linux systems.</p>
+<p>it&#8217;s true in some things os X totally beats up linux on usability and easynesss  but in other stuff Linux totally explodes os X and windows on usability and easyness.</p>
+<p>I want ALL !</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://m.go.org/' rel='external nofollow' class='url'>oomu</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9536" title="June 3, 2007 @ 3:40 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9537"><p>Too many comments already. Let&#8217;s just say that sometimes I feel guilty for being so lazy and using Synaptic.<br />
+I miss compiling as much as a slave misses his master.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://511.dabomb.com.ar/' rel='external nofollow' class='url'>Federico</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9537" title="June 3, 2007 @ 5:22 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9538"><p>░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████████████████░░░░░░░░░░░░░░<br />
+░░████████████████████░░░░░░░░░░░░░░<br />
+░░████████████████████░░░░░░░░░░░░░░<br />
+░░████████████████████░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████████████████░░░░░░░░░░░░░░<br />
+░░████████████████████░░░░░░░░░░░░░░<br />
+░░████████████████████░░░░░░░░░░░░░░<br />
+░░████████████████████░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░<br />
+░░████████████░░░░░░░░████████████░░<br />
+░░████████████░░░░░░░░████████████░░<br />
+░░████████████░░░░░░░░████████████░░<br />
+░░████████████░░░░░░░░████████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████░░░░░░░░░░░░░░░░████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░████████████████████████████████░░<br />
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</p>
+<p class=sig>&#8212;&#8201;<cite>deptaro</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9538" title="June 3, 2007 @ 5:28 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9539"><cite><a href='/web/20110806090608/http://ramikayyali.com/archives/2007/06/04/mike_linux' rel='external nofollow' class='url'>Why Sam and Mike Like Linux - Scatterism</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9540"><cite><a href='/web/20110806090608/http://aharden.wordpress.com/2007/06/03/links-for-2007-06-03/' rel='external nofollow' class='url'>links for 2007-06-03 &laquo; cygweb</a></cite>&#160;(pingback)</li>
+<li id="comment-9541"><p>The way that Linux relies on software repositories for software management simply sucks. Sure, it has its strengths, as long as what you need is available on the repository. That&#8217;s why third parties have so much problem distributing for software on the Linux platform&#8230; because guess what, after all Linux is not a platform, is a chaotic mess put together that will never get the support of ISVs and hardware vendors until both users and Linux distributos get their heads out of the sand and realises this simple truth. It&#8217;s no wonder after all these years Adobe and the like are no bothering with Linux.</p>
+<p class=sig>&#8212;&#8201;<cite>Gordon</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9541" title="June 3, 2007 @ 6:21 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9542"><p>is your wife hot?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://idontknwwhatgoeshere/' rel='external nofollow' class='url'>someone who read this</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9542" title="June 3, 2007 @ 7:34 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9543"><p>Wow, sounds like something the average Joe would do&#8230; Linux must be ready for prime time now! </p>
+<p>Seriously, average users won&#8217;t do have or even one fourth what you did to get it to a comfortable state.</p>
+<p>Works for you, not for the masses.</p>
+<p class=sig>&#8212;&#8201;<cite>Scott</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9543" title="June 3, 2007 @ 8:37 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9544"><p>&gt;Aptitude only updates what it has packages for. As long as a piece of software has a package, you’re golden, but if there’s no package, you’re stuck — you guessed it — compiling.</p>
+<p>Not so.  The Splunk crew has a .deb package on their download page.  If an Ubuntu user wanted to install it, he could download the .deb and double click it to install.  The same goes for the RPM user.  If you want to compile, you can, but you don&#8217;t have to.</p>
+<p>It would be more correct to say &#8220;Aptitude only updates what it has repositories for.&#8221;  Nothing stops a third party from creating a repo and inviting users of a distro to use it.  Automatix did this with their third-party application.  They even created an automated installation script that does everything for you.</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9544" title="June 3, 2007 @ 9:09 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9545"><p>scott: i guess youve never put in a ubuntu cd, clicked &#8216;install&#8217;, came back in 15 minutes to a working system , and then checked it after a month of flawless operation to find out its got a one click upgrade task notice in the toolbar.. please. try it out before spewing bullshit, the internet has enough of that already..</p>
+<p>if you are into compiling, or youre into stuff thats too new or obscure to be in debian, paludis plus domain-specific repositories are great..</p>
+<p>its &#8216;open source&#8217;, not &#8216;open binary&#8217;, there are limits to the open binary approach where config options have to be hardcoded (eg , does your mutt include SSL and Imap or not? does your vlc include GTK) or split out to branched packagenames depending on version and config-option.. </p>
+<p>modern packagemanagers like paludis can also build stuff from version control checkouts on a weekly basis and the like, automagically handling dependency rebuilding &#8211; things have come a long way, win/mac will come out of the 80s one day, maybe in the 2010s?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://blog.whats-your.name/' rel='external nofollow' class='url'>carmen</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9545" title="June 3, 2007 @ 9:48 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9546"><p>Yes, I&#8217;m aware of Beryl, thanks &#8212; that&#8217;s not a useful answer to &#8220;can you make X fonts look good  (where ‘good’ == ‘like modern versions of OS X’)?&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite>Chris</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9546" title="June 3, 2007 @ 9:51 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9547"><p>BTW, I&#8217;m not taking this piss here &#8212; this is an actual issue preventing me from running Linux. (I&#8217;m a geek with taste. That&#8217;s why I work with Macs. Sue me.) I&#8217;m honestly curious whether anyone has it running, because I would be only too happy to use Linux at least part time if OS X font rendering was available.</p>
+<p class=sig>&#8212;&#8201;<cite>Chris</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9547" title="June 3, 2007 @ 9:56 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9548"><cite><a href='/web/20110806090608/http://blog.eronj.com/2007/06/03/mark-pilgrim-one-year-with-linux/' rel='external nofollow' class='url'>Cloudy Thinking &raquo; Blog Archive &raquo; Mark Pilgrim: One Year with Linux</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9549"><cite><a href='/web/20110806090608/http://tottinge.blogsome.com/2007/06/04/windows-needs-dependency-management-and-so-does-mac/' rel='external nofollow' class='url'>Blogging Ottinger (tim) :: Windows Needs Dependency Management and So Does Mac :: June :: 2007</a></cite>&#160;(pingback)</li>
+<li id="comment-9550"><p>Chris: Can you be more specific? &#8220;Like modern versions of OS X&#8221; doesn&#8217;t really tell me all that much.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://necronomicorp.com/bct' rel='external nofollow' class='url'>Brendan Taylor</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9550" title="June 3, 2007 @ 10:20 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9551"><p>&#8220;It was replaced by five guys running around all the time, fixing problems with Windows machines. Very strange, but that’s what happened.&#8221;</p>
+<p>I have experienced the exact same scenario. </p>
+<p>I am sympathetic to Mark&#8217;s move to Linux. I&#8217;ve been using it since yggdrasil, but it still requires massive amounts of fiddling. If you using Linux and wireless, you fiddle. That is why I would prefer a Mac for a laptop&#8230;100% hardware compatibility with *nix depth when you need it. That said, I don&#8217;t own a mac&#8230;a nasty old Dell M70 and Ubuntu gets the job done.</p>
+<p class=sig>&#8212;&#8201;<cite>wwt</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9551" title="June 3, 2007 @ 11:13 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9552"><p>There&#8217;s no reason to mess around with a closed source media player like mplayer. The VLC media player (<a href="/web/20110806090608/http://www.videolan.org/" rel="nofollow">http://www.videolan.org/</a>) is compatible with almost every file format you can toss at it, it&#8217;s open source, and it&#8217;s available in Ubuntu&#8217;s community software repository.</p>
+<p class=sig>&#8212;&#8201;<cite>feeling anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9552" title="June 4, 2007 @ 5:07 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9553"><cite><a href='/web/20110806090608/http://www.genehack.org/2007/06/04/tab-dump-20070604/' rel='external nofollow' class='url'>genehack.org &raquo; Blog Archive &raquo; tab dump // 20070604</a></cite>&#160;(pingback)</li>
+<li id="comment-9554"><p>You know that you can, like, ctrl+click on any particular update in the Software Update and tell it to never, ever show it again.<br />
+Right? </p>
+<p>feeling anonymous: mplayer is as open as VLC.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://plmrkyandex.ru/' rel='external nofollow' class='url'>plmrk</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9554" title="June 4, 2007 @ 8:42 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9555"><p>I think we have reached an upper limit of Linux like user patterns, speaking numerically. </p>
+<p>In that respect, the market has long ago swung, by far, from people who are accustomed and don&#8217;t mind using the command prompt, to people who worry about getting the task at hand done. Not how to figure out the tools that will allow them to setup tools that will allow them to use the tool that will get the task at the hand done. This is no secret to anyone and the Linux gospel will be the first to admit this. </p>
+<p>What is puzzling is the insistence of gospel worshipers to refuse to &#8220;buy into it&#8221; as though the process can somehow be reversed. </p>
+<p>Think if cars never progressed passed that mark. We would all have to wear gloves and overalls when we go for a fill up. We&#8217;d have to carry a toolbox with us always and do the service and all the repairs ourselves. </p>
+<p>The automotive industry employs a handful of experts, who design and build cars in such a way that the user of a car never has to be confronted with anything but the console of that car. Yes you have to learn how to operate it, but you don&#8217;t need to know how to change transmission fluid, break fluid, fluglenoggin on the bilxbaum cranshaft gasket lamp etc etc.</p>
+<p>And that is why Automobile manufacturers and Microsoft are so successful. The automotive industry bridged the gap between a piece of engineering and a person who needs to use that piece of engineering and MS is heading to bridge it in the coming years. One or to GUI points of control and thats it. </p>
+<p>There will always be room for motoring and mechanical enthusiasts who can find their way as professionals in the field if they chose to do so but the hand-build-from-kit-plus-bits-and-pieces-from-dealer-plus-junkyard-plus-handcrafted pieces of equipment cannot be commercially viable when they are competing with GM, Merc etc. Having said that, everyone needs to recognize the fact that innovation and progress often find their and are forged on the frontiers of such projects.</p>
+<p>I can already see the volumes of response correcting me with examples of how MS software is complex and daft while Linux is natural and easier. Fellas &#8211; you&#8217;re preaching to the quire. I&#8217;m saying &#8211; for Joe Soap: Linux, GNU, Ubuntu, Windows, Mac, OSX, Leopard are just words. Words like spark plug, gas tank, cam belt, head gasket, shock absorber.</p>
+<p>What I &#8211; as Joe Soap  of the Auto industry &#8211; want to know from the piece of equipment I use is &#8211; what is the minimum number of steps I need to learn to operate this thing with one hand while listening to the radio?</p>
+<p>MS says &#8211; X. But it&#8217;ll cost you. </p>
+<p>Linux says X&#8230; plus in the eventuality of this Y&#8230; plus in the eventuality of that Z plus&#8230; But its FREE! </p>
+<p>OK. I think I&#8217;d rather pay and do X instead of worrying when I&#8217;ll need to use Y or Z. Might be in the middle of a presentation, might be in the middle of a deadline, might be while I&#8217;m at home relaxing, bored out of my mind but still  rather be reading a book than a manual.</p>
+<p>Linux &#8211; commercially viable Linux &#8211; for the time being needs to become the Lamborghini or Ferrari of the software world. It does less than X. But it does it *frikkin&#8217;* well. Every time. No ifs. No buts. No eventualities. </p>
+<p>In the aftermath it could expand and grow. But for now &#8211; One thing. Linux does &#8216;XYZ&#8217;. You want everything else get something else. You want this &#8211; Linux.</p>
+<p>And someone WILL have to charge to devote the kind of time, effort and expertise it will take to make it that.</p>
+<p class=sig>&#8212;&#8201;<cite>booradley</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9555" title="June 4, 2007 @ 11:18 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9556"><p>OS X has Fink, which gives you most of the debian packages through the same packaging system. Except on mac you (typically) wouldn&#8217;t run free software exclusively: in addition you have an option of running proprietary applications.</p>
+<p>I could run ratpoison in x11.app fullscreen, but instead i&#8217;ve switched to gnu debian for the warm and fuzzy feeling of &#8220;my system throughout.&#8221; I have lost tinderbox, newsfire, &amp;c. Tinderbox particularly doesn&#8217;t have an equivalent.</p>
+<p class=sig>&#8212;&#8201;<cite>moo</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9556" title="June 4, 2007 @ 11:39 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9557"><p>Booradley wrote:  Linux says X… plus in the eventuality of this Y… plus in the eventuality of that Z plus…</p>
+<p>In my experience every OS has its Y and Z.  In Windows the Y and Z is clean up and troubleshooting when something goes wrong with an update or when some Internet worm breaks through.  In Linux the Y and Z are from getting your system to do nonstandard things.  (It used to be that the Y and Z were getting wireless and 3D acceleration to work.  But those days are mostly over.)</p>
+<p>I switched to Linux because I wanted my Y and Z time to be spent learning an open system that I could understand.  I wanted my Y and Z time to be an investment in my own base of knowledge and skill.  My Windows-based Y and Z time was consumed with trying to fix errors, figure out what happened, and worrying about MS trying to get spyware into my system (WGA). </p>
+<p>Personally, I think it&#8217;s great that all 3 of the major OSes have come far enough that discussions like this fall into the realm of user preference and expectations, rather than real technical limitations.</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9557" title="June 4, 2007 @ 12:01 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9558"><p>Don&#8217;t know if someone mentioned this already (too many comments), but you shouldn&#8217;t be running a dist-upgrade automatically; this can lead to breakage (although a stable Debian release *never* breaks dependencies or anything), so I&#8217;d recommend you just use &#8220;aptitude -y upgrade&#8221; which should only upgrade the software it can without screwing around with new dependencies.  You can manually run dist-upgrade every week or so to make sure you&#8217;re getting everything, but I would still like to stress that you should _never_ do an automatic dist-upgrade.  Ever.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://del.icio.us/jvz' rel='external nofollow' class='url'>Matt</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9558" title="June 4, 2007 @ 12:52 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9559"><p><i>I switched to Linux because I wanted my Y and Z time to be spent learning an open system that I could understand. I wanted my Y and Z time to be an investment in my own base of knowledge and skill.</i></p>
+<p>You do know you are a very small subset of computer users, right?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9559" title="June 4, 2007 @ 1:33 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9560"><p>Obviously, I meant you belong to a very small part, etc.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9560" title="June 4, 2007 @ 1:34 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9561"><cite><a href='/web/20110806090608/http://globalnerdy.com/2007/06/04/where-marks-pilgrimage-to-linux-story-completely-falls-apart/' rel='external nofollow' class='url'>Global Nerdy &raquo; Where Mark&#8217;s &#8220;Pilgrimage to Linux&#8221; Story Completely Falls Apart</a></cite>&#160;(pingback)</li>
+<li id="comment-9562"><p>It awes me how some people just seem to hate on Linux.</p>
+<p>It seems that there are three different types of people that seem to be doing the hating, though.</p>
+<p>A) Around 80% are the windows fanboys and what not who tried Linux 5 &#8211; 8 years ago, decided that it sucked from the start, and pretend as though Microsoft has done wonders while Linux has done nothing for the previous 5-8 years.  </p>
+<p>B) Around 15% seem to be of the opinion that MacOS is better, can do everything Mark wants, and that the IPhone is going to be the most awesomest thing ever.  They still can&#8217;t forgive Mark for switching over to Linux.</p>
+<p>C) The remaining 5% aren&#8217;t hating, to be fair, but are maturely pointing out deficiencies in the Linux software offering that prohibits them from running their day to day lives on Linux.  (Like, games.  And photoshop.  And Dreamweaver/etc.  No, Gimp is NOT photoshop nor for high level things is it a replacement.)</p>
+<p>To those in group A:</p>
+<p>Yes, we CAN indeed survive in Linux.  It isn&#8217;t windows yet, no, but the gap between Windows and Linux ten years ago is about 100 times larger than it is now.  Linux is growing faster and faster, while Microsoft is bolting on a new theme and a very intrusive security method to its old OS.  If they release another one like this, they are in trouble.</p>
+<p>To those in group B:</p>
+<p>No, Mac doesn&#8217;t offer what Linux offers.  Even with Fink.  And a million third party version update checks.</p>
+<p>To those in group C:</p>
+<p>Give us time.  We&#8217;ll get there.</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9562" title="June 4, 2007 @ 3:00 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9563"><p>Every time I&#8217;ve tried Linux on a desktop / notebook, something critical simply hasn&#8217;t worked. Fedora on my desktop, and turning on multiple desktops caused X to freeze the framebuffer on boot. Sleep and hibernation simply not working. The latest, was Ubuntu caused the clock chip on my Lenovo to freeze, requiring a motherboard replacement.</p>
+<p>That said, I have a wonderful Linux server at home that&#8217;s been incredibly reliable. But for desktop stuff, I&#8217;d rather get work done than spend so much time on getting a working computer.</p>
+<p class=sig>&#8212;&#8201;<cite>Randy</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9563" title="June 4, 2007 @ 3:31 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9564"><p>My thoughts, as someone that spends his entire professional life in Linux but prefers to use a Mac or even Windows at home.</p>
+<p>Package management is a big deal on Linux, because:</p>
+<p>- free software has a lot of interdependencies that make installing complicated.<br />
+- free software is updated more regularly than non-free software.<br />
+- free software can be maintained by someone other than the original developer.</p>
+<p>None of these are relevant to the Mac or Windows since much of the software is non-free (as in speech). So package management would never be a big win for those platforms.</p>
+<p>In my experience, package management is a pain as soon as the distro you&#8217;re running is not the latest and greatest, at which point you find yourself orphaned 2 years down the line.</p>
+<p>The primary reason for me to not use Linux at home is that none of the software that is end user targeted (ie. not web servers) is of high quality.</p>
+<p class=sig>&#8212;&#8201;<cite>Scruff</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9564" title="June 4, 2007 @ 3:46 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9565"><p>@jh:</p>
+<p>I guess I can&#8217;t speak for you but I do more than *survive* in GNU/Linux/BSD. For me, it is _Windows_ that needs to do the catching up. I need a proper shell. I need scriptability and automation. I need to work on a system which has developers that have the same needs as me, that think like me, that caters to real power users in addition to normal users. I need functionality above gloss. I need to be the master of my computer &#8212; I need to not be betrayed. I need software freedom. I need collaborative community.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9565" title="June 4, 2007 @ 4:09 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9566"><p>It awes me how some people just seem to hate on Mac.</p>
+<p>It seems that there are three different types of people that seem to be doing the hating, though.</p>
+<p>A) Around 80% are the Linux fanboys and what not who tried Mac 2 &#8211; 5 years ago, decided that it sucked from the start, and pretend as though Linux has done wonders while Apple has done nothing for the previous 2-5 years.</p>
+<p>B) Around 15% seem to be of the opinion that Linux is better, can do everything Mark wants, and that the next Linux kernel is going to be the most awesomest thing ever. They still can’t forgive those that point how Mark could fix most of his gripes with the Mac though.</p>
+<p>C) The remaining 5% aren’t hating, to be fair, but are maturely pointing out deficiencies in the Mac software offering that prohibits them from running their day to day lives on Mac. (Like, closed source. And lack of a universal package manager. And paying for it/etc. No, Mac OS X is NOT Linux nor for those who want to tinker endlessly is it a replacement.)</p>
+<p>To those in group A:</p>
+<p>Yes, we CAN indeed survive in Mac. It isn’t Linux yet, no, but the gap between Mac and Linux ten years ago is about 100 times larger than it is now. Mac is growing faster and faster, while Linux can&#8217;t decide if one should go with an integrated environment or a Window manager and a very snobish attitude regarding Average Joe won&#8217;t help either. If they keep preaching to the converted, they will never reach the masses.</p>
+<p>To those in group B:</p>
+<p>No, Linux doesn’t offer what Mac offers. Even with Synaptic. And a million different distros and packages and ports managers.</p>
+<p>To those in group C:</p>
+<p>Give us time. We’ll get there.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9566" title="June 4, 2007 @ 4:27 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9567"><p>Anonymous (not jh) said, &#8220;Give us time. We’ll get there.&#8221;</p>
+<p>If someone&#8217;s main reason for switching to Linux is avoiding Apple&#8217;s lock-in, how do you propose to &#8220;get there?&#8221;  Take all the time you want.  It&#8217;s not a technical problem to be solved.  It&#8217;s not a manpower issue.  It requires an attitude change in Apple&#8217;s corporate culture.  But it&#8217;s already too late.  Even if Apple does go completely open and lock-in free, due to market pressure, why should I trust them not to change their mind again?  My data and time is better spent with those in free software who already think like I do.  </p>
+<p>I used to believe that Apple made the best OS on the planet.  I used to say that if Apple ever stopped tying their OS to their hardware I would buy it and use it, and use their applications.  I don&#8217;t believe that way anymore.  Vendor lock-in comes at too high of a price.</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9567" title="June 4, 2007 @ 5:11 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9568"><p>I guess I should also add that I too am a former Mac user.  My wife is not a &#8220;computer person&#8221; and she uses Linux just fine.  She configured it herself through the GUI that comes with Gnome.  She even prefers Gnome to KDE.</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9568" title="June 4, 2007 @ 5:19 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9569"><p>Wow.</p>
+<p>Anonymous, that&#8217;s original.</p>
+<p>You like, took what I wrote, and in a great attempt at Satire, basically inserted your own invectives in there.  You miss the point , though.  The reasons that Mark went with Linux over Apple are expressly the reasons that the followup pointed out that Apple will NEVER EVER MAKE IT.  </p>
+<p>Vendor lock in.  Mark was sick of Apple doing things behind closed doors with Mark&#8217;s own data.  He preferred (And, in the end, he GOT) to control the data that he relied on every single day.  He didn&#8217;t want a black box.</p>
+<p>You want to pretend like Linux isn&#8217;t moving faster than the other OS&#8217;s on the market, then fine.  Pretend all you want.</p>
+<p>If you look at screenshots and use cases from 10 years ago for each of the major OS&#8217;s, it&#8217;s quite easy to tell which has come the furthest in those ten years.  It&#8217;s not Apple.    Apple already knows that they&#8217;ve lost the OS war, too.. they&#8217;re focusing on Embedded markets with their IPODS, AppleTV, and Iphone.  Where&#8217;s Leopard and its &#8220;innovative features?&#8221; </p>
+<p>I stand by my comment.  The pace at which linux is moving is stunning, and Microsoft had better not have another release like Vista.  They&#8217;ll get caught.  I would say the same about Apple, but, Apple isn&#8217;t &#8220;Apple Computer&#8221; anymore, are they?  They look like a company that&#8217;s already started the process of giving up the software ghost.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9569" title="June 4, 2007 @ 5:23 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9570"><p><i>You miss the point , though.</i></p>
+<p>Do I?</p>
+<p><i>Vendor lock in. Mark was sick of Apple doing things behind closed doors with Mark’s own data.</i></p>
+<p>It is really sad it took him 20 years to realize that.<br />
+Now, how closed would you say that data was? Like, now that OS X is Unix, how difficult it is to keep your files in a format that is open? Linux geeks like to tinker, don&#8217;t they? How difficult it is to install open source apps on OS X and get by with open formats?<br />
+And how many formats in the first place? He could use another email app, couldn&#8217;t him? Ok, you want the whole shebang open source? Go for it, by all means, but don&#8217;t try to pretend Mac OS X is a trap like M$ offerings, because it is not.</p>
+<p><i>If you look at screenshots and use cases from 10 years ago for each of the major OS’s, it’s quite easy to tell which has come the furthest in those ten years. It’s not Apple.</i></p>
+<p>Yes, it mustn&#8217;t be: they are using a 10 year OS now (Nextstep).<br />
+On the other hand, though, many Unix users tell me KDE and Gnome are not really Unix and one should avoid using them, look at Mark, he went from Ubuntu to Debian, not the other way round.<br />
+So, Apple going backwards to get a new OS and Mark going backwards to a window manager, not the wonderful Ubuntu tight thing everybody is talking about, does this tell us something about the state of IT? I would say so.</p>
+<p><i>You want to pretend like Linux isn’t moving faster than the other OS’s on the market, then fine. Pretend all you want.</i></p>
+<p>Did I say that? I don&#8217;t think so. I believe Linux is moving fast, it really is, but it is fragmented by nature and it will take some other 10 years to reach Average Joe. In the meantime it will continue to be what it is: a very powerful OS in the hands of the technically inclined. I&#8217;m not a Linux hater, I&#8217;m a M$ hater. I tend to think I know my enemies&#8230;</p>
+<p><i>Apple already knows that they’ve lost the OS war, too.. they’re focusing on Embedded markets with their IPODS, AppleTV, and Iphone.</i></p>
+<p>They did, they really did. But somehow they managed to triple their sales while losing that battle and those gadgets, you know they are trojan horses, don&#8217;t you? Take the iPhone, for instance. That&#8217;s a market 10x the computer one. Imagine, if you will, that you get 10% of that market and people stare at an OS X like UI? Will this increase Apple&#8217;s awareness everywhere or no?</p>
+<p><i>Where’s Leopard and its “innovative features?”</i></p>
+<p>Next monday at WWDC.</p>
+<p><i>I stand by my comment. The pace at which linux is moving is stunning, and Microsoft had better not have another release like Vista. They’ll get caught. I would say the same about Apple, but, Apple isn’t “Apple Computer” anymore, are they? They look like a company that’s already started the process of giving up the software ghost.</i></p>
+<p>Now that&#8217;s a real fanboy kinda paragraph.</p>
+<p>The pace at which Linux is moving is a good one, I wouldn&#8217;t say it is stunning. It would be if Linux had 10% to 15% market share among common users.<br />
+Unfortunately, M$ has so much money that they can fsck up some more 10 years until the tides turn (and in those 10 years Linux will mature in order to be viable for Average Joe)<br />
+Apple isn&#8217;t Apple Computer anymore but you do know that the computer is also not the Computer anymore? Computing has gone beyond the computer because nowadays the economy has become cultural and culture has become economic.<br />
+Make no mistake, Apple&#8217;s recent moves are very smart ones for their future. Damn, they had to learn something after losing the OS war!<br />
+As for giving up the software ghost, you couldn&#8217;t be more mistaken.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9570" title="June 4, 2007 @ 7:44 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9571"><p>re Chris/Ed: like everything on linux fonts are highly configurable. you can turn on and off blur-based (Traditional OSX) and subpixel-based (traditional XP/cleartype) antialiasing, and enable or disable hinting (quantization to pixel boundaries). </p>
+<p>on a lower resolution LCD i tend to like subpixel and hinting. on a higher res screen (say 1280&#215;800 in 12&#8243; or higher) i prefer unhinted &#8211; the thicknesses and shape are more accurate..</p>
+<p>check /etc/fonts/conf.d. on gentoo its just a matter of ln -s ../conf.avail/10-unhinted.conf. the Desktop env guis tend to automate this..</p>
+<p>i get annoyed at XP and OSX for not letting you enable and disable hinting at will..</p>
+<p>and emacs has had antialiasing support for about 3 years now. on gentoo, just USE=xft emerge emacs-cvs</p>
+<p class=sig>&#8212;&#8201;<cite>fonts</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9571" title="June 4, 2007 @ 9:23 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9572"><blockquote><p>The automotive industry employs a handful of experts, who design and build cars in such a way that the user of a car never has to be confronted with anything but the console of that car. Yes you have to learn how to operate it, but you don’t need to know how to change transmission fluid, break fluid, fluglenoggin on the bilxbaum cranshaft gasket lamp etc etc.</p></blockquote>
+<p>Of course, the automotive industry are also building single-purpose devices. My hi-fi system, video recorder, TV and cellphone are computers, but I have no idea how they work and don’t need to, either. Cell phones are designed and built in such a way that I’m not confronted with anything but the screen where I read phone numbers and text messages; I don’t need to know how to hop frequencies, switch transmission towers, pick encoding schemes, or any of the other stuff that’s constantly going on in the background while the cell phone is hooked up to the network.</p>
+<p>The personal computer does not have the luxury of being a single-purpose device so it will never have the luxury of being a blackbox either.</p>
+<p>Nor is Windows a black box. People spend lots of time worrying about viruses, cleaning up the system, reinstalling on occasion and all of that other crud that needs to be done because a Windows system always comes with an expiry date. (Yes, this has improved in the years since. But I’ve not reinstalled my Linux in 6 years, during which I’ve installed and uninstalled as well as upgraded heaps of software, and the system runs just like it did on the first day it saw the world.) Mac OS X is much <em>much</em> better than Windows, in this regard.</p>
+<p>If people bought a word processing device, an email computer, or a browser appliance, they would get a zero-maintenance experience just like those who buy video recorders, cell phones or hi-fi systems. To claim that anyone has made the personal computer as simple as those devices is disingenous at best, deluded or dishonest at worst.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9572" title="June 4, 2007 @ 9:28 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9573"><p>I would hardly call the likes of Spaces or Time Machine &#8220;innovations.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://mackdieselx27.wordpress.com/' rel='external nofollow' class='url'>JP</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9573" title="June 4, 2007 @ 9:56 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9574"><p>one hundred post!</p>
+<p class=sig>&#8212;&#8201;<cite>charlie</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9574" title="June 4, 2007 @ 10:32 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9575"><p>&#8220;Next Monday at WWDC&#8221;</p>
+<p>You know, you guys say this every convention.  Every time.  Apple sends out a postcard and you start freaking out about how it&#8217;s going to be Leopard.. or a Widescreen IPOD.. or a 500 Gig IPOD.. or whatever.   Why don&#8217;t you , for once, wait to see if it is indeed Leopard instead of celebrating right now?  Apple fanboys have been pretty let down with their early celebrating in the past.</p>
+<p>&#8220;As for giving up the software ghost, you couldn’t be more mistaken.&#8221;</p>
+<p>Really?  What software have they released in the last year?  A subpar Aperture.  A few tweaks to ITunes.  Some mediocre tweaks to the pro software.  Where&#8217;s IWork 07 and what will it give us?  A spreadsheet?  Where&#8217;s ILife 07?  Where&#8217;s the &#8220;Pro&#8221; level of Iweb?  Show me the software?  Where&#8217;s LEOPARD?   What does leopard give us?  &#8220;Virtual Desktops.&#8221;  Oh.. sorry, spaces.  And &#8220;Time Machine&#8221; .  Oh.. sorry, Shadow Volume Copy.  </p>
+<p>Look.. they aren&#8217;t software anymore, okay?  That&#8217;s just the way it is.</p>
+<p>&#8220;How difficult it is to install open source apps on OS X and get by with open formats?&#8221;</p>
+<p>Oh, it&#8217;s not.  He could replace his Iphoto with Picasa.  He could replace his Mail with some Mutt or Pine client or Thunderbird.  He could replace his webbrowser with Firefox and his Itunes with Amarok.    While we&#8217;re at it, he could replace his Ichat with AdiumX.  Heck.. why stop there, though?  He could replace the whole damn kernel with the Linux kernel.. and he could have the advantage of not having to pay $100 for two copied features at the next Leopard release AND have updating amongst all his apps in an open format.</p>
+<p>Do you see how ridiculous you sound?  Eventually it makes more sense to use an open OS than to take a closed one and pretend it&#8217;s open.</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9575" title="June 4, 2007 @ 11:18 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9577"><p>I should preface my comments by saying that I&#8217;m very likely out-geeked by the majority of viewers here: I don&#8217;t code for a living, but I do at least know my way around a shell script.  That, I hope, is a way of explaining that I&#8217;m neither afraid of nor unfamiliar with command-line configuration, but I find it terribly irritating when equivalent functions &#8220;just work&#8221; in either OS X or Windows from the GUI but &#8220;just won&#8217;t&#8221; in Linux&#8217;s GUI.  I have several OS X Macs and recently purchased a bog-standard IBM P4 box for the purpose of setting up networked storage and learning more about desktop Linux in the process.  (Mark, I understand and respect your choice of Ratpoison, but that just isn&#8217;t for me.)</p>
+<p>Natch.  I&#8217;ve tried multiple distros (Ubuntu, OpenSUSE, MEPIS, and Fedora, to name the biggies) and always come up with the same results.  I really, really want to have a good Linux machine running alongside my Macs but am rapidly tiring of bashing my head against it.  Specifically, my experiences include:</p>
+<p>&#8211; Fighting with X.org.  Why the hell can&#8217;t any of them notice that a 17&#8243; flat panel likes to run at 1280&#215;1024 and 50 or 60 Hz without me adding modelines?  This is a common-as-muck Samsung LCD which is fully VESA compliant, running through either also-commmon-as-muck Intel onboard video or an (I-thought-well-supported) NVIDIA graphics card.  Every single distro has required me editing X.org or running X reconfiguration to get more than 1024&#215;768.  This would be unthinkable in Windows or OS X.</p>
+<p>&#8211; Fighting with file sharing.  I just want this thing to be a big networked hard drive for the Macs, which I can also play with while learing more Linux.  I can set up file sharing between OS X and Windows with very few clicks and no head-bashing.  Why, oh why, then can I only set up sharing between Linux and OS X by resorting to manually editing smb.conf on Linux?  Why, oh why, does Gnome offer me a &#8220;Share folder&#8230;&#8221; context-menu selection if it won&#8217;t actually do a blessed thing?  (Yes, I know about SMB4K.  You can&#8217;t with a straight face argue that it&#8217;s anywhere near as obvious or quick-and-dirty as OS X&#8217;s or XP&#8217;s setup.  More flexible, OK, but also far more confusing.)</p>
+<p>&#8211; The final nail: vexing slowdowns.  No matter which distro I&#8217;m running, it slows to a crawl after sitting idle for a couple of days.  By &#8220;slows to a crawl,&#8221; I mean 2-3 minutes to launch Firefox, 15-20 minutes to shut down/restart, etc.  Then, after a restart, everything is back to normal.  This very same machine will run Windows XP for weeks just fine.  (There is no sleep involved, either.  The computer runs continuously with both OS&#8217;s.)  I understand that is very likely a hardware conflict between the Linux kernel and my particular computer, but I haven&#8217;t the first clue how to go about troubleshooting it or even where to start.  So even though it&#8217;s not Linux&#8217;s fault per sé, it&#8217;s still impeding me from actually using Linux &#8212; and moreover, whatever the problem is, Windows seems to have it sorted out.  That&#8217;s not a nice feeling.</p>
+<p>Mark&#8217;s comments about system updating are well taken and resonate with me.  I also understand, as many others have noted, why such a concept will probably never come to the proprietary OS&#8217;s of this world, which is a shame.  </p>
+<p>The fact remains, however, that I have a bog-standard PC sitting in my office that I desperately want to be running Linux &#8212; and as yet, I have been incapable of doing so.  I hope it&#8217;s rather obvious that I&#8217;m cleanly in jh&#8217;s &#8220;Group C,&#8221; but I can&#8217;t help the feeling that these specific objections could/should have been sorted out long ago.</p>
+<p>Best,<br />
+Adam</p>
+<p class=sig>&#8212;&#8201;<cite>Adam</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9577" title="June 5, 2007 @ 5:05 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9579"><blockquote><p>(Mark, I understand and respect your choice of Ratpoison, but that just isn’t for me.)</p></blockquote>
+<p>I think Mark’s point was that window manager preferences are quite personal, and if you care about your computing experience, you should try several different ones to see which one you are most comfortable and productive with.</p>
+<blockquote><p>Fighting with X.org.</p></blockquote>
+<p>Yeah. It’s not there yet. Do note however that the stated goal for the direction of X.org is that <code>/dev/null</code> should soon be a valid configuration file without leading to clearly suboptimal results.</p>
+<blockquote><p>Fighting with file sharing.</p></blockquote>
+<p>Agreed. Bewilderingly, rock-solid WebDAV server and client implementations exist and should be easy to integrate with Unix desktops, but to my knowledge, no one is trying this. Windows and Mac OS X both include integrated WebDAV client support, so such a solution would easily cover most of the filesharing ground.</p>
+<blockquote><p>I can’t help the feeling that these specific objections could/should have been sorted out long ago.</p></blockquote>
+<p>You’re not alone, not even along Linux advocates, hard as it may sometimes be to hear that amidst the typical… discourse.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9579" title="June 5, 2007 @ 6:27 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9580"><p>Wow, who do you think comes out as a fanboy after reading my post and your post?!?<br />
+I thought it was untimely to ask &#8220;Where is Leopard&#8221;, when, everyone knows it will be presented next week. If you have superpowers and can predict the future as to say it will not bring anything new, well, let&#8217;s wait one week and see how your prediction goes.<br />
+As for software, historically Apple has been a hardware company thta did their own OS and a few apps, but fast forward 30 years and they have a line of sofware offerings, that you may dislike, but one must recognize they do more software now than, say, 5 years ago. You may think their software suck, but in one paragraph you name half a dozen of their software products. How about brand awareness, heh?<br />
+The point is not pretending the platform is open, the point is, like Adam and the group C folks, that one can have a really nice computing experience with Mac OS X and at the same time work with open source software, fiddle with Unix, etc. If OS X gets in your way more than it liberates you from the pains group C experiences, then by all means trash OS X and install Linux on it (or get a new desktop/laptop if you hate their hardware as well).<br />
+A fanboy is someone who hates something more than he likes another thing. Apple fanboys hate Windows. Linux fanboys hate Unix.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9580" title="June 5, 2007 @ 8:19 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9581"><p>Now I know you&#8217;re an idiot, anonymous.</p>
+<p>&#8220;Linux fanboys hate Unix&#8221;</p>
+<p>Why would we hate Unix?   Be realistic here.  The only reason Apple didn&#8217;t choose Linux instead of FreeBSD as the base of Darwin was because the BSD license is not as viral as the GPL.  They ended up using KHTML for Safari, a lib for IChat, and many other open source products that are only in existance because of the opensource / Unix movement.</p>
+<p>Implying that Linux &#8220;fanboys&#8221; hate Unix just shows how ill-informed you are.</p>
+<p>And for what it&#8217;s worth, I don&#8217;t &#8220;hate&#8221; apple.  I hate DRM.  I hate software that is &#8220;closed&#8221; in nature when it handles my data.  I hate stupid people.  </p>
+<p>Apple has its place, and that&#8217;s nice.  And pretending like Leopard is coming out next week is great, but why don&#8217;t you wait until they&#8217;re certain. (I think that Leopard will be announced next week with a ship date of September or October.  My friends at Apple state they are now all on the Iphone Dev stuff and not on Leopard, so that makes sense.)   </p>
+<p>You don&#8217;t understand, sir.  It&#8217;s not a matter of being a &#8220;fanboy.&#8221;  It&#8217;s a matter of using what works for us.  I respect that Apple works for you.  But, it doesn&#8217;t for me.  It doesn&#8217;t for Mark, and you need to respect that.</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9581" title="June 5, 2007 @ 10:33 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9582"><p><i>Why would we hate Unix?</i></p>
+<p><a href="/web/20110806090608/http://en.wikipedia.org/wiki/Oedipus_complex">Oedipus complex</a>.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9582" title="June 5, 2007 @ 11:26 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9583"><p>*Laughs* </p>
+<p>Okay.  Whatever.  We hate Unix. *shrugs*  If it makes you feel better or sleep at night or something.</p>
+<p>BUt.. guess what?  THe only thing Unix is is a trademark.  It&#8217;s why BSD is a &#8220;Unix&#8221; and Linux is not.  Linux chose not to go after certification.  They&#8217;re both POSIX, though.  </p>
+<p>So.. what exactly do we hate, since Linux could be a UNIX tomorrow if it wanted to?</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9583" title="June 5, 2007 @ 11:49 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9584"><p>Also.. remember, Mr. Anonymous.. that MAC OSX is not Unix either.  </p>
+<p>Once they forked, they lost the designation/trademark.</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9584" title="June 5, 2007 @ 11:53 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9585"><p>One knows it is in front of a fanboy when one reads words like &#8220;idiot&#8221; and &#8220;stupid&#8221;.<br />
+And also when one sees someone that cannot laugh and understand a joke like &#8220;Linux fanboys hate Unix&#8221;. It is not fun to explain a joke and thus I won&#8217;t, but let&#8217;s try to make that more clear with another joke (now you know this is a joke so please be polite and don&#8217;t call me names): Apple is so 90&#8242;s, but Linux is so 70&#8242;s.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9585" title="June 5, 2007 @ 12:05 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9586"><p>Ah.</p>
+<p>I see.  You were wrong, and you got called on it, and now you&#8217;re passing it off as a joke.  Okay.  I&#8217;ll accept your offer to walk away. </p>
+<p>Hahaha!  Great joke! Had me rolling!  Would listen again! A+++++</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9586" title="June 5, 2007 @ 12:09 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9587"><p>If being so certain that I&#8217;m wrong makes you feel good, then go for it. You should read my comments <i>cum grano salis</i> but I guess this is asking too much for a fanboy.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9587" title="June 5, 2007 @ 12:22 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9588"><p>I think it&#8217;s time to put this thread to bed.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9588" title="June 5, 2007 @ 1:45 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9589"><p>Apple users might want to file a <a href="/web/20110806090608/http://bugreporter.apple.com/">request</a> for APT-level package management; mine was closed as a duplicate of <a href="/web/20110806090608/http://3044969/">#3044969</a> so it&#8217;d probably be a good idea to reference that. I was careful to explain why I share the APT love: I manage a fair number of Debian systems and have never had downtime due to automated upgrades (in fact, right now I&#8217;m waiting for APT to finish installing a user-requested package on ~80 systems. This requires ~40 keystrokes and a few minutes); the Mac is far behind and would probably be close to Windows pain-wise except that the third-party Mac developers aren&#8217;t in love with the conditional registry voodoo and non-standard file permissions/locations which make deployment so unpleasant.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://improbable.org/chris/' rel='external nofollow' class='url'>Chris Adams</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9589" title="June 5, 2007 @ 2:15 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9590"><p>Mark, I&#8217;m still curious how you edit videos. I know, video blogging is soooo 2006, but I never got my fix.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://www.bearfruit.org/blog' rel='external nofollow' class='url'>Matt Nuzum</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9590" title="June 5, 2007 @ 3:45 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9591"><p>jh: don’t feed the trolls.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9591" title="June 5, 2007 @ 3:57 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9592"><p>Linux is great until a user needs an app or hardware that doesnt run on it, as is all other operating systems.  I cant really be for one OS.  So I have OSX, XP &amp; Ubuntu all installed.  on a mac.</p>
+<p class=sig>&#8212;&#8201;<cite>Court</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9592" title="June 5, 2007 @ 6:06 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9593"><cite><a href='/web/20110806090608/http://anxiousmofo.wordpress.com/2007/06/05/package-management-or-whats-awesome-about-linux/' rel='external nofollow' class='url'>Package management, or what's awesome about Linux &laquo; Anxious MoFo</a></cite>&#160;(pingback)</li>
+<li id="comment-9594"><p>I&#8217;ve been using computers my whole life. I&#8217;ve used Apple DOS, MS-DOS, Win3.1, ProDOS, System 4 (maybe even 3) through MacOS 9, DEC Ultrix, Vax/VMS, Win95, Linux 0.9x (Slackware), FreeBSD, SunOS 4.x, NeXTstep, OpenStep/x86, IRIX 4.x and 5.x, Solaris, WinNT 3.5 and 4, BeOS, MacOS X 10.0 through 10.4, Linux 2.4 and 2.6 (Knoppix and Debian), and WinXP. I&#8217;ve used LaTeX, Word, vim, emacs, AppleWriter, MacWrite, MacWrite Pro, MacPaint, MacDraw, GIMP, Photoshop, Illustrator, PageMaker, FrameMaker, OmniWeb, Internet Explorer (as little as possible), SpyGlass, Mosaic, Netscape 0.x through 4.x, Firefox, Safari, awk, sed, C, C++, sh, tcsh, ruby, C#, VB.NET, Visual Studio, Qt, MS Office, MS Office X (MacOS X), Thunderbird, mutt, elm, Unix mail, and ever so much more. What I&#8217;m trying to get across here is that I&#8217;ve had a pretty good survey of what&#8217;s out there.</p>
+<p>I share Mark&#8217;s concern about preserving data for years. I still have email and shell scripts from 1991, easily accessible and still in regular use. I have been improving my .vimrc (and .exrc before that) for over a decade and a half. I preserve my data by keeping it in standard formats, mostly ascii text. All of my important data is sitting on a software RAID run by a Debian box (Mac hardware circa 2000). From that box I serve IMAP, but also use mutt locally. All of my email is in maildir format, which both mutt and courier&#8217;s IMAP server can handle. I serve much of my data by NFS on my LAN (no wireless, thanks) and by WebDAV over SSL externally. I also run webmail (roundcube) against my IMAP server so I have easy access from elsewhere. My wife&#8217;s home directory on her Mac Mini is also served via NFS, and she uses Apple&#8217;s Mail.app to interact with the IMAP server. Fetchmail (yeah, I&#8217;ll look into getmail one of these days) retrieves our email via POP from a few different accounts and delivers it with exim so the IMAP server can make it available. (I run procmail from my .forward file to run everything through spamassassin, though my wife just uses Mail.app&#8217;s filtering.) We even share calendars using Sunbird and .ics files on a WebDAV share (iCal doesn&#8217;t reread or lock before writing &#8212; bad iCal!). I have almost the same setup for my mother, with a Linux box running on old Mac hardware and providing email fetching, IMAP service, and NFS service to support her Mac Mini.</p>
+<p>For work I have a MacBook Pro. I do most of my work in xterms and gvims under Apple&#8217;s own X11 server. I also use gaim (from Fink, which hasn&#8217;t packaged pidgin yet) for IM. I use Entourage for work email and such because that&#8217;s what work supports. I use Firefox for work and web browsing. Code is in subversion on a Linux server elsewhere. Everything important is backed up elsewhere, not native to any Mac app. I use a cross-platform text editor (vim), a cross-platform web browser (firefox), and a platform-agnostic mail protocol (IMAP). I am not locked in by using a Mac, and I get the benefits of its pleasant interface.</p>
+<p>I firmly believe in the right tool for the job. I used tvtwm for years and years and liked it a lot. I even hacked the code to get it to do some interesting things with multiple X screens. I got over it. I like KDE better than GNOME. I like the Mac UI better than any of the above. I like being able to remote display from my Linux box to the machine I sit in front of over ssh and have it (nearly) integrate with the rest of the GUI. Linux is the right tool for storing and accessing my data, but I don&#8217;t run a X server on it at all. MacOS X is the right tool for my work and daily interaction with the internet and my Linux box. I am unwilling to give up either one. What Mark and other Linux advocates have said about Linux, particularly Debian, is why it&#8217;s what I use for my important data. What the Mac fans have said about user interface and taste and Just Working is why I prefer to sit in front of a Mac.</p>
+<p>I&#8217;m not claiming that Mark should see things my way. I&#8217;m clearly optimizing for goals only similar to, not identical to, his own. My work email is stored on a server (an Exchange server, granted, but accessible via IMAP for when I want to export) and only cached on my laptop, so I don&#8217;t even think about the format it&#8217;s in on my laptop. The code is stored in subversion so I don&#8217;t care that I need to boot in a proprietary OS to use a local checkout. That gives me the freedom to use the best possible GUI (my preference, not an absolute statement) without sacrificing the longevity/survivability of my (or work&#8217;s) data, and that&#8217;s good enough for me.</p>
+<p class=sig>&#8212;&#8201;<cite>Greg</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9594" title="June 5, 2007 @ 10:46 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9597"><p>Completely off-topic (not that I think that&#8217;s a problem right now, if it helps emacs == the only text editor worth anything), but Mark, are you planning on writing about the new version of movable type and it&#8217;s open source brother / child / father / generic relation? I&#8217;d be intrigued to a follow up to <a href="/web/20110806090608/http://diveintomark.org/archives/2004/05/14/freedom-0">that post</a>.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://iamsparticus.com/' rel='external nofollow' class='url'>(another) Mark</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9597" title="June 6, 2007 @ 12:35 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9598"><p>&#8220;First they ignore you, then they ridicule you, then they fight you, then you win.&#8221; &#8212; Mahatma Gandhi</p>
+<p>Keep the fun, that&#8217;s the most important. Good luck and happy hacking!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://peadrop.com/' rel='external nofollow' class='url'>Alexandre</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9598" title="June 6, 2007 @ 2:50 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9599"><p>i looked at the ratpoison screen shots and they hurt my face. beryl too. i could never use linux with visuals like that. oy.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://fannation.com/' rel='external nofollow' class='url'>river</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9599" title="June 6, 2007 @ 4:39 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9601"><p>121 comments, and there still may be something worth saying: </p>
+<p>Having a package manager and repositories is not in itself enough for painless package management. A lot depends on package interactions. If upgrades break because version 0.27 of package foo does not play well with version 3.2867 of package bar, then upgrading becomes painful even with a package manager. Debian stable does this right, but it means they take a tonne of time to release their distro. Other Linux distros have problems in this area. </p>
+<p>It has been mentioned before, but there is no technical or licence limitation for closed-source applications to make APT repositories. A concrete example of this is <a href="/web/20110806090608/http://deb.opera.com/">Opera</a>.</p>
+<p class=sig>&#8212;&#8201;<cite>Paul Nijjar</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9601" title="June 6, 2007 @ 8:46 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9602"><p>Paul Nijjar said: </p>
+<blockquote><p>It has been mentioned before, but there is no technical or licence limitation for closed-source applications to make APT repositories.</p></blockquote>
+<p>Ah, but there is a limitation if you want effortless package management. You need (at minimum) freedom 0 &#8212; If you need deal with EULAs things start getting extremely cumbersome. The difference between <i>zero</i> interaction package management and even a single EULA is huge.</p>
+<p>(I don&#8217;t know if Opera in particular requires you to accept a EULA. It is irrelevant to my point)</p>
+<p class=sig>&#8212;&#8201;<cite>redpop</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9602" title="June 6, 2007 @ 9:17 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9603"><p>About the only things I&#8217;ve needed to compile in the last 5 years were Vidalia, Tor, and Privoxy, since the packaged versions just weren&#8217;t working for me for a variety of reasons.</p>
+<p>In my home LAN, we run a mix of XP, OS X, Palm OS, 2000 Advanced Server, and Linux (recently converted from the dead or dying Kanotix over to Ubuntu).  Just like I wouldn&#8217;t ask someone to remove a bolt with a screwdriver, I run the OS that strikes me as appropriate to the task&#8230;</p>
+<p>(Currently using X on XP to type this through Tor/Privoxy on a Feisty box&#8230;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://adminsamizdata.org/' rel='external nofollow' class='url'>Sean Tomlinson</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9603" title="June 7, 2007 @ 1:14 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9604"><p>The twist.<br />
+Hmm.. very interesting reading (exept for the fanboy stuff).<br />
+I&#8217;m a developer and is responsible for maintaining software I&#8217;ve made for both Linux and Windows. And one thing that sometimes make me fall on my knees and kiss the NIC on my Linux (read opensource) box is because there I have the choise NOT to upgrade anything. Until it  serves my needs. On a closed system you can&#8217;t just download an old version of something and leave the rest as it is.<br />
+You may find this weird. But to me &#8220;Don&#8217;t  fix something that isn&#8217;t broken.&#8221; means the whole system not just my litle app.</p>
+<p class=sig>&#8212;&#8201;<cite>Jake</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9604" title="June 7, 2007 @ 4:10 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9610"><p>booradley @ #81: To complete your analogy, you would have to stipulate that most cars have their hoods welded shut, and that most mechanics can therefore only do relatively superficial work and service after-market add-ons. If something goes wrong with the engine, only employees of the manufacturer get to tinker with it by issuing a regularly scheduled mandatory service call.</p>
+<p>The larger FLOSS community resembles the actual auto market much more than you might think: Mostly, it just works. If you do need something done to your system, you can tinker with it yourself (as you noted) or you can go to any independent professional to have it done (manufacturer certification is optional), and they can almost certainly accomplish the work by relying on published documentation and a standard toolkit with few, if any, &#8216;specialty&#8217; tools that are specific to a particular distro.</p>
+<p><b>The Free/Libre Open Source Software community: <i>Not</i> welding the hood shut since&#8230; well, never.</b></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael R. Bernstein</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9610" title="June 7, 2007 @ 3:55 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9611"><p>Pay your money ( or not ) and take yer choice! Each has their good points and each their bad points, but I do love the &#8220;I would never use Linux if it looks like that!&#8221;, hmmmm, nice and mature! I bet with my limited talent I could soon screw OSX, Windows and even freaking Solaris CDE to look so naff you would say the same thing ( although CDE does look awful at the best of times!). Not using an OS because the desktop colour scheme is awful is one of the best reasons I&#8217;ve heard in long, long time! I must try that with my boss next time he asks me to evaluate some software! &#8220;Sorry, it&#8217;s got green borders, so chuck it away!&#8221;!</p>
+<p class=sig>&#8212;&#8201;<cite>GJ</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9611" title="June 7, 2007 @ 5:08 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9612"><p>I have been a computer nerd (yes, say it proud: NERD!) for about 23 years. I have been a programmer and technical trainer for most of that time. I have worked under many OSes, primarily Windows from 3.1 through vista, and all the commercial Unix variants, and thence Linux. I first started installing Linux back when you downloaded about 9 3.5&#8243; floppies to install Slackware, so I&#8217;ve been working with Linux off and on for a very long time. </p>
+<p>Until a couple of years ago, I kept Windows on my laptop (and primary computer &#8212; I have no desktop) for one reason, and one reason only: MS-Word. I develop course manuals, and needed a tool that could let me create 300+ page course manuals with headers, footers, images, etc.. </p>
+<p>[note -- don't even talk to me about nroff or laTeX]</p>
+<p>About the time I started getting really frustrated every time MS-Word ate itself and crashed with a large document, the Open Office people stepped up. Before then, O-O was Not Ready for Prime Time. It was too slow (thanks, Java), too unreliable, and too incompatible. Then, suddenly, the heavens opened up, the angels descended, and O-O was ***READY***. Now, it just works. I have translated most of my 20-odd course manuals to O-O from MS-Word, not without a fair amount of monkey-work, btw &#8212; compatibility is not 100%. Simple docs, yes. Large complex docs with many styles, no. </p>
+<p>So, I have been using Ubuntu for about two years now as my all-day, every day OS. I am a trainer and programmer, so I write all sorts of scripts, mess around with Mono, and otherwise do very nerdy thing. </p>
+<p>BUT, like most people I use my computer for non-programming tasks. I watch DVDs and downloaded videos, I listen to music, I organize pictures from my digital camera, I burn DVDs that I&#8217;ve captured from videotapes of family outings, I read mail, surf the web, create PDFs, synch my Palm-based Treo, and much much more. In short, I&#8217;m doing everything I used to do in Windows. </p>
+<p>While I *am* a developer, and I am comfortable compiling things from source, I have seldom had to. 98% of the time I use either apt-get, or ever better, the Symantech pkg mgr, which is about as easy to use as anyone could want. </p>
+<p>The *only* thing I miss while using Linux is MS Streets and Trips, which I still like better than any other map program; I could run VMWare or Parallels, but I&#8217;m lazy. It *might* run with Wine, but again, I&#8217;m too busy/lazy to investigate. </p>
+<p>I&#8217;m virus-free, the OS runs very fast. It *never* crashes. I can connect to anything and everything in my office. The upgade manager lets me know when it&#8217;s time for a batch system upgrade by putting a nice little asterisk in the system tray. It doesn&#8217;t bother me until I click on it. </p>
+<p>Bottom line, I love Ubuntu and would never never go back to a Windows desktop; furthermore, I spend almost NO time tweaking, compiling, or whatever. I use the pkg mgr like a civilian.</p>
+<p class=sig>&#8212;&#8201;<cite>John Strickler</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9612" title="June 7, 2007 @ 5:25 pm"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9615"><p>Mark,</p>
+<p>It&#8217;s great to hear of people who switched to using free software.</p>
+<p>Are you running any proprietary software on your Debian box? :)</p>
+<p>best,</p>
+<p>matt</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090608/http://www.gnu.org/' rel='external nofollow' class='url'>Matt Lee</a></cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9615" title="June 8, 2007 @ 8:44 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9616"><p>I&#8217;m as big a fan on linux as you&#8217;ll find.  I would like to use Ubuntu on all my machines.</p>
+<p>But I can&#8217;t.  Linux does so many things so well, and yet seemingly simple things just don&#8217;t work at all, or only work with a tremendous amount of effort.</p>
+<p>Suspend/resume:  absolutely horribly broken.  If it works 95+% of the time on your hardware, you&#8217;re in the vast minority.  I&#8217;ve had it work reliably on one laptop, and not at all on 10 other machines.  </p>
+<p>Video:  Nope.  Good luck configuring your xorg.conf.  If the installer doesn&#8217;t get it right (which it won&#8217;t &#8211; you&#8217;ll be stuck in a mode far lower than what your card supports), you&#8217;re spending hours on google fixing it.  I&#8217;m there now trying to get 1080i or 1080p on my HDTV.  Worked instantly in windows.</p>
+<p>Media:  Nope.  mp3/DVD doesn&#8217;t come with it, and even though there are 3rd party progs to install it, it still isn&#8217;t reliable.  </p>
+<p>You people who say &#8220;everything works for me right away&#8221; are lying.</p>
+<p>I still love linux, but it&#8217;s not better than windows overall.  It&#8217;s a tradeoff.</p>
+<p class=sig>&#8212;&#8201;<cite>Jeff</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9616" title="June 8, 2007 @ 8:57 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9617"><p>Jeff.. just like to point out, in Ubuntu Feisty Fawn, if you click on an MP3 file, it will offer to install the CODEC.</p>
+<p>As for DVDs, that takes a little extra work, but it involves executing the installcss.sh script that libdvdcss package installs.   </p>
+<p>So, out of box?  No.   But, then again, Windows doesn&#8217;t install a DVD codec out of the box either.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9617" title="June 8, 2007 @ 9:39 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9620"><p>hey mark, good to hear of another year ago linux  switcher. (well for me about a year and a half). to anyone who still doesnt get the point with linux, i recently set up two of my friends with ubuntu, feisty fawn. two different computers, only similarity was both were tablets. everything, including tablet, wireless, wireless configuration tool, etc worked right away. music and movies were playable within 1 minute, including download time. both of my friends are happy. i hope they go as far as i did in one year (i learned python, from marks diveintopython, which happens to be in the ubuntu repos afaik). well, ill finish with this thought: linux is inevitable. be it 5 years or 10, i can wait. but it will happen.</p>
+<p class=sig>&#8212;&#8201;<cite>raptros-v76</cite>&#160;<a class=p href="/web/20110806090608/http://diveintomark.org/archives/2007/06/02/one-year-with-linux#comment-9620" title="June 9, 2007 @ 12:51 am"><img alt="#" src=/web/20110806090608im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806090608/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806090608/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806090608/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806090608/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806090608/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.743 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:33:38 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:06:08 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:06:54 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

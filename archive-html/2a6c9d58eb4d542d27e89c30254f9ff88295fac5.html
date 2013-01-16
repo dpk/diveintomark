@@ -1,0 +1,739 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Long-term backup [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110607181458/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110607181458/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110607181458/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110607181458im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110607181458/http://diveintomark.org/archives/2006/04/25/new-focus-indicator" title="New focus indicator for Firefox">
+<link rel=next href="/web/20110607181458/http://diveintomark.org/archives/2006/05/19/digital-cameras-again" title="Digital cameras, again">
+<link rel=up href="/web/20110607181458/http://diveintomark.org/archives#p1546" title="May 2006">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Long-term backup Comments Feed" href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup/feed" />
+<link rel='index' title='dive into mark' href='/web/20110607181458/http://diveintomark.org/' />
+<link rel='prev' title='New focus indicator for Firefox' href='/web/20110607181458/http://diveintomark.org/archives/2006/04/25/new-focus-indicator' />
+<link rel='next' title='Digital cameras, again' href='/web/20110607181458/http://diveintomark.org/archives/2006/05/19/digital-cameras-again' />
+<link rel='canonical' href='/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup' />
+<link rel='shortlink' href='/web/20110607181458/http://diveintomark.org/?p=1546' />
+<meta name="description" content="How do you back up 100 GB of data per year for 50 years?">
+<meta name="keywords" content="backup,dvdr,s3,storage,tapebackup,video">
+<link href="/web/20110607181458cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110607181458/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2006\/05\/08\/backup";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "7";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2006/05/08/backup" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110607181458" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101214235901/http://diveintomark.org/archives/2006/05/08/backup" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 18:14:58 Jun 7, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111105032422/http://diveintomark.org/archives/2006/05/08/backup" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="5 Nov 2011"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101214235901/http://diveintomark.org/archives/2006/05/08/backup" title="23:59:01 Dec 14, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 18:14:58 Jun 7, 2011">7</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20111105032422/http://diveintomark.org/archives/2006/05/08/backup" title="3:24:22 Nov 5, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100529070919/http://diveintomark.org/archives/2006/05/08/backup" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="29 May 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 18:14:58 Jun 7, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120628114457/http://diveintomark.org/archives/2006/05/08/backup" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="28 Jun 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110607181458*/http://diveintomark.org/archives/2006/05/08/backup" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>83 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">17 May 06 - 24 Aug 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000017761105_2007:-1:611111100211_2008:-1:101111002100_2009:-1:010000000000_2010:-1:000011000021_2011:5:000001000010_2012:-1:000001bb0000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110607181458/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110607181458/http://diveintomark.org/archives#p1546">May 8, 2006</a> &#8227;
+<h2>Long-term backup</h2> (<a href="/web/20110607181458/http://diveintomark.org/tag/backup" rel="tag">backup</a>, <a href="/web/20110607181458/http://diveintomark.org/tag/dvdr" rel="tag">dvdr</a>, <a href="/web/20110607181458/http://diveintomark.org/tag/s3" rel="tag">s3</a>, <a href="/web/20110607181458/http://diveintomark.org/tag/storage" rel="tag">storage</a>, <a href="/web/20110607181458/http://diveintomark.org/tag/tapebackup" rel="tag">tapebackup</a>, <a href="/web/20110607181458/http://diveintomark.org/tag/video" rel="tag">video</a>)</div>
+<p>I spent 18 hours this weekend recovering 600 GB of extremely valuable data after a catastrophic hard drive crash.  I highly recommend <a href="/web/20110607181458/http://www.alsoft.com/DiskWarrior/">DiskWarrior</a>.  It worked.  Nothing else worked.</p>
+
+<p>I spent another 6 hours backing up as much of the data as can reasonably be backed up onto 4GB DVD-R discs.  Twice.  Once to keep in a safe place somewhere in the house, and once to keep in a safe place in my parents&#8217; house.  This should cover not only hard drive failures, but other catastrophic events like my house burning down or being broken into.  And make no mistake: if my house were burning down, I would get my wife and children to safety, and then I would try to go back and get this data.</p>
+
+<p>But it&#8217;s not enough.  I&#8217;m creating a lot of data, and I want to keep most of it for the rest of my life.  This includes video of my children growing up, but also things like <a href="/web/20110607181458/http://diveintomark.org/archives/2006/04/23/the-rhythm-of-new-orleans">video footage of New Orleans after Hurricane Katrina</a>.  In 2004, I generated 35 GB of such data.  In 2005, I generated just shy of 150 GB.  This year I&#8217;m on track to generate about 100 GB.  I foresee doing this for about 20 more years, and then maintaining the archive for another 30 years after that.  After that I&#8217;ll be dead and it will be <a href="/web/20110607181458/http://en.wikipedia.org/wiki/SEP_field">Somebody Else&#8217;s Problem</a>.</p>
+
+<p>I don&#8217;t know how to back up 100 GB of video.</p>
+
+<p>I have the original Mini DV tapes, of course, which I currently keep in a drawer, which now strikes me as an incredibly poor strategy.  I could at least keep it in a safety deposit box.  I rent a safety deposit box; it has things like my marriage certificate and my children&#8217;s birth certificates.  This does not scale to decades.  In fact, it probably won&#8217;t even scale to a single decade, due to a combination of physical space limitations and media degradation.  I suppose I could invest in a larger safety deposit box when I run out of space, but by then I&#8217;ll need to transfer it all to newer media, which (one would hope) will be more space-efficient.</p>
+
+<p>But that doesn&#8217;t solve my problem either, because that&#8217;s not really the data I want to keep.  Every year I take the footage from the previous year and edit it down to a few hours and create a DVD out of it, which I distribute to family members and a few trusted friends who graciously pretend to care.  Editing takes about two weeks, so I&#8217;d like to save the edits along with the raw digital footage.  I currently do the editing in iMovie, which now strikes me as an incredibly poor strategy as well, due to the combination of closed-source software and undocumented data formats.</p>
+
+<p>It&#8217;s not quite as bad as that sounds, since iMovie stores the raw footage in individual .DV files, which I have successfully read and converted to various other formats with open source software.  I have no idea how iMovie stores the edits.  I can at least mitigate this problem by exporting the entire edited movie in .DV format.  Assuming I get smart and start editing with a program that respects my long-term aspirations, I still have the problem of storing the raw footage I generate every year.</p>
+
+<p><strong>How do you back up 100 GB of data <em>per year</em> for 50 years?</strong>  Or even 10 years?</p>
+
+<p>Right now, I keep everything on a <a href="/web/20110607181458/http://www.lacie.com/products/product.htm?pid=10188">Lacie 1 TB hard drive</a>, which is OK for short-term storage.  But the drive is really a combination of two 500 GB drives in a RAID 0 configuration, which means that if one drive fails, all the data is lost.  At a higher level, it is susceptible to OS-level failures which cause invalid volume header errors and make the drive unmountable.  Disk Utility couldn&#8217;t fix it.  <kbd>fsck</kbd> in single-user mode couldn&#8217;t fix it.  Tech Tool Pro couldn&#8217;t fix it.  DiskWarrior fixed it&#8230; this time.  Who knows if it will save me again?  It was certainly worth the $80 though, even if I never use it again.</p>
+
+<p>I&#8217;ve done <a href="/web/20110607181458/http://www.tomshardware.com/2003/02/25/backing_up_with_tape_drives/index.html">a little research into tape backup</a>, specifically <a href="/web/20110607181458/http://baheyeldin.com/linux/using-tape-backup-on-linux-for-a-home-network.html">tape backup under Free Software operating systems</a> (like Linux) <a title="PDF link" href="/web/20110607181458/http://www.dlt.com/storage/whitepapers/quantum/dlt/DLT%208000%20on%20Linux.pdf">with Free Software archiving tools</a> (like <kbd>tar</kbd>).  The high end tape drives can record 80 GB per tape (&#8220;160 GB with compression&#8221;), but these drives cost about $4000.  The &#8220;sweet spot&#8221; of tape backup today seems to be 40 GB per tape.  Hardware interfaces may also be a problem; most tape drives only have SCSI interfaces, although there are a few with FireWire ports.</p>
+
+<p>I&#8217;ve also explored the possibility of <a href="/web/20110607181458/http://www.tomshardware.com/2005/02/25/backups_to_disk/">using hard drives instead of tape</a>.  External FireWire hard drives are less than $1 per GB.  I could buy two 100 GB hard drives, put a year&#8217;s worth of data on each one, and store each of them in different attics.  Of course, with lower prices comes fewer guarantees.  Today&#8217;s hard drives are warrantied for one year, two tops.  Two years from now I could buy two 300 GB hard drives for the same price and copy everything over.</p>
+
+<p>Just for kicks, I calculated what it would cost to pay someone else to store it.  Amazon offers <a href="/web/20110607181458/http://www.amazon.com/gp/browse.html/102-0111373-1677754?node=16427261">HTTP-based storage for $0.15 per GB per month</a>.  Transferring 600 GB at $0.20 per GB would cost $120, and storing it would cost $90 per month.  That&#8217;s over $1200 for the first year.  Assuming I transfer an additional 100 GB each year, my storage costs accumulate and increase by $200 every year.  (This naively assumes that Amazon never raises &#8212; or lowers &#8212; their prices.  And never mind the privacy and trust issues.)  I could buy a lot of hard drives for $1200 this year, and even more for $1400 next year.</p>
+
+<p>And let&#8217;s not forget, I could &#8220;just&#8221; buy a spindle of 4GB DVD-R discs and burn everything onto&#8230; 150 discs.  Twice.</p>
+
+<p>So, to my illustrious audience, I throw out this question: how do you back up 100 GB of data per year for 50 years?</p>
+<p class=c>&#167;
+
+<h3 id=comments>One hundred comments here (<a href=/web/20110607181458/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-6370"><p>I recently faced some of the same issues.  I documented my solution here:</p>
+<p><a href="/web/20110607181458/http://www.eightypercent.net/Archive/2006/04/15.html#a267" rel="nofollow">http://www.eightypercent.net/Archive/2006/04/15.html#a267</a></p>
+<p>I have enough space for ~800GB right now.  I figure that enough will change over the next five years that I can upgrade.</p>
+<p>The only other solution that I could come up with is to do some sort of p2p thing where you buy a disk/machine and give it to family and friends.  That is cheaper, probably, but it requires more software to be written.</p>
+<p>Joe</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.eightypercent.net/' rel='external nofollow' class='url'>Joe Beda</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6370" title="May 8, 2006 @ 11:09 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6371"><p>Here&#8217;s what I&#8217;d do (am in the process of moving to):</p>
+<p>Buy a ReadyNAS device from <a href="/web/20110607181458/http://www.infrant.com/" rel="nofollow">infrant</a> &#8211; I&#8217;m looking at the 1U rack enclosure, because I have access to a rack, but one of their other boxes would be just as good.  It&#8217;s pricey for a NAS, but it&#8217;s currently unbeatable, and supports hardware RAID-5.  On top of that, its one of the few hardware RAID-5 implementations I&#8217;ve found that allows you to resize the array up by adding one hard drive at a time and rebuilding until all are replaced, and you have more place.  Most seem to require you to destroy the array, and then recreate it.</p>
+<p>This gives you a great upgrade strategy &#8211; buy four hard-drives from seagate (5 year warranty, and best drives out there) that will provide enough space for the foreseeable future (defined by you) &#8211; $200 / drive can buy a lot of space.  When they fill up (and it will be before the warranty is up), replace with the newer generation drives in the same price range &#8211; drive space will have jumped remarkably, and suddenly your array is much bigger.  Rinse and repeat every few years.</p>
+<p>Not the cheapest option &#8211; especially for the initial setup &#8211; but you have some solid data protection.  Either double for offsite storage (yes, pricey), or only worry about doing offsite storage for the most important information.  Or find an offsite location for the rack enclosure, and trust they&#8217;ll never burn down&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Isaac</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6371" title="May 8, 2006 @ 11:16 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6372"><p>Every time I backup to dvd-r&#8217;s in wonder how long they last in storage. Do you have to do media checks regularly?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://randomthoughts.vandorp.ca/' rel='external nofollow' class='url'>Darryl</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6372" title="May 8, 2006 @ 11:20 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6373"><p>Reading your post Mark I was very excited to tell you about one of Infrant&#8217;s ReadyNAS boxes, but I see Isaac has beat me to it. He mentions that he is in the process of switching to one of these for his long term storage solution, I am as well.</p>
+<p>I&#8217;m going with the ReadyNas X6 which is roughly $560 from Newegg, it holds 4 SATA hard drives, and as Isaac mentioned these ReadyNAS systems have a wonderful feature allowing you to upgrade your RAID with 4 new hard drives so long as you insert them one at a time. I plan to start with 500GB Seagate drives, and eventually move up to the newly released 750GB Seagate hard drives once the price is nice. You can search google and find some great reviews of the ReadyNAS boxes, they are all Linux based. Matter of fact it should be noted that from what I can tell all of Infrant&#8217;s products share a lot fo the same features, so in most cases you are paying for the form factor, as they all only hold 4 hard drives. They share other useful features like Print Serving, and being able to plug in USB storage into the ReadyNAS and have that USB storage available across the network.</p>
+<p>I hate tape drives. Oh, and let&#8217;s all move away from trusting LaCie products. Good luck finding a solution you like!</p>
+<p class=sig>&#8212;&#8201;<cite>Stephen WG Sullivan</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6373" title="May 8, 2006 @ 11:46 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6374"><p>Not to pick nits too much, but large (250GB) Seagate drives can be found for well under $0.50/GB, and they have 5-year warranties. This, of course, doesn&#8217;t affect the rest of your equation, but it does make a difference when shopping for hard drives!</p>
+<p class=sig>&#8212;&#8201;<cite>John I. Clark</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6374" title="May 8, 2006 @ 11:53 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6375"><p>Stephen,</p>
+<p>If you have specific reasons to distruct LaCie products, could you share them?</p>
+<p class=sig>&#8212;&#8201;<cite>Jim</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6375" title="May 8, 2006 @ 12:05 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6376"><p>The Ultrium 3 drives can do 400 GB native (800GB compressed), and you can get an HP Ultrium 960 (external) for $4,299. The price is about that quoted above, but the capacity is much greater:</p>
+<p><a href="/web/20110607181458/http://h71016.www7.hp.com/dstore/MiddleFrame.asp?page=config&ProductLineId=450&FamilyId=1249&BaseId=13277&oi=E9CED&BEID=19701&SBLID=&AirTime=False" rel="nofollow">http://h71016.www7.hp.com/dstore/MiddleFrame.asp?page=config&#038;ProductLineId=450&#038;FamilyId=1249&#038;BaseId=13277&#038;oi=E9CED&#038;BEID=19701&#038;SBLID=&#038;AirTime=False</a></p>
+<p>For $2,099, one could get the Ultrium 448, which does 200 GB native:</p>
+<p><a href="/web/20110607181458/http://h71016.www7.hp.com/dstore/MiddleFrame.asp?page=config&ProductLineId=450&FamilyId=1249&BaseId=14280&oi=E9CED&BEID=19701&SBLID=&AirTime=False" rel="nofollow">http://h71016.www7.hp.com/dstore/MiddleFrame.asp?page=config&#038;ProductLineId=450&#038;FamilyId=1249&#038;BaseId=14280&#038;oi=E9CED&#038;BEID=19701&#038;SBLID=&#038;AirTime=False</a></p>
+<p>The lesser drive, plus media, ($50 per 200GB native) would be about $2600 (plus tax) for 20 years worth, based on the assumptions above. Because these technologies are the foundation of backup strategies of businesses, small and large, it is probably reasonable to assume that technology will continue to exist that allows the media to be read for a number of years into the future. A less optimistic person may want to assume that this expense could be repeated once or twice over the course of the next 20 years along with the time to make the transfer to the newer technology. </p>
+<p>Also, the calculations above appear to take into account the fact that, as technology advances, you&#8217;ll probably need more than 100 GB/yr.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.h2os.org/' rel='external nofollow' class='url'>Cameron Watters</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6376" title="May 8, 2006 @ 12:10 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6377"><p>In the &#8220;not here yet&#8221; category, you may want to take a look at blu-ray DVDs.</p>
+<p><a href="/web/20110607181458/http://www.blu-ray.com/" rel="nofollow">http://www.blu-ray.com/</a></p>
+<p>25 to 50 GB per disk. I&#8217;m sure it&#8217;s going to take much longer burning times, but at least your media is much more manageable.</p>
+<p>I agree with the comment on LaCie products. If you&#8217;re looking for a rock solid HD enclosure, check out Wiebetech. Excellent products, stellar customer service.</p>
+<p><a href="/web/20110607181458/http://www.wiebetech.com/" rel="nofollow">http://www.wiebetech.com/</a></p>
+<p class=sig>&#8212;&#8201;<cite>Andy MacBride</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6377" title="May 8, 2006 @ 12:13 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6378"><p>Correction for comment #7:</p>
+<p>The calculations above <strong>don&#8217;t</strong> appear to take into account the fact that, as technology advances, you’ll probably need more than 100 GB/yr.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.h2os.org/' rel='external nofollow' class='url'>Cameron Watters</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6378" title="May 8, 2006 @ 12:18 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6379"><p>Wow. Very timely article, one I expounded on in my own brush with the data-eater god a while back. I lost some data and kicked myself, vowed never to let it happen again. Fast forward some months and an external 120 GB drive went on me. Fool me twice I guess. I&#8217;ve been saving files and working on Macs and PC&#8217;s since the early 90&#8242;s (I just received a box of college stuff from my Dad&#8217;s house, so add 5 1/4&#8243; actual &#8220;floppy&#8221; floppies circa 1984 to that as well) and backing all this up is getting to be a real concern. My only suggestions are not really definitive answers, as I don&#8217;t think any exist yet that are up to a total solution. First, 8 GB dual layer DVD9&#8242;s seem a more practical size for archiving. A year or more ago (?) I read about rapid advances in CD laser technology, specifically some russian breakthrough with single disk storage sizes at around 100 GB possible. I heard it so long ago my brain was finding it impossible to digest the vast space involved. But as we see now, this is vaporware in hardware form. My second suggestion is also a JBOD rig, multiple drive raid with redundancy and safety as my goals, to keep data on. (I will just use OS X as the host instead of linux) I will also preemptively upgrade the drives every 3 years, to maintain their reliability. Hope all of your backup situations work out well.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://newtonserver.no-ip.com/' rel='external nofollow' class='url'>dvsjr</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6379" title="May 8, 2006 @ 12:27 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6380"><p>I&#8217;m not trying to sound like a smartass here, but if the bulk of your data is raw DV footage, I&#8217;d say, get over it. It simply isn&#8217;t practical to keep every minute of footage you shoot. Either keep just the best stuff, or save it all at DVD quality, where 2 hours (25 GB) of iMovie footage turns into 4.5 GB that will fit onto a single DVD. Even if you use high-quality settings (and make each DVD one hour long but still 4.5 GB) that&#8217;s still around 3:1 compression. I know you&#8217;ll have some regrets of footage that&#8217;s lost, but contrast that to the anguish of becoming a full-time archivist. </p>
+<p>Speaking of iMovie, as far as I know edits are turned into .DV files once they&#8217;re rendered. They might not be named as such, but that&#8217;s what they are. At least they were in iMovie 4. iMovie 5 changed how files and the trash are handled and they might have changed how edits are handled, too. As long as you&#8217;re keeping something around that operates with 3.5&#8243; drives (see below), it shouldn&#8217;t be hard to keep a Mac or two around to handle the files.</p>
+<p>I know what you shoot is important to you, and I&#8217;m sure you wish you had more super-8 movies from your parents, but you can see that it is just impractical to store every second you&#8217;ve shot. Even with 5-year-warranted Seagate drives (which I see someone else already mentioned) there is the problem of what happens when we move beyond 3.5&#8243; ATA/SATA drives. If you had started keeping data 20 years ago, you would have already moved from 8&#8243; to 5.25&#8243; to 3.5&#8243; floppies to CD-Rs. You&#8217;ll spend the rest of your life moving data from format to format if you want to keep it around, and of course backups will have to be verified periodically too. This is required reading: <a href="/web/20110607181458/http://en.wikipedia.org/wiki/BBC_Domesday_Project" rel="nofollow">http://en.wikipedia.org/wiki/BBC_Domesday_Project</a> </p>
+<p>I&#8217;m not saying what should or shouldn&#8217;t be important in your life, but there is the old saying about letting your possessions possessing you. Data maintenance is hard, and the higher your standards are, the harder it is. Also, your predictions on space requirements are low, if anything&#8211;they&#8217;ll probably hold true for a year or two, but what happens when you&#8217;ve gone through a couple more digital cameras and are at 10MPixels+ per image, and/or start shooting in RAW, and start shooting video in HD? There comes a time when you have to make the decision to put some of the pics into albums and toss the rest of the shoeboxes, lest they take over the whole house.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://apple.newbox.org/' rel='external nofollow' class='url'>brian</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6380" title="May 8, 2006 @ 12:31 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6381"><p>I forgot to mention&#8211;tape drives, as far as I know, cannot compress uncompressable data. DV, MPEG, JPEG, MP3&#8211;all these formats are already compressed and don&#8217;t respond well to attempts to squish them further. Zip up an MP3 and see what happens. Maybe you&#8217;ll see a 5% savings. Can anyone with tape experience confirm or refute this?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://apple.newbox.org/' rel='external nofollow' class='url'>brian</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6381" title="May 8, 2006 @ 12:37 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6382"><p>My uncle works for NASA. Years ago, he was called in to consult for the government on how to store some important data. Tape drives? CDs? (This was before DVDs.) His response was this: &#8220;If you write it on papyrus and lock it in a pyramid, we know it will last a few thousand years. Everything else is just guesswork.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite>David Ely</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6382" title="May 8, 2006 @ 12:46 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6383"><p>You see the problem here isn&#8217;t that you don&#8217;t have enough storage its that  you have to much stuff.  If you were to look at some guy who is whining about needing to store 5 more tons of junk/antiques/old electronics he had or has to have, hopefully you would tell him he DOESN&#8217;T NEED IT ALL.  How much time are you willing to devote to watching &#8220;your media&#8221; a year?  Figure this out and then only keep that much backed up.  Throw out some each year that you don&#8217;t need and add the stuff you do.  When you get real old you still only have that much time to watch videos, so supposing that videos are still being created that you will want to view, that will cut down on the time you have to view the stuff that is backed up.  You only need a FINITE amount of video backed up, providing you are still going to be living life and not tucked away in a whole with nothing but videos to watch.<br />
+&#8220;But what about my decendeants?  How will they remember me?&#8221; some might ask.  Well if they are anything like you they will be far to busy making their own memories and videos to watch all that stuff you archived.<br />
+In a 37 signals way you need to simplify, figure out what you don&#8217;t need and trash it. Time to watch stuff is finite, live life, don&#8217;t &#8220;relive&#8221; it.</p>
+<p class=sig>&#8212;&#8201;<cite>Peter</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6383" title="May 8, 2006 @ 12:51 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6384"><p>For video data, you really ought to dump iMovie. Moving into FinalCut will make a big difference (albeit it is not an easy program to use &#8211; you need to read the manual). The big difference is that iMovie stores all your clips and cuts and filters/titles etc as (huge) video data files. Making the projects large and hard to back up. FinalCut simply references the original media. So to restore your movie you simply recapture it, and all the sequences/titles/etc are regenerated. This is much more efficient, and easier on your storage budget.</p>
+<p class=sig>&#8212;&#8201;<cite>aricart</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6384" title="May 8, 2006 @ 1:05 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6385"><p>I am aware (but neglected to mention) that 100 GB is the low end, and does not take into account advances in consumer technology.  For example, when <a href="/web/20110607181458/http://ascii.textfiles.com/archives/000221.html" rel="nofollow">this $10,000 HD video camera</a> drops to $1000 and I put it on my Christmas wish list.  And we&#8217;re already have our eye on a 7 megapixel camera to replace the 3.5 megapixel camera we bought a few years ago for the same price (not even counting inflation).  Same price except for backups, of course&#8230;</p>
+<p>I am also aware that I will not care about every minute of footage in 20 years.  The problem is, I don&#8217;t have the foggiest idea which minutes I&#8217;ll care about, and I am not ready to let go of any of it yet.  The oldest video footage I have is less than 3 years old.  I need an archiving strategy that keeps it long enough for me to be able to look back rationally and prune it.</p>
+<p>Finally, I am aware that I will need to transfer things to different media over time.  I wouldn&#8217;t trust DVD-R discs for more than 2 years.  Hard drives maybe 5 years, max.  I still have 5.25&#8243; floppy disks from my Apple ][e days (in Apple DOS 3.3 format) that I am finally getting around to transferring to .dsk (or .nib?) image files so I can put them in the Grand Pilgrim Archive and access them via emulators.  My later work was saved on 3.5&#8243; floppy disks which I successfully imaged on an early Mac &#8212; back when Macs came with floppy drives &#8212; so those are now included in my normal automated backup routine.</p>
+<p>I should have mentioned that I *do* have an automated backup routine.  I have a daily backup script that copies my Documents folder, mail archive, photo library, web server logs, and private SVN code repository to a separate local hard drive.  And a weekly backup that compresses the daily backup and rsyncs it to a <a href="/web/20110607181458/http://www.strongspace.com/" rel="nofollow">StrongSpace</a> account.  But that only holds 20 GB, hence my need for a larger storage solution.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6385" title="May 8, 2006 @ 1:06 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6386"><p>Lacie does not make good hard drives.  My 150 gb works okay but I have had repeated failures with larger capacity drives&#8212; overheating, data loss, etc. (And selling RAID 0 is just kind of dirty.  But I guess capacity sells.  No one wants to buy 3 500 gig drives for just 1 tb of space.)   </p>
+<p> Western Digitial now makes drives (the MyBook) that are just as good looking as Lacie&#8217;s, and I trust WD a lot more.  I use my Lacies for stuff that doesn&#8217;t matter in the long term (movies and tv shows to get around to watching, etc), and I mirror my iMac&#8217;s 500 gb internal drive on a 500 gb MyBook using Super Duper.</p>
+<p class=sig>&#8212;&#8201;<cite>jhn</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6386" title="May 8, 2006 @ 1:07 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6387"><p>I&#8217;d say storage will evolve with the size of Data. I remember back in 1992 my dad bought a computer with 127Mb of HD and 16Mb of RAM. I could not imagine what in the world he would do with all that storage. BlueRay and HD-DVD are around the corner, and will get cheaper in a couple of years. So I think as you create more data per year, also the cost of storing it will stay the same, proportionally, as technology will evolve. It&#8217;s a matter of keeping up-to-date and maintaining your backups periodically (say once every two years, you move them all to the most updated storage type, and discard the old ones).</p>
+<p>Floppies? I&#8217;d have transfered all the data to hard drives a while ago.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://naculwordpress.com/' rel='external nofollow' class='url'>Andre</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6387" title="May 8, 2006 @ 1:45 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6388"><p>Not much to add except that I saw something last week about Kodak marketing gold plated CDs and DVDs for archival storage. If they actually have a long shelf life and they are not too expensive, they could be of some use to me. I have little faith in traditional DVD media over the long term.</p>
+<p class=sig>&#8212;&#8201;<cite>Gary</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6388" title="May 8, 2006 @ 1:54 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6389"><p>The problem with tape drives are that when it is time to do a recovery it is a time-costing experience. Using an external data storage is impractical for most people due to cost of file transfer fees. I am a self-employed IT consultant here in Germany.  My customers have an average daily actual data level of 500 GB to 1 Tetra byte. That needs to be not just incrementally back-upped it also needs to be quickly and easily retrieved.  Take into account needed for insurance purposes,such as fireproof and thief proof or perhaps offsite storage, it can get complicated and expensive. Tape is used to meet the insurance requirements. For the real world a combo of SAN and NAS solutions are used.  I myself have at home a mac mini which is connected with a Lacie Biggest F800 (2 TB). The mini is a central server where my partner and I stored our music, videos, pictures, downloaded paid for software and files and where we make copies of media such as cd&#8217;s and DVD&#8217;s for archive purposes. It is also used as living room media center. We both have notebooks for our day to day usage and used the mini as a hub. In our den I&#8217;ve install a fireproof server cabinet with a linux based NAS system with a hardware raid device.  I can replace or swopp hard drives as the case maybe. It is kept cool with a dehumidifier. The mini is connected to the NAS with ether net and does a daily incremental backup. The NAS is where not needed but needs to be kept anyway data is stored. It has at moment a capacity of 8 TB with 2,5 TB used. I have data going back 10 years. The server cabinet is kept locked and would be a bitch to break into; so hopefully it would be enough of a deterrent for a burglar. Thanks to Apples Bonjour technology  it&#8217;s a snap to share our music and pictures and view our videos. I am not looking forward to when private individuals approach me to help them recover their &#8220;memories&#8221;. Apartments and homes of the future are going to have to offer high speed local networking along with high speed Internet access. Basements and or attics are going to need top notch &#8220;server rooms&#8221; or at least have a &#8220;closet&#8221; that is fire and break in proof. I hope that Apple and other vendors can create a SAN/NAS solution that is not just cheap and easy to use but also scalable. Media such as cd&#8217;s, dvd&#8217;s and other optical media will just not cut it. They are just too easily damaged, take up space and get outmoded fast. Online storage is for most people just not practical due to data transfer and storage fees &#8211; especially for people outside of the states. Such companies will have to reach levels of trust as banks which offer safe deposit boxes and vaults along with longevity let alone privacy and copyright policies.  Think about it in the not too long future a small family of four where each member has his or her own computer will produced 100&#8242;s of gigabytes of data which will included personal memories and memoirs. It not only needs to be kept safely it also needs to easily transferable from an old computer to its replacement and shareable. I think private and family data storage is going to be hot commodity of the future.</p>
+<p>Ian</p>
+<p class=sig>&#8212;&#8201;<cite>Ian</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6389" title="May 8, 2006 @ 2:04 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6390"><cite><a href='/web/20110607181458/http://codecruncher.blogsome.com/2006/05/08/planning-the-future/' rel='external nofollow' class='url'>The Codecruncher :: Planning the future :: May :: 2006</a></cite>&#160;(pingback)</li>
+<li id="comment-6391"><p>Avoid DVD-Media&#8230; even the best brands have a 5-10% failure rate unless you store them controlled temperature environments.</p>
+<p class=sig>&#8212;&#8201;<cite>Duffy</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6391" title="May 8, 2006 @ 2:58 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6392"><p>You know &#8212; you KNOW &#8212; that whatever medium you use now will be obsolete in very few years.  So don&#8217;t bother planning past this year and the next.  100GB/4=25.  Twice that is one spindle.  Two years from now you&#8217;ll be able to copy that onto whatever&#8217;s next in a matter of hours at most.  What&#8217;s the problem?</p>
+<p class=sig>&#8212;&#8201;<cite>Jim Hill</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6392" title="May 8, 2006 @ 3:14 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6393"><p>The short answer, I think, is that whatever you do, it&#8217;s not going to be enough. For one simple reason: everything here, including in the comments, is based around personal storage solutions. This won&#8217;t ever cut it. Things move too fast for one person to keep up with it.</p>
+<p>What&#8217;s needed is a service to blow Strongspace (what I currently use) and Amazon&#8217;s S3 out of the water. Who knows, maybe one of these two I mention may be the ones? This service will be a worldwide redundant grid-style backup solution, using a BitTorrent-like protocol for sharing data. It also relies on people&#8217;s internet connections being fast enough for this to be worth-while. And of course it needs to do all the stuff that S3 is doing, with a file system that properly supports this sort of architecture. Charge a small fixed fee each month for this, and make it easy to use, and someone&#8217;s going to make an awful lot of money.</p>
+<p>At least, that&#8217;s what I think.</p>
+<p>PS &#8212; what you should do in the short term until something like the above comes about: hard drives, in differnet locations, of not too big size (say 3x your estimated yearly usage, to allow for increases). Store them in different locations, have a backup of each backup drive, and replace the drives every 2 or 3 years. Oh, and win the lottery.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://chrispoole.com/' rel='external nofollow' class='url'>Chris</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6393" title="May 8, 2006 @ 3:32 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6395"><p>Perhaps a cheap Solaris box with ZFS instead of the RAID solutions suggested?  I&#8217;m personally expecting to be in a similar situation in the near future, and ZFS has so far looked like the best way to go without totally breaking the bank.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://sporkmonger.com/' rel='external nofollow' class='url'>Bob Aman</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6395" title="May 8, 2006 @ 3:47 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6396"><p>1. I&#8217;ve got documents that are a mere 15 years old stored on 5 1/4 inch disks&#8230; but I have no way to read them. I think your only long term solution is to realize that there is no long term solution; find something that will work for 5 years and plan on copying all your data to something new after that.</p>
+<p>2. Several years ago I got a VXA2 Firewire tape drive, it takes 80/160 gig tapes, and cost around $1500&#8230; so donno where you got that $4000 figure.</p>
+<p>3. This live comment preview thing is nifty. :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.atpm.com/' rel='external nofollow' class='url'>paul</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6396" title="May 8, 2006 @ 3:47 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6397"><p>As file sizes grow in the future I&#8217;d expect disk sizes to grow as well. Another thing to consider is the role of compression in the future.</p>
+<p>As for how I back up, I&#8217;m pretty lucky. 15 years of data (granted I don&#8217;t really have much from when I was 3) equates to about 25GB, though I don&#8217;t shoot any video. But I usually back up to my iPod when I remember</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.dtgeeks.com/' rel='external nofollow' class='url'>Pilky</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6397" title="May 8, 2006 @ 4:20 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6398"><p>Although I&#8217;m dealing with slight less data and data in much less complex formats (.psd, .html, .ai for example) I too have pondered this for a while.<br />
+I decided to purchase an old PowerMac G4 500mhz and put three 120gb hard drives in. Currently it still sits with just one 80gb, but the plan is to RAID up the three drives for redundancy. It is cheaper to add drives to a server, and because it has it&#8217;s own OS (unlike a firewire drive) I can setup OS X on another smaller partition and keep it separate. This has added benefits &#8211; because I&#8217;m on a MacBook Pro as my main computer, the server takes care of long term tasks too, such as downloading and uploading large files, and acting as an e-mail server. Add in the cost of a static IP (cheap and getting cheaper by the year) and I have a server I can access anywhere around the world at anytime.</p>
+<p>P.S. I originally tried this with a blue and white G3, but the limitations were too great &#8211; no boot from firewire, only smaller ATA drives recognisable, etc.</p>
+<p class=sig>&#8212;&#8201;<cite>phobic</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6398" title="May 8, 2006 @ 4:34 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6399"><p>Me, I&#8217;d be looking into tape. I second the LTO recommendation-it&#8217;s really, really fast. My backups to LTO have been ethernet limited, not tape limited. And that&#8217;s over gig-E networks. Yes, you still have to do searches, but damn&#8211;there&#8217;s a reason it&#8217;s called Mean Time Between Failure on hard drives. A 200/400 GB LTO tape will cost you ~$40-50 when bought in bulk (eg, 10 or 20). Beat that with a hard drive&#8211;especially when you have to buy at least 2 at a time to be safe. Yeah, there&#8217;s the intial (not inconsequential) drive investment, but&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Ken Carlile</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6399" title="May 8, 2006 @ 4:42 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6400"><p>Said before, but well worth restating: when relying on DVD media for backups, you really need to duplicate your existing disk set every 1-2 years (and test it at least once a year &#8212; you do keep hashes of the disks?) because of degradation of the disks.</p>
+<p class=sig>&#8212;&#8201;<cite>Marten Veldthuis</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6400" title="May 8, 2006 @ 4:56 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6401"><cite><a href='/web/20110607181458/http://www.botsmack.com/blog/2006/05/08/ok-its-10-days-not-11/' rel='external nofollow' class='url'>Ok, It&#8217;s 10 Days Not 11 at Botsmack</a></cite>&#160;(pingback)</li>
+<li id="comment-6402"><p>if you look at all the information surrounding us nowadays, you can realise that probably the 99,9% of this information will be lost in few years. the only way i see to keep all this data for 50 years is to make it public (at least for your family and friends) and interesting for &#8216;your audience&#8217;.</p>
+<p>(sorry for my english).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.xabierdelrey.tk/' rel='external nofollow' class='url'>xabi</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6402" title="May 8, 2006 @ 5:37 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6403"><p>I know CDs rot, but what&#8217;s the shelf life on an idle, unplugged hard drive?  Warranties seem to generally range from 1 to 5 years, but I assume drive manufacturers set those dates based on typical, regular usage.  Wear and tear of moving parts and all that.  But if the parts aren&#8217;t moving, why would a healthy drive die on the shelf?  Oxidation?  Inertia?  Entropy?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.biancolo.com/' rel='external nofollow' class='url'>Jim Biancolo</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6403" title="May 8, 2006 @ 5:51 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6404"><p>Loads of useful comments here, but honestly, if you&#8217;re rating the value of the data just behind the lives of your wife and children, I wouldn&#8217;t trust it on magnetic media unless you&#8217;re also housing it in a cushioned <a href="/web/20110607181458/http://en.wikipedia.org/wiki/Faraday_cage" rel="nofollow">Faraday cage</a>.</p>
+<p>On another tack, have a look at <a href="/web/20110607181458/http://www.lockss.org/lockss/Home" rel="nofollow">LOCKSS</a>.</p>
+<p class=sig>&#8212;&#8201;<cite>Jeremy Dunck</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6404" title="May 8, 2006 @ 6:37 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6405"><p>I&#8217;ve been thinking about this a lot lately, both for personal use and for work. The best solution I have gotten to so far is a pair (at least) of servers, one local to you, and one &#8220;somewhere else&#8221;. Both have RAID-5 arrays of similar size. All of your local data gets saved to the local server, which in turn is automatically synced to the remote server(s) at regular intervals. This keeps local data safe and accessable, with a reasonable contigency scenario with the remote server(s).</p>
+<p>This scenario has proven both reliable and cost effective for me.</p>
+<p>However, I&#8217;d echo the sentiments of other posters in that you should think of &#8220;long term storage&#8221; as a string of short-medium term solutions that are replaced every few years. Thanks to the maleability of digital storage needs, a true single &#8220;long-term&#8221; solution is a fantasy at best.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.deadlyrobot.net/' rel='external nofollow' class='url'>Quentin Hartman</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6405" title="May 8, 2006 @ 6:48 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6406"><p>> you should think of &#8220;long term storage&#8221; as a string of short-medium term solutions that are replaced every few years.</p>
+<p>This is the most insightful thing I&#8217;ve read all day.  Thank you.  I tried and tried to come up with something that succinct, and failed.</p>
+<p>So, the question becomes: how do I keep about a terabyte of data for about five years?  In a way that it is possible (and preferably relatively painless) to transfer it to another storage solution after that?</p>
+<p>Now that you&#8217;ve helped me rephrase the question, I am much better able to sort through the rest of the answers.</p>
+<p>I&#8217;m strongly leaning towards buying one of those NAS boxes + a single plain hard drive to keep offsite (probably at my parents&#8217; house, since that&#8217;s relatively close and yet far enough away from my kids to make me comfortable).  I have the luxury that, although my data accumulates, it tends to accumulate in spurts.  After each spurt, I can manually refresh the data on the offsite drive.  This is not ideal (red flag: not automatic), but it has the dual advantages of being relatively cheap (compared to a networked offsite backup), and being in a place I absolutely trust.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6406" title="May 8, 2006 @ 7:14 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6407"><p>By the way, I tried compressing Pilgrim2004.iMovieProject with &#8220;tar cvfj&#8221; (bzip2 compression).  It compressed from 31 GB to 22 GB.  Definitely worthwhile.  I&#8217;m trying some other iMovie projects now.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6407" title="May 8, 2006 @ 7:20 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6408"><p>when the price comes down, network attached storage with sold state drives (=</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://er0k.org/' rel='external nofollow' class='url'>er0k</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6408" title="May 8, 2006 @ 8:00 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6409"><p>No one has yet given a specific reason why they dislike LaCie. If you have one, please share.</p>
+<p>jhn &#8211; LaCie does not manufacture hard drives. They make cases, and use the same vendors as everyone else for their mechanisms. Are you saying the cases are faulty? That they buy shitty mechanisms? Please be specific &#8211; this is our data we are talking about.</p>
+<p class=sig>&#8212;&#8201;<cite>Jim</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6409" title="May 8, 2006 @ 9:54 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6410"><p>I agree with the &gt;string of medium term solutions theory. I&#8217;ve done a fair amount of research for the archive that employs me and can say that it seems fairly agreed upon in the profession that the only &#8220;sure thing&#8221; is heavily RAIDed storage that is perused constantly by software checking the validity of each bit (I read something interesting about re-purposing virus scanning software to do this) Of course to guard against natural and other sorts of disaster, you&#8217;d want ideally to mirror the system in a remote location, but that does double the cost. I&#8217;d personally settle for a nice professionally managed RAID 5 box sitting somewhere safe inside the locked cage of a colocator in a boring suburb of a boring city where nothing like that has ever happened&#8230;  Do stay away from optical disks dvd etc. they are &#8220;dark&#8221; storage and do have proven failure rates, plus if you calculate the time it takes to make all those multiple copies of disks and send them around, you&#8217;re better off buying some hard drives.</p>
+<p class=sig>&#8212;&#8201;<cite>derek</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6410" title="May 8, 2006 @ 10:28 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6411"><p>Hi Mark, I don&#8217;t know if what I do would help you (I&#8217;m on a Windows box), but nevertheless, here it is.</p>
+<p>I capture my video from my MiniDV tapes via Windows Movie Maker, edit, add titles and save it as a wmv file. WMV size is impressive (at least to me): 1 hour&#8217;s tape is about 800-900MB. Then I use a DivX converter to convert. Now this is gem: DivX converter convrts my 900Mb to about half its size! That&#8217;s a super-saver. </p>
+<p>Needless to say, all my videos are in DivX format. Right now, I have no idea about how it would look 10 or 20 years down the line in terms of DivX&#8217;s roadmap and its player for future use. But, having looked in the past for 5-6 years (good community following), I&#8217;m not sure DivX would turn for the worse. Hope this helps you in some way. Cheers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://ch3tan.blogspot.com/' rel='external nofollow' class='url'>ch3tan</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6411" title="May 8, 2006 @ 11:15 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6412"><p>Jim asks, &#8220;But if the parts aren’t moving, why would a healthy drive die on the shelf?&#8221; I&#8217;ve read that the bearings in drives will dry out if the drive is left powered off for a long time. When you turn it back on&#8230; the bearings have frozen up and the drive is dead. So keep those hard disks spinning and scrubbing; that way you can replace each drive <i>immediately</i> after it fails.</p>
+<p>This has been covered by the Long Now people; if only I could find the reference.</p>
+<p class=sig>&#8212;&#8201;<cite>Wes Felter</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6412" title="May 8, 2006 @ 11:40 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6413"><p>So, how do you backup your backup?</p>
+<p class=sig>&#8212;&#8201;<cite>Mephistopheles</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6413" title="May 9, 2006 @ 12:31 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6414"><p>Hard Drives seem expensive at first, but you wait six months and it changes, AGAIN. NewEgg is selling 750gig 7200RPM SATA drives for $499</p>
+<p>Most of the back-up heartaches we have encountered in the past 10 years have involved SCSI RAIDs and Drive Savers (our heros)&#8230;</p>
+<p>Now, I buy 3 drives for every purpose. One lives as the original, I have a &#8220;live&#8221; external clone for redundancy and an offsite clone for &#8220;oh shit moments&#8221;&#8230; when we archive data&#8230; we have 3 copies all on hard drives, one in a fire safe, one offsite in a firesafe, and another in a second offsite location.</p>
+<p>Cds and DVDs have not held up to the test of time, even the ones we have stored in the dark in a temerature controlled room.</p>
+<p>In production environments IT People are becoming digtal librarians and archivists&#8230; hopefully our hard work will smooth thiings out for the average consumer by the time they are gathering an average of 100gigs a year.</p>
+<p>There have been great efforts in the past decade to start digitizing people&#8217;s entire life experience&#8230; Gordon Bell and Jim Gemmell working at Microsoft have made great strides in this area&#8230; saving the data to drives.</p>
+<p>My personal opinion is that holographic storage will happen in the next 5 years or so&#8230; with optical media that will hold 300gigs each to start and eventually they will reach into the terabytes for $100 a pop</p>
+<p><a href="/web/20110607181458/http://news.com.com/Maxell+focuses+on+holographic+storage/2100-1015_3-5973868.html" rel="nofollow">http://news.com.com/Maxell+focuses+on+holographic+storage/2100-1015_3-5973868.html</a></p>
+<p>Until then, Hard Drives (in our case a mix of external Firewire Drives and Internal SATA) have to hold on.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.addis.com/' rel='external nofollow' class='url'>Bob Dow</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6414" title="May 9, 2006 @ 12:55 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6416"><p>Since you&#8217;re now leaning towards a RAID NAS solution, let me also recommend the Infrant ReadyNAS solutions.  A couple of points of intereset for you: the ReadyNAS supports AFP, a must as far as I&#8217;m concerned for Mac users (long file names), it also supports rsync, which makes for simple effective backup solutions without your data ending up in some weird, proprietary backup format.</p>
+<p>Regarding off-site storage, where do you do your hosting?  How much bandwidth and disk space can you buy?  A nice solution (though I haven&#8217;t implemented it myself) is to run rsyncd on your host, and set up a cron job (is it launchd these days?) that uses rsync to back up to both the NAS box and your remote server every night.  I use <a href="/web/20110607181458/http://rimuhosting.com/" rel="nofollow">Rimu Hosting</a>, they give full root access to your virtual Linux server, so you can set up rsync and ssh the way you like.  They don&#8217;t have a plan with a terabyte of storage option, but they&#8217;re very customer focused and likely to offer custom plans.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://wanderingbarque.com/' rel='external nofollow' class='url'>Pete Lacey</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6416" title="May 9, 2006 @ 6:46 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6417"><p>Mark, you mention using bzip2 to compress 31 GB of data. May I suggest the less CPU-hungry, faster, but not-so-spectacular gzip instead? My experience of compressing big amounts of binary stuff with bzip2 as opposed to gzip can be summed up in one word: SLOW.<br />
+So if you were to automate compression of data, it might be in your interest to deal with a small gain in filesize in exchange for a huge gain in speed of the process, and use gzip&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://zengun.org/weblog/' rel='external nofollow' class='url'>Michel Valdrighi</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6417" title="May 9, 2006 @ 6:59 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6418"><p>I think the NAs solution is best for future proofing your backups. </p>
+<p>I simple idea for the offsite backups. If you&#8217;ve got a friendly company just around the corner, Ask them if you can put a NAS box in their office, then setup a wireless network? If needs be, they can put a NAS box in your office for offsite backups. Just a thought</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.whatisnext.co.uk/' rel='external nofollow' class='url'>Phil Balchin</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6418" title="May 9, 2006 @ 7:17 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6419"><p>Hi guys, is off site online storage really being used in America to hold private personal data.  I just cannot imagine trusting corporations to protect my data &#8220;long term&#8221; let alone not viewing or using it. Remember the phrase &#8221; I&#8217;m a e-mail admin I read your e-mail!&#8221; .  Would like to hear your thoughts.</p>
+<p>Ian</p>
+<p class=sig>&#8212;&#8201;<cite>Ian</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6419" title="May 9, 2006 @ 7:18 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6420"><p>Lots of great nuggets in here to choose from!  Thanks for posing this question (and its revised phrasing), Mark!</p>
+<p>My current plan involves four prongs:</p>
+<p>1) I have a colleague who keeps a svn repository in a different city.  I use this to mirror my source code, documents.  I use this technique for lower, more managable forms of data, not huge chunks of video.</p>
+<p>2) I have my videos on tape/DV media &#8211; eventually these will degrade, but if i have the gumption, I&#8217;ll make copies every so often&#8230;</p>
+<p>3) I have transferred my videos to my hard drive and converted them to MPEG-2.  I plan to just keep buying bigger and bigger hard drives, with the eventual plan to move to a dedicated file server with RAIDed hard drives.  Every year or two I buy a new hard disk and ensure that the MPEG files are located on both hard drives.  Eventually, due to Moore&#8217;s Law, I&#8217;ll &#8220;decommission&#8221; older hard drives&#8230;  In my head, hard drives have become the one form of &#8220;permanent&#8221; storage solution &#8211; just keep moving the data along, migrating from hard disk to hard disk and updating the file system type when a new file system type becomes de-facto.</p>
+<p>4) I also put all my MPEG files onto optical media (DVD-R).  Currently that&#8217;s 30 disks and growing that I plan to refresh every 2 years.  Eventually I&#8217;ll move to the next phase of DVD (HD/BluRay) when prices come down.</p>
+<p>It has become a bit of a chore though!  :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://blog.codedread.com/' rel='external nofollow' class='url'>Jeff Schiller</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6420" title="May 9, 2006 @ 7:23 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6421"><p>I must agree at least some with the &#8220;let&#8217;s not get carried away&#8221; crowd. That&#8217;s a lot of backing up for not a lot of  actual use.</p>
+<p>That being said, I know it pains us to say it, but I&#8217;ve finally stopped archiving all my personal video in DV. I know that the idea of converting DV to MPEG-2 (that&#8217;s what I&#8217;d recommend since it&#8217;s got broad support and excellent quality) and then back to DV for editing ( I actually use MJPEG as an intermediary, which is huge but keeps the artifacts at bay) and then BACK to MPEG-2 for storage makes the preservationist in you cringe, but try it and give it an honest assessment. I think you&#8217;ll be pleasantly surprised. I wouldn&#8217;t recommend it for a video freelancer, but it&#8217;s more than acceptable for home video use.</p>
+<p>I use MPEG Streamclip (plus the $30 QT MPEG-2 component) for the conversion, but ffmpegX can handle the task as well.</p>
+<p>Besides, in five years we&#8217;ll all be complaining about how crappy DV was anyway (pros already do). :-)</p>
+<p class=sig>&#8212;&#8201;<cite>grovberg</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6421" title="May 9, 2006 @ 7:24 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6422"><p>Not a solution to your backup issues, but I use a catalog program for my DV stuff, CatDV <a href="/web/20110607181458/http://www.squarebox.co.uk/" rel="nofollow">http://www.squarebox.co.uk</a> , you can capture whole tapes at a lower res, pick the clips you want then recapture at full res, you&#8217;ll have a full catalog of what you&#8217;ve shot, and you can just pull the tape if you want to get some footage you hadn&#8217;t already captured. Integrates well with FCP, which is not that hard to use.</p>
+<p class=sig>&#8212;&#8201;<cite>NIck Hayday</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6422" title="May 9, 2006 @ 7:25 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6423"><p>With this talk of DV versus MPEG2 and generational loss, why not use a <a href="/web/20110607181458/http://en.wikipedia.org/wiki/Lossless_data_compression#Video_compression" rel="nofollow">lossless video compression standard</a>?  Lack or widespread support?</p>
+<p class=sig>&#8212;&#8201;<cite>Jeremy Dunck</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6423" title="May 9, 2006 @ 8:08 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6424"><p>Hmm, I wonder &#8230; &#8230; if you could print something and retrieve it by scanning? It would seem to pass the longevity and obsolesence test. I vaguely remember some various products to do this long ago.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://reinke.cc/' rel='external nofollow' class='url'>reinkefj</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6424" title="May 9, 2006 @ 8:48 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6425"><p>I&#8217;d suggest moving from iMovie to Final Cut or some other &#8220;professional&#8221; editing suite. Yes, they use proprietary project formats but these applications will also let you export your edits as an Edit Decision List (EDL) file: that&#8217;s a standard, human-readable, plain text format supported by just about all editing software. In fact, it&#8217;s so standard you could give a hardcopy to a 1940s splice-and-glue film editor and he&#8217;d be able to reassemble your film.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.carringtonvanston.net/' rel='external nofollow' class='url'>Carrington</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6425" title="May 9, 2006 @ 9:37 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6427"><p>This may have been mentioned already, if so, sorry. My personal approach to this is currently double-layer DVD-R disks. 100GB will fit onto 12 8GB double-layer DVD-Rs. To make two copies you&#8217;ll need 24 disks, which can be found for $1.80 each; that&#8217;s $43 for the media, and a couple of hours of work with a fast reliable burner. Sure, it&#8217;s manual, sure, it&#8217;s annoying; but it&#8217;s very cost effective and gets the job done, and it&#8217;s ok if only necessary once a year.</p>
+<p>In a couple of years it will probably make sense to copy all the old archives to a massive hdd, then re-burn them onto HD-DVDs or Blu-Rays.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://aviflax.com/' rel='external nofollow' class='url'>Avi Flax</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6427" title="May 9, 2006 @ 10:59 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6428"><p>Just to support the remarks regarding growth in both media and storage: ten years ago, my dad was pretty excited to have 64MB RAM in his PC. The Apple G5 Quad Macintosh supports up to 64<em>GB</em> RAM.</p>
+<p>Storing and preserving data will stay an issue for at least the foreseeable future.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://zooibaai.nl/' rel='external nofollow' class='url'>Rob Mientjes</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6428" title="May 9, 2006 @ 11:12 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6429"><p>In France, a major ISP recently launched a new service named Dedibox (essentially a dedicated Linux server with a 160 Gbytes hard drive) for 45€/month all taxes included (around $36 at current rates). For this price, you have a real server (2Ghz, 1 Gbytes of RAM) and backups (snapshots of the last 3 days). Bandwidth is not metered (there is an unknown limit to the overall bandwith of the data center, but from experience of their ADSL service, they followed the growth reasonnably). It reduces your estimated monthly charge to $72 compared to Amazon service and provides usefull infrastructure for providing services with your data (altough the RTT across the Altantic will ensure poor QoS).<br />
+I am not affiliated to this service provider&#8217;s group (Free/Iliad) but I suspect that the facility (look at <a href="/web/20110607181458/http://www.dedibox.fr/index.php?rub=datacenter" rel="nofollow">http://www.dedibox.fr/index.php?rub=datacenter</a>) is designed for Video On Demand (the ISP is already a provider of VoIP and TVoIP for more than 1 million subscribers and recently tiptoed the VoD market).<br />
+France is now an advanced market for Internet services and this service provides a glimpse at the future.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.aglossa.net/' rel='external nofollow' class='url'>Jean-Philippe Papillon</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6429" title="May 9, 2006 @ 11:15 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6430"><p>This massive amount of dat is mind blowing.<br />
+I can only guess how to back up this in an affordable way, if you do not make any profit with the content you wish to back up.<br />
+Good luck for the next back up !</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://gimps.de/' rel='external nofollow' class='url'>Marina loves pictures</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6430" title="May 9, 2006 @ 11:44 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6431"><p>@ Jean-Philippe Papillon:<br />
+You got your math screwed up :))<br />
+the dollar is actually weaker than the euro, i.e. €45 converts to about $55, not $36</p>
+<p>Besides that, this service sounds cool &#8211; It´s just a pity that Spain is still in the Internet Stone Age (I just upgraded my DSl to 6MBit which sets me back som $70 per month :(<br />
+Thanks all for the discussion and input.<br />
+I have an unused, windowless Winecellar (Bodega) in my current mansion, making it kinda fireproof. I guess, for the time being, I´ll stash that Infrant Box in therem regularly adding/replacing drives&#8230;</p>
+<p>Rgrds<br />
+Matt</p>
+<p class=sig>&#8212;&#8201;<cite>Matthias</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6431" title="May 9, 2006 @ 12:18 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6432"><p>The thing is, the data you created in the last couple of years is your only real concern, space-wise. What I mean is, sure, you created 100GB of data this year and last, and 100GB of data seems like a lot to us now, so we scramble to find a solution to back it up. But 10 years ago you probably only created, what, 10MB? 100MB? I bet I could take all the data I created from 1980 to 1995 and put it on a $30 flash drive in a few seconds.</p>
+<p>In ten years the 100GB of data you created last year is going to be just as insignificant, and storing it is going to be just as simple and cheap. The important thing, as everybody&#8217;s already said, is to make sure you keep everything in a format that&#8217;s still usable with whatever computer you have at the moment, so you can still read it as time goes on.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.feaverish.com/' rel='external nofollow' class='url'>Feaverish</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6432" title="May 9, 2006 @ 1:27 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6433"><p>Very tricky. I have lost data before and I still think about it (even a single 5.25-inch floppy I accidentally erased). I have three backup sets (which I just now upped to four upon reading this posting), two on DVD and one (now two) on a hard drive. I want a second hard drive and an online storage plan. I still believe that will not be sufficient.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6433" title="May 9, 2006 @ 1:39 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6434"><p>I don&#8217;t think this much data is a real problem&#8211;the hard drive solution you mention seems to make the most sense to me, both in terms of economic efficiency and in ease of use. Buy 2 300GB Seagate drives this year. Let&#8217;s say you pay $1/GB (which is a high estimate). That&#8217;s $600, but it will last you three years. In three years you can spend another $600 and you will probably be able to get 2 600GB seagate drives (or 4 300GB drives). Rinse, repeat. It&#8217;s not cheap, but $200/year isn&#8217;t an insane amount of money to pay to back up all your data. It&#8217;s sure cheaper than using Amazon. And as another commenter said, the Seagate drives are warrantied for 5 years (<a href="/web/20110607181458/http://5yrwarranty.seagatestorage.com/" rel="nofollow">link</a>).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.irobert.org/' rel='external nofollow' class='url'>Bob</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6434" title="May 9, 2006 @ 1:42 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6435"><p>I faced the same problem with about 200GB of data.  Like other people mentioned, hard drives are getting cheap.  So I build a 900GB RAID 5 server for under $1000 CDN.  The current sweet spot for a $/GB is the 250GB hard drive at the time I checked out the prices here in Canada in March of 2006.</p>
+<p>A = Maxtor 250GB SATAII @ $ 119.00 x 3 = $357 for 500 GB in RAID 5.<br />
+B = Maxtor 300GB SATA @ $149.00 x 3 = $447 for 600 GB in RAID 5.<br />
+C = Seagate 400GB SATA @ $ 247.00 x 3 = $741 for 800 GB in RAID 5.</p>
+<p>A is $0.714/GB<br />
+B is $0.745/GB<br />
+C is $0.926/GB</p>
+<p>My entire journey of building a RAID 5 server with cost is posted here.  It&#8217;s a bit lengthy, but it&#8217;s detailed.  <a href="/web/20110607181458/http://www.beernut.ca/roy/archives/004367.html" rel="nofollow">http://www.beernut.ca/roy/archives/004367.html</a></p>
+<p>As well, I had an extra 200GB hard drive which I gave to a trusted friend, and I also have a few DVDs of small enough data</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://beernut.ca/roy' rel='external nofollow' class='url'>Roy</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6435" title="May 9, 2006 @ 2:17 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6436"><p>No one has mentioned this yet, but what about the Iomega REV drives and disks?<br />
+I was just reading about this, and they even offer a &#8220;pro&#8221; version that&#8217;s geared towards backing up video files and such.</p>
+<p>I had looked into this similar backup strategy, but haven&#8217;t done a cost comparison with NAS and other external hard drives.  I would think that it&#8217;s more cost effective, considering how iomega has been pushing this despite drops in hard drive prices.</p>
+<p>You could backup 100 GB on to 3 REV disks, instead of a spindle of DVDs.</p>
+<p>Just another thought &#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Vu</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6436" title="May 9, 2006 @ 4:20 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6437"><cite><a href='/web/20110607181458/http://face.centosprime.com/wordpress/2006/05/09/long-term-backup-dive-into-mark/' rel='external nofollow' class='url'>Mind-NOX &raquo; Blog Archive &raquo; Long-term backup [dive into mark]</a></cite>&#160;(pingback)</li>
+<li id="comment-6438"><p>I&#8217;d second the recommendation that you start editing with Final Cut Pro to future proof your edits. The reason being that you can not only export edit decision lists (EDL) from FCP, which are antiquated text files that store lists of edits for only a couple of tracks of video and audio, but you can also export XML files that contain every piece of information that is normally stored in the proprietary Final Cut Project files. An FCP XML file supports many more tracks and much more information than an EDL.</p>
+<p>EDLs are great because everything supports them, but an FCP XML file can preserve much more of your data, and for a smart guy like yourself it shouldn&#8217;t be too tough to extract what you need from the FCP XML file 30 years from now even if FCP no longer exists.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.zachfine.com/blog' rel='external nofollow' class='url'>Zach Fine</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6438" title="May 9, 2006 @ 8:59 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6439"><p>I&#8217;m facing very similar dilemmas, as I think we all we be very soon.</p>
+<p>The issue of backward compatibility is quite haunting. I use Retrospect Backup at the moment, but the product has really gone downhill, especially since Dantz sold it. I have had quite a few headaches during version changes.</p>
+<p>I wonder what support I will have in the future for my shelves of Retrospect CDs and DVDs, compressed and stored in their proprietary format. MacOS doesn&#8217;t even recognize the disks as valid volumes. They must be read from Retrospect.</p>
+<p>Does anyone know of any industrial-strength backup alternatives for Mac? The best thing about Retrospect is its ability to make incremental backups, and restore volumes with all their privileges, and keep the folder hierarchy intact, even when I delete and move stuff.</p>
+<p>I am going to add hard-drive backup, with redundant hard-drives to the optical backups, because I don&#8217;t trust DVD media. The old Kodak Gold CDs were amazing. I have decade-old Kodak Gold CDs which still work perfectly, and DVD media that is less than a year old that is failing.</p>
+<p>Quite the conundrum. I thought that HDD was the solution, but reading here it is said that the bearings can fail if they are stored without the drive being spun up. That puts a fly in the ointment. I don&#8217;t have the funds to keep all my HDD backups &#8220;live,&#8221; I was going to store them in a fireproof safe with faraday cage, physically removing them from enclosures. </p>
+<p>And I&#8217;m dealing with at least 300GB a year of video, RAW photos and other data.</p>
+<p class=sig>&#8212;&#8201;<cite>Harvard Irving</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6439" title="May 9, 2006 @ 9:11 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6440"><p>My setup has:</p>
+<p>1 NLSU2 = $70<br />
+2 Enclosures = $40<br />
+2 300 GB Hard Drives = 2 X 80 = $160</p>
+<p>Total 600 GB for $270</p>
+<p>Cost = 0.45 cents / GB (Lowest on this list.)</p>
+<p>Untill a week back I didn&#8217;t backup my backup. One drive crashed, most data was on DVDs so got away with it.</p>
+<p>Now I backup my backup and have 300 GB for $270 = 90 cents per GB</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://blogs.law.harvard.edu/vgondi/about' rel='external nofollow' class='url'>Vishi</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6440" title="May 9, 2006 @ 10:50 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6441"><p>Vishi-</p>
+<p>Where are you getting enclosures for $20 each and 300GB drives for $80 each??? And what the heck is &#8220;NLSU2&#8243;?</p>
+<p>Your prices seem too good to be true!</p>
+<p class=sig>&#8212;&#8201;<cite>John I. Clark</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6441" title="May 10, 2006 @ 12:16 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6442"><p>Distribute! The only things I have never lost (code or media) are the ones I let free on the Internet. When everything else (my backups) fail I just Google them, and somewhere, someone has a copy of them!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://vrypan.net/' rel='external nofollow' class='url'>Panayotis</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6442" title="May 10, 2006 @ 12:52 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6443"><p>One possibility (althought it&#8217;s in the Not Quite Here Yet category) is In-Phase Technologies holographic storage system.  Might be worth keeping an eye on this stuff &#8211; <a href="/web/20110607181458/http://www.inphase-technologies.com/" rel="nofollow">http://www.inphase-technologies.com</a>.  I reckon this could become a good low-cost solution for storing DV or any other large data sets.</p>
+<p class=sig>&#8212;&#8201;<cite>Chas</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6443" title="May 10, 2006 @ 4:55 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6444"><p>Hangon, don&#8217;t we <em>already</em> have malware which will erase/encrypt your data for the purposes of extortion (or whatever)? If you&#8217;re using online storage like hard drives for backups aren&#8217;t you just making these data vulnerable to malicious attack as well as all your current stuff?</p>
+<p>On a 20 year timespan, this scenario is not paranoid, it&#8217;s prettymuch a given.</p>
+<p><a href="/web/20110607181458/http://girtby.net/archives/2006/03/28/you-only-have-to-backup-the-stuff-you-want-to-keep/" rel="nofollow">That&#8217;s why I prefer tape.</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://girtby.net/' rel='external nofollow' class='url'>Alastair</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6444" title="May 10, 2006 @ 5:57 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6445"><cite><a href='/web/20110607181458/http://webwisecrew.com/?p=25' rel='external nofollow' class='url'>Web Wise Crew &raquo; Blog Archive &raquo; Got a Backup?</a></cite>&#160;(pingback)</li>
+<li id="comment-6446"><p>As a sound designer I have found that I have the same problem and for me the answer was to break projects down into smaller pieces and archive more frequently on to Dual Layer DVD&#8217;s (and check them for integrity after every burn!) It works for me as I never have files larger than 600 MB and when I am done with a project, I am done. I never go back to those disks unless I need some really specific thing and I keep all of the functional sounds &#8220;live&#8221; until they reach the capacity of a Dual Layer disk and then I dump them and date it.</p>
+<p class=sig>&#8212;&#8201;<cite>Chris Bakos</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6446" title="May 10, 2006 @ 11:14 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6447"><p>John:</p>
+<p><a href="/web/20110607181458/http://the.taoofmac.com/space/Linksys/NSLU2" rel="nofollow">http://the.taoofmac.com/space/Linksys/NSLU2</a></p>
+<p>The power of google.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://randomthoughts.vandorp.ca/' rel='external nofollow' class='url'>Darryl</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6447" title="May 11, 2006 @ 10:07 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6448"><p>Interesting I should run across this now, as I&#8217;ve been thinking about doing something more serious about backup myself. I&#8217;ve been going back and forth, but I&#8217;m currently leaning towards setting up a used Mac Mini with a RAID 1  as an NAS (and print server, and whatever) to provide me with about 250 GB storage. My needs are not as great as Mark&#8217;s, and when I hit that ceiling, bigger drives will be available cheaply and I will buy those.</p>
+<p>DVDs for medical archiving (for whatever reason, the medical field seems to have especially stringent standards for archival lifespan) are typically advertised as having 25+ year lifespans. That sounds pretty good.</p>
+<p>Companies have been dealing with the problem of archiving vast amounts of data for a lot longer than individuals, and they can afford to hire archivists to figure it out. We don&#8217;t have that luxury. I don&#8217;t know all the practices that archivists use, but I do know they have a hierarchy for the accessibility and permanence of archived records, and they make decisions about archiving in advance and speculatively (&#8220;this looks like something we might need 5 years from now&#8221;). Adapted to Mark&#8217;s case, that might mean distilling the edited videos down to H.264 and sticking them on hard drives in three places, but leaving the raw footage on the tape someplace &#8220;safe&#8221; without making a backup of it—this is gambling, yes.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://8stars.org/a' rel='external nofollow' class='url'>Adam Rice</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6448" title="May 11, 2006 @ 12:11 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6449"><p>Apropos of nothing, but related to this conversation, I would like to point out that Infrant&#8217;s ReadyNAS is <a href="/web/20110607181458/http://infrant.com/forum/viewtopic.php?t=411&sid=f68ccd8ba3c19eb9f798f78e3c8c1450" rel="nofollow">based on Debian</a> and that they have apparently (after some prodding and foot-dragging) <a href="/web/20110607181458/http://www.infrant.com/gpl.htm" rel="nofollow">complied with the minimum requirements of the GNU/GPL</a> by posting the source code of their modified components.  Apparently there are other parts like the admin interface that are not GPL, which is suboptimal but not a deal-breaker.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6449" title="May 11, 2006 @ 7:35 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6453"><cite><a href='/web/20110607181458/http://edward.oconnor.cx/blog/2006/05/13-links-for-2006-05-13' rel='external nofollow' class='url'>links for 2006-05-13 | Edward O&#8217;Connor</a></cite>&#160;(pingback)</li>
+<li id="comment-6457"><p>I have 1.91 TiB of storage space on eight 300GB drives in RAID-5 on a dedicated file server in another room. I&#8217;m running out of space on it though, I currently have 656GiB left and I&#8217;m using 1.26TiB, however I don&#8217;t see it as a massive problem. I can always setup another, larger array when this one gets full.</p>
+<p>Also, since it&#8217;s RAID-5 then if any drive were to fail, the data would be safe. Although in the event of a fire, if everything were destroyed, I have a friend with 1TiB of JBOD storage space who has a large bulk of the data.</p>
+<p>If it all goes pop on my end then it&#8217;s not the end of the world, same at his end. Effectively it&#8217;s an impractical RAID 1 array, but it works and provides redundancy. :p</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.hddkillers.com/' rel='external nofollow' class='url'>David Harrison</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6457" title="May 16, 2006 @ 4:57 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6458"><p>I am the IT Director for a small business and I can tell you that the people posting about the poor quality of Lacie drives are right on the money.  A little over a year ago I decided to switch our backups from tapes to external hard drives.  Lacie had a 500 GB model when almost all IDE hard drives maxed out at 400GB.  It turns out that is because it was 2 Maxtor drives in a RAID 0.  I went ahead and bought a bunch to give them a try.  12 to be exact since we have a lot of offices that need separate backups.  Of those 12, 5 have failed.  Only one failed within the meager 1 year warranty as well.</p>
+<p>  While I am not a fan of Maxtor drives (I have seen a lot of them fail) I don&#8217;t think they were the problem here.  Since the enclosures were out of warranty I took them apart hoping to at least use one of the drives elsewhere.  In all but one case, both drives dead, usually with the identical problem.  For both to fail the same way at the same time I can only assume it had to have been due to an external cause.  Oh and those enclosures get _extremely_ hot, too hot to hold comfortably if you don&#8217;t have a fan on them constantly.  Even when they aren&#8217;t being accessed they get very warm.</p>
+<p>  I have switched to 500GB Western Digital MyBook drives now.  They are a single drive in an enclosure that can actually allow air to get to the drive.  The look nice and even have a circle on the front to show how full the drive is.  They run much cooler and I have had much better luck with WD drives in the past.</p>
+<p class=sig>&#8212;&#8201;<cite>Kelderek</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6458" title="May 16, 2006 @ 7:54 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6459"><p>Couple things. </p>
+<p>KMP Media Is now Selling Kodak Certified Media now. </p>
+<p><a href="/web/20110607181458/http://kmpmedia.com/" rel="nofollow">http://kmpmedia.com/</a></p>
+<p>Also, You might want to look into a tape based setup<br />
+i to this day never trust burnt cds. Always go with<br />
+tape as a backup. I like the Ultrium Based systems<br />
+and i have my own unit that backs up 400/800 with<br />
+compression on a tape (around the same size as<br />
+a DLT tape) </p>
+<p><a href="/web/20110607181458/http://www.lto.org/newsite/index.html" rel="nofollow">http://www.lto.org/newsite/index.html</a></p>
+<p>I have archived some stuff to CD, and the only media<br />
+i have used is Gold Media and i have yet to have<br />
+Problems (just double checked a cd i burnt in 1997<br />
+still retains the data with no CRC errors)</p>
+<p>Hope this helps.</p>
+<p>-Snarto</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://drylungs.com/' rel='external nofollow' class='url'>Snarto</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6459" title="May 16, 2006 @ 11:08 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6460"><p>I&#8217;ve been doing the short-term media shuffle for a long time now. Low density floppies to HD floppies to cd-r to dvd-r, and now, external HD&#8217;s. </p>
+<p>I use two methods:<br />
+I use cheap IDE drives in cheap external enclosures for my incremental backups (I run Mike Lin&#8217;s RapidBackup) of my photos, video, music, etc. I do these infrequently, but they have the advantage of being on a different power supply, that will likely fail separately from my desktop&#8217;s. Anecdotal evidence from a friend who works IT for an educational institution suggests that dirty power inside or outside the box is the most common cause of disk failure in consumer-grade boxen. Since I can&#8217;t afford to spend large amounts of $$ at a time, I&#8217;m stuck with consumer-grade boxen :) I am still on the hope-and-pray method that price per Gig will fall at a faster rate than the # of Gigs/year I generate. Later this year I will be able to afford rotating offsite backups. (Yay safe deposit boxen!)</p>
+<p>My other method isn&#8217;t a backup method at all: I keep all of &#8220;My Documents&#8221; on a cheap Raid-1 array, separate from the OS drive. And by cheap I mean &#8220;the motherboard came with a software raid chip&#8221; and &#8220;I bought the cheapest $perGig SATA drives I could find.&#8221; This has saved me from sorrow at least once already. My tip here is to make sure the SATA cables aren&#8217;t loose &#8211; they are a commodity product, and manufacturing tolerances aren&#8217;t what they should be. If you wanted additional convenince, cheap harddrive sleds are available for swapping out drives without messing with opening up the case. Allegedly, SATA can support hotswapping too.</p>
+<p>Suggestions for you:<br />
+I have none better than the ones suggested here. Others, elsewhere have suggested RAID 1 configurations (or the like), where you pull a disk from the array when you wish to archive, but there are technical difficulties associated with that &#8211; custom firmware and the like. If you are serious about the burning building scenario, then a harddrive sled in a computer with a RAID-1 data array is the answer, though I think slow speed disasters like floods, impending wildfires and the like are a better fit for that. This has the advantage that you can take with you precisely what you were most recently working on.</p>
+<p>For incremental offsite backups, an impressive amount of bandwith can be attained by mailing an external drive to a friend. Incredibly poor latency, but it beats having to secure a good quality net connection to a remote computer. I can attest that the Bytecc enclosures often featured on newegg come with pretty nice formed styrofoam inserts and a carrying handle. </p>
+<p>I cannot find the reference at this time, but there is a very inexpensive (80$) network adressable USB/firewire hub, that has firmware that can be flashed to run linux, and to which you can connect two USB enclosed Hd&#8217;s in a software RAID-1. (I&#8217;m still looking for for it myself.) Potentially you could rsynch to a pair or more of these, and retain the advantages of easily mailable harddrives for incremental backups. My understanding is that some (most? all?) of the open source-linux software raid stuff is device neutral: no special filesystem formatting required. Obviously reuse of old beige box computers for this purpose would be advocated by your typical slashdot-type, but I think the modularity and reduced power consumption of off the shelf stuff would be better.</p>
+<p>So, back to your (new) question:<br />
+Keeping any of these solutions up for five years may be problematic: they all seem to require regular maintainance, and a fair amount of user intervention. But they do answer your second question: usb/firewire drives are going to be very easy to transfer over to new storage solutions in the future.</p>
+<p>Avi suggested backing up to dual layer DVD-R, at 100 Gig=43$ of media (.43$/gig). By contrast, a 300 Gig hd is now 100$ (.33/gig). So there is (near) parity between the two solutions. Time spent recording vs. time spent installing, tax/shipping/etc. is probably a wash, and for the highly paid, favors the hd solution. (HD price from newegg) Note the assumed capital costs of a dual layer drive vs. an external enclosure can/may negate each other as well.</p>
+<p>-r.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://blog.rhandir.com/' rel='external nofollow' class='url'>rhandir</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6460" title="May 17, 2006 @ 2:31 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6461"><p>I will share my way of backing up my 800 GB of data.</p>
+<p>I have 7 years of data (photos, dv movies, so and so..), and they are backed (or replicated) in another 2 computers.  I&#8217;ve tried MO, CD, and tapes, and they don&#8217;t work form me.  CD&#8217;s, tapes, or MO are time consuming or expensive to maintain, or both.  Also, MO and CD (or DVD) are 9.1 MB max per media.  Not enought for raw dv files larger than these limits.</p>
+<p>I want to keep the files in their original format.  Converting them to MPEG-2 will not let you convert to MPEG-4.  If you do, you lose the quality of the video.  </p>
+<p>Each of the computers have 3 hard drives, and they are not configured in raid, but files are organized by year and month, so finding the photo or movies are easy. </p>
+<p>I use Linux in my 3 computers.  My 4th computer is Windows, and one mapped drive accesses one of the Linux.  Nothing is stored in the Windows, except for something I don&#8217;t really care to backup.  I have UPS in case for power failures and power surges.</p>
+<p>For the past 7 years, I have 2 hard drive failures.  They were easy to replace and were rsync with the other 2 system.  No pain here.  If my data grows, I can always add one more drive for each of the computers.  </p>
+<p>I don&#8217;t like external USB.  I heard some horror stories about external USB where it damaged the drives when turned on or when plugged into the computer.</p>
+<p>One of my Linux computer is located at one of my relatives house.</p>
+<p class=sig>&#8212;&#8201;<cite>Fitz</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6461" title="May 18, 2006 @ 1:04 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6462"><p>One of our offices went to LaCie drives for backup and as expanded storage. We spent quite a bit of time and money shipping them back and forth before we dumped the external storage and went back to tape backups.  We were using these on file and database servers, so perhaps if you just used them lightly, they would be okay.</p>
+<p class=sig>&#8212;&#8201;<cite>W^L+</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6462" title="May 18, 2006 @ 4:41 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6464"><cite><a href='/web/20110607181458/http://parlour.wordpress.com/2006/05/08/how-to-protect-all-those-gigabytes/' rel='external nofollow' class='url'>parlour &raquo; Blog Archive &raquo; How to protect all those Gigabytes?</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6465"><cite><a href='/web/20110607181458/http://donghaima.wordpress.com/2006/05/10/links-for-2006-05-10/' rel='external nofollow' class='url'>Donghai Ma &raquo; links for 2006-05-10</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6466"><cite><a href='/web/20110607181458/http://ckunte.com/archives/2006/05/19/long-term-backup-a-fantasy' rel='external nofollow' class='url'>ckunte.com | Long term backup - a fantasy</a></cite>&#160;(pingback)</li>
+<li id="comment-6469"><p>Hello, </p>
+<p>I have an old server, It has raid 5 drives and an external storage unit with more raid 5 drives.  This is our current storage of pictures and files.<br />
+We have a large harddrive in one of our PCs that I have a dos script to back up files to.</p>
+<p>In the future, I am going to build a home server.  Not much redundancy except for the hard drives.  It is going to have two of the largest drives I can find. and mirror them.  Then on the side, I am going to have one more drive for a backup in a second computer.</p>
+<p>While a fire would hurt us, I feel that one of the three drives should survive such a disaster.  If not, I would rebuild these memories from family and friends.  We have tornadoes, if a tornado struck and I found the servers, I think the drives might be intact enough to get one good copy off the drives.</p>
+<p>I have always had problems with tape.  Too much intervention needed to make it work.  At work, our tape drive uses a LTO2 library.  Each night is on two tapes.  Every day you have to add tapes to the machine.  That is a lot of moving parts.  I really don&#8217;t trust it as much as a hard drive in raid 1 or raid 5. </p>
+<p>In the end, I am doing my best to back up my data, but I know that media changes and I would rather plan for that, more than getting a solution that will last 10 years.  In 10 years, I might create 2Tb of data a year, today I generate 20 gig a year.  Things change.  Plan on change, and make sure that you transfer your old media to your new media.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.netbrats.com/' rel='external nofollow' class='url'>Dave</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6469" title="May 19, 2006 @ 11:58 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6470"><p>You already have a tape backup device capable of storing gigabytes of data &#8211; it&#8217;s your DV camcorder.</p>
+<p>This isn&#8217;t generally suitable for data &#8211; but it IS suitable for video (of course)!</p>
+<p>Save your raw footage, edits and finished video projects out to DV. Make multiple copies. Create new copies every year. DV tape is one of the cheapest mediums going &#8211; it&#8217;s also reliable and high capacity.</p>
+<p>Now, for the rest of your data get 3 big hard drives (500GB seagate in Wiebertech boxes). One is your main online storage area, the other two are to take regular rotating complete backups of this. One hdd remains offsite at all times (along with a copy of your tapes). Backups are cheap and speedy (which means you&#8217;re more likely to do them) and you almost always have 3 good copies of all your data. Anything especially precious also goes on burnable media in your safe deposit box.</p>
+<p>This is exactly what I do (except my main storage is an Infrant ready-nas NV).</p>
+<p class=sig>&#8212;&#8201;<cite>Andy B</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6470" title="May 19, 2006 @ 12:09 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6471"><p>The Internet Archive has been doing a lot of this same sort of stuff for their data, and they have published some information about their hardware and software choices, as well as providing links to other organizations that are working in these fields, etc&#8230;.</p>
+<p>See <a href="/web/20110607181458/http://www.archive.org/about/about.php#storage" rel="nofollow">http://www.archive.org/about/about.php#storage</a> and <a href="/web/20110607181458/http://www.archive.org/iathreads/post-view.php?id=40868" rel="nofollow">http://www.archive.org/iathreads/post-view.php?id=40868</a> for information on their operations, <a href="/web/20110607181458/http://www.archive.org/about/about.php#2" rel="nofollow">http://www.archive.org/about/about.php#2</a> for links to other organizations doing work in these areas, and browse through the &#8220;petabox&#8221; forums at <a href="/web/20110607181458/http://www.archive.org/web/petabox.php#forum" rel="nofollow">http://www.archive.org/web/petabox.php#forum</a> for additional detailed information on their hardware and software choices, etc&#8230;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://www.shub-internet.org/brad/' rel='external nofollow' class='url'>Brad Knowles</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6471" title="May 19, 2006 @ 12:36 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6473"><p>Amazing how little people with real experience have reacted and how much hidden advertising I saw.<br />
+Only one person seems to know how to deal with your problem (Comment by Bob Dow — Tuesday, May 9, 2006 @ 12:55 am), but it could be cheaper if you stay away from the expensive external harddrives (with USB or IEEE-interfaces that won&#8217;t last for another 10 years), and make yourself removable or swappable drives (I think it&#8217;s called &#8216;enclosures&#8217; in English).<br />
+Pity that even Bob Dow don&#8217;t realise that it&#8217;s not enough to have your data on 3 physical different disks, but you HAVE to overwrite ALL data with EVERY backup. Reasons are very simple : 1) because the data is stored magnetically, you force every bit to be written freshly 2) ANY error WILL be immediately (and not after a couple of years) visible, and in my experience ALL harddrives no matter which manufacturer, will mark bad spots as bad, whithout any dataloss.<br />
+Worst case scenario is that one harddisk actually crashes, but then you still have another two, so just buy another one and use the same enclosure to switch with the bad one.<br />
+The same goes when your amount of data rises : just replace your existing one&#8217;s with something bigger.<br />
+And please, NEVER EVER use plastic junk like tapewriters, CD, DVD, etc. Read ANY professional review and you know the theory behing the hard experiences of many unlucky amateurs who think they discovered THE deal of the era.<br />
+And please, avoid RAID. It&#8217;s not really bad, but to many people don&#8217;t dare to admit, in the long way, there is nothing but trouble, certainly for the not-professional ICT.</p>
+<p>So backup your WHOLE disks. Start before dinner, if you have a modern pc, it&#8217;s done after your dessert. Cheers.</p>
+<p class=sig>&#8212;&#8201;<cite>P Praet</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6473" title="May 19, 2006 @ 1:13 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6476"><p>streamload.com?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6476" title="May 19, 2006 @ 2:23 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6477"><p>Just want to thank Mark for this blog and all of you for the great comments.  This has got to be the most intelligent piece of literature I&#8217;ve read on the web this entire week!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://ww2db.com/' rel='external nofollow' class='url'>Pete</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6477" title="May 19, 2006 @ 2:32 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6478"><p>One recommendation: let it go.<br />
+It&#8217;s too easy to spend valuable time capturing, editing, backing up, and recovering your memories, when you could be creating them.<br />
+Yes, record special memories, for posterity, (or just tell stories to your kids) but don&#8217;t be obsessive.</p>
+<p class=sig>&#8212;&#8201;<cite>Jason</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6478" title="May 19, 2006 @ 2:35 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6485"><p>It&#8217;s not a very standatd solution but it&#8217;s cheap and reliable : Use mini-DV tape to store any type of files.</p>
+<p>More info <a href="/web/20110607181458/http://jakeludington.com/project_studio/20050828_backup_files_to_dv_camera.html" rel="nofollow">http://jakeludington.com/project_studio/20050828_backup_files_to_dv_camera.html</a></p>
+<p class=sig>&#8212;&#8201;<cite>MG</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6485" title="May 19, 2006 @ 5:06 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6487"><p>Rhandir says:</p>
+<blockquote><p>
+I cannot find the reference at this time, but there is a very inexpensive (80$) network adressable USB/firewire hub, that has firmware that can be flashed to run linux, and to which you can connect two USB enclosed Hd’s in a software RAID-1. (I’m still looking for for it myself.)
+</p></blockquote>
+<p>This sounds a lot like the aforementioned <a href="/web/20110607181458/http://www.nslu2-linux.org/" rel="nofollow">NSLU2</a>, running <a href="/web/20110607181458/http://www.nslu2-linux.org/wiki/HowTo/Raid1onUnslung5" rel="nofollow">a custom Linux kernel with RAID 1 enabled</a>. </p>
+<p>My backup system consists of a pair of USB drives attached to an NSLU2 running this custom Linux. I&#8217;m using &#8220;poor man&#8217;s RAID&#8221;: in the middle of the night, one drive backs itself up to the other using rsync. However, I&#8217;m planning to replace this with a full-blown Linux PC with a RAID array: the NSLU2 is a bit too slow to serve music effectively, and its external drives are running very hot in their enclosures. I fear they are not long for this world.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeB</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6487" title="May 19, 2006 @ 7:43 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6489"><p>This is a bit tangential, but I was wondering if anyone had any idea what would be the effect on magnetic storage of a global polarity reversal.  From what I have learned (from not vary many sources, in all honesty), it sounds like a shift in the earth&#8217;s magnetic poles is long overdue &#8211; as the last one took place over 100,000 years ago.  Prior to that, if I remember correctly, they were on a q30,000 year pace.  Would such a reversal destabilize magnetic storage media?</p>
+<p class=sig>&#8212;&#8201;<cite>mca</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6489" title="May 20, 2006 @ 12:55 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6494"><p>Everyone is so worried about backing up their data, yet nobody has mentioned how important it is to have a &#8220;In Case of Death&#8221; file located on their C: drive. How will anyone know where and how you stored your data if you don&#8217;t leave some instructions on what to do if you should die in a car accident. It would be a tragedy if all your family photos were saved but nobody could find or retrieve them because you are the only person who knows how and where they are stored. </p>
+<p>Roger Secura</p>
+<p class=sig>&#8212;&#8201;<cite>Roger D. Secura</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6494" title="May 20, 2006 @ 10:25 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6496"><p><a href="/web/20110607181458/http://www.inphase-technologies.com/" rel="nofollow">http://www.inphase-technologies.com/</a></p>
+<p>This company is bringing out Holographic storage very soon.</p>
+<p class=sig>&#8212;&#8201;<cite>WJ</cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6496" title="May 20, 2006 @ 11:37 am"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6497"><p>Yup, <a href="/web/20110607181458/http://www.inphase-technologies.com/news/lucentandimation.html" rel="nofollow">any day now</a>&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607181458/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607181458/http://diveintomark.org/archives/2006/05/08/backup#comment-6497" title="May 20, 2006 @ 12:00 pm"><img alt="#" src=/web/20110607181458im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110607181458/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110607181458/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110607181458/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110607181458/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110607181458/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.571 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-23 21:45:51 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 18:14:58 Jun 7, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:10:13 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

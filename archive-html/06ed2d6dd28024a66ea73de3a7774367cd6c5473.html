@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>NewsMonster day 2 [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806090750/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806090750/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806090750/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806090750/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806090750im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806090750/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators" title="robots.txt support for uber-aggregators">
+<link rel=next href="/web/20110806090750/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" title="How to block spambots, ban spybots, and tell unwanted robots to go to hell">
+<link rel=up href="/web/20110806090750/http://diveintomark.org/archives#p1281" title="February 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; NewsMonster day 2 Comments Feed" href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806090750/http://diveintomark.org/' />
+<link rel='prev' title='robots.txt support for uber-aggregators' href='/web/20110806090750/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators' />
+<link rel='next' title='How to block spambots, ban spybots, and tell unwanted robots to go to hell' href='/web/20110806090750/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell' />
+<link rel='canonical' href='/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2' />
+<link rel='shortlink' href='/web/20110806090750/http://diveintomark.org/?p=1281' />
+<meta name="description" content="It appears that NewsMonster will not be respecting robots.txt, an issue I brought up yesterday.">
+<meta name="keywords" content="blogging,newsmonster,robotstxt">
+<link href="/web/20110806090750cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806090750/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/02\/21\/newsmonster_day_2";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806090750" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112952/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:07:50 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110927012741/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112952/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" title="11:29:52 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:07:50 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110807053930/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" title="5:39:30 Aug 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620043426/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:07:50 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806090750*/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>26 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">14 Jun 06 - 27 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001201000_2007:-1:010101000001_2008:-1:010101310100_2009:-1:010001000000_2010:-1:001011000100_2011:7:000010021000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806090750/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806090750/http://diveintomark.org/archives#p1281">February 21, 2003</a> &#8227;
+<h2>NewsMonster day 2</h2> (<a href="/web/20110806090750/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20110806090750/http://diveintomark.org/tag/newsmonster" rel="tag">newsmonster</a>, <a href="/web/20110806090750/http://diveintomark.org/tag/robotstxt" rel="tag">robotstxt</a>)</div>
+<p>Good news, everyone.  NewsMonster <a href="/web/20110806090750/http://www.peerfear.org/rss/permalink/2003/02/19/1045648437-Reputation_in_NewsMonster_and_Blogs.shtml">rediscovers the A-list</a> for you.  All joking aside, it&#8217;s good to see some more independent research in this area.  I fiddled with this a bit last year (<a href="/web/20110806090750/http://diveintomark.org/archives/2002/06/02/social_networks.html" title="dive into mark, June 2, 2002: Social networks">1</a>, <a href="/web/20110806090750/http://diveintomark.org/archives/2002/06/02/more_on_social_networks.html" title="dive into mark, June 2, 2002: More on social networks">2</a>, <a href="/web/20110806090750/http://diveintomark.org/archives/2002/06/02/social_networks_by_referrer.html" title="dive into mark, June 2, 2002: Social networks by referrer">3</a>, <a href="/web/20110806090750/http://diveintomark.org/archives/2002/06/02/google_recommends.html" title="dive into mark, June 2, 2002: Google recommends">4</a>, <a href="/web/20110806090750/http://diveintomark.org/archives/2002/06/04/who_are_the_people_in_your_neighborhood.html" title="dive into mark, June 4, 2002: Who are the people in your neighborhood">5</a>, <a href="/web/20110806090750/http://diveintomark.org/archives/2002/11/20/new_reading.html" title="dive into mark, November 20, 2002: New reading">6</a>, <a href="/web/20110806090750/http://diveintomark.org/newdoor/" title="dive into mark: Recommended Reading tool">7</a>).  Radio has a feature called the <a href="/web/20110806090750/http://radio.userland.com/weblogNeighborhood">weblog neighborhood</a>.  There is also <a href="/web/20110806090750/http://www.myelin.co.nz/ecosystem/dataset.php">free <q>blogging ecosystem</q> data</a> that could minimize the need for spidering.</p>
+<p>In related but not so good news, it appears that <a href="/web/20110806090750/http://www.peerfear.org/rss/permalink/2003/02/21/1045820500-NewsMonster_Day_2.shtml">NewsMonster will not be respecting <code>robots.txt</code></a>, an issue <a href="/web/20110806090750/http://diveintomark.org/archives/2003/02/20/robotstxt_support_for_uberaggregators.html" title="dive into mark, February 20, 2003: robots.txt support for uber-aggregators">I brought up yesterday</a>.  In fact, it appears that the next version of NewsMonster will encourage its users to lie in the User-Agent field to circumvent attempts to block it, in much the same way it now lies in its Referer field to encourage website developers to click through from their referrer logs to the NewsMonster site (a form of logfile spam that <a href="/web/20110806090750/http://inessential.com/?comments=1&postid=2357">more respectable aggregators</a> have <a href="/web/20110806090750/http://inessential.com/?comments=1&postid=2406">already stopped</a>).</p>
+<p>Hmm.</p>
+<p><cite>Lee Killough</cite>: <a href="/web/20110806090750/http://www.leekillough.com/robots.html">How to Defeat Bad Web Robots With Apache</a>.</p>
+<p>Further investigation shows that NewsMonster will download <em>any</em> URL listed in the <code>link</code> element of your RSS items; it doesn&#8217;t sanity-check that it&#8217;s in the same domain as the RSS feed.  This gives me an idea.</p>
+<p>Here&#8217;s an <a href="/web/20110806090750/http://www.psychedelix.com/agents.html">up-to-date list of common User-Agents</a> in case you&#8217;re puzzled by your access logs.</p>
+<p><cite>The Register</cite>: <a href="/web/20110806090750/http://www.theregister.co.uk/content/55/29396.html">Watch out for those malicious referrer links</a>.  Last year I stumbled upon <a href="/web/20110806090750/http://diveintomark.org/archives/2002/03/04/full_disclosure.html" title="dive into mark, March 4, 2002: Full disclosure">a similar bug in Manila</a> (since closed), but since then there&#8217;s been a proliferation of little third-party scripts to show referrers inline.  I had to deal with the same issues when I displayed <a href="/web/20110806090750/http://diveintomark.org/archives/2002/04/20/automatic_linkbacks.html">automatic linkbacks</a>.  It seems that every new script, every new browser, every new aggregator &#8212; they all make the same stupid mistakes as the last one (or in some cases, worse mistakes).  I&#8217;m all for reinventing the wheel if you just want to learn about wheels, but we don&#8217;t seem to be gaining any cumulative knowledge in the process.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty four comments here (<a href=/web/20110806090750/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-512"><p>Lying about the User-Agent is really not in the same league as the other crimes.  If someone was using a version of NewsMonster that didn&#8217;t have spidering turned on and was blocked anyway, it really makes sense to lie about the user agent.  Konqueror makes it really easy to lie about you browser because many sites restrict pages based on User-Agent in cases where it&#8217;s not warranted.  It&#8217;s only because of the primary bug that it&#8217;s annoying.</p>
+<p class=sig>&#8212;&#8201;<cite>Aryeh Sanders</cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-512" title="February 21, 2003 @ 3:28 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-513"><p>Yes, I know lying in the User-Agent field is a long-established technique for alternate browsers.  Opera, Safari, iCab, OmniWeb.  (Actually IE started it, years ago, by masquerading as a Netscape-&#8221;compatible&#8221; browser.)  But they still contain a marker of their true identity.  Kevin is proposing an option to complete hide NewsMonster&#8217;s identity, masquerading as the standard Mozilla, which it obviously isn&#8217;t.  And alternate browsers exhibit the same behavior as the browsers they spoof, but NewsMonster (in bulk-download mode) acts significantly differently than standalone Mozilla.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-513" title="February 21, 2003 @ 3:42 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-540"><cite><a href='/web/20110806090750/http://www.intertwingly.net/blog/1212.html' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;(trackback)</li>
+<li id="comment-514"><p>So you would agree that it would be reasonable for NewsMonster to misrepresent itself as Mozilla if it was blocked by a site AND bulk-downloading was turned off?</p>
+<p class=sig>&#8212;&#8201;<cite>Aryeh Sanders</cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-514" title="February 21, 2003 @ 4:29 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-515"><p>Even in the default (non-bulk-downloading) mode, it should identify itself with a NewsMonster-specific marker.  This can be part of a larger UA string; I recommended yesterday that NewsMonster use the standard Mozilla UA + &#8220;NewsMonster/version&#8221; + an identifying URL.  </p>
+<p>Last year, Radio UserLand (another news aggregator) had a very serious bug that could mis-parse the HTML content of a single RSS feed in a way that rendered the entire program unusable.  ( See <a href="/web/20110806090750/http://www.google.com/search?q=radio+double+decoding">http://www.google.com/search?q=radio+double+decoding</a> )  I was inadvertantly triggering this bug almost every day during my web accessibility series last summer (due to the nature of my posts, which discussed HTML markup).  I was forced to work around the bug by presenting Radio with an abbreviated feed that did not include full HTML posts.  This would have been impossible if Radio had spoofed the User-Agent field.</p>
+<p>Program vendors are arrogant and assume they&#8217;ll never make mistakes, but mistakes can happen to anyone.  Even if NewsMonster cleans up its act, it should *never* lie about who it is.  A combination UA is probably the best solution.  Kevin said yesterday he would was considering this, but then today&#8217;s post went all &#8220;user-configurable&#8221; and &#8220;spoof Mozilla&#8221; and &#8220;do anything to maximize the user&#8217;s experience&#8221;, so I am justifiably worried.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-515" title="February 21, 2003 @ 4:57 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-516"><p>&lt;trivia&gt;<br />
+Phoenix &amp; Mozilla can also spoof the UA through the use of the preferences bar, available here: <a href="/web/20110806090750/http://www.xulplanet.com/downloads/prefbar/">http://www.xulplanet.com/downloads/prefbar/</a><br />
+&lt;/trivia&gt;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-516" title="February 21, 2003 @ 5:15 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-541"><cite><a href='/web/20110806090750/http://techno-weenie.com/archives/2003/02/21/003045.php' rel='external nofollow' class='url'>techno weenie</a></cite>&#160;(trackback)</li>
+<li id="comment-517"><p>Mark: Radio has a feature called the weblog neighboorhood. There is also free &#8220;blogging ecosystem&#8221; data that could minimize the need for spidering. </p>
+<p>I&#8217;m doing a little experiment on my blog . It use a RSS feed to a Technorati Watchlist. I call this &#8220;Instant Comment&#8221;. Its so obvious that I guess there other people doing this.</p>
+<p><a href="/web/20110806090750/http://blog.scriptdigital.com/index.php?entry=/Internet/Blogging/linvitation.html">http://blog.scriptdigital.com/index.php?entry=/Internet/Blogging/linvitation.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://blog.scriptdigital.com/' rel='external nofollow' class='url'>Emmanuel</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-517" title="February 21, 2003 @ 6:19 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-542"><cite><a href='/web/20110806090750/http://peterjanes.homeip.net/blog/archives/2003/02/22/macmonster.html' rel='external nofollow' class='url'>Petroglyphs</a></cite>&#160;(trackback)</li>
+<li id="comment-518"><p>Just to let you know, the latest build of Syndirella no longer puts the URL of its own site as the default referrer. The referrer is still configurable, but the default value for it is blank.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://yole.ru/' rel='external nofollow' class='url'>Dmitry Jemerov</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-518" title="February 22, 2003 @ 5:56 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-519"><p>If it gets bad, you can always use mod_throttle .</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://mah.everybody.org/weblog/' rel='external nofollow' class='url'>Mark A. Hershberger</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-519" title="February 24, 2003 @ 2:46 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-520"><p>Mark,</p>
+<p>I&#8217;m glad you guys are talking about this stuff, but I don&#8217;t think I&#8217;ve seen you offer a compromise solution.  NewsMonster is two things, an aggregator and an off-line reader for handhelds.  I understand and respect your concerns about serving pages that are never even read, but how would you solve the &#8220;problem&#8221;.  </p>
+<p>If I were to suck in your site through plucker or some other tool, I assume you&#8217;d have the same concern, yes?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://www.way.nu/' rel='external nofollow' class='url'>Jonathan Peterson</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-520" title="February 24, 2003 @ 3:09 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-521"><p>Jonathan, respecting robots.txt *is* the compromise solution.</p>
+<p>Thanks for bringing Plucker to my attention.  It has options for infinite-level spidering (much, much worse than NewsMonster), and it doesn&#8217;t respect robots.txt either.  So it&#8217;s banned along with the rest of the rude bots I&#8217;ve been learning about in the past 48 hours.  More on this soon.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-521" title="February 24, 2003 @ 5:57 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-522"><p>Arrgh.  Messed-up UA strings are in the news all the time.  I think it&#8217;s time we all agreed on a format for UA strings and got all browser/aggregator/spider/etc. makers to use this format.  Browser makers could even include in the UA string what technologies they support, like CSS-2 or XHTML 1.1.</p>
+<p>It would be something like:</p>
+<p>ProductName/version (OS; supported technologies; revision) [AdditionalBrands/version] (site)</p>
+<p>For example:</p>
+<p>DiveIntoBrowser/1.0 (Windows XP; CSS2; XHTML1.1; 1.04) MegaCorpBrowser/8.0 (<a href="/web/20110806090750/http://diveintomark.org/)"><a href="/web/20110806090750/http://diveintomark.org/" rel="nofollow">http://diveintomark.org/</a>)</a></p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-522" title="February 24, 2003 @ 6:24 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-523"><p>Unfortunately using the User-Agent for identifying standards compliance won&#8217;t work because browser makers don&#8217;t really know how standards-compliant their browsers are until after they ship.  Microsoft thought IE5 got the box model right&#8230;</p>
+<p>I agree with the general sentiment though.  At the very least, all robots should include a URL in their User-Agent to a page that explains who they are, what they do, and (if they have any spider-like behavior) how to block them in robots.txt.  Ditto news aggregators (although ones that simply grab a single RSS file do not need to honor robots.txt, but a URL to their home page would still be nice).</p>
+<p>For example, what the hell is nntp/rss?  It&#8217;s been showing up in my logs recently.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-523" title="February 24, 2003 @ 7:08 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-524"><p>Never mind, I found it.</p>
+<p><a href="/web/20110806090750/http://www.methodize.org/nntprss">http://www.methodize.org/nntprss</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-524" title="February 24, 2003 @ 7:10 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-525"><p>Hey!  I like Plucker&#8230;isn&#8217;t there a better way to limit spiders than simply prohibiting their access?   I mean, I&#8217;ll go submit the RFE to respect robots.txt right now&#8230;the only reason I use Plucker is because there&#8217;s no RSS reader for the Palm.  But I definitely don&#8217;t abuse it and don&#8217;t feel like I should be punished because the app developers haven&#8217;t implemented robots.txt.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-525" title="February 24, 2003 @ 8:33 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-543"><cite><a href='/web/20110806090750/http://www.divagation.com/journal/2003/02/i_000090.php' rel='external nofollow' class='url'>divagation.com</a></cite>&#160;(trackback)</li>
+<li id="comment-526"><p>Mark, you&#8217;re disallowing /palm/ in your robots.txt?  Doesn&#8217;t that mean that even if you allowed Plucker, it couldn&#8217;t pluck the information it really wanted?</p>
+<p>I&#8217;m also asking the Plucker developers if they&#8217;re interested in supporting robots.txt.  I&#8217;ll get back to you with the answer, but I suspect it&#8217;s going to be &#8220;fix it yourself&#8221;, and I&#8217;m afraid I just don&#8217;t have the time.  If you wanted to submit a patch, however, I&#8217;m sure they would appreciate it.  (Yeah, like you have more free time than I do. ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://bwinton.latte.ca/' rel='external nofollow' class='url'>Blake Winton</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-526" title="February 25, 2003 @ 10:10 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-527"><p>Denying access to any thing that caches pages for off-line reading is at least consistent, but it&#8217;s not very friendly.  While I don&#8217;t do it any more, I used to be a big user of Avantgo, it gave me a change to read stuff when I was stuck between meetings.</p>
+<p>I&#8217;m really trying to understand what your rational is for denying caching:</p>
+<p>Is it that robots.txt should be an absolute and respected by all user agents (a logical line in the sand, but a HUGE barrier to entry for new agents, yes?)</p>
+<p>Is it that you don&#8217;t want to pay for bandwidth people use to load pages from your site that they may not read?  Again, logical but that disallows any type of store and read access, plucker, avantgo, etc.  </p>
+<p>Would it be acceptable for your stuff to be sucked once and cached elsewhere?  Or is it that you don&#8217;t want to lose control of your content to any offsite caching?  Logical, I WANT to cache stuff.  You&#8217;re Dive into Usability was great stuff, the sort of thing I&#8217;d hate to loose.  Web content is all too ephemeral and so much good content I&#8217;ve bookmarked has eventually gone away.  If you go down that path, you should disable cut and paste, which would pretty much make the usability stuff useless, yes?</p>
+<p>Not trying to be a jerk, trying to understand what your rationale is.  Avantgo, for instance stores requests for pages that it doesn&#8217;t have locally for later download.  If I were to suck in your RSS one-level deep, I&#8217;d get nont of the pages you reference, but clicking the link would grab the page for me the next time I synched.  Sounds like you&#8217;d find this ok as long as Avantgo doesn&#8217;t lie about the user agent (though you&#8217;d have no way to know that the request wasn&#8217;t automated).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://www.way.nu/' rel='external nofollow' class='url'>Jonathan Peterson</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-527" title="February 25, 2003 @ 10:14 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-528"><p>Thanks for your comments.  I&#8217;m not trying to inconvenience readers, just robots and one-off leechers.  Where that line is blurry, I will try to err on the side of allowing questionable access.  But I don&#8217;t think you have a grasp of how bad the spambot/spybot/leecher situation really is.  I will be publishing numbers shortly.</p>
+<p>I will also be announcing a solution tailored for the needs of mobile users.  In the meantime users of Plucker and AvantGo will continue to have full access.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-528" title="February 25, 2003 @ 10:41 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-529"><p>Jonathan, &#8220;Dive Into Accessibility&#8221; is fully downloadable in multiple formats:</p>
+<p><a href="/web/20110806090750/http://diveintoaccessibility.org/">http://diveintoaccessibility.org/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-529" title="February 25, 2003 @ 10:44 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-530"><p>Jonathan, robots.txt should be respected by any agent that follows links and recursively downloads pages.  This includes NewsMonster (downloads RSS, follows all LINK elements, then downloads HTML and associated images), Plucker (downloads HTML recursively), AvantGo (apparently ditto, never used it), as well as offline bulk-downloaders like GetRight.  It is *not* *that* *hard* to parse robots.txt; many languages have freely available libraries to do it.  I found, learned about, used, and integrated Python&#8217;s robotparser.py in about half an hour.</p>
+<p>*Respecting robots.txt would not stop you from reading my weblog offline*.  Look at what I&#8217;m disallowing in my robots.txt.  My stats pages, so that they don&#8217;t show up in searches.  (Heh, that was fun.)  My private playground, which is just a temp directory for testing new features and has no bearing on anything.  My cgi-bin directory, for obvious reasons.  /newdoor/, which generates a near-infinite number of pages, each of which hits a remote site and does several database queries.  My /images/ and /pictures/ directories, because I choose not to participate in Google&#8217;s image search.  /premium/, which was a joke.  /magnetic/, my online magnetic poetry script which is nothing robots should be indexing.</p>
+<p>None of this would prevent well-behaved robots from indexing thousands of pages of actual content &#8212; weblog content, projects, Safari info, even my latest &#8220;100 stories of unfamous people&#8221; project.  None of this would stop you from reading my weblog offline.</p>
+<p>There are lots of legitimate usage patterns that involve spidering, and robots.txt is a compromise to accomodate them.  I&#8217;ve actually thought about what&#8217;s on my site, and what it&#8217;s reasonable for robots to have.  But when I find programs that ignore all of that and simply take whatever they want, I am not at all inclined to go out of my way to meet them halfway.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-530" title="February 25, 2003 @ 11:02 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-531"><p>I have offered to add robots.txt support to plucker-build (the main downloader/parser) later this week, but I am very angry with you for taking the vigilante approach and not filing a bug report to warn us before blocking.  Don&#8217;t you like Python applications being popular?</p>
+<p class=sig>&#8212;&#8201;<cite>MJR</cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-531" title="February 25, 2003 @ 11:14 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-532"><p>Mark, it just dawned on me that all your concerns are really just about bandwidth, and you&#8217;re spending all this time and effort (and emotional juice!) assuming that your bandwidth is a finite resource.</p>
+<p>The point I&#8217;m trying to make is that maybe your time would be better spent trying to figure out a way to increase your effective bandwidth rather than fighting an uphill battle with stupid robots.</p>
+<p>I&#8217;m sure that somewhere among your numerous daily readers there are some that might help you find free/dirt-cheap hosting. And although I&#8217;m not too familiar with DNS settings and site-mirroring software, I&#8217;m sure there is a way for someone like you to set up your site on more than one web-server and load-balance the incoming traffic transparently across all the different servers. I&#8217;m sure that some of your fans would be more than eager to help on something like this.</p>
+<p>I mean, it seems that your biggest problem is not &#8220;evil page-sucking robots&#8221; but much rather your new-found Internet Celebrity status and the fact that loads and loads of people (including some employing Evil Robots of Doom(tm)) want to download your pages.</p>
+<p>I&#8217;m sure that if you suddenly stopped being popular all your bandwidth problems would go away&#8230; :-)</p>
+<p>Just a thought. Take care.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://mar.anomy.net/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-532" title="February 25, 2003 @ 11:19 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-533"><p>P.S. Mark, for what its worth, I totally agree with you that all respectable robots and web spiders should respect robots.txt, although as some people have already pointed out there is a very broad grey line there.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://mar.anomy.net/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-533" title="February 25, 2003 @ 11:28 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-534"><p>MJR, as I said in a later comment, Plucker is *not* banned.  I am working on a specific solution for Plucker/AvantGo users which will be better for all involved.  In the meantime, they will continue to have full access.</p>
+<p>Furthermore, I resent the implication that I&#8217;m the one being a vigilante here.  *You&#8217;re* the one who should be aware of this stuff; *you&#8217;re* the one writing a spider.  A quite rude one, as it turns out.  These are 10-year-old guidelines we&#8217;re talking about here; it&#8217;s not like this came out of thin air.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-534" title="February 25, 2003 @ 11:30 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-535"><p>Mar, I don&#8217;t think success has much to do with it.  Spambots don&#8217;t care how many links you have in the blogger&#8217;s ecosystem; all it takes is one for them to find your site, and they&#8217;ll rip it to shreds and steal everything they can find.  Ditto spybots (Turnitin, NameProtect, Cyveillance &#8212; search Google).</p>
+<p>Most of the rest is simply ignorance, either people not understanding how rude they&#8217;re being by downloading every single Safari test case and associated full-screen images (I mean really, how many people need that other than Dave Hyatt?), or not understanding the options of their downloading program and accidentally spidering the whole site.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-535" title="February 25, 2003 @ 11:57 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-536"><p>Oh, and I did lobby for a way to increase my effective bandwidth: I got mod_gzip installed on my server.  But then I changed to a new server and it&#8217;s not installed here yet. :(  But even so, most of these bots are not smart enough to request compressed content.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-536" title="February 25, 2003 @ 12:02 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-537"><p>Success or no success, I *wholeheartedly* agree with your principles on robots.txt and rouge bots, but still think that if bandwidth usage is your problem, you might benefit from (at least partially) shifting your focus from fighting stupid program(mer)s towards finding ways to increase your effective bandwidth.<br />
+Either way, good luck. :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://mar.anomy.net/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-537" title="February 25, 2003 @ 12:12 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-538"><p>Why isn&#8217;t there some sort of standard for compressed Spider data?  Mark is right, robots.txt has been around forever and should be observed (i.e. be nice and listen to what I ask you to do, or I&#8217;ll blacklist you).  BUT there are lot of different powerful things that you can get by spidering the web.  </p>
+<p>It seems pretty simple to create a localhost spider than runs when YOU want it to and creates a gzipped dump of name, title, meta-tags, and then whatever in the way of links and images you want to allow.  </p>
+<p>Then you can handover a relatively small single file transfer to a nice spider, especially useful if your site is a heavy user of dynamic content.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://way.nu/' rel='external nofollow' class='url'>Jonathan Peterson</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-538" title="February 25, 2003 @ 4:23 pm"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-544"><cite><a href='/web/20110806090750/http://stone.tuttlesvc.org:880/000027.html' rel='external nofollow' class='url'>Tuttle SVC</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-545"><cite><a href='/web/20110806090750/http://www.kennsarah.net/archives/000152.shtml' rel='external nofollow' class='url'>Our Story</a></cite>&#160;(trackback)</li>
+<li id="comment-539"><p>Mark, an fyi &#8211; I just saw your comment about nntp//rss. The next release will contain a URL within the user-agent field.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090750/http://www.methodize.org/nntprss' rel='external nofollow' class='url'>Jason Brome</a></cite>&#160;<a class=p href="/web/20110806090750/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2#comment-539" title="March 1, 2003 @ 9:22 am"><img alt="#" src=/web/20110806090750im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806090750/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806090750/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806090750/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806090750/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806090750/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.171 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:57:45 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:07:50 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:46 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

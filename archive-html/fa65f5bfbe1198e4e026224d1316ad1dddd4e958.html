@@ -1,0 +1,566 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Atom aggregator behavior (HTTP level) [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110608052553/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110608052553/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110608052553/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110608052553im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110608052553/http://diveintomark.org/archives/2003/07/18/dive_into_accountability" title="Dive into accountability">
+<link rel=next href="/web/20110608052553/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" title="Aggregator HTTP tests">
+<link rel=up href="/web/20110608052553/http://diveintomark.org/archives#p1386" title="July 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Atom aggregator behavior (HTTP level) Comments Feed" href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level/feed" />
+<link rel='index' title='dive into mark' href='/web/20110608052553/http://diveintomark.org/' />
+<link rel='prev' title='Dive into accountability' href='/web/20110608052553/http://diveintomark.org/archives/2003/07/18/dive_into_accountability' />
+<link rel='next' title='Aggregator HTTP tests' href='/web/20110608052553/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests' />
+<link rel='canonical' href='/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level' />
+<link rel='shortlink' href='/web/20110608052553/http://diveintomark.org/?p=1386' />
+<meta name="description" content="A news aggregator is fundamentally an HTTP client, and there's a lot of prior art on how HTTP clients are supposed to work.">
+<meta name="keywords" content="http,webservices">
+<link href="/web/20110608052553cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110608052553/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/07\/21\/atom_aggregator_behavior_http_level";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "8";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110608052553" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101029052555/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="29 Oct 2010"><strong>OCT</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 5:25:53 Jun 8, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111020051258/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Oct 2011"><strong>OCT</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101029052555/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" title="5:25:55 Oct 29, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 5:25:53 Jun 8, 2011">8</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20111020051258/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" title="5:12:58 Oct 20, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100604074157/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="4 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 5:25:53 Jun 8, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110608052553*/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>33 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Apr 06 - 20 Oct 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000202221000_2007:-1:420111000111_2008:-1:111100011100_2009:-1:000000000000_2010:-1:000002000100_2011:5:000001000100_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110608052553/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110608052553/http://diveintomark.org/archives#p1386">July 21, 2003</a> &#8227;
+<h2>Atom aggregator behavior (HTTP level)</h2> (<a href="/web/20110608052553/http://diveintomark.org/tag/http" rel="tag">http</a>, <a href="/web/20110608052553/http://diveintomark.org/tag/webservices" rel="tag">webservices</a>)</div>
+<p>On the road to an RFC for Atom aggregator behavior.  The first part (HTTP level) is relatively easy to define since it&#8217;s not format-specific.  In fact, it&#8217;s not even syndication-specific.  A news aggregator is fundamentally an HTTP client, and there&#8217;s a lot of <a href="/web/20110608052553/http://www.ietf.org/rfc/rfc2616.txt" title="RFC 2616: HTTP/1.1">prior art</a> on how HTTP clients are supposed to work.  (Building a news aggregator but don&#8217;t want to read all that?  Tough!  You&#8217;re building an HTTP client; you need to read all that.  At least read the section on <a href="/web/20110608052553/http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">handling HTTP response codes</a>.)</p>
+
+<p>The catch is that aggregators, by design, retrieve the same resources over and over without user intervention, so any errors in HTTP implementation tend to be magnified.</p>
+
+<p>MUSTs:</p>
+
+<ul>
+<li><samp>301 Permanent redirect</samp>: MUST follow, SHOULD check new location thereafter.  Check <samp>Location</samp> header on reply for new address.  (I&#8217;ve been using this for almost a year now, but I <em>still</em> get over 6000 hits a day on feeds that are permanently located elsewhere.  I&#8217;m tempted to just 410 them all.)</li>
+<li><samp>302 Temporary redirect</samp>: MUST follow, but MUST continue to check same location thereafter.  Check <samp>Location</samp> header on reply for new address.</li>
+<li><samp>300 Multiple choices</samp>: not widely used, but Joe wanted me to mention it.  Treat like 302.</li>
+<li><samp>307 Temporary redirect</samp>: treat like 302.</li>
+<li><samp>410 Gone</samp>: MUST unsubscribe.</li>
+<li><samp>404 Not found</samp>: not sure.  RFC 2616 has no opinion on whether this is temporary or permanent.  If this is the first time checking (initial subscription) and the page doesn&#8217;t exist, I&#8217;d say MUST NOT subscribe.  If the page used to exist, the condition could be temporary, but in reality it&#8217;s probably not.  Backing off on the polling interval is one idea; or asking the user; or giving up permanently after a hard-coded number of normal polls.</li>
+<li><samp>500 Internal server error</samp>: not sure about this one either.  If the page used to resolve properly, the condition is almost certainly temporary.  Backing off on the polling interval is one idea.</li>
+<li>Unrecognized HTTP response codes MUST be treated the same as the base code in their class.  For example, all 3xx codes that the application doesn&#8217;t explicitly recognize MUST be treated the same as 300.  Ditto 2xx, 4xx, 5xx.  (Python&#8217;s <code>urllib</code> library gets this wrong.  200 returns the content, but 201 will raise an exception.  One could argue that it&#8217;s the job of the application, not the library, to handle unknown cases.  How much does <em>your</em> library assume you&#8217;re doing yourself?)</li>
+</ul>
+
+<p>SHOULDs:</p>
+
+<ul>
+<li><samp>403 Forbidden</samp>: SHOULD unsubscribe.  RFC 2616 says <q>Authorization will not help and the request SHOULD NOT be repeated.</q></li>
+<li><samp>gzip, deflate</samp>: SHOULD accept.  Send <samp>Accept-encoding</samp> header on request, check <del><samp>Content-Type</samp></del> <samp>Content-Encoding</samp> (thanks Ben!) header on reply.</li>
+<li><samp>Etag</samp>: SHOULD support.  Send <samp>If-None-Match</samp> header on request, check for HTTP code 304 on reply which means feed has not changed.</li>
+<li><samp>Last-Modified</samp>: SHOULD support.  Send <samp>If-Modified-Since</samp> header on request, check for HTTP code 304 on reply which means feed has not changed.</li>
+<li><samp>Referer</samp>: SHOULD leave blank.</li>
+<li><samp>User-Agent</samp>: SHOULD include program name and version number, MAY include URL of program home page.</li>
+</ul>
+
+<p>MAYs:</p>
+
+<ul>
+<li>basic authentication: MAY support</li>
+<li>digest authentication: MAY support</li>
+<li>https: MAY support</li>
+</ul>
+
+<p>Next up: the XML syntax level.  Atom feeds are XML.  Do you handle XML properly?  Are you sure?</p>
+<p class=c>&#167;
+
+<h3 id=comments>Sixty comments here (<a href=/web/20110608052553/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-3673"><p>410. </p>
+<p>Ahh, it seems there is a use for the &#8220;deactivated&#8221; feature we added to RSS Bandit a while ago but never enabled in the UI. Thanks for the pointer. </p>
+<p>As for libraries that stupidly consider the less popular HTTP response codes as errors I have a rant about that at <a href="/web/20110608052553/http://www.kuro5hin.org/story/2003/5/3/23422/87859">http://www.kuro5hin.org/story/2003/5/3/23422/87859</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.kuro5hin.org/user/Carnage4Life/diary' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3673" title="July 21, 2003 @ 12:19 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3674"><p>A quibble: HTTP is not really a transport level protocol &#8211; TCP is the transport protocol.  HTTP is the application protocol, or, if you really want to sound cool, the coordination language.</p>
+<p>Aside from that, thanks for encouraging good web citizenship.</p>
+<p>More recommended reading: Common User Agent Problems from the W3C (<a href="/web/20110608052553/http://www.w3.org/TR/cuap)"><a href="/web/20110608052553/http://www.w3.org/TR/cuap" rel="nofollow">http://www.w3.org/TR/cuap</a>)</a></p>
+<p class=sig>&#8212;&#8201;<cite>matt</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3674" title="July 21, 2003 @ 12:25 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3675"><p>That all seems reasonable to me.  Any special behaviour for 402s, or will that have to wait for Amazon&#8217;s new micropayment service? :)</p>
+<p class=sig>&#8212;&#8201;<cite>Jim Dabell</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3675" title="July 21, 2003 @ 12:26 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3725"><cite><a href='/web/20110608052553/http://www.dashes.com/links/archives/20030720.php#006782' rel='external nofollow' class='url'>anil dash's daily links</a></cite>&#160;(trackback)</li>
+<li id="comment-3676"><p>This is great info&#8230; can you consider this a feature request for your own feedparser.py: It would be damned handy if feedparser.parse() returned the http response code. If it is returned at the same level as &#8216;channel&#8217;, &#8216;etag&#8217;, &#8216;items&#8217;, etc, it shouldn&#8217;t break anything.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://karchner.com/update/' rel='external nofollow' class='url'>Ross</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3676" title="July 21, 2003 @ 1:06 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3677"><p>Great stuff. One addition for aggregator writers. It&#8217;s not enough to just handle these codes. For all the codes that are an error, please provide some obvious feedback to the user as well.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.ecademy.com/' rel='external nofollow' class='url'>Julian Bond</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3677" title="July 21, 2003 @ 1:24 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3678"><p>Nice post. How about exponential backoff for when the server looks in trouble? On a 500 and 503 at minimum. May be overkill if the poll interval is long, like an hour, but if for some awful reason your aggregator is polling once a minute it may be worthwhile.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3678" title="July 21, 2003 @ 1:47 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3726"><cite><a href='/web/20110608052553/http://techno-weenie.com/archives/2003/07/21/003192.php' rel='external nofollow' class='url'>techno weenie</a></cite>&#160;(trackback)</li>
+<li id="comment-3679"><p>I don&#8217;t think HTTP is really a good transport for RSS/Atom items for a few reasons.. Basically the thought of a thousand, or a million, aggregator clients all pounding the same HTTP server looking for new data every hour just seems wrong.</p>
+<p>POP3 and NNTP are better models for this sort of data than HTTP.  Especially relevant is the fact that both those protocols forward data to where it eventually lives on a server close to you.</p>
+<p>Personally I think a new &#8220;Syndication Transport Protocol&#8221;, losely based on NNTP, would be an excellent solution to a number of problems.  For one, it would remove the bandwidth burden from the site publisher, spreading it fairly evenly around the Internet.</p>
+<p>With NNTP, I can post a news article using a very small amount of my own bandwidth, that a million people can read all using a relatively small amount of their own bandwidth.  The content gets mirrored automatically so reachability isn&#8217;t a problem.</p>
+<p>You could do this on top of Atom or RSS now by simply creating a gateway and a new protocol.. I&#8217;ve been experimenting with doing this with RSS, my own NNTP server is here:  <a href="/web/20110608052553/news://food.dhs.org/" rel="nofollow">news://food.dhs.org</a> (copy and paste that into the address bar, it works Outlook Express, I don&#8217;t fully support NNTP yet).</p>
+<p>Project page and source is here:  <a href="/web/20110608052553/http://www.gotdotnet.com/Community/Workspaces/Workspace.aspx?id=937b67a8-123d-4e11-ae71-a9d67aec8447">http://www.gotdotnet.com/Community/Workspaces/Workspace.aspx?id=937b67a8-123d-4e11-ae71-a9d67aec8447</a></p>
+<p>I plan to put together a real RFC type proposal for something like this at some point, but for now it&#8217;s just mostly tossing ideas around.  Still, I think it solves a lot of problems with the current &#8220;one source of data, a million polling aggregators&#8221; model has.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://radio.weblogs.com/0106479/' rel='external nofollow' class='url'>Steve Tibbett</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3679" title="July 21, 2003 @ 2:23 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3680"><p>If an aggregator encounters a 404 or 410, it should probably try to load the root URL and then use RSS discovery to see if the file has changed name, and then update the feed URL in its config file automatically to point to the new URL (if it finds one).</p>
+<p>To give an example, say I have a blog at <a href="/web/20110608052553/http://myblog.com/">http://myblog.com/</a> and a feed at index.rdf. Then I change package and now have a feed at index.xml, with the old feed URL (index.rdf) going 404. The aggregator should fetch <a href="/web/20110608052553/http://myblog.com/">http://myblog.com/</a> and then discover the new feed at index.xml, and then update itself so that it uses the new URL.</p>
+<p>Does that make sense?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.neilturner.me.uk/' rel='external nofollow' class='url'>Neil T.</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3680" title="July 21, 2003 @ 2:25 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3681"><p>our server at work seems to use 300 if you type in something *similiar* to an existing page, and there are several similar pages (say, one with an .xml extension, one with a .php3 extension, and you typed in an .html extension, but that page doesn&#8217;t exist).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.epersonae.com/' rel='external nofollow' class='url'>Elaine Nelson</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3681" title="July 21, 2003 @ 2:32 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3682"><p>I&#8217;d support persistent connections as well.<br />
+Wouldn&#8217;t add much overhead for sites with a single rss file, but would make sense with mega hosting sites like radio.weblogs.com, livejournal.com, or sites with multiple feeds (nytimes?).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://my-weblog.com/epc' rel='external nofollow' class='url'>epc</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3682" title="July 21, 2003 @ 2:37 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3683"><p>Steve: have you looked at <a href="/web/20110608052553/http://www.methodize.org/nntprss/">http://www.methodize.org/nntprss/</a> ?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.manuzhai.nl/' rel='external nofollow' class='url'>Manuzhai</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3683" title="July 21, 2003 @ 3:03 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3684"><p>Re: NNTP-like protocol described by Steve Tibbett.</p>
+<p>I&#8217;m actually against that kind of idea, simply based on Usenet experiences.  The issue I have is that those kinds of local storage techniques on a changing document tend to go out of date, or if there&#8217;s a relay mechanism, the update time can keep some users from getting things in a timely manner.</p>
+<p>If their source for something is constantly out of date, they&#8217;ll move up to a source closer to the original; eventually, they&#8217;ll be right back to pinging the original and the whole chain was a moot point.</p>
+<p>Yes, pinging on the hour is a pain in terms of repeated/unnecessary traffic (another suggestion not by me was a broadcast message when the feed changed instead), but pinging for an RSS/(not)Atom feed is certainly gentler on a server than pinging the web page itself (with all the full text, the graphics, etc) every hour looking for a change.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.celticdistrict.com/joe.html' rel='external nofollow' class='url'>Joe Shelby</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3684" title="July 21, 2003 @ 3:11 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3685"><p>Mark:  outstanding and timely post yet again.  This has made me change my perspective about RSS clients and web integration.  Thank goodness there are people thinking ahead of the curve; I&#8217;m learning more and more each day.</p>
+<p>Steve</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://houseofwarwick.com/' rel='external nofollow' class='url'>Steve Kirks</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3685" title="July 21, 2003 @ 4:39 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3686"><p>Re: syndication over NNTP (or similar protocols).  This has been discussed repeatedly, for instance here:</p>
+<p><a href="/web/20110608052553/http://www.advogato.org/article/651.html">http://www.advogato.org/article/651.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3686" title="July 21, 2003 @ 5:03 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3687"><p>Neil,<br />
+Aggregators shouldn&#8217;t be automatically spidering sites and being abusive bandwidth hogs simply because of a 404 or 410. If the feed moves then the ite owner can use a 301 to redirect the feed or the user can specifically request the aggregator or some other sogftware perform the link autodiscovery.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.kuro5hin.org/user/Carnage4Life/diary/' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3687" title="July 21, 2003 @ 5:13 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3688"><p>Dare,</p>
+<p>That assumes that all site owners have access to and/or the knowledge of how to use a 301 etc.</p>
+<p>Everyone can change a file and change the link text. I don&#8217;t have access to do more than that on my host. I don&#8217;t know how to if I did. Although I could learn. I suspect it would be beyond many people who just want to add some sort of syndication to their blog.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.sevitz.com/' rel='external nofollow' class='url'>Adrian Sevitz</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3688" title="July 21, 2003 @ 5:30 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3727"><cite><a href='/web/20110608052553/http://warwick.typepad.com/main/2003/07/diveintomark_di.html' rel='external nofollow' class='url'>warwick@typepad</a></cite>&#160;(trackback)</li>
+<li id="comment-3689"><p>As a user, I don&#8217;t want a network of mirrors and servers delivering content.  What happens when they lose syncronization (bad spelling)?</p>
+<p>As a web developer, I want a master document set that contains content destined for all browsers, whether that means desktop apps, PDA/handheld devices, phones or syndicated content readers.</p>
+<p>As an app developer, I want one set of web APIs that I can use to write apps for each platform, ensuring that the rendering experience is consistent across devices and platforms.</p>
+<p>..ranting and rambling&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://houseofwarwick.com/' rel='external nofollow' class='url'>Steve Kirks</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3689" title="July 21, 2003 @ 5:58 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3690"><p>Interesting coincidence that the NNTP discussion is happening here today, &#8217;cause it&#8217;s only been a few days since: <a href="/web/20110608052553/http://www.flutterby.com/archives/comments/6357.html">http://www.flutterby.com/archives/comments/6357.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.flutterby.com/' rel='external nofollow' class='url'>Dan Lyke</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3690" title="July 21, 2003 @ 6:10 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3691"><p>As far as I know 500 is temporary &#038; 404 is permanent. At least this is how I&#8217;ve seen it done with some eprocurement stuff bots.</p>
+<p class=sig>&#8212;&#8201;<cite>another Mark</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3691" title="July 21, 2003 @ 7:47 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3692"><p>There is no need for &#8220;as far as I know&#8221; when a definitive resource exists.</p>
+<p><a href="/web/20110608052553/http://www.ietf.org/rfc/rfc2616.txt">http://www.ietf.org/rfc/rfc2616.txt</a></p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3692" title="July 21, 2003 @ 8:56 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3693"><p>epc said: &#8220;I�d support persistent connections as well.&#8221;</p>
+<p>No no no!  The last thing a webserver needs is a ton of connections stuck in TIME_WAIT (or even worse, FIN_WAIT) state.</p>
+<p>I would say &#8220;support HTTP pipelining&#8221; but maybe that&#8217;s what this commenter meant.</p>
+<p class=sig>&#8212;&#8201;<cite>Other Mark</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3693" title="July 21, 2003 @ 8:57 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3694"><p>&#8220;If an aggregator encounters a 404 or 410, it should probably try to load the root URL and then use RSS discovery to see if the file has changed name, and then update the feed URL in its config file automatically to point to the new URL (if it finds one).&#8221;</p>
+<p>Maybe, and only maybe, should it try this with a 404, as I can see people having the location changed and not knowing how to redirect. But it should never do this with a 410. 410 means gone. The feed is no longer in existence. This is not a default state, it must be deliberately set.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3694" title="July 21, 2003 @ 11:59 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3695"><p>I added 2 notes, one giving possible solutions for 404, and added 403.  RFC 2616 says this about 403: &#8220;Authorization will not help and the request SHOULD NOT be repeated.&#8221;  That seems clear enough.  (And why would a feed be forbidden?  Well, Slashdot bans aggressive aggregators that poll more than twice an hour.)</p>
+<p>404 is more problematic; I&#8217;d say the client MAY back off the polling for a while (widen the polling interval), MAY unsubscribe immediately, and SHOULD unsubscribe after a certain timeframe with no change in status (but I don&#8217;t know how long that timeframe should be).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3695" title="July 22, 2003 @ 12:13 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3696"><p>RFC 2616 has no opinion on whether 404 is temporary or permanent.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3696" title="July 22, 2003 @ 12:14 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3697"><p>I&#8217;m all for spidering sites looking for feeds that suddenly go 404, as long as (you know this is coming)&#8230; the aggregator supports robots.txt when it does it.  Hitting one URL over and over again that a user specifically requested is fine; auto-spidering in search of new content sounds to me like it ought to be subject to robots.txt rules.  (A prerequisite of this is that the client sets the User-Agent properly.)</p>
+<p>I don&#8217;t think it rises to the level of a SHOULD.  It&#8217;s a nice MAY though.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3697" title="July 22, 2003 @ 12:20 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3698"><p>Also added a note about 307, which (as far as I can tell) should be treated exactly like 302.</p>
+<p>Anyone who has ever used HTTP code 307, raise your hand&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3698" title="July 22, 2003 @ 12:26 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3699"><p>I think it is very important to emphasize that as<br />
+more and more spiders start crawling that the 304<br />
+be respected and conditional gets are implemented<br />
+by any spider. For more info check out:</p>
+<p><a href="/web/20110608052553/http://fishbowl.pastiche.org/archives/001132.html">http://fishbowl.pastiche.org/archives/001132.html</a></p>
+<p>This is very important for sites that host<br />
+host multiple blogs and I have been thinking of<br />
+creating a black list for those spiders that<br />
+don&#8217;t honor the conditional gets requests and<br />
+crawl too many/often. </p>
+<p>This issue crosses over into aggregators as<br />
+the number of people using aggregators increases.<br />
+Imagine several thousand users using aggregators<br />
+that hit a site that hosts thousands of blogs.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.23pools.com/~lazlo' rel='external nofollow' class='url'>Carl Garland</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3699" title="July 22, 2003 @ 2:18 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3700"><p>Perhaps support of the Expires or Cache-Control directives should also be required. This would allow an aggregator to determine the next time a feed could be polled for updates and could conceivably give the publisher easy control over how often their site is polled. (See <a href="/web/20110608052553/http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</a> for more information on these headers.)  The use of the Expires and Cache-Control headers would seem to be in the same spirit as implementing the etag and if-modified-since headers.  Expires is a nice header to use because it is simple and backward compatible with HTTP/1.0; cache-control is nice because it has more features.</p>
+<p class=sig>&#8212;&#8201;<cite>Sam Greenfield</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3700" title="July 22, 2003 @ 2:23 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3701"><p>Off-topic I know but the revision history doesn&#8217;t show up the change when the &lt;DEL&gt; tags are added around &#8216;content-type&#8217;.  The correction shows up as added, but the new strike-through formatting doesn&#8217;t show as changed.</p>
+<p>Just me being picky I suppose.</p>
+<p class=sig>&#8212;&#8201;<cite>Felix</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3701" title="July 22, 2003 @ 4:26 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3702"><p>HTTP/1.1 is about four years older than Atom, so I don&#8217;t think &#8220;it was in HTTP/1.0&#8243; is something anybody should be interested in. I suppose Expires might be useful, as Phil Ringnalda put it a while ago, for &#8220;those rare sites that are updated by the clock, rather than by when content is available&#8221;.</p>
+<p><a href="/web/20110608052553/http://philringnalda.com/blog/2002/11/lies_damn_lies_and_mod_syndication.php">http://philringnalda.com/blog/2002/11/lies_damn_lies_and_mod_syndication.php</a></p>
+<p class=sig>&#8212;&#8201;<cite>Daryl Oidy</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3702" title="July 22, 2003 @ 4:29 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3703"><p>Mark,</p>
+<p>I&#8217;ve experimented with 302/303/307s.  There are some clients floating about that don&#8217;t understand 303/307 (I think Netscape 4.x is one of them), so they aren&#8217;t really used on websites.</p>
+<p>There&#8217;s no reason not to for Atom.  The HTTP RFC states that a note with accompanying link SHOULD be provided for 307s, but makes it clear that this is due to legacy clients.  I don&#8217;t think Atom needs to be worrying about legacy clients, and so I feel we would be justified in ignoring the SHOULD.</p>
+<p>I&#8217;ll also point out that 303 and 307 are better choices for redirects than 302, as they are unambiguous in the face of a changing method, and 302 is not.</p>
+<p>I would say that by serving Atom, you SHOULD provide temporary redirects with 303 or 307, but MAY provide temporary redirects with 302.</p>
+<p>Are there any HTTP implementations that make this difficult?  I wouldn&#8217;t have thought so, but you never know&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Jim Dabell</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3703" title="July 22, 2003 @ 4:38 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3704"><p>Sorry for the phrase &#8220;As far as I know&#8221; &#8211; the rfc may be definitive but it does leave the interpretation of whether 404 &#038; 500 are permanent or  temporary up to the user agent. </p>
+<p>What I was trying to say is I have have seen implementations treating 404&#8242;s as an immediate failures and retrying 500&#8242;s once an hour for 12 hours before giving up permanently. This makes sense to me, as does the reduced polling interval on a 500.</p>
+<p class=sig>&#8212;&#8201;<cite>another Mark</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3704" title="July 22, 2003 @ 4:58 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3705"><p>The Expires and Cache-Control headers could be very useful for aggregators. Most people are aware of them only as a way to PREVENT caching of pages &#8212; whereas with feed aggregators we want to PROMOTE caching, without compromising freshness, and this what these headers were really intended for.</p>
+<p>They tell the reader when the resource in question should rechecked for freshness (that is, a minimum time before bothering to send an If-Modified-Since or If-None-Match request). It does not guarantee that the resource WILL change at that time. (Neither does it forbid you from rechecking anyway, as when the user does Shift+Refresh or whatever.)</p>
+<p>If you post daily on average then you might as well set the Expires header on the feed to, say, 4 hours from your last post.  If you post hourly during part of the day, sufficiently wily authoring software could calculate the Expires header automatically to express a shorter freshness interval during the active part of the day.</p>
+<p>If aggregators take note of Expired headers then this allows for most   the features of the &#8216;poll-interval&#8217; or &#8216;syndication info&#8217; modules people have for RSS 1.0., and the skipHours or whatever it is in RSS 2.0.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.alleged.org.uk/pdc/' rel='external nofollow' class='url'>Damian Cugley</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3705" title="July 22, 2003 @ 6:47 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3706"><p>&#8220;Transport level&#8221;? Heh. Please Do Not Throw Sausage Pizza Away.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3706" title="July 22, 2003 @ 7:39 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3707"><p>One question about the User Agent string:  &#8220;&#8230;MAY include URL of program home page.&#8221;</p>
+<p>How about also &#8220;MAY include URL of program *operator&#8217;s* home page&#8221;?  That is, I&#8217;d include the URL to my blog in my user agent in order to leave footprints in the logs of feed owners?  Better than the previous hackish practice of dumping that URL into the referer.</p>
+<p>Though, I suppose putting it in the User Agent is pretty hackish as well.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.decafbad.com/blog/' rel='external nofollow' class='url'>l.m. orchard</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3707" title="July 22, 2003 @ 12:47 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3708"><p>according to:</p>
+<p><a href="/web/20110608052553/http://www.w3.org/Protocols/HTTP/HTRESP.html">http://www.w3.org/Protocols/HTTP/HTRESP.html</a></p>
+<p>302 is actually &#8220;Found 302&#8243;. 307 is an under-used way to say &#8220;this page will redirect temporarily. one would use 302 for something like /log -> /log/2003/07, which changes to /log/2003/08 when it&#8217;s august, but will always be /log. you&#8217;d use 307, for example, if you&#8217;re temporarily redirecting to /index.html to /gone.html or something similar.</p>
+<p>that said, it&#8217;d be nice to see people using 3xx redirects per the spec, so my thanks for including them all here.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://louisbennett.com/' rel='external nofollow' class='url'>louis bennett</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3708" title="July 22, 2003 @ 2:33 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3709"><p>I meant HTTP/1.1 pipelining/persistency, not the HTTP/1.0 hack.</p>
+<p>I also support cache-control and expires as &#8220;shoulds&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://my-weblog.com/epc' rel='external nofollow' class='url'>epc</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3709" title="July 22, 2003 @ 2:47 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3710"><p>l.m.: Using it in the Referer [sic] is totally going against its uses. User-Agent, though, is MADE to hold information about the program, app or script that&#8217;s fetching the information, so that&#8217;s a bit more semantically clean.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3710" title="July 22, 2003 @ 4:12 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3711"><p>Program name + version number SHOULD go in User-Agent, in the form &#8220;ProgramName/version&#8221;.  e.g. &#8220;FooAgg/2.1&#8243;.  This is straight from RFC 2616.</p>
+<p><a href="/web/20110608052553/http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.43">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.43</a></p>
+<p>Anything beyond that (unique subscriber ID, program home page) is optional.  I mention program home page only because many anal-retentive overworked sysadmins will ban unknown user-agents first and ask questions later; giving the aggregator&#8217;s home page at least gives them chance to identify it.  Don&#8217;t assume everyone in the world (even the online world) knows what a news aggregator is, or recognizes your little program by name.</p>
+<p>Stuffing other information in User-Agent (such as subscriber home page or a unique per-subscriber ID) is beyond the scope of this RFC.  There are privacy implications, and aggregator vendors and customers can work that out on their own.</p>
+<p>I&#8217;m mainly interested in stopping referrer abuse.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3711" title="July 22, 2003 @ 4:31 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3712"><p>Louis,</p>
+<p>From that page you link to:</p>
+<p>&#8220;This is a historic document and is not accurate anymore. For up-to-date details on the HTTP specification, see the latest HTTP/1.1 drafts&#8221;</p>
+<p>I&#8217;m not even sure what distinction you are trying to make between the two codes.  They are both temporary redirects.  Directly from the RFC:</p>
+<p>&#8220;10.3.3 302 Found</p>
+<p>The requested resource resides temporarily under a different URI.&#8221;</p>
+<p>&#8220;10.3.8 307 Temporary Redirect</p>
+<p>The requested resource resides temporarily under a different URI.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite>Jim Dabell</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3712" title="July 22, 2003 @ 5:45 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3713"><p>Mark:</p>
+<p>I&#8217;m using your feedparser module. How can I access the HTTP response code when retrieving a feed?</p>
+<p>I&#8217;m curious, because I would really want to implement what you suggest here</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://sudaca.bloggedup.com/' rel='external nofollow' class='url'>Ricardo Reyes</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3713" title="July 22, 2003 @ 9:58 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3714"><p>Ricardo: currently you can&#8217;t.  :(  But I&#8217;m working on version 3.0, which will expose the full set of HTTP headers (among other improvements).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3714" title="July 23, 2003 @ 12:14 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3715"><p>Privacy issues aside (for the moment), there is a request header called &#8220;FROM&#8221;, RFC 2616 s14.22 describes it. </p>
+<p>Now, it does say it should, if given, contain an Internet e-mail address for the human user who controls the requesting user agent.  SHOULD isn&#8217;t MUST though, so what putting the user&#8217;s homepage there?</p>
+<p>It also says &#8220;In particular, robot agents SHOULD include this header so that the person responsible for running the robot can be contacted if problems occur on the receiving end.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://iawiki.net/EricScheid' rel='external nofollow' class='url'>Eric Scheid</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3715" title="July 23, 2003 @ 1:40 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3728"><cite><a href='/web/20110608052553/http://www.intertwingly.net/blog/1526.html' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;(trackback)</li>
+<li id="comment-3716"><p>Reposted from <a href="/web/20110608052553/http://www.intertwingly.net/blog/1526.html">http://www.intertwingly.net/blog/1526.html</a></p>
+<p>Kinda ironic that a post on application-level semantics has the word transport-level in the title. T is for Transfer, see: <a href="/web/20110608052553/http://lists.w3.org/Archives/Public/xml-dist-app/2002Mar/0322.html">http://lists.w3.org/Archives/Public/xml-dist-app/2002Mar/0322.html</a></p>
+<p>You&#8217;re half way there, Mark. :-)</p>
+<p class=sig>&#8212;&#8201;<cite>Arien</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3716" title="July 23, 2003 @ 8:37 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3717"><p>Pedants&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3717" title="July 23, 2003 @ 9:33 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3718"><p>I wish that someone had a sample implementation out there in the language of their choice to take a look see at, that would make life much easier.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://john.beimler.org/' rel='external nofollow' class='url'>John Beimler</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3718" title="July 23, 2003 @ 10:28 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3729"><cite><a href='/web/20110608052553/http://sudaca.bloggedup.com/archives/000019.html' rel='external nofollow' class='url'>Rinconcito Sudaca</a></cite>&#160;(trackback)</li>
+<li id="comment-3719"><p>re: 503 &#8211; how long to wait before re-polling? That&#8217;s what the Retry-After header is for&#8230;</p>
+<p><a href="/web/20110608052553/http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.37">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.37</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://iawiki.net/EricScheid' rel='external nofollow' class='url'>Eric Scheid</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3719" title="July 24, 2003 @ 12:00 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3730"><cite><a href='/web/20110608052553/http://blogs.indeyets.pp.ru/archives/indy/000633.php' rel='external nofollow' class='url'>Notes written on the world's last-standing wall...</a></cite>&#160;(trackback)</li>
+<li id="comment-3720"><p>Pedants?</p>
+<p class=sig>&#8212;&#8201;<cite>Arien</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3720" title="July 24, 2003 @ 3:30 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3721"><p>> Pedants?</p>
+<p>As in &#8220;The Pirates of &#8230;&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://mah.everybody.org/weblog/' rel='external nofollow' class='url'>Mark A. Hershberger</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3721" title="July 24, 2003 @ 5:38 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3722"><p>Thanks for the reference.  I have been meaning to implement a better HTTP engine in my aggregator, and this is just the type of definition I needed.  Awsome!</p>
+<p>MyHeadlines, <a href="/web/20110608052553/http://www.jmagar.com/">http://www.jmagar.com</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://www.jmagar.com/' rel='external nofollow' class='url'>Mike Agar</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3722" title="July 24, 2003 @ 9:46 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3731"><cite><a href='/web/20110608052553/http://www.mnot.net/blog/archives/000117.html' rel='external nofollow' class='url'>mnot's weblog</a></cite>&#160;(trackback)</li>
+<li id="comment-3723"><p>A very handy summary of the issues. I&#8217;ve linked it from <a href="/web/20110608052553/http://rdfweb.org/topic/ScutterSpec">http://rdfweb.org/topic/ScutterSpec</a> since many of the issues are similar for FOAF aggregators.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608052553/http://rdfweb.org/people/danbri/' rel='external nofollow' class='url'>Dan Brickley</a></cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3723" title="July 28, 2003 @ 5:25 pm"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3724"><p>The 4xx base class should have a specified handling, IMHO. The spec says you SHOULD NOT repeat a request that got a 400 without modifying the request, which suggests that the best behaviour already exhibited above for other response codes is to unsubscribe. I&#8217;d be interested to hear other people&#8217;s views &#8230;</p>
+<p>(Also, is there any chance of this list making its way into a permanent quotable document, or something on the Atom wiki or similar?)</p>
+<p class=sig>&#8212;&#8201;<cite>James Aylett</cite>&#160;<a class=p href="/web/20110608052553/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level#comment-3724" title="July 29, 2003 @ 10:02 am"><img alt="#" src=/web/20110608052553im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3732"><cite><a href='/web/20110608052553/http://sudaca.bloggedup.com/archives/000020.html' rel='external nofollow' class='url'>Rinconcito Sudaca</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110608052553/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110608052553/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110608052553/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110608052553/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110608052553/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.405 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-24 00:22:24 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 5:25:53 Jun 8, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:13:23 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

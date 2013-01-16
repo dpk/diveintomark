@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Essentials [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806094037/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806094037/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806094037/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806094037/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806094037im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806094037/http://diveintomark.org/archives/2004/04/19/feed-parser-beta-22" title="Universal Feed Parser 3.0 beta 22">
+<link rel=next href="/web/20110806094037/http://diveintomark.org/archives/2004/05/02/user-friendly-feeds" title="Another crack at user-friendly feeds">
+<link rel=up href="/web/20110806094037/http://diveintomark.org/archives#p1496" title="May 2004">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Essentials Comments Feed" href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806094037/http://diveintomark.org/' />
+<link rel='prev' title='Universal Feed Parser 3.0 beta 22' href='/web/20110806094037/http://diveintomark.org/archives/2004/04/19/feed-parser-beta-22' />
+<link rel='next' title='Another crack at user-friendly feeds' href='/web/20110806094037/http://diveintomark.org/archives/2004/05/02/user-friendly-feeds' />
+<link rel='canonical' href='/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials' />
+<link rel='shortlink' href='/web/20110806094037/http://diveintomark.org/?p=1496' />
+<meta name="description" content="This should not come as a raging shock to anyone, but I am becoming a technological curmudgeon. I have developed ways of doing things with computers that work for me, and I find there are now a wide variety of things I am no longer willing to discuss doing differently.">
+<meta name="keywords" content="apache,debian,emacs,firefox,gmail,libxml2,linux,mozilla,osx,rsync,ssh,thunderbird,utilities">
+<link href="/web/20110806094037cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806094037/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2004\/05\/01\/essentials";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2004/05/01/essentials" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806094037" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514122234/http://diveintomark.org/archives/2004/05/01/essentials" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:40:37 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514122234/http://diveintomark.org/archives/2004/05/01/essentials" title="12:22:34 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:40:37 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620081531/http://diveintomark.org/archives/2004/05/01/essentials" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:40:37 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806094037*/http://diveintomark.org/archives/2004/05/01/essentials" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>50 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Jun 06 - 6 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000005552142_2007:-1:310111100311_2008:-1:101111011000_2009:-1:001000000000_2010:-1:000001000011_2011:7:000010010000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806094037/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806094037/http://diveintomark.org/archives#p1496">May 1, 2004</a> &#8227;
+<h2>Essentials</h2> (<a href="/web/20110806094037/http://diveintomark.org/tag/apache" rel="tag">apache</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/debian" rel="tag">debian</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/emacs" rel="tag">emacs</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/firefox" rel="tag">firefox</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/gmail" rel="tag">gmail</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/libxml2" rel="tag">libxml2</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/linux" rel="tag">linux</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/mozilla" rel="tag">mozilla</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/osx" rel="tag">osx</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/rsync" rel="tag">rsync</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/ssh" rel="tag">ssh</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/thunderbird" rel="tag">thunderbird</a>, <a href="/web/20110806094037/http://diveintomark.org/tag/utilities" rel="tag">utilities</a>)</div>
+<p>This should not come as a raging shock to anyone, but I am becoming a technological curmudgeon.  I have developed ways of doing things with computers that work for me, and I find there are now a wide variety of things I am no longer willing to discuss doing differently.</p>
+
+<ol>
+<li><p><strong>Text editing: <a href="/web/20110806094037/http://www.gnu.org/software/emacs/emacs.html">GNU/Emacs</a></strong>.  All non-cross-platform editors are out; I do serious text editing (read: writing 500 page books in Docbook for money) on too many platforms on a regular basis to learn new keyboard shortcuts and macros, or to try to remember where I am today.  All editors that don&#8217;t work identically in console mode (over an ssh connection) are out for the same reason.  All non-macro-customizeable editors are out.  All non-syntax-highlighting editors are out (I work primarily in XML, XSL, CSS, HTML, Python, and recently Java).</p>
+<p>That doesn&#8217;t leave a lot.  I know you can script vi with Python, and I know you can use real arrow keys now, and I&#8217;ve tried vi and vim and gvim and Lemmy and all the rest; they just don&#8217;t fit my brain.  I&#8217;ve tried <a href="/web/20110806094037/http://www.xemacs.org/">XEmacs</a>, but its <kbd>dired</kbd> functionality works much differently than GNU/Emacs, and I use <kbd>dired</kbd> a lot, and I like how GNU/Emacs works better.  I did steal a bunch of the packaged editing modes from an XEmacs installation and throw them in my GNU/Emacs site-lisp, though, so thanks for that.</p>
+<p>Reasons I would leave GNU/Emacs: XEmacs really is nicer in many ways, much more professionally packaged and maintained.  If I&#8217;m feeling brave, I might give it another shot and see if I can get its <kbd>dired</kbd> to make sense to me.  Oh, and an official Mac OS X port would be nice; I&#8217;m using this <a href="/web/20110806094037/http://www.mindlube.com/products/emacs/">unofficial build of GNU/Emacs for Panther</a>, which works well today, but it&#8217;s <a href="/web/20110806094037/http://members.shaw.ca/akochoi-emacs/">no longer being maintained</a>.  *sigh*  There&#8217;s always <a href="/web/20110806094037/http://homepage.mac.com/nand/emacsbuild/">nightly builds</a> (thanks <a href="/web/20110806094037/http://www.the-forgotten.org/">Michael</a>).</p>
+</li>
+<li><p><strong>Web browsing: <a href="/web/20110806094037/http://www.mozilla.org/products/firefox/">Mozilla Firefox</a></strong>.  Again, all non-cross-platform browsers are out; I set up my preferences identically on all platforms and rely on those preferences wherever I am.</p>
+<p>Reasons I would leave Firefox: some important UI feature, or lack of support for some emerging web standard.  I&#8217;ve seen all the emerging web standards, and I don&#8217;t see any must-haves.</p>
+</li>
+<li><p><strong>Mail: <a href="/web/20110806094037/http://www.mozilla.org/products/thunderbird/">Mozilla Thunderbird</a> over IMAP</strong>.  Identical cross-platform functionality is less of an issue here, since I don&#8217;t spend that much time in my mail client (relatively speaking).  But IMAP is essential (too many computers, and all webmail systems suck, and the ones that don&#8217;t suck have no data export), and Thunderbird&#8217;s IMAP support is top-notch.  Mail.app is close, and it has better indexing and searching.  Every few months I take all the messages I no longer care about having easy access to from anywhere, and download them to my Mac via Mail.app via POP, stick them in folders based on year (I have mail going back to 1993), and those mbox files get thrown into the daily backup rotation and archived in multiple places.  A few times a year, I find a reason to search <em>all</em> my mail for something, and I do it in Mail.app.  Of course if my Mac is not convenient, I can ssh into it and grep through the mbox files manually.</p>
+<p>Reasons I would leave Thunderbird: stopped being actively developed, while having showstopping bugs.</p>
+<p>Reasons I would leave Mail.app: when GMail supports bulk import and easier SSL support (yes I know you can get it by manually changing the URL&#8230; every time you log in), I would consider using it as a searchable repository.  I would still use some local solution like Mail.app for permanent archiving.  Even Google won&#8217;t last forever.</p>
+</li>
+<li><p><strong>XML parsing: <a href="/web/20110806094037/http://www.xmlsoft.org/">libxml2</a></strong>.  It&#8217;s <a href="/web/20110806094037/http://xmlbench.sourceforge.net/results/benchmark200402/index.html">faster than anything</a>, has <a href="/web/20110806094037/http://xmlbench.sourceforge.net/results/features200402/index.html">bindings for everything</a>, and is insanely conformant to all specifications it claims to support.  Also, it integrates with <a href="/web/20110806094037/http://www.gnu.org/software/libiconv/">libiconv</a> to handle every character encoding ever.  Why doesn&#8217;t everyone use iconv?  Character encoding is a solved problem.</p>
+<p>Reasons I would leave libxml2: none.</p>
+</li>
+<li><p><strong>Remote connections: ssh</strong>.  An obvious one, but I&#8217;m surprised how few people know how much it can do.  I set up SSH <em>all the time</em> to forward random ports from one machine to another.  I tunnel rsync over ssh.  I tunnel cvs over ssh.  I send outgoing mail by forwarding port 25 to my mail server (this is in fact the only way to send mail through my mail server; I&#8217;ve set it up to only accept outgoing mail from local users).</p>
+<p>Reasons I would leave ssh: none.</p>
+</li>
+<li><p><strong>Backup and mirroring: rsync</strong>.  <kbd>rsync -essh -rtpvz</kbd> rocks.  Really, there&#8217;s nothing more to say.  Learn it.  Use it.  Love it.  Here&#8217;s a good rsync anecdote: in my last job, I worked on a project that was doing daily (and sometimes more-than-once-per-day) builds of a 100 MB installer.  Near the end of the release cycle, we were putting each daily build on a private web server for the client to download and test.  Uploading the entire build took over a hour on my capped DSL line.  It turns out that the fastest way to do this is to ssh into the server, duplicate yesterday&#8217;s build to a file with today&#8217;s date, then rsync today&#8217;s build up to the server.  rsync magically figures out which parts of the installer have changed (usually not more than a few KB) and synchronizes the build in under a minute.  I have no idea how it does that.  I read once that it was somebody&#8217;s PhD project.  Thank God for smart people.</p>
+<p>If you&#8217;re mirroring stuff from one Mac to another, and you care about resource forks, install <a href="/web/20110806094037/http://www.macosxlabs.org/RsyncX/RsyncX.html">RsyncX</a> on both machines and breathe normally.</p>
+<p>Reasons I would leave rsync: none.</p>
+</li>
+<li><p><strong>Web server: <a href="/web/20110806094037/http://httpd.apache.org/">Apache</a></strong>.  IIS is out because it only runs on Windows.  I&#8217;m not interested in specialty web servers (I&#8217;ve tried, for internal projects, and always eventually needed enough functionality that we switch to Apache, or wish we had).  I&#8217;m not interested in proprietary add-ons or derivatives of Apache, although if you have to extend a web server, Apache is a great choice.  I just don&#8217;t need to.</p>
+<p>Reasons I would leave Apache: none.</p>
+</li>
+<li><p><strong>Server: Debian GNU/Linux</strong>.  I&#8217;ve tried RedHat, Mandrake, Gentoo, and FreeBSD, but the fanatical devotion of the Debian package maintainers makes the difference.</p>
+<p>Reasons I would leave Debian: stopped being maintained.</p>
+</li>
+</ol>
+
+<p>Of course, there are also a wide variety of things for which I have no strong allegiance to one tool over another.</p>
+
+<ol>
+<li>instant messaging (Currently using Trillian on Windows, GAIM on Linux, Adium on Mac OS X.)</li>
+<li>IRC chat (Currently using Chatzilla, which sucks because it means installing the entire Mozilla suite and throwing away 60 MB for an IRC chat client, but my new laptop has more then enough memory, so what the heck. <strong>Update:</strong> <a href="/web/20110806094037/http://www.hacksrus.com/~ginda/chatzilla/">Chatzilla on Firefox</a>.  Woohoo!  Gotta love a domain name like <code>hacksrus.com</code>.  And with a <a href="/web/20110806094037/http://diveintomark.org/archives/2002/10/04/history_of_the_tilde">tilde in the URL</a> to boot!)</li>
+<li>photo editing (Currently using GIMP and Paint Shop Pro on Windows, GIMP on Linux, and an old version of Photoshop on Mac OS X.  I have very light photo editing requirements, so it&#8217;s not worth upgrading to the latest version of Photoshop.)</li>
+<li>music management/ripping/burning (Currently using iTunes on Windows and Mac OS X, but I&#8217;ve never bought anything from the iTunes Music Store, so no lock-in.)</li>
+<li>syndicated feed reader (Currently back to using <a href="/web/20110806094037/http://www.bloglines.com/">Bloglines</a> after paying for <a href="/web/20110806094037/http://www.bradsoft.com/feeddemon/index.asp">FeedDemon</a> and being underwhelmed by its Atom support and the general lack of development&#8230; yeah <a href="/web/20110806094037/http://nick.typepad.com/blog/2004/week12/index.html">I know that&#8217;s rude</a>, and I wish Nick the best, and I hope he&#8217;s back on his feet and improving what could be the best feed reader in the world.)</li>
+<li>weblog publishing tool (Currently using Movable Type 3.0 beta, plus lots of macros and customizations like a custom URL scheme, so there&#8217;s a relatively high switching cost.)</li>
+<li>source control (Currently using CVS, looked at Subversion last November, and again when it hit 1.0, and they had showstoppers like the inability to use digest authentication, forcing me to choose between basic authentication (which is no better than CVS pserver) or giving all my CVS users local accounts and tunneling over ssh (which is no better than CVS ext).  Yeah, I know about atomic commits, and they&#8217;re nice, but I&#8217;m not doing large-scale development, and rollbacks and tagging are a low priority for me.)</li>
+<li>scripting language (Currently using Python, but I&#8217;m bored, or maybe just exhausted from writing a book on it, so I&#8217;m idly looking around for My Next Programming Language.)</li>
+</ol>
+<p class=c>&#167;
+
+<h3 id=comments>Twenty six comments here (<a href=/web/20110806094037/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li class=me id="comment-5694"><p>For example, it would be nice to have a publishing tool that generated valid markup for the new MTCommentFields template tag.  Grr.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5694" title="May 1, 2004 @ 1:17 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5695"><p>Or updated the comment count on the home page when I approve a new comment.  Or remembers my URL between comments.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5695" title="May 1, 2004 @ 1:30 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5696"><p>What is your all-platforms solution to filtering your mail? Do you duplicate all the rules in each of your mail clients?</p>
+<p>I have a similar setup, except in addition I use Horde&#8217;s IMP to read webmail (I can&#8217;t make an IMAP connection from computers at work).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://fatcaterpillar.org/blog/' rel='external nofollow' class='url'>Stewart Johnson</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5696" title="May 1, 2004 @ 2:11 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5697"><p><a href="/web/20110806094037/http://extensionroom.mozdev.org/more-info/chatzilla">http://extensionroom.mozdev.org/more-info/chatzilla</a><br />
+(Chatzilla plugin for FireFox.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://annevankesteren.nl/' rel='external nofollow' class='url'>Anne</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5697" title="May 1, 2004 @ 2:34 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5698"><p>Re: mail filtering.  I do it on the server (I run my own mail server).  The only major thing I need to do on each client is train the Bayesian spam filtering (which I use as a fallback after using SpamAssassin on the server).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5698" title="May 1, 2004 @ 3:06 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5699"><p>I hope you discover Ruby as your next language if you still feel like using a scripting language. It would be nice to have another book about Ruby.</p>
+<p>But, please, not another book about Java.</p>
+<p>Maybe if you are more for a statically compiled language have a look at D. It is very promising too, but has almost no media coverage.</p>
+<p><a href="/web/20110806094037/http://www.digitalmars.com/d/">http://www.digitalmars.com/d/</a></p>
+<p class=sig>&#8212;&#8201;<cite>ILikeRuby</cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5699" title="May 1, 2004 @ 3:10 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5700"><p>I&#8217;d like to see more people post like this and maybe even have a machine-readable version of this information. A &#8220;digital life colophon&#8221; if you like. see <a href="/web/20110806094037/http://jtauber.com/blog/2004/05/01/digital_life_colophon">http://jtauber.com/blog/2004/05/01/digital_life_colophon</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://jtauber.com/blog/' rel='external nofollow' class='url'>James Tauber</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5700" title="May 1, 2004 @ 3:23 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5701"><p>Hi Mark, you might want to try Miranda (miranda-im.org) for instant messaging on Windows. It has built-in support for ICQ, MSN, AOL and IRC (the IRC client rocks on simplicity). And you can get a Yahoo plug-in too&#8230;</p>
+<p><a href="/web/20110806094037/http://jonasgalvez.com/unsorted/mirandarocks.gif">http://jonasgalvez.com/unsorted/mirandarocks.gif</a> (recent screenshot)<br />
+<a href="/web/20110806094037/http://www.coincoins.net/index.php?id=50">http://www.coincoins.net/index.php?id=50</a> (Yahoo plug-in for Miranda)</p>
+<p class=sig>&#8212;&#8201;<cite>Jonas Galvez</cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5701" title="May 1, 2004 @ 4:03 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5702"><p>Pretty much agreeable, anyone that doesn&#8217;t use IMAP is a fool but GNU/Emacs, I feel naked without my two modes a la Vim.</p>
+<p>I&#8217;m still amazed by the amount of people using bloglines, I&#8217;m surprised you haven&#8217;t commented on the inaccessibility of the design bloglines uses Mark. Plus I&#8217;ve always felt you miss something by not visiting the website your reading the post from, but that&#8217;s personal thing.</p>
+<p>You may be bored of Python Mark, but spend ten minutes writing something in PHP and I&#8217;m sure you&#8217;ll find your way back :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://www.ndunn.com/' rel='external nofollow' class='url'>Neil Dunn</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5702" title="May 1, 2004 @ 4:44 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5703"><p>Mark &#8212; I don&#8217;t know how much of your IRC time is spent on OS X, but I&#8217;ve fallen in love with Colloquy (Les Orchard has a nice summary of what&#8217;s nice about it here (<a href="/web/20110806094037/http://www.decafbad.com/blog/2004/02/12/colloquy_irc">http://www.decafbad.com/blog/2004/02/12/colloquy_irc</a>  For cross-platform IRC, I like X-Chat.  For cross-platform text editing, there&#8217;s also jEdit.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://www.freeke.org/ffg' rel='external nofollow' class='url'>d.w.</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5703" title="May 1, 2004 @ 6:45 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5704"><p>Yeah, I&#8217;ve tried X-Chat and wasn&#8217;t that impressed.  Colloquy is sweet, and I have it installed right now, but earlier versions tended to chew up a phenomenal amount of memory if you left a channel open too long.  Dunno if this is fixed yet.</p>
+<p>The biggest feature I&#8217;m looking for in an IRC client is support for /ignore.  Chatzilla just added it relatively recently, and it still doesn&#8217;t persist across relaunch.  Feh.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5704" title="May 1, 2004 @ 7:25 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5705"><p>Not that using iTMS results in lock-in: <a href="/web/20110806094037/http://nanocrew.net/blog/apple/huntingplayfair.html">http://nanocrew.net/blog/apple/huntingplayfair.html</a></p>
+<p class=sig>&#8212;&#8201;<cite>TRS-80</cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5705" title="May 2, 2004 @ 2:12 am"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5706"><p>Mark,</p>
+<p>What problems did you have with Feed Demon&#8217;s Atom support?  I&#8217;m using the current beta and it works pretty much how I&#8217;d expect it to.  I&#8217;m sure Nick would appreciate bug reports, and I&#8217;d be happy to provide them for him.</p>
+<p>Oh, and it&#8217;s good to see comments back!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://www.koziarski.net/' rel='external nofollow' class='url'>Koz</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5706" title="May 2, 2004 @ 3:01 am"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5707"><p>This little extension for Firefox is a godsend: </p>
+<p><a href="/web/20110806094037/http://cgi29.plala.or.jp/~mozzarel/addon/firefox/bookmarksftp/bookmarksftp.xpi">http://cgi29.plala.or.jp/~mozzarel/addon/firefox/bookmarksftp/bookmarksftp.xpi</a></p>
+<p>It&#8217;ll keep all your bookmarks synched across all your PCs without you having to lift a finger.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://wilyfox.com/' rel='external nofollow' class='url'>Chris</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5707" title="May 2, 2004 @ 8:10 am"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5708"><p>re: lock-in.  I&#8217;d rather not have to break the law and hunt down illegal 3rd-party apps on underground sites to preserve my investment.  Which is not to say I support Apple&#8217;s jihad against PlayFair (and going after the site in India was *really* stretching it), and not to say that I think PlayFair shouldn&#8217;t be legal, but the fact remains that it&#8217;s *not* legal, at least not in the U.S.  That needs to be solved in law, not in code.  I&#8217;ve written about this before.</p>
+<p>Meanwhile, Apple just changed the rules (and applied them retroactively on already-bought music) about what you can and can&#8217;t do with things you&#8217;ve already purchased.  Man, if that doesn&#8217;t give you the willies, I want what you&#8217;re smoking.</p>
+<p>Then I look at the list of new &#8220;features&#8221; in iTunes 4.5, and I see the writing on the wall.  More and more tie-ins the the iTMS, fewer and fewer useful features that don&#8217;t involve lock-in to Apple&#8217;s &#8220;DRM-for-the-rest-of-us&#8221;.</p>
+<p>When a majority of your time after an upgrade is spent restoring functionality, or hiding unwanted &#8220;helpful&#8221; features, you know it&#8217;s time to switch tools.  I felt this way upgrading from Windows 2000 to XP.  I&#8217;ve written about that too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5708" title="May 2, 2004 @ 9:21 am"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5709"><p>re: FeedDemon.  Well, you can start with my b-links feed, which is Atom now, and just about the simplest Atom you&#8217;ll ever find: [entry]s with [link]s and plain-text [summary]s.  FeedDemon doesn&#8217;t display the summary.  (Making it an HTML summary doesn&#8217;t appear to help; it just never displays [summary].)</p>
+<p><a href="/web/20110806094037/http://diveintomark.org/xml/blink.xml">http://diveintomark.org/xml/blink.xml</a></p>
+<p>This was reported in the forums almost 2 months ago.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5709" title="May 2, 2004 @ 9:45 am"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5710"><p>Re: bookmarks.  I don&#8217;t keep bookmarks.  Well, I keep them until the end of the day, when I either b-link them or delete them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5710" title="May 2, 2004 @ 2:24 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5711"><p>Regarding Your Next Programming Language: Have you looked at Ruby? No? Yes? Have a look at Ruby. Being a beginner with Python, I&#8217;d value anything you have to say about Ruby, as compared to Python, quite highly.</p>
+<p>Nice to see that the comments section is open around here again.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://jogin.com/weblog/' rel='external nofollow' class='url'>T. Jogin</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5711" title="May 2, 2004 @ 3:35 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5712"><p>I had a long period in which I was obsessed by the magical rsync. I recommend Andrew Tridgell&#8217;s thesis  (at <a href="/web/20110806094037/http://samba.org/~tridge/phd_thesis.pdf">http://samba.org/~tridge/phd_thesis.pdf</a> ), which describes rsync in detail to anyone with an interest in networking or data structures, and an interest in rsync in particular. It&#8217;s a remarkably clear, engagingly written document.</p>
+<p class=sig>&#8212;&#8201;<cite>Paul Ford</cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5712" title="May 2, 2004 @ 3:36 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5713"><p>I&#8217;d actually recommend against learning Ruby, unless your goal is to make a concerted effort to knock Sam Ruby down a few rungs in Google.</p>
+<p>This isn&#8217;t to say I don&#8217;t like Ruby: it&#8217;s my scripting language of choice. But I suspect you&#8217;d have exactly the same problems moving to Ruby that I did whenever I tried to learn Python. The languages fill an identical niche, but are different enough that someone proficient in one will feel uncomfortable and unproductive in the other, _without_ the benefit of feeling they&#8217;re doing anything novel in the process.</p>
+<p>If you&#8217;re going to switch scripting languages, pick something alien enough that the struggle seems worthwhile.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://fishbowl.pastiche.org/' rel='external nofollow' class='url'>Charles Miller</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5713" title="May 2, 2004 @ 5:37 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5714"><p>I&#8217;m not sure how much instant messaging you do, or how important certain features are to you with mediums like aim (such as profiles), but it would probably be a good idea to check out Gush &#8211; <a href="/web/20110806094037/http://www.2entwine.net/">http://www.2entwine.net</a> . It&#8217;s a neat application that allows you to read RSS feeds as well as interface with Jabber, AIM, MSN, and Yahoo.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://www.symcorr.com/mark/' rel='external nofollow' class='url'>Mark Elliot</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5714" title="May 2, 2004 @ 7:54 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5715"><p>For what it&#8217;s worth, the problem with digest auth and Subversion was an Apache bug, not a Subversion bug, and it&#8217;s been corrected in recent versions of Apache 2.</p>
+<p class=sig>&#8212;&#8201;<cite>Garrett Rooney</cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5715" title="May 2, 2004 @ 11:24 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5716"><p>I&#8217;d always read good things about rsync.  I knew that it was uber-fast.  I knew that I should be using it.  But I wasn&#8217;t.  This post finally gave me that kick in the pants that I needed to get started with it.  The simple syntax you posted worked perfectly for me since I already had key-based ssh authentication running.  Thanks for that, Mark!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://speed.insane.com/' rel='external nofollow' class='url'>Scott Johnson</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5716" title="May 3, 2004 @ 9:38 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5717"><p>Re: Colloquy and memory usage</p>
+<p>I think newer builds of Colloquy do *much* better on memory usage.  Plus, I threw together a style that limits the message scrollback, which helps keep down memory usage too.</p>
+<p>Eh, but if you like what you&#8217;ve got, this is probably not enticing :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://www.decafbad.com/blog/' rel='external nofollow' class='url'>deusx</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5717" title="May 4, 2004 @ 12:07 am"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5718"><p>Even though you say you would never leave rsync, you should at least take a peek at rdiff-backup if you want to be able to restore from incremental backups:</p>
+<p><a href="/web/20110806094037/http://rdiff-backup.stanford.edu/">http://rdiff-backup.stanford.edu/</a></p>
+<p class=sig>&#8212;&#8201;<cite>BiteyMcStink</cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5718" title="May 4, 2004 @ 12:54 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5719"><p>For IM on Windows, I&#8217;d suggest you look at the win32 builds of gaim ( <a href="/web/20110806094037/http://gaim.sf.net/win32">http://gaim.sf.net/win32</a> ).  Supports just about everything that the Linux version of gaim can do (though some features, like spellcheck, TCL plugins and Perl plugins require installing additional software).</p>
+<p>Gaim actually makes a passable IRC client, too.  IRC&#8217;s really nothing but an older IM and chat protocol (though it&#8217;s a little weak on the presence notification part of IM).</p>
+<p>Gaim is possible on Mac OS X, but only through X11, which means no dock (or menubar) stuff and otherwise not quite interacting well with the rest of the desktop.  (I really want an IM client to interact well with the desktop, since 95% of the time it&#8217;s in the background and out of my way)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806094037/http://eric.eisenhart.name/' rel='external nofollow' class='url'>Freiheit</a></cite>&#160;<a class=p href="/web/20110806094037/http://diveintomark.org/archives/2004/05/01/essentials#comment-5719" title="May 11, 2004 @ 4:16 pm"><img alt="#" src=/web/20110806094037im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806094037/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806094037/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806094037/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806094037/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806094037/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.387 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:08:54 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:40:37 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:11:13 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

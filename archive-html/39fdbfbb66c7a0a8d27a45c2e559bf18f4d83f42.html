@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Apache security vulnerabilities [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110910102217/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110910102217/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110910102217/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110910102217/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110910102217im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110910102217/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition" title="About the mobile edition">
+<link rel=next href="/web/20110910102217/http://diveintomark.org/archives/2003/03/19/pytextile" title="PyTextile">
+<link rel=up href="/web/20110910102217/http://diveintomark.org/archives#p1288" title="March 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Apache security vulnerabilities Comments Feed" href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities/feed" />
+<link rel='index' title='dive into mark' href='/web/20110910102217/http://diveintomark.org/' />
+<link rel='prev' title='About the mobile edition' href='/web/20110910102217/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition' />
+<link rel='next' title='PyTextile' href='/web/20110910102217/http://diveintomark.org/archives/2003/03/19/pytextile' />
+<link rel='canonical' href='/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities' />
+<link rel='shortlink' href='/web/20110910102217/http://diveintomark.org/?p=1288' />
+<meta name="description" content="Overview of security vulnerabilities in Apache 1.3 and 2.0 for the past 5 years.">
+<meta name="keywords" content="apache,security">
+<link href="/web/20110910102217cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110910102217/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/03\/17\/apache_security_vulnerabilities";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "10";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110910102217" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514122506/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:22:17 Sep 10, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Oct
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514122506/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities" title="12:25:06 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:22:17 Sep 10, 2011">10</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615034310/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:22:17 Sep 10, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110910102217*/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>21 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Apr 06 - 10 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000101011100_2007:-1:010100000002_2008:-1:010111001000_2009:-1:000000000100_2010:-1:000001000021_2011:8:000010001000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110910102217/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110910102217/http://diveintomark.org/archives#p1288">March 17, 2003</a> &#8227;
+<h2>Apache security vulnerabilities</h2> (<a href="/web/20110910102217/http://diveintomark.org/tag/apache" rel="tag">apache</a>, <a href="/web/20110910102217/http://diveintomark.org/tag/security" rel="tag">security</a>)</div>
+<p>In an unrelated and unremarkable Slashdot article on the latest IIS security vulnerability which was used to <a href="/web/20110910102217/http://www.msnbc.com/news/886524.asp?cp1=1">gain complete control over an Army web server</a>, I stumbled across these links:</p>
+
+<ul>
+<li><a href="/web/20110910102217/http://www.apacheweek.com/features/security-13">Overview of security vulnerabilities in Apache 1.3</a>.</li>
+<li><a href="/web/20110910102217/http://www.apacheweek.com/features/security-20">Overview of security vulnerabilities in Apache 2.0</a>.</li>
+</ul>
+
+<p>That&#8217;s a total of 25 security vulnerabilities in 5 years for a program that is, at this very moment, serving <a href="/web/20110910102217/http://netcraft.com/survey/">11 million active sites</a>.  Many of the vulnerabilities were platform-specific, and some were no more serious than exposing the full pathname of a script under certain non-remotely-controllable conditions.  There are no outstanding unfixed vulnerabilities, there have been no new vulnerabilities discovered in almost two months, and you can tell by glancing at a single version number that your copy of Apache is up to date.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Twenty three comments here (<a href=/web/20110910102217/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-774"><p>Outrageous, isn&#8217;t it? You&#8217;d think programmers entrusted with 11 million sites would be a little more careful.</p>
+<p>(Note: The &#8220;C is for Cookie&#8221; thing overlaps with the name and home page fields in Safari, making the buttons impossible to click.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-774" title="March 17, 2003 @ 11:53 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-775"><p>unless you use a vendor-supplied apache httpd package, in which case the vendor may have chosen to just add patches to fix security holes without upgrading to later version. (and then there&#8217;s the software you may add to apache httpd, like php or mod_ssl or that cool forum application, etc.)</p>
+<p>keeping on top of security vulnerabilities can be exhausting business, no matter what platform you choose.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://trainedmonkey.com/' rel='external nofollow' class='url'>jim winstead</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-775" title="March 17, 2003 @ 11:55 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-776"><p>Aaron: Safari users can blow me.  (Oops, did I say that out loud?  What I meant to say is that Safari is beta software, and Dave Hyatt and others are working very hard and making great strides in achieving standards compliance, especially in the realm of CSS rendering, and we appreciate all their hard work, and we&#8217;re confident that the next version will fix the problem.  And until then, Safari users can blow me.)</p>
+<p>Jim: yeah, I know I&#8217;m oversimplifying, but IIS has &#8220;associated&#8221; software too (Index Server, third-party ISAPI extensions, etc).  I&#8217;d love to see a comparable list of core IIS vulnerabilities, and the severity of each.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-776" title="March 18, 2003 @ 12:14 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-777"><p>&#8220;Safari is beta software, and Dave Hyatt and others are working very hard and making great strides in achieving standards compliance, especially in the realm of CSS rendering&#8221;</p>
+<p>Having yet to test-drive Safari myself, I was just wondering how far along it actually is at this point?  Is it possible to compare its CSS ability to, for example, IE4? IE5?  Obviously direct comparisons can&#8217;t be drawn as Safari already supports some CSS3 selectors (or so I&#8217;m told), but overall, given where its at and where it has to get, do you feel its actually possible for them to crank out something at least as good as IE 6 (if not Mozilla) by 1.0?</p>
+<p class=sig>&#8212;&#8201;<cite>Tdot</cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-777" title="March 18, 2003 @ 12:29 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-778"><p><a href="/web/20110910102217/http://www.macedition.com/cb/resources/macbrowsercsssupport.html">http://www.macedition.com/cb/resources/macbrowsercsssupport.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-778" title="March 18, 2003 @ 12:44 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-779"><p>More on Safari standards compliance:</p>
+<p><a href="/web/20110910102217/http://www.mozillazine.org/weblogs/hyatt/archives/2003_02.html#002553">http://www.mozillazine.org/weblogs/hyatt/archives/2003_02.html#002553</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-779" title="March 18, 2003 @ 12:46 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-780"><p>BTW, I see a problem in Mozilla as well (Version 1.0.1). The text in the &#8216;Name&#8217; and &#8216;Home page&#8217; fields is shifted down, so only the top 50% is visible, and the label text on the buttons is shifted down too, so they&#8217;re flush with the bottom of the button.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-780" title="March 18, 2003 @ 12:53 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-781"><p>From that MSNBC article :<br />
+> Lipner said about 100 employees worked &#8220;around the<br />
+> clock&#8221; last week, and through the weekend, to<br />
+> develop an emergency fix.<br />
+A 100 people to fix one bug? Isn&#8217;t that a bit frightening?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://jan.moesen.nu/' rel='external nofollow' class='url'>Jan!</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-781" title="March 18, 2003 @ 6:34 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-782"><p>In regards to Comment 8, don&#8217;t be silly!  Can&#8217;t you tell that 100+ people working over the weekend to fix a bug means &#8212; we take security seriously.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://www.writerking.org/' rel='external nofollow' class='url'>Jake</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-782" title="March 18, 2003 @ 12:36 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-783"><p>Those statistics are a bit misleading aren&#8217;t they?<br />
+Do a search for apache at the CERT and you might find a few more.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://www.benmeadowcroft.com/' rel='external nofollow' class='url'>Ben</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-783" title="March 18, 2003 @ 12:38 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-784"><p>No, I don&#8217;t think so.  I searched CERT (vulnerabilities database only) for &#8220;+apache -oracle +title:CERT&#8221; to try to weed out most of the crap (responses from individual vendors, stuff that only affects Oracle&#8217;s derivative) and came up with 30, of which the first is about JRun and the third is about Tomcat.  If you have better searching strategies, I&#8217;d love to hear them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-784" title="March 18, 2003 @ 1:18 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-785"><p>This is comparing apples to oranges.  A better comparison would be IIS vs. Apache + Tomcat or Apache + Tomcat + Slide (since it was an WebDAV vulnerability.)</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-785" title="March 18, 2003 @ 4:00 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-786"><p>> Can&#8217;t you tell that 100+ people working over the<br />
+> weekend to fix a bug means &#8212; we take security<br />
+> seriously.<br />
+To me, that looks like more of a panic reaction. (Lemmings, anyone?) </p>
+<p>What do you mean by &#8220;we&#8221;, anyway? Are you part of the IIS programming team?</p>
+<p>(And for the record: I am absolutely *not* and anti-Microsoft zealot &#8212; those people scare me. Sort of like the idea of a 100 programmers fixing 1 bug scares me. ;-)</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-786" title="March 18, 2003 @ 5:15 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-787"><p>Actually, it&#8217;s hard to know exactly what to compare.  I would be inclined to compare &#8220;that which is installed and enabled by default&#8221;.  I get the impression from reading the News.com article and the Microsoft security bulletin that WebDAV is installed and enabled by default.  (Someone please correct me if I&#8217;m wrong here.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-787" title="March 18, 2003 @ 6:04 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-788"><p>>In the computer security world, such secret<br />
+>vulnerabilities are called &#8220;zero-day exploits.&#8221; It&#8217;s<br />
+>been at least a year since a significant zero-day exploit<br />
+>was revealed, said Chris Rouland, director of Internet<br />
+>Security Systems&#8217; X-Force research team.</p>
+<p>(ponder that statement for a moment&#8230;)</p>
+<p>On the &#8220;C is for Cookie&#8221; subject, Mark, is that by chance a reference to the &#8220;ABCs of Anarchism&#8221; by Negativeland and Chumbawumba where they sample the Cookie Monster (of seseme st fame) singing &#8220;C is for Cookie, thats good enough for me&#8230;&#8221; (in reference to copyright, natch)? Because thats what I found running through my head after seeing it.</p>
+<p>Back to the zero-day issue, could somebody send Chris Rouland The Memo or something? Because he clearly didn&#8217;t get the memo.</p>
+<p class=sig>&#8212;&#8201;<cite>phyxeld</cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-788" title="March 18, 2003 @ 6:36 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-789"><p>I would be inclined to compare &#8220;that which is installed and enabled by default&#8221;.</p>
+<p>It&#8217;s ridiculous that Microsoft turns on IIS by default &#8211; with or without WebDAV enabled (which *is* on by default) so from that perspective I&#8217;ll agree.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-789" title="March 18, 2003 @ 6:47 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-790"><p>&#8220;A better comparison would be IIS vs. Apache + Tomcat or Apache + Tomcat + Slide (since it was an WebDAV vulnerability.)&#8221;<br />
+How do you figure? Apache2 has web dav enabled, and IIS sure as hell isn&#8217;t equivalent to apache and tomcat.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://cvs.apache.org/~thommay/' rel='external nofollow' class='url'>Thom May</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-790" title="March 19, 2003 @ 7:21 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-791"><p>> A 100 people to fix one bug? Isn&#8217;t that a bit frightening?</p>
+<p>Testing on the hundreds of thousands of different software and hardware combinations?</p>
+<p>> and IIS sure as hell isn&#8217;t equivalent to apache and tomcat.</p>
+<p>I&#8217;d say it is. IIS is pretty much an app server in it&#8217;s (braindead) default config. You&#8217;ve got your ASP, your ISAPI modules, your links to COM+, plus a lot more if you install the .NET Framework.</p>
+<p>WS 2003 rectifies this, shipping IIS in a much more secure default state, and not installing it by default.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-791" title="March 19, 2003 @ 8:29 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-792"><p>I&#8217;m sure I&#8217;ll get slammed for this, and let me say first that I have no problem believing that Apache is more secure than IIS, but&#8230;</p>
+<p>I agree with anonymous.  Except I&#8217;ll sign my name.  This *is* like comparing apples to oranges.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://www.scribbling.net/' rel='external nofollow' class='url'>Gina</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-792" title="March 19, 2003 @ 11:00 am"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-793"><p>I would say it is more like comparing a popular web server with a very popular web server. Or if you want to use the fruit metaphor a Red Delicious apple and a Granny Smith apple. Both serve the same function but in different ways. One is designed and built with security as the most important while the other seems to make ease of use more important. A compentent sys admin could make either one as secure as possible. But with what seems like everyone with broadband running their own server &#8220;right out of the box&#8221; and companies cutting costs and making network admins, web developers and whoever else also double as sys admins. I would rather see a default Apache put in place than a default IIS. But hey that&#8217;s just my opinion.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://www.reames.org/' rel='external nofollow' class='url'>Randy</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-793" title="March 19, 2003 @ 3:27 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-794"><p>Aaron,</p>
+<p>Mark hasn&#8217;t directly said so one way or the other, but I believe he was implying that the Apache group has done a very good job with security.</p>
+<p>They are fast to fix bugs, and the bugs they have a few and far between.</p>
+<p>Contrast that with Microsoft&#8217;s products, which seem to have more bugs than lines of code, some of which have been serious enough to bring the entire Internet to its knees.</p>
+<p class=sig>&#8212;&#8201;<cite>Adam</cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-794" title="March 19, 2003 @ 7:10 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-796"><cite><a href='/web/20110910102217/http://www.libraryplanet.com/archives/2003/03/20/index.html#002186' rel='external nofollow' class='url'>LibraryPlanet.com</a></cite>&#160;(trackback)</li>
+<li id="comment-795"><p>Why is this even the subject of discussion?</p>
+<p>If you care about security and performance, you are running Apache.</p>
+<p>If you are more interested in GUI configurability, you are running IIS.</p>
+<p>With its history of bringing the internet to its knees on multiple occasion, not even the Gartner Group recommends IIS for serious work (they make no recommendations about non-serious work).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110910102217/http://golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110910102217/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities#comment-795" title="March 20, 2003 @ 1:29 pm"><img alt="#" src=/web/20110910102217im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110910102217/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110910102217/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110910102217/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110910102217/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110910102217/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.340 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:57:42 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:22:17 Sep 10, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:38 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>NSIS, an open source installer maker [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110607225715/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110607225715/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110607225715/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110607225715im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110607225715/http://diveintomark.org/archives/2003/04/08/the_importance_of_titles" title="The importance of titles">
+<link rel=next href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/tango_tango_tango" title="Tango, tango, tango">
+<link rel=up href="/web/20110607225715/http://diveintomark.org/archives#p1312" title="April 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; NSIS, an open source installer maker Comments Feed" href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker/feed" />
+<link rel='index' title='dive into mark' href='/web/20110607225715/http://diveintomark.org/' />
+<link rel='prev' title='The importance of titles' href='/web/20110607225715/http://diveintomark.org/archives/2003/04/08/the_importance_of_titles' />
+<link rel='next' title='Tango, tango, tango' href='/web/20110607225715/http://diveintomark.org/archives/2003/04/09/tango_tango_tango' />
+<link rel='canonical' href='/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker' />
+<link rel='shortlink' href='/web/20110607225715/http://diveintomark.org/?p=1312' />
+<meta name="description" content="NSIS is a scriptable win32 installer/uninstaller system that doesn't suck and isn't huge. We're using it at work.">
+<meta name="keywords" content="nsis,opensource">
+<link href="/web/20110607225715cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110607225715/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/04\/09\/nsis_an_open_source_installer_maker";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "7";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110607225715" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215110855/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 22:57:15 Jun 7, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215110855/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker" title="11:08:55 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 22:57:15 Jun 7, 2011">7</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090328140347/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="28 Mar 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 22:57:15 Jun 7, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110607225715*/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>38 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">12 Apr 06 - 7 Jun 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000211012110_2007:-1:023112000001_2008:-1:111011116100_2009:-1:001000000000_2010:-1:000001000011_2011:5:000001000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110607225715/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110607225715/http://diveintomark.org/archives#p1312">April 9, 2003</a> &#8227;
+<h2>NSIS, an open source installer maker</h2> (<a href="/web/20110607225715/http://diveintomark.org/tag/nsis" rel="tag">nsis</a>, <a href="/web/20110607225715/http://diveintomark.org/tag/opensource" rel="tag">opensource</a>)</div>
+<p><a href="/web/20110607225715/http://www.nullsoft.com/free/nsis/">NSIS</a> is <q cite="http://www.nullsoft.com/free/nsis/">a scriptable win32 installer/uninstaller system that doesn&#8217;t suck and isn&#8217;t huge.</q>  Its scripting language is <q cite="http://www.nullsoft.com/free/nsis/">a lovely coding experience with elements of PHP and assembly</q>  &#8212;  just what I need at 3 AM.  Other than that, it&#8217;s dandy.  We&#8217;re using it at work, and it rocks.  I&#8217;ve seen it popping up more and more as the installer framework for open source Windows programs, which makes sense, since NSIS itself is open source.  Also, because other installer makers are even less user-friendly than assembly language, or cost several hundred dollars, or both.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Twelve comments here (<a href=/web/20110607225715/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-1334"><p>And before there was NSIS, there was Inno Setup, which was great if you wanted something that looked like an InstallShield or other traditional Windows installation program.  It&#8217;s also open source, and the license reads like it&#8217;s also probably Free (as in freedom) software.</p>
+<p><a href="/web/20110607225715/http://www.jrsoftware.org/isinfo.php">http://www.jrsoftware.org/isinfo.php</a></p>
+<p class=sig>&#8212;&#8201;<cite>Vito</cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1334" title="April 9, 2003 @ 3:27 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1335"><p>As the last comment says, inno setup seems to produce install programs for windows which feel a lot more like &#8220;normal&#8221; windows setup programs.</p>
+<p>And &#8220;Istool&#8221; (sorry can&#8217;t find the link) makes it really easy to build the configuration for it too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://weblog.jb99.com/' rel='external nofollow' class='url'>John Burton</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1335" title="April 9, 2003 @ 3:49 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1336"><p>We&#8217;re using the &#8220;Modern UI&#8221; feature of NSIS, and it looks and feels just like a .msi installer.  Inno Setup probably would have worked just as well for our needs (which are pretty basic as installers go); I honestly don&#8217;t remember why we chose one over the other.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1336" title="April 9, 2003 @ 3:56 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1337"><p>ISTool is here:</p>
+<p><a href="/web/20110607225715/http://www.istool.org/">http://www.istool.org/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1337" title="April 9, 2003 @ 4:01 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1338"><p>What&#8217;s astonishing is that an installer that started life with the name &#8220;SuperPIMP&#8221; is used by, for example, Sun to install the Java webstart. And all this for a side project by the winamp guys.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://anildash.com/' rel='external nofollow' class='url'>Anil</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1338" title="April 9, 2003 @ 4:11 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1345"><cite><a href='/web/20110607225715/http://act.hagale.net/archives/000611.php' rel='external nofollow' class='url'>Advanced Combo Tricks</a></cite>&#160;(trackback)</li>
+<li id="comment-1339"><p>The best thing about Inno Setup is that unlike NSIS you don&#8217;t need to learn the hideous programming language to make a professional-looking installer.</p>
+<p>Where I work we used to use Wise, and before that Installshield. When I demonstrated the installers that I could produce in under half-an-hour using ISTool and Inno Setup, the installer developers had sudden grins on their faces! Fantastic stuff.</p>
+<p>Highly recommended.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://www.pnotepad.org/' rel='external nofollow' class='url'>Simon Steele</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1339" title="April 9, 2003 @ 4:20 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1340"><p>Good Lord, it&#8217;s 4 AM.  What are you people doing up at this hour?  I certainly hope you&#8217;re in a different timezone.  I&#8217;m going to bed.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1340" title="April 9, 2003 @ 4:30 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1341"><p>What? You mean the Internet isn&#8217;t only available in America, the Land of the Free?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1341" title="April 9, 2003 @ 8:22 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1342"><p>I&#8217;ve been using NSIS since the SuperPIMP days, and it&#8217;s gotten steadily better. I&#8217;ve not tried Inno Setup, though; I&#8217;ll have to give it a look.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://brasslantern.org/' rel='external nofollow' class='url'>Stephen Granade</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1342" title="April 9, 2003 @ 10:20 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1343"><p>Hi Stephen!  How&#8217;s your post-NC life going?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1343" title="April 9, 2003 @ 10:41 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1344"><p>Another link for the InnoSetup curious:</p>
+<p>Inno Setup Extensions, which adds &#8216;Pascal scripting&#8217; to Inno Setup, adds child components and tasks support to Inno Setup, uses a modern looking Setup icon and comes bundled with Inno Setup Preprocessor<br />
+<a href="/web/20110607225715/http://www.wintax.nl/isx/">http://www.wintax.nl/isx/</a></p>
+<p>The scripting is actually really nice once you get your head round it, but I would say that coming from a Delphi backgound! (I&#8217;ve always thought Pascal was one of the cleaner languages anyway.)</p>
+<p>Also useful is the InnoSetup Extensions Knowledge Base:<br />
+<a href="/web/20110607225715/http://www13.brinkster.com/vincenzog/">http://www13.brinkster.com/vincenzog/</a></p>
+<p>and the Inno Setup Preprocessor (included with ISX):<br />
+<a href="/web/20110607225715/http://www16.brinkster.com/yackimoff/ispp/">http://www16.brinkster.com/yackimoff/ispp/</a></p>
+<p>God I love Inno; like Simon said it puts a grin on your face, especially if you&#8217;ve ever struggled with InstallShield&#8217;s scripting *spit*!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607225715/http://www.ballagroove.com/' rel='external nofollow' class='url'>Stef Pause</a></cite>&#160;<a class=p href="/web/20110607225715/http://diveintomark.org/archives/2003/04/09/nsis_an_open_source_installer_maker#comment-1344" title="April 10, 2003 @ 6:56 am"><img alt="#" src=/web/20110607225715im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110607225715/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110607225715/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110607225715/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110607225715/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110607225715/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.309 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-24 00:53:55 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 22:57:15 Jun 7, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:05 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

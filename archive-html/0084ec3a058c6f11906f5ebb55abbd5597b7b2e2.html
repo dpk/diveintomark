@@ -1,0 +1,760 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>History of the RSS fork [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806114859/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806114859/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806114859/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806114859/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806114859im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806114859/http://diveintomark.org/archives/2002/09/05/rss_20" title="RSS 2.0">
+<link rel=next href="/web/20110806114859/http://diveintomark.org/archives/2002/09/06/the_case_for_simplicity" title="The case for simplicity">
+<link rel=up href="/web/20110806114859/http://diveintomark.org/archives#p1026" title="September 2002">
+<link rel='index' title='dive into mark' href='/web/20110806114859/http://diveintomark.org/' />
+<link rel='prev' title='RSS 2.0' href='/web/20110806114859/http://diveintomark.org/archives/2002/09/05/rss_20' />
+<link rel='next' title='The case for simplicity' href='/web/20110806114859/http://diveintomark.org/archives/2002/09/06/the_case_for_simplicity' />
+<link rel='canonical' href='/web/20110806114859/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork' />
+<link rel='shortlink' href='/web/20110806114859/http://diveintomark.org/?p=1026' />
+<meta name="description" content="This is a brief history of RSS from July 2000 to November 2000, during which time RSS 0.9x and RSS 1.0 forked. I try to focus on specific people and conversations that document why the fork occurred. I was not involved in any of this, but much (not all) of the discussion has been publicly archived. So this is very much an outsider's history, and like any history, it is necessarily biased, selective, and incomplete.">
+<meta name="keywords" content="markup,rss">
+<link href="/web/20110806114859cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806114859/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806114859/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/09\/06\/history_of_the_rss_fork";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806114859" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514124805/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 11:48:59 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110927015013/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110718034619/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork" title="3:46:19 Jul 18, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 11:48:59 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110811220456/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork" title="22:04:56 Aug 11, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615033926/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 11:48:59 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121017005106/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="17 Oct 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806114859*/http://diveintomark.org/archives/2002/09/06/history_of_the_rss_fork" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>55 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">15 Jun 06 - 17 Oct 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001211100_2007:-1:432111001211_2008:-1:101111041101_2009:-1:100000000000_2010:-1:000001000010_2011:7:000020222100_2012:-1:311200000100_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806114859/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806114859/http://diveintomark.org/archives#p1026">September 6, 2002</a> &#8227;
+<h2>History of the RSS fork</h2> (<a href="/web/20110806114859/http://diveintomark.org/tag/markup" rel="tag">markup</a>, <a href="/web/20110806114859/http://diveintomark.org/tag/rss" rel="tag">rss</a>)</div>
+<p>This is a brief history of RSS from July 2000 to November 2000, during which time RSS 0.9x and RSS 1.0 forked.  I try to focus on specific people and conversations that document <em>why</em> the fork occurred.  I was not involved in any of this, but much (not all) of the discussion has been publicly archived.  So this is very much an <q>outsider&#8217;s</q> history, and like any history, it is necessarily biased, selective, and incomplete.</p>
+
+<p>6/28/2000.  <cite title="xmlhack.com">Eric van der Vlist</cite>: <a href="/web/20110806114859/http://www.xmlhack.com/read.php?item=621">Will RSS fork?</a></p>
+<blockquote>
+<p>Following a thread on the syndication mailing list, Rael Dornfest has announced an &#8220;RSS Modularization Spec(ish) page&#8221; defining how RSS could be extended using namespace based modules.</p>
+</blockquote>
+
+<p>7/5/2000.  <cite title="XML.com">Leigh Dodds</cite>: <a href="/web/20110806114859/http://www.xml.com/pub/a/2000/07/05/deviant/rss.html">RSS Modularization</a></p>
+<blockquote><p>Perhaps the key benefit of RSS is its simplicity. The syntax for the format is easy to understand, and there are only a few self-explanatory tags to learn. This makes RSS files relatively trivial to produce. Dave Winer of Userland has recently added some new <a href="/web/20110806114859/http://backend.userland.com/rss091">online documentation for RSS 0.91</a>, adding historical notes as well as capturing details of its common usage patterns.</p>
+<p>Developers on the RSS and Syndication mailing lists are now discussing future directions for RSS, the hope being to build on current successes and provide richer functionality.</p></blockquote>
+
+<p>8/14/2000.  <cite>Rael Dornfest</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/372">RSS 1.0 Specification Proposal</a></p>
+<blockquote><p>Abstract: RSS (&#8220;RDF Site Summary&#8221;) is a lightweight multipurpose
+extensible metadata description and syndication format. RSS is
+an XML application, conforms to the W3C&#8217;s RDF Specification
+and is extensible via XML-namespace and/or RDF based modularization.</p>
+<p>Design Goals: The modular extension of existing RSS through XML Namespaces and RDF
+stressing backward compatibility with RSS 0.9 for ease of adoption
+by existing syndicated content producers.</p>
+<p>Interested parties are invited to join a working group on the
+newly-created RSS-DEV mailing list at: <a href="/web/20110806114859/http://www.egroups.com/group/rss-dev">http://www.egroups.com/group/rss-dev</a></p></blockquote>
+
+<p>8/16/2000.  <cite>Aaron Swartz</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/397">Re: Thoughts, questions, and issues</a></p>
+<blockquote><p>[addressing Dave Winer] If I understand you correctly, you want to create a set of elements for RSS
+that are widely supported and you&#8217;re free to do that. Just create your own
+namespace and tie it into the proposal. You say namespaces are confusing,
+but I have to disagree with you there. When used properly, they can actually
+make XML easier to understand.</p>
+<p>&#8230; RSS is now (or once again) an RDF format, which has its benefits and
+drawbacks. It does make RSS more complicated, which is a downside. However,
+as R.V. Guha pointed out to me, you can easily escape from RDF if you don&#8217;t
+like it by using the rdf:parseType=&#8221;literal&#8221; attribute. Again, I think this
+is likely a best-of-both-worlds move.</p></blockquote>
+
+<p>8/16/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/399">Re: Thoughts, questions, and issues #2</a></p>
+<blockquote>
+<p>So, Aaron, because we disagree you get to make the rules?</p>
+
+<p>So sad it comes to this. If you&#8217;d stop and think you&#8217;d realize there&#8217;s a
+win-win here, all it takes is a little listening and considering other
+points of view.</p>
+
+<p>So sad, because there will be two RSS 1.0s.</p>
+
+<p>So confusing, so embarassing.</p>
+
+<p>(And a waste of time!)</p>
+
+<p>See you in the market.</p></blockquote>
+
+<p>8/16/2000.  <cite>Paulo Gasper</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/407">Re: Thoughts, questions, and issues #2b</a></p>
+<blockquote><p>Hi Dave,</p>
+<p>Your statement (above) works both ways.</p>
+<p>IMHO, Aaron even gave an example to illustrate why he thinks that way.
+It seems to me that he is trying to reason over that. Not forcing.</p></blockquote>
+
+<p>8/16/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/410">Re: Thoughts, questions, and issues #2c</a></p>
+<blockquote><p>Paulo, the force comes from the choice of the RSS 1.0 name. Doesn&#8217;t leave
+much wiggle room.</p></blockquote>
+
+<p>8/16/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/440">Re: Thoughts, questions, and issues #3</a>.  (Note: here Dave is not replying to Aaron&#8217;s messages quoted above, but to someone else entirely.)</p>
+<blockquote>
+<p>That&#8217;s fine. But I&#8217;m going to keep going. I&#8217;m tired of debating this stuff.
+I&#8217;ve been having a lot of fun in the last couple of months, and it&#8217;s only
+been in the last few days that it started to turn into the usual
+hand-wringing, trying to keep you from hearing things that apall you. Enough
+is enough. These guys want to own RSS. I put a ton of work into it. Somehow
+reconcile that with your appalled-ness. This is not a nice thing that&#8217;s
+going on. I&#8217;m apalled.</p></blockquote>
+
+<p>8/16/2000.  <cite>Paul Freeman</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/443">The RDF approach needs to answer some valid criticism</a></p>
+<blockquote>
+<ol>
+<li>To enable the average developer to cope, a syndication format must
+be simple to create and be easily read by a human. The rdf approach
+requires too much studying and background knowledge to easily pick up
+and is too hard for humans to read and create manually.</li>
+<li>RSS should also be easy to parse and create using any software
+environment which developers care to use. Some software environments
+are too weak to handle RDF and the namespace syntax.</li>
+</ol>
+<p>&#8230; If the RDF approach is to be widely accepted and adopted then 1) and
+2) require solutions. Not all of them may be technical, but better
+software tools support is part of a solution which does not require
+the simple syntax required by the &#8220;expanded core&#8221;. This software
+tools support should span *all* of the environments which people need
+to use&#8230; and we shouldn&#8217;t sneer at people who try to parse this
+stuff in Perl, VB or even, shock horror, Macromedia Flash.</p></blockquote>
+
+<p>8/17/2000.  <cite>Paulo Gasper</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/456">Re: Thoughts, questions, and issues #4</a></p>
+<blockquote><p>That seems to be the main problem: RDF focus.</p>
+<p>RSS became a popular format with people that couldn&#8217;t care less about
+RDF. The value of RSS is that popularity.</p>
+<p>There are a lot of private little &#8220;RSS processors&#8221; and this [proposed RSS 1.0] standard
+does not care much about them.</p></blockquote>
+
+<p>8/20/2000.  <cite>Aaron Swartz</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/467">Re: Thoughts, questions, and issues #5</a></p>
+<blockquote><p>I think the answer from the RSS-DEV people (I&#8217;m sort of guessing, correct me
+if I&#8217;m wrong) is that the writers shouldn&#8217;t have to understand the spec &#8211;
+they should be able to use tools that will generate the RSS for them.</p>
+<p>&#8230; The fact is, as far as I&#8217;m concerned, nobody but the programmers should have
+to deal with these specs. There seems to be a lot of confusion here, that
+RSS files are meant to be written by hand. Perhaps that was true with the
+old spec, but it doesn&#8217;t need to be, and is even less true with the new one.
+The specs are written for programmers, to allow them to write programs that
+communicate.</p>
+<p>&#8230; To the writers &#8212; don&#8217;t worry, we haven&#8217;t forgotten about you. In fact, we
+care about you more than ever. You don&#8217;t need to be messing with the XML by
+hand &#8212; that&#8217;s not what it&#8217;s designed for, it&#8217;s designed for programs. We&#8217;ve
+tried to create programs so that you don&#8217;t have to generate the RSS file by
+hand, you can convert to it or do it through a web interface. If you still
+have trouble, let us know, we&#8217;re here to help, not to scare.</p></blockquote>
+
+<p>8/20/2000.  <cite>Lynn Siprelle</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/469">Re: Thoughts, questions, and issues #6</a></p>
+<blockquote><p>[addressing Aaron] I have nothing but respect for you, *believe* me, but this is
+just a little too close to &#8220;don&#8217;t worry your purty li&#8217;l head about
+it, missy.&#8221;</p>
+<p>OK, fine, so I can find some tool somewhere to generate the RSS file
+for me. But what if I want to parse one, which I will? I *still* have
+to understand the spec, and I don&#8217;t. And I&#8217;m neither stupid nor
+technically illiterate.</p>
+<p>&#8230; It&#8217;s not just the simple writers you&#8217;ll need to worry about. It&#8217;s the
+simple webmasters who are doing things with RSS files now and who
+will get tripped up by these changes. If you&#8217;ve ever done tech
+support (and I have) you know that there are all kinds of people out
+there doing this stuff&#8211;brilliant kids like Aaron and old duffers who
+just wanna put up photos of the grandkids, and everyone in between.</p></blockquote>
+
+<p>8/20/2000.  <cite>Aaron Swartz</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/470">Re: Thoughts, questions, and issues #7</a></p>
+<blockquote>
+<p>[addressing Lynn] Oh, I definitely know what you mean. But here&#8217;s how I see it:</p>
+<p>Writers:</p>
+<ol>
+<li>Use an automated RSS creator</li>
+<li>Use a web-based RSS creator with a nice interface</li>
+<li>Use a converter from the simple format to the more complex</li>
+</ol>
+<p>Readers:</p>
+<ol>
+<li>Use a pre-built RSS parser (like XML::RSS for Perl)</li>
+<li>Use a down-converter to a simpler format</li>
+<li>Ignore the new additions and just use the old stuff</li>
+</ol>
+</blockquote>
+
+<p>8/21/2000.  <cite>zac</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/471">Re: Thoughts, questions, and issues #8</a></p>
+<blockquote><p>[addressing Aaron] These sorts of assumptions are self fulfilling to a degree. If you write a
+spec assuming that some users won&#8217;t interact with it then they won&#8217;t.</p>
+<p>This limits the number of people that will use the format.</p>
+<p>People want to (and should) understand the technologies that they use. So
+when you build a format that puts required namespace declarations in the
+&lt;channel&gt; tag then I think you&#8217;ve gone down a path that isn&#8217;t going to be
+followed by as many people.</p></blockquote>
+
+<p>8/21/2000.  <cite>Aaron Swartz</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/481">Re: Thoughts, questions, and issues #9</a></p>
+<blockquote><p>I maintain that the new [proposed RSS 1.0] spec is for more technical usage than
+the older one. For real heavy-duty use, it will require some understanding
+of XML and RDF. The benefit from this is more power, but at the expense of
+some clarity and simplicity. I see RSS as moving away from a simple XML
+language for the people, and more towards a communication system for content
+management systems and other scripting environments. It may not be the
+choice you believe in, but it&#8217;s a choice that the authors are making. There
+will always be other formats if you don&#8217;t agree.</p></blockquote>
+
+<p>8/24/2000.  <cite>Dan Libby</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/rss-dev/message/239">RSS: Introducing Myself</a></p>
+<blockquote><p>I was the primary author of the RSS 0.9 and 0.91 spec and the architect behind the My Netscape Network. &#8230; I was the primary author of the RSS 0.9 and 0.91 spec and the architect behind the My Netscape Network (a separate project from My Netscape, which I also worked on). I left Netscape in 1999, in part because of what I felt was mis-handling (non-handling?) of RSS and the MN platform. I fully expected the format to die an ignominious death, and I was pleasantly surprised to recently to poke my head out of the sand and find so many people still using it. I am glad that the net community has begun adopting RSS, and would like to see it realize the original vision.</p>
+<p>The original My Netscape Network Vision:</p>
+<p>We would create a platform and an RDF vocabulary for syndicating metadata about websites and aggregating them on My Netscape and ultimately in the web browser. Because we only retrieved metadata, the website authors would still receive user&#8217;s click-throughs to view the full site, thus benefitting both the aggregator and the publisher. My Netscape would run an RDF database that stored all the content. Preferences akin to mail filters, would allow the user to filter only the data in which they are interested onto the page, from the entire pool of data. For example, a user interested in articles about &#8220;Football&#8221; would be able to setup a personalized channel that simply consisted of a filter for Football, or even for a particular team or player. Or for all references to Slashdot.org, or whatever. This fit our personalization scheme well, and would (I hoped) give us the largest selection of content, with the greatest degree of personalization available. Tools would be made available to simplify the process of creating these files, and to validate them, and life would be good.</p>
+<p>What Actually Happened:</p>
+<ol>
+<li>A decision was made that for the first implementation, we did not actually need a &#8220;real&#8221; RDF database, which did not even really exist at the time. Instead we could put the data in our existing store, and instead display data, one &#8220;channel&#8221; at a time. This made publishers happier anyway, because they would get their own window and logo. We could always do the &#8220;full&#8221; implementation later.</li>
+<li>The original RDF/RSS spec was deemed &#8220;too complex&#8221; for the &#8220;average user&#8221;. The RDF data model itself is complex to the uninitiated, and thus the placement of certain XML elements representing arc types seemed redundant and arbitrary to some. Support for XML namespaces was basically non-existent. My (poor) solution was to create a simpler format, RSS 0.9, that was technically valid RDF, but dropped namespaces and created a non-connected graph. &#8230; This marked the beginning of the Full Functionality vs Keep It Simple Stupid debate that continues to this day. &#8230;</li>
+<li>We shipped the first implementation, sans tools. Basically, there was a spec for RSS 0.9, some samples, and a web-based validation tool.  No further support was given for a while&#8230;</li>
+<li>At some point, it was decided that we needed to rev the RSS spec to allow things like per item descriptions, i18n support, ratings, and image widths and height. Due to artificial (in my view) time constraints, it was again decided to continue with the current storage solution, and I realized that we were *never* going to get around to the rest of the project as originally conceived. At the time, the primary users of RSS (Dave Winer the most vocal among them) were asking why it needed to be so complex and why it didn&#8217;t have support for various features, eg update frequencies. We really had no good answer, given that we weren&#8217;t using RDF for any useful purpose. &#8230;</li>
+<li>We shipped the thing in a very short time, meeting the time constraints, then spent a month or two fixing it all. :-) &#8230;</li>
+<li>People on the net began creating all sorts of tools on their own, and publishing how-to articles, and all sorts of things, and using it in ways not envisioned by, err, some. And now we are here, debating it all over again.</li>
+</ol>
+</blockquote>
+
+<p>8/25/2000.  <cite>O&#8217;Reilly Network</cite>: <a href="/web/20110806114859/http://linux.oreillynet.com/pub/a/linux/2000/08/25/rt.html">Open Source Roundtable: Radio show on RSS 1.0</a></p>
+<blockquote><p>O&#8217;Reilly Network publisher Dale Dougherty talks with some of the core developers behind the new spec for RDF Site Summary (RSS 1.0) about the background behind RDF, the need for a standard, and what RSS enables.  (downloadable as MP3 (10MB), or as RealAudio stream)</p></blockquote>
+
+<p>8/26/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://scriptingnews.userland.com/stories/storyReader$916">Comments on O&#8217;Reilly radio show on &#8220;RSS 1.0&#8243;</a></p>
+<blockquote><p>The format and process they describe are highly complex. They are over-estimating content people&#8217;s technical sophistication and interest in working on new formats.</p>
+<p>IMHO, the new format should not be called RSS. There&#8217;s been a fork, and the peaceful solution is to each go our own way. Calling their spec RSS is unfair. We never considered moving RSS forward without getting O&#8217;Reilly on board first. RSS 1.0 was a surprise, we found out when the spec went public. I&#8217;ve said this over and over to the O&#8217;Reilly people, I would wish them godspeed if they hadn&#8217;t called it RSS. Should we call our spec RSS 1.0 too?</p>
+<p>BTW, it was Netscape&#8217;s decision to take the RDF out of RSS, one we heartily supported. We considered calling it Really Simple Syndication. That&#8217;s the core thing about RSS, simplicity, it&#8217;s almost an end-user format, easily explained in a four-screen spec designed for people who understand HTML and not much more. Once Guha left, Netscape totally dropped the RDF pretense. Now it&#8217;s back.</p></blockquote>
+
+<p>8/26/2000.  <cite>Aaron Swartz</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/591">Re: Commentary: RSS Roundtable</a></p>
+<blockquote><p>[re: complexity] Once again, content people can use the tools that we&#8217;re creating to convert
+from simpler formats and write files through a Web interface.</p>
+<p>[re: "RSS 1.0" naming] Hmm, perhaps we should consider changing the name. The problem is that many
+of us have so much invested in the current name, making it painful to change
+it. Having two RSS 1.0&#8242;s would be even more confusing. I think the name is
+also deserved, considering the large amount of work spent on making the new
+spec backwards-compatible with RSS 0.9. It would be different if their we
+were creating a radically new spec, but we&#8217;re not &#8212; instead we&#8217;re simply
+adding namespaces and more RDF support to an already existing spec.</p>
+<p>[re: simplicity] We disagree on the importance of simplicity. Yes, I like simplicity, but it
+needs to be balanced. I don&#8217;t think that&#8217;s the core thing about RSS, I think
+the core thing about RSS is what it stands for: RDF, sites and summaries.</p></blockquote>
+
+<p>9/2/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://davenet.userland.com/2000/09/02/whatToDoAboutRss">What to do about RSS?</a></p>
+<blockquote><p>I wish it had turned out this way, then the people who legitimately want to do a Namespaces-and-RDF syndication format would have to choose another name. To their credit, the water is muddied by the departure of Netscape from the process. So there&#8217;s now an identity crisis, what is RSS, and who, if anyone, has the right to evolve it?</p>
+<p>I think the answer to this question is totally obvious. But as one of the parties to the dispute it&#8217;s not up to me to say what it is.</p></blockquote>
+
+<p>9/4/2000.  <cite>Ken MacLeod</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg020795.html">Re: What to do about RSS</a></p>
+<blockquote><p>[addressing Dave] From my pov, that the new proposal, by the majority of developers, be &#8220;RSS 1.0&#8243; seemed so obvious that it wasn&#8217;t until you objected so vehemently that it even crossed my mind.</p></blockquote>
+
+<p>9/4/2000.  <cite>David McCusker</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg020811.html">Re: TBL</a></p>
+<blockquote><p>[addressing Dave] I&#8217;m not directly involved. In fact I don&#8217;t want to be involved. :-) But it&#8217;s clear to me you were dispossessed by the naming, and very intentionally so by the folks who chose the name. I&#8217;m sensitive to nuances in dispossession.</p>
+<p>&#8230; Only two main things matter in gauging your dispossesion. First, you were a voluntary party to an earlier version of RSS with certain characteristics. Second, you were involuntary party to the re-use of the old name for a new (but somewhat related) version with strikingly different technical characteristics. Case closed. They owe you. If they don&#8217;t pay, then they suck.</p></blockquote>
+
+<p>9/4/2000.  <cite>Ken MacLeod</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg020813.html">Re: TBL #2</a></p>
+<blockquote><p>It has been suggested that <em>both</em> forks use a different name.</p></blockquote>
+
+<p>9/4/2000. <cite>David McCusker</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg020849.html">Re: RSS name cutting and drying</a></p>
+<blockquote><p>[addressing Ken] I&#8217;d noticed a pronounced absense of negotiation over the naming problem, as if the folks who came up with the proposed RSS 1.0 had responded to Dave by asking coldly, &#8220;Who are you, again?&#8221; It was the coldness that had a really bad feel to it, provoking my ire.</p>
+<p>By the way, you&#8217;re doing a fine and human job of discussing the issue in a style I think is very nice. I only really think more responsiveness is required from the RDF+NS folks. The apparent &#8220;I don&#8217;t know you&#8221; reaction suggests bad faith, which folks should scramble to avoid.</p>
+<p>[re: "it has been suggested that both forks use a different name"] That&#8217;s fair if there are actually two new evolving specs, if both sides agree to sign off. It only seems wrong if one side chooses unilaterally, especially if seeming to arrogate sole ownership to itself. It&#8217;s better to part ways amicably than to dump an inconvenient past partner. Folks who dump others inspire less future trust.</p></blockquote>
+
+<p>9/11/2000.  <cite><abbr title="United States Patent and Trademark Office">USPTO</abbr></cite>: <a href="/web/20110806114859/http://tarr.uspto.gov/servlet/tarr?regser=serial&entry=78025336">Trademark application #78025336: RSS</a></p>
+<blockquote><p>Mark (words only): RSS</p>
+<p>Current Applicant: Userland Software</p>
+<p>Filing Date: 2000-09-11</p>
+<p>Current Status (2001-12-26): Abandoned: Applicant failed to respond to an Office action.</p>
+</blockquote>
+
+<p>9/12/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/decentralization/message/326">http://www.egroups.com/message/decentralization/326</a></p>
+<blockquote><p>Recently I have had a standard that I co-authored stolen by a big name,
+totally brazen, and I&#8217;ve said Fuck This many times in the last few weeks,
+and it hasn&#8217;t done any good.</p></blockquote>
+
+<p>9/13/2000.  <cite>Dan Brickley</cite>: <a href="/web/20110806114859/http://xent.com/FoRK-archive/sept00/0211.html">Re: http://www.egroups.com/message/decentralization/326</a></p>
+<blockquote><p>To be clear, are you claiming that OReilly (plus various of their naive
+pawns such as myself) have stolen RSS, and that you&#8217;re a co-author of the
+intellectual work that was stolen?</p>
+<p>If that&#8217;s the case, please circulate to FoRK a list of technical
+innovations in &#8220;your&#8221; RSS v0.91 that are anything more than trivial
+elaborations on the 9th March 1997 Channel Definition Format
+(CDF) specification.</p></blockquote>
+
+<p>9/13/2000.  <cite>Dan Brickley</cite>: <a href="/web/20110806114859/http://xent.com/FoRK-archive/sept00/0230.html">Re: http://www.egroups.com/message/decentralization/326 #2</a></p>
+<blockquote><p>You&#8217;re mad at us because you think we stole your vision and corrupted it.</p>
+<p>I&#8217;d like you to stop with the accusations of theft. Last I heard from
+you on that topic, you still claimed we were thieves. It&#8217;d be really
+nice to hear that retracted.</p></blockquote>
+
+<p>9/13/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://xent.com/FoRK-archive/sept00/0231.html">Re: http://www.egroups.com/message/decentralization/326 #3</a></p>
+<blockquote><p>I will retract the statement after the name is changed to something other
+than RSS 1.0. Until then, however reluctantly, I will stand by the statement
+I made on the decentralization list, in the context it was posted.</p>
+<p>My company has big plans for RSS, and they don&#8217;t include advising developers
+to do namespaces and RDF.</p></blockquote>
+
+<p>9/13/2000.  <cite>Dan Brickley</cite>: <a href="/web/20110806114859/http://xent.com/FoRK-archive/sept00/0238.html">Re: http://www.egroups.com/message/decentralization/326 #4</a></p>
+<blockquote><p>Is it true that the *only* thing that you feel we have stolen 
+is the name. No ideas, no technology, no designs were stolen,
+just the letters &#8216;R&#8217;,'S&#8217;,'S&#8217;. Rich Site Summary. RDF Site Summary. Real
+Simply Syndication. Really silly squabbles&#8230;</p></blockquote>
+
+<p>9/13/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://xent.com/FoRK-archive/sept00/0234.html">Re: http://www.egroups.com/message/decentralization/326 #5</a></p>
+<blockquote><p>Dan here&#8217;s what was stolen.</p>
+<p>Before the namegrab I had some influence on and participation in the
+evolution of RSS.</p>
+<p>After the grab, I have no say in its future. I&#8217;m reduced to trying to talk
+you out of the namegrab. I&#8217;ve put so many weeks into just doing that. Here&#8217;s
+what it comes down to:</p>
+<p>My choice is to accept your version or..?</p>
+<p>What if I think it&#8217;s wrong? What then?</p>
+<p>The provocative act was to take the name of something that exists and put it
+on something new.</p>
+<p>You may not agree, and I don&#8217;t want to debate all this *yet again* but
+that&#8217;s what I lost in this and it&#8217;s not fair. I worked hard to get RSS to
+where it is now. Lots of months, down the drain. Why? Why do you want me to
+go away? What the hell did I ever do to you?</p></blockquote>
+
+<p>9/13/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/607">Greetings Syndicators!</a></p>
+<blockquote><p>I&#8217;d like to find out if there&#8217;s interest here in working beyond RSS 0.91,
+adding a few features possibly, new docs and howtos, or sample code, or just
+asking questions about how people do stuff.</p>
+<p>&#8230; We might even rename our work something like RSS-Classic, so the people who
+want to own RSS can have their way.</p></blockquote>
+
+<p>9/20/2000.  <cite>Tim O&#8217;Reilly</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg021537.html">Re: Asking Tim</a></p>
+<blockquote><p>Speaking of RSS, here&#8217;s my read on what happened. (I wasn&#8217;t directly involved.) A group of people involved in RSS got together to start thinking about its future evolution. Dave was part of the group. When the consensus of the group turned in a direction he didn&#8217;t like, Dave stopped participating, and characterized it as a plot by O&#8217;Reilly to take over RSS from him, despite the fact that Rael Dornfest of O&#8217;Reilly was only one of about a dozen authors of the proposed RSS 1.0 spec, and that many of those who were part of its development had at least as long a history with RSS as Dave had. The only connection I can see is that the O&#8217;Reilly Network ran a series of ads on our sites promoting its stories about the RSS 1.0 spec (just as it promotes other stories on O&#8217;Reilly Network sites). Dave never approached me directly to express a point of view such as &#8220;I think the RSS spec is going in the wrong direction. Is there anything you can do to help get my point of view across to the other developers?&#8221; Instead, the first I heard of it was a series of public accusations that my company was leading a conspiracy to steal &#8220;Dave&#8217;s&#8221; standard. </p></blockquote>
+
+<p>9/20/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg021560.html">Re: Asking Tim #2</a></p>
+<blockquote><p>I met with Dale two weeks before the announcement, and he didn&#8217;t say anything about it being called RSS 1.0. I spoke on the phone with Rael the Friday before it was announced, again he didn&#8217;t say that they were calling it RSS 1.0. The first I found out about it was when it was publicly announced.</p>
+<p>Let me ask you a straight question. If it turns out that the plan to call the new spec &#8220;RSS 1.0&#8243; was done in private, without any heads-up or consultation, or for a chance for the Syndication list members to agree or disagree, not just me, what are you going to do?</p>
+<p>UserLand did a lot of work to create and popularize and support RSS. We walked away from that, and let your guys have the name. That&#8217;s the top level. If I want to do any further work in Web syndication, I have to use a different name. Why and how did that happen Tim?</p></blockquote>
+
+<p>9/21/2000.  <cite>Tim O&#8217;Reilly</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg021575.html">Re: Asking Tim #3</a></p>
+<blockquote><p>As I understand it, it was public knowledge (or certainly your knowledge) that there was work going on on a spec to extend RSS. When it was published, it was published as a &#8220;proposed RSS 1.0 spec&#8221;, and that seems completely legitimate to me, whether or not the work to develop it was done in public or private. The dozen people who worked on it have enough history with RSS to propose anything they like. You personally urged Rael to start the effort to write up what he was thinking as a proposed spec. And a &#8220;proposed RSS 1.0 spec&#8221; seems like as good a description as any for what they had come up with.</p>
+<p>It seems to me that you immediately hardened the battle lines, and started crying foul, when you should instead have said: &#8220;I don&#8217;t think that this is the right direction for RSS 1.0.&#8221; If you&#8217;d kept yourself to technical substance instead of vague (and incorrect) accusations of plots masterminded by O&#8217;Reilly, this whole contretemps could have been avoided.</p>
+<p>As Lao Tzu says, &#8220;He who feels pricked, must first have been a bubble.&#8221; I believe it was your power grab to unilaterally rewrite the RSS 0.91 spec with a Userland copyright that actually started this whole thing. You were moving to claim RSS as &#8220;yours&#8221; and a group of other developers put an oar in, and you didn&#8217;t like it.</p>
+<p>&#8230; By any outside reading, your claim to have &#8220;created&#8221; RSS has no basis. Dan Brickley&#8217;s posts to FoRK, the first of which I linked to above, make that fairly clear. Netscape created it, but even then, it is so similar to other things available at the time from a number of players, including Microsoft, that anyone&#8217;s claim to ownership are pretty thin. Netscape created the name, and that&#8217;s about as close as you can get. You certainly did a lot of work to popularize and support it.</p></blockquote>
+
+<p>9/21/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg021577.html">Re: Asking Tim #4</a></p>
+<blockquote><p>Tim, when I posted my &#8220;RSS&#8221; 0.91 spec, I could have left out the OK-To-Copy copyright. The copyright applied to the writing, not the underlying format, as it clearly states. Had I left that copyright out, you wouldn&#8217;t have been able to take the text and use it on another site. Talk about &#8220;no good deed going unpunished.&#8221;</p>
+<p>That spec was done openly and was only documenting current practice. There was lots of feedback. If people had problems with me doing it at the time, they didn&#8217;t tell me, in fact there are comments under the spec from Rael and others, where they&#8217;re helping. If they had a problem with the copyright, this is the first I&#8217;m hearing about it.</p>
+<p>I would think that you of all people would appreciate the generosity of a copyright that allows people to steal my work. The agreement was derived from the copyright that&#8217;s on IETF RFCs. It&#8217;s stood the test of time, it&#8217;s fair, not something to freak out over. And as I said, no one freaked out at the time.</p></blockquote>
+
+<p>9/21/2000.  <cite>Tim O&#8217;Reilly</cite>: <a href="/web/20110806114859/http://static.userland.com/userLandDiscussArchive/msg021580.html">Re: Asking Tim #5</a></p>
+<blockquote><p>I&#8217;m sorry I can&#8217;t help you there. It was just hearsay, not directly from any of the participants. It may be incorrect. However, I did hear from a number of people (not those involved in the proposed RSS 1.0 spec) that they thought at the time that reissuing the RSS 0.91 spec with a userland copyright was a bit tacky. I can understand why you did it, though, and I don&#8217;t have a problem with it. </p></blockquote>
+
+<p>10/12/2000.  <cite>Ken MacLeod</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/684">Re: RSS History</a></p>
+<blockquote><p>The way that the W3C and the IETF do it is to have working groups.
+Working groups are made up of people who are knowledgable of the
+subject (experienced users as well as developers) and are willing to
+extend the effort to participate in the working group. It is highly
+regrettable that the decision to form a working group was made only
+after the RSS 1.0 proposal.</p>
+<p>&#8230; I can think of no other project or technology that went through
+a set of circumstances similar to this.</p></blockquote>
+
+<p>10/12/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/686">Re: RSS History #2</a></p>
+<blockquote><p>Thanks for the help Ken.</p>
+<p>So I guess it would be fair to say that if an outsider looked at this, that
+there is no precedent for the transition that took place here, this is not
+how open source projects or W3C or IETF projects fork.</p>
+<p>Some people have said that the community decided to go in the direction of
+Namespaces and RDF, but it&#8217;s clear that that did not actually happen.</p></blockquote>
+
+<p>10/13/2000.  <cite>Ken MacLeod</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/688">Re: RSS History #3</a></p>
+<blockquote><p>Right, I don&#8217;t recall ever seeing anything like this before.</p>
+<p>[re: community support] It&#8217;s clear that it was not a unanimous decision, yes.</p></blockquote>
+
+<p>10/13/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/695">Community consensus</a></p>
+<blockquote><p>The claim has been made, offlist, that
+there was a community consensus to move to namespaces and RDF and modules.
+If there was such a consensus, now is the time to show where the record of
+that is. Ken provided a pointer, but it&#8217;s not what I asked for, because no
+one asked &#8220;Is it OK if we call this RSS 1.0?&#8221;</p>
+<p>The great thing about eGroups is that no one can tamper with the record. If
+there was a consensus, it *must* be evident here. I went to the trouble to
+read the archives over the summer. There isn&#8217;t that much to read. I found no
+evidence that the question was ever asked on this list. I know for a fact
+that I was never asked to vote on the transition, and I don&#8217;t think the
+general membership of this list was asked either.</p></blockquote>
+
+<p>10/15/2000.  <cite>Seth Russell</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/727">Re: [syndication] changing the name of RSS</a></p>
+<blockquote><p>I propose that we change the name because it would:</p>
+<ol>
+<li>help heal the rift with Dave Winer,</li>
+<li>encourage a new attitude towards this revolutionary RDF Metadata
+Feed; and</li>
+<li>[as you indicate] clear up the confusion in the marketplace if the
+syndication group moves ahead with RSS 9+.</li>
+</ol>
+<p>Are there any valid arguments against changing the name?</p></blockquote>
+
+<p>10/15/2000.  <cite>Paulo Gaspar</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/730">RE: [syndication] changing the name of RSS #2</a></p>
+<blockquote><p>Yes, changing the name of the RSS 1.0 to something else is what makes
+more sense &#8211; it is the for with the most diferences from the previous
+version.</p></blockquote>
+
+<p>10/17/2000.  <cite>Paulo Gaspar</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/770">RE: [syndication] Total confusion in RSS-Land</a></p>
+<blockquote><p>The only problem I see with your arguments is that you never talk about
+FORKing, giving another name to RSS 1.0. Both groups could &#8220;live
+amicably&#8221; if the &#8220;1.0&#8243; group would just agree on that.</p>
+<p>&#8230; And it makes sense. Even if you do not understand why other people find
+the RDF solution complex, they still DO. And RSS 0.92 will be much
+closer to 0.91 than 1.0 is. Is up to 1.0 to get another name.</p></blockquote>
+
+<p>10/17/2000.  <cite>Seth Russell</cite>: <a href="/web/20110806114859/http://rsswhys.weblogger.com/discuss/msgReader$51">Pick a new name for RSS 1.0</a></p>
+<blockquote><p>It has been suggested by Dave Winer and others that it is inappropriate to name our standard RSS 1.0. To clear up the confusion that most certainly will emerge in the market place and to give this format a new revolutionary start, it seems appropriate to also give it a new name.</p></blockquote>
+
+<p>10/18/2000.  <cite>Jeff Bone</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/849">Forking, the name game, the politics of naming</a></p>
+<blockquote><p>We all seem to acknowledge that there&#8217;s too much
+ideological distance between the camps to reasonably work on a single effort,
+and therefore forking is inevitable. The controversy is purely on which
+effort  &#8212;  the new and improved and totally revised and overly complexified
+effort or the brutally simple incremental improvement effort  &#8212;  gets to keep
+using the RSS name.  Given that the original stakeholders are in favor of the
+simpler version, IMO they should get to keep the name.</p></blockquote>
+
+<p>10/19/2000.  <cite>Mark Ketzler</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/syndication/message/855">Re: Forking, the name game, the politics of naming</a></p>
+<blockquote><p>RSS existed and was being used by lots of folk</p>
+<p>Group A (including some of the RSS originators) wanted to make RSS extensible
+etc.</p>
+<p>Group B (including rest of the original group) wanted status quo</p>
+<p>This is a fork by Group A.  Why should Group B change the name of something
+that existed. How do you defend this? If the RSS-DEV WG is so concerned
+about the RSS brand why are you tarnishing it with this name grab?</p></blockquote>
+
+<p>11/7/2000.  <cite>Dan Brickley</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/rss-dev/message/1136">RSS-Classic, RSS 1.0 and a historical debt</a></p>
+<blockquote><p>Contrary to what you might hear, the RSS 1.0 proposal did not come from
+a bunch of outsiders who swooped in and grabbed the prestigious acronym
+&#8216;RSS&#8217;. RSS 1.0 as proposed is solidly grounded in the original RSS
+vision, which itself had a long heritage going back to MCF (an RDF
+precursor) and related specs (CDF etc). This can be seen for
+example from Guha&#8217;s longstanding involvement, and Dan Libby&#8217;s account of
+the Netscape RSS work and endorsement of the 1.0 proposal.</p>
+<p>&#8230; I believe we have more than adequate historical justification for
+calling the &#8216;new&#8217; stuff RSS. To defend this observation requires
+pointing to a bunch of historical baggage that I&#8217;ve previously avoided
+publicising.</p>
+<p>&#8230; On the basis of these various observations, we have two
+traditions, both rooted in Guha&#8217;s MCF work.</p>
+<p>MCF &gt; CDF &gt; scriptingNews &gt; RSS 0.91 &gt; RSS-Classic</p>
+<p>MCF &gt; XML-MCF &gt; RSS 0.90 &gt; RSS 1.0</p>
+<p>&#8230; To stress my point once more. The RSS 1.0 proposal did not appear from
+out of nowhere, but is routed in 5 years work in this area. The
+RSS 1.0 proposers did not swoop in from nowhere to steal the &#8216;RSS&#8217;
+acronym.</p></blockquote>
+
+<p>11/7/2000.  <cite>Dave Winer</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/rss-dev/message/1139">Dan Brickley&#8217;s message</a></p>
+<blockquote><p>I just subscribed to this list for a moment, to rebut Dan&#8217;s assertion that &lt;scriptingNews&gt; format was derived from CDF. It was not. It was derived from my experience as a web writer and web app developer and that&#8217;s all. I documented my work through 1997-2000 on this stuff, publicly.</p></blockquote>
+
+<p>11/7/2000.  <cite>Seth Russell</cite>: <a href="/web/20110806114859/http://groups.yahoo.com/group/rss-dev/message/1138">Re: [RSS-DEV] RSS-Classic, RSS 1.0 and a historical debt</a></p>
+<blockquote><p>[addressing Dan Brickley] Look, this
+thing is
+past the point of justifications being important. &#8230; Now, personally I don&#8217;t
+have
+any vested interest (ego) in either the WG group or in Dave&#8217;s group. But it
+doesn&#8217;t
+feel right to me. I don&#8217;t understand the divisive stubbornness that keeps the
+WG
+from just changing the name. But I do see the political magic that would
+happen if
+we just changed it. Especially since XRSS is the better name anyway and
+actually
+names this thing politically correct.</p>
+<p>Heal the Rift<br />
+Start anew<br />
+Change the name!</p></blockquote>
+
+<p>The name was never changed.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806114859/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806114859/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806114859/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806114859/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806114859/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.475 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:51:22 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 11:48:59 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:20:39 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

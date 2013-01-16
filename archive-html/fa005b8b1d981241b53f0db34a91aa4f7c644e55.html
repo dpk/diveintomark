@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Thought experiment [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110811072504/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110811072504/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110811072504/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110811072504/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110811072504im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110811072504/http://diveintomark.org/archives/2004/01/12/transitions" title="Transitions">
+<link rel=next href="/web/20110811072504/http://diveintomark.org/archives/2004/01/16/draconianism" title="The history of draconian error handling in XML">
+<link rel=up href="/web/20110811072504/http://diveintomark.org/archives#p1466" title="January 2004">
+<link rel='index' title='dive into mark' href='/web/20110811072504/http://diveintomark.org/' />
+<link rel='prev' title='Transitions' href='/web/20110811072504/http://diveintomark.org/archives/2004/01/12/transitions' />
+<link rel='next' title='The history of draconian error handling in XML' href='/web/20110811072504/http://diveintomark.org/archives/2004/01/16/draconianism' />
+<link rel='canonical' href='/web/20110811072504/http://diveintomark.org/archives/2004/01/14/thought_experiment' />
+<link rel='shortlink' href='/web/20110811072504/http://diveintomark.org/?p=1466' />
+<meta name="description" content="The client is the wrong place to enforce data integrity. It's just the wrong place. If you want to do it, of course I can't stop you. But think about who it will hurt.">
+<meta name="keywords" content="draconian,xhtml,xml">
+<link href="/web/20110811072504cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110811072504/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110811072504/http://diveintomark.org/archives/2004/01/14/thought_experiment">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2004\/01\/14\/thought_experiment";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "11";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2004/01/14/thought_experiment" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110811072504" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514122249/http://diveintomark.org/archives/2004/01/14/thought_experiment" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 7:25:04 Aug 11, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111105092233/http://diveintomark.org/archives/2004/01/14/thought_experiment" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="5 Nov 2011"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110726002049/http://diveintomark.org/archives/2004/01/14/thought_experiment" title="0:20:49 Jul 26, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 7:25:04 Aug 11, 2011">11</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110902041831/http://diveintomark.org/archives/2004/01/14/thought_experiment" title="4:18:31 Sep 2, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620093946/http://diveintomark.org/archives/2004/01/14/thought_experiment" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 7:25:04 Aug 11, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110811072504*/http://diveintomark.org/archives/2004/01/14/thought_experiment" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>67 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Apr 06 - 9 Jun 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000102231000_2007:-1:120221001111_2008:-1:111113d21001_2009:-1:106000000000_2010:-1:000001000000_2011:7:000010111010_2012:-1:700001000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110811072504/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110811072504/http://diveintomark.org/archives#p1466">January 14, 2004</a> &#8227;
+<h2>Thought experiment</h2> (<a href="/web/20110811072504/http://diveintomark.org/tag/draconian" rel="tag">draconian</a>, <a href="/web/20110811072504/http://diveintomark.org/tag/xhtml" rel="tag">xhtml</a>, <a href="/web/20110811072504/http://diveintomark.org/tag/xml" rel="tag">xml</a>)</div>
+<p><a href="/web/20110811072504/http://norman.walsh.name/2004/01/12/postel">Norman Walsh</a> (<a href="/web/20110811072504/http://validator.w3.org/check?uri=http%3A%2F%2Fnorman.walsh.name%2F2004%2F01%2F12%2Fpostel">invalid XML</a>), <a href="/web/20110811072504/http://dannyayers.com/archives/002169.html">Danny Ayers</a> (<a href="/web/20110811072504/http://validator.w3.org/check?uri=http%3A%2F%2Fdannyayers.com%2Farchives%2F002169.html">invalid XML</a>), <a href="/web/20110811072504/http://inessential.com/?comments=1&postid=2770">Brent Simmons</a> (<a href="/web/20110811072504/http://validator.w3.org/check?uri=http%3A%2F%2Finessential.com%2F%3Fcomments%3D1%26postid%3D2770">invalid XML</a>), <a href="/web/20110811072504/http://nick.typepad.com/blog/2004/01/feeddemon_and_w.html">Nick Bradbury</a> (<a href="/web/20110811072504/http://validator.w3.org/check?uri=http%3A%2F%2Fnick.typepad.com%2Fblog%2F2004%2F01%2Ffeeddemon_and_w.html">invalid XML</a>), and <a href="/web/20110811072504/http://bitworking.org/news/There_are_no_exceptions_to_Postel_s_Law_">Joe Gregorio</a> (<a href="/web/20110811072504/http://validator.w3.org/check?uri=http%3A%2F%2Fbitworking.org%2Fnews%2FThere_are_no_exceptions_to_Postel_s_Law_">invalid XML claiming to be HTML</a>) have all denounced me as a heretic for pointing out that, perhaps, rejecting invalid XML on the client side is a bad idea.  The reason I know that they have denounced me is that I read what they had to say, and the reason I was able to read what they had to say is that my browser is very forgiving of all their various XML wellformedness and validity errors.</p>
+
+<p>Tim Bray has chimed in by <a href="/web/20110811072504/http://www.tbray.org/ongoing/When/200x/2004/01/11/PostelPilgrim">calling all of those people names</a>, stating in no uncertain terms that <q cite="http://www.tbray.org/ongoing/When/200x/2004/01/11/PostelPilgrim">anyone who can&#8217;t make &#8230; well-formed XML is an incompetent fool.</q>  Well, technically he was only talking about syndication feeds, but since XHTML is as much XML as Atom or RSS, I&#8217;m pretty sure he would apply the same measurement.  So if you can&#8217;t make well-formed XML, don&#8217;t despair; you may be a fool, but you are, if nothing else, in outstanding company.</p>
+
+<p>Rather than call people names, I&#8217;d like to propose a thought experiment.</p>
+
+<p>Imagine, if you will, that all web browsers use strict XML parsers.  That is, whenever they encounter an XHTML page, they parse it with a conforming XML parser and refuse to display the page unless it is well-formed XML.  This part of the thought experiment is not terribly difficult to imagine, since Mozilla actually works this way under certain circumstances (if the server sends an XHTML page with the MIME type <code>application/xhtml+xml</code>, instead of the normal <code>text/html</code>).  But imagine that all browsers worked this way, regardless of MIME type.</p>
+
+<p>Now imagine that you were using a publishing tool that prided itself on its standards compliance.  All of its default templates were valid XHTML.  It incorporated a nifty layout editor to ensure that you couldn&#8217;t introduce any invalid XHTML into the templates yourself.  It incorporated a nifty validating editor to ensure that you couldn&#8217;t introduce any invalid XHTML into your authored content.  It was all very nifty.</p>
+
+<p>Imagine that you posted a long rant about how this is the way the world should work, that clients should be the gatekeepers of wellformedness, and strictly reject any invalid XML that comes their way.  You click &#8216;Publish&#8217;, you double-check that your page validates, and you merrily close your laptop and get on with your life.</p>
+
+<p>A few hours later, you start getting email from your readers that your site is broken.  Some of them are nice enough to include a URL, others simply scream at you incoherently and tell you that you suck.  (This part of the thought experiment should not be terribly difficult to imagine either, for anyone who has ever dealt with end-user bug reports.)  You test the page, and lo and behold, they are correct: the page that you so happily and validly authored is now not well-formed, and it not showing up at all in any browser.  You try validating the page with a third-party validator service, only to discover that it gives you an error message you&#8217;ve never seen before and that you don&#8217;t understand.</p>
+
+<p>You pore through the raw source code of the page and find what you think is the problem, but it&#8217;s not in your content.  In fact, it&#8217;s in an auto-generated part of the page that you have no control over.  What happened was, someone linked to you, and when they linked to you they sent a trackback with some illegal characters (illegal for you, not for them, since they declare a different character set than you do).  But your publishing tool had a bug, and it automatically inserted their illegal characters into your carefully and validly authored page, and now all hell has broken loose.</p>
+
+<p>The emails are really pouring in now.  You desperately jump to your administration page to delete the offending trackback, but oh no!  The administration page itself tries to display the trackbacks you&#8217;ve received, and you get an XML processing error.  The same bug that was preventing your readers from reading your published page is now preventing you from fixing it!  You&#8217;re caught in a catch-22.  And what&#8217;s worse, your site is part of a completely hosted solution, so you can&#8217;t even dig into the source or the underlying database and fix it yourself; all the code is locked away on someone else&#8217;s server, beyond your control.  There&#8217;s nothing you can do now but fire off a desperate email to your hosting provider and hope they can fix the underlying problem <em>and</em> clean up your bad data.  You know, whenever they get around to it.</p>
+
+<p>All the while, your page is completely inaccessible and visibly broken, and readers are emailing you telling you this over and over again.  And of course the discussion you were trying to start with your eloquent words has come to a screeching halt; no new comments can be added because your comment form is on the same broken page.</p>
+
+<p>Here&#8217;s the thing: that wasn&#8217;t a thought experiment; it all really happened.  It&#8217;s a funny story, actually, because it happened to Nick Bradbury, on the very page where he was <a href="/web/20110811072504/http://nick.typepad.com/blog/2004/01/feeddemon_and_w.html">explaining why it was so important for clients to reject non-wellformed XML</a>.  His original post was valid XHTML, and his surrounding page was valid XHTML, but a trackback came in with a character that wasn&#8217;t in his character set, and Typepad didn&#8217;t catch it, and suddenly his page became non-wellformed XML.</p>
+
+<p>Except that none of the rest of it happened, because Nick is not publishing his page as <code>application/xhtml+xml</code>, and browsers are forgiving by default.  And although I did happen to notice the XML wellformedness error and report it, it wasn&#8217;t a critical problem for him.  I was even able to report the error using the comment form on the broken page itself.  And while SixApart should certainly fix the error, they are free to fix it on their own schedule; it is not a crisis for them or for Nick, no one is being flooded with angry emails, no one is caught in a catch-22 of invalidity.</p>
+
+<p>Want another thought experiment?  Imagine Nick was serving Google ads on that page.  Not so funny anymore, is it?</p>
+
+<p>The client is the wrong place to enforce data integrity.  It&#8217;s just the wrong place.  I hear otherwise intelligent people claim that <q>if everyone did it, it would be okay.</q>  No, if everyone did it, <em>it would be even worse</em>.  If you want to do it, of course I can&#8217;t stop you.  But think about who it will hurt.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110811072504/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110811072504/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110811072504/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110811072504/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110811072504/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.308 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 12:16:13 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 7:25:04 Aug 11, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:11:44 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

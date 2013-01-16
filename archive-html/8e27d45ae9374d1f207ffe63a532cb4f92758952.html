@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>My Good Easy [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806113257/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806113257/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806113257/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806113257/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806113257im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806113257/http://diveintomark.org/archives/2002/10/07/patent_reversal" title="Patent reversal">
+<link rel=next href="/web/20110806113257/http://diveintomark.org/archives/2002/10/08/teach_a_man_to_fish" title="Teach a man to fish">
+<link rel=up href="/web/20110806113257/http://diveintomark.org/archives#p1121" title="October 2002">
+<link rel='index' title='dive into mark' href='/web/20110806113257/http://diveintomark.org/' />
+<link rel='prev' title='Patent reversal' href='/web/20110806113257/http://diveintomark.org/archives/2002/10/07/patent_reversal' />
+<link rel='next' title='Teach a man to fish' href='/web/20110806113257/http://diveintomark.org/archives/2002/10/08/teach_a_man_to_fish' />
+<link rel='canonical' href='/web/20110806113257/http://diveintomark.org/archives/2002/10/07/my_good_easy' />
+<link rel='shortlink' href='/web/20110806113257/http://diveintomark.org/?p=1121' />
+<meta name="description" content="Joe Gregorio: Trying to re-create the Good Easy on a Windows machine is my next pet project. After which I go into excruciating detail on the setup of my own laptop, on which I am forced to use Windows during the day.">
+<meta name="keywords" content="cygwin,emacs,goodeasy,mozilla,utilities,windows">
+<link href="/web/20110806113257cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806113257/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806113257/http://diveintomark.org/archives/2002/10/07/my_good_easy">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/10\/07\/my_good_easy";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/10/07/my_good_easy" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806113257" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115908/http://diveintomark.org/archives/2002/10/07/my_good_easy" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 11:32:57 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110910162618/http://diveintomark.org/archives/2002/10/07/my_good_easy" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="10 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115908/http://diveintomark.org/archives/2002/10/07/my_good_easy" title="11:59:08 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 11:32:57 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110910162618/http://diveintomark.org/archives/2002/10/07/my_good_easy" title="16:26:18 Sep 10, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620014817/http://diveintomark.org/archives/2002/10/07/my_good_easy" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 11:32:57 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806113257*/http://diveintomark.org/archives/2002/10/07/my_good_easy" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>22 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">23 Jun 06 - 10 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001002100_2007:-1:012102000111_2008:-1:101110001000_2009:-1:000000000000_2010:-1:000001000000_2011:7:000010011000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806113257/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806113257/http://diveintomark.org/archives#p1121">October 7, 2002</a> &#8227;
+<h2>My Good Easy</h2> (<a href="/web/20110806113257/http://diveintomark.org/tag/cygwin" rel="tag">cygwin</a>, <a href="/web/20110806113257/http://diveintomark.org/tag/emacs" rel="tag">emacs</a>, <a href="/web/20110806113257/http://diveintomark.org/tag/goodeasy" rel="tag">goodeasy</a>, <a href="/web/20110806113257/http://diveintomark.org/tag/mozilla" rel="tag">mozilla</a>, <a href="/web/20110806113257/http://diveintomark.org/tag/utilities" rel="tag">utilities</a>, <a href="/web/20110806113257/http://diveintomark.org/tag/windows" rel="tag">windows</a>)</div>
+<p><cite>Joe Gregorio</cite>: <a href="/web/20110806113257/http://bitworking.org/Oct2002.html#X631695997519494480">My next pet project</a>.  <q cite="http://bitworking.org/Oct2002.html#X631695997519494480">Trying to re-create the <a href="/web/20110806113257/http://www.winterspeak.com/columns/082001.html">Good Easy</a> on a Windows machine.</q>  I have also made half-hearted attempts in this direction, as I am forced to use Windows during the day.  I say half-hearted because I&#8217;m still application-centric, and I don&#8217;t go as far with keyboard shortcuts as I could.  But I don&#8217;t use the desktop at all (never have, on any system), and I don&#8217;t use <kbd>ctrl alt</kbd> keyboard shortcuts because I personally find them awkward (YMMV).  If you must use Windows, the first step towards a productive system is managing your Start menu.</p>
+
+<p>I use the main level of the Start menu with numbered shortcuts to my most common programs.  <samp>0 <a href="/web/20110806113257/http://www.annoyances.org/exec/show/article02-013">Control Panel</a></samp>, <samp>1 <a href="/web/20110806113257/http://www.mozilla.org/">Mozilla</a></samp>, <samp>2 <a href="/web/20110806113257/http://www.gnu.org/software/emacs/windows/ntemacs.html">Emacs</a></samp>, <samp>3 DOS home</samp>, <samp>4 DOS work</samp>, <samp>5 DOS incoming</samp> (each of which gives me a command line, but in different directories), <samp>7 <a href="/web/20110806113257/http://www.activestate.com/Products/ActivePython/">Python</a></samp>, <samp>9 IE</samp>.  Also <samp># Explorer home</samp>, <samp>$ Explorer work</samp>, <samp>% Explorer incoming</samp>, which open Explorer windows in various useful directories (the same directories as the DOS shortcuts, only with the <kbd>shift</kbd> key held down, and yes, I intentionally set it up so that $ went to my work folder).  Less-used programs are taken out of their useless submenus (as installed) and moved directly into the Programs submenu and given unique first letters as needed.  <samp><a href="/web/20110806113257/http://www.lavasoftusa.com/">Ad-aware</a></samp>, <samp><a href="/web/20110806113257/http://www.openoffice.org/">Excel</a></samp>, <samp>IM</samp>, <samp><a href="/web/20110806113257/http://sillydog.org/narchive/">Netscape 4</a></samp>, <samp>Paint Shop Pro</samp>, <samp><a href="/web/20110806113257/http://gpoulose.home.att.net/">Query Tool (ODBC)</a></samp>, <samp><a href="/web/20110806113257/http://www.vmware.com/">VMWare</a></samp>, <samp><a href="/web/20110806113257/http://www.openoffice.org/">Word</a></samp>.  All other submenus except Startup are removed from the Programs menu.  (Yes, delete <samp>Accessories</samp>.  Do you honestly ever use it?  If so, it&#8217;s probably a sign of a larger productivity problem.)  Things which never need to be run manually (like WinZip and Quicktime) are removed from the Programs menu.  Maintaining a clean Programs menu is an ongoing struggle, but well worth it.</p>
+
+<p>On most modern keyboards, there is a key next to your left <kbd>alt</kbd> key that opens the start menu, which you can press with your left thumb without taking your fingers off the home keys.  Otherwise <kbd>ctrl esc</kbd> always works.  <kbd>Menu 4</kbd> gives me a new command prompt in my work directory.  <kbd>Menu P N</kbd> runs Netscape 4 (for compatibility testing in my day job, ugh).  Mozilla and Emacs are almost always open, but I quit lesser-used applications as soon as I&#8217;m done using them (mostly because my laptop doesn&#8217;t have a lot of memory).</p>
+
+<p>I install <a href="/web/20110806113257/http://www.cygwin.com/">Cygwin</a> so that the command line is actually useful.  Cygwin is a collection of Windows ports of all your favorite UNIX utilities, including mv, cp, scp, ssh, man, tar, less, grep, patch, ncftp, cvs, and many others.  And bash, which I don&#8217;t use because I dislike how it handles Windows pathnames.  I also set the properties of my command line shortcuts to set the window size to 120 x 50 (almost full screen at 1024 x 768), and screen buffer size to 120 x 3000.  Set window position at 0 x 0, and don&#8217;t let the system position the window.</p>
+
+<p>In Mozilla, I set my home page to <samp>about:blank</samp>, set Internet Search to search with Google, use Tabbed Browsing, open tabs instead of windows in all possible cases, always show the tab bar, and load links in the background (essential for weblog surfing, you can <kbd>ctrl click</kbd> links to open them in new tabs in the background).  Under Scripts &amp; Plugins, I do not allow scripts to open unrequested windows.  I turn off the sidebar, turn on the Site Navigation Bar, delete all pre-installed bookmarks, and create two bookmarks: one which takes me to my webmail, and another which takes me to <a href="/web/20110806113257/http://diveintomark.org/mt/mt-search.cgi">my internal site search</a>, from which I can find all other bookmarks I need.</p>
+
+<p>In Internet Explorer, I set my home page to the page to edit my weblog, since that&#8217;s the only thing I do in Internet Explorer.  <kbd>alt tab</kbd> back and forth between Mozilla and IE is easier than <kbd>ctrl pgup/pgdown</kbd> between tabs within Mozilla, since TEXTAREAs in Mozilla lose focus when you switch tabs, making copying and pasting weblog entries virtually impossible.</p>
+
+<p>I use Emacs locally and vi remotely, because the default behavior of Emacs is so heinous as to render it unusable.  (For instance, editing a CGI script named <samp>foo.cgi</samp> on a web server with Emacs would generate a <samp>foo.cgi~</samp> backup file, which is world-readable and is sent as plain text to any browser that asks.  Try this sometime on your favorite web site.)  Among other things, my <samp>.emacs</samp> file (which is actually called <samp>_emacs</samp> on Windows) instructs Emacs to store all backup files in a single directory (d:\backup); to treat all XML files as DocBook, all CGI scripts as Python, and all SQL scripts as PL/SQL; to use Cygwin&#8217;s bash shell for <kbd>M-x-shell</kbd>; to use a single maximized frame with no menubar, titled as the name of the current file; to show column numbers; to accept <kbd>y</kbd> and <kbd>n</kbd> for yes/no questions; not to blink; not to beep; and to close the current file when I press <kbd>M-w</kbd>.  I use some weird registry hacks and a hacked notepad.exe to get all text files to open in Emacs.  (I got this idea from <a title="Replacing Notepad with Ultraedit-32" href="/web/20110806113257/http://www.ultraedit.com/downloads/index.html#notepad">Ultraedit</a>.)  My _emacs file is my second most backed-up possession.</p>
+
+<p>I don&#8217;t use Windows&#8217; useless directory structure for user home directories.  On my D drive I have <samp>d:\home</samp> (contains directories for my books and other personal projects, each under CVS control &#8212; also set as my home directory using the HOME environment variable), <samp>d:\work</samp> (contains directories for each work project, also under CVS), <samp>d:\incoming</samp> (set as default download directory for all programs that download things), and <samp>d:\backup</samp> (used by Emacs, and for temporary storage, for instance for storing originals when checking out newly created CVS projects).  I don&#8217;t know or care what&#8217;s where on my C drive.</p>
+
+<p>I have tried many, many address books, and still store all my contacts, email addresses, snail mail addresses, phone numbers, and other vital personal information in a text file called <samp>phone</samp>, stored in d:\home\phone.  It is not in any particular format, other than being plain text and usually including blank lines between entries.  I categorize people with simple keywords in parentheses after their name, and use <kbd>M-x-occur</kbd> in Emacs to search by keyword.  This file is my single most backed-up possession.</p>
+
+<p>Other essential free Windows utilities I use (in no particular order): <a href="/web/20110806113257/http://www.microsoft.com/ntworkstation/downloads/PowerToys/Networking/NTTweakUI.asp">TweakUI</a>, <a href="/web/20110806113257/http://www.cygwin.com/">Cygwin</a>, <a href="/web/20110806113257/http://www.guidescope.com/">Guidescope</a>, <a href="/web/20110806113257/http://download.com.com/3000-2092-10039884.html?part=zonealarm&subj=dlpage">ZoneAlarm</a>.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806113257/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806113257/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806113257/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806113257/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806113257/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.140 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-14 01:36:34 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 11:32:57 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:18:53 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

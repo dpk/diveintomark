@@ -1,0 +1,666 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Translation From PR-Speak to English of Selected Portions of Rails Developer David Heinemeier Hansson&#8217;s Response to Alex Payne&#8217;s Interview [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110811044140/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110811044140/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110811044140/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110811044140/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110811044140im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110811044140/http://diveintomark.org/archives/2007/04/15/ejookashun" title="Two minutes">
+<link rel=next href="/web/20110811044140/http://diveintomark.org/archives/2007/04/19/renovation" title="Renovation">
+<link rel=up href="/web/20110811044140/http://diveintomark.org/archives#p1680" title="April 2007">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Translation From PR-Speak to English of Selected Portions of Rails Developer David Heinemeier Hansson&#8217;s Response to Alex Payne&#8217;s Interview Comments Feed" href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation/feed" />
+<link rel='index' title='dive into mark' href='/web/20110811044140/http://diveintomark.org/' />
+<link rel='prev' title='Two minutes' href='/web/20110811044140/http://diveintomark.org/archives/2007/04/15/ejookashun' />
+<link rel='next' title='Renovation' href='/web/20110811044140/http://diveintomark.org/archives/2007/04/19/renovation' />
+<link rel='canonical' href='/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation' />
+<link rel='shortlink' href='/web/20110811044140/http://diveintomark.org/?p=1680' />
+<meta name="description" content="My ego is the size of Montana.">
+<meta name="keywords" content="rant">
+<link href="/web/20110811044140cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110811044140/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2007\/04\/16\/dhh-translation";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "11";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2007/04/16/dhh-translation" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110811044140" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607151939/http://diveintomark.org/archives/2007/04/16/dhh-translation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 4:41:40 Aug 11, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110927015128/http://diveintomark.org/archives/2007/04/16/dhh-translation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110718034715/http://diveintomark.org/archives/2007/04/16/dhh-translation" title="3:47:15 Jul 18, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 4:41:40 Aug 11, 2011">11</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110927015128/http://diveintomark.org/archives/2007/04/16/dhh-translation" title="1:51:28 Sep 27, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615102435/http://diveintomark.org/archives/2007/04/16/dhh-translation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 4:41:40 Aug 11, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120811113055/http://diveintomark.org/archives/2007/04/16/dhh-translation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="11 Aug 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110811044140*/http://diveintomark.org/archives/2007/04/16/dhh-translation" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>73 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">18 Apr 07 - 18 Sep 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000323001111_2008:-1:111120001100_2009:-1:100000000000_2010:-1:000111000010_2011:7:000001211100_2012:-1:111010fe5000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110811044140/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110811044140/http://diveintomark.org/archives#p1680">April 16, 2007</a> &#8227;
+<h2>Translation From PR-Speak to English of Selected Portions of Rails Developer David Heinemeier Hansson&#8217;s Response to Alex Payne&#8217;s Interview</h2> (<a href="/web/20110811044140/http://diveintomark.org/tag/rant" rel="tag">rant</a>)</div>
+<p>Source: <a href="/web/20110811044140/http://www.loudthinking.com/arc/000608.html">Twitter Trouble</a>.</p>
+
+<blockquote class="fisk">
+<p>Twitter is an amazing success story in terms of rapid user uptake and flattering press.</p>
+
+</blockquote>
+
+<p>I feel I deserve an enormous share of that flattering press.</p>
+
+<blockquote class="fisk">
+<p>I had a chance to speak with the team a while back about the wild ride they&#8217;ve been on.  At that time they were fielding spikes of up to 11,000 requests per second across some 16 cores with very little caching thrown into the mix to mitigate. No wonder their site had been feeling slow.</p>
+</blockquote>
+
+<p>I&#8217;m going to pretend that everyone has these problems.</p>
+
+<blockquote class="fisk">
+<p>It sounded like they had a good plan at the time, though. Roll in a rack of new servers, look into doing substantial caching, and move beyond a single database server. The normal road to sanity employed by most any web application experiencing rapid growth.</p>
+</blockquote>
+
+<p>I am a software developer, therefore this is obviously a hardware problem.</p>
+
+<blockquote class="fisk">
+<p>It seems like at least one of their developers felt this standard approach to scaling was too much work and decided to share his feelings about that in an interview.</p>
+</blockquote>
+
+<p>Fuck you, Alex.</p>
+
+<blockquote class="fisk">
+<p>On some level, I can empathize with this sentiment. Rails makes the act of developing such a pleasant experience that when you need to follow the same scaling path as every other shared-nothing stack, the contrast can feel stark.</p>
+</blockquote>
+
+<p>My ego is the size of Montana.</p>
+
+<blockquote class="fisk">
+<p>But I would still like to address two points raised in the interview. First, Alex mentions that scaling the application by adding more Mongrels and servers eventually puts a greater strain on the database. That&#8217;s absolutely correct, but also the intended consequence, not an unexpected side-effect. There should have been no surprises there.</p>
+</blockquote>
+
+<p>The only surprise here is that you&#8217;re treating my utter disregard for scalability as a bug, when it is in fact a feature.</p>
+
+<blockquote class="fisk">
+<p>Scaling is the act of removing bottlenecks. When you remove one bottleneck (like application code execution), you tend to reveal another (like database queries). That&#8217;s natural and means you&#8217;re making progress.</p>
+</blockquote>
+
+<p>Rails is an ogre, and ogres have layers.</p>
+
+<blockquote class="fisk">
+<p>Second, when you work with open source and you discover new requirements not met by the software, it&#8217;s your shining opportunity to give something back. Rather than just sit around idle waiting for some vendor to fix your problems, you get the unique chance of being a steward of your own destiny.</p>
+</blockquote>
+
+<p>My utter disregard for performance issues is entirely your fault.</p>
+
+<blockquote class="fisk">
+<p>This is especially true with frameworks like Rails that are implemented in high-level languages like Ruby. The barriers to contribution are exceptionally low.</p>
+</blockquote>
+
+<p>I am high as a kite.</p>
+
+<blockquote class="fisk">
+<p>In this case, it seems that Twitter requires more sophisticated ways of talking to many databases at the same time. Alex puts it a little black and white with &#8220;&#8230;there&#8217;s no facility in Rails to talk to more than one database at a time&#8221;, which isn&#8217;t really true, but it could definitely be done better.  Last I spoke with Twitter, we discussed this and they sounded enthusiastic about being able to further this area of Rails.</p>
+
+</blockquote>
+
+<p>I can&#8217;t distinguish between people fluffing me because they want something, or fluffing me because they just can&#8217;t help themselves.</p>
+
+<blockquote class="fisk">
+<p>It&#8217;s disappointing to hear that they&#8217;ve forsaken that opportunity for an arms-crossed alternative.</p>
+</blockquote>
+
+<p>It&#8217;s disappointing to discover that there are people in the world who disagree with me.</p>
+
+<blockquote class="fisk">
+<p>Once the stress of having to deal with that in the moment subsides, I&#8217;m convinced that the team will grow beyond the blame game, get their hands dirty as full participants in an open source community, and contribute back their advances to the framework.</p>
+</blockquote>
+
+<p>I know this sucks, and I&#8217;m waiting for you to fix it so I can take credit for it.</p>
+
+<p style="text-align:right;font-style:oblique"><small>(with apologies to <a href="/web/20110811044140/http://daringfireball.net/2007/02/macrovision_translation">John Gruber</a>)</small></p>
+
+<p class=c>&#167;
+
+<h3 id=comments>One hundred comments here (<a href=/web/20110811044140/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-9079"><p>Funny, but perhaps a little harsh? Especially when you consider <a href="/web/20110811044140/http://www.loudthinking.com/arc/000610.html">the follow-up</a> that proves him right.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://sprangles.com/' rel='external nofollow' class='url'>Stewart Johnson</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9079" title="April 16, 2007 @ 11:14 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9080"><p>Fantastic.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://jeff.cutsinger.org/' rel='external nofollow' class='url'>Jeff</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9080" title="April 16, 2007 @ 11:16 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9081"><p>&#8220;fluffing&#8221; means giving a handjob?</p>
+<p class=sig>&#8212;&#8201;<cite>wx</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9081" title="April 16, 2007 @ 11:17 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9082"><p>Mark, I wish you had thought twice before posting this one. While David may not be the programming savior of the world, he is very upfront about his faults. Your dissection of things he didn&#8217;t say says more about you than it does about him.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://colinscroggins.com/' rel='external nofollow' class='url'>Colin Scroggins</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9082" title="April 16, 2007 @ 11:20 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9083"><p>DHH&#8217;s rants have smacked of way too much arrogance these past few weeks. It was time somebody put him in his place, cutting through all the diplomacy.</p>
+<p>Awesome! :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://deepak.jois.name/' rel='external nofollow' class='url'>Deepak Jois</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9083" title="April 16, 2007 @ 11:22 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9084"><cite><a href='/web/20110811044140/http://www.papascott.de/archives/2007/04/16/rails-is-an-ogre-and-ogres-have-layers/' rel='external nofollow' class='url'>PapaScott &#8212; Rails is an ogre, and ogres have layers</a></cite>&#160;(pingback)</li>
+<li id="comment-9085"><p>As I was reading, I was alternately laughing and narrowing my eyes at the obvious lifting of Gruber&#8217;s style. Then I saw the &#8220;apology&#8221; at the end and laughed even harder.</p>
+<p>Two with one blow!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://weblog.raganwald.com/' rel='external nofollow' class='url'>Reg Braithwaite</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9085" title="April 16, 2007 @ 11:27 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9086"><p>Nice post. It&#8217;s ridiculous that DHH is calling for others to be better OSS citizens and contribute something back when he is so quick to dismiss others if they don&#8217;t agree with him.</p>
+<p>Pot, meet kettle.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://davidavraamides.net/' rel='external nofollow' class='url'>David Avraamides</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9086" title="April 16, 2007 @ 11:34 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9087"><p>This is what everyone is thinking. 2 years from now we&#8217;ll be looking back at DHH and going &#8220;Oh, what rails could have been&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite>classic!</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9087" title="April 16, 2007 @ 11:40 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9088"><p>Putting words in other people&#8217;s mouthes is easier and more rewarding than saying something yourself, huh?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://jogin.com/' rel='external nofollow' class='url'>Tomas Jogin</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9088" title="April 16, 2007 @ 11:50 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9089"><p>Simply Awesome!</p>
+<p class=sig>&#8212;&#8201;<cite>michele</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9089" title="April 16, 2007 @ 11:58 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9090"><p>I am LMAO.  Thanks!  BTW who is DHH?</p>
+<p class=sig>&#8212;&#8201;<cite>railsking</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9090" title="April 16, 2007 @ 12:00 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9091"><p>It would seem that DHH is rather annoyed with Alex. Might that be because Alex mentioned that Python usually performs better than Ruby in most cases? Perish the thought.</p>
+<p class=sig>&#8212;&#8201;<cite>Mikkel Høgh</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9091" title="April 16, 2007 @ 12:03 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9092"><p>OK, let&#8217;s take <a href="/web/20110811044140/http://www.flickr.com/photos/doesrails/128015501/in/pool-canadaonrails/">the words straight from DHH&#8217;s mouth</a> regarding people who dare question his vision and priorities: &#8220;F*** You&#8221;.</p>
+<p>I hope he learns some humility before Rails gets forked like emacs did.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.joegrossberg.com/' rel='external nofollow' class='url'>Joe Grossberg</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9092" title="April 16, 2007 @ 12:04 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-9093"><cite><a href='/web/20110811044140/http://philsown.org/2007/04/mark-responds-to-dhh' rel='external nofollow' class='url'>Cultivate, Battle, Learn - Phil's Weblog</a></cite>&#160;(trackback)</li>
+<li id="comment-9094"><p>&#8220;Putting words in other people&#8217;s mouthes [sic] is easier&#8230;.&#8221;</p>
+<p>When &#8220;translating&#8221; someone&#8217;s words in this fashion, &#8220;putting words in other people&#8217;s mouths&#8221; is not an apt description of it.  Literally, sure, but there&#8217;s the comedy.  But your insult comes from the implication, not the literal meaning.  Usually the term connotes some kind of deception.  Here there is no such deception, the author is being very plain about it.  It is clear that what we are reading is the author&#8217;s take on what has been said, which is his own commentary&#8230; which is something he&#8217;s taken his time to articulate.</p>
+<p>The author is being neither deceptive nor lazy, so I don&#8217;t see any way that your criticism holds.</p>
+<p class=sig>&#8212;&#8201;<cite>babayada</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9094" title="April 16, 2007 @ 12:15 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9095"><p>I don&#8217;t know about what &#8220;fluffing&#8221; is, but I know what a &#8220;fluffer&#8221; does&#8230;</p>
+<p><a href="/web/20110811044140/http://en.wikipedia.org/wiki/Fluffer">http://en.wikipedia.org/wiki/Fluffer</a></p>
+<p class=sig>&#8212;&#8201;<cite>K</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9095" title="April 16, 2007 @ 12:16 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9096"><p>Hilaaaaaaaaaarious! :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://uzair.nairang.org/' rel='external nofollow' class='url'>Uzair</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9096" title="April 16, 2007 @ 12:17 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9097"><p>For those who don&#8217;t get the &#8220;translation&#8221; thingie, follow the Jon Gruber link. If you still don&#8217;t get it, try this:</p>
+<p><a href="/web/20110811044140/http://daringfireball.net/2005/04/adobe_translation" rel="nofollow">http://daringfireball.net/2005/04/adobe_translation</a></p>
+<p>Of course, you may understand it but not think that it&#8217;s particularly funny. Oh well!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://weblog.raganwald.com/' rel='external nofollow' class='url'>Reg Braithwaite</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9097" title="April 16, 2007 @ 12:38 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9098"><p>You are really grasping at straws with this post.</p>
+<p>Let me guess, you started writing your own framework in PHP a few months before Rails hit 1.0 and all of your friends chose Rails instead? </p>
+<p>Sore loser.</p>
+<p class=sig>&#8212;&#8201;<cite>wilson</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9098" title="April 16, 2007 @ 12:55 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9099"><cite><a href='/web/20110811044140/http://justinsomnia.org/2007/04/lol1-the-only-surprise-here-is-that-you%e2%80%99re-treating-my-utter-disregard-for-scalability-as-a/' rel='external nofollow' class='url'>LOL!!1 The only surprise here is that you’re treating my utter disregard for scalability as a&hellip; - Justinsomnia</a></cite>&#160;(pingback)</li>
+<li id="comment-9100"><p>Can&#8217;t we all just get along?  One platform, framework, language, IDE, versioning system, licensing scheme, or operating system that is the answer to everything is a monoculture that leads to stagnation and halfassed, lazy solutions to problems.  Are we not all trying to be good little monkeys and write our REST applications, XML this-that-and-the-other open and interoperable formats that can share and care and make the world a better place?  So a ruby on rails app turns out to not scale as well as expected.  This does not invalidate it for every use.  I myself make a living on a red-headed stepchild of a language (which I will not name, for fear my it is used to dismiss my comment) that is inappropriate for many uses but fits my business model very nicely.  Sheesh, people.  Every time somebody aggrandizes their toolkit-du-jour over anything else, God kills a kitten.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://andy.waschick.org/' rel='external nofollow' class='url'>Andy Waschick</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9100" title="April 16, 2007 @ 1:09 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9101"><p>You know, I didn&#8217;t find this hilaaaaaaaaaarious and I&#8217;m certainly not LMAO. This is&#8230; mildly amusing in a childish sort of way.</p>
+<p>And I&#8217;m not even saying anything on the acuracy of the <i>translation</i>. But from a humorous point of view this is sort of&#8230; meh.</p>
+<p class=sig>&#8212;&#8201;<cite>Venkman</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9101" title="April 16, 2007 @ 1:12 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9102"><p>&#8220;My ego is the size of Montana.&#8221;</p>
+<p>Hahahah, just this quote is worth the admission price! I am a rails early adapter, but the recent DHH outburst has left a slightly bitter taste in my mouth. Too bad there aren&#8217;t any viable alternatives to the tightly woven fabric that is the Rails framework.</p>
+<p>Thanks for a brilliant post Mark, spot on as usual!</p>
+<p class=sig>&#8212;&#8201;<cite>Priceless</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9102" title="April 16, 2007 @ 1:12 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9103"><p>One of your best rants ever!</p>
+<p>I&#8217;m still rotfling.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.oluyede.org/blog' rel='external nofollow' class='url'>Lawrence Oluyede</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9103" title="April 16, 2007 @ 1:13 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9104"><p>37signals seems to be staffed entirely by people who consider condescension and bloviating self regard to be a business strategy.  Their blog entries on tech support are prime examples, particularly <a href="/web/20110811044140/http://www.37signals.com/svn/posts/77-and-the-winner-for-best-support-email-ever-issee-image">good doggy</a> and <a href="/web/20110811044140/http://www.37signals.com/svn/archives2/useless_absurd_must_need_appalled_just_infuriating_essential_etc.php">bad doggy</a>.</p>
+<p class=sig>&#8212;&#8201;<cite>smudge</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9104" title="April 16, 2007 @ 1:16 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9105"><cite><a href='/web/20110811044140/http://www.oluyede.org/blog/2007/04/16/best-rant-ever/' rel='external nofollow' class='url'>A song for the lovers &raquo; Best rant ever</a></cite>&#160;(pingback)</li>
+<li id="comment-9106"><p>Mark, your post is quite unfair and also pretty uninformed (besides not being very clever or funny IMO). Your motives seem rather questionable and the whole thing smacks of sour grapes. Surely, DHH is very opinionated and as such he can reasonably expect harsh criticism coming back at him, but this just seems to be another low blow in a greater flamewar directed against him as of late (and should it surprise anyone that the most vocal contributers on this seem to be coming out of the Python community?). I don&#8217;t see anything in his response to the interview with Alex which would warrant this kind of attack and i have a feeling you may come to regret posting such nonsense before the day is done.</p>
+<p class=sig>&#8212;&#8201;<cite>Sebastian Friedrich</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9106" title="April 16, 2007 @ 1:23 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9107"><p>This form of commentary is already a bit tired, don&#8217;t you think? Personally, I&#8217;d prefer some real writing to a clammy fistful of one-liners. Even if the guy has faults, at least DHH could offer his audience that much.</p>
+<p class=sig>&#8212;&#8201;<cite>Ratchetcat</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9107" title="April 16, 2007 @ 1:24 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9108"><p>&#8220;Rails is an ogre, and ogres have layers.&#8221;</p>
+<p>ROFL !!!.</p>
+<p class=sig>&#8212;&#8201;<cite>Garth</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9108" title="April 16, 2007 @ 1:28 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9109"><p>No matter how funny and correct this is (which it&#8217;s both, I have to say), that doesn&#8217;t make  posting it the <em>right</em> thing to do. I&#8217;m surprised to see childish playground stuff like this &#8211; rise above it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.gravitystorm.co.uk/' rel='external nofollow' class='url'>Andy Allan</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9109" title="April 16, 2007 @ 1:30 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9110"><p><i>DHH’s rants have smacked of way too much arrogance these past few weeks.</i></p>
+<p>Last couple weeks?  You meant years right?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://funkaosh.com/' rel='external nofollow' class='url'>ramanan</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9110" title="April 16, 2007 @ 1:33 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9111"><p>About time someone brought this up. He just sounds annoyingly too poetic.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://nothing/' rel='external nofollow' class='url'>Doodles</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9111" title="April 16, 2007 @ 1:51 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9112"><p>I&#8217;m proud of what Twitter has achieved with Rails. I&#8217;m certainly of no illusions that Rails is perfect nor that Ruby is a speed daemon&#8230;. Alex pointed the finger at the database himself in the interview. When they added enough Mongrels to deal with the computational bottleneck, he said they started to have trouble at the database and needed to add more databases (and was thus disappointed at what Rails had to offer to support that).</p>
+<p>This is a quote by DHH in the comments.</p>
+<p>I tried to speak in clear and balanced language in that interview, but clearly I didn&#8217;t accomplish as much. </p>
+<p>This is Mr. Alex Payne, responding.  </p>
+<p>It seems an American shows he is pretty respectful of a Dane(someone else calls his nationality into play on DHH&#8217;s blog), Mr. Pilgrim just plays it for laughs.  The net benefit of all this is all of the players get more press. No one is too delicate for this type of fight.</p>
+<p class=sig>&#8212;&#8201;<cite>Sacrilicious</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9112" title="April 16, 2007 @ 1:52 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9113"><p>Sebastian, Andy et. al., David expects, nay, demands a religious zealotry, and this is the kind of attitude we have to guard against in the Rails community. To pretend that the criticisms coming towards David are from outside Rails(TM) community is akin to sticking one&#8217;s head in the sand. </p>
+<p>He is a talented guy, no doubt, he created Rails and is passionate about it, no doubt about that either, but this doesn&#8217;t mean that we owe supine allegiance to everything he has to say about everything. Based on this un-questioning conformity by the Rails community at large, he has managed to embarrass us all on numerous occasions. Twitter being merely the latest Faux Pas.</p>
+<p>Just like DHH doesn&#8217;t owe anyone sh*t, by the same token, Rails and Ruby community doesn&#8217;t owe him blind allegiance either! He has to stop making these scenes and attacking people if they don&#8217;t agree with him. He has acted as a bully towards his own community. We shouldn&#8217;t be so quick to blame others and warn of &#8220;regret&#8221;ful consequences just because they happen to notice his almost abusive behaviour.</p>
+<p>Stop feeding the guy&#8217;s Messiah complex. Please!</p>
+<p class=sig>&#8212;&#8201;<cite>DottedDecimal</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9113" title="April 16, 2007 @ 1:55 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9114"><p>Ah, a very funny way to say what I was thinking as well.  Honestly, DHH seems like a really sharp guy, but there is no question that both of his recent posts about Twitter were entirely out of line.  He came off as full of himself, unflexible, demanding, and proud.  Thanks for calling him out – it needed to happen!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://cleverdevil.org/' rel='external nofollow' class='url'>Jonathan LaCour</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9114" title="April 16, 2007 @ 1:57 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9115"><p>Damn it. I like your writing Mark. I value your opinions.</p>
+<p>But why the hostility?  This is just viciousness.  Your entire point point could be summarized simply as &#8220;DHH is arrogant and he doesn&#8217;t care about scaling.&#8221;  </p>
+<p>Is DHH arrogant?  Blatantly.  So is Guido.  Likewise Larry Wall, and Alan Kay, etc.  Comes with the territory.</p>
+<p>However, Rails <i>is</i> scaling.  On a number of high profile sites.</p>
+<p>Your response to the suggestion that it is easy to contribute to Rails is patently absurd given that one of the Twitter folks&#8217; biggest problems with Rails has been fixed two ways in three days.  One solution in seventy lines of code.</p>
+<p>In short, let&#8217;s be done with the hate.  I&#8217;ll start.  I love Ruby, I love Rails, I love Python, I love Django.  I think Django does some things better than Rails, and some benchmarks have it performing considerably better than Rails.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://blog.rictic.com/' rel='external nofollow' class='url'>Peter Burns</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9115" title="April 16, 2007 @ 2:03 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9116"><p>I don&#8217;t know much about the latest round of rails arguments, and I don&#8217;t care to, but these translations are great.  Nice work, Mark.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.scottnelle.com/' rel='external nofollow' class='url'>Scott N.</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9116" title="April 16, 2007 @ 2:21 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9117"><p>Yes, Mark, YOUR ego is the size of Montana.  Glad you finally admitted it.</p>
+<p class=sig>&#8212;&#8201;<cite>Don</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9117" title="April 16, 2007 @ 2:21 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9118"><p>Great post, Mark.  I&#8217;ve been a Rails user since 0.13, and while I think it&#8217;s great, I wish DHH would learn a lesson about humility.  I read the original interview before DHH posted on it, and didn&#8217;t even think twice about Alex&#8217;s comments.  He spoke about his experiences.  That&#8217;s it.  </p>
+<p>I didn&#8217;t see anything that deserved this type of backlash.  David could have simply acknowledged the short coming, and the encouraged the community to solve it. </p>
+<p>Instead, we got &#8216;Fuck you, Alex&#8217;.  </p>
+<p>Thanks for making my day.  ;-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.styledbits.com/' rel='external nofollow' class='url'>Michael Gorsuch</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9118" title="April 16, 2007 @ 2:25 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9119"><p>/chuckles</p>
+<p>Too funny, and I was thinking along the same lines when I read the DHH piece…</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://azspot.net/' rel='external nofollow' class='url'>naum</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9119" title="April 16, 2007 @ 2:26 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9120"><p>If DHH was as humble or as &#8216;nice&#8217; as many people wish he was, we probably wouldn&#8217;t have Rails today or the many, many frameworks in other languages that have used Rails for inspiration.</p>
+<p>Sometimes it takes arrogant, rude behavior to make things happen.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://robsanheim.com/' rel='external nofollow' class='url'>Rob Sanheim</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9120" title="April 16, 2007 @ 2:32 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9121"><p><a href="/web/20110811044140/http://glu.ttono.us/articles/2007/04/15/on-twitter-rails-and-community" rel="nofollow">http://glu.ttono.us/articles/2007/04/15/on-twitter-rails-and-community</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.akrabat.com/' rel='external nofollow' class='url'>Rob...</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9121" title="April 16, 2007 @ 2:39 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9122"><p>The only reason comedy ever bugs anyone is because it rings too true.</p>
+<p>This was hilarious, Mark.</p>
+<p class=sig>&#8212;&#8201;<cite>Jack Shedd</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9122" title="April 16, 2007 @ 3:05 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9123"><p>Nicely said and well done.</p>
+<p>I have to admit that I&#8217;m having just as much fun reading the comments from people with their panties in a knot over you &#8220;attacking&#8221; rails as I did the actual post though.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://hellyeahbitch.com/' rel='external nofollow' class='url'>Mike Flynn</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9123" title="April 16, 2007 @ 3:15 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9124"><p>Mark, I don&#8217;t quite think DHH would agree with your depiction of Rails as an &#8220;ogre.&#8221; </p>
+<p>No, DHH would tell you Rails&#8230; is a parfait.</p>
+<p class=sig>&#8212;&#8201;<cite>Rpb</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9124" title="April 16, 2007 @ 3:27 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9126"><p>&gt; Sometimes it takes arrogant, rude behavior to make things happen.</p>
+<p>DHH did not create anything. Rails is a simple collection of ActionPack+ActiveRecord, none of which was created or inspired by DHH in any way. He is basically a very talented marketing person who collected a bunch of free scripts created by other people and PRed the hell out of it, making a name for himself. I bet nobody even knows who ACTUALLY wrote ActionPack or ActiveRecord, two libraries Rails is composed of.</p>
+<p class=sig>&#8212;&#8201;<cite>Eugueny</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9126" title="April 16, 2007 @ 4:05 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9127"><p>Gosh this is absolutely hilarious.  I am bookmarking this page and will read it when I need a laugh!</p>
+<p>Please keep up the  excellent work.</p>
+<p class=sig>&#8212;&#8201;<cite>rubyisrailing</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9127" title="April 16, 2007 @ 4:13 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9128"><p>Wow.  What tension!</p>
+<p>I love ruby and rails and I like this post.  Thanks Mark.</p>
+<p>If our next site takes off like we want it too, we know we&#8217;re going to have scaling issues ruby on rails and it&#8217;s probably going to take more hardware than if we had choose to code with C and optimize our loops in asembly, but you know what?</p>
+<p>We&#8217;re still using ruby on rails.</p>
+<p class=sig>&#8212;&#8201;<cite>Keith</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9128" title="April 16, 2007 @ 4:36 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9129"><p>Sometimes it takes comments like the one from &#8216;Eugueny&#8217; to make you realize that you should get back to work instead of wasting time arguing with a bunch of 5th graders. Thanks, Eugueny.</p>
+<p class=sig>&#8212;&#8201;<cite>Hank</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9129" title="April 16, 2007 @ 4:40 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9130"><p>Hey Eugeney, are you sure? because it is true that most of the stuff was cobbled together from already existing libraries, but I thought he came up with actionpack/activerecord based on martin fowler&#8217;s book? But maybe I&#8217;m mistaken? </p>
+<p>At least he&#8217;s got the name &#8220;Ruby on Rails&#8221; trademarked! Good thinking kiddo!</p>
+<p class=sig>&#8212;&#8201;<cite>Mike Spendster</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9130" title="April 16, 2007 @ 4:41 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9131"><p>I can&#8217;t believe Peter Burns compared DHH to Guido, Larry Wall, and Alan Kay!</p>
+<p>The Rails fever has clearly reached a level where he is now seen as some kind of religious messiah by his followers. They&#8217;re blind to everything around them, except the light generated by DHH.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://robhu.livejournal.com/' rel='external nofollow' class='url'>Robert Hulme</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9131" title="April 16, 2007 @ 4:43 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9132"><p>Ahhh, the mud slinging.  Personally, I didn&#8217;t find Mark&#8217;s entry childish or anything.  Just another (funny) point of view.  It&#8217;s no secret that DHH has an arrogant streak, but I&#8217;m not going to judge him for it.  I&#8217;m pretty bad myself.  But as others have pointed out, it took very little time for viable solutions to show up once people were properly motivated.  (An interesting challenge.  Good PR.  Whatever.)  I doubt I will ever have a particularly strong need for these solutions since I&#8217;ve stuck to fairly small, niche Rails applications, but it&#8217;s nice to have them, and so I&#8217;m not going to object to this giant kerfluffle.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://sporkmonger.com/' rel='external nofollow' class='url'>Bob Aman</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9132" title="April 16, 2007 @ 4:49 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9133"><p>The main flaw being complained about has already been fixed, invalidating half of the things you roundaboutly try to claim here. Way to pwn yourself, Mark.</p>
+<p class=sig>&#8212;&#8201;<cite>Chuck</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9133" title="April 16, 2007 @ 4:50 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9134"><p>The Rails cult is getting on my nerves. All they have to show is Twitter, and when Twitter has scaling problems, the cultists start attacking Twitter instead of admitting Rails&#8217; faults! </p>
+<p>People who need help should use this Danish anti-cult website: <a href="/web/20110811044140/http://www.dci.dk/en/" rel="nofollow">http://www.dci.dk/en/</a></p>
+<p class=sig>&#8212;&#8201;<cite>Klay</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9134" title="April 16, 2007 @ 4:57 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9135"><p>According to Wikipedia, &#8220;&#8216;Fluffing&#8217; can also be used to describe the artificial inflation of another&#8217;s ego for personal gain and/or insincere promotion of ideals or policies.&#8221;</p>
+<p>Although I sort of suspect that wasn&#8217;t the variant Mark meant.  The world may never know!</p>
+<p class=sig>&#8212;&#8201;<cite>Jeremy Dunck</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9135" title="April 16, 2007 @ 5:42 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9136"><p>&#8220;The Rails cult is getting on my nerves. All they have to show is Twitter, and when Twitter has scaling problems&#8230;&#8221;</p>
+<p>Penny Arcade has been running Rails for quite some time now and they aren&#8217;t slouches when it comes to traffic. But it&#8217;s not as interactive as Twitter. Mostly DB reads.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.lazycoder.com/' rel='external nofollow' class='url'>Scott</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9136" title="April 16, 2007 @ 6:14 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9137"><p>First Googler to get <em>more</em> cutting post googlization? ;)</p>
+<p>Marvellous.</p>
+<p class=sig>&#8212;&#8201;<cite>Mark C</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9137" title="April 16, 2007 @ 6:31 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9138"><p>The &#8216;problem&#8217; was fixed with a 75 line rails plugin. Who&#8217;s got egg on their face now? I thought this was exactly how OSS dev worked. You write what you need, release it, then let people contribute. Seems perfect to me.</p>
+<p>:)</p>
+<p class=sig>&#8212;&#8201;<cite>Ryan</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9138" title="April 16, 2007 @ 7:51 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9139"><p>My mother always told me that when you say something bad about someone (DHH is &#8220;arrogant&#8221; or whatever) it reflects worse on you than on the person you are talking about. I&#8217;d bet a good 95% of the people who dis DHH haven&#8217;t actually met DHH. When you do meet him you&#8217;ll discover he&#8217;s generous, kind, a good listener, and more than happy to help you in any way he can (within reason). DHH is also a leader and leaders have strong opinions. Anyone with strong opinions is bound to piss off 50% of the people.</p>
+<p class=sig>&#8212;&#8201;<cite>B</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9139" title="April 16, 2007 @ 7:55 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9140"><p>What is this Hansso Initiative?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://milt.vox.com/' rel='external nofollow' class='url'>jah</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9140" title="April 16, 2007 @ 8:29 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9141"><cite><a href='/web/20110811044140/http://www.andrewdupont.net/2007/04/16/link-dive-into-mark/' rel='external nofollow' class='url'>Painfully Obvious &raquo; Blog Archive &raquo; Link: Dive Into Mark</a></cite>&#160;(pingback)</li>
+<li id="comment-9142"><p>It&#8217;s funny, but a bit mean, and a bit inaccurate as well. DHH&#8217;s ego *is* the size of Montana, but his attitude is &#8220;I built Rails because I needed it, I&#8217;m glad all you other people like it.&#8221; You can&#8217;t fault him there. Rails is what he needs it to be. I don&#8217;t think he actually cares one way or another what other people do with it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://gilesbowkett.blogspot.com/' rel='external nofollow' class='url'>Giles Bowkett</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9142" title="April 16, 2007 @ 8:53 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9143"><p>Giles, you are mistaken. He cares. DHH treats and protects Rails as a brand. He fights tooth and nail to protect his brand&#8217;s reputation even risking his own. Rails is his cash cow. He cares what other people say about it. We&#8217;ve met a Dave like this before. I believe he was called Winer. It would be sad to see a brilliant guy like DHH end up like that dude.</p>
+<p class=sig>&#8212;&#8201;<cite>Miller</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9143" title="April 16, 2007 @ 9:31 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9144"><cite><a href='/web/20110811044140/http://laughingmeme.org/2007/04/16/no-matter-how-you-might-feel-about-marks-translation/' rel='external nofollow' class='url'>No matter how you might feel about Mark&#8217;s &#8220;translation&#8221; - Laughing Meme</a></cite>&#160;(pingback)</li>
+<li id="comment-9147"><p>I could care less about the entire argument. But I love the great writing!</p>
+<p class=sig>&#8212;&#8201;<cite>Yes</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9147" title="April 17, 2007 @ 12:14 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9148"><p>I can&#8217;t comment on the humour as it&#8217;s subjective — I don&#8217;t find this amusing obviously  — but I do find the general sentiment to be quite bitter. Mark, as a long-term reader — I was sad when you started blogging less — I&#8217;m disappointed to see you stoop to this sort of nasty commentary.</p>
+<p>As for some of the comments; I am simultaneously perplexed and disappointed to hear this clamouring about &#8216;cults&#8217; and &#8216;messiah complex&#8217; and other nonsense. Firstly I am a Rails developer. I don&#8217;t belong to any cults and I don&#8217;t care to be associated with such just because of my choice in frameworks. Ridiculous! Secondly I think folk should resist reflex to smear David with such nasty and personal comments. It&#8217;s unreasonable and plain rude. </p>
+<p>David is a proud and forceful person, but that doesn&#8217;t mean we can&#8217;t have at least a modicum of manners.</p>
+<p>As a rule of thumb, if you can&#8217;t make your point without being rude about it, there obviously isn&#8217;t much value to what you&#8217;re saying.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.mr-eel.com/' rel='external nofollow' class='url'>Mr eel</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9148" title="April 17, 2007 @ 12:58 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9149"><cite><a href='/web/20110811044140/http://warpspire.com/journal/web-production/on-scaling-performance-and-realism/' rel='external nofollow' class='url'>On scaling, performance, and realism - Warpspire</a></cite>&#160;(pingback)</li>
+<li id="comment-9150"><p>Mark, thanks for writing a post which inspired such &#8230;entertaining commentary.<br />
+:P</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://weblog.juima.org/' rel='external nofollow' class='url'>Sander</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9150" title="April 17, 2007 @ 2:14 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9152"><p>My personal take: When everybody in a community starts referring to any other member of the community by the first letters of their name, the community is screwed.</p>
+<p>Witness RMS, ESR&#8230; DHH.</p>
+<p class=sig>&#8212;&#8201;<cite>VPK</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9152" title="April 17, 2007 @ 2:27 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9153"><p>Finally&#8230;.someone had the courage to stand up to the D(HH)ictator .</p>
+<p>Great read.</p>
+<p class=sig>&#8212;&#8201;<cite>Vineet</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9153" title="April 17, 2007 @ 2:28 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9154"><p>Haha, spot on, let&#8217;s see if DHH can take a bit of good-natured ribbing.</p>
+<p>I must admit, I was a bit disappointed by his post. There are ways to handle criticism, and his diatribe was not one of them.</p>
+<p>Rails has been amazingly successful, but sometimes you have to swallow some get-the-fuck-back-down-to-earth medicine.</p>
+<p>Going by the content of his blog I sometimes feel like I&#8217;m reading a tech version of our marketing department&#8217;s PR releases. Content over hype please!</p>
+<p class=sig>&#8212;&#8201;<cite>James</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9154" title="April 17, 2007 @ 2:32 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9155"><p>Mark who?</p>
+<p class=sig>&#8212;&#8201;<cite>Hendrik</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9155" title="April 17, 2007 @ 2:52 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9156"><p>Reading the followup, mark seems almost prescient when he writes &#8220;I’m waiting for you to fix it so I can take credit for it.&#8221;</p>
+<p>Sad.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://lkm.watashi.ch/' rel='external nofollow' class='url'>LKM</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9156" title="April 17, 2007 @ 3:03 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9157"><p>How DARE you speak ill of our Lord and Savior David Heinemeier Hansson (hallowed be His name)!  How DARE you question His divinity?!</p>
+<p>Blasphemer!!!</p>
+<p class=sig>&#8212;&#8201;<cite>Rails Acolyte</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9157" title="April 17, 2007 @ 3:12 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9158"><cite><a href='/web/20110811044140/http://www.redmonk.com/cote/2007/04/17/links-for-2007-04-17/' rel='external nofollow' class='url'>People Over Process &raquo; Blog Archive &raquo; links for 2007-04-17</a></cite>&#160;(pingback)</li>
+<li id="comment-9159"><p>Allow me to translate Mark Pilgrim&#8217;s post for everyone:</p>
+<p>I have a small penis.  A small <em>nazi</em> penis.</p>
+<p class=sig>&#8212;&#8201;<cite>Danno</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9159" title="April 17, 2007 @ 5:22 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9160"><p>Well done, Mark.</p>
+<p>I love how DHH takes every little criticism of Rails, Ruby, or anything else that he&#8217;s connected to in even the most insignificant way as an attack on his family&#8217;s honor. He&#8217;s the only person in today&#8217;s world who could say, &#8220;I challenge you to a duel!&#8221; and be completely serious about it.</p>
+<p class=sig>&#8212;&#8201;<cite>Joel B.</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9160" title="April 17, 2007 @ 5:31 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9161"><p><a href="/web/20110811044140/http://www.loudthinking.com/arc/000577.html">DHH is not too bad at giving scathing criticisms himself.</a></p>
+<p class=sig>&#8212;&#8201;<cite>Ben</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9161" title="April 17, 2007 @ 5:36 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9163"><cite><a href='/web/20110811044140/http://www.genehack.org/2007/04/17/tab-dump-20070416/' rel='external nofollow' class='url'>genehack.org &raquo; Blog Archive &raquo; tab dump // 20070417</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9165"><cite><a href='/web/20110811044140/http://blog.teamschnitzel.com/2007/04/17/scaling-the-wall/' rel='external nofollow' class='url'>Scaling the Wall at Eaters of the Schnitzel</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9166"><cite><a href='/web/20110811044140/http://conversationswithplasticdinosaurs.com/archives/26' rel='external nofollow' class='url'>conversationswithplasticdinosaurs.com &raquo; Duel!</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9167"><cite><a href='/web/20110811044140/http://scott.yang.id.au/2007/04/mark-pilgrims-translation-of-dhh-vs-al3x/' rel='external nofollow' class='url'>Mark Pilgrim&#8217;s Translation of DHH vs. Al3x | SYP</a></cite>&#160;(pingback)</li>
+<li id="comment-9168"><p>&gt; I’m surprised to see childish playground stuff like this &#8211; rise above it.</p>
+<p>You must be new <strike>here</strike>.</p>
+<p class=sig>&#8212;&#8201;<cite>Chris B</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9168" title="April 17, 2007 @ 9:34 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9169"><p>It does no good to complain that people will avoid Rails even for apps the have 11K hits per month. The fact is, most people writing those apps *hope* that they&#8217;ll get 11K/sec. And if they get there, and the app starts to crumble, it&#8217;s no fun, period. It&#8217;s stressful. It&#8217;s more fun to be pouring champagne at that point. And one more fact is, while Rails is quite nice and productive, it&#8217;s not the *only* nice and productive framework. There are other nice, productive frameworks that do scale better, and it&#8217;d be nice if the Rails folks took some lessons from that instead of wasting time with defensive web postings.</p>
+<p class=sig>&#8212;&#8201;<cite>Dennis</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9169" title="April 17, 2007 @ 10:02 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9170"><p>Damn, I meant to post that on DHH&#8217;s article :)</p>
+<p class=sig>&#8212;&#8201;<cite>Dennis</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9170" title="April 17, 2007 @ 10:03 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9171"><p>DHH is really stupid and arrogant.  He believes he invented ruby mixins: <a href="/web/20110811044140/http://weblog.jamisbuck.org/2007/1/17/concerns-in-activerecord" rel="nofollow">http://weblog.jamisbuck.org/2007/1/17/concerns-in-activerecord</a>.  He is very ridiculous at times.   Just ignore him.  When he is wrong, of course he is going to make a bigger fool ogf himself.  Its too bad, rails could have been even bigger.  Now its just turning into PHP 2.0</p>
+<p class=sig>&#8212;&#8201;<cite>paulc</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9171" title="April 17, 2007 @ 11:33 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9172"><cite><a href='/web/20110811044140/http://sepuku.wordpress.com/2007/04/17/shoot-the-cheerleader-save-the-web/' rel='external nofollow' class='url'>Shoot the Cheerleader, Save the Web? &laquo; Sepuku</a></cite>&#160;(pingback)</li>
+<li id="comment-9173"><p>I’m confused that people feel the need to protect DHH. Anyone who includes the words “Fuck you” in a presentation as response to criticism is perfectly able to defend them selves.</p>
+<p><a href="/web/20110811044140/http://www.flickr.com/photos/eugevon/130610241/" rel="nofollow">http://www.flickr.com/photos/eugevon/130610241/</a></p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9173" title="April 17, 2007 @ 12:19 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9176"><p>awesome post mark :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.goldb.org/' rel='external nofollow' class='url'>Corey</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9176" title="April 17, 2007 @ 2:16 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9177"><p>Eugueny, from everything I&#8217;ve seen &#8212; including going back through changelogs to the beginning &#8212; ActiveRecord was DHH&#8217;s implementation in Rails. He&#8217;s never claimed to have <em>invented the concept</em> of the AR pattern, but Rails was his creation to start with, which is why he can be overprotective of it. It&#8217;s his baby. And let&#8217;s be fair &#8212; it&#8217;s not as if all the other contributors aren&#8217;t getting mentioned throughout changelogs, Trac check-ins, and so on.</p>
+<p>Mark&#8217;s post is still funny, and I think DHH does often come across as arrogant. I also, however, think most of the problems with Rails will be solved with or without his active assistance. He may think it&#8217;s a terrible idea, for example, to make Rails take advantage of a given database engine&#8217;s validation, logic and prepared SQL statements, but if enough other Rails developers think that just perhaps there is value in basic frickin&#8217; fundamental things everybody else learned 20 frickin&#8217; years ago,* he will be routed around. Arrogant or not, he&#8217;s right when he says &#8212; in so many words &#8212; that&#8217;s one of the virtues of open source development.</p>
+<p>* Not that I am taking a stand on the performance value of letting the database do as much as work as possible rather than your interpreted language. Ahem.</p>
+<p class=sig>&#8212;&#8201;<cite>Watts</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9177" title="April 17, 2007 @ 2:36 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9179"><cite><a href='/web/20110811044140/http://blog.paulbetts.org/index.php/2007/04/17/dhh-arrogant-maybe-but-make-sure-to-catch-his-point/' rel='external nofollow' class='url'>DHH Arrogant? Maybe. But make sure to catch his point &raquo; Thursday Night</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9180"><cite><a href='/web/20110811044140/http://www.j2eegeek.com/blog/2007/04/17/daily-delicious-for-apr-13-2007-through-apr-17-2007/' rel='external nofollow' class='url'>Vinny Carpenter&#8217;s blog &raquo; Daily del.icio.us for Apr 13, 2007 through Apr 17, 2007</a></cite>&#160;(pingback)</li>
+<li id="comment-9181"><blockquote><p><i>&#8220;&#8230;fluffing me because they want something, or fluffing me because they just can’t help themselves.&#8221;</i></p></blockquote>
+<p>ROFL!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110811044140/http://www.goblinbox.com/' rel='external nofollow' class='url'>goblinbox</a></cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9181" title="April 17, 2007 @ 9:19 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9182"><p>So this is what happens when a bunch of kids who can&#8217;t program and know nothing about language design get together and slap-fight about the latest super-high-level scripting tool that they learned about from Wired magazine.</p>
+<p>I&#8217;ll think of all of you the next time it takes 30 seconds to load a web page with nothing but simple text on it (!) and is 3x as large as it should be because you can&#8217;t even write HTML without a WYSIWYG editor.</p>
+<p>We need another net-bubble-burst to clear you folks out &#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>You Kids</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9182" title="April 17, 2007 @ 11:27 pm"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9183"><cite><a href='/web/20110811044140/http://redmonk.com/sogrady/2007/04/17/links-for-2007-04-18/' rel='external nofollow' class='url'>tecosystems &raquo; links for 2007-04-18</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9184"><cite><a href='/web/20110811044140/http://blog.bertlamb.com/2007/04/18/links-for-2007-04-18/' rel='external nofollow' class='url'>Bert Lamb &raquo; links for 2007-04-18</a></cite>&#160;(pingback)</li>
+<li id="comment-9185"><p>well DHH thinks scaling rails is &#8220;boring&#8221;</p>
+<p><a href="/web/20110811044140/http://www.loudthinking.com/arc/000479.html" rel="nofollow">http://www.loudthinking.com/arc/000479.html</a></p>
+<p>circa mid 2005 hahaha!</p>
+<p class=sig>&#8212;&#8201;<cite>Oh I Wuv wails tho much</cite>&#160;<a class=p href="/web/20110811044140/http://diveintomark.org/archives/2007/04/16/dhh-translation#comment-9185" title="April 18, 2007 @ 10:29 am"><img alt="#" src=/web/20110811044140im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9186"><cite><a href='/web/20110811044140/http://www.redmonk.com/cote/2007/04/18/horseplay-golden-hammers-and-enterprisey-bodhisattvas/' rel='external nofollow' class='url'>People Over Process &raquo; Blog Archive &raquo; Horseplay, Golden Hammers, and Enterprisey Bodhisattvas</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9188"><cite><a href='/web/20110811044140/http://ubuntu-linux.withishow.com/2007/04/17/jeff-waugh-links-for-2007-04-17/' rel='external nofollow' class='url'>Ubuntu | Jeff Waugh: links for 2007-04-17</a></cite>&#160;(pingback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110811044140/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110811044140/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110811044140/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110811044140/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110811044140/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.200 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:20:11 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 4:41:40 Aug 11, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:07:14 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

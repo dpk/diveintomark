@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Address book [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806101100/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806101100/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806101100/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806101100/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806101100im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806101100/http://diveintomark.org/archives/2003/03/12/update" title="Update">
+<link rel=next href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/switch" title="Switch">
+<link rel=up href="/web/20110806101100/http://diveintomark.org/archives#p1285" title="March 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Address book Comments Feed" href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806101100/http://diveintomark.org/' />
+<link rel='prev' title='Update' href='/web/20110806101100/http://diveintomark.org/archives/2003/03/12/update' />
+<link rel='next' title='Switch' href='/web/20110806101100/http://diveintomark.org/archives/2003/03/13/switch' />
+<link rel='canonical' href='/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book' />
+<link rel='shortlink' href='/web/20110806101100/http://diveintomark.org/?p=1285' />
+<meta name="description" content="OK, LazyWeb, I need an address book. The Address Book.app that comes with Mac OS X is nice for keeping about 10 addresses. We have 100.">
+<meta name="keywords" content="osx,vcard">
+<link href="/web/20110806101100cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806101100/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/03\/13\/address_book";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/03/13/address_book" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806101100" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514123814/http://diveintomark.org/archives/2003/03/13/address_book" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:11:00 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514123814/http://diveintomark.org/archives/2003/03/13/address_book" title="12:38:14 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:11:00 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620111119/http://diveintomark.org/archives/2003/03/13/address_book" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:11:00 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806101100*/http://diveintomark.org/archives/2003/03/13/address_book" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>21 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">24 Apr 06 - 6 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000111003101_2007:-1:010100000100_2008:-1:101110010000_2009:-1:000000000000_2010:-1:000001000011_2011:7:000010010000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806101100/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806101100/http://diveintomark.org/archives#p1285">March 13, 2003</a> &#8227;
+<h2>Address book</h2> (<a href="/web/20110806101100/http://diveintomark.org/tag/osx" rel="tag">osx</a>, <a href="/web/20110806101100/http://diveintomark.org/tag/vcard" rel="tag">vcard</a>)</div>
+<p>OK, LazyWeb, I need an address book.  The Address Book.app that comes with Mac OS X is nice for keeping about 10 addresses.  We have 100.  (We&#8217;re planning a wedding here.)  Suggestions for a package that either runs on Mac OS X or can be installed as a web app on a Linux/Apache/MySQL/Perl/Python/PHP server.  Shareware, freeware, or open source.  Must do the following:</p>
+
+<ul>
+<li>Import the addresses we have already entered into Address Book.  I can export them as vCards.  Or, at the very least, import from a tab-delimited file.  I can use <a href="/web/20110806101100/http://www.versiontracker.com/dyn/moreinfo/macosx/14667">Address Book Exporter</a> to create a tab-delimited file.</li>
+<li>That implies that it must be able to handle all sorts of weird information, like instant messenger accounts, multiple email addresses, and so forth.</li>
+<li>Some other customizeable fields would be nice too.</li>
+<li>Group people into various overlapping groups.</li>
+<li>Sort.  Amazingly, Address Book.app has no sort function.  Or if it does, I can&#8217;t find it.</li>
+<li>Select, say, all the people in a particular state, or all the people in a particular group, or some combination.</li>
+<li>Print a list.  We&#8217;re not going to use it for mailing labels, we just want to print nicely.  Or&#8230;</li>
+<li>Create a customizeable HTML report of, say, everyone in the Wedding group and their email address.</li>
+</ul>
+
+<p>Such a thing must exist.  I am not the only person with this problem.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Twenty four comments here (<a href=/web/20110806101100/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-712"><p>It does not do everything you want, but lots of people like SBook:</p>
+<p><a href="/web/20110806101100/http://www.sbook5.com/">http://www.sbook5.com/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.aaronland.net/' rel='external nofollow' class='url'>Aaron of Montreal</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-712" title="March 13, 2003 @ 3:39 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-713"><p>Wait a month for OSAF/Chandler?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://webseitz.fluxent.com/wiki' rel='external nofollow' class='url'>BillSeitz</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-713" title="March 13, 2003 @ 3:55 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-714"><p>Turba from the fine folks of Horde &#8212; <a href="/web/20110806101100/http://www.horde.org/turba/">http://www.horde.org/turba/</a> &#8212; is a PHP webapp which, with some hacking, can do all this.  It&#8217;s really rather nice.</p>
+<p>rOD.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.groovymother.com/' rel='external nofollow' class='url'>rODbegbie</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-714" title="March 13, 2003 @ 4:00 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-715"><p>Hate to say it, but Entourage does all of that except for the HTML export (you can export as TEXT).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.lunarboy.com/' rel='external nofollow' class='url'>lunarboy</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-715" title="March 13, 2003 @ 4:32 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-716"><p>Re: OSAF / Chandler</p>
+<p>It&#8217;s true.. Any day now, Chandler will do all you want and more&#8230; I hear it will even be your firewall, word processor, router, lava lamp, book to tape converter, long-lost-relative finder, etc etc.. and I even hear it might check your email too.</p>
+<p>Yup. Any day now.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://blog.warmbrain.com/' rel='external nofollow' class='url'>Dylan</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-716" title="March 13, 2003 @ 5:11 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-717"><p>Have you considered the Palm Desktop? I believe it&#8217;ll do what you want.</p>
+<p>-chet at nogators dot com</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://nogators.com/' rel='external nofollow' class='url'>Chet</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-717" title="March 13, 2003 @ 6:58 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-718"><p>Chet (and Mark, of course :-) </p>
+<p>I haven&#8217;t tried Palm Desktop for Mac, but the Windows version does a lot but not HTML export (it does vCard, comma- and tab-delimited exports) nor does it support assigning multiple group-belongings to people (unfortunately, as I use it for ~300 contacts of which several are BOTH colleagues, friends and project members on a current or former project). It does sort, it does quick lookups, it does a lot of funky stuff, but not everything on your list. Sorry &#038; good luck!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.jacobsen.no/anders/blog/' rel='external nofollow' class='url'>Anders Jacobsen</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-718" title="March 13, 2003 @ 7:43 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-719"><p>I have to second the recommendation of Microsoft Entourage. It&#8217;s PIM functionality is world class.</p>
+<p class=sig>&#8212;&#8201;<cite>Richard K. McPike</cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-719" title="March 13, 2003 @ 8:38 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-733"><cite><a href='/web/20110806101100/http://www.twisty.com/bandwagon/archives/2003/03/14/012025.html' rel='external nofollow' class='url'>Tim's Bandwagon</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-734"><cite><a href='/web/20110806101100/http://www.groupup.net/notes/archives/2003_03.html#000102' rel='external nofollow' class='url'>Development Notes</a></cite>&#160;(trackback)</li>
+<li id="comment-720"><p>I had no idea you were getting married &#8211; congratulations. Now, where&#8217;s the URL for your wedding?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.illuminated.co.uk/' rel='external nofollow' class='url'>Sam Kington</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-720" title="March 13, 2003 @ 9:05 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-721"><p>Hehe, two problems here. One, the wedding is the woman&#8217;s business. Just nod and veto a decision here or there. That way she thinks you are paying attention, and maybe even care. Two you signed up to manage the list. Get your wife an iBook and Excel. Then goto Vegas with the boys for the Sweet 16. She&#8217;ll have it all done by the time you get back. I recommend Cheetah&#8217;s.</p>
+<p>;)~</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.brainloaf.com/' rel='external nofollow' class='url'>Mike Rogers</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-721" title="March 13, 2003 @ 9:33 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-722"><p>Cheetah&#8217;s? No way. Olympic Gardens is the way to go. They&#8217;re the only major strip club in Las Vegas that *doesn&#8217;t* pay cabbies a &#8216;finder&#8217;s fee&#8217;, because they don&#8217;t have to.</p>
+<p>Also, unlike a lot of other clubs, they&#8217;ve got a ladies only section, so they get a lot of bachelorette parties too.</p>
+<p>My recommendation notwithstanding, bachelor and bachelorette parties at strip clubs are kind of pointless, if the goal is to have a memorable experience. In most cases, people just have a hangover the next day, and only a vague idea of what it was they or anyone else did. If you can&#8217;t remember it (and share the memory with your buddies), what&#8217;s the point?</p>
+<p>Also, I have a feeling Mark wouldn&#8217;t want to go anywhere that drinks were being offered to him on a continuous basis.</p>
+<p>Now, there are plenty of places to go in Las Vegas that don&#8217;t push drinks at you, but none of the strip clubs fall into that category. The remaining places don&#8217;t have anything to offer that you can&#8217;t find in any other state, with the exception of Nevada&#8217;s legal brothels, and I have a feeling that Dora would veto any such excursion.</p>
+<p>Summary: Mark can probably just write off the whole &#8216;bachelor party in Las Vegas&#8217; idea, and not feel like he&#8217;s missing anything.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-722" title="March 13, 2003 @ 11:27 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-723"><p>Why not just bang-out a database in AppleWorks? Course FMP would be better.</p>
+<p class=sig>&#8212;&#8201;<cite>Mark Riley</cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-723" title="March 14, 2003 @ 12:01 am"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-724"><p>While I realize you want free/shareware, Power On makes Now Contact that I really really like.  Very powerful sorting, etc.  If you change your mind on the whole free/open/share kinda thing, that might be the way to go.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://radio.weblogs.com/0116463' rel='external nofollow' class='url'>Tom Bridge</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-724" title="March 14, 2003 @ 9:00 am"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-725"><p>Palm Desktop for Mac is a very different beast compared to the Windows version. The Windows version was developed by Palm (I think), while the Mac version is the former Claris Organizer. I don&#8217;t know if it supports HTML export, but you could easily transform text into html with, say, an AppleScript.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.lkmc.ch/' rel='external nofollow' class='url'>LKM</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-725" title="March 14, 2003 @ 9:18 am"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-726"><p>Mark, my wife I used MS Excel when we got married.  It wasn&#8217;t by any means my ideal solution, but it got the job done.  We were able to do mail merge exports to Word for our mailing envelopes and I should be able to&mdash;though haven&#8217;t yet&mdash;import the list straight into my Palm Desktop PIM.</p>
+<p>Fun stuff here: <a href="/web/20110806101100/http://kennsarah.walker.net/wedding/">http://kennsarah.walker.net/wedding/</a></p>
+<p>:)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-726" title="March 15, 2003 @ 12:53 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-727"><p>I use Now Contact from PowerOn Software and I like it. Syncs with a Palm, too. <a href="/web/20110806101100/http://www.poweronsoftware.com/">http://www.poweronsoftware.com/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://www.lukemelia.com/' rel='external nofollow' class='url'>Luke</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-727" title="March 16, 2003 @ 12:25 am"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-728"><p>I wish Evolution would show up in Fink. I really miss Evolution. It did everything so much better than anything that I&#8217;ve seen on Mac OS X so far.</p>
+<p><a href="/web/20110806101100/http://www.ximian.com/products/evolution/">http://www.ximian.com/products/evolution/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://jace.seacrow.com/' rel='external nofollow' class='url'>Jace</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-728" title="March 17, 2003 @ 4:30 am"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-729"><p>Why don&#8217;t you just set up a LDAP directory ? You can access it with Apple&#8217;s Address Book, for example.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://wiki.crao.net/' rel='external nofollow' class='url'>Arnaud</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-729" title="March 17, 2003 @ 2:17 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-730"><p>You might try Mozilla. It does most of what you ask .. sorting, searching, importing.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-730" title="March 17, 2003 @ 4:58 pm"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-731"><p>Yeah, i want one of these too. Looked around a little for a PythonCard solution just now but didn&#8217;t find anything(!). Looking forward to Chandler, not that i&#8217;m expecting it to do the whole list on first release, but i&#8217;m sick of it being vaporware&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://ourpla.net/cgi/pikie' rel='external nofollow' class='url'>John Abbe</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-731" title="March 19, 2003 @ 12:56 am"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-732"><p>ObUsefulInformation:</p>
+<p>Evolution on OS X can be done with fink: see <a href="/web/20110806101100/http://saladwithsteve.com/osx/2003_02_01_archive.html#90318817">http://saladwithsteve.com/osx/2003_02_01_archive.html#90318817</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101100/http://ourpla.net/cgi/pikie' rel='external nofollow' class='url'>John Abbe</a></cite>&#160;<a class=p href="/web/20110806101100/http://diveintomark.org/archives/2003/03/13/address_book#comment-732" title="March 21, 2003 @ 10:25 am"><img alt="#" src=/web/20110806101100im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-735"><cite><a href='/web/20110806101100/http://www.twisty.com/bandwagon/archives/2003/03/14/012025.html' rel='external nofollow' class='url'>Tim's Bandwagon</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806101100/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806101100/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806101100/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806101100/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806101100/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.389 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:57:44 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:11:00 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:42 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

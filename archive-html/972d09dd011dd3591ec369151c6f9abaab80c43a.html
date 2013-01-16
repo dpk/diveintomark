@@ -1,0 +1,552 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>The importance of human-readable markup [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806120216/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806120216/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806120216/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806120216/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806120216im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806120216/http://diveintomark.org/archives/2003/05/02/backing_up_with_rsync_and_ssh" title="Backing up with rsync and ssh">
+<link rel=next href="/web/20110806120216/http://diveintomark.org/archives/2003/05/05/why_we_wont_help_you" title="Why we won&#8217;t help you">
+<link rel=up href="/web/20110806120216/http://diveintomark.org/archives#p1335" title="May 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; The importance of human-readable markup Comments Feed" href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806120216/http://diveintomark.org/' />
+<link rel='prev' title='Backing up with rsync and ssh' href='/web/20110806120216/http://diveintomark.org/archives/2003/05/02/backing_up_with_rsync_and_ssh' />
+<link rel='next' title='Why we won&#8217;t help you' href='/web/20110806120216/http://diveintomark.org/archives/2003/05/05/why_we_wont_help_you' />
+<link rel='canonical' href='/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup' />
+<link rel='shortlink' href='/web/20110806120216/http://diveintomark.org/?p=1335' />
+<meta name="description" content="Via Slashdot, a new HTML rendering bug that can crash Internet Explorer, Outlook, and other products that use Microsoft HTML rendering libraries.">
+<meta name="keywords" content="html,ie,microsoft,security">
+<link href="/web/20110806120216cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806120216/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/05\/03\/the_importance_of_humanreadable_markup";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806120216" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514130311/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 12:02:16 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120622053452/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Jun 2012"><strong>JUN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514130311/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup" title="13:03:11 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 12:02:16 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120622053452/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup" title="5:34:52 Jun 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615064553/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 12:02:16 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806120216*/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>25 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">14 Jun 06 - 22 Jun 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001123100_2007:-1:010100000101_2008:-1:010111000100_2009:-1:012000000000_2010:-1:000001000010_2011:7:000010010000_2012:-1:000001000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806120216/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806120216/http://diveintomark.org/archives#p1335">May 3, 2003</a> &#8227;
+<h2>The importance of human-readable markup</h2> (<a href="/web/20110806120216/http://diveintomark.org/tag/html" rel="tag">html</a>, <a href="/web/20110806120216/http://diveintomark.org/tag/ie" rel="tag">ie</a>, <a href="/web/20110806120216/http://diveintomark.org/tag/microsoft" rel="tag">microsoft</a>, <a href="/web/20110806120216/http://diveintomark.org/tag/security" rel="tag">security</a>)</div>
+<p><cite>Slashdot</cite>: <a href="/web/20110806120216/http://slashdot.org/article.pl?sid=03/05/02/1845241">HTML Rendering crashing IE</a>.  Here&#8217;s a <a href="/web/20110806120216/http://vibrantlogic.com/new.html">test page</a> that crashes my Internet Explorer 6.0 SP2 with all patches.  Thanks to the wonders of integration, it also crashes any other product using Microsoft HTML rendering libraries.  That would include Outlook and Outlook Express, leading the way for a brave new world of Denial-Of-Service-By-Email for people still using Microsoft mail products.</p>
+
+<p>That&#8217;s not terribly funny.  But here&#8217;s the funny part.  Here&#8217;s the markup that makes it crash:</p>
+
+<blockquote>
+<p><code>&lt;html&gt;<br />
+&lt;form&gt;<br />
+&lt;input type crash&gt;<br />
+&lt;/form&gt;<br />
+&lt;/html&gt;</code></p>
+</blockquote>
+
+<p>Presumably there are other variations, but that just made my day.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Sixty one comments here (<a href=/web/20110806120216/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-2089"><p>You can simplify that to just one line: &lt;input type&gt;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.bradchoate.com/' rel='external nofollow' class='url'>Brad Choate</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2089" title="May 3, 2003 @ 10:24 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2137"><cite><a href='/web/20110806120216/http://www.roell.net/weblog/archiv/2003/05/03/crashing_microsoft_internet_explorer.shtml' rel='external nofollow' class='url'>Das E-Business Weblog</a></cite>&#160;(trackback)</li>
+<li id="comment-2090"><p>My fave is</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2090" title="May 3, 2003 @ 12:32 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2091"><p>OMG that is just too funny. Can&#8217;t Microsoft get a new version of Internet Explorer out that doesn&#8217;t suck?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://jessey.net/blog/' rel='external nofollow' class='url'>Simon Jessey</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2091" title="May 3, 2003 @ 1:12 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2092"><p>It is unbelievable that such elementary markup (that has been around for eons!) could cause such a disasterous result.  Oh well, I guess I&#8217;ll wait for *yet another* patch&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://jason@methodize.org/' rel='external nofollow' class='url'>Jason</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2092" title="May 3, 2003 @ 1:34 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2093"><p>The real question is whether this is an easter-egg (hmm, there needs to be a a term for malicious easter-eggs), or just a bug. In either case, it would be interesting to examine the code to see if there&#8217;s any other ways you can crash IE with very simple markup.</p>
+<p class=sig>&#8212;&#8201;<cite>James</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2093" title="May 3, 2003 @ 1:49 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2094"><p>OMFG. I couldn&#8217;t beleive it. Of course, the version in Mark&#8217;s posting (and linked to from slashdot) makes it look like this was deliberately added into the rendering engine, when the actuality is that the &#8216;crash&#8217; attribute is just window dressing, and is being ignored. All that&#8217;s necessary is &lt;input type&gt;.</p>
+<p>Now, if the necessary HTML in question was &lt;input type=&quot;crash&quot;&gt;, that would be an obvious deliberate (trojan? easter-egg? logic-bomb? you decide) and really funny.</p>
+<p>I&#8217;m such a markup geek.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2094" title="May 3, 2003 @ 2:01 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2138"><cite><a href='/web/20110806120216/http://nslog.com/archives/2003/05/03/winiecrash_easily.php' rel='external nofollow' class='url'>NSLog();</a></cite>&#160;(trackback)</li>
+<li id="comment-2095"><p>That is highly amusing. Please make me resist the temptation to add that to my site.</p>
+<p>Is there any way I can make IE crash and then customise the crash box? Something like &#8220;Your browser sucks, get Mozilla&#8221;?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.neilturner.me.uk/' rel='external nofollow' class='url'>Neil T.</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2095" title="May 3, 2003 @ 3:45 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2096"><p>Is Dave Winer behind this?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2096" title="May 3, 2003 @ 4:25 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2097"><p>Sounds like it&#8217;s a bug.  And sounds like it&#8217;s been around for a long time.</p>
+<p>I wonder why all the people who are quick to point at Microsoft and laugh, claiming this is such a simple thing, never bothered to help out with creating an HTML 4.01 (or XHTML 1.0) test suite which would include this error?</p>
+<p>Or is it just that it&#8217;s such a rare thing after all that nobody thought of it before this?  Certainly I never did.  Did you?</p>
+<p>&#8211;Kynn</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.maccessibility.com/' rel='external nofollow' class='url'>Kynn</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2097" title="May 3, 2003 @ 4:45 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2098"><p>Microsoft has how many billion dollars in reserve, has an agenda which is not pro-competitive, not pro-choice, and you figure the community should help them further?</p>
+<p>And this would be for what purpose?</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2098" title="May 3, 2003 @ 5:11 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2099"><p>&#8220;Microsoft has how many billion dollars in reserve, has an agenda which is not pro-competitive, not pro-choice, and you figure the community should help them further?&#8221;</p>
+<p>I&#8217;ve never said such a thing. Don&#8217;t be a moron.  Read what I said.</p>
+<p>If there were a detailed enough W3C test suite, these problems wouldn&#8217;t be created by anyone building a browser.   If this is something which is so unimportant that it doesn&#8217;t belong on in a test suite, then Microsoft isn&#8217;t to blame for not anticipating it.</p>
+<p>&#8220;And this would be for what purpose?&#8221;</p>
+<p>What purpose is there to creating a comprehensive W3C test suite?  Plenty.  If you can think of anything that like this which you&#8217;d consider &#8220;obvious&#8221;, please write to the W3C&#8217;s Q and A project.</p>
+<p>&#8211;Kynn</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.maccessibility.com/' rel='external nofollow' class='url'>Kynn</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2099" title="May 3, 2003 @ 5:31 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2100"><p>If you want to look at moronic statements, then consider yours where you confuse the role of standards and testing.</p>
+<p>Creating a test suite to prove that a browser renders the markup language is one thing; that&#8217;s something where it makes sense that a standards body like the W3C get involved. They have a reference browser already. Products that render like Amaya could be considered compliant.</p>
+<p>But this *isn&#8217;t about rendering*. This is a bug in a browser. This issue has nothing to do with the W3C or standards. </p>
+<p>And people laugh because a company with hundreds of billions of dollars of installed base and assets can some how miss this simple thing.</p>
+<p>On a more serious note, its a bad thing that a company with hundreds of billions of dollars of installed base and assets *can* miss simple things; and the regular stream of security issues from Microsoft proves also that their fundamental design philosophy.</p>
+<p>The moron comment was uncalled for. You aren&#8217;t related to Dave Winer by any chance are you?</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2100" title="May 3, 2003 @ 5:53 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2101"><p>This isn&#8217;t a matter of a missing test case. This is a matter of an unexpected markup CRASHING the browser. Unexpected markup causing funky rendering is one thing, crashing the whole program because your parser can&#8217;t take malformed HTML is quite another.</p>
+<p class=sig>&#8212;&#8201;<cite>Joshua Ochs</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2101" title="May 3, 2003 @ 5:56 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2102"><p>This isn&#8217;t a matter of a missing test case. This is a matter of an unexpected markup CRASHING the browser. Unexpected markup causing funky rendering is one thing, crashing the whole program because your parser can&#8217;t take malformed HTML is quite another.</p>
+<p class=sig>&#8212;&#8201;<cite>Joshua</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2102" title="May 3, 2003 @ 5:56 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2103"><p>Its even more ironic since IE tends to display malformed markup all the time, which of course doens&#8217;t encourage people to improve on what they shove into pages. Markup anarchy.</p>
+<p>Wait&#8230; computer is beeping at me&#8230; must be the &#8220;every other day Microsoft IE Security Update&#8221; arriving&#8230; back later&#8230; got&#8230;to&#8230;update&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2103" title="May 3, 2003 @ 6:02 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2139"><cite><a href='/web/20110806120216/http://www.simiandesign.com/blog-fu/2003/05/001573.cfm' rel='external nofollow' class='url'>Blog-Fu</a></cite>&#160;(trackback)</li>
+<li id="comment-2104"><p>Well I had the very same issue with the following markup, this is the general gist of it:</p>
+<p>&lt;div&gt;<br />
+&lt;p&gt;&lt;b&gt;some text&lt;/b&gt;&lt;/p&gt;<br />
+&lt;/div&gt;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://dark-horizon.org/' rel='external nofollow' class='url'>Sean</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2104" title="May 3, 2003 @ 6:28 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2105"><p>Kynn, I don&#8217;t think anyone is seriously suggesting that this is anything more than a bug.  But it&#8217;s a bug which lends itself to comedy, since you can put anything at all after the empty &#8220;type&#8221; attribute.</p>
+<p>BTW, for those who don&#8217;t know, there is a *functional* test suite for HTML:</p>
+<p><a href="/web/20110806120216/http://www.w3.org/MarkUp/Test/HTML401/current/tests/">http://www.w3.org/MarkUp/Test/HTML401/current/tests/</a></p>
+<p>It&#8217;s theoretically possible to create a more comprehensive suite of *unit tests* with examples of invalid markup, but such a suite would be massive.  Simple cases like this could be automated from the HTML DTD.  Have a rule that generates test cases for each element, for each attribute that can&#8217;t be empty.  Then combinations of attributes.  Then combinations of elements.  Then combinations of elements within other elements.  (Remember, this bug is only triggered when an INPUT element with an empty TYPE attribute is *not* contained in a BODY element.  So your suite would have to have been at least this complex in order to have caught this bug.)</p>
+<p>Then add values for each attribute.  Of course, there are an infinite number of invalid values for each attribute, so you&#8217;ll have to pick and choose.  Then you&#8217;ll need to do all the combinations with each value.</p>
+<p>And keep in mind that, other than &#8220;browser doesn&#8217;t crash&#8221;, verification of these tests is non-trivial.  I suppose each browser could check its internal DOM representation against a known good representation, but since we&#8217;re dealing with invalid markup and each browser creates different representations of invalid markup, each browser maker would need to create their own verification suite.</p>
+<p>While this would be useful for all the reasons that unit testing is useful (see what obscure things changed in a product rev), I bet it&#8217;s not Microsoft&#8217;s top priority.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2105" title="May 3, 2003 @ 6:59 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2106"><p>When you mentioned that &#8220;top priority&#8221; thing, it got me thinking: is anything IE-realted anywhere near Microsoft&#8217;s &#8220;top priority&#8221; list? I&#8217;m hoping so, as I&#8217;m real tired of compromising my layouts to deal with that worthless piece of crap.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.theblivit.net/weblog/' rel='external nofollow' class='url'>nick</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2106" title="May 3, 2003 @ 8:07 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2140"><cite><a href='/web/20110806120216/http://jeff.hume.ca/archives/2003/05/03/the_ie_blues.html' rel='external nofollow' class='url'>jeff.hume.ca</a></cite>&#160;(trackback)</li>
+<li id="comment-2107"><p>Mark, where did you get MSIE 6 SP2? Microsoft only offers me SP1, with a million patches.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://members.outpost10f.com/%7Ejor/' rel='external nofollow' class='url'>Jor</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2107" title="May 3, 2003 @ 8:34 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2108"><p>Dunno.  Help/About says Version: 6.0.2800.1106.xpsp2.021108-1929.  I assumed that was SP2, but now that I look at it again, there&#8217;s a second line that says &#8220;Update version: SP1&#8243; plus a bunch of hotfix numbers.  So I guess it&#8217;s SP 1.</p>
+<p>The point is that it&#8217;s the latest version.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2108" title="May 3, 2003 @ 9:00 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2109"><p>Thanks. I believe the long version string you give  (identical to mine) refers to the fact we installed some XP hotfixes which are labelled as part of SP2&#8230;</p>
+<p>I once knew what it stood for.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://members.outpost10f.com/%7Ejor/' rel='external nofollow' class='url'>Jor</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2109" title="May 3, 2003 @ 9:08 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2141"><cite><a href='/web/20110806120216/http://www.suburbanplayboy.com/archives/000308.html' rel='external nofollow' class='url'>Suburban Playboy</a></cite>&#160;(trackback)</li>
+<li id="comment-2110"><p>&#8220;When you mentioned that &#8220;top priority&#8221; thing, it got me thinking: is anything IE-realted anywhere near Microsoft�s &#8220;top priority&#8221; list?&#8221;</p>
+<p>Why on earth would they have a &#8220;priority&#8221; list, much less a &#8220;top priority&#8221; list?  They have 96% of the market despite the bad press involving constant security holes being found and don&#8217;t offer many of the features that users would really love (like pop-up blocking) or that designers would really love like standards compliance. </p>
+<p>IE6 is nearly 3 years old, and its Trident rendering engine (why do rendering engines have such weird names? gecko/tasman/trident/presto) has been around since IE4. Internally this is an old piece of software, that I think they will let decay until they finally decide to build a new browser from scratch.  </p>
+<p>Sound familiar?  Many people had harsh words for the Mozilla community after dumping the old codebase and starting from scratch, but the truth is, the browser was on its last legs by that point anyways.  It was using the same codebase that dated back to mosaic.</p>
+<p>From what I&#8217;ve heard, IE 6.5 or IE7 (to be released with Longhorn in about a year) will be the last version of Internet Explorer. From then on, there will only be a rebuilt MSN Explorer for download.  They are probably saving themselves the time and effort for the new browser instead of wasting time on the current one. </p>
+<p>It will be quite funny when all the pages created by all those hack designers relying on IE quirks fall apart.  Spawning chromeless windows which had worked since IE4, stopped working in IE6 sp1 due to security concerns. Fullscreen popups are next from what I&#8217;ve read. Microsoft can&#8217;t accommodate all those quirky pages forever, as they are trying to make a go at the wireless market and won&#8217;t be able to carry the ever-expanding code bloat around forever. They&#8217;ll want a common codebase, that will need to be lean and mean to work on a wide variety of devices not mearly the desktop pc. I think that is why IE6 hasn&#8217;t been significantly updated for so long, they would rather not waste the effort on something they plan on dumping soon anyways.  Its not like they&#8217;ve lost even a single percent point of the browser market.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2110" title="May 3, 2003 @ 10:23 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2142"><cite><a href='/web/20110806120216/http://www.suburbanplayboy.com/archives/000308.html' rel='external nofollow' class='url'>Suburban Playboy</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2143"><cite><a href='/web/20110806120216/http://refugio.f2o.org/archivos/000577.php' rel='external nofollow' class='url'>El Refugio</a></cite>&#160;(trackback)</li>
+<li id="comment-2111"><p>Microsoft doesn&#8217;t update IE because there&#8217;s no money in it: i.e. there&#8217;s no licensing fees associated with upgrading to the latest version. If I were Microsoft and I could charge $300 for an upgrade from Office 2002 to Office 2003 versus giving IE 2003 away for free, I know where I would put my development dollars. Microsoft only patches IE when somebody complains loudly enough, otherwise they ignore it. &#8220;Good enough&#8221; is the enemy of &#8220;better.&#8221; &#8220;Feature bloat&#8221; is the enemy of &#8220;good enough.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://concretewerk.com/weblog' rel='external nofollow' class='url'>Fred</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2111" title="May 4, 2003 @ 12:01 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2112"><p>that&#8217;s competition for you, market forces at work</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://chronotope.com/chronotope/' rel='external nofollow' class='url'>filchyboy</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2112" title="May 4, 2003 @ 1:40 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2144"><cite><a href='/web/20110806120216/http://www.neilturner.me.uk/entries/000545.html' rel='external nofollow' class='url'>Neil's World</a></cite>&#160;(trackback)</li>
+<li id="comment-2113"><p>Comment 17: &#8220;Its even more ironic since IE tends to display malformed markup all the time.&#8221;</p>
+<p>It&#8217;s a bit off the main topic, but do I catch an allusion to that in Mark&#8217;s heading (The Importance of Human Readable Markup)? There&#8217;s a possible reference back to an item in the &#8220;Insomniac&#8221; post of 23rd March:</p>
+<p><a href="/web/20110806120216/http://bitworking.org/newsXHTML___XForms___XLink___Xanadu">http://bitworking.org/newsXHTML___XForms___XLink___Xanadu</a></p>
+<p>There we find this: &#8220;If we want to see the web&#8217;s historical wild growth continue, it shouldn&#8217;t be choked off with machine-legible-only formats&#8221;</p>
+<p>I think there probably are genuine arguments for laxity. Of course, browser crashes are another thing &#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.btinternet.com/~historiae/bluebell.html' rel='external nofollow' class='url'>Michael</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2113" title="May 4, 2003 @ 6:39 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2114"><p>&#8220;hmm, there needs to be a a term for malicious easter-eggs&#8221; : 6-months-after-easter-egg?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2114" title="May 4, 2003 @ 9:40 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2115"><p>MikeyC, please stop talking crap. Nobody knows what MS&#8217; plans for IE are, you&#8217;re just spreading unfounded rumors.</p>
+<p>People stated IE5 was going to be the last IE release. Oh look, it wasn&#8217;t true. You don&#8217;t know the release dates. You don&#8217;t know the plans. Neither do I.</p>
+<p>However, I do believe Microsoft can&#8217;t re-write IE&#8217;s rendering engine from scratch. It would be suicidal. They *have* to keep backwards-compatibility with the hundreds of IE-only applications in use today.</p>
+<p>They just have to evolve it &#8211; first get basic CSS1 and HTML4 sorted (not a massive challenge, they&#8217;re resonably close). Then add the missing CSS2 support, and wire up MSXML for XHTML.</p>
+<p>But they have to do all that without breaking IE5 compatibility, which is a hard task.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2115" title="May 4, 2003 @ 11:15 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2116"><p>&#8220;MikeyC, please stop talking crap. Nobody knows what MS&#8217; plans for IE are, you�re just spreading unfounded rumors.&#8221;</p>
+<p>Look I didn&#8217;t claim that I know anything that hasn&#8217;t already been reported in various semi-credible sources like slashdot/the register/etc&#8230;I started my comment with &#8220;From what I&#8217;ve heard&#8221; so take it as you will.</p>
+<p>&#8220;People stated IE5 was going to be the last IE release. Oh look, it wasn�t true. You don�t know the release dates. You don�t know the plans. Neither do I.&#8221;</p>
+<p>Again, I never claimed that I knew anything about their actual plans.  Merely repeating what I&#8217;ve read in other online sources ok. I think the people here can decide for themselves how much truth exists in these &#8220;rumours&#8221; so get over yourself buddy.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2116" title="May 4, 2003 @ 12:53 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2117"><p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2117" title="May 4, 2003 @ 2:01 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2118"><p>This place crashes my IE all the time: [ad deleted]</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2118" title="May 4, 2003 @ 2:02 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2119"><p>Here�s a test page that crashes Mozilla:<br />
+<a href="/web/20110806120216/http://www.geeklife.com/files/crashMoz.html">http://www.geeklife.com/files/crashMoz.html</a></p>
+<p>Here�s the markup that makes it crash (angles changed to brackets so it will show up here):</p>
+<p>[html]<br />
+[fieldset style="position:fixed;"]<br />
+[legend]Crash[/legend]<br />
+[/fieldset]<br />
+[/html]</p>
+<p>People should be careful bashing IE to make certain the product they promote doesn&#8217;t suffer from similarly ridiculous vulnerabilities.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.geeklife.comj/' rel='external nofollow' class='url'>dave bug</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2119" title="May 4, 2003 @ 2:19 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2145"><cite><a href='/web/20110806120216/http://vowe.net/archives/003273.html' rel='external nofollow' class='url'>vowe dot net</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-2120"><p>To the (multiple) people who have tried to enter this exploit in my comments: piss off.  I strip all HTML tags, no exceptions, so don&#8217;t bother.</p>
+<p>To the people posting irrelevant links in order to drive traffic to your site: piss off.  Go find more socially acceptable things to do, like peeing in public fountains, or smoking in church.</p>
+<p>To the people calling each other names and debating the future of Internet Explorer: actually, this is mildly interesting.  If anyone has *credible* information about the future of MSIE, I&#8217;d love to hear it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2120" title="May 4, 2003 @ 5:55 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2121"><p>Mark,</p>
+<p>On a note related to your last comment, I suppose that&#8217;s something we&#8217;re bound to see before too long. Most likely, it will be in the form of spam trackbacks to popular blogs, enticing users with promising-looking trackbacks and then trying to sell product. For blogs with a high ratio of readers to poster(s), it&#8217;s inevitable that some spam trackbacks will slip through the cracks.</p>
+<p>Before long, we&#8217;ll see webs of trust built up around commenting and trackbacks.</p>
+<p>I&#8217;d blog this and link to your comment, but trackback autodiscovery would probably spam you further.</p>
+<p class=sig>&#8212;&#8201;<cite>Adam</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2121" title="May 4, 2003 @ 6:08 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2122"><p>&#8220;If anyone has *credible* information about the future of MSIE, I?d love to hear it.&#8221;</p>
+<p>What would you consider credible information: An official Microsoft press release?  I don&#8217;t think we can get you that, but consider that Microsoft has been trying to make inroads into the cellphone/wireless market. Opera has been kicking butt by getting a few large European contracts recently, thanks in large part to the light-weight footprint of their product.</p>
+<p>Can Microsoft put their browser on resource-limited clients while at the same time continue to render all the quirks of past versions of desktop IE? I don&#8217;t know the answer to that question.  I&#8217;m guessing that they can&#8217;t.</p>
+<p>Many people suggest that it would be suicide for them to drop support for quirky rendering.  I don&#8217;t believe this to be so. Designers would simply work their butts off to get their pages in working order as fast as possible. When Internet Explorer 6 changed its cookie-handling policy, and broke many pages, it wasn&#8217;t Microsoft who bent to the will of the design community. When Microsoft recently put an end to chromeless windows (resizing down of a fullscreen window after pageload to create the effect of a window without surrounding chrome) we didn&#8217;t see some mass exodus from IE6 sp1.  Designers simply sulked for a few days and then moved on.  When you control 96% of the market you can do whatever you want (including cutting backwards compatibility), and designers have to follow along, whether they like it or not. Maybe not on personal blog sites you don&#8217;t, but if you are running any large institutional web site, you&#8217;re damn right you do.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2122" title="May 4, 2003 @ 7:09 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2123"><p>&#8220;People should be careful bashing IE to make certain the product they promote doesn�t suffer from similarly ridiculous vulnerabilities.&#8221;</p>
+<p>The difference is I can look at Bugzilla and know there is already a discussion on how to fix it, and multiple takes at patching it&#8230;.<br />
+[<a href="/web/20110806120216/http://bugzilla.mozilla.org/show_bug.cgi?id=200347]%E2%80%9C%3Ehttp://bugzilla.mozilla.org/show_bug.cgi?id=200347%3C/a%3E%3C/p%3E%3Cp%20class=sig%3E%E2%80%94%2009%3Ccite%3E%3Ca%20href='http://www.accessibleinter.net/'%20rel='external%20nofollow'%20class='url'%3EBill%20Mason%3C/a%3E%3C/cite%3E%20%3Ca%20class=p%20href="#comment-2123" title="May 4, 2003 @ 9:15 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2124"><p>Interestingly, on my copy of Mac IE 5.2 (I&#8217;ve never had a reason to upgrade), the page at:</p>
+<p><a href="/web/20110806120216/http://vibrantlogic.com/new.html">http://vibrantlogic.com/new.html</a></p>
+<p>loads fine. Is this another Windows only problem?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://nogators.com/' rel='external nofollow' class='url'>Chet</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2124" title="May 4, 2003 @ 9:51 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2125"><p>&#8220;Interestingly, on my copy of Mac IE 5.2 (I�ve never had a reason to upgrade)&#8230;loads fine.&#8221;</p>
+<p>I think Mac IE 5.2 *is* the latest version. So there is nothing for you to upgrade to (unless you mean upgrading to Safari/Mozilla)&#8230;</p>
+<p>&#8220;Is this another Windows only problem?&#8221;</p>
+<p>IE Win &#038; IE Mac are the same browser in name only. They use different rendering engines (Trident and Tasman respectively) and were produced by different development teams at Microsoft. Not at all surprising that they would act differently from one another.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2125" title="May 4, 2003 @ 10:36 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2126"><p>Looks like IE will only crash if the parser stack hasn&#8217;t been initialized.</p>
+<p>If there&#8217;s a body tag previous to the malicious LOC it will *not* crash, even if the body is terminated before.</p>
+<p>Thus DOS by insertion will not work. However I&#8217;m afraid this will work with the Mozilla bug.</p>
+<p><a href="/web/20110806120216/http://www.sns1.de/partner/flamme/wflamme.nsf/Tag/2003-05-05:goodbyeIE">http://www.sns1.de/partner/flamme/wflamme.nsf/Tag/2003-05-05:goodbyeIE</a></p>
+<p>Wolfgang</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.sns1.de/partner/flamme/wflamme.nsf/' rel='external nofollow' class='url'>Wolfgang Flamme</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2126" title="May 4, 2003 @ 11:39 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2127"><p>Confirmed for Mozilla, see:</p>
+<p><a href="/web/20110806120216/http://www.sns1.de/partner/flamme/wflamme.nsf/Tag/2003-05-05:mozillabashing">http://www.sns1.de/partner/flamme/wflamme.nsf/Tag/2003-05-05:mozillabashing</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.sns1.de/partner/flamme/wflamme.nsf/' rel='external nofollow' class='url'>Wolfgang Flamme</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2127" title="May 5, 2003 @ 4:55 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2128"><p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2128" title="May 5, 2003 @ 6:03 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2129"><p>There is one economic reason for Microsoft to fix the current versions of IE, cost of processing bug reports. When I ran Marcs test IE5.5 asked if I wanted to report this &#8220;new&#8221; bug, of couse I said yes. Then it occured to me that this is costing Microsoft real money to process duplicate bugs like mine and that sooner or later this cost would drive the need to issue a fix.</p>
+<p class=sig>&#8212;&#8201;<cite>Steven Kroeker</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2129" title="May 5, 2003 @ 11:24 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2130"><p>Steven, that&#8217;s only if you make the assumption that MS actually does something with all those bug reports.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.engel-cox.org/' rel='external nofollow' class='url'>Glen</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2130" title="May 5, 2003 @ 1:11 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2146"><cite><a href='/web/20110806120216/http://earthlingsoft.net/ssp/blog/archives/week_2003_05_04.html#000392' rel='external nofollow' class='url'>Quarter Life Crisis</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2147"><cite><a href='/web/20110806120216/http://www.tannock.net/archives/001956.php' rel='external nofollow' class='url'>Tannock.Net</a></cite>&#160;(trackback)</li>
+<li id="comment-2131"><p>I doubt Microsoft will fix this bug as it relies on invalid HTML &#8211; as Wolfgang points out, there&#8217;s no body tag. Once you add that, the code works like it should.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://www.designdetector.com/' rel='external nofollow' class='url'>chris hester</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2131" title="May 6, 2003 @ 6:05 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2132"><p>MickyC Wrote: &#8220;Many people suggest that it would be suicide for them to drop support for quirky rendering. I don�t believe this to be so. Designers would simply work their butts off to get their pages in working order as fast as possible.&#8221;</p>
+<p>Well, obviously, they would have to &#8211; either that, or block all IE7 (or whatever) users from a site. Either way it wouldn&#8217;t exactly create a great deal of good will towards MS.</p>
+<p>&#8220;When Internet Explorer 6 changed its cookie-handling policy, and broke many pages, it wasn�t Microsoft who bent to the will of the design community.&#8221;</p>
+<p>IE6 broke a few sites. Personally, I didn&#8217;t see any cookie problems with sites I regularly use. The fix (from what I know) was mostly adding an extra HTTP header with a privacy policy.</p>
+<p>Cookie handling in IE6 is good. It added benefit to Microsoft users. It was something they could plug in an otherwise quite dull release.</p>
+<p>What would removing support for the IE5 block model do? Let&#8217;s see&#8230;</p>
+<p> * Annoys users &#8211; broken pages<br />
+ * Annoys developers &#8211; masses of work to fix everything<br />
+ * Annoys managers &#8211; more money to fix everything<br />
+ * Reduces trust in IE &#8211; people are less likely to use it as a development platform<br />
+ * Forces people to use standards, which is *not* a good thing. People should choose standards, not be forced to them. Forcing would result in bad feelings towards them.<br />
+ * Annoys the rest of Microsoft &#8211; they&#8217;d have to re-write hundreds of internal Windows HTML files, Office HTML files, and Microsoft.com files.</p>
+<p>What does it directly achieve *for Microsoft customers*?</p>
+<p> * Nothing.</p>
+<p>It would probably get people using standards. That isn&#8217;t a direct visible benefit to users. Not worth the bad points, in my opinion.</p>
+<p>&#8220;When Microsoft recently put an end to chromeless windows we didn�t see some mass exodus from IE6 sp1.&#8221;</p>
+<p>Chromeless windows aren&#8217;t in extremely widespread use, and they were a possible security problem, and a big annoyance. Is the IE6 being backwards-compatible any of those?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2132" title="May 6, 2003 @ 11:33 am"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2133"><p>&#8220;What would removing support for the IE5 block model do? Let�s see&#8230;* Annoys users &#8211; broken pages&#8230;* Annoys developers &#8211; masses of work to fix everything<br />
+What does it directly achieve *for Microsoft customers*?* Nothing.&#8221;</p>
+<p>Well first of all I didn&#8217;t go so far as to say they would/should remove the IE5 box model, but simply meant that they can&#8217;t take *all* the quirks with them forever. (Mozilla has a quirks mode, but doesn&#8217;t support document.layers).</p>
+<p>I&#8217;m not saying it wouldn&#8217;t annoy a lot of people (it definitely would), but simply that Microsoft&#8217;s monopoly power is such that annoyance wouldn&#8217;t significantly reduce their marketshare. Most people I know use Microsoft products because they (feel like) they have no other choice.  I could see them forgoing a bit of the desktop browser market for a slice of the wireless/handheld market. Then they could collect a fee from developers to have their browser pre-installed on devices. Their (free) desktop browser monopoly, I&#8217;m sure, has its indirect benefits, but also has a significant cost attached to it. Companies usually give away products in an attempt to become ubiquitous, and then charge for it. </p>
+<p>My argument is based on the following premise: </p>
+<p>1) Microsoft wants a piece of the handheld/portable/wireless/cell/embedded browser market.</p>
+<p>2) Microsoft can&#8217;t squeeze their rendering engine into a low-resource portables as is. They need to strip it down.</p>
+<p>3) Microsoft will want cross-platform/device rendering behaviour spanning the desktop and portable markets so that pages render in embedded browsers correctly&#8211;or else there won&#8217;t be a reason for manufacturers to go with Microsoft&#8217;s offering.</p>
+<p>Just my two cents based on rumour and conjecture from semi-credible sources.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2133" title="May 6, 2003 @ 10:48 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2148"><cite><a href='/web/20110806120216/http://www.confusedkid.com/primer/archives/000711.html' rel='external nofollow' class='url'>Mercurial</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2149"><cite><a href='/web/20110806120216/http://www.confusedkid.com/primer/archives/000711.html' rel='external nofollow' class='url'>Mercurial</a></cite>&#160;(trackback)</li>
+<li id="comment-2134"><p>Just had to try it. I used Brad&#8217;s example, saved the file to my web server as &#8220;crash.htm,&#8221; and then crashed my browser (IE 6) a couple times. Here&#8217;s the fun part: I next went to Windows Explorer and tried to delete the file. As soon as I clicked on the filename, Windows Explorer promptly crashed, too. I had to re-open the file with Notepad and change the text before I could delete it without crashing Windows Explorer. My desktop is Windows XP. So anyway, there seems to be a related bug, or maybe some shared code or some other similarity causing similar behavior in IE 6 and in Windows Explorer.</p>
+<p class=sig>&#8212;&#8201;<cite>Mark</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2134" title="May 9, 2003 @ 2:04 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2135"><p>Oh, duh, OK, the similarity is the HTML rendering library. Still, does anyone else think it&#8217;s weird that you don&#8217;t have to open the file to make it crash Windows Explorer&#8211;all you have to do is click on it?</p>
+<p class=sig>&#8212;&#8201;<cite>Mark (er, not Pilgrim, sorry)</cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2135" title="May 9, 2003 @ 2:15 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2136"><p>Probably it&#8217;s being &#8220;helpful&#8221; and &#8220;smart&#8221; and noticing the file extension and trying to show some sort of preview in the Explorer window.  Which crashes, naturally, since everything is sharing the same HTML rendering library.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806120216/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806120216/http://diveintomark.org/archives/2003/05/03/the_importance_of_humanreadable_markup#comment-2136" title="May 9, 2003 @ 2:23 pm"><img alt="#" src=/web/20110806120216im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806120216/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806120216/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806120216/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806120216/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806120216/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.454 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 13:33:03 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 12:02:16 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:14:31 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

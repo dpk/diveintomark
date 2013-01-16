@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>I love it when a plan comes together [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806101840/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806101840/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806101840/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806101840/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806101840im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806101840/http://diveintomark.org/archives/2006/08/09/supertux-m2-sneak-peak" title="Sneak Peek: SuperTux M2">
+<link rel=next href="/web/20110806101840/http://diveintomark.org/archives/2006/08/22/c600g" title="PR#6">
+<link rel=up href="/web/20110806101840/http://diveintomark.org/archives#p1561" title="August 2006">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; I love it when a plan comes together Comments Feed" href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806101840/http://diveintomark.org/' />
+<link rel='prev' title='Sneak Peek: SuperTux M2' href='/web/20110806101840/http://diveintomark.org/archives/2006/08/09/supertux-m2-sneak-peak' />
+<link rel='next' title='PR#6' href='/web/20110806101840/http://diveintomark.org/archives/2006/08/22/c600g' />
+<link rel='canonical' href='/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt' />
+<link rel='shortlink' href='/web/20110806101840/http://diveintomark.org/?p=1561' />
+<meta name="description" content="I now have a router that gives me drink recipes.">
+<meta name="keywords" content="airport,linksys,linux,wrt54gl">
+<link href="/web/20110806101840cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806101840/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2006\/08\/11\/openwrt";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2006/08/11/openwrt" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806101840" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607213410/http://diveintomark.org/archives/2006/08/11/openwrt" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:18:40 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110607213410/http://diveintomark.org/archives/2006/08/11/openwrt" title="21:34:10 Jun 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:18:40 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110816203229/http://diveintomark.org/archives/2006/08/11/openwrt" title="20:32:29 Aug 16, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620010432/http://diveintomark.org/archives/2006/08/11/openwrt" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:18:40 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806101840*/http://diveintomark.org/archives/2006/08/11/openwrt" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>30 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Aug 06 - 16 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000061010_2007:-1:500000000010_2008:-1:102121000001_2009:-1:000010000000_2010:-1:000001000111_2011:7:000001020000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806101840/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806101840/http://diveintomark.org/archives#p1561">August 11, 2006</a> &#8227;
+<h2>I love it when a plan comes together</h2> (<a href="/web/20110806101840/http://diveintomark.org/tag/airport" rel="tag">airport</a>, <a href="/web/20110806101840/http://diveintomark.org/tag/linksys" rel="tag">linksys</a>, <a href="/web/20110806101840/http://diveintomark.org/tag/linux" rel="tag">linux</a>, <a href="/web/20110806101840/http://diveintomark.org/tag/wrt54gl" rel="tag">wrt54gl</a>)</div>
+<p>As you may have heard, I bought a new computer and installed Ubuntu.  Loving it, no problems to speak of.  I gave my wife my old PowerBook, and she gave my parents her old iBook.  Then my parents asked about setting up a little wireless network between their new iBook and the iMac they already own.  I had a little wireless network held together by an Airport Express.  Despite grand plans, I never used it to its full capacity (no AirTunes because it wasn&#8217;t worth rearranging my house to put the DSL modem near the stereo, and no printer sharing because we print so infrequently that we keep the printer in the closet).  Plus &#8212; and this is one of those things that hits you gradually, then suddenly &#8212; the Airport Express can only be administered through the Airport Admin Utility, which only runs on Mac OS X.</p>
+
+<p>You can see where this is going.</p>
+
+<p>Enter the <a href="/web/20110806101840/http://www.newegg.com/Product/Product.asp?Item=N82E16833124190">Linksys WRT54GL</a> from NewEgg.com, my new favorite destination for all things tech.  It arrived at 2:05, I installed <a href="/web/20110806101840/http://openwrt.org/">OpenWRT</a> at 2:06, and now I have a little wireless network held together by Free Software.  I&#8217;m happy because I can administer it from any computer.  My wife is happy because it doesn&#8217;t affect her in any way.  My parents are happy but don&#8217;t know it yet, because they will soon have a little wireless network of their own.  They might even use the printer sharing.  And I have a <a href="/web/20110806101840/http://downloads.openwrt.org/whiterussian/packages/">highly customizable</a> router that gives me drink recipes:</p>
+
+<pre>mark@atlantis:~$ ssh root@10.10.10.1
+
+
+BusyBox v1.00 (2006.03.27-00:00+0000) Built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+  _______                     ________        __
+ |       |. -- --. -- --. -- --.|  |  |  |. -- -.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ WHITE RUSSIAN (RC5)  --  --  --  --  --  --  --  --  --  -- -
+  * 2 oz Vodka   Mix the Vodka and Kahlua together
+  * 1 oz Kahlua  over ice, then float the cream or
+  * 1/2oz cream  milk on the top.
+  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  -- 
+root@freedom0:~#</pre>
+
+<p>I love it when a plan comes together.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Twenty six comments here (<a href=/web/20110806101840/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-7221"><p>WRT54G(L)&#8217;s are awesome! I now have 4 linked via WDS blanketing a small neighbourhood. </p>
+<p>RC5 of openwrt even has a useable web interface for those afraid of the commandline&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://randomthoughts.vandorp.ca/' rel='external nofollow' class='url'>Darryl</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7221" title="August 11, 2006 @ 5:54 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7222"><p>Indeed, WRT54G/GL/GS routers rock! I&#8217;m a HyperWRT guy myself, but OpenWRT looks promising too. Maybe I&#8217;ll try it when the next version comes out.</p>
+<p class=sig>&#8212;&#8201;<cite>Jonathan</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7222" title="August 11, 2006 @ 6:11 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7223"><p>+1. Couldn&#8217;t be happier with my OpenWRT box.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://girtby.net/' rel='external nofollow' class='url'>Alastair</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7223" title="August 11, 2006 @ 8:10 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7224"><p>Every time I see any reference to a White Russian, I&#8217;m reminded of the Big Lebowski. And that makes me happy.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://lsdr.net/' rel='external nofollow' class='url'>Luiz Rocha</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7224" title="August 11, 2006 @ 9:28 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7225"><p>Awesome.  I&#8217;ve been looking at alternatives for wireless when the time comes to ditch my AirPort Express stations as a result of going Ubuntu full-time.  Sure, they are great for the basics but if you have to administer your printer and check for ink levels, good luck trying to do so with it connected to the AirPort.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://mackdieselx27.wordpress.com/' rel='external nofollow' class='url'>mackdieselx27</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7225" title="August 11, 2006 @ 9:37 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7227"><p>Excellent choice of hostname on the WRT.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://groovymother.com/' rel='external nofollow' class='url'>Rod</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7227" title="August 11, 2006 @ 10:04 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7228"><p>I have to laugh when I hear someone mention the WRT54G(L). My soon-to-be husband in 12 hours from now cannot to into any friend&#8217;s house who owns one of those routers without changing their firmware. It&#8217;s so nerdy that it&#8217;s funny.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://www.everytomorrow.org/' rel='external nofollow' class='url'>nikkiana</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7228" title="August 11, 2006 @ 11:27 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7229"><p>Nikkiana, you&#8217;re getting married 12 hours from now, and you&#8217;re reading diveintomark.org? I think that&#8217;s nerdy and funny, too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://www.marteydodoo.com/' rel='external nofollow' class='url'>Martey</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7229" title="August 11, 2006 @ 11:36 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7230"><p>I&#8217;m honored, and congratulations.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7230" title="August 12, 2006 @ 12:06 am"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7231"><p>Mark, you&#8217;ve come a long way from the <a href="/web/20110806101840/http://diveintomark.org/archives/2002/08/19/champagne_toast">no-champagne reception</a>.</p>
+<p>Congratulations to <em>you</em> sir.</p>
+<p class=sig>&#8212;&#8201;<cite>Jeremy Dunck</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7231" title="August 12, 2006 @ 12:34 am"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-7233"><cite><a href='/web/20110806101840/http://rambleon.org/2006/08/12/whats-your-pilgrim-number/' rel='external nofollow' class='url'>Rambles of a University Systems Manager &raquo; What&#8217;s Your Pilgrim Number?</a></cite>&#160;(pingback)</li>
+<li id="comment-7236"><p>You, sir, made me switch from OS X to (K)Ubuntu as well, and I have not regretted it. Thank you for this and your ongoing tips :-)<br />
+For any rare occasions where I depend on OS X (SPSS, TNT) I fire up MOL (Mac on Linux, <a href="/web/20110806101840/https://wiki.ubuntu.com/MacOnLinuxHowto" rel="nofollow">https://wiki.ubuntu.com/MacOnLinuxHowto</a>) from an image which just works fine for that purpose.</p>
+<p class=sig>&#8212;&#8201;<cite>Ben</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7236" title="August 13, 2006 @ 1:52 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7237"><p>And you made me go back to Linux on my iBook after 2 years of MacOSX :)</p>
+<p class=sig>&#8212;&#8201;<cite>lucaramel</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7237" title="August 13, 2006 @ 3:57 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7238"><p>I have a Linksys WRT54G v2.0 that has been great.  I used to use an older computer with SmoothWall GNU/Linux (<a href="/web/20110806101840/http://www.smoothwall.org/" rel="nofollow">http://www.smoothwall.org/</a>) installed to use as a personal router/firewall. It started showing its age when I needed wireless, it didn&#8217;t cut the mustard that well with its aging 2.4 kernel. I used to use Sveasoft Alchemy firmware, I found their business practices quite scandalous with how they handle GPL code, and found DD-WRT (<a href="/web/20110806101840/http://www.dd-wrt.org/" rel="nofollow">http://www.dd-wrt.org/</a>). Their Wiki has great content and their custom firmware is quite fleshed out and polished.  I would recommend that everyone at least take a peek at that project if you have a WRT54G/GS/GL.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7238" title="August 13, 2006 @ 4:33 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7239"><p>Guys, Mac will have TIME MACHINE! Go, switch back.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://plastik.hu/' rel='external nofollow' class='url'>angelday true</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7239" title="August 13, 2006 @ 4:34 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7240"><p>OOh.</p>
+<p>Time Machine.  Oh no!  Mac will have a subversion client that looks like Finder! *GASP*</p>
+<p>Seriously.  We have time machine now.  It&#8217;s called Subversion.</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7240" title="August 13, 2006 @ 5:20 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7241"><p>Sigh.  This thread has gone massively off-topic, so I suppose there&#8217;s no saving it now.  Re: Time Machine, saying it&#8217;s &#8220;just&#8221; a front-end on top of anything or &#8220;just&#8221; like some command-line utility is stupid.  Mac OS X ships with rsync too, but that doesn&#8217;t make it a user-friendly backup program.  Perhaps you missed the part about the flying 3D windows?  Or, more saliently, the part where Apple is planning to offer an API for third-party applications to participate in the flying 3D window thingie?</p>
+<p>At the same time, I&#8217;m not defending Time Machine either.  Notably, Apple has not (to my knowledge) released any information on how revision metadata is stored.  Sure there&#8217;s a Mac-specific API that Mac-specific programs can use to store revisions of&#8230; my data.  Hmm, that sounds vaguely familiar.  Can I take my data with me &#8212; all of it, not just the latest and greatest version?  Can I access the Time Machine database itself and build global alternative interfaces for accessing revisions?  Or even application-specific interfaces for my own application&#8217;s data?</p>
+<p>(Interesting anecdote: back in 1996, in another day job on another platform, I built an application-specific interface for doing exactly that.  It was a client-server application for tracking procedures for building things in aluminum foundries.  Our interface allowed you to &#8220;travel back in time&#8221; and see what the procedures looked like at a specific point in the past &#8212; complete with metadata, text, pictures, video, everything.  It didn&#8217;t have a whizzy 3D interface, but it did help our customers get ISO-9000 certification before their competitors.  Even back then, I pushed for us to provide developer documentation on the database schema for our customers, since after all, it was their data.  I was overruled.  Years later, long after I left the company, a former customer found me on the internets and told me that our company had gone out of business and they were having difficulty exporting their data to another system.  I wanted to help but quickly realized I no longer remembered enough of the details to be of any use to him.  <a href="/web/20110806101840/http://archive.salon.com/21st/feature/1998/05/13feature.html">Code and forget, code and forget</a>: programming is a collective exercise in incremental forgetting.)</p>
+<p>Anyway, these are the questions that immediately sprang to mind when I watched the whizzy Time Machine demo.  Can I take my data with me?  Can I migrate it to another revision control system?  Is Apple going to provide developer documentation on the Time Machine data structures themselves, or are they just going to provide a &#8220;roach motel&#8221; API for applications to store data &#8212; ahem, MY data &#8212; with no way to get it back out except to rely on Apple&#8217;s proprietary tools?  Of course I&#8217;ll never use Time Machine personally, so in some sense I don&#8217;t really care.  But if you think you might, these are the kind of questions you should be asking.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7241" title="August 13, 2006 @ 6:15 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7243"><p>But Mark, it IS just a GUI slapped on top of a revision control system.  Unless you think that Apple went out and reinvented the wheel?  THat seems very unlike them.  </p>
+<p>Of course you won&#8217;t be able to access it outside of Apple&#8217;s proprietary interface.  That much was indicated when they announced that they&#8217;d be releasing &#8220;Third party tools to exempt/add software and metadata&#8221; into the archives.</p>
+<p>MY curiousity comes one step further.  THe hardware for this system looks very much like an Apple branded device.  Will the entire Hard Drive / Enclosure be an Apple only thing, or can I use ANY enclosure?  If I back it up to another server, will that server require OSX Leopard, or would it require OSX Leopard Server?   </p>
+<p>I get the feeling that Time Machine will require people to purchase a specialized hard-drive from Apple that will be moderatly expensive.  I also have the feeling that the software will have major issues with some of the large binary file formats that apple uses in their proprietary applications.  I think in the long run, we have to view this as a nice flashy application that will not get very many end users involved.  We have to remember that a set of comparable software has been out on the PC for years, and has not encouraged users to go buy the extra backup device.</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7243" title="August 14, 2006 @ 2:24 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7244"><p>> Unless you think that Apple went out and reinvented the wheel? That seems very unlike them.</p>
+<p>You must be new here.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7244" title="August 14, 2006 @ 3:00 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7245"><p>(For the record, I share your skepticism and agree with your concluding paragraph.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7245" title="August 14, 2006 @ 3:01 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7249"><p>Heeee.</p>
+<p>Let me rephrase:</p>
+<p>&#8220;Unless you think that apple went out and reinvented the wheel &#8230;&#8221;</p>
+<p>When a perfectly good Open Source (KHTML, anyone?) solution can do the job for them without them really ever releasing anything usable back to the OSS community?</p>
+<p>I hope I&#8217;m wrong on this.. but after watching them introduce and sell Virtual Desktops , a technology that is YEARS old if not a decade old technology, as a &#8220;MacOSX Leopard Innovation&#8221; .. forgive me for having some level of cynicism when it comes to their &#8220;ideas.&#8221;</p>
+<p>After all, they&#8217;re the one who had banners around saying things like &#8220;Redmond, get out the photocopiers&#8221; and &#8220;Microsoft, we&#8217;d like to Introduce Vista 2.0&#8243; </p>
+<p>Is it really wrong to call them on their own marketing kool-aid? Especially when it hurts the consumers?   </p>
+<p>That said, my main fear is simply the lock in.  I can excuse their anti-competitive nature and their killing of 3rd party projects.. but I can&#8217;t excuse them locking their consumers in while pretending as if they&#8217;re helping people.</p>
+<p class=sig>&#8212;&#8201;<cite>jh</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7249" title="August 14, 2006 @ 4:04 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7255"><p>&#8211; spoiler: seriously offtopic comment, before you burn me &#8211;</p>
+<p>People, yo, before delving too much into this whole &#8220;am I locked out&#8221; thing: people, as a mass see the computer as a commodity. They just don&#8217;t install software, don&#8217;t know about software solutions (backup you say, muhaha!) and are not even interested in that shit like we do.</p>
+<p>I completely, and wholeheartedly agree with Mark on going open (note: it&#8217;s like a &#8220;coming out&#8221;), but to my mother, to my girlfriend&#8217;s mother and to Romeo at the gym I just keep recommending the lousy Mac platform because I know they will get to finally organize their photos with iPhoto and not jerking away with Windows&#8217; File Explorer. (One of my friends renamed his complete vacation photo set in order to show up in Windows Explorer the way he wanted. Gosh.)</p>
+<p>To sum it up, to me Mark is a cool person with all these Linux knowledge and I really enjoy reading his blog, but right now, in 2006, I just don&#8217;t see it coming together on household-level. Like telling my girlfriend to tell her mother to get a whatever Linksys router or telling my girlfriend to get excited about this time motherfucking machine thing because that way they will finally be able to backup their photos. (In many of which, yours truly can be seen butt naked, but that&#8217;s another story.)</p>
+<p>I got carried away, time to cool down.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101840/http://plastik.hu/' rel='external nofollow' class='url'>angelday true</a></cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7255" title="August 15, 2006 @ 4:25 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-7256"><cite><a href='/web/20110806101840/http://www.nedrichards.com/2006/08/15/geek-cred-restored/' rel='external nofollow' class='url'>nedrichards :: Nick Richards &raquo; geek cred restored</a></cite>&#160;(pingback)</li>
+<li id="comment-7259"><p>Well crap.  I&#8217;m switching to Ubuntu and I&#8217;ve been a Mac user since 1984.  Yes since the 128k Mac.  I still can&#8217;t believe it.  Anyway I jsut bought a Velcoity Micro PC that is very nice hardware for the price with the new E6400 Intel Proc.  Great price and great hardware that is wasted on XP.  I&#8217;m dual booting only for the purpose of playing games in XP but everything else is Ubuntu.  I get the smooth multi-tasking with multiple apps that OS X gives me plus some of the coolest software you could ask for.  Its a great feeling of freedom to not be tied to a particulaar OS or even hardware.  I&#8217;m loving it.  I got started by running the Live CD on my work issued ThinkPad and was sold pretty quickly.  I&#8217;m not looking back and the future version of Apples OS and especially Microsfots hold little to no interest for me.  I still think the Mac OS is great and far better than XP but for a long time Unix guy like me (Senior Architect at a very well known company) I&#8217;m in heaven.</p>
+<p class=sig>&#8212;&#8201;<cite>Terry</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7259" title="August 19, 2006 @ 7:45 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7260"><p>Sorry about all the typos in the previous post..I&#8217;m all excited with my new Ubuntu PC. ;)</p>
+<p class=sig>&#8212;&#8201;<cite>Terry</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7260" title="August 19, 2006 @ 7:47 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7262"><p>Minor point, but there actually is a version of Apple Airport Admin that runs on Windows.<br />
+<a href="/web/20110806101840/http://www.apple.com/support/downloads/airport41forwindows.html" rel="nofollow">http://www.apple.com/support/downloads/airport41forwindows.html</a><br />
+Not like this is gonna convince you to drop Ubuntu for MS, but I&#8217;m just saying&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Dave</cite>&#160;<a class=p href="/web/20110806101840/http://diveintomark.org/archives/2006/08/11/openwrt#comment-7262" title="August 20, 2006 @ 3:39 pm"><img alt="#" src=/web/20110806101840im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806101840/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806101840/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806101840/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806101840/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806101840/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.331 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:55:39 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:18:40 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:09:42 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

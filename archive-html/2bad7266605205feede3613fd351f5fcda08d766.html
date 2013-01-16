@@ -1,0 +1,511 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Power laws and priorities [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806112413/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806112413/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806112413/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806112413/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806112413im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806112413/http://diveintomark.org/archives/2003/02/08/optimizing_png_files" title="Optimizing PNG files">
+<link rel=next href="/web/20110806112413/http://diveintomark.org/archives/2003/02/12/here_we_go_again" title="Here we go again">
+<link rel=up href="/web/20110806112413/http://diveintomark.org/archives#p1269" title="February 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Power laws and priorities Comments Feed" href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806112413/http://diveintomark.org/' />
+<link rel='prev' title='Optimizing PNG files' href='/web/20110806112413/http://diveintomark.org/archives/2003/02/08/optimizing_png_files' />
+<link rel='next' title='Here we go again' href='/web/20110806112413/http://diveintomark.org/archives/2003/02/12/here_we_go_again' />
+<link rel='canonical' href='/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities' />
+<link rel='shortlink' href='/web/20110806112413/http://diveintomark.org/?p=1269' />
+<meta name="description" content="Clay Shirky: The relatively egalitarian distribution of readers in the early years had nothing to do with the nature of weblogs or webloggers. There just weren't enough blogs to have really unequal distributions. Now there are.">
+<meta name="keywords" content="blogging,powerlaws">
+<link href="/web/20110806112413cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806112413/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/02\/09\/power_laws_and_priorities";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806112413" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115327/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 11:24:13 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115327/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities" title="11:53:27 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 11:24:13 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100329002258/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="29 Mar 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 11:24:13 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806112413*/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>15 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">17 Jul 06 - 6 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000110000_2007:-1:000000000101_2008:-1:010101101000_2009:-1:000000000000_2010:-1:001000000021_2011:7:000010010000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806112413/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806112413/http://diveintomark.org/archives#p1269">February 9, 2003</a> &#8227;
+<h2>Power laws and priorities</h2> (<a href="/web/20110806112413/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20110806112413/http://diveintomark.org/tag/powerlaws" rel="tag">powerlaws</a>)</div>
+<p><cite>Clay Shirky</cite>: <a href="/web/20110806112413/http://www.shirky.com/writings/powerlaw_weblog.html">Power Laws, Weblogs, and Inequality</a>.  <q cite="http://www.shirky.com/writings/powerlaw_weblog.html">Freedom of choice makes stars inevitable.</q>  Actually, freedom of choice, tempered by the part of human nature that makes people ever-so-slightly more likely to choose what people before them have chosen.</p>
+
+<blockquote cite="http://www.shirky.com/writings/powerlaw_weblog.html" title="Clay Shirky">
+<p>Alice, the first user, chooses her blogs unaffected by anyone else, but Bob has a slightly higher chance of liking Alice&#8217;s blogs than the others. When Bob is done, any blog that both he and Alice like has a higher chance of being picked by Carmen, and so on, with a small number of blogs becoming increasingly likely to be chosen in the future because they were chosen in the past.</p>
+<p>&#8230; Note that this model is absolutely mute as to why one blog might be preferred over another. Perhaps some writing is simply better than average (a preference for quality), perhaps people want the recommendations of others (a preference for marketing), perhaps there is value in reading the same blogs as your friends (a preference for &#8220;solidarity goods&#8221;, things best enjoyed by a group). It could be all three, or some other effect entirely, and it could be different for different readers and different writers. What matters is that any tendency towards agreement in diverse and free systems, however small and for whatever reason, can create power law distributions.</p>
+</blockquote>
+
+<p>I&#8217;ve mentioned this before, in a fuzzy and tangential kind of way, <a href="/web/20110806112413/http://weblog.delacour.net/archives/000804.html#comment1829">on Jonathon Delacour&#8217;s site</a>, and more recently <a href="/web/20110806112413/http://diveintomark.org/archives/2003/01/19/influences.html">on my own</a>.  But Clay crystallizes the point, backs it up with actual evidence, and then comes to this conclusion:</p>
+
+<blockquote cite="http://www.shirky.com/writings/powerlaw_weblog.html">
+<p>Inequality occurs in large and unconstrained social systems for the same reasons stop-and-go traffic occurs on busy roads, not because it is anyone&#8217;s goal, but because it is a reliable property that emerges from the normal functioning of the system. The relatively egalitarian distribution of readers in the early years had nothing to do with the nature of weblogs or webloggers. There just weren&#8217;t enough blogs to have really unequal distributions. Now there are.</p>
+</blockquote>
+
+<p>This conclusion is sure to piss off the <q>weblogs will set us free</q> crowd.  The ridiculously low barrier to entry of starting your own weblog is invariably held up as a prime reason why personal publishing will lead us into an egalitarian utopia.  But all it really means is that anyone can get in on the long tail of the power law distribution, where you (voluntarily) spend all your time linking to Glenn Reynolds or Dave Winer, and never get read by more than 3 people.</p>
+
+<blockquote cite="http://www.shirky.com/writings/powerlaw_weblog.html">
+<p>Though there are more new bloggers and more new readers every day, most of the new readers are adding to the traffic of the top few blogs, while most new blogs are getting below average traffic, a gap that will grow as the weblog world does. It&#8217;s not impossible to launch a good new blog and become widely read, but it&#8217;s harder than it was last year, and it will be harder still next year.</p>
+</blockquote>
+
+<p>Now, does that mean that blogging is pointless?  Well yes, if what you&#8217;re after is fame and fortune.  Those 3 hits a day are almost certainly not going to balloon into 3000 or 3 million.  And even if you combine all the 3-hit sites together, they won&#8217;t ever move markets like The New York Times.  On the other hand, those 3 hits are the most important thing in the world, because they&#8217;re real people.  All the friendships I&#8217;ve developed in the past 2 years &#8212; starting long before I was in the Technorati Top 10 &#8212; grew out of connections I made through writing this weblog and reading others.  This month I&#8217;ll get 1 million hits on my weblog, and have lunch with 10 friends I met through my weblog.  Guess which I care about more.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Fifty comments here (<a href=/web/20110806112413/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-168"><p>Quite right. We&#8217;ve heard this starry-eyed utopianism before and it&#8217;s true/false. Yes, everyone can be an artist. No, everyone cannot &#8220;make it&#8221; as an artist. Yes, everyone should express themselves. No, not everyone will gather an audience. etc.</p>
+<p>The basic point that real, live individual readers count individually, not in aggregate, is the most important (to me). I value the hundreds of readers a day at my blog in a way that is hard to apply to the largely faceless hundreds of thousands who have bought my computer books.</p>
+<p>One random thought, though, regarding your point about making friends. I&#8217;d say that there are certain times in one&#8217;s life when friends are easier to accumulate. Before that point your life is not as free (you are in school or in your first dead-end job) and after that life you are essentially &#8220;full up&#8221; with friends. Sure, there may be some churning on the margins, but if you&#8217;ve got a small coterie of friends and perhaps a family, you may not be able to make the time to go the bloggermunches, webby awards, sxsw conventions, and so on.</p>
+<p>Of course, the web enables a new outer fringe in the concentric acquaintanceship sphere, so my point doesn&#8217;t obviate the fact that one can &#8220;get to know&#8221; people through blogging at any stage of life whether they become true friends or not.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://radiofreeblogistan.com/' rel='external nofollow' class='url'>xian</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-168" title="February 9, 2003 @ 4:33 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-199"><cite><a href='/web/20110806112413/http://weblog.delacour.net/archives/000838.html' rel='external nofollow' class='url'>Jonathon Delacour</a></cite>&#160;(trackback)</li>
+<li id="comment-169"><p>I remember when usenet and email, then the web itself were expected to be powerfully democratizing. I had a couple of friends who evangelized for the web heavily because they had those dreams. </p>
+<p>My own feeling is that for most people their weblogs are newsletters for family and friends. My main blog is exactly that. The new friends who found me on the web are lucky extras.</p>
+<p>For me it also proved surprisingly useful for self-exploration and exploring my past. More lucky extras.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.edifyingspectacle.org/gullibility/blog/' rel='external nofollow' class='url'>Richard Evans Lee</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-169" title="February 9, 2003 @ 8:35 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-170"><p>I think some outside(r) perspective &#8211; I&#8217;m not a &#8220;blogger&#8221;, nor even much of a reader &#8211; is in order.  I find it&#8217;s always helpful to remember the phrase, &#8220;1,000,000,000 Chinese don&#8217;t know who you are and couldn&#8217;t give a f&#8212;&#8221;.</p>
+<p>While Web logging may be one of the facets of Utopianism that we all felt 10 years ago when NCSA Mosaic 0.3 peeked its head above the ground, to me the vastness of the Web has essentially meant that the notions of Internet-based &#8220;fame&#8221; or notoriety have become essentially meaningless (cf. Chinese comment above &#8211; substitute &#8220;1,000,000,000 other Internet users&#8221;, if required for clarity).</p>
+<p>One of the most humorous things about Web logging that I&#8217;ve seen is that it seems to have been accepted as the de-facto hip thing to do among post-adolescent teens and young 20-somethings (witness sites like Live Journal or Suicide Girls&#8217; community, which is based in no small part around the members&#8217; live journals), yet as an Old Fart[tm] (I&#8217;ll be 45 in October), I read and read and usually end up thinking, &#8220;Who *cares* about your little dramas and what you write about?&#8221; more often than not.  But I guess therein lies the dichotomy &#8211; &#8220;Web logging&#8221; as generic concept allows one to voice anything from meaningful-only-to-me-and-my-handful-of-Goth-friends on those types of sites to more thoughtful outwardly-focussed essay-oriented sites (such as yours, Mark).  Then again, those tend to be written by thoughtful computer geeks a lot of the time &#8211; so my revulsion at the former and embrace of the latter as a concept may just be a case of birds-of-a-feather-flock-together.  :-)</p>
+<p>Anyway, back to the 1,000,000,000-Chinese theory:<br />
+I arrived on this page randomly &#8211; MacSurfer (my home page) &#8211;> a story about Opera &#8211;> Chuq Von Rospach&#8217;s Web log comment about Opera&#8217;s response to Apple&#8217;s Safari &#8211;> Chuq&#8217;s mention of Mark&#8217;s boss reading his Web log &#8211;> this current page.  I knew nothing of Mark (though, oddly, having formerly worked at Sun for 5 years and having been on Usenet for over 15, I sure knew about Chuq!) and I knew nothing about the &#8220;Technorati Top 10&#8243;.</p>
+<p>So what am I saying?  I guess &#8211; not to try and take your ego down or anything, Mark, honest &#8211; I&#8217;m simply saying that you *should* cherish the friendships you&#8217;ve made via the Internet/Web logging the most, rather than any perceived &#8220;fame&#8221; or &#8220;status&#8221; &#8211; because, in the end, that&#8217;s what will remain with you after Web logging is no longer considered the latest &#8220;Internet fad&#8221;.</p>
+<p>Your comments reminded me of how I spent 8 years using CU-SeeMe video conferencing software &#8211; I met hundreds of people from all over the world that way; people of all ages, ilks and walks of life, whose only real point of commonality was the use of the technology involved.  It spawned a few relationships and has left me with a handful of permanent real-life friendships that span oceans and continents, even though the technology itself has effectively died out (oddly enough &#8211; right as the camera technology, computer technology/speeds and Internet link speeds have become far more receptive to such a technology, people would rather do different things).  Again, it&#8217;s the friendships that I&#8217;ll take away from those 8 years, rather than any fame or notoriety I might have achieved in the medium.</p>
+<p>One last (unrelated) thing: I suspect by &#8220;unplug&#8221; your boss meant &#8220;Go on vacation somewhere and go appreciate this amazing planet we live on, and forget about computers for awhile&#8221;.  I try to do that as often as I can (though I admit I&#8217;ll hit an Internet cafe if it&#8217;s pissing down rain for hours on end and I&#8217;m in a place like Bali where there&#8217;s little to do &#8220;inside&#8221;), and &#8211; for me anyway &#8211; it&#8217;s the best battery-recharger there is.  Try it sometime, Mark  :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://isolar.dyndns.org/' rel='external nofollow' class='url'>Riot Nrrrd</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-170" title="February 9, 2003 @ 12:10 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-171"><p>Followup/addendum: Just saw the &#8220;Barcelona 2000&#8243; photo album.  (My favorite city in the whole world!)  See?  You *do* know how to &#8220;unplug&#8221;!  :-)</p>
+<p>Congratulations on the engagement.  I just got engaged on Christmas myself.  Gonna take her to Barcelona (my 4th time) in June  :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://isolar.dyndns.org/' rel='external nofollow' class='url'>Riot Nrrrd</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-171" title="February 9, 2003 @ 12:16 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-172"><p>Unlike Clay&#8217;s usual, I think that this analysis is a very weak one. The jury is still out on the empower/winner-takes-all directions that blogging could go into. However, I&#8217;ll claim(and I cant back this claim with data yet, but then I&#8217;m not going to wave the word power-law in your face either) that the blogging network is very different than the web network it is embedded into.</p>
+<p>I wrote an essay on this a while back, here: <a href="/web/20110806112413/http://tig.nareau.com/2003/01/03.html#a345">http://tig.nareau.com/2003/01/03.html#a345</a> . Let me extract the basic point there. The standard web network is a directed power law network, with the usual island forming properties and winner takes all phenomenon. Blogging is different for two reasons (a) aggregators, and favourite blogrolls, ie people we read regularly (b) pingback and trackback and comments. </p>
+<p>These features of the blogging network allow for ad hoc discovery of voices and the formation of mini-networks with their own &#8216;alpha&#8217; bloggers. If one were to associate a weight with the directionality of this network, these reduce this weight, giving us a network which is far less directed than the embedding web network, leaving us with a softer power law, and less of an island structure.</p>
+<p>Let me repeat that this is an intuitive analysis, and I still have to work with the data to check it out. In any case, my point is that people need to think a bit more about second order effects like linking back through someone you link too before going and spouting &#8216;expert&#8217; analyses.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://tig.nareau.com/' rel='external nofollow' class='url'>Rahul Dave</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-172" title="February 9, 2003 @ 12:18 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-200"><cite><a href='/web/20110806112413/http://www.kennsarah.net/archives/000116.shtml' rel='external nofollow' class='url'>Our Story</a></cite>&#160;(trackback)</li>
+<li id="comment-173"><p>While I find interesting the observation about power laws on a wide range of community as BBSs, mail-list, newsgroup and websites compared to weblogs I notice that a real serach for causes of inequality is missing. Clay observes that for the sole reason that a first blogger is linked by a second blogger, a third blogger is inducted in linking the first one.</p>
+<p>  This of course can lead to a sort of &#8220;automatic fame&#8221; in a pyramidal way but it misses a point: the content of the majoriry of the bloggers&#8217; posts is news.</p>
+<p>  News are not in an infinite number every day (even though there are many) so when the well-known bloggers have posted the same news references the game is over, at least for newbies. Lazyness, shyness and other reasons prevent the less-known blogger to say something new, to search for an not-so-referenced news or to create something original, even only by commenting that news.</p>
+<p>  In other words, being a blogger means having something to say and it is not so easy when the blogger world is so largely populated and you are a newcomer. News aggregators are a great tools but often they could transform you in a mere news-firer, not an original content producer.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://radio.weblogs.com/0117190/' rel='external nofollow' class='url'>Federico Giacanelli</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-173" title="February 9, 2003 @ 1:22 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-174"><p>Lots of good thoughts here, and I can&#8217;t disagree with any of them.</p>
+<p>Re: news-reposters.  The combination news-aggregator-plus-blogging-tool is probably the worst possible invention for the long-term health of the blogging community.  All other things being equal, people will do what their tools make easy &#8212; witness all the newbie blogs with default Radio templates that do nothing but repost auto-generated excerpts from the top ~25 bloggers.  Like, who cares?  Go into stamp collecting.  I&#8217;ve written scripts that generate more interesting content.</p>
+<p>Re: 1,000,000,000 Chinese.  Indeed.  You can&#8217;t hurt my ego by pointing out the size of my non-audience.  I originally started my weblog when I moved and started working from home, and missed my daily bitch-fest lunches with my co-workers.  I treasure the personal connections that weblogging has made possible; they will long outlast this weblog fad.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-174" title="February 9, 2003 @ 1:44 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-175"><p>I think the &#8220;filtered aggregator&#8221; form of blog could be very useful if the sources were varied and if there were a good niche focus. (I don&#8217;t think I have yet seen such a blog though.) </p>
+<p>The result resembles a news clippings service. But I probably won&#8217;t become friends with anyone who writes this kind of blog anytime soon&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://radio.weblogs.com/0110772/' rel='external nofollow' class='url'>Seb</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-175" title="February 9, 2003 @ 2:35 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-176"><p>Its not just that such an anlysis fails to point out the directed nature of linkages (and back-linking), as a poster above has noted, but that links are seen as being binary. In real life, a link is not a link is not a link. Some links matter more than others. I can be a superstar on 3 links alone, or quite the opposite with 50 links. </p>
+<p>A power law distribution explains very little. It would be a mistake to extrapolate much from the observation that yet another networked system tends toward a power law distribution.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://alex.halavais.net/news/' rel='external nofollow' class='url'>Alex</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-176" title="February 9, 2003 @ 2:56 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-177"><p>I&#8217;m curious&#8211;not being part of the blogging community I don&#8217;t read much of what&#8217;s written *about* blogs (although I read a handful regularly, including this one&#8211;which I discovered back when the accessibility series was running and have stuck with since, fyi, even though most of it&#8217;s really over my head ^_^). But your thoughts and the stuff you&#8217;re referencing sound like what&#8217;s going on in blogging is a total parallel to what happened in zines in the 90s.</p>
+<p>In the 80s and even early 90s, no-one did a zine unless they were totally dedicated and possibly a little nuts (I&#8217;ll wince and raise my hand there); then as people started getting dektop computers the zine community started to really grow and strengthen; and then, when Newsweek and Sassy et al begin covering zines as the new cool thing to do, every kid on the planet banged out a zine at kinko&#8217;s, and the resulting boom (and overall decline in popularity) nearly killed the form. (And, like you&#8217;ve mentioned re: blogging, a good bit of that was due to people who didn&#8217;t have a need to express themselves, just a need for attention.)</p>
+<p>So the pattern has already happened at least once. My question is, has anyone talked about this parallel at all? Because it seems so obvious, and I&#8217;m wondering if there will be a similar boom and bust that wipes out a majority of blogs as those types of people move on to the next &#8220;cool thing to do&#8221;.</p>
+<p>The good news is, if blogging does follow the same pattern, that self-publishing zines (including things like mini-comics) has really bounced back, and seems to have been pared down to the dedicated crowd, resulting in much higher quality material.</p>
+<p>::stepping down off box::</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.houseoffun.com/' rel='external nofollow' class='url'>Sarah</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-177" title="February 9, 2003 @ 3:33 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-201"><cite><a href='/web/20110806112413/http://www.braxtonian.com/links/#001065' rel='external nofollow' class='url'>The Braxtonian's Sidebar of Elsewhere</a></cite>&#160;(trackback)</li>
+<li id="comment-178"><p>I blog because it is a way of putting myself out there, a way of exposing the hidden self, the vulnerabilities, the idiosynchronicies.. As i start writing, there is always a silent audience i am speaking to, but pretty soon, i won&#8217;t even notice that they are there. I become encompassed in that i write. I am the audience, and something in me listens with utmost attention to all i have to say.. It is that attention that i crave, and as such, I get it as I write, i become happy. At that point, it is irrelevant whether anybody reads what i write or not. For me, the act of courage comes from displaying myself out there, in front of a possible audience, in emotional nakedness, while it is terrifying at times, also happens at least for me the best tool i have found to bring me down to a world of humility and the reality of imperfectness of being a human, and that feels so good to me.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://roller.anthonyeden.com/chiara' rel='external nofollow' class='url'>Chiara</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-178" title="February 9, 2003 @ 4:18 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-179"><p>I started writing a blog for several reasons. Chief among these was my desire to simply write. I have always loved writing and it seemed a bit more elegant than writing a diary that nobody would ever see. And if just one person gets some kind of pleasure from reading anything I have written then I am happy.</p>
+<p>Don&#8217;t get me wrong. I would love to think that countless millions hung on my every word (although God knows how I would be able to pay for the increased bandwidth) because it would make me feel good about myself.</p>
+<p>For the record, I read diveintomark.org because it is an interesting blend of information, controversy and humor. I particularly enjoy reading when Mark becomes a bit of a drama queen and goes off on a bender because XHTML 2.0 is going to kill the web LOL.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://jessey.net/blog/' rel='external nofollow' class='url'>Simon Jessey</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-179" title="February 9, 2003 @ 4:54 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-180"><p>Sarah, not only do I think blogging will follow the same pattern as you describe for zines, I think it is already well underway.  The whole Trentt Lott flap a few months ago was the tipping point.  Now every local paper in the country is doing a &#8220;what-the-heck-is-this&#8221; intro piece on blogs.  (My local paper did one last week.  My picture was above the fold.)  I think it&#8217;s the beginning of the end, and by that I mean exactly what Clay describes in his article: so many people will be blogging that the disparity between the top and the bottom (in terms of raw linkage) will be so great that it won&#8217;t seem like those groups are doing the same thing (and in fact they&#8217;re not), so the word itself will be spread too thin and lose all meaning.</p>
+<p>Blogging as a separate, special activity that somehow defines a group is coming to an end.  Our own (already facetiously-named) &#8220;RTP Bloggers Club&#8221; will disintegrate soon, or at least rename itself, or perhaps simply add a layer of irony and self-deprecation to the name and continue on as what it has always been: a bunch of people who happened to come together and become friends.</p>
+<p>(Imagine a group of people who come together every month and call themselves the &#8220;Cell Phone Users Club&#8221;.  That&#8217;s ridiculous now, but cell phones used to be THE It Item by which people defined themselves.  Now they&#8217;re pretty much ubiquitous.)</p>
+<p>Certain pioneers of the weblogging community see Clay&#8217;s article as rubbish.  &#8220;Get a weblog, you&#8217;ll understand!&#8221;  &#8220;Weblogs are special, they won&#8217;t follow the same pattern as everything that&#8217;s come before them!&#8221;  Nonsense.  They are exactly like what has come before them.  They&#8217;re following the same cycle and will end up in the same place: mundane ubiquity.  Isn&#8217;t that what you always wanted?  Oh, wait, I remember: you thought they&#8217;d change the world.  Well, they will change the world, kind of.  They&#8217;ve changed my world (got me fired, and then rehired, and then a new circle of friends).  They&#8217;ve changed Dean Allen&#8217;s world (found his girlfriend, sold all his possessions, moved to the south of France).  And so on and so forth, repeated on a small scale in infinite human variations.</p>
+<p>They just won&#8217;t *overthrow* the world, make everyone a journalist, and get rid of the mainstream media.  But so what?  Which is more important: overthrowing the world, or finding enduring love?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-180" title="February 9, 2003 @ 5:09 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-202"><cite><a href='/web/20110806112413/http://weblog.burningbird.net/fires/000899.htm' rel='external nofollow' class='url'>Burningbird</a></cite>&#160;(trackback)</li>
+<li id="comment-181"><p>It&#8217;s funny that this is on so many people&#8217;s minds recently.  I just blogged on a similar concept a few days ago (The Blogerati, <a href="/web/20110806112413/http://thefriedmans.net/blog/?id=232)."><a href="/web/20110806112413/http://thefriedmans.net/blog/?id=232" rel="nofollow">http://thefriedmans.net/blog/?id=232</a>).</a></p>
+<p>If you&#8217;re writing for your audience, you&#8217;re missing the joy writing brings.  </p>
+<p>I write for myself.  Readers are, inevitably, an afterthought.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://thefriedmans.net/blog' rel='external nofollow' class='url'>Lex</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-181" title="February 9, 2003 @ 7:48 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-203"><cite><a href='/web/20110806112413/http://weblog.burningbird.net/fires/000899.htm' rel='external nofollow' class='url'>Burningbird</a></cite>&#160;(trackback)</li>
+<li id="comment-182"><p>Mark, thanks for your thoughts. I was thinking that blogging was getting ready to follow the same path zines did, but as you say, the people who aren&#8217;t trying to cultivate a following and become &#8220;BlogStars&#8221; will stick around.</p>
+<p>I guess blogging will become what it probably should, simply another tool in the arsenal available to anyone who wants to express themselves and connect with other people. I know I don&#8217;t consider myself a &#8220;blogger&#8221;, but I use Movable Type to maintain the same content and essays and journal entries I&#8217;ve done in print, and then in html, for ages. And I&#8217;m sure lots of people are doing the same. I think it&#8217;s a really good tool, I find that the blogging format elicits a different kind of response from readers than either previous method did (whether that&#8217;s better or worse, I&#8217;m not sure yet, but I don&#8217;t miss the days of the jammed post office box, quite frankly).</p>
+<p>Anyway, thanks again for your opinion, and for all your work!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.houseofun.com/' rel='external nofollow' class='url'>Sarah</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-182" title="February 9, 2003 @ 8:49 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-183"><p>Something I wrote on this back in September.</p>
+<p><a href="/web/20110806112413/http://enthusiasm.cozy.org/archives/2002_09.html#000044">http://enthusiasm.cozy.org/archives/2002_09.html#000044</a></p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-183" title="February 9, 2003 @ 9:24 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-204"><cite><a href='/web/20110806112413/http://weblog.burningbird.net/fires/000899.htm' rel='external nofollow' class='url'>Burningbird</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-205"><cite><a href='/web/20110806112413/http://www.emptybottle.org/glass/003145.php' rel='external nofollow' class='url'>EmptyBottle.org</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-206"><cite><a href='/web/20110806112413/http://www.blogosphere.us/archives/000021.php' rel='external nofollow' class='url'>blogosphere.us</a></cite>&#160;(trackback)</li>
+<li id="comment-184"><p>The weblog world is turning into a really big high school cafeteria.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.poochkiss.com/' rel='external nofollow' class='url'>Chi Lambda</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-184" title="February 10, 2003 @ 1:22 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-185"><p>This is accurate, as far as it goes, but I think the point is not that I can start a blog and become Jason Kottke, but that blogs have a tendency to coalesce into communities around a specific audience.  There are, for example, probably Livejournals that have a higher readership than Catalogablog (catalogablog.blogspot.com), but everybody involved in library technical services/metadata who reads blogs reads Catalogablog; its market saturation is extremely high because its market is narrow.  This sort of popularity is not nearly as hard to achieve, is much more meritocratic, and represents much more accurately the potential of blogs, IMHO, than the A-list per se.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://ecphrasis.port5.com/' rel='external nofollow' class='url'>Eli</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-185" title="February 10, 2003 @ 2:24 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-186"><p>It&#8217;s all true; the early adopters have the advantage of getting the rubberneckers.  Later adopters are competing against greater numbers for fewer eyes.</p>
+<p>There&#8217;s also a huge redundancy in opinions and words, so some of the early adopters&#8217; traffic advantage is a false advantage.  The readers could often times just as easily go somewhere else and get largely the same thing, it&#8217;s just they don&#8217;t because they&#8217;re already getting it where they are.</p>
+<p>Blah blah blah.</p>
+<p>It&#8217;s all true when there aren&#8217;t services to counterbalance it.  That&#8217;s the strength of the blogging community, that they are developing these services all the time.  Some services tighten the circles (daypop, for instance, reports already popular news and makes them more popular).  But others could bring new blood in.</p>
+<p>I could create a niche category page and write a utility that allows other bloggers to post-subscribe to it &#8211; whenever they blog an entry, it automatically gets linked to on my blog.  People read my category and hear new voices.  I could make it a private page, and write a filtering app to filter the good submissions from the redundant ones to republish to a feed that others could subscribe to.</p>
+<p>I could create a categorization service.  Whenever someone writes a blog entry that they think is good enough that they&#8217;d like to syndicate/distribute it, they fire up a desktop utility or a web page, go through some categorization hoops, and submit.  Others rate.  Maybe they&#8217;d have a monthly &#8220;rate&#8221; quota to fulfill in exchange for getting feeds of articles matching their categorization preferences.  Again, hearing new voices.</p>
+<p>I could write an auto-collector that publishes popular articles that specifically AREN&#8217;T on daypop 40.  grep -v.  Someone else could write one that aren&#8217;t on either mine or daypop.</p>
+<p>Aggregators could be written that would allow people to select singular items from other rss feeds and repackage them into their own to republish.  People wouldn&#8217;t subscribe to the ones that redundant with all the others.  They&#8217;ll subscribe to the ones that are new.</p>
+<p>There&#8217;s a ton of possibility to counteract blog inbreeding.  The possibilities are exciting.  People will innovate and create them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.museworld.com/' rel='external nofollow' class='url'>Curt</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-186" title="February 10, 2003 @ 3:02 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-207"><cite><a href='/web/20110806112413/http://www.museworld.com/archives/000699.html' rel='external nofollow' class='url'>Hunting The Muse</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-208"><cite><a href='/web/20110806112413/http://www.thebishop.net/geodog/archives/2003/02/10/clay_shirky_has_a_lot_of_people_talking.html' rel='external nofollow' class='url'>Geodog's MT Weblog</a></cite>&#160;(trackback)</li>
+<li id="comment-187"><p>Mark, I think you&#8217;re missing at least one important point: the Gatekeeper issue. I got into blogging for basically two reasons. The first was that I thought it would give me an opportunity to practice stuff like html, etc with the computer. And I have become more comfortable with all that and I have gained more familiarity and increased understanding about that kind of stuff. But the second reason I got into it was the Gatekeeper issue.</p>
+<p>An incident impelled me to write a Letter to the Editor which I have rarely done. When it was not published, I had a reaction. Many years ago I read a Nat Hentoff column in which he talked about the public expressing themselves in letters to the editor, many of which never get published. When the newspapers first established op-ed, it seemed like John Q. Public would get a chance to contribute to the public discourse. But when reality set, their practice was to simply pick celebrity names like Kissinger for the most part. So, the issue for some people is that there is an established Gatekeeper who gets to decide whether or (more freqently) not John Q is permitted to participate in the public discourse or debate. That is probably why there was a big upsurge in blogging after 9/11.</p>
+<p>It seems that some people just don&#8217;t &#8216;get&#8217; the Gatekeeper issue. Yet, we frequently hear people saying that they felt like &#8216;throwing a shoe at the TV.&#8217; And we are now reading blogging detractors who are denigrating the value of the activity without considering the Gatekeeper issue.</p>
+<p class=sig>&#8212;&#8201;<cite>button</cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-187" title="February 10, 2003 @ 3:41 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-188"><p>&#8220;Blogging as a separate, special activity that somehow defines a group is coming to an end.&#8221;</p>
+<p>It already has, if it ever existed in the first place.</p>
+<p>If you look at the liberal/leftwing political corner of the blogosphere, (with which I&#8217;m the most familiar) you find few people defining themselves as bloggers or blogging as something special instead of as a neat tool. In general, I have the feeling that outside of the group of blogging pioneers and the more technogeeky corner of blogtopia, few people particularly care about blogging as anything else but a tool.</p>
+<p>Sure, people go to blogging meets, but is that enough to make a community, in the same sense that e.g. an Usenet newsgroup like alt.fan.pratchett (partially) evolved into a community?</p>
+<p>As such I don&#8217;t really believe in Shirkey&#8217;s article, because I don&#8217;t believe in a real blogging community, certainly not the &#8220;flat&#8221;<br />
+community he portrays, where it&#8217;s possible to rate every blog according to popularity and make it meaningful.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.cloggie.org/wissewords/blosxom.cgi' rel='external nofollow' class='url'>Martin Wisse</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-188" title="February 10, 2003 @ 5:37 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-209"><cite><a href='/web/20110806112413/http://www.livingtorah.org/journal/archives/2003_02.php#001691' rel='external nofollow' class='url'>Living Torah Journal</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-210"><cite><a href='/web/20110806112413/http://66.46.177.46/bm/vieillemarde/004898.php' rel='external nofollow' class='url'>Brunmarde.com</a></cite>&#160;(trackback)</li>
+<li id="comment-189"><p>Most of you lot are so long-winded.  You&#8217;re set in the print medium.  Yes, there&#8217;s a place for the considered essay; but a weblog is not it.<br />
+Diveintomark is a source.  Weblogs bring it to the attention of others.<br />
+Keep the posts sharp and short.  Anything more than 100 words is redundant.<br />
+Sarah claims that the rise in blogging is due to &#8220;people who didn&#8217;t have a need to express themselves,just a need for attention&#8221;.  The two drives can&#8217;t be separated.  Mummy, look at me!  I&#8217;ve drawn a picture.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://edstrong.blog-city.com/' rel='external nofollow' class='url'>Ed</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-189" title="February 10, 2003 @ 2:02 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-211"><cite><a href='/web/20110806112413/http://66.46.177.46/bm/vieillemarde/004898.php' rel='external nofollow' class='url'>Brunmarde.com</a></cite>&#160;(trackback)</li>
+<li id="comment-190"><p>I&#8217;m still mulling over this particular debate &#8211; certain parts of it don&#8217;t really seem to work particularly well for me. First things first, I maintain that tools like trackback have the potential to level the playing field quite a lot &#8211; as you no longer even have to be picked up by them in their referrer logs for them to direct people in your direction. Secondly, my grasp of the maths is limited, but it seems to me that when you actually add in the other 499,000 active weblogs that we think might be out there into any graph you do, you get something that&#8217;s radically more right-angular than the curve I keep seeing everywhere described as a &#8216;power-law&#8217;. Thirdly I wonder about the analogies we&#8217;re using here &#8211; is there a power-law relationship with telephones and telephone numbers, and if so does this make the telephone network non-egalitarian, elitist? Is there an aspect to weblogging which is like this and if so how could we find that out from the limited data and fixation on the shape of the curve we&#8217;re being presented with? Fourthly &#8211; and I don&#8217;t want to push this point particularly &#8211; there does seem to me to be a certain relationship between popularity of weblog and specific expertise / ability to write / regularity of publishing &#8211; it&#8217;s not purely a factor of networking &#8211; and in a social group with a limited attention span, one would expect them to concentrate their attentions around &#8220;good&#8221; online material of some kind. Fifthly, Clay&#8217;s comment: &#8220;The relatively egalitarian distribution of readers in the early years had nothing to do with the nature of weblogs or webloggers. There just weren�t enough blogs to have really unequal distributions. Now there are.&#8221; I&#8217;d be interested in his evidence for the first assertion, as I remember clearly a couple of years ago that Mark from Riothero was pulling in thousands of readers a day while other people were getting a more common ten or fifteen.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.plasticbag.org/' rel='external nofollow' class='url'>Tom Coates</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-190" title="February 10, 2003 @ 3:00 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-191"><p>Without intending any disrespect this attitude pisses me off.</p>
+<p>The days when anyone can easily get an audience are coming to an end, so what.  The barriers are rising, the &#8220;blog rush&#8221; is coming to an end, everyone knew that would happen eventually.  The lure of America wasn&#8217;t that if you came here you &#8220;would make your fortune&#8221; it was that if you came here and busted your ass &#8220;you could make your fortune&#8221;.  So it is with bloggers, my chances of starting a blog and becoming Mark Pilgrim (even years from now) are a damn site better then becoming Dan Rather.</p>
+<p>Yeah, it sucks that your little blog world is changing and it&#8217;s not going to be as cool and fun as it was.  Big popular things are rarely as cool/fun/hip as small interesting things.  However if people really want Journalism 3.0 to have a chance of being reality, it&#8217;s going to have to get big, and it&#8217;s going to take more work on the part of the blog stars.  Not just in creating tools, but in encouraging participation and creating new stars.  Dedicate a little bit of each day/week/month to go out and look for undiscovered bloggers doing good stuff and put them in your blogroll (David Sifry&#8217;s Technorati Interesting Newcomers List is a perfect example).</p>
+<p>Fuck inevitability, our world is what we make it.  Nothing more, nothing less.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.spack.org/' rel='external nofollow' class='url'>Adam</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-191" title="February 10, 2003 @ 3:06 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-192"><p>Lots of interesting comments here.  However I&#8217;m with Mark on this and I have yet to read any comments from his critics that I would give any weight to (sorry guys).<br />
+BTW: Has anyone read the Anne Galloway item she did the same week the last time this issue emerged?  I really rate her.<br />
+Here&#8217;s the link:<br />
+<a href="/web/20110806112413/http://www.purselipsquarejaw.org/2003_01_01_blogger_archives.php#90223727">http://www.purselipsquarejaw.org/2003_01_01_blogger_archives.php#90223727</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.irritant.dircon.co.uk/enter.html' rel='external nofollow' class='url'>irritant</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-192" title="February 10, 2003 @ 7:06 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-193"><p>One procedural note: I have no problem with the size, tone, or thoughtfulness of any of the &#8220;long-winded&#8221; comments on this thread.  Some opinions require more than 100 words to explicate.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-193" title="February 10, 2003 @ 7:16 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-194"><p>Apologies Mark, I didn&#8217;t mean to be rude.  I deal with &#8220;Woe is me, my world is changing and I&#8217;m helpless in the face of adversity&#8221; all the time as part of the community wireless scene and it drives me nuts. I know that&#8217;s not how you intended it.</p>
+<p>Adam.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.spack.org/' rel='external nofollow' class='url'>Adam</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-194" title="February 10, 2003 @ 7:58 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-212"><cite><a href='/web/20110806112413/http://www.tribolum.com/archives/2003/02/10/1028.html' rel='external nofollow' class='url'>Triboluminescence</a></cite>&#160;(trackback)</li>
+<li id="comment-195"><p>>> This month I�ll get 1 million hits on my weblog, and have lunch with 10 friends I met through my weblog. Guess which I care about more.</p>
+<p>My guess is your real friends! </p>
+<p>Am I right??</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-195" title="February 10, 2003 @ 8:59 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-213"><cite><a href='/web/20110806112413/http://netry.no-ip.com/seki/archives/000570..php' rel='external nofollow' class='url'>NetryBlog/Seki</a></cite>&#160;(trackback)</li>
+<li id="comment-196"><p>Button&#8217;s comment above [<a href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities.html#c000146]“>http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities.html#c000146</a> about the “gatekeeper function” in traditional media (via selection on the letters pages) also has relevance for websites that span the boundary between “traditional media” and the generally accepted definition of “weblogs”. </p>
+<p>Just over three years ago some students at Imperial College London (myself not included!) created a website called Live! as an online source of news for the college community. At the time the only other news source was Felix, the student newspaper. Although Felix tended to publish most letters that came along, the weekly schedule meant that it was difficult to maintain a lively debate without dragging it out over several weeks in the letters pages and boring the Editor (and most of the other readers) to death.</p>
+<p>With Live!, readers were given the opportunity to comment online (anonymously) and hence a dialogue built up around each story, which has become the most popular (and arguably the most important) feature of Live! The “gatekeeper” function performed (inadvertently) by Felix has lead to it being superseded as a means of debate. This is probably bad for the wide college community, since a large proportion of informed debate amongst students now takes place on Live!, whose readership is an order of magnitude smaller than Felix.</p>
+<p>Does this mean that the universal read/write web is a real possibility? Probably not in the general sense – one of the hallmarks of Live! is that a large number of its dialogue is between s small number of its readers (who are often also its correspondents!) [<a href="http://live.cgcu.net/news/?id=620]&#8220;>http://live.cgcu.net/news/?id=620</a> .</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112413/http://www.doc.ic.ac.uk/~ejhp98/' rel='external nofollow' class='url'>Etienne</a></cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-196" title="February 11, 2003 @ 12:33 pm"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-214"><cite><a href='/web/20110806112413/http://netry.no-ip.com/seki/archives/000575..php' rel='external nofollow' class='url'>NetryBlog/Seki</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-215"><cite><a href='/web/20110806112413/http://netry.no-ip.com/seki/archives/000576..php' rel='external nofollow' class='url'>NetryBlog/Seki</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-216"><cite><a href='/web/20110806112413/http://paulbeard.no-ip.org/movabletype/archives/000737.html' rel='external nofollow' class='url'>quotidian</a></cite>&#160;(trackback)</li>
+<li id="comment-197"><p>INRE #29, Etienne:</p>
+<p>Thank you for a very thoughtful and interesting response, Etienne.</p>
+<p>I&#8217;m not so sure that a universal read/write web is necessary, nevermind possible or crucial.</p>
+<p>The contrast is between Gatekeeper vs. Self-Selected; and the determining factor would be an elective affinity group. That&#8217;s seems O.K. for most folks, I expect.</p>
+<p>A gathering spot for owners of French Poodles or a group of residents near a proposed strip mall which they do not want to be built in their neighborhood. Some weblogs may be for a limited episode, while others of longer duration.</p>
+<p>Group weblogs are nice because no one person has to do everything. We currently have several popular ones here in the U.S. But sometimes the owner or someone becomes the editor and then the Gatekeeper issue arises again.</p>
+<p class=sig>&#8212;&#8201;<cite>button</cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-197" title="February 12, 2003 @ 1:56 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-217"><cite><a href='/web/20110806112413/http://www.idees.ch/checkbox/archives/000229.html' rel='external nofollow' class='url'>Checkbox.org</a></cite>&#160;(trackback)</li>
+<li id="comment-198"><p>what is a power law distribution/network ?</p>
+<p>T.</p>
+<p class=sig>&#8212;&#8201;<cite>tim</cite>&#160;<a class=p href="/web/20110806112413/http://diveintomark.org/archives/2003/02/09/power_laws_and_priorities#comment-198" title="February 12, 2003 @ 11:05 am"><img alt="#" src=/web/20110806112413im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806112413/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806112413/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806112413/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806112413/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806112413/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.473 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:57:52 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 11:24:13 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:16:00 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

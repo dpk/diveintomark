@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>A series of random unrelated notes [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110222075151/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110222075151/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110222075151/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110222075151im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110222075151/http://diveintomark.org/archives/2002/04/05/apache_20_is_out" title="Apache 2.0 is out">
+<link rel=next href="/web/20110222075151/http://diveintomark.org/archives/2002/04/08/brace_yourself_bridget" title="Brace yourself, Bridget">
+<link rel=up href="/web/20110222075151/http://diveintomark.org/archives#p587" title="April 2002">
+<link rel='index' title='dive into mark' href='/web/20110222075151/http://diveintomark.org/' />
+<link rel='prev' title='Apache 2.0 is out' href='/web/20110222075151/http://diveintomark.org/archives/2002/04/05/apache_20_is_out' />
+<link rel='next' title='Brace yourself, Bridget' href='/web/20110222075151/http://diveintomark.org/archives/2002/04/08/brace_yourself_bridget' />
+<link rel='canonical' href='/web/20110222075151/http://diveintomark.org/archives/2002/04/08/a_series_of_random_unrelated_notes' />
+<link rel='shortlink' href='/web/20110222075151/http://diveintomark.org/?p=587' />
+<meta name="keywords" content="apache,blogging,exercise,moinmoin,osx,personal,politics,python,webdesign">
+<link href='/web/20110222075151cs_/http://fonts.googleapis.com/css?family=Lato:regular,regularitalic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110222075151/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lato,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lato,serif;font-style:oblique}
+strong,b{font-family:Lato,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110222075151/http://diveintomark.org/archives/2002/04/08/a_series_of_random_unrelated_notes">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/04\/08\/a_series_of_random_unrelated_notes";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "22";
+var displayMonth = "Feb";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/04/08/a_series_of_random_unrelated_notes" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110222075151" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215003419/http://diveintomark.org/archives/2002/04/08/a_series_of_random_unrelated_notes" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 7:51:51 Feb 22, 2011">FEB</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Mar
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215003419/http://diveintomark.org/archives/2002/04/08/a_series_of_random_unrelated_notes" title="0:34:19 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 7:51:51 Feb 22, 2011">22</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20091102035701/http://diveintomark.org/archives/2002/04/08/a_series_of_random_unrelated_notes" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 Nov 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 7:51:51 Feb 22, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110222075151*/http://diveintomark.org/archives/2002/04/08/a_series_of_random_unrelated_notes" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>12 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Jun 06 - 22 Feb 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001000000_2007:-1:000000000010_2008:-1:101020000000_2009:-1:000000000010_2010:-1:000001000021_2011:1:010000000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110222075151/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110222075151/http://diveintomark.org/archives#p587">April 8, 2002</a> &#8227;
+<h2>A series of random unrelated notes</h2> (<a href="/web/20110222075151/http://diveintomark.org/tag/apache" rel="tag">apache</a>, <a href="/web/20110222075151/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20110222075151/http://diveintomark.org/tag/exercise" rel="tag">exercise</a>, <a href="/web/20110222075151/http://diveintomark.org/tag/moinmoin" rel="tag">moinmoin</a>, <a href="/web/20110222075151/http://diveintomark.org/tag/osx" rel="tag">osx</a>, <a href="/web/20110222075151/http://diveintomark.org/tag/personal" rel="tag">personal</a>, <a href="/web/20110222075151/http://diveintomark.org/tag/politics" rel="tag">politics</a>, <a href="/web/20110222075151/http://diveintomark.org/tag/python" rel="tag">python</a>, <a href="/web/20110222075151/http://diveintomark.org/tag/webdesign" rel="tag">webdesign</a>)</div>
+<p>Feeling nostalgic, I&#8217;ve changed the default template for my weblog to look more like the original weblog I created with a homegrown <abbr title="content management system">CMS</abbr> last summer.  If you don&#8217;t like it, you can switch to another layout from the drop-down box in the upper left corner, or <a href="/web/20110222075151/http://diveintomark.org/switch.html?style=1">click here to switch to &#8220;traditional&#8221; layout</a>.</p>
+
+<p>I spent most of the weekend playing with <a href="/web/20110222075151/http://moin.sourceforge.net/">MoinMoin</a>, a Wiki clone.  I&#8217;m considering using it to open up a collaborative sandbox for collecting tips on OS X, similar to my <a href="/web/20110222075151/http://diveintomark.org/osx/">Dive Into OS X <abbr title="frequently-asked questions list">FAQ</abbr></a>, only editable by all.  The sort of people who post at <a href="/web/20110222075151/http://saladwithsteve.com/osx/">Forwarding Address: OSX</a> would be part of the potential audience, as well as the students I teach, and my fellow Apple Certified Trainers who currently swap tips and answer each other&#8217;s questions via an email discussion list with no archives.  And probably lots of other people who would come along and not understand what it was and shit all over it and ruin it for everyone else.  So it&#8217;s still up in the air.</p>
+
+<p>Also, I learned how to use <samp class="filename">.htaccess</samp> files in Apache.  I already knew how to set up all the options in <samp class="filename">httpd.conf</samp>, but I&#8217;d never worked in an environment where I wasn&#8217;t <samp class="username">root</samp>.  ;-)</p>
+
+<p>I jogged five miles <del>today</del>, er, I mean yesterday (typing this at 1 AM, and still a bit discombobulated from the time change).  I&#8217;m back on a health kick after getting a bit too thick around the middle over the winter, mainly because I was <a href="/web/20110222075151/http://diveintomark.org/archives/2001/08/28.html#generation_xl" title="diveintomark, August 28 2001: &quot;Generation XL&quot;">eating too much food</a>.  And by &#8220;thick&#8221;, I mean a <a href="/web/20110222075151/http://www.nhlbisupport.com/bmi/bmicalc.htm">body mass index</a> of 24.5, which is not overweight even by the federal government&#8217;s ridiculous standards, but still considerably thicker than the 23.0 I was two summers ago at my peak.  So anyway, I&#8217;m back into jogging full time now, which means at least 10 miles a week.  And I&#8217;ve gotten to the point where if I run at a slightly slower pace than usual, I can essentially run indefinitely, which is what I did today, around past the local school, down the jogging path behind Pearson Farms (<a href="/web/20110222075151/http://radio.weblogs.com/0103451/">hi Joe</a>!), over to Olive Chapel, and back up Kelly Road past the elementary school.  The 2 or 3 locals amongst my readers will be impressed with my route; the rest of you, probably less so.</p>
+
+<p>In the past year, I&#8217;ve moved to a new state, continued working for my employer remotely after changing states, changed jobs, rolled over my 401K, bought a house, sold virtually all of my stocks and mutual funds, set up a home office, and used my car for unreimbursed non-commuting business travel.  My taxes suck.</p>
+
+<p>Oh, and in case you haven&#8217;t figured it out yet, the $300 tax rebate you got last summer wasn&#8217;t really a rebate; <a href="/web/20110222075151/http://detnews.com/2001/politics/0107/26/-254330.htm">it was an advance</a>.  It comes out of your refund now.  I actually knew that last summer, and I tried to educate anyone who would listen.  But it was like telling people the <del>millenium</del>, er, millennium (thanks Steve) didn&#8217;t really start in 2000; everyone was too busy partying to pay any attention.  I must say I now feel somewhat vindicated, in a we&#8217;re-all-equally-screwed kind of way.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110222075151/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110222075151/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110222075151/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110222075151/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110222075151/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.297 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-02-18 00:44:13 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 7:51:51 Feb 22, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:29:02 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

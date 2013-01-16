@@ -1,0 +1,432 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Day 19: Using real table headers [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110608044818/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110608044818/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110608044818/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110608044818im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110608044818/http://diveintomark.org/archives/2002/07/03/day_18_giving_your_calendar_a_real_caption" title="Day 18: Giving your calendar a real caption">
+<link rel=next href="/web/20110608044818/http://diveintomark.org/archives/2002/07/05/day_20_providing_a_summary_for_tables" title="Day 20: Providing a summary for tables">
+<link rel=up href="/web/20110608044818/http://diveintomark.org/archives#p893" title="July 2002">
+<link rel='index' title='dive into mark' href='/web/20110608044818/http://diveintomark.org/' />
+<link rel='prev' title='Day 18: Giving your calendar a real caption' href='/web/20110608044818/http://diveintomark.org/archives/2002/07/03/day_18_giving_your_calendar_a_real_caption' />
+<link rel='next' title='Day 20: Providing a summary for tables' href='/web/20110608044818/http://diveintomark.org/archives/2002/07/05/day_20_providing_a_summary_for_tables' />
+<link rel='canonical' href='/web/20110608044818/http://diveintomark.org/archives/2002/07/04/day_19_using_real_table_headers' />
+<link rel='shortlink' href='/web/20110608044818/http://diveintomark.org/?p=893' />
+<meta name="keywords" content="accessibility,diveintoaccessibility,jackie,markup,movabletype,radio,tables">
+<link href="/web/20110608044818cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110608044818/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110608044818/http://diveintomark.org/archives/2002/07/04/day_19_using_real_table_headers">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/07\/04\/day_19_using_real_table_headers";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "8";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/07/04/day_19_using_real_table_headers" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110608044818" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215091620/http://diveintomark.org/archives/2002/07/04/day_19_using_real_table_headers" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 4:48:18 Jun 8, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215091620/http://diveintomark.org/archives/2002/07/04/day_19_using_real_table_headers" title="9:16:20 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 4:48:18 Jun 8, 2011">8</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090202001831/http://diveintomark.org/archives/2002/07/04/day_19_using_real_table_headers" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 Feb 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 4:48:18 Jun 8, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110608044818*/http://diveintomark.org/archives/2002/07/04/day_19_using_real_table_headers" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>13 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 May 06 - 8 Jun 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000010001000_2007:-1:000010000010_2008:-1:101020000000_2009:-1:010000000000_2010:-1:000000000111_2011:5:000001000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110608044818/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110608044818/http://diveintomark.org/archives#p893">July 4, 2002</a> &#8227;
+<h2>Day 19: Using real table headers</h2> (<a href="/web/20110608044818/http://diveintomark.org/tag/accessibility" rel="tag">accessibility</a>, <a href="/web/20110608044818/http://diveintomark.org/tag/diveintoaccessibility" rel="tag">diveintoaccessibility</a>, <a href="/web/20110608044818/http://diveintomark.org/tag/jackie" rel="tag">jackie</a>, <a href="/web/20110608044818/http://diveintomark.org/tag/markup" rel="tag">markup</a>, <a href="/web/20110608044818/http://diveintomark.org/tag/movabletype" rel="tag">movabletype</a>, <a href="/web/20110608044818/http://diveintomark.org/tag/radio" rel="tag">radio</a>, <a href="/web/20110608044818/http://diveintomark.org/tag/tables" rel="tag">tables</a>)</div>
+<p>If you have a calendar on your weblog, it should be rendered as an <abbr title="hypertext markup language">HTML</abbr> table.  There have been a few attempts to create pure-<abbr title="cascading style sheets">CSS</abbr> calendars.  This is misguided; calendars are data tables, and should be marked up as such.</p>
+
+<p>The most important thing about a data table is marking up the headers properly.  In the case of a weblog calendar, this means the days of the week along the top.  You should definitely include headers for the days of the week; if you don&#8217;t want them actually visible, you can make them invisible with <abbr title="cascading style sheets">CSS</abbr>.  (I do this on my own weblog.)  But the headers need to be there nonetheless, because screen readers rely on them to help blind users navigate through the table without getting lost.</p>
+
+<p>The thing about a calendar (and any data table, really, but we&#8217;re mostly talking about calendars today) is that it&#8217;s very easy to use if you can see it all at once, but very difficult to use if you can only see one day at a time.  Imagine that you have a day-by-day calendar on your desk, but each page lists only the day of the month, not the day of the week.  Page after page: 1, 2, 3, 4, 5, 6, 7&#8230;  Today is 4, which I happen to know is a Thursday.  Now skip ahead to 11, 12, 13.  Quick: which day of the week is 13?  The page doesn&#8217;t tell you; you have to keep track of it yourself.</p>
+
+<p>This is what it&#8217;s like for a blind user to navigate a weblog calendar without proper headers.  You get a bunch of numbers, but no context to keep track of them.  Adding proper headers to the calendar allows screen reader software to associate the table header (day of the week) with the table data (day of the month), and it reads them together.  &#8220;Thursday 4, Thursday 11, Friday 12, Saturday 13.&#8221;  Oh, it&#8217;s a Saturday.</p>
+
+<p>Note I said <em>proper</em> headers.  Putting the days of the week in <code class="sgmltag">&lt;td&gt;</code> tags in the first row is not enough.  They need to be <code class="sgmltag">&lt;th&gt;</code> tags instead.  Most weblog templates get this wrong, but it&#8217;s simple enough to fix, and your calendar will look exactly the same in visual browsers once you&#8217;re done.</p>
+
+<h4>Who benefits?</h4>
+
+<ol>
+<li><p><a href="/web/20110608044818/http://diveintomark.org/archives/2002/06/10.html#day_1_jackie">Jackie</a> benefits.  When she encounters your calendar, <a href="/web/20110608044818/http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> first <a href="/web/20110608044818/http://diveintomark.org/archives/2002/07/03.html#day_18_giving_your_calendar_a_real_caption">reads the caption</a>, then announces the headers, then Jackie can hold down <kbd>Control</kbd> + <kbd>ALT</kbd> and move through the table with the arrow keys.  As she moves, JAWS announces the header (day of the week) and the cell data (day of the month).</p>
+<p>All major screen readers allow this kind of table navigation.  <a href="/web/20110608044818/http://www-3.ibm.com/able/hpr.html">Home Page Reader</a> allows users to switch to &#8220;Table Navigation&#8221; mode (<kbd>ALT+T</kbd>), then move through the calendar without holding down additional modifier keys.  Home Page Reader actually goes one step beyond JAWS.  As we&#8217;ll see in a minute, you can define a shorter (or longer) title for each table header (sort of like <a href="/web/20110608044818/http://diveintomark.org/archives/2002/06/27.html#day_14_adding_titles_to_links" title="Day 14: Adding titles to links">adding a title to a link</a>), and Home Page Reader will read that instead of the original table header text.  This means you can visually display your days of the week as &#8220;Sun&#8221;, &#8220;Mon&#8221;, &#8220;Tue&#8221;, but you can tell Home Page Reader to read them as &#8220;Sunday&#8221;, &#8220;Monday&#8221;, &#8220;Tuesday&#8221;.  Cool.</p>
+</li>
+</ol>
+
+<h4>How to do it</h4>
+
+<p>If you didn&#8217;t do it already, make sure your weblog calendar <a href="/web/20110608044818/http://diveintomark.org/archives/2002/07/03.html#day_18_giving_your_calendar_a_real_caption" title="Day 18: Giving your calendar a real caption">has a real caption</a>.  The <code>&lt;caption&gt;</code> tag must be the first thing after the <code>&lt;table&gt;</code> tag, and the row of <code>&lt;th&gt;</code> tags should be the first thing after that.</p>
+
+<p>In Movable Type, find the calendar in your Main Index Template.  (Again, searching for &#8220;calendarhead&#8221; will probably find it.)  Immediately after the <code>&lt;caption&gt;</code>, you&#8217;ll see the days of the week defined like this:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;tr&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Sun&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Mon&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Tue&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Wed&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Thu&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Fri&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Sat&lt;/span&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;</code></p>
+</blockquote>
+
+<p>Change it to this:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;tr&gt;<br />
+&lt;<strong>th abbr="Sunday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Sun&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Monday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Mon&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Tuesday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Tue&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Wednesday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Wed&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Thursday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Thu&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Friday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Fri&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Saturday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Sat&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;/tr&gt;</code></p>
+</blockquote>
+
+<p>Two things going on here: all the <code class="sgmltag">&lt;td&gt;</code> tags change to <code class="sgmltag">&lt;th&gt;</code>, and they each get an &#8220;<code>abbr</code>&#8221; attribute to specify the full name of the day of the week.  (The &#8220;<code>abbr</code>&#8221; attribute can serve a dual purpose.  For very long table headers, it serves as an abbreviation; hence the name.  But for very short table headers, it serves as a longer version, which is what we&#8217;re doing here.)</p>
+
+<p>In Radio, the procedure is similar to what you did yesterday, giving the table a real <code>caption</code>.</p>
+
+<ol>
+<li>In Radio, open the actual Radio application.  On Windows, right-click on the little Radio icon in your system tray and select &#8220;Open Radio&#8221;.</li>
+<li>Under the &#8220;Tools&#8221; menu, select &#8220;Developers&#8221;, then &#8220;Jump&#8230;&#8221; (<kbd>Control+J</kbd>).  Jump to &#8220;system.verbs.builtins.radio.weblog.drawCalendar&#8221; (no quotes).</li>
+<li><p>Now go to &#8220;Edit&#8221; menu, &#8220;Find and Replace&#8221;, &#8220;Find&#8230;&#8221; (<kbd>Control+F</kbd>) and find &#8220;addDayName&#8221;.  This should reveal and highlight the <samp>addDayName</samp> function.  Double-click the triangle to reveal the actual function code, which should look like this:</p>
+
+<blockquote>
+<p><code>on addDayName (name)<br />
+&nbsp;&nbsp;add ("&lt;td width="19" height="10" align="center" style="font-size:9px"&gt;" + name + "&lt;/td&gt;")</code></p>
+</blockquote>
+</li>
+<li><p>Change it to this:</p>
+
+<blockquote>
+<p><code>on addDayName (name<strong>, fullname</strong>)<br />
+&nbsp;&nbsp;add ("<strong>&lt;th abbr="" + fullname + ""</strong> width="19" height="10" align="center" style="font-size:9px"&gt;" + name + "<strong>&lt;/th&gt;</strong>")</code></p>
+</blockquote>
+</li>
+
+<li><p>Now double-click on the &#8220;<code>for i = 1 to 7</code>&#8221; line just below it to see this:</p>
+
+<blockquote>
+<p><code>for i = 1 to 7<br />
+&nbsp;&nbsp;addDayName (radio.string.getLocalizedString ("dayOfWeekShort." + i))</code></p>
+</blockquote>
+</li>
+
+<li><p>And change it to this:</p>
+
+<blockquote>
+<p><code>for i = 1 to 7<br />
+&nbsp;&nbsp;addDayName (radio.string.getLocalizedString ("dayOfWeekShort." + i)<strong>, radio.string.getLocalizedString ("dayOfWeek." + i)</strong>)</code></p>
+</blockquote>
+</li>
+</ol>
+
+<h4>Very important note about layout tables</h4>
+
+<p>Tables used exclusively for visual layout have a completely different set of rules.  Do <em>not</em> use <code class="sgmltag">&lt;th&gt;</code> tags on layout tables.  Aside from tweaking your tables to <a href="/web/20110608044818/http://diveintomark.org/archives/2002/06/21.html#day_10_presenting_your_main_content_first" title="Day 10: Presenting your main content first">present your main content first</a>, there&#8217;s very little you need to do to make layout tables accessible.  We&#8217;ll discuss one small thing tomorrow.</p>
+
+<h4>Further reading</h4>
+
+<p>If you need to mark up data tables more complex than a calendar (like tables with multiple levels of headers and subheaders), you&#8217;re on your own.  Here are some starting points:</p>
+
+<ul>
+<li><cite title="The Making Connections Unit">Jim Byrne</cite>: <a href="/web/20110608044818/http://www.mcu.org.uk/articles/tables.html">Table Manners</a>.</li>
+<li><cite><abbr title="Web Accessibility in Mind">WebAIM</abbr></cite>: <a href="/web/20110608044818/http://www.webaim.org/tutorials/tables">Create tables that transform gracefully</a>.</li>
+<li><cite title="Idyll Mountain">Kynn Bartlett</cite>: <a href="/web/20110608044818/http://access.idyllmtn.com/tables/">Understanding Accessible Table Markup</a>.</li>
+</ul>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110608044818/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110608044818/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110608044818/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110608044818/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110608044818/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.201 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-24 21:13:20 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 4:48:18 Jun 8, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:23:07 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

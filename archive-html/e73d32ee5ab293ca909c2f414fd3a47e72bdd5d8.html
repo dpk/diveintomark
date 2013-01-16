@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Safari 1.1 CSS hacks [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20101214222529/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20101214222529/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20101214222529/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20101214222529im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20101214222529/http://diveintomark.org/archives/2003/11/10/surprise" title="Redesign Surprise">
+<link rel=next href="/web/20101214222529/http://diveintomark.org/archives/2003/11/15/spam" title="Don&#8217;t worry, this is a one-time mail">
+<link rel=up href="/web/20101214222529/http://diveintomark.org/archives#p1438" title="November 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Safari 1.1 CSS hacks Comments Feed" href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari/feed" />
+<link rel='index' title='dive into mark' href='/web/20101214222529/http://diveintomark.org/' />
+<link rel='prev' title='Redesign Surprise' href='/web/20101214222529/http://diveintomark.org/archives/2003/11/10/surprise' />
+<link rel='next' title='Don&#8217;t worry, this is a one-time mail' href='/web/20101214222529/http://diveintomark.org/archives/2003/11/15/spam' />
+<link rel='canonical' href='/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari' />
+<link rel='shortlink' href='/web/20101214222529/http://diveintomark.org/?p=1438' />
+<meta name="description" content="I only advocate using CSS hacks when standards fail me, and even then I feel kinda guilty about it.">
+<meta name="keywords" content="css,safari">
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+@font-face {font-family: 'LatinModernRoman10Regular';src: url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.eot');src: local('☺'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.woff') format('woff'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.ttf') format('truetype'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.svg#webfontg3VAmqr8') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'LatinModernRomanSlanted10Regu';src: url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.eot');src: local('☺'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.woff') format('woff'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.ttf') format('truetype'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.svg#webfont5pLJWgYw') format('svg');font-weight: normal;font-style: oblique;}
+@font-face {font-family: 'LatinModernRoman10Bold';src: url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.eot');src: local('☺'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.woff') format('woff'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.ttf') format('truetype'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.svg#webfontDIaNd4lG') format('svg');font-weight: bold;font-style: normal;}
+@font-face {font-family: 'LatinModernRoman10BoldItalic';src: url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.eot');src: local('☺'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.woff') format('woff'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.ttf') format('truetype'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.svg#webfontVm6n5sgb') format('svg');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'LatinModernMono10Regular';src: url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.eot');src: local('☺'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.woff') format('woff'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.ttf') format('truetype'), url('/web/20101214222529/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.svg#webfontThQaD2ST') format('svg');font-weight: normal;font-style: normal;}
+html{background:white url(/web/20101214222529/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium 'LatinModernRoman10Regular',serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:'LatinModernRomanSlanted10Regu',serif;font-style:oblique}
+strong,b{font-family:'LatinModernRoman10Bold',serif;}
+pre,code,var,samp,kbd,tt{font-family:'LatinModernMono10Regular',monospace;}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/11\/12\/safari";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "Dec";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/11/12/safari" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101214222529" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101027230502/http://diveintomark.org/archives/2003/11/12/safari" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Oct 2010"><strong>OCT</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 22:25:29 Dec 14, 2010">DEC</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110806094514/http://diveintomark.org/archives/2003/11/12/safari" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="6 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101121165739/http://diveintomark.org/archives/2003/11/12/safari" title="16:57:39 Nov 21, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 22:25:29 Dec 14, 2010">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110806094514/http://diveintomark.org/archives/2003/11/12/safari" title="9:45:14 Aug 6, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090201151704/http://diveintomark.org/archives/2003/11/12/safari" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="1 Feb 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 22:25:29 Dec 14, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2011
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20101214222529*/http://diveintomark.org/archives/2003/11/12/safari" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>70 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Apr 06 - 25 Oct 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000103421332_2007:-1:044212201112_2008:-1:112231741100_2009:-1:110000000000_2010:11:000001000111_2011:-1:000000010100_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20101214222529/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20101214222529/http://diveintomark.org/archives#p1438">November 12, 2003</a> &#8227;
+<h2>Safari 1.1 CSS hacks</h2> (<a href="/web/20101214222529/http://diveintomark.org/tag/css" rel="tag">css</a>, <a href="/web/20101214222529/http://diveintomark.org/tag/safari" rel="tag">safari</a>)</div>
+<p>It&#8217;s that time again.  A new version of Safari is out, so here we go with a new round of CSS hacks.</p>
+
+<p>Here&#8217;s a page from the W3C&#8217;s CSS-3 test suite: <a href="/web/20101214222529/http://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/html/tests/css3-modsel-148.html">:empty pseudo-class on a non-empty element</a>.  The test passes in Mozilla 1.5, IE/Win 6, IE/Mac 5.2, and Opera/Win 7.22, but fails in Safari.  Although it&#8217;s <a href="/web/20101214222529/http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.w3.org%2FStyle%2FCSS%2FTest%2FCSS3%2FSelectors%2Fcurrent%2Fhtml%2Ftests%2Fcss3-modsel-148.html&warning=1&profile=css2&usermedium=all">considered invalid CSS-2</a>, it will be valid CSS-3.  So it&#8217;s evil, but it&#8217;s evil in a forwardly compatible way.</p>
+
+<p>As you can see from the page&#8217;s source, the syntax is simple.  <code>p:empty</code> should not be applied to non-empty paragraphs, but Safari applies it.</p>
+
+<p>Here&#8217;s a slightly less evil hack: <a href="/web/20101214222529/http://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/html/tests/css3-modsel-22.html">:lang() pseudo-class</a>.  This <a href="/web/20101214222529/http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.w3.org%2FStyle%2FCSS%2FTest%2FCSS3%2FSelectors%2Fcurrent%2Fhtml%2Ftests%2Fcss3-modsel-22.html&warning=1&profile=css2&usermedium=all">validates as CSS-2</a>, but is only recognized by Mozilla and IE/Mac.  Safari, Opera, and IE/Win ignore it.  Since I already declare a <code>lang</code> on my <code>&lt;html&gt;</code> element, I can use the <code>:lang()</code> pseudo-class to extend an existing IE-hiding hack to also hide from Safari and Opera:</p>
+
+<pre><code>.foo {
+  /* rules for everyone */
+}
+
+html:lang(en)>body .foo {
+  /* rules ignored by Safari,
+     Opera, and IE/Win */
+}
+</code></pre>
+
+<p>If you declare something other than English as your page language, then just make sure the lang codes match.  If you don&#8217;t declare a page language at all, well then you&#8217;ll just have to start.  The irony of using CSS hacks to encourage other standards practices is not entirely lost on me.</p>
+
+<p>Admittedly, I&#8217;m not sure how useful this hack is in general; the combination of Safari, IE/Win, and Opera is a fairly large population, and there aren&#8217;t a lot of situations where you want to paint them all with one brush.  However, I am testing it in <a href="/web/20101214222529/http://diveintomark.org/public/2003/11/squares10.html">iteration #10</a> to prevent Safari and IE/Win from screwing up the rendering of my standards-compliant navigation rollovers.  (Sorry, Opera users.  I have nothing personal against either of you.)</p>
+
+<p>I only advocate using CSS hacks when standards fail me, and even then I feel kinda guilty about it.  In my defense, this hack is an improvement from my previous design, which included the <a href="/web/20101214222529/http://diveintomark.org/safari/csshacks/star7.html">invalid CSS selector *7 hack</a>, which I felt extremely guilty about.  Although apparently not quite guilty enough not to use.  All hacks that target actively developed browsers are, obviously, time-limited.  Safari 1.1 <a href="/web/20101214222529/http://weblogs.mozillazine.org/hyatt/archives/2003_08.html#003945">broke my last design</a> by fixing an obscure bug I didn&#8217;t even know existed, which in part spurred me to redesign, which unfortunately has uncovered new bugs in Safari, which is what I am now working around.</p>
+
+<p>On the upside, as a bonus for Safari users, iteration #10 includes a subtle text shadow, which (AFAIK) <a href="/web/20101214222529/http://whatdoiknow.org/archives/001305.shtml">only Safari supports</a>.  It looks insanely great.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Fourteen comments here (<a href=/web/20101214222529/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-5366"><p>That :empty pseudo-class test exhibits a bizarre behavior.  Upon first load (or refresh) the test fails, but when revisiting from cache (e.g., use back/forward buttons) it renders as expected!</p>
+<p>Beware basing hacks on that selector&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://phobia.com/' rel='external nofollow' class='url'>Hans Gerwitz</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5366" title="November 12, 2003 @ 10:58 pm"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5367"><p>Aww, shucks.  The square rollovers work perfectly in Safari post 1.1.  If I make Safari properly support :empty, will I get the pretty rollovers back? :)</p>
+<p class=sig>&#8212;&#8201;<cite>Dave Hyatt</cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5367" title="November 13, 2003 @ 2:38 am"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5379"><cite><a href='/web/20101214222529/http://kusor.net/archivo-dhtml/2003/11/index.php#000539' rel='external nofollow' class='url'>kusor dhtml weblog</a></cite>&#160;(trackback)</li>
+<li id="comment-5368"><p>Have you tried highlighting text in IE/Win? It&#8217;ll select everything from where you click (and drag, of course) to the top (excluding the &#8220;d i v e i n t o m a r k&#8221; text in the banner).</p>
+<p>Is there a way to download Safari for Windows, or will that become my shattered dream?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://dataportalen.com/pho/' rel='external nofollow' class='url'>H�vard Skj�veland</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5368" title="November 13, 2003 @ 2:59 am"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5369"><p>I&#8217;m one of those two Opera users, and I think you are right to prefer this hack over an evil hack ;)</p>
+<p>Even though the rollover effect is really cool in Mozilla. Maybe this will spur the Opera developers to support :lang at last&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://people.opera.com/rijk/opera/' rel='external nofollow' class='url'>Rijk</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5369" title="November 13, 2003 @ 3:18 am"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5370"><p>I&#8217;m that other Opera user, and I just wanted to say, I bear you no ill will.  Today.</p>
+<p class=sig>&#8212;&#8201;<cite>Pieter Van de  Bruggen</cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5370" title="November 13, 2003 @ 5:05 am"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5371"><p>Strange&#8230; I&#8217;m the third Opera user. Mark, whoever you&#8217;re source is, he&#8217;s obviously unreliable. :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://dataportalen.com/pho/' rel='external nofollow' class='url'>H�vard Skj�veland</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5371" title="November 13, 2003 @ 12:45 pm"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5372"><p>Actually, there have been at least 347 of you in the past few days, and that doesn&#8217;t even include those of you who are lying about who you are.</p>
+<p><a href="/web/20101214222529/http://diveintomark.org/about/stats/bybrowserdetail.html">http://diveintomark.org/about/stats/bybrowserdetail.html</a></p>
+<p>I bear no ill will towards any of you.  You all have excellent taste in browsers. :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5372" title="November 13, 2003 @ 1:24 pm"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5373"><p>And another one of those 347 &#x263A;</p>
+<p>I like the rollover effect (three cheers for Opera&#8217;s easy editing of cached CSS), a shame your hack disables it in my browser of choice.</p>
+<p>Still this is one slick layout.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://www.livejournal.com/users/j_darkelf/' rel='external nofollow' class='url'>Jor</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5373" title="November 13, 2003 @ 5:22 pm"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5374"><p>Find some hack that disables the rollovers in *all* browsers, then you&#8217;ll really be showing some design skill. :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://mpt.phrasewise.com/' rel='external nofollow' class='url'>mpt</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5374" title="November 13, 2003 @ 6:30 pm"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5375"><p>I&#8217;d use Opera if it rendered pages like Gecko-based browsers do.</p>
+<p>&#8230;still can&#8217;t figure out how to make the menu on my redesign &#8216;pop-out&#8217; in Opera. Originally it was doing it occaisionally, then not at all&#8230; thoughts of using JavaScript instead of CSS for that flicker briefly in my mind&#8230;</p>
+<p>&#8230;I had even weirder issues with Safari, which I eventually (grudgingly) fixed by using pixel height and width values&#8230;</p>
+<p>&#8230;And now I have to add things for IE 5! Will it never end?!? AAAAIIIIeeeeee!</p>
+<p>/me goes over to the corner, curls up in the fetal position, and starts sucking his thumb.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://www.zenaku.net/' rel='external nofollow' class='url'>kami</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5375" title="November 13, 2003 @ 6:34 pm"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5376"><p>I sure _hope_ it&#8217;ll end, but I&#8217;m not really optimistic about it. In fact, I&#8217;ve stopped giving a damn about IE. If something doesn&#8217;t work in IE, I try my best to work around it and if I can&#8217;t find a way, I just leave it be.</p>
+<p>Correct me if I&#8217;m wrong, but doesn&#8217;t Opera identify itself as IE upon installation (i.e. you have to manually switch it to identify as Opera)?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://dataportalen.com/pho/' rel='external nofollow' class='url'>H�vard Skj�veland</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5376" title="November 14, 2003 @ 4:16 am"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5377"><p>Yes, the default option for �Browser identification� in Opera is �Identify as MSIE 6.0�. Although, this doesn&#8217;t change the fact that the browser is fully recognizable as Opera, as the word �Opera� is still in the USER_AGENT string;</p>
+<p>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1) Opera 7.21 [en]</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://www.virtuelvis.com/quark/' rel='external nofollow' class='url'>Asbj�rn</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5377" title="November 14, 2003 @ 6:34 am"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5378"><p>All right, since Dave Hyatt swears this is fixed already in internal builds of Safari, and Opera didn&#8217;t do anything to deserve it, I&#8217;ve reverted to the normal html>body hack to hide things from IE/Win.  Which deserves it, and is no longer being developed, so it&#8217;s not like this hack will need tending until Longhorn.  And the design won&#8217;t last that long anyway.</p>
+<p>Thanks for all the opinions, public and private.  CSS hacks always bring out the passion on both sides.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214222529/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101214222529/http://diveintomark.org/archives/2003/11/12/safari#comment-5378" title="November 14, 2003 @ 10:49 am"><img alt="#" src=/web/20101214222529im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20101214222529/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20101214222529/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href=/web/20101214222529/http://code.google.com/u/pilgrim/>code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20101214222529/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20101214222529/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+<!-- Dynamic page generated in 0.308 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-12-02 13:08:11 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 22:25:29 Dec 14, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:12:18 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

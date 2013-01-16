@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>About the mobile edition [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110514122430/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110514122430/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110514122430/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110514122430im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110514122430/http://diveintomark.org/archives/2003/03/13/switch" title="Switch">
+<link rel=next href="/web/20110514122430/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities" title="Apache security vulnerabilities">
+<link rel=up href="/web/20110514122430/http://diveintomark.org/archives#p1287" title="March 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; About the mobile edition Comments Feed" href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition/feed" />
+<link rel='index' title='dive into mark' href='/web/20110514122430/http://diveintomark.org/' />
+<link rel='prev' title='Switch' href='/web/20110514122430/http://diveintomark.org/archives/2003/03/13/switch' />
+<link rel='next' title='Apache security vulnerabilities' href='/web/20110514122430/http://diveintomark.org/archives/2003/03/17/apache_security_vulnerabilities' />
+<link rel='canonical' href='/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition' />
+<link rel='shortlink' href='/web/20110514122430/http://diveintomark.org/?p=1287' />
+<meta name="description" content="About dive into mark mobile edition, thoughts on standards, and instructions for setting up your own mobile edition in Movable Type.">
+<meta name="keywords" content="blogging,markup,plucker">
+<link href="/web/20110514122430cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110514122430/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/03\/15\/about_the_mobile_edition";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "May";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110514122430" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215101315/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 12:24:30 May 14, 2011">MAY</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215101315/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition" title="10:13:15 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 12:24:30 May 14, 2011">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20081025005017/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="25 Oct 2008"><strong>2008</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 12:24:30 May 14, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110514122430*/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>28 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">6 May 06 - 14 May 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000010002100_2007:-1:310111020111_2008:-1:111100001100_2009:-1:000000000000_2010:-1:000001010111_2011:4:000010000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110514122430/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110514122430/http://diveintomark.org/archives#p1287">March 15, 2003</a> &#8227;
+<h2>About the mobile edition</h2> (<a href="/web/20110514122430/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20110514122430/http://diveintomark.org/tag/markup" rel="tag">markup</a>, <a href="/web/20110514122430/http://diveintomark.org/tag/plucker" rel="tag">plucker</a>)</div>
+<p>In case you missed the announcement a few weeks ago, dive into mark is now available in a super-hip <a href="/web/20110514122430/http://diveintomark.org/mobile/">mobile edition</a>, targeted at the very lowest common denominator of mobile devices.  Specifically, this means people using programs like <a href="/web/20110514122430/http://www.plkr.org/">Plucker</a> to download the latest posts and bundling them up in platform-specific formats for offline viewing, or people using the <a href="/web/20110514122430/https://my.avantgo.com/home/">AvantGo</a> service.  I am vaguely aware that there are a plethora of different mobile devices and services, but that&#8217;s what I&#8217;m optimizing for.</p>
+
+<p>It has been pointed out to me that I should simply relax.  Due to my main site&#8217;s pure-CSS layout and lack of markup cruft, the <q>normal</q> version of this site is in fact readable on mobile devices.  So why bother?  Two reasons.  One, the usage patterns are very different, especially for offline readers.  Programs like Plucker will spider everything on a site (to a certain depth, default 2), which means that lots of things linked from my home page are getting hit repeatedly for no reason.  Pointing it at a self-contained mobile edition solves this problem.  And two, <q>readable</q> does not mean <q>optimized</q>, and given the choice, most people will choose a version that is optimized for their platform or device.  (This is why people hate desktop Java apps, but never mind that.)</p>
+
+<p>What does <q>optimizing</q> mean?  Well, the mobile edition has an ultra-simple layout, ultra-simple navigation, and reduced markup.  For example, blog posts have no inline images; I use <a href="/web/20110514122430/http://bradchoate.com/past/mtmacros.php">macros</a> to automatically substitute the <code>ALT</code> attribute instead.  Also, I strip out the <code>title</code> attribute from links (since mobile devices don&#8217;t display them anyway), and strip out much of the (sniff) semantic markup for which I am infamously known.</p>
+
+<p>This last point is particularly galling to me.  We have long been told that using structured semantic markup would somehow <q>future-proof</q> our content for the day when it would be read on all sorts of non-desktop devices.  Well, the future is here (it&#8217;s just not evenly distributed, natch), and let me be the first to admit that my semantic markup is getting in the way.  <code>H1</code>/<code>H2</code>/etc. header tags look absolutely wretched on the tiny screen of a Palm Pilot or cell phone.  And semantic markup such as <code>code</code>, <code>kbd</code>, <code>samp</code>, and <code>var</code> (which have all been around since the very first proposal drafts of HTML, from 1993) are simply unsupported.  (Oddly, the <q>presentational</q> tag <code>tt</code> is fully supported, in the sense that it displays in a monospaced font.  Why they couldn&#8217;t add 4 lines of code to make those other tags act like <code>tt</code> is beyond me.)</p>
+
+<p>Coincidentally, we have been discussing mobile device support on our internal <a href="/web/20110514122430/http://www.webstandards.org/">Web Standards Project</a> mailing list.  It was during the course of that discussion that I learned that the <a href="/web/20110514122430/http://www.w3.org/">W3C</a> has long had a standard for mobile device markup, called <a href="/web/20110514122430/http://www.w3.org/TR/xhtml-basic/">XHTML Basic</a>.  I must be honest here: I did not know about this standard when I whipped together my mobile edition templates (more on those in a minute), and it did not occur to me to look for it.  Which is just as well, since it has absolutely no basis in reality.</p>
+
+<p>Here&#8217;s what I did look for: <a href="/web/20110514122430/http://www.avantgo.com/doc/developer/supported_tags/bigmatrix.html">AvantGo&#8217;s documentation on supported HTML elements</a>, and their <a href="/web/20110514122430/http://www.avantgo.com/doc/developer/styleguide/styleguide.html">developer documentation for creating pages</a>.  For comparison, here is the list of <a href="/web/20110514122430/http://www.w3.org/TR/xhtml-basic/#s_xhtmlmodules">XHTML Basic elements</a>.  Eagle eyes will note several discrepancies.  For example, here are some tags defined in XHTML Basic that are not supported by AvantGo:</p>
+
+<ol>
+<li><code>abbr</code></li>
+<li><code>acronym</code></li>
+<li><code>cite</code></li>
+<li><code>code</code></li>
+<li><code>dfn</code></li>
+<li><code>kbd</code></li>
+<li><code>q</code></li>
+<li><code>samp</code></li>
+<li><code>span</code></li>
+<li><code>var</code></li>
+<li><code>label</code></li>
+<li><code>object</code></li>
+<li><code>param</code></li>
+<li><code>link</code></li>
+<li><code>media</code> attribute</li>
+</ol>
+
+<p>The last two are troubling.  Palm devices do not support any form of CSS; the <code>link</code> element (for linking to external stylesheets) is not supported; the <code>style</code> element is not supported; and the inline <code>style</code> attribute is not supported either.  (Windows CE devices support the <code>font</code> tag.  Whee.)</p>
+
+<p>Here are some things that are intentionally left out of XHTML Basic because they were deemed too difficult for mobile devices, but which are in fact supported by AvantGo:</p>
+
+<ol>
+<li><code>b</code></li>
+<li><code>i</code></li>
+<li><code>center</code></li>
+<li><code>font</code></li>
+<li>Nested tables</li>
+<li><code>script</code> (XHTML Basic has no provision for client-side scripting of any kind)</li>
+</ol>
+
+<p>And finally, XHTML Basic is only supposed to be served with the MIME type <code>application/xhtml+xml</code>.  Don&#8217;t do this.  In fact, you can&#8217;t do this, because if you do this, Plucker will complain vehemently and refuse to download your mobile edition at all.</p>
+
+<p>As I said, XHTML Basic has no basis in reality.  Ignore it.</p>
+
+<p>So, how did I take my clean, wonderful, structured, semantic markup and coerce it into the crap that AvantGo actually likes?  <a href="/web/20110514122430/http://www.bradchoate.com/past/mtmacros.php">MT-Macros</a>, baby.  MT-Macros.</p>
+
+<p>Here&#8217;s how to do it:</p>
+
+<ol>
+<li>Install <a href="/web/20110514122430/http://www.bradchoate.com/past/mtmacros.php">MT-Macros</a>.</li>
+<li>Create a custom template called <q>palmmacros</q> with <a href="/web/20110514122430/http://diveintomark.org/inc/palmmacros">these macros</a> in it.  These macros strip unsupported attributes like <code>title</code>, replace images with their <code>ALT</code> attribute (you do have <code>ALT</code> attributes on all your images, don&#8217;t you?), replace unsupported semantic markup with supported equivalent presentational tags, changes some unsupported HTML entities to text equivalents, and so forth.  More could certainly be done here, but this works for me.</li>
+<li>Create an index template called <q>Main Index &#8211; mobile</q> with <a href="/web/20110514122430/http://diveintomark.org/public/palmindex.tmpl">this index template</a>.  Change my name and copyright information appropriately.</li>
+<li>Create an archive template called <q>Individual Entry Archive &#8211; mobile</q> with <a href="/web/20110514122430/http://diveintomark.org/public/palmindividual.tmpl">this archive template</a> that gets saved to the file <code>mobile/index.html</code>.  Again, the only thing you need to change is my copyright statement.</li>
+<li><p>Go to <q>Weblog Config</q>, <q>Archiving</q>, <q>Add new&#8230;</q>.  Select archive type <q>Individual</q>, template <q>Individual Entry Archive &#8211; mobile</q>, and click <q>Add</q>.  For the Archive File Template of this newly added template, enter this:</p>
+<blockquote>
+<p><code>../mobile/&lt;$MTEntryID pad="6"$&gt;.html</code></p>
+</blockquote>
+<p>This should set it up to save the individual mobile entries to the same directory as your mobile index.  (If your archives are normally stored in a nested subdirectory, you may have to tweak that relative path, which is relative to your archive directory set up in your preferences.  Probably best just to try it and see where they end up.)  The mobile index template assumes this naming scheme, so it&#8217;s important that they match.</p></li>
+</ol>
+
+<p><a href="/web/20110514122430/http://diveintomark.org/mobile/">Here&#8217;s the result</a>.  It no doubt looks like crap in your desktop browser, but I have it on good authority that it looks great on a Palm Pilot.  If you have <a href="/web/20110514122430/http://www.opera.com/">Opera 7</a>, you can sort of see what it might look like by browsing to the page and hitting <kbd>SHIFT F11</kbd>.  Or you can do it the hard way by downloading <a href="/web/20110514122430/http://www.palmos.com/dev/tools/emulator/">Palm emulator</a>, signing your life away to join their developer program so you can get the necessary ROM images to use the emulator (or just searching for them &#8212; I recommend searching for keywords plus <kbd>site:.ru</kbd> to weed out all the legitimate sites), spidering your mobile edition with <a href="/web/20110514122430/http://www.plkr.org/">Plucker</a>, transferring the generated .pdb file to your virtual Palm Pilot, and testing it thoroughly.  (I did that, because I&#8217;m That Kind of Bear.)  Or find a friend with a Palm Pilot.</p>
+
+<p>Or don&#8217;t freaking bother.  The latest and greatest in mobile technology (the P800, running Opera <q>Small Screen</q> edition) makes short work of even the crappiest mobile-unfriendly markup.  Million-dollar code instead of <a href="/web/20110514122430/http://diveintomark.org/archives/2002/12/29/million_dollar_markup.html">million-dollar markup</a>, as it were.  Long-term, I think that&#8217;s the only viable solution: the output still ends up optimized for the device, but it&#8217;s optimized on the client, not on every individual server.  HTML is just not going away anytime soon, and it&#8217;s sure as hell not getting any better.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty seven comments here (<a href=/web/20110514122430/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-737"><p>&#8220;H1/H2/etc. header tags look absolutely wretched on the tiny screen of a Palm Pilot [....] semantic markup such as code, kbd, samp, and var [....] are simply unsupported&#8221;</p>
+<p>Well, headers look fine, and some of these semantic tags are supported, with the tools that I use to read web content on my Palm (sitescooper, iSilo, my own code&#8230;). I can&#8217;t tell what you mean here: do you mean that these things are unsupported by the current state of tools with which you happen to be familiar? Why does this concern you? How do you know what people are using to process html before putting it on their handheld devices, and which readers they&#8217;re using to browse it there? Why not just use reasonable semantic markup and not worry about what crazy things people do with it?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://lee-phillips.org/' rel='external nofollow' class='url'>Lee Phillips</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-737" title="March 15, 2003 @ 9:34 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-738"><p>Yes, as I said, there is a wide range of mobile devices and services.  I based my statements off the AvantGo developer documentation which I linked, plus my own testing with Opera 7, plus my own testing with Plucker reader and the Palm Pilot.  Specifically these tools, because several of my readers mentioned that they were using these tools to read my site (and my access logs confirm this).</p>
+<p>If we&#8217;re going to get all apathetic and snooty, why even bother with semantic markup at all?  The latest and greatest (the P800, running Opera &#8220;Small Screen&#8221; edition) makes short work of even the crappiest mobile-unfriendly markup.  Million-dollar code instead of million-dollar markup, as it were.  Long-term, this is the only workable solution.  Any specific &#8220;mobile edition&#8221; (even using the phantasmagorical XHTML Basic) is just a short-term solution until enough people have upgraded to smarter clients.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-738" title="March 15, 2003 @ 11:24 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-739"><p>&#8220;And semantic markup such as code, kbd, samp, and var (which have all been around since the very first proposal drafts of HTML, from 1993) are simply unsupported.&#8221;</p>
+<p>Aren&#8217;t UserAgents allowed to make presentational decisions like whether or not to use a monospaced font as the visual representation of a piece of semantic mark-up?  I don&#8217;t see how not displaying those tags in the traditional way means anything. It would be no different than if a browser&#8217;s default presentation of hypertext was to use a dotted underline rather than a solid underline or green text instead of blue.</p>
+<p>Just my two cents.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://members.rogers.com/cacciottolo/float' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-739" title="March 15, 2003 @ 11:25 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-740"><p>Well, for desktop browsers, I reinforce the default presentation of semantic tags like code with stylesheets (see <a href="/web/20110514122430/http://diveintomark.org/css/mu.css">http://diveintomark.org/css/mu.css</a> where I set code to font-family: monospace, even though this is the default in all major browsers).  But given that stylesheets are completely unsupported by my target devices, the default presentation of my markup actually matters.  If a code tag by itself doesn&#8217;t output a monospaced font, I need to transform it into something that does.  It&#8217;s not like the mobile browser is giving any other indication that such-and-such is computer code; it just ignores the tag altogether.</p>
+<p>Frankly, I&#8217;m not sure which is worse &#8212; these low-end browsers that only understand bastardized markup, or the mid-range browsers (cough Hip Top cough) that think they understand CSS but get it all wrong.  (To their credit, they got significantly better after their first disastrous release.)</p>
+<p>I&#8217;m sure there are a wide variety of other mobile browsers that all have their own special problems that I don&#8217;t even know about yet.  Word from the WaSP mailing list is that the entire field is a complete mess.  This is only a small taste of it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-740" title="March 16, 2003 @ 12:25 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-741"><p>&#8220;Frankly, I&#8217;m not sure which is worse &#8212; these low-end browsers that only understand bastardized markup, or the mid-range browsers that think they understand CSS but get it all wrong.&#8221;</p>
+<p>CSS-hiding tricks are such an ugly annoyance, that I would rather a browser completely ignore CSS than do it incorrectly.  Its absolutely no contest in my book.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-741" title="March 16, 2003 @ 1:20 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-742"><p>Mark, just curious, is the site redesign complete, or have you just taken a long break?  When you first announced the public redesign, there seemed to be constant activity on a minute to minute basis&#8230; and then nothing.  The only change in the last little while has been that you dropped the circle symbol from the background.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-742" title="March 16, 2003 @ 1:38 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-743"><p>Here&#8217;s an improvement of the abbr and acronym macros, which will, given a title attribute, and Mr Choate&#8217;s plugin MTRegex (at <a href="/web/20110514122430/http://www.bradchoate.com/past/mtregex.php">http://www.bradchoate.com/past/mtregex.php</a> ofcourse), put in in paranthesis following the acronym/abbr.</p>
+<p> () ()</p>
+<p>I also agree with the previous anonymous poster&#8230; The design with the colored masthead and the centered button was better than this I think, even if the current one is not bad either.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-743" title="March 16, 2003 @ 7:19 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-744"><p>Surely by creating a specific, less semantic edition, your are moving in a contrary direction? Is it not the goal of the Web Standards Project (and also the W3C) to try to get authors to write semantic markup that is separated from the way it is displayed? It seems to me that by creating a bespoke version of your blog, you are slowing down the forward progress of these device manufacturers and encouraging them to continue to create tools that use proprietary methods.</p>
+<p>WaSP was very good at lobbying browser manufacturers to support web standards. Perhaps it is necessary for it to retain that element of itself, but direct the energy towards handheld/mobile device manufacturers. Maybe in the future, special mobile editions will no longer be necessary.</p>
+<p>Just so that you know where I&#8217;m coming from, I&#8217;m the kind of guy who uses abbr and acronym correctly, despite the lack of support in the world&#8217;s most popular browser. However, I give in to necessity when I deliver my XHTML as text/html so Hixie probably thinks I&#8217;m the scourge of the Earth.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://jessey.net/blog/' rel='external nofollow' class='url'>Simon Jessey</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-744" title="March 16, 2003 @ 8:05 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-745"><p>It gets worse when you factor in devices like the Danger Hiptop, which not only ignores handheld media types in stylesheets, but also interprets some styles literally, like padding and margin.  So, while 150px of padding may look fine on a CSS-driven site, it will cause the content to be written into a thin column on a Hiptop.</p>
+<p>I&#8217;ve written about this more, here: <a href="/web/20110514122430/http://www.radicalbender.com/blog/archives/000077.php">http://www.radicalbender.com/blog/archives/000077.php</a> if anyone&#8217;s interested.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://www.radicalbender.com/' rel='external nofollow' class='url'>Ben Dyer</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-745" title="March 16, 2003 @ 9:01 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-746"><p>Well, I can&#8217;t force Hiptop users into my mobile edition, but I can keep it from screwing up my CSS.</p>
+<p>RewriteCond %{HTTP_USER_AGENT} hiptop<br />
+RewriteRule css/ &#8211; [F,L]</p>
+<p>That is, until I can find an emulator or a Hiptop user to test my design.  I have the infrastructure in place to serve it a different secondary stylesheet to undo the havoc it no doubt wrecks with the primary one.</p>
+<p><a href="/web/20110514122430/http://diveintomark.org/archives/2003/01/16/the_one_ive_never_tried.html">http://diveintomark.org/archives/2003/01/16/the_one_ive_never_tried.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-746" title="March 16, 2003 @ 9:46 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-747"><p>Whoops. Seems my awardwinning markup got stripped. Here it is again then, correctly escaped.</p>
+<p>&lt;MTMacroDefine name=&#8221;abbr&#8221; ctag=&#8221;abbr&#8221;&gt;&lt;MTMacroContent&gt;&lt;MTIfMatches expr=&#8221;[MTMacroAttr name='title']&#8220;&gt; (&lt;MTMacroAttr name=&#8221;title&#8221;&gt;)&lt;/MTIfMatches&gt;&lt;/MTMacroDefine&gt;&lt;MTMacroDefine name=&#8221;acronym&#8221; ctag=&#8221;acronym&#8221;&gt;&lt;MTMacroContent&gt;&lt;MTIfMatches expr=&#8221;[MTMacroAttr name='title']&#8220;&gt; (&lt;MTMacroAttr name=&#8221;title&#8221;&gt;)&lt;/MTIfMatches&gt;&lt;/MTMacroDefine&gt;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-747" title="March 16, 2003 @ 10:40 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-748"><p>i use the avantgo client on my clie. when i first got it, i looked into creating my own channel for avantgo but more or less stopped when i read that the client supports a limited set of HTML 3.2. seems like they could have supported something a little more recent or at least have changed the client to account for the new versions of HTML.</p>
+<p><a href="/web/20110514122430/http://www.avantgo.com/doc/developer/styleguide/styleguide.html">http://www.avantgo.com/doc/developer/styleguide/styleguide.html</a></p>
+<p>i think it&#8217;s great that WaSP is looking at mobile devices. as the months go by, newer and more powerful devices come out. manufacturers should know that standards are important for these devices, too.</p>
+<p>and, thanks for the mobile edition, mark. it&#8217;s fun to read on my bus ride to work.</p>
+<p class=sig>&#8212;&#8201;<cite>travis</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-748" title="March 16, 2003 @ 10:46 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-749"><p>Just to be clear, when I write on this site, I don&#8217;t speak for the WaSP.  I have posting rights on webstandards.org; if I want to say something official, I&#8217;ll say it over there.</p>
+<p>That said, I hope the WaSP does move in this direction.  From everything I read and hear, it&#8217;s a complete rat&#8217;s nest.  Various vendors pushing their own bastardized markup, others who claim to support standards but do it so poorly you wish they wouldn&#8217;t even try, etc.  It&#8217;s 1997 all over again.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-749" title="March 16, 2003 @ 12:12 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-750"><p>&quot;It&#8217;s 1997 all over again.&quot;</p>
+<p>Not quite. The WaSP didn&#8217;t even exist in 1997, and has a lot of credibility now. Although many handhelds have pre-installed browsers now, the upgrade cycle for handheld hardware/os is shorter than for desktop computers, and as far as user-installed software is concerned, the upgrade cycle more closely resembles browsers in 1995-96, rather than 1997.</p>
+<p>I remember vividly how much the whole industry shifted after the 4.0 browsers came out (although it didn&#8217;t happen all at once). An equivalent milestone in handheld browsing has not yet been reached, and WaSP can still have a huge impact before updrag starts becoming a problem.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-750" title="March 16, 2003 @ 1:34 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-751"><p>I think I have come to the conclusion that the only practical method of dealing with such a wide variety of devices that either obey or ignore media types as well as browsers that do such a horrible job with CSS (like Netscape 4) is to only provide alternate stylesheets.  That is to say, all stylesheets would be off by default, and the user could enable them if they felt the need to (and, of course, if they have a browser which allows them to).  I would not provide a JavaScript styleswitcher as they also break in some browsers, and really don&#8217;t work at all in handhelds.</p>
+<p>Considering that CSS is only meant to provide &#8220;style hints&#8221; to the UserAgent, I think this is probably the best approach, the feelings of control-freak designers notwithstanding.</p>
+<p>So what I am advocating is this: clean, semantic mark-up with absolutely no styling by default.  If you want to write a stylesheet it would best be provided as an alternate stylesheet.  This way, its not really viewed as an integral part of the site or &#8220;site experience&#8221; and if the user wants to use it, that&#8217;s fine, if not (or if it breaks in their UA), that&#8217;s also fine.  </p>
+<p>I think this has been referred to in the past as being an &#8220;HTML Nazi&#8221; as opposed to being a &#8220;Pixel-Weenie&#8221;.  Frankly, the days of being a &#8220;Pixel-Weenie&#8221; can&#8217;t last forever, handheld devices and the introduction of Safari have shown us that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://members.rogers.com/cacciottolo/float' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-751" title="March 16, 2003 @ 2:52 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-752"><p>Mobile XHTML (Basic) support is actually becoming available. The new handsets from Nokia, SonyEricsson and Siemens all suppport XHTML Basic and CSS Mobile Profile. All of them have color screens with resolutions of up to 320&#215;480.</p>
+<p>Sites such as zeldman.com look fine on a Nokia 3650/7650 or the SonyEricsson P800. These handsets are becoming mainstream now because of the cheap MMS and GPRS services.</p>
+<p>I don&#8217;t think it&#8217;s a good idea to quit writing correct markup because some device has a bad implementation. You&#8217;ll break the good ones.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-752" title="March 16, 2003 @ 4:10 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-753"><p>I&#8217;ve seen &#8220;dive into mark&#8221; (normal edition) on a P800, the day before Opera &#8220;Small Screen&#8221; edition came out.  It was readable &#8212; just like reading it in Netscape 4 actually (good structure, no stylesheets).  So score one for web standards &#8212; it was all readable and not utterly impossible to navigate.</p>
+<p>But the P800 is an ultra-high-end mobile device with a live Internet connection and what must be called a medium-sized screen.  That&#8217;s a far cry from the design center for this &#8220;mobile edition&#8221;, which is more geared towards lower-end clients and services with smaller screens and different usage patterns.  Also, now that Opera &#8220;Small Screen&#8221; edition is out, P800 users can surf pretty much anything &#8212; I have been told that Opera is *that good* at transforming unfriendly markup and desktop-oriented pages.  (Somebody correct me if I&#8217;m wrong here.)  So there&#8217;s no real need for special &#8220;mobile&#8221; markup at all, XHTML Basic or anything else.</p>
+<p>That just leaves the rest of the world, I suppose.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-753" title="March 16, 2003 @ 7:56 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-754"><p>It should be noted that the &#8220;mobile edition&#8221; is not really meant to be a replacement for the rest of the site.  It&#8217;s really a replacement for my RSS feed, since (I&#8217;m told) there are no good RSS readers for mobile phones.  (Someone correct me if I&#8217;m wrong here.)  Perhaps a better long-term solution would be to write (or find) an RSS reader for the various mobile platforms, or integrate RSS support into Plucker/SiteScooper/etc.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-754" title="March 16, 2003 @ 9:47 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-765"><cite><a href='/web/20110514122430/http://www.hebig.org/blogs/archives/main/000916.php' rel='external nofollow' class='url'>hebig.org/blog</a></cite>&#160;(trackback)</li>
+<li id="comment-755"><p><a href="/web/20110514122430/http://insom.me.uk/Gfx/xmosaic.jpg">http://insom.me.uk/Gfx/xmosaic.jpg</a></p>
+<p>The above is how your site looks in a copy of XMosaic 1.2 I just resurrected. I had to cheat by wget-ing, because that version of XMosaic certainly didn&#8217;t send a &#8216;Host&#8217; header, and confused your webhost somewhat.</p>
+<p>All in all, apart from an import at the top, and an nbsp at the bottom, your site looks flawless in the earliest browser I could find.</p>
+<p>If wireless browsers aren&#8217;t up to where NCSA was in 1993, then really why bother?</p>
+<p>Aaron</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://insom.me.uk/' rel='external nofollow' class='url'>Aaron Brady</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-755" title="March 17, 2003 @ 8:19 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-756"><p>Mark, it seems to me that you&#8217;re upset that your (excellent) XHTML is not being properly rendered on browsers which do not support it.  Thus you are forced to reformat your code into a less syntatically pleasing file for them.  </p>
+<p>But I think you&#8217;re upset about the wrong thing.  The lack of support for proper XHTML, or even XHTML Basic is to be lameted but is not worthy of fretting over too much.  If you had your files stored at XML (although XHTML is nearly as sufficient for this purpose) you could build your own translator mechanism or make use of XSL(T) to transform the document as necessary for the end user.  Thus your unsupported tags could be rendered appropriately without relying on macros and non-standard items, and you gain futher flexibility by having a maleable source.</p>
+<p>Just a thought.</p>
+<p class=sig>&#8212;&#8201;<cite>Lou Brothers</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-756" title="March 17, 2003 @ 8:52 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-757"><p>It&#8217;s quite possible he&#8217;s already doing this, Lou.</p>
+<p>The lament is that the write-once, run-anywhere that failed for Java, is also failing for the web.</p>
+<p>Deciding where to go from here is the tough part.  How do we get things better?  Good enough, even?</p>
+<p class=sig>&#8212;&#8201;<cite>Jeremy Dunck</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-757" title="March 17, 2003 @ 11:06 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-766"><cite><a href='/web/20110514122430/http://www.mplode.com/tima/archives/000230.html' rel='external nofollow' class='url'>tima thinking outloud.</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-758"><p>Two things:</p>
+<p>1. I&#8217;m using HTML, not XHTML<br />
+2. Have you looked at the actual syntax of the macros I&#8217;m using?  Here is the macro to map CODE to TT:</p>
+<p>&lt;MTMacroDefine name=&#8221;code&#8221; ctag=&#8221;code&#8221;><br />
+&lt;tt>&lt;MTMacroContent>&lt;/tt><br />
+&lt;/MTMacroDefine></p>
+<p>Please explain how this is worse than XSLT:</p>
+<p>&lt;xsl:template match=&#8221;code&#8221;><br />
+&lt;tt>&lt;xsl:apply-templates/>&lt;/tt><br />
+&lt;/xsl:template></p>
+<p>Anyone who thinks that HTML isn&#8217;t a malleable source isn&#8217;t using the right tools.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-758" title="March 17, 2003 @ 2:39 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-759"><p>While there is room for improvement, I thought PeekAndPick (a mobile RSS application) was quite novel and illustrates the potential use of RSS in mobile. More here: <a href="/web/20110514122430/http://www.mplode.com/tima/archives/000125.html">http://www.mplode.com/tima/archives/000125.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://tima.mplode.com/' rel='external nofollow' class='url'>Timothy Appnel</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-759" title="March 17, 2003 @ 2:43 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-760"><p>I just wanted to say thanks for this article and the MT templates for a mobile version :)  also the dive into acessability site rocks dOOd!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://www.breakingwindows.com/' rel='external nofollow' class='url'>Ken Edwards</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-760" title="March 17, 2003 @ 3:19 pm"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-761"><p>No chance of</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-761" title="March 18, 2003 @ 7:15 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-762"><p>No chance of  ? Yeah, I know nobody supports it, probably, but would it not just complete the whole thing. (I hope this comes out.)</p>
+<p class=sig>&#8212;&#8201;<cite>mr snippers</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-762" title="March 18, 2003 @ 7:17 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-763"><p>okay, that didn&#8217;t work: what I think you should do is have LINK tag with media=&#8221;handheld&#8221;, title=&#8221;Mobile edition&#8221;, type=&#8221;text/html&#8221; and rel=&#8221;alternate&#8221;. You stripped it from the last post.</p>
+<p class=sig>&#8212;&#8201;<cite>snippers</cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-763" title="March 18, 2003 @ 7:19 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-767"><cite><a href='/web/20110514122430/http://www.reloade.com.au/main/4.0/entries/archives/2003/03/001704.php' rel='external nofollow' class='url'>Blog</a></cite>&#160;(trackback)</li>
+<li id="comment-764"><p>Re: RSS parsers for Palm</p>
+<p>I agree absolutely that the better solution is to have an RSS parser for the Palm platform.  This mildly &#8220;smarter client&#8221; makes it much easier on everyone on the web who is serving RSS to provide &#8220;mobile editions&#8221; without serving seperate content.</p>
+<p>It will also allow us users to have a much easier time getting the information we need to our memory-crunched, small-screen devices.  For example, C|Net offers free RSS feeds of their content but will charge you $2.95 a month for their &#8220;mobile edition.&#8221;  An RSS reader for the Palm will allow me to circumvent dumb business models like this.</p>
+<p>After the last conversation about this, I submitted a bug to the Plucker group to create an RSS reader (Login Anonymously at <a href="/web/20110514122430/http://bugs.plkr.org/">http://bugs.plkr.org/</a> and view bug #507) and they seem to be doing some real work on it.  There&#8217;s also a rumor afoot (see comments at <a href="/web/20110514122430/http://www.readyourpalm.com/mt/archives/000025.html#000025)"><a href="/web/20110514122430/http://www.readyourpalm.com/mt/archives/000025.html#000025" rel="nofollow">http://www.readyourpalm.com/mt/archives/000025.html#000025</a>)</a> that  you can use JPluck to apply XSLT to the RSS feeds and generate Plucker documents.  Not the ideal solution, but it looks like we&#8217;re getting somewhere&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514122430/http://ken@walker.net/' rel='external nofollow' class='url'>Ken</a></cite>&#160;<a class=p href="/web/20110514122430/http://diveintomark.org/archives/2003/03/15/about_the_mobile_edition#comment-764" title="March 18, 2003 @ 10:56 am"><img alt="#" src=/web/20110514122430im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-768"><cite><a href='/web/20110514122430/http://www.edifyingspectacle.org/links/blog/archives/movabletype/mt_mobile_device_template.php' rel='external nofollow' class='url'>Links Weblog</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-769"><cite><a href='/web/20110514122430/http://www.breakingwindows.com/archives/site_news/000157.php' rel='external nofollow' class='url'>Breaking Windows</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-770"><cite><a href='/web/20110514122430/http://www.usedrobotparts.com/archives/000603.html' rel='external nofollow' class='url'>Used Robot Parts dot com</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-771"><cite><a href='/web/20110514122430/http://unraveled.com/joshua/archives/2003/03/more_additions_and_tweaks.shtml' rel='external nofollow' class='url'>Joshua Kaufman</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-772"><cite><a href='/web/20110514122430/http://unraveled.com/joshua/archives/2003/03/more_additions_and_tweaks.shtml' rel='external nofollow' class='url'>Joshua Kaufman</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-773"><cite><a href='/web/20110514122430/http://www.lotas-smartman.net/blog/archives/000152.html' rel='external nofollow' class='url'>LSN Blog</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110514122430/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110514122430/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110514122430/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110514122430/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110514122430/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.217 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-11 13:11:00 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 12:24:30 May 14, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:40 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

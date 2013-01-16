@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Will the real RSS validator please stand up? [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110911235036/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110911235036/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110911235036/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110911235036/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110911235036im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110911235036/http://diveintomark.org/archives/2003/06/25/echo_chamber" title="Echo chamber">
+<link rel=next href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/dont_use_userlands_validator" title="Don&#8217;t use UserLand&#8217;s validator">
+<link rel=up href="/web/20110911235036/http://diveintomark.org/archives#p1369" title="June 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Will the real RSS validator please stand up? Comments Feed" href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up/feed" />
+<link rel='index' title='dive into mark' href='/web/20110911235036/http://diveintomark.org/' />
+<link rel='prev' title='Echo chamber' href='/web/20110911235036/http://diveintomark.org/archives/2003/06/25/echo_chamber' />
+<link rel='next' title='Don&#8217;t use UserLand&#8217;s validator' href='/web/20110911235036/http://diveintomark.org/archives/2003/06/26/dont_use_userlands_validator' />
+<link rel='canonical' href='/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up' />
+<link rel='shortlink' href='/web/20110911235036/http://diveintomark.org/?p=1369' />
+<meta name="description" content="Thank you, Brad. Thank you for proving exactly why we need a new vendor-neutral format. I couldn't have said it better myself.">
+<meta name="keywords" content="feedvalidator,rant,rss">
+<link href="/web/20110911235036cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110911235036/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/06\/26\/will_the_real_rss_validator_please_stand_up";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "11";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110911235036" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110608001603/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="8 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:50:36 Sep 11, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Oct
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110608001603/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up" title="0:16:03 Jun 8, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:50:36 Sep 11, 2011">11</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615071820/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:50:36 Sep 11, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110911235036*/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>49 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Apr 06 - 11 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000204172101_2007:-1:420102001611_2008:-1:110110001100_2009:-1:000000000000_2010:-1:000001000021_2011:8:001001001000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110911235036/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110911235036/http://diveintomark.org/archives#p1369">June 26, 2003</a> &#8227;
+<h2>Will the real RSS validator please stand up?</h2> (<a href="/web/20110911235036/http://diveintomark.org/tag/feedvalidator" rel="tag">feedvalidator</a>, <a href="/web/20110911235036/http://diveintomark.org/tag/rant" rel="tag">rant</a>, <a href="/web/20110911235036/http://diveintomark.org/tag/rss" rel="tag">rss</a>)</div>
+<p>When RSS 2.0 first came out, I designed <a href="/web/20110911235036/http://diveintomark.org/archives/2002/09/26/rss_20_template.html">an RSS 2.0 template for Movable Type</a>, which later became part of the <a href="/web/20110911235036/http://feeds.archive.org/validator/docs/howto/MovableType.html">documentation for the RSS validator</a>, which later became the basis for <a href="/web/20110911235036/http://www.movabletype.org/docs/mtchanges.html#2.64%20(2003.05.28)">the RSS 2.0 template in Movable Type 2.64</a>.  When I first designed this template, <a href="/web/20110911235036/http://scriptingnews.userland.com/backissues/2002/09/26#When:7:01:56AM">Dave Winer praised it (and me)</a>, and he also pointed to Kevin Hemenway&#8217;s tutorial on <a href="/web/20110911235036/http://www.disobey.com/detergent/2002/extendingrss2/">Extending RSS 2.0 with namespaces</a>.</p>
+
+<p>When Sam and I first wrote the <a href="/web/20110911235036/http://feeds.archive.org/validator/">RSS validator</a>, <a href="/web/20110911235036/http://scriptingnews.userland.com/backissues/2002/10/23#markAndSam">Dave Winer praised it (and us)</a> and thanked us both privately and publicly for <q>making a very positive contribution to the success of RSS</q>.</p>
+
+<p>How times change.</p>
+
+<p>Nowadays, <a href="/web/20110911235036/http://www.docuverse.com/blog/donpark/2003/06/23.html#a615">namespaces are funky</a>, and <a href="/web/20110911235036/http://backend.userland.com/2003/06/14#a227">funky is wrong</a>, because <a href="/web/20110911235036/http://blogs.law.harvard.edu/bloggingFormatsProtocolsMay2003">everyone must do RSS exactly as UserLand does</a>.  The RSS validator is now known as <a href="/web/20110911235036/http://www.bradchoate.com/past/001639.php">Mark and Sam&#8217;s validator</a>, where Mark and Sam are <a href="/web/20110911235036/http://philringnalda.com/blog/2003/06/say_it_loud_im_funky_and_im_proud.php#006367">grand arbiters making lots of value judgements</a> that people should <q>be on our case about</q>.</p>
+
+<p>And people wonder why I invented <a href="/web/20110911235036/http://diveintomark.org/archives/2003/04/21/whats_your_winer_number.html">Winer Numbers</a>.</p>
+
+<p>Oh, and just yesterday I learned that 99% of the webloggers in the world <a href="/web/20110911235036/http://scriptingnews.userland.com/2003/06/25#theLizardBrainOfRss">are using <code>link</code> incorrectly</a>, including me.  We&#8217;ve all been happily using <code>link</code> as a permalink, but apparently <a href="/web/20110911235036/http://backend.userland.com/permalinksNewsAggregators">we should all be using <code>guid</code></a> as a permalink instead.  This, despite the fact that when I first designed my RSS 2.0 template for Movable Type, <a href="/web/20110911235036/http://scriptingnews.userland.com/backissues/2002/09/26#When:7:01:56AM">Dave specifically praised me for using <code>guid</code> not as a permalink</a>.</p>
+
+<p>I can already anticipate the question from the engineers in the audience.  <q>And what of feeds that define both a <code>link</code> and a <code>guid</code>-as-a-permalink,</q> I hear them cry.  <q>Which one should you use?</q>  Pesky engineers, always thinking of edge cases.  Well, the <a href="/web/20110911235036/http://backend.userland.com/rss">RSS 2.0 specification</a> doesn&#8217;t say.  This is not a rhetorical question either; UserLand&#8217;s <a href="/web/20110911235036/http://partners.userland.com/nytrss/">New York Times RSS feeds</a> have both a <code>link</code> and a <code>guid</code>, but they&#8217;re different.  Either <em>could</em> be used as a permalink, but the <code>link</code> is better (because it contains extra parameters in the query string that allow the full article to be read without an NYT login cookie).  How do I know this?  Because I looked at the feed and figured it out.  How would a program know this?  Umm&#8230;</p>
+
+<p>It is also worth noting that, as of this writing, <a href="/web/20110911235036/http://www.scripting.com/rss.xml">Dave&#8217;s RSS feed</a> uses <code>guid</code>s incorrectly.  They claim to be permalinks, but they don&#8217;t point to the permanent link of the item <a href="/web/20110911235036/http://ken.coar.org/burrow/index?entry=485">because of timezone differences in the URL fragment</a>.  Presumably this is a temporary and easily correctable bug, but since Dave&#8217;s feed eschew <code>link</code> entirely, that leaves consumers with no working permalinks at all.</p>
+
+<p>Finally, there is an effort underway by otherwise intelligent people like <a href="/web/20110911235036/http://www.bradchoate.com/">Brad Choate</a> to <a href="/web/20110911235036/http://www.bradchoate.com/past/001639.php">make a new RSS 2.0 template for Movable Type</a> that <a href="/web/20110911235036/http://www.thereisnocat.com/funkidator/">is not funky</a> (<a href="/web/20110911235036/http://www.thereisnocat.com/showme490.html">whatever that means</a>).  But amid all the confusion, Brad&#8217;s been reduced to saying that his output <q cite="http://www.bradchoate.com/past/001639.php">is valid, both by Mark and Sam&#8217;s validator and UserLand&#8217;s&#8230; but the <em>real</em> RSS 2.0 validator &#8212; namely Dave Winer &#8212; will have to let me know if I&#8217;ve got it right.</q></p>
+
+<p>Thank you, Brad.  Thank you for proving exactly why we need a new format that is <a href="/web/20110911235036/http://www.tbray.org/ongoing/When/200x/2003/06/23/SamsPie">vendor-neutral,  freely extensible, and thoroughly specified</a>.  I couldn&#8217;t have said it better myself.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Fifty three comments here (<a href=/web/20110911235036/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-3177"><p>Mark, I never said &#8220;namespaces are funky&#8221;.  If note the funky examples, there were few namespace qualified elements which I didn&#8217;t put a &#8216;frowny&#8217; on.  My bone was only with elements that &#8216;replace&#8217; existing elements.  Also, I don&#8217;t completely agree with Dave on the &#8216;link&#8217; versus &#8216;guid&#8217; issue.  Anyway, it&#8217;s great too see that changes are on the way and a high-five on ((Echo)).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.docuverse.com/blog/donpark/' rel='external nofollow' class='url'>Don Park</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3177" title="June 26, 2003 @ 2:46 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3178"><p>Re:  &lt;link&gt; vs &lt;guid&gt;:</p>
+<p>1) Here is how the RSS 2.0 spec defines the &lt;link&gt; element of &lt;item&gt;: &#8220;The URL of the item.&#8221;  I don&#8217;t know how I can interpret that as meaning anything besides that &lt;link&gt; is intended for the permalink for the &lt;item&gt;.</p>
+<p>2) &#8220;&#8230; link should be used only to link to the article being described by the post.&#8221;  This presumes that every weblog entry describes an external link, and only one link at that.  I should think that weblogs have evolved past the point where every entry simply consisted of link + commentary.  Most of my weblog entries include zero links.  This is not unusual.</p>
+<p>To digress a little, I&#8217;m sure that the RSS 2.0 spec is better than anything that I can come up with, but I&#8217;m afraid that I have to agree with everyone who thinks that it is underspecified.  Besides this new weirdness with &lt;link&gt;, my main gripes are 1) handling of relative URLs is undefined (I don&#8217;t appreciate having to specify fully qualified URLs in my weblog posts because I like writing portable XHTML), and 2) no explicit provisions are made for including *both* the full text of a post and an excerpt/description.  To meet the current expectations of RSS consumers, an RSS feed should always include an abbreviated description, and *optionally* the full text.</p>
+<p>Rant about the deliberate vagueness of &#8220;funky&#8221; RSS deleted.  Suffice it to say that this complete outsider to the world of RSS gives his unqualified support to the Echo/Pie effort.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.chompy.net/blogs/jacob/' rel='external nofollow' class='url'>jacob</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3178" title="June 26, 2003 @ 3:06 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3179"><p>Ah, I see that &lt;link&gt; vs. &lt;guid&gt; has already been discussed on Sam Ruby&#8217;s blog&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.chompy.net/blogs/jacob/' rel='external nofollow' class='url'>jacob</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3179" title="June 26, 2003 @ 3:27 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3217"><cite><a href='/web/20110911235036/http://www.aroundmyroom.com/mt/archives/week_2003_06_22.html#001822' rel='external nofollow' class='url'>AroundMyRoom</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-3218"><cite><a href='/web/20110911235036/http://www.aroundmyroom.com/mt/archives/week_2003_06_22.html#001822' rel='external nofollow' class='url'>AroundMyRoom</a></cite>&#160;(trackback)</li>
+<li id="comment-3180"><p>Since &#8216;funky&#8217; is the geek-word of the month, i want to protest against &#8216;funky (X)HTML&#8217;. </p>
+<p>If Funky RSS comes from using namespaces to overwrite  native features of the spec, does that mean that HTML table-based layouts are funky even they are validating?</p>
+<p>what about people who are using divs and spans to replace ps and other appropiate elements (<a href="/web/20110911235036/http://www.adventcode.net/),"><a href="/web/20110911235036/http://www.adventcode.net/" rel="nofollow">http://www.adventcode.net/</a>),</a> is this funky HTML or what?</p>
+<p>(here&#8217;s hoping to start my very own holy war :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://simplelogica.net/logicola/' rel='external nofollow' class='url'>mort</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3180" title="June 26, 2003 @ 4:56 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3181"><p>mort, No and No to your questions.  A bikini stretched too far is no longer a bikini. (?!?)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.docuverse.com/blog/donpark/' rel='external nofollow' class='url'>Don Park</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3181" title="June 26, 2003 @ 5:59 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3182"><p>This is absolutely why it is necessary to create something new. RSS is a bloody horrible mess, and its self-styled &#8216;Godfather&#8217; is making up new rules that make it messier, instead of clearing it up.</p>
+<p>Echo/Pie/Whatever (I like Echo) is a good idea. An easy-to-understand, consensus standard that is supported by the blogging tools and aggregators and backed by a validator will put an end to all this squabbling and allow bloggers to concentrate on generating content instead of just generating.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://jessey.net/blog/' rel='external nofollow' class='url'>Simon Jessey</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3182" title="June 26, 2003 @ 8:44 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3183"><p>I&#8217;ve been reading this site quietly for quite some time now, never daring to join in on the discussion. But now I need to contribute something.</p>
+<p>When I first learnt about RSS it was some years ago, and I thought &#8220;Hey, cool, with this you can include on your page headlines from other sites you like, neat&#8221; and I played around with it.</p>
+<p>Then there came aggregators, and with them people can read your site without actually visiting them (never liked that, to impersonal), that&#8217;s great for those who want to use it.</p>
+<p>All of this is *good* progress, but now.. there are what, 6-7 formats available? And every time someone in this community tries to do something about this inconsistency, you plunge into a flame war.</p>
+<p>I agree with Mark that this recent forking shows exactly why a new format is needed. A format which is made by the community, for the community (clich�, but it&#8217;s what is needed).</p>
+<p>Now I urge everybody to join in on this great innovition, and help out with creating a format to end all this silliness.</p>
+<p class=sig>&#8212;&#8201;<cite>�lafur Sverrir</cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3183" title="June 26, 2003 @ 8:54 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3219"><cite><a href='/web/20110911235036/http://vowe.net/archives/003434.html' rel='external nofollow' class='url'>vowe dot net</a></cite>&#160;(trackback)</li>
+<li id="comment-3184"><p>Simon: Echo is &#8211; as of yet &#8211; vapourware. It may become something really cool but praising it in the present tense is stretching it a bit far IMO ;-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://mar.anomy.net/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3184" title="June 26, 2003 @ 10:12 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3185"><p>Yes. On all points and everything you said, Mark. I especially agree that Brad does, directly or indirectly, demonstrate why there must be, _must be_ a new way of doing things, or we&#8217;ll continue this same old thing, again, and again. And again.</p>
+<p>And again.</p>
+<p>One syndication feed format. Not one &#8216;RSS&#8217;. One syndication feed format.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://weblog.burningbird.net/' rel='external nofollow' class='url'>Shelley Powers</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3185" title="June 26, 2003 @ 10:48 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3186"><p>You, I&#8217;d just like to take this moment to say that I think is a great idea and all, but in the midst of the Dave bashing, I&#8217;d like to point out that on the surface he is open to a new format, and if he adopts it and runs with it, we should all take note of him walking the walk in terms of supporting standards.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.aquadoodiloop.com/' rel='external nofollow' class='url'>Pat</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3186" title="June 26, 2003 @ 11:05 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3187"><p>Pat: +1</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.intertwingly.net/blog/' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3187" title="June 26, 2003 @ 11:09 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3220"><cite><a href='/web/20110911235036/http://www.dashes.com/links/archives/20030622.php#006549' rel='external nofollow' class='url'>anil dash's daily links</a></cite>&#160;(trackback)</li>
+<li id="comment-3188"><p>I don&#8217;t know if vapour-ware is the right hole to peg Echo in; its an idea in rapid development. It it remains simply sensible I plan on implementing Echo in a Python-based CMS I&#8217;m building.</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3188" title="June 26, 2003 @ 12:22 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3189"><p>Yup, that&#8217;s a great definition of vaporware.  ;)</p>
+<p>It&#8217;s fine to stay on top of current developments and plan for the future.  But if, for example, you said &#8220;I plan on implementing Echo in the Python-based CMS I&#8217;m building, to the exclusion of all other formats, protocols, and APIs&#8221;, then I&#8217;d say you were nuts.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3189" title="June 26, 2003 @ 12:29 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3190"><p>To the exclusion of all others&#8230; sounds like marriage vows! Been there&#8230; doing that. :)</p>
+<p>It is my hope that Echo progresses quickly to the point where tool developers are keen to support it. Momentum is everything&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3190" title="June 26, 2003 @ 12:34 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3191"><p>Pat: yes, fine, great.  The initiative is open to all contributors.</p>
+<p>However, given his history with RSS, we would be foolish not to be cautious and diligent.  An concerted and ongoing effort must be made to make sure he does not co-opt the format and later claim that he is in some special position to say how competitors can use it.  (cf <a href="/web/20110911235036/http://blogs.law.harvard.edu/bloggingFormatsProtocolsMay2003">http://blogs.law.harvard.edu/bloggingFormatsProtocolsMay2003</a> )</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3191" title="June 26, 2003 @ 12:38 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3192"><p>Yeah, Dave&#8217;s recent comments abut link/guid rubbed me the wrong way, too. The RSS 2.0 spec says: &#8220;There are no rules for the syntax of a guid. [....] isPermaLink is optional, its default value is true. If its value is false, the guid MAY NOT BE ASSUMED TO BE A URL, or a url to anything in particular.&#8221; (emphasis mine).</p>
+<p>Because guid might not be a permalink, or even a URL, I was hesitant to use it as such. Originally, I used link as my permalink (for some of the reasons that jacob mentioned above), and I used a isPeramaLink=&#8221;false&#8221; guid which was hashed from some my my post data, just because I could. But I found that some aggregators were trying to use the guid as a permalink anyhow, so now I put my permalink in both the link and guid elements. Bah.</p>
+<p>In addition, I chose to use dc:creator over RSS 2.0&#8242;s author in my items, because the author of a particular item on my blog may not wish to make his or her email address public.</p>
+<p>Funkadator says my feed is stinky-cheese funky, even though dc:author on items is my only namespaced element&#8230;.</p>
+<p>Funky.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://dougal.gunters.org/' rel='external nofollow' class='url'>Dougal</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3192" title="June 26, 2003 @ 1:03 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3221"><cite><a href='/web/20110911235036/http://earthlingsoft.net/ssp/blog/archives/week_2003_06_22.html#000472' rel='external nofollow' class='url'>Quarter Life Crisis</a></cite>&#160;(trackback)</li>
+<li id="comment-3193"><p>What is it that you&#8217;re angry about now Mark? I can&#8217;t figure it out.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.scripting.com/' rel='external nofollow' class='url'>Dave Winer</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3193" title="June 26, 2003 @ 2:14 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3222"><cite><a href='/web/20110911235036/http://www.decafbad.com/blog/tech/so_like_i_was_saying.html' rel='external nofollow' class='url'>l.m.orchard</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-3223"><cite><a href='/web/20110911235036/http://www.maximumaardvark.com/archives/2003/06/26.html#001910' rel='external nofollow' class='url'>Maximum Aardvark</a></cite>&#160;(trackback)</li>
+<li id="comment-3195"><p>Mark, I think perhaps I read too much into your &#8220;A Fresh Start&#8221; article a few days ago.  I had assumed you meant a fresh start from a divisiveness perspective as well as a technical perspective, but your two recent posts make me think I was wrong in assuming the former.  I think a new vendor-neutral format is a great idea, but only if it means the number of RSS formats decreases down to one (ideally) rather than just increases by one.  It seems like &#8220;a fresh start&#8221; shouldn&#8217;t be kicked off by carrying over the divisive wedges from the old battles.</p>
+<p>I&#8217;ll go back to lurking now.  I&#8217;m clearly out of my depth.  It&#8217;s just the way it looks from here.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.biancolo.com/' rel='external nofollow' class='url'>Jim Biancolo</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3195" title="June 26, 2003 @ 3:10 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3224"><cite><a href='/web/20110911235036/http://www.maximumaardvark.com/archives/2003/06/26.html#001910' rel='external nofollow' class='url'>Maximum Aardvark</a></cite>&#160;(trackback)</li>
+<li id="comment-3196"><p>Without speaking for anybody but me; I&#8217;m seeing Echo as deprecation of other syndication formats; when most of the major aggregators support Echo, I plan on dropping regular RSS feeds.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3196" title="June 26, 2003 @ 3:26 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3225"><cite><a href='/web/20110911235036/http://www.thirdsuperpower.com/previously/2003/06/26/16/04/index.html' rel='external nofollow' class='url'>Third Superpower</a></cite>&#160;(trackback)</li>
+<li id="comment-3198"><p>Dave, most of the arguments, technical and otherwise, seem to revolve around you in one way or another. I&#8217;m just tired of arguing, reading tea-leaves, and having technical arguments turn into political ones.</p>
+<p>So, my personal position is that beyond a certain point, I don&#8217;t care whose fault it is, or who started it. Whether you&#8217;re starting the arguments, are provoking arguments from other people, or whether you are simply attracting attention from argumentative people unconciously, I just don&#8217;t care. It&#8217;s observably true that the arguments in this space are happening around you more than anywhere (or anyone) else.</p>
+<p>The idea of simple XML syndication of content (which you&#8217;ve done so much to promote) has to move forward, and it seems as though RSS 2.0 can&#8217;t do so, in part becuase people feel you are holding it back (it doesn&#8217;t matter whether you are or not if enough people feel you are). For a while, namespaces seemed to provide a safe space to experiment and move forward, but all this &#8216;funky&#8217; business has people looking over their shoulders again. It&#8217;s not a nice feeling, wondering if the ground under your feet is going to drop away.</p>
+<p>A new effort, free (for the moment) of legacy issues and arguments, seems like it will provide a way forward, at least for a while. It&#8217;s possible that this effort will also get bogged down, of course. If so, I suppose we&#8217;ll just have to dig a brand new hole again and fill in this old one.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3198" title="June 26, 2003 @ 6:29 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3199"><p>Dave: Mark&#8217;s comment was snarky and unnecessary. But you&#8217;re a grown man, and if one little remark passes your &#8220;unbelievably cruel&#8221; validator, it might be time to seriously reconfigure your emotional firewall.</p>
+<p>Mark said something. Punt on it if you like. Take the high road and thank him for his time. Or flame him to a cinder. But please (and that&#8217;s a sincere &#8220;please&#8221;) save the entire universe of online communication the disservice of yet another adult trying to make other people responsible for his feelings. Explain and explore your feelings, rather than using their surface representations as interpersonal weapons of mass distraction.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://admin.support.journurl.com/' rel='external nofollow' class='url'>Roger Benningfield</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3199" title="June 26, 2003 @ 6:31 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3200"><p>Mark:<br />
+I was not able to comment directly to &#8216;Mort&#8217; he had no email at his web site. This is a bit off topic but I would like to respond.<br />
+Mort:<br />
+This was code written to reconsider the idea of how a web page is constructed. In the past I have written XHTML 1.1 strict hat has validated. No doubt the new code will validate when I am finished. Its goal was to completely separate content from construct. Certain HTML tags have their own rules which is fine. Mark for example uses paragraph tags. For the record I don&#8217;t think tables are bad nor is the use of traditional HTML tags that emulate typesetting. The goal was to give mixed information the straightest line possible to output. I come from a audio electronics background. The best audio comes from a source that is not cluttered in the signal path with redundant processing.It seems that HTML and CSS overlap in certain respects. Doing what I did just made the XML/XSL CSS and HTML explict. Now they have their own jobs and conflict can be avoided. As a result the layout of the page can be flexable without running into conflicts between CSS and HTML. Or as Mark has aptly put it &#8220;Tag soup&#8221; this carries that concept to the edge. It is not finished. When it is the CSS you see know will also be optimized. So for the record: George Clinton is funky, the Parliments are funky, Bootsy Collins is funky. Writing explict minimal CSS and XHTML is not.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.adventcode.net/' rel='external nofollow' class='url'>Don Ulrich</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3200" title="June 26, 2003 @ 6:58 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3201"><p>&#8212;Dave,&#8212;<br />
+&#8212;  Truth Hurts.&#8212;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.kuro5hin.org/user/Carnage4Life/diary' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3201" title="June 26, 2003 @ 7:07 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3194"><p>Dave, I&#8217;m not mad.  I&#8217;m not even angry.  The community simply wants a format that is vendor-neutral, freely extensible, and thoroughly specified.  I am merely stating my opinion that RSS 2.0 is none of these things, and that you are the reason it is none of these things.</p>
+<p>You are the damage we are routing around.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3194" title="June 26, 2003 @ 2:34 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3202"><p>Emotional Firewall.  I gotta remember that one.  Precious.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.docuverse.com/blog/donpark/' rel='external nofollow' class='url'>Don Park</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3202" title="June 26, 2003 @ 7:41 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3203"><p>To, uh, &#8216;echo&#8217; another poster, I&#8217;m very concerned that Echo will be an addition to the pile of formats that blogging tools and newsreaders must support, rather than a solution to the growing problem of too many formats, not enough validators/coders/bloggers/whatever.</p>
+<p>(I&#8217;m also not fond of Echo as a name.  I prefer &#8216;BS&#8217; &#8212; &#8220;Blogging Syndication&#8221; &#8212; because I like its inherent snarkiness.)</p>
+<p>I&#8217;m not suggesting BSEcho should be backwards-compatible with every syndication format that exists, nor am I suggesting that it must be so perfect and perfectly expandable that the whole thing won&#8217;t need to be scrapped in a few years when the cyber (User)landscape has changed again.  </p>
+<p>Rather, I&#8217;m suggesting that it has to be easy.  *Really* easy.  Easier than any single flavor of RSS is now.  It has to be so easy and straightforward that non-programmers can learn it as fast as they learned html in the early days.  </p>
+<p>&#8220;How did they make that text &lt;blink>?  Oh, *that&#8217;s* how.&#8221;      This should translate into &#8220;How did he syndicate that site?  Oh, *that&#8217;s* how.&#8221;  </p>
+<p>Namespaces are confusing.  XML is confusing.  The term &#8216;guid&#8217; is confusing.  Nesting is confusing.  I don&#8217;t doubt that you can explain it to the average Joan in a way that she can understand, but that&#8217;s not the point.  The point is that the hallmark of future Internet success is making it so easy, you don&#8217;t need to work to learn it &#8212; you just need to play.  Regardless of skill level.  </p>
+<p>If we&#8217;re gonna make a new format &#8212; and we should &#8212; let&#8217;s make it a good one for everybody.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://thefriedmans.net/blog' rel='external nofollow' class='url'>Lex Friedman</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3203" title="June 26, 2003 @ 8:03 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3197"><p>&#8220;You are the damage we are routing around.&#8221;</p>
+<p>That is unbelievably cruel.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.scripting.com/' rel='external nofollow' class='url'>Dave Winer</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3197" title="June 26, 2003 @ 5:29 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3205"><p>Dave, my comment policy is quite clear, and linked from every comment form.  Flames in comments are crossed out, and off-topic comments are deleted.  This is not open to discussion; any further meta-discussion about the comment policy will be deleted as off-topic.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3205" title="June 26, 2003 @ 10:53 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3206"><p>Dave, your users are not permitted to modify your validator and redistribute their changes, therefore your validator is closed source.</p>
+<p>On a separate and completely unrelated issue, your validator is also obsolete and unmaintained.  It gives misleading results that harm and confuse the users you claim you want to help.  You would do the RSS community a great service to formally and publicly deprecate it and point your users to our validator instead.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3206" title="June 26, 2003 @ 11:00 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3226"><cite><a href='/web/20110911235036/http://www.hutteman.com/weblog/2003/06/26-104.html' rel='external nofollow' class='url'>public virtual MemoryStream</a></cite>&#160;(trackback)</li>
+<li id="comment-3204"><p><del>I&#8217;m not going to respond to the speeches, this is about formats and protocols, not your personality or mine. Thank Tim Bray for kicking that bit off, I ain&#8217;t going to forget the bell he tied to my tail here. By the way, Mark keeps deleting and restoring posts.</del></p>
+<p>The UserLand validator is not closed source, the source is provided to Radio and Frontier licensees, it&#8217;s the RSS compiler, xml.rss.compileService. Full source included. <del>Maybe Mark will let this comment stay. In the meantime, I hope you all get some time away from the keyboard, the conversation here is getting pretty damned stale, imho, ymmv, etc etc.</del></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.scripting.com/' rel='external nofollow' class='url'>Dave Winer</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3204" title="June 26, 2003 @ 10:32 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3207"><p>&#8220;You would do the RSS community a great service to formally and publicly deprecate it and point your users to our validator instead.&#8221;</p>
+<p>&#8230; or, alternatively, fix it and bring it up to date. Right Mark? That is an option?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3207" title="June 27, 2003 @ 4:00 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3209"><p>Michael: sure, competing is always an option.  You can even use our >350 test cases; they&#8217;re open source too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3209" title="June 27, 2003 @ 10:21 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3210"><p>This puppy ain&#8217;t about to get off the porch and involve himself in a squabble amongst the big dogs. This puppy is going to sit on the porch and wait for the smart guys (and gals) to cook up some sort of format that I can implement.</p>
+<p>See, that&#8217;s what I care about. I care about something that is going to work now and a year from now. I care about simplicity. I care about transparency. I have three feeds for an unread weblog now, am I to add a fourth?</p>
+<p>I couldn&#8217;t care less about the politics, the history &#8212;or the axes you all seem so insistent on sharpening to a razors edge&#8211; all to better cut each other off at the knees with&#8212;. All I want, from the people I look to for technical progress, is a consensus. I don&#8217;t think I&#8217;m alone in this.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://fultonchain.net/' rel='external nofollow' class='url'>Al</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3210" title="June 27, 2003 @ 1:09 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3208"><p><del>Mark, you leave out imho in your broad sweeping and often factually incorrect admonitions and lectures. Just a protocol observation. Imho, you would do a lot to help the RSS community if you learned the value of humility, the frailty of the human condition, and the fact that Mark Pilgrim is a human being just like the rest of us.</del></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.scripting.com/' rel='external nofollow' class='url'>Dave Winer</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3208" title="June 27, 2003 @ 8:57 am"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3211"><p>Dave: Surely IMHO is to be taken for granted in most conversations? I&#8217;m definitely not going to speak in IYHO, anyway.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www.tecknik.net/digiboy/' rel='external nofollow' class='url'>Marcus</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3211" title="June 27, 2003 @ 3:12 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3212"><p>Dave, you&#8217;re making your own sweeping generalization about Mark posting factually incorrect material. Mark has been pretty darn diligent about making factual corrections to his postings here (and elsewhere, AFAICT), and taking those corrections from just about anyone, as long as they&#8217;re backed up by something.</p>
+<p>It&#8217;s possible that Mark could do a better job in distinguishing fact from opinion, but you won&#8217;t get anywhere without a specific example.</p>
+<p>And that&#8217;s about as far off topic (and as meta) as I&#8217;m willing to get in Mark&#8217;s comments.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://www/michaelbernstein.com' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3212" title="June 27, 2003 @ 3:35 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3213"><p>Re: &#8220;All I want, from the people I look to for technical progress, is a consensus.&#8221;</p>
+<p>Al, it is important to note that Dave&#8217;s idea of consensus is &#8220;everyone must do it my way&#8221;.  This is not a flame, it is a quote:</p>
+<p>&#8220;&#8221;"<br />
+The same philosophy dictates an end to the disagreement over RSS. If they want respect for the formats and protocols they implement, they must do RSS exactly as UserLand does.<br />
+&#8220;&#8221;"</p>
+<p><a href="/web/20110911235036/http://blogs.law.harvard.edu/bloggingFormatsProtocolsMay2003">http://blogs.law.harvard.edu/bloggingFormatsProtocolsMay2003</a></p>
+<p>Please read the full article and decide for yourself where the problem lies.  Don&#8217;t forget to also read this article:</p>
+<p><a href="/web/20110911235036/http://www.evhead.com/archives/2003_05_10_archive_default.asp">http://www.evhead.com/archives/2003_05_10_archive_default.asp</a></p>
+<p>And this:</p>
+<p><a href="/web/20110911235036/http://scriptingnews.userland.com/2003/06/08#standards">http://scriptingnews.userland.com/2003/06/08#standards</a></p>
+<p>And this:</p>
+<p><a href="/web/20110911235036/http://backend.userland.com/2003/06/14#a227">http://backend.userland.com/2003/06/14#a227</a></p>
+<p>And this:</p>
+<p><a href="/web/20110911235036/http://scriptingnews.userland.com/2003/06/15#donQuixote">http://scriptingnews.userland.com/2003/06/15#donQuixote</a></p>
+<p>Tired yet?  Don&#8217;t stop until you&#8217;ve read all of these:</p>
+<p><a href="/web/20110911235036/http://bitsko.slc.ut.us/cgi-bin/rss-links">http://bitsko.slc.ut.us/cgi-bin/rss-links</a></p>
+<p>And by the time you&#8217;re done reading all of that, and have clawed your eyes out of your skull in an attempt to PLEASE MAKE IT ALL STOP, we will have reached a consensus, here:</p>
+<p><a href="/web/20110911235036/http://www.intertwingly.net/wiki/pie/">http://www.intertwingly.net/wiki/pie/</a></p>
+<p>Happy reading!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3213" title="June 27, 2003 @ 4:12 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3214"><p>I&#8217;ve read it all now, Mark.  Thanks for assembling the links.</p>
+<p>The issue, at its core, is differing goals and intentions.  </p>
+<p>Pie/Echo/Pubs/etc has three things going for it:</p>
+<p>1. A vocal, enthusiastic, supportive community sprouting up around it</p>
+<p>2. An almost-naive innonce and freshness of purpose &#8212; meaning, like a college-grad, it&#8217;s got that clean, bright-eyed and bushy-tailed confidence behind it.</p>
+<p>3. It&#8217;s clearly &#8212; at this stage &#8212; not for profit.</p>
+<p>There hasn&#8217;t been a failure of RSS any more than there&#8217;s been a failure of ThinkPASCAL or Commodore 64s.  Times, desires, and people change.  And the technology matches.</p>
+<p>RSS and EchoPieQuasimodo probably won&#8217;t be inter-compatible.  Just like MSN, Yahoo! Messenger, and AIM.  And then tools like the Trillian will sprout up, everyone will use her preferred system (whether it&#8217;s AIM, RSS 2.0, or something else), and the tools (e.g., aggregators) will take care of the rest.  </p>
+<p>Is that a fair way to anticipate &#8212; and even hope &#8212; this will progress?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://thefriedmans.net/blog' rel='external nofollow' class='url'>Lex Friedman</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3214" title="June 27, 2003 @ 5:09 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3227"><cite><a href='/web/20110911235036/http://www.sunpig.com/martin/archives/2003/06/28/rss_midsummer_madness/index.html' rel='external nofollow' class='url'>Legends of the Sun Pig</a></cite>&#160;(trackback)</li>
+<li id="comment-3215"><p>Why not just have an (optional) &#8220;permalink&#8221; attribute in Echo?  That way there will never be any more confusion about where to put a permanent link to a blog or news entry.</p>
+<p>I am so sick of hearing about RSS though.  You&#8217;d think it&#8217;s the most important story in the world if you read most blogs.  I&#8217;ll be glad when Echo is released.</p>
+<p>Also, if a (Echo or RSS) validator chokes because of something in the content of the blog description (like curly quotes or html), then that is a problem with the standard, not the user.  The user should be able to type whatever they want for a blog entry.  The software they use to create the Echo or RSS feed should wrap the content appropriately.  Currently there is no appropriate way to do this in the RSS standard.  There will be in Echo, according to some post at the movabletype blog.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3215" title="June 29, 2003 @ 4:12 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3228"><cite><a href='/web/20110911235036/http://www.bigpinkcookie.com/archives/005396.html' rel='external nofollow' class='url'>Big Pink Cookie</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-3229"><cite><a href='/web/20110911235036/http://molelog.molehill.org/blox/Computers/Internet/Web/RSS/RealValidator.writeback' rel='external nofollow' class='url'>Mt. Molelog</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-3216"><p>Actually, I believe (not-)Echo will have a required permalink element.</p>
+<p><a href="/web/20110911235036/http://www.intertwingly.net/blog/1506.html">http://www.intertwingly.net/blog/1506.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911235036/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911235036/http://diveintomark.org/archives/2003/06/26/will_the_real_rss_validator_please_stand_up#comment-3216" title="July 2, 2003 @ 2:33 pm"><img alt="#" src=/web/20110911235036im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110911235036/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110911235036/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110911235036/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110911235036/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110911235036/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.415 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 16:23:34 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:50:36 Sep 11, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:13:46 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

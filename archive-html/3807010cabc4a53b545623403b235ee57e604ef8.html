@@ -1,0 +1,799 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>How to block spambots, ban spybots, and tell unwanted robots to go to hell [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806090713/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806090713/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806090713/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806090713/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806090713im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806090713/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2" title="NewsMonster day 2">
+<link rel=next href="/web/20110806090713/http://diveintomark.org/archives/2003/03/12/update" title="Update">
+<link rel=up href="/web/20110806090713/http://diveintomark.org/archives#p1282" title="February 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; How to block spambots, ban spybots, and tell unwanted robots to go to hell Comments Feed" href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806090713/http://diveintomark.org/' />
+<link rel='prev' title='NewsMonster day 2' href='/web/20110806090713/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2' />
+<link rel='next' title='Update' href='/web/20110806090713/http://diveintomark.org/archives/2003/03/12/update' />
+<link rel='canonical' href='/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell' />
+<link rel='shortlink' href='/web/20110806090713/http://diveintomark.org/?p=1282' />
+<meta name="description" content="I fight back against telemarketers who abuse my phone, and now I'm fighting back against robots who abuse my web site.">
+<meta name="keywords" content="apache,howto,htaccess,robotstxt,spam">
+<link href="/web/20110806090713cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806090713/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/02\/26\/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806090713" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112920/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:07:13 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110924025619/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110718035636/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" title="3:56:36 Jul 18, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:07:13 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110810193806/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" title="19:38:06 Aug 10, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615031505/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:07:13 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120918202527/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Sep 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806090713*/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>181 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">18 Jun 05 - 18 Sep 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000001000000_2006:-1:001928852225_2007:-1:653213111323_2008:-1:322243fe8212_2009:-1:010000000000_2010:-1:102221000011_2011:7:000110134010_2012:-1:201001001000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806090713/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806090713/http://diveintomark.org/archives#p1282">February 26, 2003</a> &#8227;
+<h2>How to block spambots, ban spybots, and tell unwanted robots to go to hell</h2> (<a href="/web/20110806090713/http://diveintomark.org/tag/apache" rel="tag">apache</a>, <a href="/web/20110806090713/http://diveintomark.org/tag/howto" rel="tag">howto</a>, <a href="/web/20110806090713/http://diveintomark.org/tag/htaccess" rel="tag">htaccess</a>, <a href="/web/20110806090713/http://diveintomark.org/tag/robotstxt" rel="tag">robotstxt</a>, <a href="/web/20110806090713/http://diveintomark.org/tag/spam" rel="tag">spam</a>)</div>
+<p>I recently woke up to the staggering level of abuse occurring on this web site.  This is old news to some, but we all wake up at different times.  I&#8217;m talking, of course, about automated robots and spiders.  They come at all hours, they take as much as they can, and they leave me with the (bandwidth) bill.  They do so without respecting the <a href="/web/20110806090713/http://www.robotstxt.org/wc/exclusion.html">Robot Exclusion Standard</a>, now almost 10 years old.  Some come to gather email addresses, which are then sold to spammers; some come to steal images or other content, and republish it without my consent; some come to spy on me and sell information to their clients about perceived violations of copyright, trademark, or some nebulous concept of brand identity.</p>
+
+<p>None of them act in my best interest, or in the interests of my readers.</p>
+
+<p>Some will say that the Internet is a public place, and if I don&#8217;t want something abused, I shouldn&#8217;t put it on the Internet.  Well, that&#8217;s true.  It is also true that if I don&#8217;t want to get mugged, I shouldn&#8217;t leave my house, and if I don&#8217;t want calls from telemarketers, I shouldn&#8217;t have a phone.  But I like leaving my house, I like having a phone, and I like having this web site.  I fight back against telemarketers who abuse my phone (<a href="/web/20110806090713/http://www.junkbusters.com/telemarketing.html">you can too</a>), and now I&#8217;m fighting back against robots who abuse my web site.</p>
+
+<p>I started this site less than two years ago.  Last month, it totaled about 1600 pages.  (That number is actually much larger now, due to some site-wide structural changes.)  Keep that number in mind as you read on.</p>
+
+<p>All of these techniques require that you have <code>mod_rewrite</code> installed, and that you have privileges to create your own rewrite rules in your own <code>.htaccess</code> file.  If you&#8217;re not sure what this means or whether you have those privileges, check with your system administrator.  The <q>further reading</q> list at the end also suggests some alternate techniques that do not require <code>mod_rewrite</code>.</p>
+
+<p>First of all, turn on <code>mod_rewrite</code> and set up some initial parameters by adding these lines to your <code>.htaccess</code> file:</p>
+
+<blockquote>
+<p><code>Options +FollowSymlinks<br />
+RewriteEngine On<br />
+RewriteBase /</code></p>
+</blockquote>
+
+<p>Now, let&#8217;s familiarize ourselves with a few of our enemies:</p>
+
+<ul>
+
+<li><p>A program that shows up in access logs with the name <samp>EmailSiphon</samp>, whose primary use is to rip through as many web sites as possible looking for email addresses, and sell them to spammers.  Various people running this spambot hit me 143 times in January.  I have banned it by User-Agent.</p>
+<p><strong>Important note:</strong> I originally thought that the <samp>EmailSiphon</samp> User-Agent belonged to a retail product called <a href="/web/20110806090713/http://www.powersiphon.com/help/email_overview.asp">PowerSiphon</a>.  I was incorrect.  Here is correct information, straight from the company:</p>
+
+<blockquote>
+<p>By default, Power Siphon uses the same user agent as the installed version
+of IE that the user has. The reason being is that the downloaded content is
+intended to be used for off-line browsing on the user&#8217;s machine. Since many
+Web sites tailor their content based on the user agent, it is imperative
+that the user agent reflect the target browser. The Power Siphon product
+includes a custom browser based on the IE engine. The user can modify the
+user agent if they wish to target their content to a different browser.</p>
+</blockquote>
+
+<p>While the company admitted in private email that its PowerSiphon product <em>could</em> be used for harvesting email addresses, it&#8217;s not the culprit here, and I apologize for mixing up the two.</p>
+
+<p>OK, so back to <samp>EmailSiphon</samp>.  Whatever it is (I can&#8217;t find a home page), it <em>is</em> the culprit here, and here&#8217;s how to block it:</p>
+
+<blockquote>
+<p><code>RewriteCond %{HTTP_USER_AGENT} EmailSiphon<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+</li>
+
+<li><p><a href="/web/20110806090713/http://www.cyveillance.com/">Cyveillance</a> is a spybot that scours the web for copyright violations and <q>damaging information</q> on behalf of clients such as the RIAA and MPAA.  Their robot spoofs its User-Agent to look like Internet Explorer, and it completely ignores <code>robots.txt</code>.  This spybot hit me 448 times in January.  I have banned it by IP address.</p>
+<blockquote>
+<p><code>RewriteCond %{REMOTE_ADDR} "^63\.148\.99\.2(2[4-9]|[3-4][0-9]|5[0-5])$"<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+</li>
+
+<li><p>There is another email harvester which always claims to be referred from <code>http://www.iaea.org/</code>.  You may have seen this in your own referrer pages.  This spambot hit me 477 times in January.  I have banned it by referrer.</p>
+<blockquote>
+<p><code>RewriteCond %{HTTP_REFERER} iaea\.org<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+</li>
+
+<li><p>There is another email harvester which shows up in access logs with a User-Agent that includes the phrase <q><samp>Microsoft URL Control</samp></q> (the name of the underlying URL library, MSINET.OCX).  It fetches consecutive pages as quickly as possible and completely ignores <samp>robots.txt</samp>.  Various people running this spambot hit me 1341 times in January.  I have banned it by User-Agent.</p>
+<blockquote>
+<p><code>RewriteCond %{HTTP_USER_AGENT} "Microsoft URL Control"<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+</li>
+
+<li><p><a href="/web/20110806090713/http://www.nameprotect.com/">NameProtect</a> peddles their <q>online brand monitoring</q> to unsuspecting and gullible companies looking for people to sue.  Despite the claims on <a href="/web/20110806090713/http://www.nameprotect.com/botinfo.html">their robot information page</a>, they do not respect <code>robots.txt</code>; in fact, they spoof their User-Agent in multiple ways to avoid detection.  They hit me 2085 times in January.  I have banned them by User-Agent and IP address.</p>
+<blockquote>
+<p><code>RewriteCond %{REMOTE_ADDR} ^12\.148\.196\.(12[8-9]|1[3-9][0-9]|2[0-4][0-9]|25[0-5])$ [OR]<br />
+RewriteCond %{REMOTE_ADDR} ^12\.148\.209\.(19[2-9]|2[0-4][0-9]|25[0-5])$ [OR]<br />
+RewriteCond %{HTTP_USER_AGENT} NPBot<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+
+</li>
+
+<li><p><a href="/web/20110806090713/http://www.turnitin.com/static/index.html">Turnitin</a> peddles their <q>plagiarism prevention system</q> to <a href="/web/20110806090713/http://www.nd.edu/~observer/09302002/Viewpoint/3.html">draconian universities</a>.  Their <a href="/web/20110806090713/http://www.turnitin.com/robot/crawlerinfo.html">TurnitinBot</a> hit me a whopping 19,575 times in January.  I have not checked whether they respect <code>robots.txt</code>, and with these numbers, I really don&#8217;t care.  They&#8217;re sucking down over a gigabyte of data a month for no purpose that even remotely benefits me or any of my readers.  I have banned them by User-Agent and IP address.</p>
+<blockquote>
+<p><code>RewriteCond %{REMOTE_ADDR} ^64\.140\.49\.6([6-9])$ [OR]<br />
+RewriteCond %{HTTP_USER_AGENT} TurnitinBot<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+</li>
+
+</ul>
+
+<p>This is only a small sampling of what goes on on the public Internet every day.  In the course of researching this problem on <a href="/web/20110806090713/http://www.webmasterworld.com/">Webmaster World</a> and elsewhere, and examining my own access logs, I have identified 87 different spambots, spybots, and offline downloaders that treat my site like a five-dollar whore.  They are all unilaterally banned.</p>
+
+<blockquote>
+<p><code># User-Agents with no privileges (mostly spambots/spybots/offline downloaders that ignore robots.txt)<br />
+RewriteCond %{REMOTE_ADDR} "^63\.148\.99\.2(2[4-9]|[3-4][0-9]|5[0-5])$" [OR] # Cyveillance spybot<br />
+RewriteCond %{REMOTE_ADDR} ^12\.148\.196\.(12[8-9]|1[3-9][0-9]|2[0-4][0-9]|25[0-5])$ [OR] # NameProtect spybot<br />
+RewriteCond %{REMOTE_ADDR} ^12\.148\.209\.(19[2-9]|2[0-4][0-9]|25[0-5])$ [OR] # NameProtect spybot<br />
+RewriteCond %{REMOTE_ADDR} ^64\.140\.49\.6([6-9])$ [OR] # Turnitin spybot<br />
+RewriteCond %{HTTP_REFERER} iaea\.org [OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} ^[A-Z]+$ [OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} anarchie [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} Atomz [OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} cherry.?picker [NC,OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} "compatible ; MSIE 6.0" [OR] # spambot (note extra space before semicolon)<br />
+RewriteCond %{HTTP_USER_AGENT} crescent [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} "^DA \d\.\d+" [OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} "DTS Agent" [OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} "^Download" [OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} EasyDL/\d\.\d+ [OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} e?mail.?(collector|magnet|reaper|siphon|sweeper|harvest|collect|wolf) [NC,OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} express [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} extractor [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} "Fetch API Request" [OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} flashget [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} FlickBot [OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} FrontPage [OR] # stupid user trying to edit my site<br />
+RewriteCond %{HTTP_USER_AGENT} getright [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} go.?zilla [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} "efp@gmx\.net" [OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} grabber [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} imagefetch [OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} httrack [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} "Indy Library" [OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} "^Internet Explore" [OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} ^IE\ \d\.\d\ Compatible.*Browser$ [OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} "LINKS ARoMATIZED" [OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} "Microsoft URL Control" [OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} "mister pix" [NC,OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} "^Mozilla/4.0$" [OR] # dumb bot<br />
+RewriteCond %{HTTP_USER_AGENT} "^Mozilla/\?\?$" [OR] # formmail attacker<br />
+RewriteCond %{HTTP_USER_AGENT} MSIECrawler [OR] # IE's "make available offline" mode<br />
+RewriteCond %{HTTP_USER_AGENT} ^NG [OR] # unknown bot<br />
+RewriteCond %{HTTP_USER_AGENT} offline [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} net.?(ants|mechanic|spider|vampire|zip) [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} nicerspro [NC,OR] # spambot<br />
+RewriteCond %{HTTP_USER_AGENT} ninja [NC,OR] # Download Ninja OD<br />
+RewriteCond %{HTTP_USER_AGENT} NPBot [OR] # NameProtect spybot<br />
+RewriteCond %{HTTP_USER_AGENT} PersonaPilot [OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} snagger [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} Sqworm [OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} SurveyBot [OR] # rude bot<br />
+RewriteCond %{HTTP_USER_AGENT} tele(port|soft) [NC,OR] # OD<br />
+RewriteCond %{HTTP_USER_AGENT} TurnitinBot [OR] # Turnitin spybot<br />
+RewriteCond %{HTTP_USER_AGENT} web.?(auto|bandit|collector|copier|devil|downloader|fetch|hook|mole|miner|mirror|reaper|sauger|sucker|site|snake|stripper|weasel|zip) [NC,OR] # ODs<br />
+RewriteCond %{HTTP_USER_AGENT} vayala [OR] # dumb bot, doesn't know how to follow links, generates lots of 404s<br />
+RewriteCond %{HTTP_USER_AGENT} zeus [NC]<br />
+RewriteRule .* - [F,L]</code></p>
+</blockquote>
+
+<p>I must warn you <strong>not to copy-and-paste this list</strong> onto your own site.  The decision of which robots to block is a very personal matter.  For example, I block many different <q>offline downloaders</q>, programs designed to spider a site and download various files on behalf of real people (in other words, they are not completely automated &#8212; someone has to point them at my site and click a button).  Some specialize in stealing images, others are just general-purpose spiders. I even block <code>MSIECrawler</code>, which is Microsoft Internet Explorer&#8217;s <q>make available offline</q> sychronizer, because (according to my access logs) it is rarely used as intended.  On several occasions I have seen it abused to recursively download large sections of my site (like my <a href="/web/20110806090713/http://diveintomark.org/safari/">Safari information pages</a>, which contain many large screenshots of test cases).  So I block it, even though this could conceivably inconvenience actual readers who would like to use it for legitimate purposes.  There will always be edge cases like this, which is why you need to do your own research, examine your own access logs, learn how to identify abuse, and decide what kinds of abuse you care enough about to deal with.</p>
+
+<p>Since I started fighting back several days ago, I have been blocking an average of 700 hits a day from spambots, spybots, and other rude programs.  (Keep in mind that this number is kept low because the robots are blocked from any access, and therefore have no links to follow.)  Like fighting spam on the email world, fighting robots is a neverending battle with no winners, only casualties.  You will never stop <em>all</em> abusive behavior from <em>all</em> automated robots and rude programs, but you can minimize their effects and reduce the abuse to acceptable levels.</p>
+
+<p>Further reading:</p>
+
+<ul>
+<li>If <code>mod_rewrite</code> is not enabled on your system, you can use <code>mod_setenvif</code>, as described in <a href="/web/20110806090713/http://www.evolt.org/article/Using_Apache_to_stop_bad_robots/18/15126/">Using Apache to stop bad robots</a>.</li>
+<li>For those of you still stuck on Microsoft IIS for some reason, check out <a href="/web/20110806090713/http://evolvedcode.net/content/code_crawlerfilter/">Crawler Blocking &amp; Filtering</a>, an ASP-based solution to the same problem.</li>
+<li><a href="/web/20110806090713/http://www.webmasterworld.com/"><cite>Webmaster World</cite></a> has an ongoing, several-month-long discussion called <a href="/web/20110806090713/http://www.webmasterworld.com/forum13/687.htm">A close to perfect .htaccess ban list</a> (free registration required) about techniques for blocking rude robots, and which ones to block.  Webmaster World is just a phenomenal resource.  They&#8217;ve been so helpful in the past few days, I&#8217;ve <a href="/web/20110806090713/http://www.webmasterworld.com/donate.htm">bought a paid subscription</a>.</li>
+<li>You can also search Google for something like <q><a href="/web/20110806090713/http://www.google.com/search?q=emailsiphon+htaccess"><kbd>EmailSiphon htaccess</kbd></a></q> or <q><a href="/web/20110806090713/http://www.google.com/search?q=htaccess+block+robots"><kbd>htaccess block robots</kbd></a></q> to find additional examples and lists of User-Agents to block.</li>
+<li>If you&#8217;re interested in delving deeper into <code>mod_rewrite</code> for other uses, Ralf Engelschall&#8217;s <a href="/web/20110806090713/http://www.engelschall.com/pw/apache/rewriteguide/">URL Rewriting Guide</a> is the definitive work.  Here be dragons&#8230;</li>
+<li>For a more heuristic approach to identifying rude robots, check out Neil Gunton&#8217;s <a href="/web/20110806090713/http://www.neilgunton.com/spambot_trap/">A Spambot Trap</a> and Lee Killough&#8217;s <a href="/web/20110806090713/http://www.leekillough.com/robots.html">How to Defeat Bad Web Robots With Apache</a>.  Both demonstrate techniques for setting traps within your website for rude robots to fall into.</li> 
+</ul>
+<p class=c>&#167;
+
+<h3 id=comments>One hundred twelve comments here (<a href=/web/20110806090713/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-546"><p>There are two commercial products for IIS that do a similar job to Mod Rewrite.</p>
+<p><a href="/web/20110806090713/http://www.isapirewrite.com/">http://www.isapirewrite.com/</a> ISAPI Rewrite</p>
+<p>and</p>
+<p>IIS Rewrite</p>
+<p><a href="/web/20110806090713/http://www.qwerksoft.com/products/iisrewrite/">http://www.qwerksoft.com/products/iisrewrite/</a></p>
+<p>So there are some possible solutions for those running IIS.</p>
+<p class=sig>&#8212;&#8201;<cite>Damian</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-546" title="February 26, 2003 @ 12:17 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-547"><p>Coincidentally, just yesterday I wrote up a small bit of analysis I did on spambots which have hit my own sites (<a href="/web/20110806090713/http://www.sharding.org/j/archives/000018.html)."><a href="/web/20110806090713/http://www.sharding.org/j/archives/000018.html" rel="nofollow">http://www.sharding.org/j/archives/000018.html</a>).</a></p>
+<p>So far, very few of the hits on that website have actually resulted in spam (this experiment has been in place since some time in May 2002 and I&#8217;ve had fewer than 20 spam messages sent to addresses from that website). Still, I&#8217;ve been working on my own set of mod_rewrite rules to try to keep out some of the identifiable bots. Unfortunately, many of them seem to be nearly impossible to identify programatically.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.sharding.org/j/' rel='external nofollow' class='url'>Sean</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-547" title="February 26, 2003 @ 12:29 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-548"><p>Sean: a static, manually maintained list of robots is about as useful as a static list of spammer email addresses.  That&#8217;s why you need to set traps for them to fall into.  Mine has caught 11 in two days.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-548" title="February 26, 2003 @ 12:38 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-549"><p>I&#8217;m wondering if you feel the actions suggested above run at all counter to your &#8220;copyleft&#8221; ideas (as stated at least in the terms of use of Dive Into Accessibility).  I&#8217;m not on the side of those who choose to ignore robots.txt (after all you are asking them nicely to not go through your content), but I am forced to ask what&#8217;s more important &#8211; &#8220;what you&#8217;re saying,&#8221; or &#8220;how users get there?&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.nicholasjon.com/' rel='external nofollow' class='url'>Nick</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-549" title="February 26, 2003 @ 12:45 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-617"><cite><a href='/web/20110806090713/http://techno-weenie.com/archives/2003/02/25/003047.php' rel='external nofollow' class='url'>techno weenie</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-550"><p>Nick: First of all, this web site is not licensed uner a copyleft license.  Several of my other sites are, but this one is not.</p>
+<p>Second of all, all the GFDL requires is to ensure that &#8220;the general network-using public has access to download [the work] anonymously at no charge using public-standard network protocols.&#8221;  (GFDL, section 3)  A link to a .zip file on the home page of a web site, with no registration, no passwords, not even any cookies, freely downloadable by any person with any web browser on any platform, certainly satisfies that requirement.</p>
+<p>On my &#8220;Dive Into Accessibility&#8221; and &#8220;Dive Into Python&#8221; sites (both of which are licensed under the GNU Free Documentation License), I offer the entire web site for download as a .zip file &#8212; in multiple formats and multiple languages.  And what do the spiders do?  Download all of the .zip files, and then spider the rest of the site anyway!  Nothing in the GNU license says I have to put up with that kind of crap.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-550" title="February 26, 2003 @ 1:10 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-551"><p>While it&#8217;s clear that turnitin.com is beastly and unreasonable in its consumption patterns, I can at least testify that it serves one of your readers&#8211;me.</p>
+<p>If you were receiving as many blatantly plagiarized term papers and thesis proposals as me, you might not see it as &#8220;draconian&#8221; to use turnitin.com as a defense. It&#8217;s saved me countless hours in manually tracking down the unattributed sources of my students&#8217; papers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.it.rit.edu/~ell/mamamusings/' rel='external nofollow' class='url'>Liz</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-551" title="February 26, 2003 @ 1:11 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-552"><p>Since I have the luxury of not paying for my bandwidth, I like to redirect spambots to a CGI script which autogenerates pages full of fake email addresses to harvest. </p>
+<p>The point is not to suck up their bandwidth, but (hopefully) to pollute their lists with bogus email addresses.</p>
+<p>I never thought of doing the same to Cyveillance (and its ilk).</p>
+<p>Thanks for the tip!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-552" title="February 26, 2003 @ 1:14 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-553"><p>Jacques, the problem with giving spammers bogus addresses is that most never notice.  I&#8217;ve always heard the reasoning that &#8220;it&#8217;ll pollute their name lists&#8221;, but most spammers bounce their messages through open relays and forge their headers anyway.   There&#8217;s no one listening to get the bounce messages.  Or worse, there is someone listening, but it&#8217;s not the spammer.</p>
+<p>Shelley was hit hard by this just recently. <a href="/web/20110806090713/http://weblog.burningbird.net/fires/000932.htm">http://weblog.burningbird.net/fires/000932.htm</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-553" title="February 26, 2003 @ 1:25 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-554"><p>I&#8217;ve long hesitated to implement mod_rewrite-based spam-ban techniques because I&#8217;m concerned about performance. So I&#8217;m especially interested in your thought process here.</p>
+<p>You&#8217;re using more than 50 RewriteConds. That&#8217;s making the server go through more than 50 regular expressions *per page view*. This is frying (<a href="/web/20110806090713/http://www.aaronsw.com/weblog/000404)"><a href="/web/20110806090713/http://www.aaronsw.com/weblog/000404" rel="nofollow">http://www.aaronsw.com/weblog/000404</a>)</a> to an extreme. Which isn&#8217;t to say it&#8217;s not worth it &#8212; that&#8217;s a personal decision &#8212; but I&#8217;m wondering what you think about this.</p>
+<p>My questions, then: Did you consider this performance loss in your decision? Did the fact that your blog pages are static HTML (with lean, CSS-based layout) play a part? Would you have done the same had your content been generated on the fly? And have you noticed a performance loss on this site?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.holovaty.com/' rel='external nofollow' class='url'>Adrian</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-554" title="February 26, 2003 @ 1:29 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-555"><p>A fair point.</p>
+<p>s#RewriteRule .* name/address.pork [L]#RewriteRule .* &#8211; [F,L]#</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-555" title="February 26, 2003 @ 1:32 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-618"><cite><a href='/web/20110806090713/http://playbacktime.com/archives/000327.html' rel='external nofollow' class='url'>PlaybackTime</a></cite>&#160;(trackback)</li>
+<li id="comment-556"><p>Actually, it occurs to me that this whole discussion is so very 1997.</p>
+<p>We&#8217;re talking about individually-maintained static bot-blocking lists.</p>
+<p>I used to have a long list of IP addresses of spammers to block in Sendmail. So did lots of people.</p>
+<p>Then Paul Vixie had the bright idea that we could pool our efforts, and distribute the resulting blocking list via DNS.</p>
+<p>Much less work per individual, and much more maintainable.</p>
+<p>Thus the concept of the DNSBL was born.</p>
+<p>There are now dozens of DNS zones <a href="/web/20110806090713/http://www.declude.com/JunkMail/Support/ip4r.htm">http://www.declude.com/JunkMail/Support/ip4r.htm</a> , and you cna pick and choose what to block.</p>
+<p>Why not something similar for web &#8216;bots?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://http//golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-556" title="February 26, 2003 @ 2:03 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-619"><cite><a href='/web/20110806090713/http://www.newsisfree.com/blog/archives/000799.html' rel='external nofollow' class='url'>Too Much News</a></cite>&#160;(trackback)</li>
+<li id="comment-557"><p>As a long-time user of GetRight, I (quite predictably :-) ) consider your decision to ban GetRight altogether as incorrect.<br />
+First and foremost, GetRight is primarily a download manager, and not a spider (offline downloader). The spidering functionality has been added only in version 5.0, which is still in beta. So, assuming GetRight does the right thing and specifies its version number in the User-Agent field, you can at least restrict your banning to GetRight/5.0.<br />
+Second, when GetRight is installed, all downloads usually go through it. Thus, users wanting to download some ZIP file from diveintomark.org will see weird error messages with no apparent reason, when they actually don&#8217;t try doing anything evil.<br />
+What&#8217;s more important for you &#8211; your bandwidth or your users?<br />
+By the way, hosting with unlimited bandwidth is commonly available here in Russia. Isn&#8217;t it so in the USA?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.yole.ru/' rel='external nofollow' class='url'>Dmitry Jemerov</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-557" title="February 26, 2003 @ 3:45 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-558"><p>Talking of anti-telemarketing, have you seen the Counterscript (<a href="/web/20110806090713/http://www.xs4all.nl/~egbg/counterscript.html">http://www.xs4all.nl/~egbg/counterscript.html</a> )? Puts an amusing spin on it, I think you&#8217;ll agree.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.timandkathy.co.uk/' rel='external nofollow' class='url'>Tim</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-558" title="February 26, 2003 @ 4:02 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-559"><p>The iaea.org spambot hit me last night.  About once every second, and it didn&#8217;t stop until it had spidered absolutely *every* page on my site.</p>
+<p>However, if mod_rewrite isn&#8217;t available, you could block it by using SetEnvIfNoCase in your .htaccess:</p>
+<p>SetEnvIfNoCase Referer &#8220;^<a href="/web/20110806090713/http://www.iaea.org/"><a href="/web/20110806090713/http://www.iaea.org/" rel="nofollow">http://www.iaea.org</a>&#8220;</a> BadBot<br />
+Deny from env=BadBot</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-559" title="February 26, 2003 @ 4:39 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-560"><p>Mark, like Adrian, I&#8217;m very interested to hear your take on the effect all these Regular Expressions must make in your server performance (see comment #10 above).</p>
+<p>P.S. I&#8217;m running Opera 7.01 and if I submit/preview a comment with the &#8220;Remember my name&#8221; option selected, I get an Illegal Cookie warning from the browser telling me that the cookie was promptly rejected.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://mar.anomy.net/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-560" title="February 26, 2003 @ 5:54 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-561"><p>Well&#8230; it seems that you are not excluding ZOE :-(</p>
+<p>Its user-agent looks like the following:</p>
+<p>Mozilla/5.0 (Mac OS X) ZOE/0.4 Java/1.4.1</p>
+<p>With the operating system and the java version varying depending on the platform running the software.</p>
+<p>I don&#8217;t know if it qualifies as a robot but nonetheless it&#8217;s most likely abusing your site by shamelessly retrieving information from it (and completely ignoring robots.txt). Which is totally unacceptable. No matter how you look at it.</p>
+<p>To help you stop this shocking abuse of your bandwidth, &#8220;diveintomark.org&#8221; and associated sites will be totally ignored by the application as from next release&#8230; no matter if the user want it or not&#8230;. a line has to be drawn.</p>
+<p>Regards,</p>
+<p>Z.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://guests.evectors.it/zoe/' rel='external nofollow' class='url'>Zoe</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-561" title="February 26, 2003 @ 6:40 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-620"><cite><a href='/web/20110806090713/http://www.dalynet.org/archives/2003/02/26/and_web_robots.html' rel='external nofollow' class='url'>dalynet.org</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-621"><cite><a href='/web/20110806090713/http://www.deeden.co.uk/quicklinks/2003/02/26.html#003711' rel='external nofollow' class='url'>Quick Links</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-562"><p>Z, I assume you&#8217;re kidding, but your ignorance is disturbing nonetheless.  I have never seen ZOE request anything but my RSS feed &#8212; it even supports ETags!  That&#8217;s great.  So it&#8217;s not a spider.</p>
+<p>It is, however, a bit overzealous.  It appears to be requesting my feed every 5 minutes.  Perhaps this could be cut back a little?  The de facto standard for news aggregators seems to be no more than one request per hour, per feed.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-562" title="February 26, 2003 @ 10:08 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-563"><p>Thanks Mark.  This is very interesting and informative &#8211; good to know beforehand, though there have been some good points made regarding performance.</p>
+<p>What think ye?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.scribbling.net/' rel='external nofollow' class='url'>Gina</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-563" title="February 26, 2003 @ 10:16 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-564"><p>Mark, I&#8217;m curious. What was the ratio of bandwidth used by spambots and cache-engines to bandwidth used by &#8220;normal&#8221; users before you started your blocking efforts?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://mar.anomy.net/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-564" title="February 26, 2003 @ 10:28 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-565"><p>Mark: Just a suggestion, since you&#8217;ve implemented a trap based system of detecting bad robots, you could conceivably produce a list of well-behaved robots. This may prove a point that it is possible to build a well behaved robot and not suffer.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.isolani.co.uk/' rel='external nofollow' class='url'>Isofarro</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-565" title="February 26, 2003 @ 10:40 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-566"><p>All the major search engines use well-behaved robots.  Some of them actually make real money.</p>
+<p>See also this comment of mine, on a previous thread, regarding spiders that build offline caches for mobile/handheld users:</p>
+<p><a href="/web/20110806090713/http://diveintomark.org/archives/2003/02/21/newsmonster_day_2.html#c000413">http://diveintomark.org/archives/2003/02/21/newsmonster_day_2.html#c000413</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-566" title="February 26, 2003 @ 10:52 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-622"><cite><a href='/web/20110806090713/http://revjim.net/archives/2003/02/26/9439.php' rel='external nofollow' class='url'>revjim.net</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-623"><cite><a href='/web/20110806090713/http://vowe.net/justlinks/archives/2003_02.html#003036' rel='external nofollow' class='url'>just links</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-567"><p>Re: performance.  Unfortunately (for the sake of this discussion at least) I just moved to a new faster server a few weeks ago, so I have little comparative data on the performance hit of these rewrite rules.  However, I researched that exact question before starting to implement this solution, and the answer appears to be that my solution &#8212; based on mod_rewrite, multiple similar conditions combined on one line where possible, everything in a single rule &#8212; is about as efficient as you can get.</p>
+<p>It also depends on how much traffic you get, and how dynamic your pages are.  This thread on Webmaster World &#8212; <a href="/web/20110806090713/http://www.webmasterworld.com/forum10/1297.htm">http://www.webmasterworld.com/forum10/1297.htm</a> (free registration required) &#8212; says &#8220;Try to make the ban files as efficient as possible, combining multiple bans on one line, for example. How much this overhead affects your server&#8217;s performance depends heavily on how much traffic you get. With a few thousand hits per day, you&#8217;ll never notice it. Raise that to a few thousand hits per hour, and you might see a difference.&#8221;</p>
+<p>My two biggest problems are (1) spiders downloading large images from my photo galleries, and (2) spiders getting caught in my &#8220;Recommended Reading&#8221; tool ( <a href="/web/20110806090713/http://diveintomark.org/newdoor/">http://diveintomark.org/newdoor/</a> ), which generates a near-infinite number of unique links, each of which requires several database queries.  Pretty much any amount of effort is worth it to avoid this.  (I&#8217;m also implementing throttles and sanity checks of requests-per-IP-per-minute in the script itself, as a secondary defense.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-567" title="February 26, 2003 @ 11:11 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-624"><cite><a href='/web/20110806090713/http://daringfireball.net/2003/02/we_dont_serve_their_kind_here.html' rel='external nofollow' class='url'>Daring Fireball</a></cite>&#160;(trackback)</li>
+<li id="comment-568"><p>Re: you&#8217;re kidding</p>
+<p>No. This is frown upon where I come from. </p>
+<p><a href="/web/20110806090713/http://www.corsica-nazione.com/">http://www.corsica-nazione.com/</a></p>
+<p>It is a sign of ignorance of the seriousness of the matter at hand.</p>
+<p>ZOE is now MP rated.</p>
+<p><a href="/web/20110806090713/http://guests.evectors.it/zoe/contents/MP.jpg">http://guests.evectors.it/zoe/contents/MP.jpg</a></p>
+<p>Hope this helps.</p>
+<p>Regards,</p>
+<p>Z.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://guests.evectors.it/zoe/' rel='external nofollow' class='url'>Zoe</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-568" title="February 26, 2003 @ 1:11 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-569"><p>Z, your behavior is puzzling, and your reasoning is downright bizarre.  I&#8217;ve never blocked your program, nor do I see any reason to.  It&#8217;s not a spider, so it has no relevance to this conversation.  Only after you brought it up did I even notice that it seems to be requesting my RSS feed every 5 minutes (which seems unnecessary).</p>
+<p>Whatever.  I got the same kind of flak when I started my web accessibility series last summer.  I take this as a sign that this is some of my best technical writing; in my experience, people don&#8217;t bother trying to tear down the mediocre stuff.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-569" title="February 26, 2003 @ 1:29 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-570"><p>This is an interesting problem. I think a better approach would be to implement rate limiting for clients who download too rapidly.</p>
+<p>This could be done using a priority queue of IP addresses, that holds an exponentially decaying average of hits per second (the same technique used to track Unix load average, which requires only one float and one timestamp to implement). Well-behaved clients who access robots.txt could have their cap raised.</p>
+<p>Some disadvantages in this approach:<br />
+- we would have to maintain a list of high-traffic proxies like the AOL proxies and raise their cap<br />
+- spambots could start using robots.txt (and ignore what it says) to get around this scheme</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.majid.info/' rel='external nofollow' class='url'>Fazal Majid</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-570" title="February 26, 2003 @ 1:41 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-571"><p>Re: distributed ban lists.  This has been oft-discussed, but as far as I know, never implemented.  (If someone knows of a working large-scale implementation, please post a link.)  It is undoubtedly the wave of the future.</p>
+<p>On a related note, while researching this the spambot issue, I stumbled across <a href="/web/20110806090713/http://www.openproxies.com/">http://www.openproxies.com/</a> , which sells its list of open HTTP proxies to webmasters as a ready-to-use .htaccess file.  Of course, they sell the same list in a different form to clients who want to surf anonymously. :)</p>
+<p>Presumably dedicated crawler companies would subscribe to the distributed ban rules to make sure they could bypass them, in much the same way that dedicated spammers have altered their tactics to bypass SpamAssassin rules.</p>
+<p>As I said, it&#8217;s a war with no winners, only casualties.  It just depends how far you&#8217;re willing to go.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-571" title="February 26, 2003 @ 1:51 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-625"><cite><a href='/web/20110806090713/http://www.dogdoorofdeath.org/archivesddod/000936.htm' rel='external nofollow' class='url'>Dog Door of Death - Weblog</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-572"><p>Re: throttling.  There is a mod_throttle module for Apache.  I&#8217;ve never used it.  It does have a &#8220;ThrottleClientIP&#8221; parameter; I don&#8217;t know if this would cause problems with major proxies.  And it&#8217;s not installed on my server, so I can&#8217;t try it. :(</p>
+<p><a href="/web/20110806090713/http://www.snert.com/Software/mod_throttle/">http://www.snert.com/Software/mod_throttle/</a></p>
+<p>Has anyone had any experience with this?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-572" title="February 26, 2003 @ 2:05 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-573"><p>I&#8217;ve played with mod_throttle some in the past; it seems to work fairly well, provided you&#8217;re not serving really big files (it coped reasonably well with 200 MB ISO images, but it&#8217;s better suited to much smaller stuff).  Of course, you can also do traffic shaping at the kernel level for more fine-grained control.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://blog.lordsutch.com/' rel='external nofollow' class='url'>Chris Lawrence</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-573" title="February 26, 2003 @ 2:24 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-626"><cite><a href='/web/20110806090713/http://www.robertkbrown.com/2003/02/26/i_spit_on_your_robotstxt.html' rel='external nofollow' class='url'>A Work In Progress</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-627"><cite><a href='/web/20110806090713/http://blog.lordsutch.com/?entryid=290' rel='external nofollow' class='url'>Signifying Nothing (Chris Lawrence's weblog)</a></cite>&#160;(trackback)</li>
+<li id="comment-574"><p>Hey, Zoe&#8217;s nuts! Say some more wacky stuff, Zoe, I&#8217;m trying to figure out where exactly you&#8217;ve misunderstood Mark.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://anildash.com/' rel='external nofollow' class='url'>Anil</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-574" title="February 26, 2003 @ 3:22 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-575"><p>Oops, sorry for the double-trackback there&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://blog.lordsutch.com/' rel='external nofollow' class='url'>Chris Lawrence</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-575" title="February 26, 2003 @ 3:28 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-628"><cite><a href='/web/20110806090713/http://www.patandkat.com/pat/weblog/archives/2003/02/26/003062.php' rel='external nofollow' class='url'>Vertical Hold</a></cite>&#160;(trackback)</li>
+<li id="comment-576"><p>Un-oh. You&#8217;ve pissed off a Corsican. Better invest in some heavy weaponry, the rabid ones can survive multiple shots to the head before they drop.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://d@d.de/' rel='external nofollow' class='url'>d</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-576" title="February 26, 2003 @ 4:24 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-577"><p>is there any way to tell if mod_rewrite is installed like the check script (mt-check.cgi)that is used with movable type?</p>
+<p class=sig>&#8212;&#8201;<cite>m</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-577" title="February 26, 2003 @ 4:59 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-629"><cite><a href='/web/20110806090713/http://www.joshua.com/mt-archives/000155.html' rel='external nofollow' class='url'>Joshua</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-630"><cite><a href='/web/20110806090713/http://www.droyer.org/~dave/archives/000127.php' rel='external nofollow' class='url'>Axiomatic Breakfast</a></cite>&#160;(trackback)</li>
+<li id="comment-578"><p>&#8216;httpd -l&#8217; will list the modules compiled into that httpd binary.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.sharding.org/j/' rel='external nofollow' class='url'>sean</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-578" title="February 26, 2003 @ 6:24 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-631"><cite><a href='/web/20110806090713/http://peterjanes.homeip.net/blog/archives/2003/02/25/geek_stuff.html' rel='external nofollow' class='url'>Petroglyphs</a></cite>&#160;(trackback)</li>
+<li id="comment-579"><p>Is there an Opera OS X Award for excellence in convincing potential customers and users that you&#8217;re a spoiled brat?  I think Zoe would make a perfect first nominee.  (The winner will receive a small statue shaped like a Safari brushed-metal snapback button.)</p>
+<p class=sig>&#8212;&#8201;<cite>dis</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-579" title="February 26, 2003 @ 7:44 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-580"><p>For spambots, I include a bogus email address of spidertrap@. The text around the bogus email address, at the bottom of a page, reads in very small, very grey print: If you&#8217;re a spammer and want to be banned, send an email to </p>
+<p>Then I have scripts that look at every message send to the spider trap, and delete that message from my real inboxes.</p>
+<p>It doesn&#8217;t save bandwidth, but I never see the email caused by spambots.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.kenkinder.com/' rel='external nofollow' class='url'>Ken Kinder</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-580" title="February 26, 2003 @ 8:55 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-581"><p>For the heck if it I DID copy and paste your .htaccess file into my server to test and found that&#8230;</p>
+<p>   RewriteCond %{HTTP_USER_AGENT} ^ IE \ \d\.\d\ Compatible.*Browser$ [OR]</p>
+<p>&#8230;kept my browsers Mac Explorer 5.2 and Safari b1.0 v60 from viewing my site.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://stareat.us/' rel='external nofollow' class='url'>Eric Rolph</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-581" title="February 26, 2003 @ 10:05 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-632"><cite><a href='/web/20110806090713/http://aspnetweblog.com/posts/3121.aspx' rel='external nofollow' class='url'>ScottW's ASP.NET WebLog</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-582"><p>Eric, that can&#8217;t be right.  I have that rule defined here and I&#8217;ve been browsing my own site with IE5/Mac and Safari all day.  My access logs show no problems for anyone else either.</p>
+<p>Safari&#8217;s User-Agent is &#8220;Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/60 (like Gecko) Safari/60&#8243;.</p>
+<p>IE5/Mac&#8217;s User-Agent is &#8220;Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)&#8221;.</p>
+<p>Neither comes close to matching that rule.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-582" title="February 26, 2003 @ 10:39 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-633"><cite><a href='/web/20110806090713/http://blog.blaisdell.com/archives/000240.html' rel='external nofollow' class='url'>Blazeblog</a></cite>&#160;(trackback)</li>
+<li id="comment-583"><p>Hi Mark!<br />
+Job well done. Actually this problem has become increasingly severe for my Domino site during the past 3 months.<br />
+Unfortunately my access to the server is restricted so I can&#8217;t use htaccess and servlets. Currently I&#8217;m examinating using a hide-when based solution combined with a spider trap link (web bug).</p>
+<p>However some of these bots have become so aggressive, some are not even parsing HTML but will follow everything that looks like a link even in source HTML, JS sections aso.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.sns1.de/partner/flamme/wflamme.nsf/' rel='external nofollow' class='url'>Wolfgang Flamme</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-583" title="February 27, 2003 @ 12:36 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-584"><p>I agree that a product that compiled lists of &#8220;bad bots&#8221; could be very useful. Something like the lists of known spammers or like AdAware. What if a user could subscribe to an RSS feed or two of known &#8220;bad bots&#8221; and have that feed automagically be included in the .htaccess file of the user? Way too complicated for me to even begin to implement, but would this be possible?</p>
+<p class=sig>&#8212;&#8201;<cite>Kevin Newman</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-584" title="February 27, 2003 @ 1:33 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-634"><cite><a href='/web/20110806090713/http://www.stuck-on-me.ch/weblog/archives/2003/02/26/todo_howto_block_spambots.html' rel='external nofollow' class='url'>stuck-on-mobile-e-com ;-)</a></cite>&#160;(trackback)</li>
+<li id="comment-585"><p>I may be being a bit naive, but this strikes me as a case of technology overkill. Wouldn&#8217;t it work just as well to make the site password-protected (perhaps using .htaccess, either with redirect to a script or just BA), then provide the password openly on a &#8220;front-door&#8221; page using a method inacessible to robots &#8211; such as an image?</p>
+<p>Some paid subscription sites use this technique (except obviously they don&#8217;t publish the password!), redirecting you to a login page then after login going to the url you provided originally.</p>
+<p>This would be a minor inconvenience to legitimate visitors, but would stop fully automated systems. It wouldn&#8217;t stop anyone prepared to manually guide their robot, but it wouldn&#8217;t be hard to change the password automatically once a day &#8211; and anyhow I&#8217;m guessing that the fully automated hoovers are most of the problem.</p>
+<p class=sig>&#8212;&#8201;<cite>Michael</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-585" title="February 27, 2003 @ 4:02 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-586"><p>As for Z, I think you&#8217;re being sent up. It looks to me like Raphael finds the whole idea of a large and growing script to block spambots rather amusing and thinks it will be ultimately ineffective. You may not like it, but this is legitimate criticism in the form of satire.</p>
+<p>For a recent example from elsewhere, see <a href="/web/20110806090713/http://enquirer.com/editions/2003/02/21/tem_0221daaligshow.html">http://enquirer.com/editions/2003/02/21/tem_0221daaligshow.html</a> (Cincinnati) but also <a href="/web/20110806090713/http://www.freep.com/entertainment/tvandradio/mside21_20030221.htm">http://www.freep.com/entertainment/tvandradio/mside21_20030221.htm</a> (Detroit).</p>
+<p class=sig>&#8212;&#8201;<cite>Michael</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-586" title="February 27, 2003 @ 4:53 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-635"><cite><a href='/web/20110806090713/http://www.minid.net/archives/000999.php' rel='external nofollow' class='url'>mini-d</a></cite>&#160;(trackback)</li>
+<li id="comment-587"><p>well a thing that I don&#8217;t understand here, if someone that was doing these nefarious things wanted to be really evil couldn&#8217;t they just write a program that sent something in the header that was not a spambot, spider etc. but was in fact the info for a normal browser. For example I use cURL a lot, with it you can set the headers to be for example, ie5 if that&#8217;s what you want (useful if you have solutions that output variant content for different browsers). If I then wanted to use a lot of my time and build a spider with cURL that spoofed ie5&#8242;s header, well it wouldn&#8217;t be impossible. Another thing I use a lot (for automated gets etc.) is Rebol, if instead of using rebol&#8217;s built in http understanding I rolled my own I could then take control of the headers and output what I want.<br />
+Finally I sometimes use wscript to start IE hidden and download individual pages, if I wanted to be a real pig I could build a spider using the same technique. This is not to troll or anything I&#8217;m just not understanding why these spiders are going ahead and telling you upfront what they are, is there a legal requirement that they must do this, excuse me but this is not an area that I have any knowledge of in a professional way as I only do these things for my own usage.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://bry@itnisk.com/' rel='external nofollow' class='url'>bryan</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-587" title="February 27, 2003 @ 5:27 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-588"><p>oops, sorry, missed the part about Cyveillance spoofing IE. So I guess that answers my question about legality, but it still doesn&#8217;t answer my question as to why most firms etc. don&#8217;t spoof the headers, because if they did you would be stuck banning by IP and referrer and such like and for the one&#8217;s with deep pockets it should be possible to maneuver against that tactic.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://bry@itnisk.com/' rel='external nofollow' class='url'>bryan</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-588" title="February 27, 2003 @ 5:43 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-589"><p>&#8220;I may be being a bit naive, but this strikes me as a case of technology overkill. Wouldn&#8217;t it work just as well to make the site password-protected (perhaps using .htaccess, either with redirect to a script or just BA), then provide the password openly on a &#8220;front-door&#8221; page using a method inacessible to robots &#8211; such as an image?&#8221;</p>
+<p>And then how do blind people access his website? Anything that is able to be hidden from spam bots will by necessity be hidden from some people. I assume Mark does not wish to discriminate against blind people, just like I&#8217;d hope no-one would.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-589" title="February 27, 2003 @ 7:40 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-590"><p>Bryan, there is no legal requirement for bots to identify themselves.  In many cases, the person who wrote the bot is not the person using the bot.  Especially in the case of commercial software, the developers have some perverse incentive to advertise themselves in logfiles.  Even if their software provides a means to change the User-Agent, most users won&#8217;t bother, because they don&#8217;t understand how the web works or why it would matter.  And not a lot of people block by User-Agent, so it really doesn&#8217;t matter all that much.</p>
+<p>If somebody writes a mod_blacklist module and sets up a distributed auto-updating bot blacklist, then it will matter more, and things will escalate.</p>
+<p>Meanwhile, the deep-pocket companies running spybots 24-7 (like Cyveillance) generally operate out of a specific IP range.  They have a bunch of servers, specially configured, their own data center, an upstream provider that doesn&#8217;t care what they&#8217;re doing, and so forth.  I don&#8217;t really think they&#8217;re all that portable, but that&#8217;s just an educated guess.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-590" title="February 27, 2003 @ 7:55 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-591"><p>Re: roping off sites entirely with passwords.  God, I hope it never gets this bad.  At that point, you may as well just give up and get off the Net.  I mean really.  Also, that would totally cut off all robots, including legitimate search engines that send me tons of good traffic every day.  (I&#8217;m trying to cut down on abuse, not use.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-591" title="February 27, 2003 @ 8:10 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-592"><p>&#8220;there is no legal requirement for bots to identify themselves&#8221;; Yeah I figured that after reading about that RIAA bot you talked about.</p>
+<p>&#8221; In many cases, the person who wrote the bot is not the person using the bot&#8221; this is no reason why a law could not be written requiring bots to identify themselves, laws are a very complicated type of code in themselves. The difficulty is in getting someone to phrase succinctly what a &#8216;bot&#8217; is, which would require abstracting quite a bit. Such a law would in the end most likely be, like many laws, unenforceable in logic but quite enforceable in practice as those doing the enforcing would choose whom to apply it against. Anyway that&#8217;s just an aside.</p>
+<p class=sig>&#8212;&#8201;<cite>bryan</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-592" title="February 27, 2003 @ 10:12 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-593"><p>&#8220;Re: roping off sites entirely with passwords. God, I hope it never gets this bad.&#8221;</p>
+<p>Well, so do I. But the web is already divided this way, to some degree. A lot of commercial and free-but-must-register (ie, they want your email address) sites run on just this basis. Usually they have a free front-door site which contains a full-ish index for the benefit of search engines. </p>
+<p>Following 9/11 Gartner Group made their whole research site free access &#8220;for a limited time&#8221; as a pro bono gesture to help the rescue/recovery effort. But after a few hours they had to drop back to &#8220;email us for a pro bono password&#8221;, because their gesture was being abused by people sucking up everything &#8211; sort of cyber-looting, I suppose.</p>
+<p>&#8220;And then how do blind people access his website?&#8221;</p>
+<p>A good point. There must be a way &#8211; an optional voice prompt (equally useless to bots) perhaps.</p>
+<p class=sig>&#8212;&#8201;<cite>Michael</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-593" title="February 27, 2003 @ 11:55 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-636"><cite><a href='/web/20110806090713/http://loveandcasinowar.com/blogarch/000013.php' rel='external nofollow' class='url'>love and casino war</a></cite>&#160;(trackback)</li>
+<li id="comment-594"><p>Great info, Michael. I noticed this bad bot behavior the other day when I was setting up a logstat thingy. Saw really nasty behavior out of FAST and Mercator bots. FAST seems to have settled down, and I told Mercator bot to go to hell after the webrape it did on my server a few months ago. </p>
+<p>How bad was it? Here&#8217;s an excerpt from my blog story:<br />
+[Mercator bot] has been going on an absolute feeding frenzy &#8211; where Googlebot crawled 987 pages totaling 7.8 MB from 28 Feb 2002 to 20 Oct 2002, Mercator Bot crawled 19856 pages totalling 479 MB. Um, that is a little excessive. Fast-Webcrawler (AllTheWeb) was not any nicer to this site. It had 18084 hits totaling 356 MB&#8230;. Oh, and guess how many hits those 18084 hits from Fast (AllTheWeb) generated? 29. Yep. For all that bandwidth that got sucked on by Fast, I got a whole 29 hits. Google gave me 1482 hits from the 987 pages it spidered. You do the math.</p>
+<p>Now, I could handle Mercator going nuts if I was eBay.. but I ain&#8217;t. I have maybe 200 pages on this site. Most of those are story archives of my blog. However, back during the time period above, I had maybe 20 or 30 static pages &#8211; not near enough to warrant 19856 hits. Hell, that is more hits than I, the webauthor, put on my own site!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://randyrathbun.org/' rel='external nofollow' class='url'>Randy</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-594" title="February 27, 2003 @ 3:43 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-637"><cite><a href='/web/20110806090713/http://www.wanderinglight.net/journal/archive//000471.html' rel='external nofollow' class='url'>WanderingLight \ Journal</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-638"><cite><a href='/web/20110806090713/http://phpcomplete.com/articles.php?sec=readArticle&id=287' rel='external nofollow' class='url'>PHP Complete</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-639"><cite><a href='/web/20110806090713/http://green.carisenda.com/legend/2003_02_27.html#000485' rel='external nofollow' class='url'>Carisenda</a></cite>&#160;(trackback)</li>
+<li id="comment-595"><p>RewriteCond %{HTTP_USER_AGENT} &#8220;Enter new UA String or choose a common one. Then press ENTER&#8221;</p>
+<p>This string is present in a dropdown menu of the UAbar, an add-on for Mozilla and Phoenix browsers allowing to change the user-agent string &#8220;in the fly&#8221;.<br />
+(<a href="/web/20110806090713/http://uabar.mozdev.org)"><a href="/web/20110806090713/http://uabar.mozdev.org/" rel="nofollow">http://uabar.mozdev.org</a>)</a></p>
+<p class=sig>&#8212;&#8201;<cite>Gecko</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-595" title="February 27, 2003 @ 10:50 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-596"><p>Ha!  I saw it and assumed it was from some stupid offline downloader.  I&#8217;ll remove it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-596" title="February 28, 2003 @ 12:30 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-597"><p>This is amusing.</p>
+<p><a href="/web/20110806090713/http://diveintomark.org/public/go_to_hell.txt">http://diveintomark.org/public/go_to_hell.txt</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-597" title="February 28, 2003 @ 12:48 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-598"><p>eh, do what you will, but realize that sometimes bots are good, that is, when they are used by Blogdex or Memeufacture (my site) to aggregate for public consumption.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.memeufacture.com/' rel='external nofollow' class='url'>John Wehr</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-598" title="February 28, 2003 @ 3:04 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-599"><p>Check out <a href="/web/20110806090713/http://neilgunton.com/spambot_trap/">http://neilgunton.com/spambot_trap/</a> it has the advantage of successfully dealing with spiders that change their user-agent field.</p>
+<p class=sig>&#8212;&#8201;<cite>paul</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-599" title="February 28, 2003 @ 3:23 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-640"><cite><a href='/web/20110806090713/http://peterjanes.homeip.net/blog/archives/2003/02/28/the_wellbehaved_web.html' rel='external nofollow' class='url'>Petroglyphs</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-600"><p>John, I agree that not all bots are bad.  Not all bots are spiders either.  Bots like Blogdex/Popdex/Daypop/whatever provide clear benefits to myself and my readers.  Also, they don&#8217;t follow links and spider my whole site; they only ever request my home page.  I have no problem with them and they are not blocked.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-600" title="February 28, 2003 @ 11:28 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-601"><p>Sorry for the ping flood&#8230; MT seems to have a thing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://peterjanes.homeip.net/blog/rss2.xml' rel='external nofollow' class='url'>Peter J.</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-601" title="March 1, 2003 @ 12:56 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-602"><p>Very interesting story. I have made some experiments with mod_rewite in the past und would recommend to use the rewritemap feature. Thus you are able to maintain the user-agents and IP-addresses very simple in a text-file.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.gerald-steffens.de/' rel='external nofollow' class='url'>Gerald</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-602" title="March 1, 2003 @ 11:54 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-641"><cite><a href='/web/20110806090713/http://nielsenhayden.com/electrolite/archives/002390.html' rel='external nofollow' class='url'>Electrolite</a></cite>&#160;(trackback)</li>
+<li id="comment-603"><p>Mark,</p>
+<p>After perusing your 26-Feb-03 article on blocking bad visitors, and visiting WebMasterWorld and some usenet chats, I came up with a list of blocks of my own. Including NameProtect, whom  I didn&#8217;t realize was hammering my blog sites. </p>
+<p>That said, here is the killer question. It wouldn&#8217;t take much for me to write some Perl that I could call by Cron and keep my blocking list up-to-date, provided there was a place, specifically a database, that I could query user agents and/or domains by name, and receive in return, either their IP or even better, an argument I could plug directly into my .htaccess automagically.</p>
+<p>Sorta of like the RTBH, only I would see myself creating an XML-RPC query of targets I want to update, and receiving back a list of arguments to feed into my .htaccess. I&#8217;d probably also add code to email me of changes.</p>
+<p>Question is, does any such database, or mechanism exist?</p>
+<p>Thanks for all you do.<br />
+Dean</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.healyourchurchwebsite.com/' rel='external nofollow' class='url'>Dean Peters</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-603" title="March 2, 2003 @ 5:15 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-604"><p>Are we due for a robots.xml standard?  It would be nice if we can specify more than what we are allowed with robots.txt.</p>
+<p><a href="/web/20110806090713/http://www.csandoval.addr.com/main.jsp?blosdate=/2003/03/02">http://www.csandoval.addr.com/main.jsp?blosdate=/2003/03/02</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.java-geek.com/' rel='external nofollow' class='url'>Cesar</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-604" title="March 2, 2003 @ 6:38 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-642"><cite><a href='/web/20110806090713/http://www.j-bradford-delong.net/movable_type/2003_archives/000835.html' rel='external nofollow' class='url'>Semi-Daily Journal</a></cite>&#160;(trackback)</li>
+<li id="comment-605"><p>Cesar: Tim Bray has something to say about this over in his weblog: <a href="/web/20110806090713/http://www.tbray.org/ongoing/When/200x/2003/02/27/Websites">http://www.tbray.org/ongoing/When/200x/2003/02/27/Websites</a></p>
+<p>One of the things in his (linked) w3c-tag post is &#8220;The kinds of stuff that could go there could include robots info, language info, favicon.ico equivalent, RSS info, p3p info, etc etc etc.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://peterjanes.homeip.net/blog/' rel='external nofollow' class='url'>Peter J.</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-605" title="March 3, 2003 @ 11:14 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-606"><p>Why not put a link to a page that blocks that user&#8217;s [IP address|User-agent|X-forwarded-for] values as presented in the headers, say for 1 hour, with the clear text &#8220;Click here to block your IP address&#8221;  It would not be that hard.</p>
+<p>The use of all headers present would help to avoid blocking all users of a proxy, so there should be no issue there&#8230;</p>
+<p>Then, to allow legitimate robots, just tell them to not go there in the robots.txt!</p>
+<p>Problem solved, no?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://jnawk.net.nz/' rel='external nofollow' class='url'>JNaWK</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-606" title="March 5, 2003 @ 5:36 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-607"><p>I see the NameProtect outfit has a 12. address. All addresses starting with 12. are AT&#038;T. You might be able to send mail to AT&#038;T abuse address and stop them. Since they are a &#8220;business&#8221; it may not work but who knows&#8230;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://none/' rel='external nofollow' class='url'>Larry Wood</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-607" title="March 5, 2003 @ 12:05 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-643"><cite><a href='/web/20110806090713/http://www.soundcommons.org/blogs/development/archive/000377.html' rel='external nofollow' class='url'>soundCommons :: weblog ::</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-644"><cite><a href='/web/20110806090713/http://www.cleverhack.com/blog/archives/000114.html' rel='external nofollow' class='url'>Confessions of a G33k</a></cite>&#160;(trackback)</li>
+<li id="comment-608"><p>In each page I serve, I include a bogus email address, encoded with the date of access as well as the host IP address and embedded in a comment.  [Apache's server-side includes are great!] This has allowed me to trace spam back to specific hosts and/or robots.  </p>
+<p>One of the first I caught with this technique was the robot with the user agent &#8220;Mozilla/4.0 <a href="mailto:efp@gmx.net">efp@gmx.net</a>&#8220;, which always seems to come from argon.oxeo.com &#8211; it&#8217;s identified it above as simply rude.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.tifaware.com/~theall/' rel='external nofollow' class='url'>George A. Theall</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-608" title="March 7, 2003 @ 10:41 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-609"><p>The all-inclusive solution is, of course, in the .htaccess file.  However&#8230;</p>
+<p>If you&#8217;re already using $scripting_language to publish your site&#8217;s content, you can also place an include at or near the top of each file that checks the requesting UA against an array.</p>
+<p>I have such a file, though its original purpose was to parse the reqested URI and assign stylesheets accordingly.</p>
+<p>Then someone decided to stick me amidst drama from which I explicitly explained I should be excluded, and I decided to &#8220;block&#8221; my site against the subnet to which the instigator connected at home (along with a couple of others that were rotten); that was easy enough.</p>
+<p>Then, as I was going through serverlogs, I found the same grief that Mark did.  Enter a second array.</p>
+<p>If there&#8217;s a match and alexa.com isn&#8217;t a requesting domain, the script closes all of the open tags and exit()s.  That I can withstand with greater ease than seeing the entire page slurped up&#8230; and while it doesn&#8217;t protect the images, I&#8217;ve got some art direction tricks up my sleeve for the better part of those.</p>
+<p>The overhead&#8217;s higher &#8211; when I asked IOCOM&#8217;s admins about it, they shrugged &#8211; but the approach has certain advantages (especially if you have a hosting plan that locks down .htaccess).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://www.io.com/persist1/log.php' rel='external nofollow' class='url'>Ben Henick</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-609" title="March 8, 2003 @ 6:00 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-645"><cite><a href='/web/20110806090713/http://www.zulyzu.com/nano/archives/000371.html' rel='external nofollow' class='url'>Zuly's NaNoWriMoSortOf</a></cite>&#160;(trackback)</li>
+<li id="comment-610"><p>Zoe seems pretty out of it unless one remembers there&#8217;s no proof it is Zoe.  Perhpas soem Zoe hater is out there giving us all reason to not want to use Zoe&#8217;s product by pretending to be Zoe.  I hate identity theft.</p>
+<p>Of course, Zoe coud be that stupid.  *shrug*</p>
+<p class=sig>&#8212;&#8201;<cite>me</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-610" title="March 12, 2003 @ 10:26 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-646"><cite><a href='/web/20110806090713/http://withoutpermission.com/archives/000045.html' rel='external nofollow' class='url'>Without Permission</a></cite>&#160;(trackback)</li>
+<li id="comment-611"><p>People crafting web pages should examine<br />
+the following method of hashing email<br />
+addresses to further frustrate harvesters.</p>
+<p><a href="/web/20110806090713/http://www.hiveware.com/enkoder_form.php">http://www.hiveware.com/enkoder_form.php</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://shades2@iinet.net.au/' rel='external nofollow' class='url'>shades2</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-611" title="March 12, 2003 @ 9:30 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-647"><cite><a href='/web/20110806090713/http://www.scriptygoddess.com/archives/003550.php' rel='external nofollow' class='url'>scriptygoddess.com</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-648"><cite><a href='/web/20110806090713/http://krisalis.org/weblog/archives/2003_03.php#002230' rel='external nofollow' class='url'>Krisalis</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-649"><cite><a href='/web/20110806090713/http://headblender.com/joe/blog/archives/miscellany/000983.html' rel='external nofollow' class='url'>Incessant Ramblings</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-650"><cite><a href='/web/20110806090713/http://www.kungfugrippe.com/previously/002201.php' rel='external nofollow' class='url'>kung fu grippe</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-651"><cite><a href='/web/20110806090713/http://www.brianbreslin.com/blog/archives/000084.html' rel='external nofollow' class='url'>Brian's Blog</a></cite>&#160;(trackback)</li>
+<li id="comment-612"><p>found this page off /.</p>
+<p>look at the sugarplum package:</p>
+<p><a href="/web/20110806090713/http://www.devin.com/sugarplum/">http://www.devin.com/sugarplum/</a></p>
+<p>it does a combo of rewrite and other tactics (like<br />
+teergrubing) to act as a honeypot for spam robots.</p>
+<p class=sig>&#8212;&#8201;<cite>seanius</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-612" title="April 2, 2003 @ 2:56 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-652"><cite><a href='/web/20110806090713/http://eliot.landrum.cx/archives/2003/04/12/smacking_back.php' rel='external nofollow' class='url'>blended perspectives</a></cite>&#160;(trackback)</li>
+<li id="comment-613"><p>I have intalled a scriptnamed Robot Control Pro<br />
+and it now banned all evil robots automaticly ;-)</p>
+<p class=sig>&#8212;&#8201;<cite>many</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-613" title="April 13, 2003 @ 12:13 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-614"><p>Oeps &#8230;<br />
+here it is ;<br />
+<a href="/web/20110806090713/http://webcomposing.com/webcomposing/HTML/cgi-programs.htm">http://webcomposing.com/webcomposing/HTML/cgi-programs.htm</a></p>
+<p class=sig>&#8212;&#8201;<cite>Mandy</cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-614" title="April 13, 2003 @ 12:14 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-615"><p>Is it now a cool script, advertisement, or spam?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://no-spam.blogspot.com/' rel='external nofollow' class='url'>nospam</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-615" title="April 19, 2003 @ 12:36 pm"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-653"><cite><a href='/web/20110806090713/http://www.sauria.com/blog//home/twl/pyblog/blosxom/computers/internet/weblogs/152' rel='external nofollow' class='url'>Ted Leung on the air</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-654"><cite><a href='/web/20110806090713/http://www.kung-foo.tv/blog/archives/000479.php' rel='external nofollow' class='url'>chaotic intransient prose bursts</a></cite>&#160;(trackback)</li>
+<li id="comment-616"><p>While nothing beats detecting the user agent for known spambots, other methods are more universally effective and easier to implement, such as using javascript to generate mailto links or just substituting ascii characters for text.  Many of these methods are described here:</p>
+<p><a href="/web/20110806090713/http://www.webmasterworld.com/forum21/3451.htm">http://www.webmasterworld.com/forum21/3451.htm</a></p>
+<p>Ultimately, a combination of .htaccess &#038; on-page methods is the best strategy, since known spambots are blocked and future spambots should be fooled.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090713/http://throw.ws/' rel='external nofollow' class='url'>john</a></cite>&#160;<a class=p href="/web/20110806090713/http://diveintomark.org/archives/2003/02/26/how_to_block_spambots_ban_spybots_and_tell_unwanted_robots_to_go_to_hell#comment-616" title="May 3, 2003 @ 1:06 am"><img alt="#" src=/web/20110806090713im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-655"><cite><a href='/web/20110806090713/http://www.way.nu/archives/000629.html' rel='external nofollow' class='url'>Way.Nu</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-656"><cite><a href='/web/20110806090713/http://www.way.nu/archives/000631.html' rel='external nofollow' class='url'>Way.Nu</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-657"><cite><a href='/web/20110806090713/http://pretzel.kicks-ass.org/archives/2003/05/15/e_000216.aspl' rel='external nofollow' class='url'>Pretzel Land</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806090713/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806090713/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806090713/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806090713/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806090713/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.497 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-20 21:10:38 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:07:13 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:44 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

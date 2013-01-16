@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>The future of the web [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806102153/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806102153/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806102153/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806102153/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806102153im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806102153/http://diveintomark.org/archives/2007/04/12/super-strict" title="My kind of gutsy">
+<link rel=next href="/web/20110806102153/http://diveintomark.org/archives/2007/04/14/we-like-money" title="We like money">
+<link rel=up href="/web/20110806102153/http://diveintomark.org/archives#p1677" title="April 2007">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; The future of the web Comments Feed" href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806102153/http://diveintomark.org/' />
+<link rel='prev' title='My kind of gutsy' href='/web/20110806102153/http://diveintomark.org/archives/2007/04/12/super-strict' />
+<link rel='next' title='We like money' href='/web/20110806102153/http://diveintomark.org/archives/2007/04/14/we-like-money' />
+<link rel='canonical' href='/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation' />
+<link rel='shortlink' href='/web/20110806102153/http://diveintomark.org/?p=1677' />
+<meta name="description" content="A presentation I gave in December 2005 on the future of the web.">
+<meta name="keywords" content="html5,presentation,webstandards,whatwg">
+<link href="/web/20110806102153cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806102153/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2007\/04\/13\/html5-presentation";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2007/04/13/html5-presentation" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806102153" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607172006/http://diveintomark.org/archives/2007/04/13/html5-presentation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:21:53 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111018092202/http://diveintomark.org/archives/2007/04/13/html5-presentation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Oct 2011"><strong>OCT</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110607172006/http://diveintomark.org/archives/2007/04/13/html5-presentation" title="17:20:06 Jun 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:21:53 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110811103053/http://diveintomark.org/archives/2007/04/13/html5-presentation" title="10:30:53 Aug 11, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615033451/http://diveintomark.org/archives/2007/04/13/html5-presentation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:21:53 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120918213558/http://diveintomark.org/archives/2007/04/13/html5-presentation" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Sep 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806102153*/http://diveintomark.org/archives/2007/04/13/html5-presentation" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>25 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">16 Apr 07 - 18 Sep 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000221100111_2008:-1:101110001010_2009:-1:000001000000_2010:-1:000001000011_2011:7:000001020100_2012:-1:000000011000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806102153/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806102153/http://diveintomark.org/archives#p1677">April 13, 2007</a> &#8227;
+<h2>The future of the web</h2> (<a href="/web/20110806102153/http://diveintomark.org/tag/html5" rel="tag">html5</a>, <a href="/web/20110806102153/http://diveintomark.org/tag/presentation" rel="tag">presentation</a>, <a href="/web/20110806102153/http://diveintomark.org/tag/webstandards" rel="tag">webstandards</a>, <a href="/web/20110806102153/http://diveintomark.org/tag/whatwg" rel="tag">whatwg</a>)</div>
+<p><a href="/web/20110806102153/http://www.digital-web.com/articles/html5_xhtml2_and_the_future_of_the_web/">HTML 5, XHTML 2, and the Future of the Web</a> is making the rounds.  It&#8217;s an excellent summary for people who haven&#8217;t been paying attention.  Along the same lines, here&#8217;s a presentation I gave in December 2005 to a bunch of Firefox developers at Mozilla Corporation headquarters: <a href="/web/20110806102153/http://diveintomark.org/public/2005/12/whitelights/">White lights lead to red lights</a>.  The &#8220;future of the web&#8221; part comes in about halfway through.</p>
+
+<p>(Yes, I am aware these slides violate all the rules of <a href="/web/20110806102153/http://www.presentationzen.com/">Presentation Zen</a>.  I wrote them on the plane.  Hence the title.)</p>
+
+<p>The circumstance surrounding this speaking engagement is itself a funny story, one which I may share someday.  For now, let&#8217;s just say that I&#8217;ve been keeping this presentation under my hat for a long time, and now I don&#8217;t have to.</p>
+
+<p>I shall now proceed to play Super Paper Mario all weekend.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Fifteen comments here (<a href=/web/20110806102153/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-9031"><p>After reading that article (no, I haven&#8217;t been paying attention) I find myself looking at my XHTML tags (served as text/html of course, why would I risk complete parsing malfunction?) and thinking, &#8220;Why did I do this?&#8221;</p>
+<p>I think the answer lies somewhere between: </p>
+<p>&#8220;It&#8217;s newer, therefore it has to be an improvement.&#8221; </p>
+<p>and </p>
+<p>&#8220;XML will obviously save the web.&#8221;</p>
+<p>After reading over the working draft for HTML5, albeit not from cover to cover, but almost, I was still unclear <em>why</em> it makes sense to move away from a traditional SGML derivative. But now that it&#8217;s sunken in a bit, that HTML5 vs. XHTML2.0 article really hits home.</p>
+<p>Of <em>course</em> it makes sense to say, &#8220;Hey, everybody&#8217;s doing this. Why do we have to pretend&#8230; that they&#8217;re not?&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://www.fiddlerelf.com/' rel='external nofollow' class='url'>Ryan</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9031" title="April 13, 2007 @ 10:33 pm"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9032"><p>Where can i find the “How to write a novel in 30 days” and “How to write a resume”? i tried googling for them with mark pilgrim attached but no avail.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://manuelj.livejournal.com/' rel='external nofollow' class='url'>Manuel</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9032" title="April 14, 2007 @ 12:08 am"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9033"><p>My &#8220;why move away from SGML?&#8221; reason is the way that every time I have to explain to someone that their Mozilla bug in invalid because HTML is actually an SGML application, with bizarre underlying rules they&#8217;ve never seen, I finish up by saying &#8220;if you want to see the actual spec that I&#8217;ve been told says that, you can buy a copy for 230 Swiss francs.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://weblog.philringnalda.com/' rel='external nofollow' class='url'>Phil Ringnalda</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9033" title="April 14, 2007 @ 1:54 am"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9034"><cite><a href='/web/20110806102153/http://justinsomnia.org/2007/04/mark-pilgrim-who-now-works-at-google-with-everyone-else-in-the-world-onthe-future-of-the-web-aka/' rel='external nofollow' class='url'>Mark Pilgrim, who now works at Google with everyone else in the world, onThe future of the web (aka&hellip; - Justinsomnia</a></cite>&#160;(pingback)</li>
+<li id="comment-9036"><blockquote cite="#comment-9031"><p>I find myself looking at my XHTML tags […] and thinking, “Why did I do this?”</p></blockquote>
+<p> There are two kinds of fool. One says, “This is old, and therefore good.” And one says “This is new, and therefore better.”  —<i>John Brunner</i>, in <i>The Shockwave Rider</i></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9036" title="April 14, 2007 @ 7:57 am"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9038"><p>Your ideas about expertise and teaching are very interesting, and reflect my own beliefs.  At work, I&#8217;ve often had to help my co-workers with technology that I only learned last week.  Heck, I am planning to teach a Ruby on Rails seminar at work in the summer, and I don&#8217;t even *know* RoR yet. </p>
+<p>I don&#8217;t know if I can afford to be an expert in things anymore.  Consider the web app stack: HTML, CSS, Javascript on the front end, PHP/JSP/.net/Ruby/Python/Perl in the middle, and some type of database in the back.  You can spend your time mastering everything, or you can just get something done already.</p>
+<p>My mantra is starting to become, &#8220;If I&#8217;m writing code, something has probably gone wrong.&#8221;  This isn&#8217;t totally true, but it&#8217;s true-ish and certainly gets a conversation going.  Integration is becoming a much more important skill than knowing the entire PHP API or becoming a CSS expert.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://localhost80.com/' rel='external nofollow' class='url'>Trent</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9038" title="April 14, 2007 @ 1:40 pm"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9040"><p>Sorry, folks. If HTML5 is not well-formed XML, I don&#8217;t see how it could catch on. The entire argument is invalid. IE doesn&#8217;t support XHTML, so let&#8217;s tweak the web to suit IE. Yeah, right. Rather, I&#8217;d tweak the web so that it uses semantic markup and consists of well-formed XML so that:<br />
+1. It&#8217;d be less of a pain in the ass to process HTML in computers (and there&#8217;s no denying that semantic, well formed XML would be easier to create and process)<br />
+2. Make VALIDATION much easier. I don&#8217;t see a problem if your page blows up if you forget to close a tag. Just close the god damn tag and move on with your life. You&#8217;ll later be thankful for it.</p>
+<p class=sig>&#8212;&#8201;<cite>DMB</cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9040" title="April 14, 2007 @ 3:51 pm"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9041"><p>I also find it ironic that the article about HTML5 is presented in XHTML 1.0</p>
+<p class=sig>&#8212;&#8201;<cite>DMB</cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9041" title="April 14, 2007 @ 4:25 pm"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9042"><p>DMB, from the article:</p>
+<blockquote><p>Very little content on the web is valid HTML 4.01; most of it is invalid and ill-formed, but browsers still have to parse it</p></blockquote>
+<blockquote><p>[...]</p></blockquote>
+<blockquote><p>A document with an XML well formedness error will only display details of the error, but no content. On pages where some of the content is out of the control of XML tools with well-designed handling of different character encodings—where users may comment or post, or where content may come from the outside in the form of trackbacks, ad services, or widgets, for example—there’s always a risk of a well-formedness error. Tag-soup parsing browsers will do their best to display a page, in spite of any errors, but when XML parsing any error, no matter how small, may render your page completely useless.</p></blockquote>
+<p>And you say:</p>
+<blockquote><p>I don’t see a problem if your page blows up if you forget to close a tag. Just close the god damn tag and move on with your life. You’ll later be thankful for it.</p></blockquote>
+<p>You may not &#8220;see a problem&#8221; with it, but imagine how many people <em>do</em> care that their page being served looks like this:</p>
+<blockquote><p>XML Parsing Error:</p></blockquote>
+<p>Programmers look at the web as a programming platform, and as such are easy to point out that in a programming language a syntax error needs to be corrected or all is lost. But not everyone adding content to the web is a programmer, and not everyone adding content to the web should have to be.</p>
+<p>Incidentally that page <em>is</em> being served as XHTML1.0, but with a MIME type of text/html. It doesn&#8217;t pass validation. Presumably had it been served as application/xhtml+xml none of us would even be reading it. Is that OK?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://www.fiddlerelf.com/' rel='external nofollow' class='url'>Ryan</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9042" title="April 14, 2007 @ 5:04 pm"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9043"><p>I don&#8217;t care if it passes validation as long as it&#8217;s a well formed, semantic piece of XML. If your page blows up, it&#8217;s your damn fault, just like if your program/cgi script blows up because you forgot to handle an error condition. If anything Web should be gravitating towards more structure, not less!</p>
+<p class=sig>&#8212;&#8201;<cite>DMB</cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9043" title="April 14, 2007 @ 7:15 pm"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9047"><p>Thanks for the link to &#8216;Presentation Zen&#8217;. In return, here is a link to &#8216;<a href="/web/20110806102153/http://www.beyondbullets.com/">Beyond Bullets</a>&#8216;, which you may find useful (the best stuff IMO is in the 2005 archives).</p>
+<p>And FYA, you may enjoy this presentation: &#8216;<a href="/web/20110806102153/http://www.rifters.com/blindsight/vampires.htm">Taming Yesterday&#8217;s Nightmares for a Better Tomorrow</a>&#8216;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://michaelbernstein.com/' rel='external nofollow' class='url'>Michael R. Bernstein</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9047" title="April 15, 2007 @ 12:25 am"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9048"><p>DMB: I dare you to create a site that provides user-generated content that maintains XML well-formedness.  I tried to do this and my users got so irritated at their inability to style their content simply enough (&#8220;OMG!! y am i getting so many errors?&#8221;) that I ended up dropping the idea and serving it as text/html again.  </p>
+<p>The serialization format of the document doesn&#8217;t make one iota of difference to either the coder or the end-user.  It only matters to the user agent, and as long as the parsing rules are sane, it still doesn&#8217;t matter that much.</p>
+<p class=sig>&#8212;&#8201;<cite>Charles</cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9048" title="April 15, 2007 @ 1:40 am"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9050"><p>Charles: That doesn&#8217;t make HTML5 any less insane. Just because someone can&#8217;t learn to close a freaking tag doesn&#8217;t mean the idea of strict XML well formedness is wrong or worthless. Serialization format makes a heck of a lot of difference if you want to do anything with your content after it&#8217;s created. Say, if three years from now someone comes up with a search engine that could understand your page better, it&#8217;d help if this search engine didn&#8217;t choke on the mess an unscrupulous designer pooped out. A good safeguard against this is well formedness and strict enforcement of it to the point of not rendering the pages at all if they&#8217;re broken. If you receive a broken Word document, you don&#8217;t complain when Word refuses to open it.</p>
+<p class=sig>&#8212;&#8201;<cite>DMB</cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9050" title="April 15, 2007 @ 3:52 am"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9071"><p>HTML5 just happens to have an HTML syntax that auto-corrects. HTML5 can also be written in XML. Both generate almost identical DOM trees which is where all the structure, semantics and such are that you care about. They&#8217;re not in the syntax.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://annevankesteren.nl/' rel='external nofollow' class='url'>Anne van Kesteren</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9071" title="April 16, 2007 @ 2:36 am"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9146"><p>I&#8217;m no HTML/XML expert (at least not in this crowd&#8230;) but isn&#8217;t the problem that while HTML5 (or 4&#8230;) offloads the very hard work of parsing tag soup onto 5 or 10 teams of very serious web browser developers, XHTML 1 (or 2&#8230;) offloads the moderately hard work of well-formedness onto millions upon millions of webmasters/myspacers/bloggers/hand-coding hobbyists?</p>
+<p>The problem for the people who would benefit most from XML is that the HTML beneficiaries outnumber you by a factor of some millions to one, and they&#8217;re the XML-loving people&#8217;s CLIENT BASE.</p>
+<p>So they probably won&#8217;t stand for it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806102153/http://wiredcola.com/' rel='external nofollow' class='url'>Ryan Cousineau</a></cite>&#160;<a class=p href="/web/20110806102153/http://diveintomark.org/archives/2007/04/13/html5-presentation#comment-9146" title="April 16, 2007 @ 11:48 pm"><img alt="#" src=/web/20110806102153im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806102153/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806102153/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806102153/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806102153/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806102153/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.338 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 19:02:11 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:21:53 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:07:18 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

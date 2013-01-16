@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>A gentle introduction to video encoding, part 1: container formats [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110724094255/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110724094255/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110724094255/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110724094255/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110724094255im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110724094255/http://diveintomark.org/archives/2008/12/15/caption-contest" title="Caption contest">
+<link rel=next href="/web/20110724094255/http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs" title="A gentle introduction to video encoding, part 2: lossy video codecs">
+<link rel=up href="/web/20110724094255/http://diveintomark.org/archives#p2177" title="December 2008">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; A gentle introduction to video encoding, part 1: container formats Comments Feed" href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats/feed" />
+<link rel='index' title='dive into mark' href='/web/20110724094255/http://diveintomark.org/' />
+<link rel='prev' title='Caption contest' href='/web/20110724094255/http://diveintomark.org/archives/2008/12/15/caption-contest' />
+<link rel='next' title='A gentle introduction to video encoding, part 2: lossy video codecs' href='/web/20110724094255/http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs' />
+<link rel='canonical' href='/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats' />
+<link rel='shortlink' href='/web/20110724094255/http://diveintomark.org/?p=2177' />
+<meta name="description" content="These notes will eventually become part of a tech talk on video encoding.">
+<meta name="keywords" content="asf,avi,encoding,flv,give,mp4,ogg,video">
+<link href="/web/20110724094255cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110724094255/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2008\/12\/18\/give-part-1-container-formats";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "24";
+var displayMonth = "Jul";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110724094255" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607182946/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:42:55 Jul 24, 2011">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110923030208/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="23 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110723093135/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" title="9:31:35 Jul 23, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:42:55 Jul 24, 2011">24</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110923030208/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" title="3:02:08 Sep 23, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620105350/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:42:55 Jul 24, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120920114446/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Sep 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110724094255*/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>17 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">21 Jan 09 - 20 Sep 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:100000000000_2010:-1:000111000011_2011:6:000001202100_2012:-1:300010001000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110724094255/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110724094255/http://diveintomark.org/archives#p2177">December 18, 2008</a> &#8227;
+<h2>A gentle introduction to video encoding, part 1: container formats</h2> (<a href="/web/20110724094255/http://diveintomark.org/tag/asf" rel="tag">asf</a>, <a href="/web/20110724094255/http://diveintomark.org/tag/avi" rel="tag">avi</a>, <a href="/web/20110724094255/http://diveintomark.org/tag/encoding" rel="tag">encoding</a>, <a href="/web/20110724094255/http://diveintomark.org/tag/flv" rel="tag">flv</a>, <a href="/web/20110724094255/http://diveintomark.org/tag/give" rel="tag">GIVE</a>, <a href="/web/20110724094255/http://diveintomark.org/tag/mp4" rel="tag">mp4</a>, <a href="/web/20110724094255/http://diveintomark.org/tag/ogg" rel="tag">ogg</a>, <a href="/web/20110724094255/http://diveintomark.org/tag/video" rel="tag">video</a>)</div>
+<p>[<a rel="alternate" type="text/html" hreflang="es" href="/web/20110724094255/http://triptico.com/docs/give_part_1.html">en Espa&ntilde;ol</a>]</p>
+
+<p>[These notes will eventually become part of a tech talk on video encoding.  <a href="/web/20110724094255/http://diveintomark.org/tag/give">List of all articles in this series</a>.]</p>
+
+<p>You may think of video files as &#8220;AVI files&#8221; or &#8220;MP4 files.&#8221;  In reality, &#8220;AVI&#8221; and &#8220;MP4&#8243; are just container formats.  Just like a ZIP file can contain any sort of file within it, video container formats only define <em>how</em> to store things within them, not <em>what</em> kinds of data are stored.  (It&#8217;s a little more complicated than that, because not all video streams are compatible with all container formats, but never mind that for now.)  A video file usually contains multiple <em>tracks</em> &#8212; a video track (without audio), one or more audio tracks (without video), one or more subtitle/caption tracks, and so forth.  Tracks are usually interrelated; an audio track contains markers within it to help synchronize the audio with the video, and a subtitle track contains time codes marking when each phrase should be displayed.  Individual tracks can have metadata, such as the aspect ratio of a video track, or the language of an audio or subtitle track.  Containers can also have metadata, such as the title of the video itself, cover art for the video, episode numbers (for television shows), and so on.</p> 
+
+<p>There are <em>lots</em> of video container formats.  Some of the most popular include</p>
+
+<ul>
+<li><a href="/web/20110724094255/http://en.wikipedia.org/wiki/MPEG-4_Part_14">MPEG 4</a>, usually with an <code>.mp4</code> extension.  The MPEG 4 container is <a href="/web/20110724094255/http://www.chiariglione.org/mpeg/technologies/mp04-ff/index.htm">based on Apple&#8217;s older QuickTime container</a> (<code>.mov</code>).  <a href="/web/20110724094255/http://www.apple.com/trailers/">Movie trailers on Apple&#8217;s website</a> still use the older QuickTime container, but movies that you rent from iTunes are delivered in an MPEG 4 container, although Apple likes to use the <code>.m4v</code> file extension instead of <code>.mp4</code>.</li>
+<li><a href="/web/20110724094255/http://en.wikipedia.org/wiki/Advanced_Systems_Format">Advanced Systems Format</a>, usually with an <code>.asf</code> or <code>.wmv</code> extension.  ASF was <a href="/web/20110724094255/http://msdn.microsoft.com/en-us/library/ms983668.aspx">invented by</a> and is primarily used by Microsoft in their Windows Media Player and their handheld Zune media device.</li>
+<li><a href="/web/20110724094255/http://en.wikipedia.org/wiki/Flash_Video">Flash Video</a>, usually with an <code>.flv</code> extension.  Flash Video is, unsurprisingly, used by Adobe Flash.  Prior to Flash 9.0.60.184 (a.k.a. Flash Player 9 Update 3), this was the only container format that Flash supported.  More recent versions of Flash also support the MPEG 4 container.</li>
+<li><a href="/web/20110724094255/http://en.wikipedia.org/wiki/Matroska">Matroska</a>, usually with an <code>.mkv</code> extension.  Matroska is an open standard, unencumbered by any known patents, and there are open source reference implementations for doing everything you might want to do with MKV files.  It is primarily used by Free Software-loving hippies and, oddly enough, pirates who rip high-definition movies and television shows and release them in The Scene.</li>
+<li><a href="/web/20110724094255/http://en.wikipedia.org/wiki/Ogg">Ogg</a>, usually with an <code>.ogv</code> extension.  Like Matroska, Ogg is an open standard, open-source-friendly, and unencumbered by any known patents.  Like Matroska, it is used primarily by Free Software-loving hippies, but that may begin to change once Mozilla ships their Firefox 3.1 browser.  Firefox 3.1 will support &#8212; natively, without platform-specific plugins &#8212; the Ogg container format, the Ogg video codec (Theora), and the Ogg audio codec (Vorbis).  On the desktop, Ogg is supported out-of-the-box by all major Linux distributions, and you can use it on Mac and Windows by installing the <a href="/web/20110724094255/http://www.xiph.org/quicktime/">QuickTime components</a> or <a href="/web/20110724094255/http://www.xiph.org/dshow/">DirectShow filters</a>, respectively.</li>
+<li><a href="/web/20110724094255/http://en.wikipedia.org/wiki/AVI">Audio Video Interleave</a>, usually with an <code>.avi</code> extension.  Also known as &#8220;the crappy, obsolete format that just won&#8217;t die.&#8221;  The AVI container format was invented by Microsoft in a simpler time when the fact that computers could play video at all was considered pretty amazing.  It does not officially support many of the features of more recent container formats; it does not officially support any sort of video metadata; it does not even officially support most of the modern video and audio codecs in use today.  Over time, various companies have tried to extend it in generally incompatible ways to support this or that, and it is still the default container format for popular encoders such as <a href="/web/20110724094255/http://www.mplayerhq.hu/DOCS/HTML/en/encoding-guide.html">MEncoder</a>.</li>
+</ul>
+
+<p>This is the briefest of overviews; there are literally dozens of other container formats in use today.  DV, NUT, 3GP&#8230; the list goes on and on.  And there are many others littering the landscape of failed or obsolete technologies, from companies that tried to corner the nascent digital video market by defining their own formats.  Wikipedia has a good <a href="/web/20110724094255/http://en.wikipedia.org/wiki/Comparison_of_container_formats">roundup of video container formats</a>.</p>
+
+<p>Tomorrow: video codecs!</p>
+
+<p class=c>&#167;
+
+<h3 id=comments>Thirty four comments here (<a href=/web/20110724094255/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-12896"><p>Good article, thank you.</p>
+<p class=sig>&#8212;&#8201;<cite>nick</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12896" title="December 18, 2008 @ 12:46 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12897"><p>Mentioning OGM, a fork of Ogg, among the &#8220;failed or obsolete&#8221;, and mentioning Ogg itself, borders on FUD, Mark.</p>
+<p><a href="/web/20110724094255/http://wiki.xiph.org/index.php/Ogg" rel="nofollow">http://wiki.xiph.org/index.php/Ogg</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://www.teknico.net/' rel='external nofollow' class='url'>Nicola Larosa</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12897" title="December 18, 2008 @ 1:23 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12898"><p>&#8220;&#8230;and *not* mentioning Ogg itself&#8230;&#8221;, for FSM&#8217;s sake. :-/</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://www.teknico.net/' rel='external nofollow' class='url'>Nicola Larosa</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12898" title="December 18, 2008 @ 1:23 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12899"><p>Ah, the joys of monkeying with container formats. I still (faintly) remember working with Nandub, and waiting something like a day and a half to encode a movie with two-pass DivX 3.11a. Nowadays all these newfangled formats allow multiple audio tracks, multiple video tracks, all kinds of embedded subtitles&#8230;</p>
+<p>I&#8217;m a bit confused, though, about the status of the OGG container format. I know that OGM is a hack of OGG which allows it to contain non-Xiph.org codecs. But why bother developing OGG in the first place, then, if it has such limited utility? Why didn&#8217;t Xiph co-opt Matroska, or NUT? What&#8217;s the <i>purpose</i> of the OGG container?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12899" title="December 18, 2008 @ 1:29 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12900"><blockquote><p><b>Nicola Larosa</b>: Mentioning OGM, a fork of Ogg, among the “failed or obsolete”, and mentioning Ogg itself, borders on FUD, Mark.</p></blockquote>
+<p>To be fair, I read that as an example of the &#8220;literally dozens of other container formats in use today&#8221;, rather than of the &#8220;failed or obsolete&#8221; set.</p>
+<p>And besides, OGG is a Xiph-only container. It&#8217;s useful for what it is, but it&#8217;s not really a general-purpose container format. Attempts to stretch it into one seem a little like the endless series of hacks and enhancements piled atop the AVI format.</p>
+<p>I&#8217;d also add that Matroska is especially popular with anime groups, who are likely to be putting together releases which have multiple audio tracks and plenty of complex subtitles. (On the other hand, I&#8217;ve seen plenty of releases where the subtitles were &#8220;baked into&#8221; the video, presumably to keep people from changing the credits. Ugh.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12900" title="December 18, 2008 @ 1:35 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-12901"><p>@Nicola: wow, that was totally not what I meant.  Sorry.  I&#8217;ll rephrase the paragraph.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12901" title="December 18, 2008 @ 1:42 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-12902"><p>Rephrased, replaced &#8220;OGM&#8221; with &#8220;OGG&#8221;, and expanded the &#8220;failed and obsolete&#8221; sentence to &#8220;And there are many others littering the landscape of failed or obsolete technologies, from companies that tried to corner the nascent digital video market by defining their own formats.&#8221;  Which is what I was trying to say in the first place.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12902" title="December 18, 2008 @ 1:47 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12903"><p>Flash introduced H.264 support in Flash 9.0.60.184, also known as Flash Player 9 Update 3. Not sure how that relates to &#8220;9v2&#8243; you mention above.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://www.niallkennedy.com/' rel='external nofollow' class='url'>Niall Kennedy</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12903" title="December 18, 2008 @ 1:52 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12904"><p>The new container related to the Flash Platform is f4v.<br />
+&#8220;The F4V format is based on the format specified by ISO/IEC 14496-12: ISO base media file format. Starting with SWF files published for Flash Player 9 Update 3 (9,0,115,0), Flash Player has been able to play F4V files.&#8221;<br />
+- <a href="/web/20110724094255/http://www.adobe.com/devnet/flv/" rel="nofollow">http://www.adobe.com/devnet/flv/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://enefekt.com/sansbrowser/' rel='external nofollow' class='url'>enefekt</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12904" title="December 18, 2008 @ 2:05 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12905"><p>Oh, fantastic! I&#8217;ve been reading about some of these recently (and subsequently getting confused). Looking forward to the follow up! Will you be covering ways to say convert one to another, like say Matroska to MPEG 4 (I&#8217;ve been looking into this, but not thuroughly)? Also, why did Apple go with *.m4v? DRM related?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://horrell.ca/' rel='external nofollow' class='url'>Christopher</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12905" title="December 18, 2008 @ 2:12 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12906"><p>Lots of MPEG-4 parts are patent encumbered, but are you sure that the file format is one of them?  The MPEG licensing association (admittedly not the last word in patent encumbrances) doesn&#8217;t seem include the file format in its licensing offerings.  (And how, exactly, can one claim that any file format is unencumbered by patents?  That requires proving a negative of a very difficult sort, given the way patents work: just because the creator of the format doesn&#8217;t claim any patents on it doesn&#8217;t mean no one else can.)</p>
+<p class=sig>&#8212;&#8201;<cite>Joe Pallas</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12906" title="December 18, 2008 @ 2:25 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12907"><p>Thank you! I await further instalments. &#8220;GIVE&#8221; is an interesting acronym, too. :P<br />
+There&#8217;s probably an editing error in this sentence: &#8220;MPEG 4 is a patent-encumbered The MPEG 4 container is based on&#8230;.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://shreevatsa.wordpress.com/' rel='external nofollow' class='url'>svat</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12907" title="December 18, 2008 @ 2:43 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12908"><blockquote><p><b>Joe Pallas</b>: And how, exactly, can one claim that any file format is unencumbered by patents? That requires proving a negative of a very difficult sort, given the way patents work: just because the creator of the format doesn’t claim any patents on it doesn’t mean no one else can.</p></blockquote>
+<p>Well, prompts to defend that claim generally come up when <a href="/web/20110724094255/http://rudd-o.com/en/monopolies-of-the-mind/removal-of-ogg-vorbis-and-theora-from-html5-an-outrageous-disaster">an open standard endangers someone&#8217;s business model</a>. It&#8217;s a logically impossible demand; all you can do is your due diligence and hope nobody has a submarine patent. It&#8217;s just a way of hiking up the bar to keep open standards out of the market.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12908" title="December 18, 2008 @ 3:18 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12909"><p>Hi Mark,</p>
+<p>Nice write-up, but this sentence is a little wonky: &#8220;MPEG 4 is a patent-encumbered The MPEG 4 container is&#8230;&#8221;. Maybe you meant something like, &#8220;The MPEG 4 container is patent-encumbered, and is&#8230;&#8221;?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://redefine.dyndns.org/~andyr/blog' rel='external nofollow' class='url'>Andy Reitz</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12909" title="December 18, 2008 @ 4:03 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12910"><p>‘Ogg, usually with an .ogv extension. Ogg is an open standard, unencumbered by patents, and there are open source reference implementations for doing everything you might want to do with Ogg files. It is primarily used by Free Software-loving hippies and, oddly enough, Mozilla and Opera who want to support the Open Web*.’</p>
+<p>Funnily enough this entry is just like Matroska, except Matroska doesn’t seem to have much of an appearance outside of The Scene. Just look to Planet [Gnome, Ubuntu, Fedora, Mozilla] and you’ll find Ogg, not Matroska.</p>
+<p>*ew, awful term, but you understand the meaning.</p>
+<p class=sig>&#8212;&#8201;<cite>John Drinkwater</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12910" title="December 18, 2008 @ 4:22 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12911"><p>It’s ‘Ogg’, not ‘OGG’. It’s not an acronym, but a name based on a Terry Pratchett character (as is the Vorbis audio format). As for .mp4, I’ve read that the container itself is royalty-free. Do you have information suggeting otherwise? Finally, what you say about RIFF/AVI is mostly FUD. For one, it most certainly does support metadata. Moreover, it even works with most modern formats quite well (with the notable exception of Vorbis). See “<a href="/web/20110724094255/http://www.alexander-noe.com/video/amg/en_myths.html">Myths about AVI</a>”. You may also want to mention .wav, which is practically identical to .avi.</p>
+<p class=sig>&#8212;&#8201;<cite>David</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12911" title="December 18, 2008 @ 4:53 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12912"><blockquote><p><b>David</b>: It’s ‘Ogg’, not ‘OGG’. It’s not an acronym, but a name based on a Terry Pratchett character (as is the Vorbis audio format).</p></blockquote>
+<p><a href="/web/20110724094255/http://xiph.org/xiphname">Nope</a>. It&#8217;s a bit of old &#8220;Netrek&#8221; jargon. The &#8220;Discworld&#8221; naming theme doesn&#8217;t cover Tarkin or Theora, in any case.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12912" title="December 18, 2008 @ 5:42 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-12913"><p>The partial sentence about the MPEG 4 container format being patent-encumbered is actually a mistake &#8212; I was looking for confirmation and couldn&#8217;t find it, but I never corrected the sentence.</p>
+<p>As for AVI, I stand by my statement: it does not OFFICIALLY support any of those things.  All attempts to make it support modern codecs, metadata, etc. are third-party extensions and are not part of the Microsoft standard.  If you can find a citation on MSDN that proves otherwise, I&#8217;ll revise my opinion and my article.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12913" title="December 18, 2008 @ 6:26 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-12914"><p>I&#8217;ve changed &#8220;patents&#8221; to &#8220;any known patents&#8221; to acknowledge the depressing reality of the patent system.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12914" title="December 18, 2008 @ 6:35 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-12915"><p>@Niall: thanks, I&#8217;ve corrected the sentence about Flash versioning.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12915" title="December 18, 2008 @ 6:42 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-12916"><p>Added a section about Ogg and its upcoming support in Firefox 3.1.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12916" title="December 18, 2008 @ 7:13 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12917"><p>&#8220;F4V&#8221; is just a subset of MPEG-4 (both container and codecs), and what enefekt and Niall were referring to.  Flash Player has supported FLV (not related to MPEG-4) since version 6 (embedded in the SWF) or 7 (separate download).</p>
+<p class=sig>&#8212;&#8201;<cite>Miles</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12917" title="December 18, 2008 @ 8:07 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12918"><p>grendelkhan: Woops! Thanks for the correction.</p>
+<p>Mark: MSDN’s information on RIFF is pretty scarce. According to <a href="/web/20110724094255/http://www.the-labs.com/Video/odmlff2-avidef.pdf">this document</a>, however, metadata (in the form of the INFO list chunk) is a standard part of OpenDML (AVI version 2).</p>
+<p class=sig>&#8212;&#8201;<cite>David</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12918" title="December 18, 2008 @ 8:16 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12919"><p>Well, not &#8220;just&#8221; a subset; I think there&#8217;s some proprietary extensions as well, mostly related to metadata.</p>
+<p class=sig>&#8212;&#8201;<cite>Miles</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12919" title="December 18, 2008 @ 8:16 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12920"><p>I know you&#8217;re not dissing AVI really, just telling the truth about it&#8217;s unsupported nature.  Still, if you&#8217;re doing professional encoding on PC&#8217;s you will have to use it all day, every day.  Nothing beats a YUY2/PCM AVI for processing after capture.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://metroencoding.com/' rel='external nofollow' class='url'>w caulfield</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12920" title="December 18, 2008 @ 9:07 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12921"><p>Thanks for this, and looking forward to upcoming installments.  Hopefully this will help me finally wade into how I can transform my mini-DV recordings into standard DVD-player format and into free/open compressed files.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://www.movingtofreedom.org/' rel='external nofollow' class='url'>Scott Carpenter</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12921" title="December 18, 2008 @ 10:09 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12923"><p>Great article. Perhaps not worth mentioning, but Microsofts &#8220;invention&#8221; of AVI essentially consisted renaming their other &#8220;invention&#8221; RIFF, which was an endian-swap of EA&#8217;s IFF format (which I remember dearly growing up with Deluxe Paint III and IV. Unfortunately I can&#8217;t find my Amiga floppies anywhere). Also perhaps not worth mentioning, and already implied, but some people still aren&#8217;t aware that file extension and type are totally separate.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://jmtd.net/' rel='external nofollow' class='url'>Jon</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12923" title="December 19, 2008 @ 6:22 am"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12924"><p>This section is only talking about containers, yes? Is it really feasible that anyone could hold a patent on the container that&#8217;s going to a) apply only to one container, since they all do pretty much the same thing (as per your first paragraph), and b) stand up in court. I mean patents are all kinds of messed up, but there&#8217;s a limit surely?</p>
+<p class=sig>&#8212;&#8201;<cite>Peng</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12924" title="December 19, 2008 @ 7:21 am"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12927"><blockquote><p><b>Peng</b>: Is it really feasible that anyone could hold a patent on the container that’s going to a) apply only to one container, since they all do pretty much the same thing (as per your first paragraph),</p></blockquote>
+<p>A patent isn&#8217;t on an end result, but on a way of producing that result. That&#8217;s why the claims in patents <a href="/web/20110724094255/http://patft1.uspto.gov/netacgi/nph-Parser?patentnumber=RE39,276">tend to read</a> &#8220;a method for doing <i>x</i>&#8220;&#8211;it&#8217;s the method that&#8217;s patentable.</p>
+<p>And indeed, <a href="/web/20110724094255/http://www.advogato.org/article/101.html">ASF is patented</a> (or was eight years ago); legal threats from Microsoft forced Avery Lee to remove ASF support from VirtualDub. That thread also makes the claim that the QuickTime container is patented. I don&#8217;t know if these patents are still in existence, or how ASF and QuickTime are supported in ffmpeg and mplayer if there are patent issues.</p>
+<p>ASF is US Patent <a href="/web/20110724094255/http://www.google.com/patents?id=kY57AAAAEBAJ&dq=6041345">6041345</a>; the QuickTime container is US Patent <a href="/web/20110724094255/http://www.google.com/patents?id=sJEjAAAAEBAJ&dq=5751281">5751281</a>, and possibly some others as well. (Though the Advogato article says that Apple hadn&#8217;t been enforcing the patent, which is why decoding support is widespread.)</p>
+<p>I still don&#8217;t understand how ffmpeg, which isn&#8217;t distributed in multiverse (Ubuntu) or non-free (Debian), but rather universe and main, respectively, can knowingly include patent-infringing code, even if those patents aren&#8217;t being enforced.</p>
+<blockquote><p> and b) stand up in court.</p></blockquote>
+<p>Speaking pragmatically, it&#8217;s expensive and difficult to strike down a patent, and they produce a very, very effective chilling effect in the meantime. (See: Vorbis and Theora being stricken from the HTML 5 spec.) <a href="/web/20110724094255/http://w2.eff.org/patent/">The EFF has been working to strike down bad patents in court</a>, focusing on the most egregious examples, but it takes literally <i>years</i> to strike down a single one. It&#8217;s like the right to fair use&#8211;in principle, it&#8217;s lovely, but in practice, it tends to boil down to the right to sue.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12927" title="December 19, 2008 @ 11:51 am"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12929"><p>&#8220;(It’s a little more complicated than that, because container formats do limit what codecs you can store in them, but never mind.)&#8221;</p>
+<p>Do you really store codecs in containers? You store streams, right? And use codecs to encode-decode those streams.</p>
+<p class=sig>&#8212;&#8201;<cite>Birger</cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12929" title="December 19, 2008 @ 12:50 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-12932"><p>Thank you Mark for educating us about video formats. I use my Canon point and shoot camera to make short videos of my son and I did struggle to get small sized good quality videos out of the large file the camera generates. I have since settled on using Windows port of MEncoder to encode the videos to DivX .AVI files.</p>
+<p>Looking forward to more information about video encoding from you. Hopefully, you will cover what we should look for in a Video Camera if we are to make small reasonably good quality files for sharing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://richardhsu.net/' rel='external nofollow' class='url'>Richard Hsu</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12932" title="December 19, 2008 @ 4:10 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-12933"><p>@Birger: you&#8217;re right, of course; I&#8217;ve rephrased the sentence.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12933" title="December 19, 2008 @ 4:52 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-12934"><cite><a href='/web/20110724094255/http://www.redmonk.com/cote/2008/12/19/links-for-december-18th-through-december-19th/' rel='external nofollow' class='url'>People Over Process &raquo; Links for December 18th through December 19th</a></cite>&#160;(pingback)</li>
+<li id="comment-12973"><p>Great article. Here is a useful wiki and a cool list of multimedia container formats:<br />
+<a href="/web/20110724094255/http://wiki.multimedia.cx/index.php?title=Category:Container_Formats" rel="nofollow">http://wiki.multimedia.cx/index.php?title=Category:Container_Formats</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110724094255/http://marcarea.com/' rel='external nofollow' class='url'>Marc</a></cite>&#160;<a class=p href="/web/20110724094255/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats#comment-12973" title="December 22, 2008 @ 4:22 pm"><img alt="#" src=/web/20110724094255im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110724094255/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110724094255/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110724094255/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110724094255/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110724094255/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.415 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:11:17 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:42:55 Jul 24, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:04:19 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

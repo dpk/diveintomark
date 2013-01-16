@@ -1,0 +1,526 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Of canaries and coal mines [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110911075820/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110911075820/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110911075820/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110911075820/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110911075820im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110911075820/http://diveintomark.org/archives/2008/01/14/howto-solve-the-sub-prime-mortgage-mess" title="HOWTO solve the sub-prime mortgage mess">
+<link rel=next href="/web/20110911075820/http://diveintomark.org/archives/2008/01/23/microsoft-koan" title="Microsoft koan">
+<link rel=up href="/web/20110911075820/http://diveintomark.org/archives#p1748" title="January 2008">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Of canaries and coal mines Comments Feed" href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines/feed" />
+<link rel='index' title='dive into mark' href='/web/20110911075820/http://diveintomark.org/' />
+<link rel='prev' title='HOWTO solve the sub-prime mortgage mess' href='/web/20110911075820/http://diveintomark.org/archives/2008/01/14/howto-solve-the-sub-prime-mortgage-mess' />
+<link rel='next' title='Microsoft koan' href='/web/20110911075820/http://diveintomark.org/archives/2008/01/23/microsoft-koan' />
+<link rel='canonical' href='/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines' />
+<link rel='shortlink' href='/web/20110911075820/http://diveintomark.org/?p=1748' />
+<meta name="keywords" content="apple,circlejerk,freedom0,linux">
+<link href="/web/20110911075820cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110911075820/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2008\/01\/17\/of-canaries-and-coal-mines";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "11";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110911075820" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607203131/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 7:58:20 Sep 11, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111208103956/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="8 Dec 2011"><strong>DEC</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110607203131/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" title="20:31:31 Jun 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 7:58:20 Sep 11, 2011">11</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20111208103956/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" title="10:39:56 Dec 8, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100624000126/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 7:58:20 Sep 11, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110911075820*/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>40 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">19 Jan 08 - 19 Apr 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:3111210e2100_2009:-1:000001000000_2010:-1:000003000000_2011:8:000001001001_2012:-1:023200000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110911075820/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110911075820/http://diveintomark.org/archives#p1748">January 17, 2008</a> &#8227;
+<h2>Of canaries and coal mines</h2> (<a href="/web/20110911075820/http://diveintomark.org/tag/apple" rel="tag">apple</a>, <a href="/web/20110911075820/http://diveintomark.org/tag/circlejerk" rel="tag">circlejerk</a>, <a href="/web/20110911075820/http://diveintomark.org/tag/freedom0" rel="tag">freedom0</a>, <a href="/web/20110911075820/http://diveintomark.org/tag/linux" rel="tag">linux</a>)</div>
+<p>It&#8217;s been about 18 months since <a href="/web/20110911075820/http://apple.slashdot.org/article.pl?sid=06/07/03/1934251">Slashdot</a> linked to <a href="/web/20110911075820/http://radar.oreilly.com/archives/2006/06/ubuntu_linux_a_threat_to_mac_o.html">Tim O&#8217;Reilly</a> for linking to <a href="/web/20110911075820/http://www.kottke.org/remainder/06/06/11361.html">Jason Kottke</a> for linking to <a href="/web/20110911075820/http://www.boingboing.net/2006/06/29/mark-pilgrims-list-o.html">Cory Doctorow</a> for linking to <a href="/web/20110911075820/http://diveintomark.org/archives/2006/06/02/when-the-bough-breaks">me</a> for switching from Mac to Linux.  (Best comment: &#8220;this is just another A-list blogger circle-jerk.&#8221;  As if that was <i>my</i> fault!)</p>
+
+<p>At the time, Jason said, &#8220;If I were Apple, I&#8217;d be worried about this. Two lifelong Mac fans are switching away from Macs to PCs running Ubuntu Linux: first it was Mark Pilgrim and now Cory Doctorow. Nerds are a small demographic, but they can also be the canary in the coal mine with stuff like this.&#8221;</p>
+
+<p>18 months later, Apple has sold 4 million <a href="/web/20110911075820/http://diveintomark.org/archives/2007/10/04/if-wishes-were-iphones">crippled phones</a>, billions of crippled songs, and people are predicting that <a href="/web/20110911075820/http://www.appleinsider.com/articles/08/01/14/mac_sales_up_over_40_percent_year_over_year.html">Mac sales are up 40% year over year</a>.  And I wouldn&#8217;t bet against their new movie rental venture either (although <a href="/web/20110911075820/http://www.engadget.com/2008/01/16/itunes-and-apple-tv-rentals-and-purchases-what-you-can-and-can/">this chart</a> is amusing).</p>
+
+<p>So after 18 months, I think we can safely say that no, Cory and I were not &#8220;canaries in the coal mine.&#8221;  There are not hordes of fed-up consumers rejecting Apple&#8217;s vision of cryptographic lock-in.  There are not mass graves where people ceremoniously dump their crippled, non-general-purpose computing devices.  Outside of <a href="/web/20110911075820/http://planet.debian.org/">Planet Debian</a> and my own personal echo chamber, nobody gives a shit about Freedom 0.</p>
+
+<p>You knew this, of course, but I just wanted to let you know that I knew, too.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Fifty four comments here (<a href=/web/20110911075820/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-11144"><p>When have people at large ever chosen freedom over comfort?</p>
+<p>Ian</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://ian.mckellar.org/' rel='external nofollow' class='url'>Ian McKellar</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11144" title="January 17, 2008 @ 7:06 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11145"><p>Ian, you outran me. Was going to say precisely that :)</p>
+<p class=sig>&#8212;&#8201;<cite>Leonya</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11145" title="January 17, 2008 @ 8:05 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11146"><p>&#8220;Crippled&#8221; comes in degrees, and most people are comfy enough with Apple&#8217;s &#8220;crippling&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite>Drew Bell</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11146" title="January 17, 2008 @ 8:14 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11147"><p>I agree with Drew.  &#8220;Crippled&#8221; in the sense of Apple&#8217;s products often comes with the benefit of a more polished and enjoyable experience.  Standing on principle to the detriment of one&#8217;s experience&#8211;at least in the context of computers&#8211;would be silly for most people.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://www.pillarist.org/' rel='external nofollow' class='url'>Josh Hattersley</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11147" title="January 17, 2008 @ 8:50 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11150"><p>&gt; When have people at large ever chosen freedom over comfort?</p>
+<p>Looking at the success of Microsoft, we should have known that 15 years ago!!!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://scott.yang.id.au/' rel='external nofollow' class='url'>Scott Yang</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11150" title="January 17, 2008 @ 9:20 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11151"><p>Mac OS X and Ubuntu Linux both do what they say on the tin.  It&#8217;s just not everyone wants the same stuff.  Fanboys on either side like to use the example of big names to suggest that whatever they want is the best thing.  Ubuntu got you and Cory, Mac OS X got Paul Graham and JWZ. (etc/etc) Who cares either way?  The whole lot of you could be tards at knowing what&#8217;s best for me.</p>
+<p class=sig>&#8212;&#8201;<cite>M. Bethany</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11151" title="January 17, 2008 @ 10:36 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11152"><p>All my dreams are dead.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://www.latenightpc.com/blog/' rel='external nofollow' class='url'>Rob</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11152" title="January 17, 2008 @ 11:54 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11153"><p>Hey, I&#8217;m unsure about my next machine, and you&#8217;re a part of the reason way.  So be cheery about your canary status&#8211;I&#8217;m another .0001% of Apple&#8217;s user-base.  (As if it mattered to you).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://hyperpapeterie.wordpress.com/' rel='external nofollow' class='url'>Justin</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11153" title="January 18, 2008 @ 12:55 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11154"><p>&gt;You knew this, of course, but I just wanted to let you know that I knew, too.</p>
+<p>What, somebody write you a dipsh*t mail?</p>
+<p>I use Ubuntu and some of my friends do. I recommend it to everyone who cares to ask. A buddy who got a new Mac even installed Windows and only uses that (primarily for Office reasons).</p>
+<p>Come a few years, more people will use a Mac, more will use Ubuntu. Will your post today help any of it? For now, all I know is that it just saddens me a bit.</p>
+<p class=sig>&#8212;&#8201;<cite>Alok</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11154" title="January 18, 2008 @ 2:14 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11155"><p>I&#8217;m not you or at planet debian, but you can add me to your list.</p>
+<p class=sig>&#8212;&#8201;<cite>Petteri</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11155" title="January 18, 2008 @ 2:48 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11156"><p>My recent experience with setting up Gutsy on a cheap and old Fujitsu-Siemens slim PC makes me want to buy hardware and device drivers from a single vendor that is known for QA. (Video overlay flickers with Intel 815 and the CD drive can&#8217;t keep CDs inside.)</p>
+<p>Yeah, yeah, the cheap and old Fujitsu-Siemens is the problem but giving a new life to cheap old hardware is what Linux is used for. Once one starts buying new hardware, there’s Apple.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://hsivonen.iki.fi/' rel='external nofollow' class='url'>Henri Sivonen</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11156" title="January 18, 2008 @ 4:20 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11157"><p>I Knew. Actually, I learned the hard way when the Mac died (without app level backup on Quicken and Mail.app and such). All the file level backups don&#8217;t mean jack if you can&#8217;t use them if you can run the app that made them.</p>
+<p>I&#8217;ve run Linux for a long time, maybe before you for, all I know. Mark, Your switch and posting about convinced me to move to as open a system as I can find. Others live with as open as the need.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://werehosed.mvmanila.com/' rel='external nofollow' class='url'>Cecil Coupe</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11157" title="January 18, 2008 @ 4:37 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11158"><p>I know next to nothing about Macs having never even owned one, but I get the impression that Apple&#8217;s user base was made up for a long time of two groups. The Nerds who preferred Macs over Windows PCs for technical reasons (including nice hardware), and The Rest who just preferred the comfort and ease of use (including nice hardware).</p>
+<p>I reckon Cory and you and the likes probably had quite an influence on those who value freedom more than comfort but in the end that probably only accounted for a subset of The Nerds. The Rest probably grew with new users who had witnessed the quality of the interface design in iPods.</p>
+<p class=sig>&#8212;&#8201;<cite>ercan</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11158" title="January 18, 2008 @ 4:39 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11159"><p>Apple machines are gorgeous, and OSX isn&#8217;t bad either. I think most of the people who switch from PC to Mac are afraid of Linux (or simply don&#8217;t know that it exists).<br />
+In fact, a lot of people switch to the Mac because it&#8217;s hype (at least it is in France). The real geek, who knows about Free Software, who has understood the interest of interoperability and open formats, isn&#8217;t likely to switch. (Or maybe he&#8217;ll buy an Apple machine, and then throws [Name your favorite Distro here] on it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://giz404.freecontrib.org/' rel='external nofollow' class='url'>giz404</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11159" title="January 18, 2008 @ 4:43 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11160"><p>Well, you did convince me. So here is another .0001%</p>
+<p class=sig>&#8212;&#8201;<cite>Tim</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11160" title="January 18, 2008 @ 4:45 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11161"><p>Funny that two bloggers on my feed list use the same analogy in the same week &#8211; without apparent reference to each other.</p>
+<p>Interesting that Dave Thomas is wondering about apple, and freedom 0 is not even considered as a reason:<br />
+<a href="/web/20110911075820/http://pragdave.blogs.pragprog.com/pragdave/2008/01/the-canary-bene.html" rel="nofollow">http://pragdave.blogs.pragprog.com/pragdave/2008/01/the-canary-bene.html</a></p>
+<p class=sig>&#8212;&#8201;<cite>Edd</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11161" title="January 18, 2008 @ 6:23 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11162"><p>I&#8217;m not too sure you&#8217;re correct here. The question is what are they moving to Apple from and is that free-er. Looking at Windows, Sony digital audio players, smart phones that ignore or fumble the web, I&#8217;d say no. I&#8217;d say the bell curve is moving, but it&#8217;s not unexpected that the bulge is still in the middle.</p>
+<p>Surely the fact that the alpha geeks passed through a Mac stage on their way to Linux means an uptick in Apple/iPod/iPhone sales at the expense of Windows/Walkman/generic-locked-down-US-phone is a step in the right direction. They may not understand Freedom 0 in those terms but the man in the street can feel the results of software that&#8217;s out to screw him.</p>
+<p>Having said that I still don&#8217;t understand how the iPhone backlash can encompass both people complaining about being locked into Apple&#8217;s platform and also people complaining that they are forced to use web standards to create applications for the iPhone, so maybe I&#8217;m missing something.</p>
+<p class=sig>&#8212;&#8201;<cite>dave</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11162" title="January 18, 2008 @ 7:04 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11164"><p>I&#8217;d doubt that Apple&#8217;s movie store will work out as well as the music store. Most video content is watched once, so going with &#8216;rental&#8217; as the business model with cheaper pricing is fine. </p>
+<p>But there are many video linking sites a la Joox.net that offer a better deal, movies as soon as the screeners hit torrents with instant playback in very good quality, on any operating system, and, most damagingly to the movie store business model: gratis, without any silly DRM.</p>
+<p>For most of the Hollywood output, and for most casual consumers, I assume that&#8217;ll be good enough.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://robilad.livejournal.com/' rel='external nofollow' class='url'>Dalibor Topic</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11164" title="January 18, 2008 @ 10:11 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11166"><p>&#8220;Outside of Planet Debian and my own personal echo chamber, nobody gives a shit about Freedom 0.&#8221;</p>
+<p>I wouldn&#8217;t say that. I never bought a track from the iTunes Music Store until they started offering them without DRM.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://8stars.org/' rel='external nofollow' class='url'>Adam Rice</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11166" title="January 18, 2008 @ 12:21 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11169"><p>Why do we care?</p>
+<p>No, really. People buy broken hardware and malicious software because it&#8217;s convenient. You can&#8217;t stop people from doing this, because the things that are important to you aren&#8217;t important to most people, and <a href="/web/20110911075820/http://diveintomark.org/archives/2006/06/16/juggling-oranges">the hard lessons you&#8217;ve learned</a> can&#8217;t be learned except by experience. You might as well try to hold back the tide with a paper towel.</p>
+<p>But so long as we can get our delicious open software and uncrippled hardware, why is it our problem? I can certainly understand the desire to tell people they&#8217;re doing a foolish thing (they may continue to do it, but at least the truth is where it needs to be)&#8230; but what kind of disaster do you folks see happening?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11169" title="January 18, 2008 @ 2:04 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11171"><p>I switched before, but I read you before you switched (and Cory too) and I was heartened to see two of the Mac faithful become two of the Freedom 0 faithful.</p>
+<p>I did a lot of reading around the end of college (&#8217;95/&#8217;96 or so) that made me feel like I needed a switch, that there were definitely information haves and have nots and that the DMCA (and beginning rise of DRM) were just going to solidify it.  Linux came at the right time for me and I have been an booster/advocate ever since&#8230; but mostly other people (friend, family, co-workers, and strangers) didn&#8217;t seem to see what I was seeing and generally didn&#8217;t care (isn&#8217;t that why Lessig has moved on from his Copyfight).</p>
+<p>What I have noticed in the past year (only) is that my friends and family are starting to bump up against DRM and other copyright issues more often (thank you Vista and iPods that erase when synced to a new installation of iTunes on a recovered computer).  Now they are started to come to me for solutions because they remember that I harped on this in the distant past.  </p>
+<p>They&#8217;re ticked and ask for me to show them how to work around the issue.</p>
+<p>Unfortunately, I too have given up a bit.  I&#8217;m not for work-arounds any more.  I prefer to step out of the game and that is why I use Linux almost exclusively (except for those instances at work where I HAVE to use windows).  I recommend they do the same&#8230; for anything else, they will have to try their luck with Google.</p>
+<p>It was in this period that I saw that you and Cory had made your choices and it helped to know that others were bowing out of the game as well.</p>
+<p>Thanks for that.</p>
+<p>Maybe you guys are not a canaries, but you are definitely compatriots.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://babytoolkit.blogspot.com/' rel='external nofollow' class='url'>Jim</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11171" title="January 18, 2008 @ 2:45 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11172"><p>For every instance of “crippled,” delete it and add after the ensuing noun “that are perfectly usable for the owners’ intended purposes.”</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11172" title="January 18, 2008 @ 4:51 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11173"><p>Do comments on different posts still count for hat-tricks?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://philwilson.org/blog/' rel='external nofollow' class='url'>Phil Wilson</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11173" title="January 18, 2008 @ 8:30 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-11175"><cite><a href='/web/20110911075820/http://redmonk.com/sogrady/2008/01/18/im-moving-and-other-news/' rel='external nofollow' class='url'>tecosystems &raquo; I&#8217;m Moving, and Other News</a></cite>&#160;(pingback)</li>
+<li id="comment-11176"><p>&#8220;Why do we care?&#8221;</p>
+<p>Well, someone has to. Proprietary software warps the industry we work in, and to a lesser extent the society we live in. This is a classic case of &#8220;well, what if everybody did that?&#8221; Well, nearly everybody DID, and we got the Microsoft monopoly.</p>
+<p>In one small corner of the market, look at the huge benefits that have accrued due to competition from non-proprietary browsers, culminating in Firefox gaining a double-digit share of the browser market. You think that happened without people caring and evangelizing?</p>
+<p>Please excuse the cliche, but you have to be the change you want to see in the world.</p>
+<p>Personally, I think Mark is just calling the game a bit too early. He and Cory *were* canaries in the coal mine, but the lead time for that kind of shift is longer than a year. How long did it take the market to catch up with the alpha-geeks sporting Mac laptops, after all? Tim O&#8217;Reilly&#8217;s original <a href="/web/20110911075820/http://www.oreillynet.com/pub/wlg/849">observation</a> was back in 2001.</p>
+<p class=sig>&#8212;&#8201;<cite>Michael R. Bernstein</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11176" title="January 19, 2008 @ 1:06 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-11177"><cite><a href='/web/20110911075820/http://redmonk.com/sogrady/2008/01/18/links-for-2008-01-19/' rel='external nofollow' class='url'>tecosystems &raquo; links for 2008-01-19</a></cite>&#160;(pingback)</li>
+<li id="comment-11178"><p>Mark, after reading your posts on why you left Mac OS I kept thinking to myself that this applies to me&#8230;only with Windows. So I downloaded Dapper and haven&#8217;t looked back since. Been a happy Ubuntero for well over a year and a half now. I care now.</p>
+<p class=sig>&#8212;&#8201;<cite>Erich Jansen</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11178" title="January 19, 2008 @ 5:28 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11179"><p>I&#8217;m a fairly typical home user in that my main uses for a computer are word processing and some low-key graphics stuff, web browsing, listening to my MP3 library and playing games. Having used Macs at university, I can&#8217;t really find with fault OS X beyond Safari being a bit on the basic side and having a minor but irksome bug that caused the formatting toolbar to mysteriously vanish when writing an email, (MS Office for the Mac was a different story, but that was the university&#8217;s damn silly fault for including it, not Apple&#8217;s) but I certainly wouldn&#8217;t want to buy a Mac as my sole home PC. You&#8217;ve already dealt with iTunes in considerable detail so I shan&#8217;t rehash it there, but third-party applications in general are hard to find, particularly games. If I really needed to do something that the Mac does a lot better than Windows or Linux -it&#8217;s supposed to be a better program for Photoshop and other industry-standard graphics applications- then I&#8217;d just have to live with the drawbacks, but since I don&#8217;t have any pressing need for those products and can only afford one computer for myself, I&#8217;m stuck with Windows 2000 Pro until my next upgrade.</p>
+<p class=sig>&#8212;&#8201;<cite>Jake</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11179" title="January 19, 2008 @ 7:03 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11181"><p>After years of on and off playing with Linux and BSD, I finally switched to Linux at the beginning of this year. </p>
+<p>I&#8217;m personally very happy with my choice, which is all somebody could hope for. For those who prefer Mac OS X or Windows, I hope you are happy as well.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://www.q7u.net/' rel='external nofollow' class='url'>Jeff Flowers</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11181" title="January 19, 2008 @ 11:57 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11182"><p>Thank you Jeff, for letting me be happy too.</p>
+<p class=sig>&#8212;&#8201;<cite>Wu Ming</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11182" title="January 19, 2008 @ 10:12 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11183"><p>I notice a lot of folks carrying around these Macbooks these days, but have never felt inclined to buy one because I don&#8217;t want to give up my GNU+Linux environment, which (as a younger man, I will admit) is the only platform I have ever used when doing any serious programming. A large part of why I will not bend is because I demand Freedom. Not only do I demand freedom, but I demand not to be goaded into supporting those who are not providing freedom simply because the bundled hardware is decent.</p>
+<p>So I have remained impoverished for some time and possess no laptop, but often scrape around looking for leads.</p>
+<p>So I ask this: where can one get a whitebox or Linux-preinstalled laptop of good quality at a non-exorbitant price? I don&#8217;t mean resold laptops where I&#8217;ve already paid the Microsoft Tax. The Dell Ubuntu machines or Vostro N series are obvious options. Another option is the Everex Cloudbook coming out in ten days or so.</p>
+<p>Finally, I think that most people will never respect or care about freedom. That&#8217;s mostly okay, because I think freedom, in the long run, is inextinguishable and going to win in any mass market.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://fdr.name/' rel='external nofollow' class='url'>Dan Farina</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11183" title="January 19, 2008 @ 10:31 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11185"><p>@ Dan:  Have you tried <A HREF="/web/20110911075820/http://www.system76.com/">System 76</A>?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://mackdieselx27.wordpress.com/' rel='external nofollow' class='url'>mackdieselx27</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11185" title="January 20, 2008 @ 2:00 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11187"><p>I&#8217;m fairly close to the planet debian echo chamber, but add me to the list of people who you helped motivate to switch to linux &#8211; admittedly I was already fairly seriously inclined in that direction&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://www.mstevens.org/' rel='external nofollow' class='url'>Michael Stevens</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11187" title="January 21, 2008 @ 8:06 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-11188"><cite><a href='/web/20110911075820/http://www.redmonk.com/jgovernor/2008/01/21/on-working-alongside-some-of-the-better-developers/' rel='external nofollow' class='url'>James Governor&#8217;s Monkchips &raquo; On: &#8220;working alongside some of the better developers&#8221;</a></cite>&#160;(pingback)</li>
+<li id="comment-11189"><p>Your observation is correct but perhaps a little overly pessimistic. While we have not seen widespread rejection of DRM, the last 18 months have seen the first real market pressure against DRM. Non-DRM music is widely available online this year from major players who had swore never to do so and the lack of DRM is being advertised by both minor and major players.</p>
+<p>I&#8217;m not sure how much credit for this turn of events you and Corey deserve, and I don&#8217;t think DRM is failing simply because people care about Freedom 0. That said I do think that DRM is in a weakened state, perhaps indirectly, in part through arguments and activities by people who have spoken out and taken action against DRM &#8212; people like ourselves.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://diveintomark.org/mako.cc' rel='external nofollow' class='url'>Benjamin Mako Hill</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11189" title="January 21, 2008 @ 7:24 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11190"><p>Yeah, Mark, except that just yesterday<br />
+I was telling my brother that Android<br />
+was the hottest thing since warm spilled<br />
+milk on the teats. Can you tell us about<br />
+that, or at least comment? Or no&#8230;<br />
+and again, please, about the linux<br />
+required software list?<br />
+Thanks so much, you person of so much<br />
+gift that my jealousy runnneth over in waves&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://opened.to/' rel='external nofollow' class='url'>Dan Smith</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11190" title="January 21, 2008 @ 8:12 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-11191"><p>Dalibor wrote: &#8220;Most video content is watched once&#8221;</p>
+<p>You obviously don&#8217;t have children.</p>
+<p>@Dan: I know very little about Android.  Nothing, in fact, that isn&#8217;t already public.</p>
+<p>As for required Linux software, I&#8217;ve blogged various lists before.  There is not much else to say; it all keeps getting incrementally better.  I still use Amarok, k3b, k9copy, Konversation, Pidgin, Iceweasel, urxvt, screen, mplayer, KSnapshot, Emacs.  I like the occasional game of Mahjongg (part of gnome-games) or Foobillard.  I&#8217;ve toyed with Awesome (a new tiling window manager) and KDE 4 but ultimately went back to ratpoison.  abcde is a nice command-line CD-to-MP3 ripper.  Brightside lets you set custom actions when you move the mouse into a screen corner (if your window manager doesn&#8217;t let you do that already, some do).  getmail is a nice POP mail fetcher; I use it to archive my Gmail account.  GNOME Do is a QuickSilver clone written in Mono (yuck), but I&#8217;ve become so familiar with my own setup that I don&#8217;t even care about a QuickSilver clone anymore.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11191" title="January 21, 2008 @ 10:27 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11192"><p>Well, because of you, I have been considering at least trying an Ubuntu box &#8211; or some form  of Linux. Just haven&#8217;t found the time. Freedom. One day. Maybe.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://www.ihorace.com/' rel='external nofollow' class='url'>Martin</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11192" title="January 22, 2008 @ 1:10 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11193"><p>Weren&#8217;t _Mac users_ the religious cult?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://rizla.wordpress.com/' rel='external nofollow' class='url'>The Rizland Observer</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11193" title="January 22, 2008 @ 8:18 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11196"><p>I switched away from apple a year or so ago too, seems when I switched most of my non-techy friends were starting to buy macs. Phone-wise I&#8217;m waiting for android, seems quite exciting.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://tausch.kulando.de/' rel='external nofollow' class='url'>Loopy</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11196" title="January 23, 2008 @ 10:49 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11198"><p>Ha. You should play teewars, right now I&#8217;m somewhat addicted to it ;-)</p>
+<p>Regards,<br />
+Armin</p>
+<p>OT: Any news on the &#8220;make sanitizing optional in feedparser&#8221;? :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://lucumr.pocoo.org/cogitations/' rel='external nofollow' class='url'>Armin Ronacher</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11198" title="January 23, 2008 @ 2:37 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11199"><p>I think that Apple&#8217;s products aren&#8217;t &#8220;crippled&#8221; so much as they are sold in ankle chains.  They can hobble around, but they aren&#8217;t really &#8220;free&#8221;.</p>
+<p>The locked up nature of the iPhone and iPod have so far prevented me from buying them.  I haven&#8217;t bought a Mac in a long time either, for that matter, although I have a few old ones that I got free as cast-offs.  Frankly, the KDE desktop works better for me.</p>
+<p class=sig>&#8212;&#8201;<cite>Leeland Heins</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11199" title="January 23, 2008 @ 3:22 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11200"><p>Any reason we cannot Use Macs running Linux? Besides the obvious price gouge?</p>
+<p>I took the leap long before you and Cory and never looked back, I welcomed your additions and many more. But like the song says, The Children are our future.</p>
+<p>With projects like the OLPC, low cost alternative laptops like the eeePC and Cloudbook, many of those children are about to grow wondering what all the fuss is about an Operating System that costs more than their laptop, requires a ton of extra software to be purchased, and crashes a lot more often.</p>
+<p>M daughter age 11, has known nothing but Linux for her computers. She has been made well aware of the philosophical differences between Windows, Mac and Linux. (Weekend Readings of Stallman Essays came as a requirement of getting her own PC) Her brothers still are Windows gamers, but she has found she isn&#8217;t missing much and in fact has a very happy computing experience. Never once has she illegally downloaded software and yet she has a more functional desktop than either of them (who cannot say the same about DL.)</p>
+<p>She will grow up to understand that the community is more important than the dollar. Often it is more innovative, functional, reliable and ultimately less frustrating. While she has watched numerous Wipe and Reinstalls, she happily has only once upgraded her system to the latest Kubuntu and she kept all her data and did it by herself.</p>
+<p>She desperately wants an eeePC and I suppose at Xmas I will have to relent. Many of her friends parents will no doubt follow.</p>
+<p>All of this is to say our purpose is to help guide these new users, and instill in them a respect for Freedom 0, along with the others. They in turn will steer the next generation of Linux in ways we can&#8217;t even begin to imagine. (Really you should see what she can do with Gimp, Inkscape and a bored afternoon.)</p>
+<p>I think you are being a little premature in your analysis and perhaps putting far too much emphasis on the effect of notable Bloggers.</p>
+<p>Thanks for listening,<br />
+MrCopilot<br />
+<a href="/web/20110911075820/http://www.mrcopilot.com/" rel="nofollow">http://www.mrcopilot.com</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://www.mrcopilot.com/' rel='external nofollow' class='url'>MrCopilot</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11200" title="January 23, 2008 @ 4:14 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11203"><p>People probably don&#8217;t care about freedom because they have never experienced it and don&#8217;t see it as the norm.  I&#8217;m not some GNU-freak, but after using Linux for 5 years, I simply have no interest in products that are so obviously designed as lock-in.  I don&#8217;t think &#8220;I can&#8217;t run that, it&#8217;s unholy and proprietary!!&#8221;; I just think &#8220;Why would I want to be locked in like that?&#8221;.  </p>
+<p>Take Ipods.  I needed a new Mp3 player last month, so I started looking for one that communicates like a flash drive and supports ogg vorbis.  Ipods don&#8217;t do this.  As far as I can tell, they just come with a lot of restrictions with the only advantage being the ability to buy music from itunes (no interest in that) and the fact that they&#8217;re  &#8212; *gasps of ecstasy* &#8212; IPODS!!! OMG!! OMG!!!</p>
+<p>So I got a unit for less money with more features that works great with my linux boxes and I&#8217;m very happy.</p>
+<p class=sig>&#8212;&#8201;<cite>Alan</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11203" title="January 23, 2008 @ 6:40 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11204"><p>fwiw, you have helped convince me it&#8217;s now much less hassle to climb the linux learning curve (far less driver hell than in years past).  i&#8217;m going back to it this year. the wife&#8217;ll stay mac tho.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://waronfolly.tumblr.com/' rel='external nofollow' class='url'>Charles Follymacher</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11204" title="January 24, 2008 @ 1:22 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11206"><p>&gt; When have people at large ever chosen freedom over comfort?</p>
+<p>The funny thing is that I moved away from Microsoft mostly because, as a web developer and integrator, their lock-in, my lack of freedom, was impacting heavily on my comfort in terms of work needed to deliver. I needed freedom to organize my upgrade timeline and my own repositories, freedom to patch their mistakes and debug their code, etc. Linux (java to a lesser extent) offered me precisely this.</p>
+<p>Moving away from Windows in the server side was an pretty obvious move, not just about freedom, but also about comfort. The desktop is taking more time, and I&#8217;m quite sure it is working. But don&#8217;t expect &#8220;consumers&#8221; to decide on that one. It will be integrators and other vendors that will make this move: the XO, Eee, etc. are good examples.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://memojo.com/~sgala/blog/index.html' rel='external nofollow' class='url'>Santiago Gala</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11206" title="January 27, 2008 @ 3:10 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11208"><p>If it does what I want it to do and does it well — it is not broken or crippled.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://rimantas.com/' rel='external nofollow' class='url'>Rimantas</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11208" title="January 28, 2008 @ 8:43 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-11209"><cite><a href='/web/20110911075820/http://ckunte.com/archives/i-do' rel='external nofollow' class='url'>ckunte.com | I do</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-11211"><cite><a href='/web/20110911075820/http://antoniocangiano.com/2008/01/30/railsconf-arc-apple-and-other-zenbits/' rel='external nofollow' class='url'>RailsConf, Arc, Apple and other Zenbits | Zen and the Art of Ruby Programming</a></cite>&#160;(pingback)</li>
+<li id="comment-11214"><p>Freedom 0 is an illusion.</p>
+<p>The only time that you have ever had 100% freedom to modify a tool is when you built that tool yourself. That control is the foundation of the open source movement.</p>
+<p>Then why does no one care about Freedom 0 Why isn’t free open-source software, which gives back that control, more popular?</p>
+<p>The reason is that, for the average person, FOSS does NOT give that freedom at all. You have to be a coder, and a fairly skilled coder in order to have that freedom. Otherwise, FOSS is just like any other boxed product. Worse, given that FOSS software can vanish for reasons that have nothing to do with the number of people using it.</p>
+<p>With Windows, the lock-in is reversed from the Mac world. People who choose Mac do so to get away from Windows, but they are locked into a single manufacturer. People who choose PCs have the freedom to choose from a dozen PC manufacturers who all produce nearly identical products, but (except for the 0.5 per cent of the population who uses Linux) they have no choice of OS.</p>
+<p>Tell me then who is exercising freedom of choice.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://jimroyal.com/' rel='external nofollow' class='url'>Jim Royal</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11214" title="January 30, 2008 @ 10:25 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11215"><p>&gt; FOSS does NOT give that freedom at all. You have to be a coder</p>
+<p>Or you have to be capable of hiring a coder.</p>
+<p>&gt; FOSS software can vanish for reasons that have nothing to do with the number of people using it.</p>
+<p>FUD. In other notes, a friend of mine still mourns Fireworks, which was summarily 86’d by Adobe when they acquired Macromedia.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11215" title="January 30, 2008 @ 3:30 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11221"><p>&gt; Or you have to be capable of hiring a coder.</p>
+<p>Which is my point exactly.</p>
+<p>&gt; In other notes, a friend of mine still mourns<br />
+&gt; Fireworks, which was summarily 86’d by Adobe<br />
+&gt; when they acquired Macromedia.</p>
+<p>Fair enough. In that case, it looks like the relative merits of commercial software and FOSS to the average user are a wash.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://jimroyal.com/' rel='external nofollow' class='url'>Jim Royal</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11221" title="January 31, 2008 @ 11:36 am"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11270"><p>As someone who recognizes general freedom (Eg: an anti-state libertarian) I think its pretty asinine for the freetards to talk about apple as anti-freedom.   All the DRM apple uses is used because its required for them to be able to sell the media&#8230; and they are just like every other media seller&#8211; except that  they are publicly pushing for more freedom and less restrictive DRM.</p>
+<p>And for this, of course, you punish them by refusing to use their products.  (Meanwhile, I&#8217;m sure you probably support Barack Obama or some other politician who endorses slavery in the form of taxes.) </p>
+<p>Linux is a joke of an OS to use, and even Linus recently chastised apple for making a choice in HFS+ that was clearly made to make things easier for users&#8230;. eg: the creator of linux is explicitly user hostile. </p>
+<p>You do have the freedom to choose an encumbered solution&#8230; but you don&#8217;t get to wallow in your smugness without being called on it.  (that is, assuming you let this comment remain in your blog.)</p>
+<p class=sig>&#8212;&#8201;<cite>Freedom Lover</cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11270" title="February 8, 2008 @ 3:59 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-11271"><p>Any sufficiently advanced troll is indistinguishable from magic.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911075820/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911075820/http://diveintomark.org/archives/2008/01/17/of-canaries-and-coal-mines#comment-11271" title="February 8, 2008 @ 5:13 pm"><img alt="#" src=/web/20110911075820im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110911075820/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110911075820/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110911075820/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110911075820/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110911075820/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.419 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-14 02:02:32 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 7:58:20 Sep 11, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:05:39 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

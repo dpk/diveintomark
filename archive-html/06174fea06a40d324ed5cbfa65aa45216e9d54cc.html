@@ -1,0 +1,450 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>HOWTO batch encode video for iPod under Linux [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806104743/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806104743/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806104743/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806104743/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806104743im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806104743/http://diveintomark.org/archives/2006/08/23/overton-window" title="W3C and the Overton window">
+<link rel=next href="/web/20110806104743/http://diveintomark.org/archives/2006/09/11/feedparser-command-line" title="HOWTO parse feeds on the command line">
+<link rel=up href="/web/20110806104743/http://diveintomark.org/archives#p1565" title="August 2006">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; HOWTO batch encode video for iPod under Linux Comments Feed" href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806104743/http://diveintomark.org/' />
+<link rel='prev' title='W3C and the Overton window' href='/web/20110806104743/http://diveintomark.org/archives/2006/08/23/overton-window' />
+<link rel='next' title='HOWTO parse feeds on the command line' href='/web/20110806104743/http://diveintomark.org/archives/2006/09/11/feedparser-command-line' />
+<link rel='canonical' href='/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto' />
+<link rel='shortlink' href='/web/20110806104743/http://diveintomark.org/?p=1565' />
+<meta name="description" content="This is my first shell script longer than 3 lines, so please take this opportunity to berate me for my newbie shell scripting mistakes.">
+<meta name="keywords" content="aac,bash,ffmpeg,h264,ipod,lsdvd,mp4creator,mplayer,podencoder,video,zenity">
+<link href="/web/20110806104743cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806104743/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2006\/08\/30\/ipod-video-howto";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2006/08/30/ipod-video-howto" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806104743" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514113704/http://diveintomark.org/archives/2006/08/30/ipod-video-howto" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:47:43 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121112112439/http://diveintomark.org/archives/2006/08/30/ipod-video-howto" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="12 Nov 2012"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514113704/http://diveintomark.org/archives/2006/08/30/ipod-video-howto" title="11:37:04 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:47:43 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110807054328/http://diveintomark.org/archives/2006/08/30/ipod-video-howto" title="5:43:28 Aug 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615071053/http://diveintomark.org/archives/2006/08/30/ipod-video-howto" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:47:43 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121112112439/http://diveintomark.org/archives/2006/08/30/ipod-video-howto" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="12 Nov 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806104743*/http://diveintomark.org/archives/2006/08/30/ipod-video-howto" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>46 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">24 Sep 06 - 12 Nov 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000001010_2007:-1:552031001211_2008:-1:111121310111_2009:-1:100000000000_2010:-1:000001000111_2011:7:000010020000_2012:-1:000000000010_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806104743/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806104743/http://diveintomark.org/archives#p1565">August 30, 2006</a> &#8227;
+<h2>HOWTO batch encode video for iPod under Linux</h2> (<a href="/web/20110806104743/http://diveintomark.org/tag/aac" rel="tag">aac</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/bash" rel="tag">bash</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/ffmpeg" rel="tag">ffmpeg</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/h264" rel="tag">h264</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/ipod" rel="tag">ipod</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/lsdvd" rel="tag">lsdvd</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/mp4creator" rel="tag">mp4creator</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/mplayer" rel="tag">mplayer</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/podencoder" rel="tag">podencoder</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/video" rel="tag">video</a>, <a href="/web/20110806104743/http://diveintomark.org/tag/zenity" rel="tag">zenity</a>)</div>
+<p><strong>Update June 7, 2007: this script is obsolete.  Read about <a href="/web/20110806104743/http://diveintomark.org/archives/2007/06/07/howto-batch-encode-video-for-ipod-under-linux-2007-edition">the updated version</a> or <a href="/web/20110806104743/http://code.google.com/p/podencoder/">visit the new project page on Google Code</a>.</strong></p>
+
+<p>Despite my recent switch to Ubuntu, I still own a video iPod 5G, and I have been searching for a nice replacement for <a href="/web/20110806104743/http://handbrake.m0k.org/">Handbrake</a> and <a href="/web/20110806104743/http://www.isquint.org/">iSquint</a>.  I&#8217;ve tried every available script and program that purports to encode iPod-compatible video (including Handbrake under Linux), but each falls short on one of several counts:</p>
+
+<ul>
+<li>Doesn&#8217;t produce high-quality video</li>
+<li>Doesn&#8217;t support H.264/AAC</li>
+<li>Doesn&#8217;t always produce files the iPod can actually read (less of a problem with firmware 1.2, but still)</li>
+<li>Can&#8217;t encode directly from a DVD device</li>
+<li>Can&#8217;t encode from a pre-ripped DVD directory</li>
+<li>Can&#8217;t encode individual video files</li>
+<li>Doesn&#8217;t support all video formats</li>
+<li>Can&#8217;t batch process multiple tracks</li>
+<li>Doesn&#8217;t take advantage of multiple processors</li>
+</ul>
+
+<p>So I wrote my own: <a href="/web/20110806104743/http://wearehugh.com/public/2006/08/podencoder"><code>podencoder</code></a></p>
+
+<p>Prerequisites:</p>
+
+<ul>
+<li><a href="/web/20110806104743/http://untrepid.com/acidrip/lsdvd.html"><code>lsdvd</code></a></li>
+<li><a href="/web/20110806104743/http://www.mplayerhq.hu/"><code>mplayer</code></a>, compiled with MPEG-2 and AC3 support</li>
+<li><a href="/web/20110806104743/http://ffmpeg.mplayerhq.hu/"><code>ffmpeg</code></a>, compiled with H.264 and AAC support</li>
+<li><a href="/web/20110806104743/http://mpeg4ip.sourceforge.net/"><code>mp4creator</code></a></li>
+<li><a href="/web/20110806104743/http://freshmeat.net/projects/zenity"><code>zenity</code></a>, if you want graphical dialogs and progress bars</li>
+</ul>
+
+<p>Please don&#8217;t ask me for help installing these prerequisites.  Consider it a character-building exercise.</p>
+
+<p>You can run the script from the command line:</p>
+
+<pre><code>$ podencoder # interactively select tracks from default DVD device
+$ podencoder -t longest # auto-select longest track and encode it
+$ podencoder ./BBSDOC/ # encode from a pre-ripped directory instead
+$ podencoder -t "2,3,4" ./BBSDOC/ # encode multiple tracks
+$ podencoder -t "2,3,4,5" -i 7 -n "WEEDS1%i" \
+     -o ~/Videos/ipod/Weeds/ ./WEEDS_SEASON_1_DISC_2/
+   # encode tracks 2-5 from a DVD directory,
+   # store them in ~/Videos/ipod/Weeds/
+   # and name them WEEDS107.mp4, WEEDS108.mp4,
+   # WEEDS109.mp4, and WEEDS110.mp4 respectively</code></pre>
+
+<p>You can set defaults in the configuration file (<code>~/.podencoderrc</code>) like a default DVD device (mine is <code>/dev/scd0</code>), a default output directory, and a default scratch directory.</p>
+
+<pre><code>outputdir=/home/mark/Videos/ipod
+scratchdir=/home/tmp
+device=/dev/scd0</code></pre>
+
+<p>I use <code>/home/tmp</code> as a scratch directory for video encoding because my <code>/tmp</code> directory is on a small partition.  If you&#8217;re encoding from a DVD or DVD directory, <code>podencoder</code> dumps the entire track to disk before encoding it, which can require up to 8 GB of free space.</p>
+
+<p>On the other hand, if you dislike the command line, you can double-click <code>podencoder</code> or set up a shortcut in your favorite window manager or desktop environment, and it will graphically prompt you to select tracks from the default DVD device (<a href="/web/20110806104743/http://wearehugh.com/public/2006/08/podencoder-select.png">screenshot</a> &#8212; note that it automatically selects the longest track for you).  Or you can put a shortcut to it in your Nautilus scripts directory, like this:</p>
+
+<pre><code>$ ln -s /usr/local/bin/podencoder ~/.gnome2/nautilus-scripts/"Encode for iPod"</code></pre>
+
+<p>Then you can right-click a mounted DVD, or a DVD directory, or even a random video file, and select &#8220;Scripts &rarr; Encode for iPod&#8221;.</p>
+
+<p>This is my first shell script longer than 3 lines, so please take this opportunity to berate me for my newbie shell scripting mistakes.</p>
+
+<p><strong>Update:</strong> script updated with some feedback from the comments.  Now uses <code>/bin/sh</code> for greater portability, and a new test to autodetect console-vs-graphical environment (thanks Bob).</p>
+
+<p><strong>Update June 7, 2007: this script is obsolete.  Read about <a href="/web/20110806104743/http://diveintomark.org/archives/2007/06/07/howto-batch-encode-video-for-ipod-under-linux-2007-edition">the updated version</a>.</strong></p>
+<p class=c>&#167;
+
+<h3 id=comments>Fifteen comments here (<a href=/web/20110806104743/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-7298"><p>Just a quick question &#8211; why bash, and not sh?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7298" title="August 30, 2006 @ 5:20 pm"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7299"><p>No idea, really.  Would it work in sh?  As I said, this is my first non-trivial shell script (in any shell), so I really have no idea which of the things I&#8217;ve learned so far are Bash-specific.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104743/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7299" title="August 30, 2006 @ 6:31 pm"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-7300"><cite><a href='/web/20110806104743/http://scott.yang.id.au/2006/08/batch-encode-video-for-ipod-under-linux/' rel='external nofollow' class='url'>Batch encode video for iPod under Linux | SYP</a></cite>&#160;(pingback)</li>
+<li id="comment-7301"><p>First shell script, and your catching signals? Impressive. Heh.</p>
+<p>The Bourne Shell is more portable than Bash. You can check for Bash specific extensions using the application &#8216;checkbashisms&#8217; that should be in the Ubuntu repositories. If you switch to the Bourne Shell you should start your script with &#8216;#!/bin/sh -e&#8217; as well.</p>
+<p>Oh, very trivial and just a personal preference, but some of your lines quite long &#8211; why not limit them to 79 characters + newline using the &#8216;\&#8217; character to escape newlines. It makes it much easier to read your code on a small terminal.</p>
+<p>Weird also, you use lower case variable names &#8211; I have always been used to shell script variables to be ALL_UPPER_CASE. But I must admit, it doesn&#8217;t look half bad like this.</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7301" title="August 31, 2006 @ 2:46 am"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7302"><p>A few double-brackets and double-equals, and a let statement, and it runs under /bin/sh.  Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104743/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7302" title="August 31, 2006 @ 10:02 am"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7303"><p>See <a href="/web/20110806104743/http://www.shelldorado.com/goodcoding/tempfiles.html" rel="nofollow">http://www.shelldorado.com/goodcoding/tempfiles.html</a> for a useful example of how to use the &#8220;program termination&#8221; pseudo-signal to clean up temporary files. In this relatively simple script, it may not be necessary, but nonetheless it is a good technique to know.</p>
+<p class=sig>&#8212;&#8201;<cite>Isaac Lin</cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7303" title="August 31, 2006 @ 11:23 am"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-7304"><cite><a href='/web/20110806104743/http://www.carnatic.com/mokshore/2006/08/31/links-for-2006-08-31/' rel='external nofollow' class='url'>mokshore &raquo; Blog Archive &raquo; links for 2006-08-31</a></cite>&#160;(pingback)</li>
+<li class=me id="comment-7305"><p>Hmm.  This GUI-vs-console thing is pissing me off.  I was sitting at my computer last night and wanted to test some changes, and the GUI dialogs kept coming up, and currently the only way to turn them off is to change the configuration file.  But doing that means that my right-click-as-Nautilus-script thing no longer shows the GUI dialogs (or any progress whatsoever, since stdout isn&#8217;t displayed anywhere).  That&#8217;s stupid design.  The question is, what&#8217;s a better design?</p>
+<p>- An additional command-line flag?<br />
+- A better magical test to determine whether the program is running in what I would call a graphical context?  (My current magical test is to check for the existence of the DISPLAY variable, which seemed like a clever hack considering I had no idea what I was doing.  But it turns out that it doesn&#8217;t actually solve the right problem, because I want to be able to sit at my computer and type &#8220;podencoder&#8221; in a terminal window and get output in the terminal window, or right-click in Nautilus and select something from the Scripts menu and get graphical progress dialogs.)<br />
+- Fork the script into two separate scripts, one for GUI, one for console, and have them share code by sourcing common files?<br />
+- Make a symlink called &#8220;guipodencoder&#8221; or &#8220;gpodencoder&#8221; or something, and key off `basename $0`?</p>
+<p>@Noah: yeah, I figured out traps on my first script.  Zenity has an annoying habit of sending SIGHUP to the parent process when you click Cancel, which resulted in the script dying but mplayer/ffmpeg processes continuing.  I spent a lot of time testing this script and canceling it halfway, and I finally realized (when both CPUs spiked to 100% and my computer slowed to a crawl) that the background progresses were still running.  This led to a whole detour of learning about traps and signals and $! and wait and &#8212; for reasons not worth explaining &#8212; variable scoping.  Bleah.</p>
+<p>More generally, I am good at acquiring deep technical knowledge quickly.  I am much more interested in feedback like &#8220;why not change 3 lines and use sh?&#8221; and &#8220;scripts should hard-wrap at 79 columns.&#8221;  The aesthetics of shell scripting.  Example: I think the script has pretty good command-line usage notes and unsurprising command-line flags.  They work the way you would expect a shell script to work.  Then how do I solve my GUI-vs-console problem?  Any of the solutions (and probably many others) could be made to work.  But which one *feels* better?  I don&#8217;t know yet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104743/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7305" title="August 31, 2006 @ 2:24 pm"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7306"><p>Mark, have you tried testing for the $TERM variable? On Debian testing nautillus sets it to &#8220;dumb&#8221; when run from a gui, and the name of your terminal when run from the CLI. A possible avenue for exploration.</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7306" title="September 1, 2006 @ 2:59 am"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7308"><p>I think the $TERM variable differs a lot between the desktop systems/file managers.</p>
+<p>Application links to scripts in KDE have $TERM=linux ?!?</p>
+<p class=sig>&#8212;&#8201;<cite>Filip</cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7308" title="September 1, 2006 @ 6:23 am"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7309"><p>You can use the tty program to detect whether the script is connected to a terminal or not. If it is being run from Nautilus then there will be no terminal connected.</p>
+<p>Short test script:</p>
+<p>#!/bin/bash</p>
+<p>tty &#8211;quiet<br />
+if [ "$?" == 0 ]; then<br />
+&nbsp;&nbsp;echo &#8220;Is a terminal&#8221; &gt;&gt; afile<br />
+else<br />
+&nbsp;&nbsp;echo &#8220;Not a terminal&#8221; &gt;&gt; afile<br />
+fi</p>
+<p class=sig>&#8212;&#8201;<cite>Bob Atkey</cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7309" title="September 1, 2006 @ 9:00 am"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7310"><p>I think that the answer is keeping strict in line with KISS principle &#8212; make two scripts. One strictly running from command line (or xterm), which could be well tested as such. The other would be just GUI candy around that script. In this way you can be sure you can separate and test real processing part in xterm.</p>
+<p>And by the way, I have no idea, why in the world you haven&#8217;t wrote all this in Python (which you know much better than shell apparently, and which has good GUI extensions &#8212; at least for KDE, but I guess that Gnome-Python exists as well).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104743/http://matej.ceplovi.cz/blog/' rel='external nofollow' class='url'>Matej Cepl</a></cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7310" title="September 1, 2006 @ 9:47 am"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7311"><p>Just if you like to read &#8212; <a href="/web/20110806104743/http://www.catb.org/~esr/writings/taoup/html/" rel="nofollow">http://www.catb.org/~esr/writings/taoup/html/</a> &#8212; ESR has some crazy comments lately, but this thing is pretty smart and ESR is here doing what he can do the best &#8212; recording Unix tradition.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104743/http://matej.ceplovi.cz/blog/' rel='external nofollow' class='url'>Matej Cepl</a></cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7311" title="September 1, 2006 @ 9:53 am"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7312"><p>@Bob: that&#8217;s exactly what I was looking for.  I&#8217;ve updated the script accordingly, and removed the (rather useless) gui= option in the configuration file.  (Sorry your comment took so long to appear; it fell into my spam filters!)</p>
+<p>@Noah: script is now wrapped at 78 characters.</p>
+<p>@Isaac, @Matej: thanks for the links, I&#8217;ll read them this weekend.</p>
+<p>(Comments temporarily closed until I return from vacation.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104743/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7312" title="September 1, 2006 @ 3:08 pm"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7313"><p>Hi, nice script, but i&#8217;ts possible burn subtitles??<br />
+like .srt, .sub files ????</p>
+<p>:(</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104743/http://www.useme.cl/harold' rel='external nofollow' class='url'>Harold</a></cite>&#160;<a class=p href="/web/20110806104743/http://diveintomark.org/archives/2006/08/30/ipod-video-howto#comment-7313" title="September 10, 2006 @ 11:53 pm"><img alt="#" src=/web/20110806104743im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806104743/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806104743/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806104743/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806104743/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806104743/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.350 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:53:41 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:47:43 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:09:38 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

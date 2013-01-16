@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>PR#6 [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806101909/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806101909/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806101909/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806101909/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806101909im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806101909/http://diveintomark.org/archives/2006/08/11/openwrt" title="I love it when a plan comes together">
+<link rel=next href="/web/20110806101909/http://diveintomark.org/archives/2006/08/23/overton-window" title="W3C and the Overton window">
+<link rel=up href="/web/20110806101909/http://diveintomark.org/archives#p1563" title="August 2006">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; PR#6 Comments Feed" href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806101909/http://diveintomark.org/' />
+<link rel='prev' title='I love it when a plan comes together' href='/web/20110806101909/http://diveintomark.org/archives/2006/08/11/openwrt' />
+<link rel='next' title='W3C and the Overton window' href='/web/20110806101909/http://diveintomark.org/archives/2006/08/23/overton-window' />
+<link rel='canonical' href='/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g' />
+<link rel='shortlink' href='/web/20110806101909/http://diveintomark.org/?p=1563' />
+<meta name="description" content="The thing I remember most about the Apple ][ was the sound of the disk drive as it was booting up.">
+<meta name="keywords" content="apple2,diveintomarkshow,video">
+<link href="/web/20110806101909cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806101909/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2006\/08\/22\/c600g";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2006/08/22/c600g" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806101909" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607202935/http://diveintomark.org/archives/2006/08/22/c600g" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:19:09 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120121175538/http://diveintomark.org/archives/2006/08/22/c600g" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="21 Jan 2012"><strong>JAN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110607202935/http://diveintomark.org/archives/2006/08/22/c600g" title="20:29:35 Jun 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:19:09 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110807054302/http://diveintomark.org/archives/2006/08/22/c600g" title="5:43:02 Aug 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620080020/http://diveintomark.org/archives/2006/08/22/c600g" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:19:09 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806101909*/http://diveintomark.org/archives/2006/08/22/c600g" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>31 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">24 Sep 06 - 21 Jan 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000001000_2007:-1:111113000111_2008:-1:101110010001_2009:-1:000100000000_2010:-1:001111000021_2011:7:000001030000_2012:-1:100000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806101909/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806101909/http://diveintomark.org/archives#p1563">August 22, 2006</a> &#8227;
+<h2>PR#6</h2> (<a href="/web/20110806101909/http://diveintomark.org/tag/apple2" rel="tag">apple2</a>, <a href="/web/20110806101909/http://diveintomark.org/tag/diveintomarkshow" rel="tag">diveintomarkshow</a>, <a href="/web/20110806101909/http://diveintomark.org/tag/video" rel="tag">video</a>)</div>
+<script type="text/javascript" src="/web/20110806101909js_/http://wearehugh.com/public/flowplayer/js/flashembed.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+  flashembed("show", {
+    src:'http://wearehugh.com/public/flowplayer/FlowPlayerDark.swf',
+    width: 640,
+    height: 510
+  },
+    {config: {
+      autoPlay:false,
+      controlBarBackgroundColor:'0x000000',
+      initialScale: 'orig',
+      loop: 'false',
+      videoFile: 'http://wearehugh.com/public/2006/08/20060822-large.mp4',
+      splashImageFile: 'http://wearehugh.com/public/2006/08/1983_11_24_mark.jpg'
+    }}
+  );
+}
+</script>
+
+<p id="show"><a title="click the starry-eyed Apple hacker to watch the show" href="/web/20110806101909/http://wearehugh.com/public/2006/08/20060822.mp4"><img class="framed" src="/web/20110806101909im_/http://wearehugh.com/public/2006/08/1983_11_24_mark.jpg" alt="Mark with Apple //e" title="click the starry-eyed Apple hacker to watch the show" width="640" height="480"></a></p>
+
+<ul>
+<li><a href="/web/20110806101909/http://wearehugh.com/public/2006/08/20060822.mp4">Download small version</a> (16 <abbr title="megabytes">MB</abbr>, 320&#215;240, iPod-compatible)</li>
+<li><a href="/web/20110806101909/http://wearehugh.com/public/2006/08/20060822-large.mp4">Download large version</a> (32 <abbr title="megabytes">MB</abbr>, 640&#215;480, 2+ GHz recommended)</li>
+<li><a href="/web/20110806101909/http://wearehugh.com/public/2006/08/20060822.srt">Captions file</a></li>
+<li><a href="/web/20110806101909/http://diveintomark.org/archives/2006/07/23/video-howto">How to play the downloaded videos (with captions!)</a></li>
+</ul>
+
+<p>The thing I remember most about the Apple ][ was the sound of the disk drive as it was booting up.  It had this wonderful <em>[d-d-d-d-r-r-r-r]</em> sound and then it sort of&#8230; well, of course it depended on the bootloader.  For Apple DOS, it would load up the disk operating system from the first three tracks, tracks 0 through 2. It would only do about half of track 2, and then track 1, and then half of track 0, and then it would seek all the way out to track $11.  (And by &#8220;track $11&#8243; I mean 17.  $11 in hex.  1-1.)  It sounded like <em>[doot-doooot-doot-chhhhhh]</em>.</p>
+
+<p>I recently came across a PDF of a scan of a book called &#8220;Beneath Apple DOS&#8221; which was the seminal book.  I had long since lost track of my copy.  It&#8217;s just amazing.  It has all the info about what happens when you first load up a disk.  Obviously, you can turn the computer on, or you can hit open-apple + control + reset (now called &#8220;command + control + reset&#8221;).  You could type <kbd>PR#6</kbd> and that would load the bootstrap code for Slot 6, which was the disk drive, the 5.25-inch disk drive slot.  Of course, if you were already in the assembler, then you could type <kbd>C600G</kbd>, which would start loading the same bootstrap code as <kbd>PR#6</kbd>.</p>
+
+<p>The very first byte of track 0 sector 0 of every 5.25-inch Apple ][ disk was a sector count for how many sectors the ROM in Slot 6 at C600 should load off the disk before handing off control.  Usually it would just load the first sector, and then it would pass control to that which would be sort of a primary bootstrap to load about 8 more sectors off of track 0, and then that would be enough to load the rest of the operating system off of track 2 and track 1 and the rest of track 0, and that would be enough to load up the disk catalog or run the start program or whatever.</p>
+
+<p>Beagle Brothers came out with Pronto-DOS, which was some patches against Apple's DOS 3.3, which was much faster.  It only used one sector out of track 2, and so when it booted up it went <em>[d-d-d-d-r-r-r-r] [dt-doooot-doot-chhhhhh]</em>  It was like a grace note.  In fact, it was a grace note.  It was a sixteenth note.  If you think of each sector read as a sixteenth note, it was reading one sector off track 2, and then going back and reading all of track 1, and then all of track 0, and then seeking out again to the disk catalog on track $11.</p>
+
+<p>Of course, retail games, most of them had their own bootloaders that weren&#8217;t based on Apple DOS because they didn&#8217;t need all of the functions that DOS provided like loading and saving programs.  They needed the memory.  It took several pages of memory  and it stayed memory-resident the whole time you had the disk loaded.  And they needed that memory for their games and their data and such.</p>
+
+<p>They usually had custom bootloaders so they sounded like all kinds of things.  They had all sorts of funky things centered around copy protection where they would write data to the disk in strange ways.  There were things called half tracks and quarter tracks.  Things like Karateka by Broderbund stored everything on quarter tracks and it was the most amazing sound to listen to the original disk boot up.</p>
+
+<p>And of course, in lots of cases pirates would come and interrupt the bootloader on the game and seek out to maybe the end of track $22 or $21 where the original game hadn&#8217;t stored any data and they would go store their own picture or crack screen or whatever.  So you would hear, when the disk booted up, you would hear just a little bit of <em>[dt dt]</em> loading the initial bootloader and then it would seek all the way out to the end of the disk and it would go <em>[dt dt chhhhhhhhhhhhhhhhhhhhhh dt]</em> and then show the crack screen and then come all the way back and load the rest of the game.</p>
+
+<p>A lot of what I did was hacking on stuff, and the ultimate hacking tool for poking around &#8212; not for cracking, but for just fiddling around and seeing experimenting with bootloaders and stuff &#8212; the ultimate tool was Copy ][+ by Central Point Software.  Just an amazing program.  And it had a disk editor that would let you see individual sectors of individual tracks and then disassemble them and show you the machine code listing, the 6502 assembly language listing, of the programs on those tracks.  So I spent a lot of time in Copy ][+, hacking around and fiddling with bits and disassembling things and seeing how it worked.</p>
+
+<p>Of course, you could only boot a disk off of one drive, even if you had two disk drives, you could only boot off one of them.  And so you had to boot Copy ][+, and it would go <em>[dt dt dt dt dt dt dt dt dt]</em> and then come up with its main menu. And then at that point you could take the disk out, and you could put whatever other disk you wanted to play with, and you could load up the disk editor.  Copy ][+ was all stored in memory.  You could load up the disk editor, and if it was a DOS 3.3 formatted, Apple DOS formatted disk, you could get a catalog listing and you could follow individual files around as they were stored on the disk. You could go to the next sector of this particular file, or you could go to an absolute track and an absolute sector.  So I spent a lot of time in track 0, sector 0, fiddling with things and looking at bootstrap code and bootloader code.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Twelve comments here (<a href=/web/20110806101909/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-7265"><p>Dude, I thought you were a Ubuntu guy. Why did you dedicate a whole episode to the Apple ][? I need to get the latest Ubuntu fix or I&#8217;m gonna go loco on OS X designers. I&#8217;m away from my Ubuntu PC till next Monday, so in the mean time, I need you to obviscate all the Ubuntu news and make it into something I can watch while I drink my coffee. (this vacation&#8217;s been hell without my trusty Ubuntu PC). Eh, Mark, what kind of camcorder do you use to record these shows anyway? Would a $20 webcam provide enough quality for me to start video blogging? When you pick yourself up off the floor from laughing, I&#8217;d like to know why your updates to this site are so random&#8230; what happened to daily video blogging? I mean, it&#8217;s not like you have a life outside of video blogging&#8230; ;-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101909/http://stuffabstuff.blogspot.com/' rel='external nofollow' class='url'>Wili</a></cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7265" title="August 22, 2006 @ 3:38 am"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7267"><p>I can&#8217;t stop LAUGHING on this one, man!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101909/http://plastik.hu/' rel='external nofollow' class='url'>angelday true</a></cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7267" title="August 22, 2006 @ 3:46 am"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7268"><p>What&#8217;s the noise in the background? Vacuum cleaner? Air conditioning? Computer&#8217;s fan?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101909/http://gpiancastelli.wordpress.com/' rel='external nofollow' class='url'>Giulio Piancastelli</a></cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7268" title="August 22, 2006 @ 4:42 am"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7269"><p>> what kind of camcorder do you use to record these shows anyway</p>
+<p>I have a Sony MiniDV TRV 19, which <a href="/web/20110806101909/http://diveintomark.org/archives/2003/10/29/camera">I bought in 2003</a> and has been perfectly adequate for my home video needs.  I have no idea what the market looks like these days though.</p>
+<p>> Would a $20 webcam provide enough quality for me to start video blogging</p>
+<p>Only if you are a teenage girl with a button nose and a monkey puppet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101909/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7269" title="August 22, 2006 @ 5:01 pm"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7270"><p>You sound just like my father:</p>
+<p>- &#8220;In the old days there was no GUI stuff and 5.25&#8243; floppy disks were heaven. Real men used Assembly!&#8221;</p>
+<p>Of course, by the time he starts talking about the Commodore 64, VIC-20&#8242;s and IBM PC-AT&#8217;s I&#8217;ve already left the room&#8230;</p>
+<p>Old people and their ramblings&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Marco J. Campos</cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7270" title="August 22, 2006 @ 5:18 pm"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7271"><p>> Old people and their ramblings…</p>
+<p>Fast forward 20 years.  &#8220;In the old days there were no 3D holographic computers or neural interfaces.  Real men used Keyboards!&#8221;</p>
+<p>Just wait until that crunk jam you blast on your iPod on infinite repeat until 3 AM ends up on the muzak channel at your local grocery store.  Look around and see which of the other shoppers are humming it, bob your head with them in silent acknowledgment of your shared cultural experience from the 00&#8242;s (THE BEST MUSIC DECADE EVER), and think of me.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101909/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7271" title="August 22, 2006 @ 5:35 pm"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7272"><p>Mark, I will! ;)</p>
+<p>Nah, my dad is great and everything I know is thanks to him. I&#8217;m old enough to remember our IBM PC-AT and the funky Sinclair ZX Spectrum 128 (not very popular in the US I think). The 128 also had a strange sound loading the software (from audio tapes), very similar to a analog modem. It would take around 2 minutes to load something. Imagine the trouble people had in developing decent software for it when you only have 128K RAM running under a 3MHz (the Z80) cpu. Kids from my street would gather at our house and do long runs playing Manic Miner. Those were the days!</p>
+<p>BTW, I don&#8217;t own an iPod. I prefer the El-Cheapo $30 digital player that plays MP3 and OGG. Steve Jobs isn&#8217;t getting any of my money as long has they sell audio files with DRM and the iPod doesn&#8217;t play FLAC and OGG.</p>
+<p class=sig>&#8212;&#8201;<cite>Marco J. Campos</cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7272" title="August 22, 2006 @ 7:00 pm"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7273"><p>Eh, Mark, Ubuntu &#8216;Edgy&#8217; for PPC now has working wireless! The driver for the broadcom chipset works! Wow, and to think I almost spent $10 on a PCMCIA wireless card! You have to install wifi-radar to configure the wireless interface though, the included gnome utility doesn&#8217;t work.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101909/http://stuffabstuff.blogspot.com/' rel='external nofollow' class='url'>Wili</a></cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7273" title="August 22, 2006 @ 7:08 pm"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-7274"><cite><a href='/web/20110806101909/http://www.billyfoxtrot.com/2006/08/22/mark-pilgrims-apple/' rel='external nofollow' class='url'>Mark Pilgrim&#8217;s Apple ][. at William T. Foxtrot</a></cite>&#160;(pingback)</li>
+<li id="comment-7275"><p>Impressive. The extent of my Apple II hacking was editing games written in Basic&#8211; most notably changing a horse racing simulation so the horses were named after people I didn&#8217;t like.</p>
+<p>I was a lonely, lonely child.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101909/http://rossnotes.com/' rel='external nofollow' class='url'>Ross M Karchner</a></cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7275" title="August 23, 2006 @ 10:20 pm"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7278"><p>I like your disk drive sound impressions. Ellen Feiss has nothing on you when it comes to computer impersonation.</p>
+<p>You were a cute kid. I suspect I&#8217;ll have similar pictures of my boys in a year or two, except the Apple logos surrounding them will be monochromatic.</p>
+<p class=sig>&#8212;&#8201;<cite>Dan Ridley</cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7278" title="August 24, 2006 @ 12:02 pm"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7286"><blockquote><p>&#8220;Imagine the trouble people had in developing decent software for it when you only have 128K RAM running under a 3MHz (the Z80) cpu.&#8221;</p></blockquote>
+<p>Actually my Spectrum had 48K and people were able to program the most amazing, playable games with just that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101909/http://www.designdetector.com/' rel='external nofollow' class='url'>Chris Hester</a></cite>&#160;<a class=p href="/web/20110806101909/http://diveintomark.org/archives/2006/08/22/c600g#comment-7286" title="August 25, 2006 @ 10:46 am"><img alt="#" src=/web/20110806101909im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806101909/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806101909/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806101909/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806101909/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806101909/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.549 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:02:36 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:19:09 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:09:41 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

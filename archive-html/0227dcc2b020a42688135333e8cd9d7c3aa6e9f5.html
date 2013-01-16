@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>The appendices of the CSS specification are in alphabetical order [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806101157/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806101157/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806101157/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806101157/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806101157im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806101157/http://diveintomark.org/archives/2010/02/23/simplicity-is-hard-lets-go-shopping" title="Simplicity is hard. Let&#8217;s go shopping!">
+<link rel=next href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/hullabaloo-part-eleventy-two" title="Iceweasel hullabaloo, part eleventy-two">
+<link rel=up href="/web/20110806101157/http://diveintomark.org/archives#p2455" title="February 2010">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; The appendices of the CSS specification are in alphabetical order Comments Feed" href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806101157/http://diveintomark.org/' />
+<link rel='prev' title='Simplicity is hard. Let&#8217;s go shopping!' href='/web/20110806101157/http://diveintomark.org/archives/2010/02/23/simplicity-is-hard-lets-go-shopping' />
+<link rel='next' title='Iceweasel hullabaloo, part eleventy-two' href='/web/20110806101157/http://diveintomark.org/archives/2010/02/24/hullabaloo-part-eleventy-two' />
+<link rel='canonical' href='/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot' />
+<link rel='shortlink' href='/web/20110806101157/http://diveintomark.org/?p=2455' />
+<meta name="description" content="Ruminations on Douglas Hofstadter, whose work makes me want to throw away everything I've ever written and go live in a wooden hut.">
+<meta name="keywords" content="lighthouse,muse">
+<link href="/web/20110806101157cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806101157/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2010\/02\/24\/the-game-is-afoot";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806101157" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112229/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:11:57 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120113074025/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="13 Jan 2012"><strong>JAN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112229/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" title="11:22:29 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:11:57 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120113074025/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" title="7:40:25 Jan 13, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615032820/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:11:57 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121022081639/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Oct 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806101157*/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>14 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Feb 10 - 22 Oct 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:011101020300_2011:7:000010010000_2012:-1:100010000100_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806101157/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806101157/http://diveintomark.org/archives#p2455">February 24, 2010</a> &#8227;
+<h2>The appendices of the CSS specification are in alphabetical order</h2> (<a href="/web/20110806101157/http://diveintomark.org/tag/lighthouse" rel="tag">lighthouse</a>, <a href="/web/20110806101157/http://diveintomark.org/tag/muse" rel="tag">muse</a>)</div>
+<p>The other day, as I was skimming <a href="/web/20110806101157/http://www.reddit.com/">Reddit</a> for my daily fix of <a href="/web/20110806101157/http://www.thestar.com/opinion/article/757917--literacy-is-not-enough-if-content-is-mental-junk-food">mental junk food</a>, I stumbled across an old lecture by Douglas R. Hofstadter, <a href="/web/20110806101157/http://prelectur.stanford.edu/lecturers/hofstadter/analogy.html">Analogy as the Core of Cognition</a>. A bit of <abbr>URL</abbr>-hacking then led me to <a href="/web/20110806101157/http://prelectur.stanford.edu/lecturers/hofstadter/">this introduction of the man himself</a>, which briefly describes his major works, including <a href="/web/20110806101157/http://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach">Gödel, Escher, Bach: An Eternal Golden Braid</a>, which I first read in a delightful Logical Systems class in college, and which will be the only book in my backpack when I get to <a href="/web/20110806101157/http://diveintomark.org/archives/2008/11/03/the-pursuit-of-happiness">step 7 in my pursuit of happiness</a>, though by then we need to be able to buy unencumbered <abbr>PDF</abbr>s of such things, because damn &#8212; and I mean this quite literally &#8212; that book is heavy. Seriously, Amazon pegs it at <a href="/web/20110806101157/http://www.amazon.com/Godel-Escher-Bach-Eternal-Golden/dp/0465026567">832 pages and 2.4 pounds</a>. That&#8217;s almost enough reason to buy a Kindle. <a href="/web/20110806101157/http://diveintomark.org/archives/2007/11/19/the-future-of-reading">Almost</a>.</p>
+
+<p>Hofstadter also wrote a book called <a href="/web/20110806101157/http://en.wikipedia.org/wiki/Metamagical_Themas">Metamagical Themas</a>, which before that was the title of a column he wrote for <cite>Scientific American</cite> in the early 80s. His column was the successor to Martin Gardner&#8217;s <a href="/web/20110806101157/http://en.wikipedia.org/wiki/Martin_Gardner#Recreational_mathematics">Mathematical Games</a> column, which later served as the inspiration for several of my <a href="/web/20110806101157/http://diveintomark.org/projects/classic/">early Free Software games</a>. &#8220;Metamagical Themas&#8221; is, of course, an anagram of &#8220;Mathematical Games,&#8221; a fact which I somehow missed until it was pointed out to me by a now-ex-girlfriend for whom Hofstadter was also a literary hero.</p>
+
+<p>Eventually, the introduction led me to <a href="/web/20110806101157/http://prelectur.stanford.edu/lecturers/hofstadter/extras.html">this page of &#8220;Hofstadteriana&#8221;</a>, which includes <a href="/web/20110806101157/http://prelectur.stanford.edu/lecturers/hofstadter/autolipography.html">Autoportrait with Constraint</a> (written without the letter E &#8212; a feat <a href="/web/20110806101157/http://diveintomark.org/archives/2008/02/05/writing-with-ease">I have also attempted</a>), <a href="/web/20110806101157/http://prelectur.stanford.edu/lecturers/hofstadter/imagegallery.html">a selection of ambigrams</a> (like optical illusions, but with words), and <a href="/web/20110806101157/http://prelectur.stanford.edu/lecturers/hofstadter/potpourri.html">this potpourri of other random excerpts</a>. This essay about <a href="/web/20110806101157/http://prelectur.stanford.edu/lecturers/hofstadter/excerpts.html#gebxx">what <abbr>GEB:EGB</abbr> is really all about</a> is interesting, too.</p>
+
+<p>(Good writing, bad writing, great writing, and the differences between them, <a href="/web/20110806101157/http://diveintomark.org/archives/2004/03/24/x">is something I&#8217;ve discussed here before</a>. But the letter to the editor described in <a href="/web/20110806101157/http://prelectur.stanford.edu/lecturers/hofstadter/potpourri.html#meta">For Meta, For Verse</a> just makes me want to throw away everything I&#8217;ve ever written and <a href="/web/20110806101157/http://diveintomark.org/archives/2010/02/23/simplicity-is-hard-lets-go-shopping#comment-13827">go live in a wooden hut</a>. Let me put it another way. On a good day, Techcrunch is bad writing. On a bad day, I strive for at least good writing. But what Douglas does is&#8230; something else altogether. That poem is proof.)</p>
+
+<p>After reading about &frac34; of the introduction page, I noticed that the first word of every paragraph was bolded, and furthermore that the last letter of every paragraph was italicized. Aha! The game is afoot! My suspicions were confirmed shortly thereafter. The initial bolded letters of each paragraph spell out &#8220;D-O-U-G-L-A-S-R-H-O-F-S-T-A-D-T-E-R,&#8221; which spells &#8220;Douglas R. Hofstadter.&#8221; But the final italicized letters of each paragraph seemed to spell out nothing at all: &#8220;l-a-s-i-p-a-n-y-e-h-t-r-o-w-n-e-l-g.&#8221; But of course! If the first letters spell something <em>forwards</em>, the final letters should spell something <em>backwards</em>. And so they do: they spell &#8220;Glen Worthey napisal.&#8221; Checking the page footer confirmed that the entire text was indeed written by one Glen Worthey, and as best as I can tell, &#8220;napisal&#8221; is a Polish word meaning &#8220;author&#8221; or &#8220;authored.&#8221; Glen Worthey wrote this. Aha!</p>
+
+<p><a href="/web/20110806101157/http://xkcd.com/214/">Meanwhile</a>, a bit closer to home, <a href="/web/20110806101157/http://krijnhoetmer.nl/irc-logs/whatwg/20100211#l-939">I recently learned</a> that the appendices of <a href="/web/20110806101157/http://www.w3.org/TR/CSS2/#minitoc">the CSS 2.1 specification</a> are in alphabetical order. I&#8217;m going to repeat that because it&#8217;s doubly awesome: <em>the appendices of the CSS specification are in alphabetical order</em>. &#8220;Appendix A. Aural style sheets,&#8221; &#8220;Appendix B. Bibliography,&#8221; &#8220;Appendix C. Changes.&#8221; Hmm, could be a coincidence. &#8220;Appendix D. Default style sheet for HTML 4.&#8221; Suspicious, but plausible. &#8220;Appendix E. Elaborate description of Stacking Contexts.&#8221; OK, now you&#8217;re just fucking with me. And so on, up until &#8220;Appendix I. Index.&#8221; (But, even more interestingly, not including Appendix H (!), which is absent from both the &#8220;mini-TOC&#8221; and the full table of contents, but which <em>is</em> present within the text of the specification itself, for example by going to <a href="/web/20110806101157/http://www.w3.org/TR/CSS2/indexlist.html">Appendix I</a> and clicking &#8220;previous.&#8221;)</p>
+
+<p>Early on, I had tried to do something similar while writing <a href="/web/20110806101157/http://diveintopython3.org/">Dive Into Python 3</a>. Unfortunately for fans of constrained writing everywhere (both of you), the constant rearranging, merging, adding, and removing chapters led me to abandon that effort. But learning about the easter egg in the CSS spec prompted me to try again, and now if you skim through the online edition, you&#8217;ll see that the initial drop caps in each chapter are in alphabetical order from A to U. Maybe it&#8217;s not Hofstadterian, but I&#8217;ll be damned if I&#8217;m going to be outdone by <em>the appendices of the CSS specification</em>. Still, if the pen is mightier than the sword, I feel like I&#8217;m still learning how to unsheath the damn thing and wave it around. And Douglas R. Hofstadter is a level 60 samurai.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Eleven comments here (<a href=/web/20110806101157/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-13848"><p>Nicely self-referential.</p>
+<p class=sig>&#8212;&#8201;<cite>kasei</cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13848" title="February 24, 2010 @ 1:28 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13849"><p>He gave this talk in September 2009 at Stanford University if I read this correctly:<br />
+<a href="/web/20110806101157/http://www.youtube.com/watch?v=n8m7lFQ3njk" rel="nofollow">http://www.youtube.com/watch?v=n8m7lFQ3njk</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101157/http://rym.waglo.com/' rel='external nofollow' class='url'>Robin Millette</a></cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13849" title="February 24, 2010 @ 2:26 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13850"><p>Knuth did it first in The TeXbook and the METAFONTbook, each with ten such lettered appendices.</p>
+<p class=sig>&#8212;&#8201;<cite>Josh Lee</cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13850" title="February 24, 2010 @ 2:39 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13851"><p>Correction, the lecture I posted was recorded in February 2006. It was dated 2009 on youtube. More <a href="/web/20110806101157/http://www.google.com/buzz/pilgrim/RdnKnvQXUAr" rel="nofollow">http://www.google.com/buzz/pilgrim/RdnKnvQXUAr</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101157/http://rym.waglo.com/' rel='external nofollow' class='url'>Robin Millette</a></cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13851" title="February 24, 2010 @ 3:05 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13852"><p>Thanks Mark. I enjoyed the clinamen in Hofstadter&#8217;s autolipography.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101157/http://wordaligned.org/' rel='external nofollow' class='url'>Thomas Guest</a></cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13852" title="February 24, 2010 @ 3:36 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13854"><p>For what it&#8217;s worth, &#8220;napisal&#8221; is the simple past form in the male third person of the verb &#8220;to write&#8221; in Slovenian. Like saying &#8220;[he]wrote&#8221;. Funny thing, Slavic languages.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101157/http://blog.argentinaslovenia.com/' rel='external nofollow' class='url'>Carlos Yoder</a></cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13854" title="February 24, 2010 @ 5:55 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13857"><p>The game is afoot :D</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101157/http://peterstuifzand.nl/' rel='external nofollow' class='url'>Peter Stuifzand</a></cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13857" title="February 24, 2010 @ 7:44 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13858"><p>Ah-ha! Thanks for explaining the changes to DIP3. I hadn&#8217;t looked at them in depth, so I didn&#8217;t really understand why you modified the initial paragraph in every chapter. Trying to preserve the letter game will be a nice translation challenge. I just have one further question: who&#8217;s that Philip guy you mention in the Mercurial commit message?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101157/http://gpiancastelli.wordpress.com/' rel='external nofollow' class='url'>Giulio Piancastelli</a></cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13858" title="February 24, 2010 @ 7:55 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13859"><p>The Governator did it as well!<br />
+<a href="/web/20110806101157/http://www.nytimes.com/2009/10/29/us/29arnold.html" rel="nofollow">http://www.nytimes.com/2009/10/29/us/29arnold.html</a></p>
+<p class=sig>&#8212;&#8201;<cite>BennyB</cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13859" title="February 24, 2010 @ 9:26 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13861"><p>Right, Knuth did it before. In case someone is interested:</p>
+<p>The TEXbook:</p>
+<p>A Answers to All the Exercises<br />
+B Basic Control Sequences<br />
+C Character Codes<br />
+D Dirty Tricks<br />
+ E Example Formats<br />
+F Font Tables<br />
+G Generating Boxes from Formulas<br />
+H Hyphenation<br />
+I Index<br />
+J Joining the TEX Community</p>
+<p>The METAFONTbook:</p>
+<p>A Answers to All the Exercises<br />
+B Basic Operations<br />
+C Character Codes<br />
+D Dirty Tricks<br />
+E Examples<br />
+F Font Metric Information<br />
+G Generic Font Files<br />
+H Hardcopy Proofs<br />
+I Index<br />
+J Joining the TEX Community</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806101157/http://thomas-huehn.de/' rel='external nofollow' class='url'>Thomas Hühn</a></cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13861" title="February 24, 2010 @ 10:31 am"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13864"><p>I read your post here which turned out to be more interesting and wandering than the title indicated. Then I read *Analogy as the Core of Cognition* and Hofstadter&#8217;s ideas of chunking and analogies and how concepts are built upon earlier concepts, etc. </p>
+<p>Later in the day I stumbled upon [Triumph of the Cyborg Composer][1]. A composer named David Cope wrote software that created original music which was indistinguishable by music experts from pieces created by skilled human composers. (It passed the *Musical Turing Test* if there was such a thing.) The software was originally designed to mimic the style of a certain musician. (Bach in this case.)</p>
+<p>Cope has a theory that nothing is original. Musical compositions are created from mentally borrowing and rearranging things we&#8217;ve heard before and piecing them together in a skillfull manner. To me, this sounds a lot like Hofstadter&#8217;s thoughts on analogies.</p>
+<p>I&#8217;ve actually read about Cope in the past but it was nice to have these new connections so I kept reading.</p>
+<p>As you might have guessed by this point, Hofstadter is actually mentioned in the article. He knows of Cope and his work and has talked and written about it. He is not so happy, though. Turns out Hofstadter is a kind of hopeless romantic.</p>
+<p>A good read. You should check it out if you haven&#8217;t already.</p>
+<p>[1]: <a href="/web/20110806101157/http://www.miller-mccune.com/culture-society/triumph-of-the-cyborg-composer-8507/" rel="nofollow">http://www.miller-mccune.com/culture-society/triumph-of-the-cyborg-composer-8507/</a></p>
+<p class=sig>&#8212;&#8201;<cite>Matthew</cite>&#160;<a class=p href="/web/20110806101157/http://diveintomark.org/archives/2010/02/24/the-game-is-afoot#comment-13864" title="February 24, 2010 @ 11:20 pm"><img alt="#" src=/web/20110806101157im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806101157/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806101157/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806101157/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806101157/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806101157/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.344 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:38:07 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:11:57 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:03:38 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

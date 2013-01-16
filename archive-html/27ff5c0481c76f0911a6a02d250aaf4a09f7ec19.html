@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Can GPL iPhone apps exist? [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806100054/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806100054/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806100054/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806100054/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806100054im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806100054/http://diveintomark.org/archives/2008/03/05/upstream" title="Universal Encoding Detector 1.0.1 is out">
+<link rel=next href="/web/20110806100054/http://diveintomark.org/archives/2008/03/09/no-fury-like-dracon-scorned" title="Draconian error handling: still the worst idea ever">
+<link rel=up href="/web/20110806100054/http://diveintomark.org/archives#p1760" title="March 2008">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Can GPL iPhone apps exist? Comments Feed" href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806100054/http://diveintomark.org/' />
+<link rel='prev' title='Universal Encoding Detector 1.0.1 is out' href='/web/20110806100054/http://diveintomark.org/archives/2008/03/05/upstream' />
+<link rel='next' title='Draconian error handling: still the worst idea ever' href='/web/20110806100054/http://diveintomark.org/archives/2008/03/09/no-fury-like-dracon-scorned' />
+<link rel='canonical' href='/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl' />
+<link rel='shortlink' href='/web/20110806100054/http://diveintomark.org/?p=1760' />
+<meta name="keywords" content="apple,gpl,iphone,licensing">
+<link href="/web/20110806100054cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806100054/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2008\/03\/07\/iphone-gpl";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2008/03/07/iphone-gpl" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806100054" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514121402/http://diveintomark.org/archives/2008/03/07/iphone-gpl" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:00:54 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110930155135/http://diveintomark.org/archives/2008/03/07/iphone-gpl" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="30 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514121402/http://diveintomark.org/archives/2008/03/07/iphone-gpl" title="12:14:02 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:00:54 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110828063520/http://diveintomark.org/archives/2008/03/07/iphone-gpl" title="6:35:20 Aug 28, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620011715/http://diveintomark.org/archives/2008/03/07/iphone-gpl" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:00:54 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806100054*/http://diveintomark.org/archives/2008/03/07/iphone-gpl" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>19 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">10 Mar 08 - 30 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:002111004100_2009:-1:100000000000_2010:-1:000011000011_2011:7:000010021000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806100054/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806100054/http://diveintomark.org/archives#p1760">March 7, 2008</a> &#8227;
+<h2>Can GPL iPhone apps exist?</h2> (<a href="/web/20110806100054/http://diveintomark.org/tag/apple" rel="tag">apple</a>, <a href="/web/20110806100054/http://diveintomark.org/tag/gpl" rel="tag">gpl</a>, <a href="/web/20110806100054/http://diveintomark.org/tag/iphone" rel="tag">iphone</a>, <a href="/web/20110806100054/http://diveintomark.org/tag/licensing" rel="tag">licensing</a>)</div>
+<p>My non-lawyerly reading of the GPL says no, or at least, not without some significant buy-in from Apple.</p>
+
+<p>This is the relevant portion of <a href="/web/20110806100054/http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPLv2 section 3</a>:</p>
+
+<blockquote cite="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">
+<p>3.  You may copy and distribute the Program (or a work based on it, under Section 2) in object code or executable form under the terms of Sections 1 and 2 above provided that you also do one of the following:</p>
+
+<p>    a) Accompany it with the complete corresponding machine-readable source code, which must be distributed under the terms of Sections 1 and 2 above on a medium customarily used for software interchange; or, </p>
+<p>    b) Accompany it with a written offer, valid for at least three years, to give any third party, for a charge no more than your cost of physically performing source distribution, a complete machine-readable copy of the corresponding source code &#8230;</p>
+</blockquote>
+
+<p>Since all iPhone apps must be distributed through a third-party (Apple&#8217;s &#8220;App Store&#8221;), that would make Apple the &#8220;distributor.&#8221;   Which would mean that Apple &#8212; acting as the distributor of GPL-licensed object code &#8212; must provide source code or a written offer to provide source code.  It&#8217;s analogous to a Linux distribution &#8212; they distribute binaries of upstream GPL programs, so they need to host the source code as well.</p>
+
+<p>Is this correct, and if so, will Apple be set up to do this?</p>
+
+<p>(My non-lawyerly reading of GPLv3 just makes my head spin, so I won&#8217;t even venture an opinion about that.)</p>
+<p class=c>&#167;
+
+<h3 id=comments>Forty comments here (<a href=/web/20110806100054/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-11372"><p>If the application is useful and doesn&#8217;t violate the App Store&#8217;s terms of service -and in Apple&#8217;s defence, only the multi-tasking one strikes me as being less than reasonable- then I don&#8217;t see why Apple shouldn&#8217;t; it&#8217;d make a good loss leader.<br />
+I doubt, however, that anyone will go to the trouble of getting an SDK for a device which is being marketed at very rich idiots who want to impress other very rich idiots unless they intend to charge top dollar for the fruits of their labour.</p>
+<p class=sig>&#8212;&#8201;<cite>Jake</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11372" title="March 7, 2008 @ 10:15 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11374"><p>I dunno, I find the portion of GPLv3 section 6 regarding providing<br />
+source code pretty straightforward as far as legalese is concerned. </p>
+<p>What surprised me, however, was the fact that the anti-tivoisation<br />
+clause does not seem to apply here because the software is not shipped<br />
+with as part of the sale of the IPhone.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11374" title="March 7, 2008 @ 10:57 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11375"><p>I&#8217;m not so sure about this.  If you were to buy a copy of Ubuntu or Mac OS X or a Linksys WRT54G on Amazon.com, would Amazon be responsible for providing the source for the GPL software contained in each?  No: Ubuntu, Apple, and Cisco make that source available for download.  In the case of AppStore Apple is still essentially a retailer.</p>
+<p class=sig>&#8212;&#8201;<cite>Stor</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11375" title="March 7, 2008 @ 11:05 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-11376"><p>@Jake: the question was whether it was possible, not whether it was likely.  (Though it *is* somewhere between likely and inevitable.  Some of the world&#8217;s most kick-ass end-user Mac software is GPL.  Adium, Colloquy, etc.  It&#8217;s gonna come up.)  And there are other ways to make money from software than charging the end user a flat fee up front.  And not everyone programs to make money anyway.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11376" title="March 7, 2008 @ 11:17 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11377"><p>The developer sends the binary to Apple to distribute (or the source, which they compile), but that doesn&#8217;t prevent the original author from putting up the source code on their own site. Presumably in the blurb on the AppStore you can put your own web site (for things like getting support and such for the app), and on the site you can provide the GPLed code (either in pure code form, or as an Xcode project).</p>
+<p>Just because Apple distributes the binaries doesn&#8217;t /necessarily/ mean they have to provide the code. As long as the code is available to the users of the software then the GPL is satisfied.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://www.magda.ca/' rel='external nofollow' class='url'>David Magda</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11377" title="March 7, 2008 @ 11:33 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11378"><p>I raised this question with a friend with a slightly different scenario. If developers need to sign the binaries they send to Apple does their private key effectively constitute part of the source code, and so would it need to be redistributed to users too? There&#8217;s been some debate for a while over whether the GPL is fundamentally incompatible with DRMed software.</p>
+<p>Actually, I wonder if Apple will make a iPhone Apps Plus and charge an extra 20% for the versions of the apps that don&#8217;t have DRM :)</p>
+<p>Ian</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://ian.mckellar.org/' rel='external nofollow' class='url'>Ian McKellar</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11378" title="March 7, 2008 @ 11:47 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11379"><p>Who would be the plaintiff in a GPL case, and has one ever been litigated? What would the remedy be&#8211;just an injunction against further distribution? In other words, does any of this even matter? Can&#8217;t we all just ignore it?</p>
+<p class=sig>&#8212;&#8201;<cite>Marke</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11379" title="March 8, 2008 @ 12:01 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-11380"><p>@Marke: <a href="/web/20110806100054/http://gpl-violations.org/" rel="nofollow">http://gpl-violations.org/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11380" title="March 8, 2008 @ 12:09 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11381"><p>Mark: You could include the source in the signed application, something I&#8217;ve seen in windows installers of GPLed software, assuming there&#8217;s a way to get it off the iPhone. </p>
+<p>Anonymous: Hmm, you&#8217;re right about the tivo-isation clauses in v3 not applying since it&#8217;s not shipped with the iPhone itself.</p>
+<p class=sig>&#8212;&#8201;<cite>James</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11381" title="March 8, 2008 @ 2:34 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11383"><p>@David Magda:  That&#8217;s not true.  The FSF&#8217;s position is that every distributor must provide source code for GPL binaries they distribute.  See here: <a href="/web/20110806100054/http://www.linux.com/feature/55285" rel="nofollow">http://www.linux.com/feature/55285</a>.</p>
+<p class=sig>&#8212;&#8201;<cite>Alex</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11383" title="March 8, 2008 @ 7:51 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11384"><p>You don&#8217;t need Apple to ship the source for you, you just embed it in your application, and tell the user how to extract it in the documentation. For example, the source code tarball could be part of the application&#8217;s resources.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://robilad@kaffe.org/' rel='external nofollow' class='url'>Dalibor Topic</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11384" title="March 8, 2008 @ 8:27 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11385"><p>I think a key question to answer here is how software gets loaded onto the unit. If it were the case that the only way to get software into the unit was by passing it through the App Store, that would be one thing. But we know that developers can access the unit locally to run their software on it. So, the hardware should be capable, without too much effort by free software advocates I would hope, for regular users to load software on locally as well. Perhaps there shouldn&#8217;t be a distinction here between regular users, and developers, I&#8217;m not sure.</p>
+<p class=sig>&#8212;&#8201;<cite>SG</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11385" title="March 8, 2008 @ 9:36 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11386"><p>Even if GPL software for the iPhone might be legal, wouldn&#8217;t people who care about freedom stay away as far as possible? As far as my grokking goes, Apple have full control of which apps goes into iTunes and the AppStore, and the only way to distribute apps is through Apple. This, to me, is too much control. I don&#8217;t mind them providing a distribution channel (and a far as distribution channels goes, it seems to be a very good one), but that it&#8217;s the only one possible is just too much.</p>
+<p>And Apple seems to go so far that they will &#8220;censor&#8221; certain kinds of applications, VoIP, porn and interpreters/compilers are the ones I&#8217;ve heard of so far. I find it disturbing that developers don&#8217;t consider this a big issue. Most &#8220;open&#8221; (for some values of open) mobile OSs and RIA frameworks have some kind of signing process to avoid repeating the virus infection that is Windows. But as broken as they might be, they still appear to be primarily designed to protect the user. Apple&#8217;s system seems to be designed to protect Apple and the operator. As soon as you start censor based on content it&#8217;s a slippery slope. What will happen when they start distributing iPhone apps in Iran?</p>
+<p>I guess the reason why developers in general don&#8217;t consider this a problem is that mobile phones are toys for most people. I consider mobile phones becoming the new personal computer in a few years, and I was kind of hoping that the mobile industry was maturing and moving towards more openness. But it seems like with the iPhone we&#8217;re just switching the operator overlord, with a manufacturer one (with much more control than operators have currently). If the iPhone would have been a crappy product I wouldn&#8217;t mind, but since it&#8217;s so popular I find the whole ordeal disturbing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://andthennothing.net/' rel='external nofollow' class='url'>Jonas</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11386" title="March 8, 2008 @ 9:37 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11387"><p>As long as the user has access to the source, I see no problem anywhere.</p>
+<p>Does someone insinuate that apple does not provide the source code to GPL apps they distribute?</p>
+<p class=sig>&#8212;&#8201;<cite>she</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11387" title="March 8, 2008 @ 10:20 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11388"><p>@Alex, David Magda is right, see section 6d of GPLv3 you can distribute the source from a different server as long as you specify it and it stays available.</p>
+<p>@SG, You are completely right, if the developer provisioning of the iPhone allows you to install your modify gpl software without crippling your iphone then there&#8217;s no problem even if it cost money to do so.  However, in the iPhone documentation about developer provisioning an iphone, &#8220;iPhone OS Programming Guide &gt; Development Environment &gt; Working With A Device &gt; Running Your Application on a Device. &#8221; There&#8217;s a sentence that suggests (doesn&#8217;t say for sure) that provisioning your iPhone may disable hardware features of your iphone  such as the telephony features. If that is the case, its still hard to say as it&#8217;s been mention in the comments above the anti-tivo clause only applies to devices that ship with the software.</p>
+<p>@she, The issue is not whether Apple has violated the GPL, the issues is trying to figure out whether it is possible that someone could write or port a GPL app to iPhone because it may be the case that apple&#8217;s the tight controls on binary distribution are incompatible with the GPL license.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://jay.tuley.name/' rel='external nofollow' class='url'>Jay</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11388" title="March 8, 2008 @ 11:30 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-11389"><cite><a href='/web/20110806100054/http://almaer.com/blog/jphone' rel='external nofollow' class='url'>jPhone? on Dion Almaer's Blog</a></cite>&#160;(pingback)</li>
+<li id="comment-11390"><p>I&#8217;m not a lawyer, but I have spent quite a bit of time fussing over free software licenses.  My understanding of the situation is this:</p>
+<p>If you link GPL code against one or more Apple Cocoa frameworks, neither you nor anyone else can distribute that code because you can&#8217;t distribute the source for the Apple framework.</p>
+<p>Since it&#8217;s not possible to write an iPhone app using the iPhone SDK without using Apple Cocoa frameworks (as far as I know, anyway), iPhone apps cannot be GPL.  I also suspect that there are numerous free software MacOS X apps that are technically illegal for the same reason.</p>
+<p>Maybe I&#8217;m wrong and someone will correct me, but I think the GPL (regardless of version) is pretty clear on this issue.</p>
+<p class=sig>&#8212;&#8201;<cite>Drew Hess</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11390" title="March 8, 2008 @ 5:07 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11391"><p>Small correction to my previous post: I should have said that, &#8220;iPhone apps that are GPL cannot be distributed.&#8221;  You could, of course, write a GPL app for your iPhone that you never give to anyone outside your organization, which means that you haven&#8217;t invoked the distribution clause of the GPL&#8230; not that it&#8217;s a very useful distinction in the context of Mark&#8217;s original question, of course, but I think it&#8217;s important to be precise.</p>
+<p class=sig>&#8212;&#8201;<cite>Drew Hess</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11391" title="March 8, 2008 @ 5:13 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11393"><p>Eh&#8230; nevermind me.  According to the GPLv3, anyway, System Libraries are exempt from the distribution clause and those include &#8220;major essential component[s]&#8221; of the operating system.  That probably means the Apple-supplied Cocoa libs are considered System Libraries and that there&#8217;s no fundamental GPL issue with Cocoa apps.</p>
+<p>Sorry for the distraction :)</p>
+<p class=sig>&#8212;&#8201;<cite>Drew Hess</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11393" title="March 8, 2008 @ 6:04 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11394"><p>@Jay:  I don&#8217;t think 6d is a get-out for Apple.  If you&#8217;re a distributing licensee, you have a responsibility to provide a source for the source.  The last sentence says it all: &#8220;Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.&#8221;  Apple can&#8217;t make that guarantee if the source code is hosted on the original developer&#8217;s server, they have to host it themselves.  Of course, if there&#8217;s a dual-license possibility here so that Apple&#8217;s right to distribute comes from something that&#8217;s not the GPL, then all this is moot, and it&#8217;s only subsequent downstream distributors who&#8217;d have to worry.  I believe that this would only be feasible for single-author packages.</p>
+<p class=sig>&#8212;&#8201;<cite>Alex</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11394" title="March 8, 2008 @ 7:19 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-11395"><cite><a href='/web/20110806100054/http://dustman.wordpress.com/2008/03/09/todays-selected-reads-2/' rel='external nofollow' class='url'>Today&#8217;s selected reads &laquo; Dustman&#8217;s Weblog</a></cite>&#160;(pingback)</li>
+<li id="comment-11396"><p>You left out this one, which works if Apple&#8217;s distribution of free applications is considered &#8220;noncommercial&#8221;:</p>
+<p>&#8220;c)  Accompany it with the information you received as to the offer to distribute corresponding source code. (This alternative is allowed only for noncommercial distribution and only if you received the program in object code or executable form with such an offer, in accord with Subsection b above.)&#8221;</p>
+<p>This allows the developer to provide a written offer to Apple, and Apple to pass that written offer on to end users.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://limpet.net/mbrubeck/' rel='external nofollow' class='url'>Matt Brubeck</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11396" title="March 8, 2008 @ 9:14 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-11397"><p>On a <a href="/web/20110806100054/http://www.eod.com/devil/archive/meta.html">meta</a> note, this discussion has turned out much better than I would have expected from the intersection of Apple, iPhones, and the GPL.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11397" title="March 8, 2008 @ 10:35 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11399"><p><a href="/web/20110806100054/http://www.amazon.com/Canonical-Ubuntu-7-10-PC-Edition/dp/B000XJLSKY/" rel="nofollow">http://www.amazon.com/Canonical-Ubuntu-7-10-PC-Edition/dp/B000XJLSKY/</a></p>
+<p>Is Amazon the distributor for this distro?</p>
+<p>I would imagine that a similar rationale could be applied to Software on the iTunes store.</p>
+<p>I&#8217;m not a GPL fan in any case though.  Too complicated for my simple mind.</p>
+<p class=sig>&#8212;&#8201;<cite>Danno</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11399" title="March 8, 2008 @ 10:48 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-11401"><cite><a href='/web/20110806100054/http://www.redmonk.com/cote/2008/03/09/links-for-2008-03-09/' rel='external nofollow' class='url'>People Over Process &raquo; links for 2008-03-09</a></cite>&#160;(pingback)</li>
+<li id="comment-11403"><p>Stepping back from the letter of the licence for a second, to think about its spirit, I wonder how it is <em>ever</em> possible to grant the four freedoms on a platform where the only way to install software is via a controlled distribution channel.</p>
+<p>Sure, maybe you can find a way to provide source code, in a way such that the user could actually read and edit it.</p>
+<p>But then what?</p>
+<p>They can’t install their modified copy.</p>
+<p>Maybe they actually can if they buy a developer’s key; maybe Apple will hand those out without vetting recipients. That still makes the user dependent on the vendor, so it’s not actually in the spirit of the GPL, but I suppose one could swallow that and accepting having to fork the cash over to Apple. But that’s in the best-case scenario: that you only need to pay for the developer key once, that it cannot be revoked, and that its use does not somehow put the device in some sort of restricted capability mode.</p>
+<p>Except, I don’t see that case happening, because otherwise, what else is the developer key than an Apple-blessed jailbreaking pass?</p>
+<p>Maybe there can be GPL-licensed software for the iPhone. But I don’t see how there can be Free Software for the iPhone.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11403" title="March 9, 2008 @ 11:04 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11404"><p>&#8220;3. You may copy and distribute the Program&#8221; &#8211; the question is, who exactly is &#8220;You&#8221;. I don&#8217;t think that GPL&#8217;s purpose is to cover every detail of the everyday distribution chain. So I assume that this &#8220;You&#8221; is the main beneficiary, the author. So no obligations falls to Apple.</p>
+<p class=sig>&#8212;&#8201;<cite>Peter</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11404" title="March 9, 2008 @ 1:58 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11405"><p>Aristotle: See also the discussions about GFDL documents and DRM in Debian.</p>
+<p class=sig>&#8212;&#8201;<cite>James</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11405" title="March 9, 2008 @ 7:00 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11406"><p>@Mark #4: &#8220;Some of the world’s most kick-ass end-user Mac software is GPL. Adium, Colloquy, etc.&#8221;</p>
+<p>While Colloquy itself is GPL, the IRC core Colloquy uses (chat core) is BSD licensed and I assume in use in the two colloquy-ish-based IRC clients available now on the (jailbroken) iPhone: mcolloquy and colloq. Not as much of a problem as the GPL may be.</p>
+<p class=sig>&#8212;&#8201;<cite>Jane</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11406" title="March 9, 2008 @ 7:01 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11409"><p>@Aristotle &#8211; the &#8220;key&#8221; or &#8220;token&#8221; to have the free pass &#8220;jailbreak&#8221; is the key here.  My take in answer to Mark&#8217;s question is a simple &#8220;no&#8221; until Apple changes the approach.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://www.somelifeblog.com/' rel='external nofollow' class='url'>Ken Hanscom</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11409" title="March 9, 2008 @ 10:07 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11410"><p>If the source code were contained inside the application package, then when the app is purchased it will either download to the user&#8217;s computer via iTunes (and thereby satisfy the GPL since the source code is now on the machine and accessible) or download to the iPhone, *and* then copy to iTunes as soon as the iPhone is synced, wherein the source-code will be on the machine and readable. Problem solved.</p>
+<p>JP</p>
+<p class=sig>&#8212;&#8201;<cite>John</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11410" title="March 9, 2008 @ 11:21 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11414"><p>Actually the problem lies more in the allowance of the user to recompile to use the modified software.</p>
+<p>It appears that Apple require the binaries to be signed to be installed, therefore forbidding the use to install the modified application. One might think that they need to register and pay $99 to be able to do so? But given the restrictions put on the service, it clearly conflict with GPL.</p>
+<p>IANAL, but I see that Apple TOS / EULA for iPhone developement is a bit incompatible with GPL Freedom 0.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://www.figuiere.net/hub/blog/' rel='external nofollow' class='url'>HUb</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11414" title="March 10, 2008 @ 12:24 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11440"><p>To quote Linus on the issue of having the source but not being run binaries without them being signed:</p>
+<p>&#8220;Sure, DRM may mean that you can not _install_ or _run_ your changes on somebody else&#8217;s hardware. But it in no way changes the fact that you got all the source code, and you can make changes (and use their changes) to it. That requirement has always been there, even with plain GPLv2. You have the source.</p>
+<p>The difference? The hardware may only run signed kernels. The fact that the hardware is closed is a _hardware_ license issue. Not a software license issue. I&#8217;d suggest you take it up with your hardware vendor, and quite possibly just decide to not buy the hardware. Vote with your feet. Join the OpenCores groups. Make your own FPGA&#8217;s.&#8221;</p>
+<p>and</p>
+<p>&#8220;&gt; So taking open software and closed hardware and combining it into something<br />
+&gt; that I cannot modify is ok by you?</p>
+<p>But you CAN modify the software part of it. You can run it on other hardware.</p>
+<p>It boils down to this: we wrote the software. That&#8217;s the only part _I_ care about, and perhaps (at least to me) more importantly, because it&#8217;s the only part we created, it&#8217;s the only part that I feel we have a moral right to control.</p>
+<p>I _literally_ feel that we do not &#8211; as software developers &#8211; have the moral right to enforce our rules on hardware manufacturers. We are not crusaders, trying to force people to bow to our superior God. We are trying to show others that co-operation and openness works better.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite>mc</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11440" title="March 11, 2008 @ 6:36 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-11443"><p>> To quote Linus</p>
+<p>I realize that this entire discussion of legal issues has been populated by non-lawyers, but I would trust Linus&#8217; &#8220;interpretation&#8221; of GPL licensing issues even less than most people.  He has a history of willful ignorance and misunderstanding of the GPL.  He flipped my bozo bit a long time ago.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100054/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11443" title="March 11, 2008 @ 9:07 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11454"><p>Without rehashing that whole debate again the point was that Tivoisation is a further restriction which denies recepients received by the distributor. Like patents for instance. The GPL does not restrict creating or enforcing patents it only says under what terms you can distribute GPL software, some of which involve agreeing not to use patent threats on recipients of that software.</p>
+<p>What I don&#8217;t understand is why in GPLv3 &#8212; where they endeavoured to make this explicit &#8212; did they make an exception for when the software is distributed separately from the hardware.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11454" title="March 11, 2008 @ 7:42 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11457"><p>Reading GPLv3, it looks to this anonymous non-lawyer like even Tivo is actually allowed to ship GPLv3 software *in upgrades* so long as they don&#8217;t include it at the time of the sale of their hardware product&#8230;</p>
+<p>What is the reason (if any) why they couldn&#8217;t ship a (signed) software update containing GPLv3 code?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11457" title="March 12, 2008 @ 5:50 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11460"><p>That should read:</p>
+<blockquote><p>
+  Tivoisation is a further restriction which denies recipients freedoms received by the distributor
+  </p></blockquote>
+<p class=sig>&#8212;&#8201;<cite>Anonymous-7:42</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11460" title="March 12, 2008 @ 8:11 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11486"><p>To my reading of the GPL (v2 or v3) nothing restricts one from application of either license to a piece of software or other entity which is required to be processed by a component / program that must be purchased. So if I write a piece of code that only compiles if you use a $2000 compiler suite (say code aimed to be compiled from C or C++ into FPGA fuse maps) then it is the code itself not the tools I am obligated to supply. If anyone can buy a $99 developer license that is just part of the tool chain cost. So iPhone applications can be GPL&#8217;d since there is a means (by paying for a separate tool) to recreate the application for use on an iPhone. And in general the code itself is under GPL for the intent to allow reuse of the code and modifications so I am actually pretty confident that just having the source code itself is adequate since one may then modify and use that code. I am not sure it requires that the code be able to be modified and used on the target device it is commercially used on. Some hardware just is not upgradeable. No way to change the software originally programmed into the device. Like OTP SoC devices. You don&#8217;t get the masks to the SoC or even have rights to all the code burnt into the SoC (some of which might be required to have the environment the program runs in) just to the original GPL&#8217;d code in the form used. Say, I use GPL&#8217;d code say in VHDL or something similar and program a 800 dollar FPGA on my device, then blow the programming enable fuse. (because no bugs every occur in my code!) I now have a piece of GPL code I am obligated to deploy/distribute but the user of my device can not modify my device with their code. Further I can make it a condition of hardware support etc. that they never open the case. So if my device is costly enough there is a disincentive pressure to not play with it.</p>
+<p class=sig>&#8212;&#8201;<cite>Tjp</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11486" title="March 14, 2008 @ 10:19 pm"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-11487"><p>Maybe you should have read v3 more carefully.</p>
+<blockquote><p>
+If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).
+</p></blockquote>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806100054/http://diveintomark.org/archives/2008/03/07/iphone-gpl#comment-11487" title="March 15, 2008 @ 9:55 am"><img alt="#" src=/web/20110806100054im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-11508"><cite><a href='/web/20110806100054/http://tieguy.org/blog/2008/03/18/spring-break-link-blogging/' rel='external nofollow' class='url'>Luis Villa&#8217;s Blog / spring break link blogging</a></cite>&#160;(pingback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806100054/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806100054/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806100054/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806100054/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806100054/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.401 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 21:34:45 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:00:54 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:05:24 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Site-specific text zoom [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806084118/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806084118/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806084118/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806084118/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806084118im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806084118/http://diveintomark.org/archives/2007/05/02/silly-season" title="Silly season">
+<link rel=next href="/web/20110806084118/http://diveintomark.org/archives/2007/05/09/whither-television" title="Whither television?">
+<link rel=up href="/web/20110806084118/http://diveintomark.org/archives#p1685" title="May 2007">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Site-specific text zoom Comments Feed" href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806084118/http://diveintomark.org/' />
+<link rel='prev' title='Silly season' href='/web/20110806084118/http://diveintomark.org/archives/2007/05/02/silly-season' />
+<link rel='next' title='Whither television?' href='/web/20110806084118/http://diveintomark.org/archives/2007/05/09/whither-television' />
+<link rel='canonical' href='/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint' />
+<link rel='shortlink' href='/web/20110806084118/http://diveintomark.org/?p=1685' />
+<meta name="description" content="This is how text zoom ought to work in the first place.">
+<meta name="keywords" content="accessibility,extension,firefox,mozilla">
+<link href="/web/20110806084118cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806084118/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2007\/05\/07\/nosquint";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2007/05/07/nosquint" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806084118" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110608005431/http://diveintomark.org/archives/2007/05/07/nosquint" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="8 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 8:41:18 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110608005431/http://diveintomark.org/archives/2007/05/07/nosquint" title="0:54:31 Jun 8, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 8:41:18 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620082106/http://diveintomark.org/archives/2007/05/07/nosquint" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 8:41:18 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806084118*/http://diveintomark.org/archives/2007/05/07/nosquint" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>17 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">10 May 07 - 6 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000021101101_2008:-1:111110001000_2009:-1:000000000000_2010:-1:000001000100_2011:7:000001010000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806084118/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806084118/http://diveintomark.org/archives#p1685">May 7, 2007</a> &#8227;
+<h2>Site-specific text zoom</h2> (<a href="/web/20110806084118/http://diveintomark.org/tag/accessibility" rel="tag">accessibility</a>, <a href="/web/20110806084118/http://diveintomark.org/tag/extension" rel="tag">extension</a>, <a href="/web/20110806084118/http://diveintomark.org/tag/firefox" rel="tag">firefox</a>, <a href="/web/20110806084118/http://diveintomark.org/tag/mozilla" rel="tag">mozilla</a>)</div>
+<p><a href="/web/20110806084118/http://urandom.ca/nosquint/">NoSquint</a> is my new favorite Firefox/Iceweasel extension.  It allows you to set a default text zoom globally, and then remembers your text zoom settings per site.  You don&#8217;t have to do anything special; just install it, go to a site like <a href="/web/20110806084118/http://daringfireball.net/">Daring Fireball</a> that uses ridiculously small type, and select View &rarr; Text Size &rarr; Increase until you can read it.  When you go to a new site (even in the same tab), the text zoom goes back to your global default.  When you return to Daring Fireball, the text zoom goes back to the last size you had on Daring Fireball.  That&#8217;s it.  This is how text zoom ought to work in the first place.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Twenty five comments here (<a href=/web/20110806084118/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-9325"><p>I agree that things should work that way. Great extension.</p>
+<p>NB: You can set your text size <a href="/web/20110806084118/http://daringfireball.net/preferences/">preference on DF</a>.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://h3h.net/' rel='external nofollow' class='url'>Brad Fults</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9325" title="May 7, 2007 @ 11:08 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9326"><p>The ability to set site-specific preferences like text size is one of the best features of <a href="/web/20110806084118/http://www.omnigroup.com/applications/omniweb/">OmniWeb</a>, IMHO.</p>
+<p class=sig>&#8212;&#8201;<cite>SkylarP</cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9326" title="May 7, 2007 @ 11:37 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-9327"><p>No, having each and every site manage this is horrible.  Just like feed discovery used to be based on those ugly little XML buttons, and now there&#8217;s a uniform mechanism in every browser.  The fact that individual sites even need to offer options like that should tell you how poorly browsers handle this.</p>
+<p>Plus, site-managed preferences require cookies, and I only allow cookies on whitelisted sites (using another extension which I don&#8217;t remember ATM).  All others sites can set cookies, but my browser magically turns them into session cookies and deletes them when I quit.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9327" title="May 7, 2007 @ 11:41 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9328"><p>With any luck, these kind of site-specific preferences (text zoom and others) should be included in Firefox 3:</p>
+<p><a href="/web/20110806084118/http://wiki.mozilla.org/Site-Specific_Preferences" rel="nofollow">http://wiki.mozilla.org/Site-Specific_Preferences</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://starkravingfinkle.org/' rel='external nofollow' class='url'>Mark Finkle</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9328" title="May 8, 2007 @ 1:08 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9329"><cite><a href='/web/20110806084118/http://ckunte.com/archives/squint-no-more-2' rel='external nofollow' class='url'>ckunte.com | Squint no more</a></cite>&#160;(pingback)</li>
+<li id="comment-9330"><p>I installed this over the weekend after seeing it in your del.icio.us links. It&#8217;s absolutely brilliant. It now sits alongside your AccessBar and Bright Focus Greasemonkey scripts as a must-install.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://philwilson.org/blog/' rel='external nofollow' class='url'>Phil Wilson</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9330" title="May 8, 2007 @ 5:43 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9331"><p>&#8220;NoSquint is my new favorite Firefox/Iceweasel extension.&#8221; It&#8217;s also my favorite extension. btw. thanks for link to Daring Fireball website and to Brad to link for preference on DF &#8211; I see similar extension in new Photoshop 3 (TRIAL).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://www.blog.noclegi-lubuskie.pl/' rel='external nofollow' class='url'>Tomasz Gorski</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9331" title="May 8, 2007 @ 5:44 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9332"><p>[...] Ustaw na swojej stronie odpowiedni poziom zoom za pomoca rozszerzenia Firefox  nazwanego No Squint . Ustaw to raz i zapomnij o wszystkim.  Bardzo proste i polecam wszystkim![...]</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://www.blog.noclegi-lubuskie.pl/2007/05/08/squint/' rel='external nofollow' class='url'>Squint - for polish readers</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9332" title="May 8, 2007 @ 5:52 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9333"><p>Does it actually &#8220;zoom&#8221; the page (like Opera) or just increase/decrease text size (like Firefox default)? I&#8217;m guessing the second.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://es.id.lv/' rel='external nofollow' class='url'>Shadowbird</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9333" title="May 8, 2007 @ 6:02 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9334"><p>Daring Fireball annoyed me so much that I wrote <a href="/web/20110806084118/http://userstyles.org/style/show/1250">Dive Into Gruber</a>, which not only makes it easier on the eyes, but also allows me to casually assume that anything either of you two write which I disagree with was actually written by the other one.</p>
+<p> &#8211; Chris</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://blondechris.com/' rel='external nofollow' class='url'>Chris Cunningham</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9334" title="May 8, 2007 @ 7:51 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9335"><p>Next time you know, you&#8217;ll be posting pictures of kitties.</p>
+<p class=sig>&#8212;&#8201;<cite>Tobu</cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9335" title="May 8, 2007 @ 8:10 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9336"><p>Just as an aside, Gruber <em>does</em> provide some <a href="/web/20110806084118/http://daringfireball.net/preferences/">site-specific preferences functionality</a> at Daring Fireball. I realize his site is just an example of one with &#8220;ridiculously small font&#8221;, just throwing that out there.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://www.fiddlerelf.com/' rel='external nofollow' class='url'>Ryan</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9336" title="May 8, 2007 @ 8:54 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9337"><p>Thank goodness we have extensions.  If you ask the mozilla people why firefox doesn&#8217;t do this by default, they say that you should zoom the whole page including images, not just text.  I don&#8217;t quite understand their reasoning, but a common side effect of zoomed text is broken layouts on web pages that make assumptions about text size (a big no-no anyway).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://penguintv.sourceforge.net/' rel='external nofollow' class='url'>Owen Williams</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9337" title="May 8, 2007 @ 9:04 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9338"><p>I use a custom stylesheet to enlarge the text on Daring Fireball in Opera. You can apply stylesheets to any single site as you wish. Plus it allows full CSS to be used, so you can hide images, change the background colours, even the font used if you like.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://www.designdetector.com/' rel='external nofollow' class='url'>Chris Hester</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9338" title="May 8, 2007 @ 10:36 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9339"><p>well what do you except from the apple&#8217;s own ballmer :P</p>
+<p class=sig>&#8212;&#8201;<cite>bustaa</cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9339" title="May 8, 2007 @ 2:14 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9340"><p>I was goign to say that Opera has that by default. But it certainly doesn&#8217;t work like this extension. They&#8217;ve got to work on that too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://yahia.ma/antiblog/' rel='external nofollow' class='url'>Yahia</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9340" title="May 8, 2007 @ 3:14 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-9341"><p>I haven&#8217;t used Opera as my primary browser since Opera 5, but I am never surprised to learn that Opera provides functionality that I need an extension to accomplish in Firefox.</p>
+<p>I am, of course, aware of user stylesheets, Greasemonkey, Stylish, and all the rest.  I use them for more elaborate behavior and style modification.  But NoSquint solves a specific problem of mine in an elegant way, and that&#8217;s not something you find every day.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9341" title="May 8, 2007 @ 4:19 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9342"><cite><a href='/web/20110806084118/http://blog.bertlamb.com/2007/05/09/links-for-2007-05-09/' rel='external nofollow' class='url'>Bert Lamb &raquo; links for 2007-05-09</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-9343"><cite><a href='/web/20110806084118/http://breyten.wordpress.com/2007/05/09/links-for-2007-05-09/' rel='external nofollow' class='url'>links for 2007-05-09 &laquo; Breyten&#8217;s Dev Blog</a></cite>&#160;(pingback)</li>
+<li id="comment-9344"><p>Epiphany already had this feature years ago.</p>
+<p class=sig>&#8212;&#8201;<cite>Joske</cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9344" title="May 9, 2007 @ 1:10 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9345"><p>Nice! I&#8217;ll try it out for my Dad&#8230;He has trouble on some sites and doesn&#8217;t want to change the default zoom&#8230;</p>
+<p>I also wanted to comment on your previous post, but I guess you turned off commenting except for latest post. Don&#8217;t blame you with all this spam&#8230;</p>
+<p>Anyway, you reminded me of that day Movable Type switched to their crazy paid system. I&#8217;m still trying to get my Blog back to normal. Now I&#8217;m working on WordPress&#8230;writing some mod so that my users will be logged into vbulletin and use the headers/footers etc. and templates from vb&#8230;but importing from MT is broken.</p>
+<p>I agree with you. Long live open source. I wish even Flash wasn&#8217;t that successful. Still haven&#8217;t learned it and have no interest although the need arises from time to time&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>GilbertZ</cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9345" title="May 9, 2007 @ 1:49 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-9353"><p>Sad it is that the complexity of the Internet has to escalate so.  Does anyone remember the carefree days when MOST web sites didn&#8217;t set font attributes at all, it was assumed that the user could select the font and size for themselves.  Well behaved sites could do a font size=+1 or -1 for special effects.   </p>
+<p>But then every web developer on the planet decided that they were an arteeest, and knew more about what looked good than that idiot user.  Next stop, purple text on a blue background in Comic Sans.</p>
+<p>HTML has gone from a simple &#8220;mark-up language&#8221; to something closer to C++, requiring the &#8220;simple&#8221; RSS and XML formats to once again extract actual content from the insane asylum that the web has become.</p>
+<p>Next thing you know there will be web development plug-ins to defeat users attempts to control what is on their screens.  The Webmasters know best don&#8217;t you all see that?   Why do you think they call themselves &#8220;masters&#8221;?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806084118/http://macbeach.blogspot.com/' rel='external nofollow' class='url'>macbeach</a></cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9353" title="May 9, 2007 @ 9:13 pm"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9358"><cite><a href='/web/20110806084118/http://satunnainenbjorklund.net/arkisto/paivan-linkit-1052007' rel='external nofollow' class='url'>Päivän linkit 10.5.2007 | Satunnainen Björklund</a></cite>&#160;(pingback)</li>
+<li id="comment-9372"><p>&gt; The fact that individual sites even need to offer options like that should tell you how poorly browsers handle this.</p>
+<p>No, browsers don&#8217;t handle it poorly at all.  The problem is that web designers screw up by using font sizes too far away from 1em/100%.  Text-zoom was designed for exceptional circumstances, not to compensate for design screw-ups.  The increasing need to fiddle with text-zoom is caused by increasingly worse web designers.  This is a technical workaround to sweep a social problem under the rug for one user at a time.</p>
+<p class=sig>&#8212;&#8201;<cite>Jim</cite>&#160;<a class=p href="/web/20110806084118/http://diveintomark.org/archives/2007/05/07/nosquint#comment-9372" title="May 11, 2007 @ 12:20 am"><img alt="#" src=/web/20110806084118im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-9383"><cite><a href='/web/20110806084118/http://alexking.org/blog/2007/05/13/around-the-web' rel='external nofollow' class='url'>Around the web | alexking.org</a></cite>&#160;(pingback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806084118/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806084118/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806084118/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806084118/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806084118/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.364 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 21:13:13 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 8:41:18 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:07:06 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

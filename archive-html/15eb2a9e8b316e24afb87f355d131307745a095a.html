@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Ask Dr. SQL: task scheduler [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806104606/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806104606/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806104606/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806104606/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806104606im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806104606/http://diveintomark.org/archives/2003/04/03/anyone_seen_the_bridge" title="Anyone seen the bridge?">
+<link rel=next href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/to_the_motherfucker_who_cut_off_my_bridetobe_this_morning_ran_her_off_the_road_left_her_for_dead_in_a_ditch_on_the_side_of_the_durham_freeway_and_sped_off_without_slowing_down" title="To the motherfucker who cut off my bride-to-be this morning, ran her off the road, left her for dead in a ditch on the side of the Durham Freeway, and sped off without slowing down">
+<link rel=up href="/web/20110806104606/http://diveintomark.org/archives#p1305" title="April 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Ask Dr. SQL: task scheduler Comments Feed" href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806104606/http://diveintomark.org/' />
+<link rel='prev' title='Anyone seen the bridge?' href='/web/20110806104606/http://diveintomark.org/archives/2003/04/03/anyone_seen_the_bridge' />
+<link rel='next' title='To the motherfucker who cut off my bride-to-be this morning, ran her off the road, left her for dead in a ditch on the side of the Durham Freeway, and sped off without slowing down' href='/web/20110806104606/http://diveintomark.org/archives/2003/04/04/to_the_motherfucker_who_cut_off_my_bridetobe_this_morning_ran_her_off_the_road_left_her_for_dead_in_a_ditch_on_the_side_of_the_durham_freeway_and_sped_off_without_slowing_down' />
+<link rel='canonical' href='/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler' />
+<link rel='shortlink' href='/web/20110806104606/http://diveintomark.org/?p=1305' />
+<meta name="description" content="This is a real-world example. I couldn't possibly make up something this contrived.">
+<meta name="keywords" content="howto,sql">
+<link href="/web/20110806104606cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806104606/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/04\/04\/ask_dr_sql_task_scheduler";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806104606" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514113128/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:46:06 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110912041248/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="12 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514113128/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler" title="11:31:28 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:46:06 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110912041248/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler" title="4:12:48 Sep 12, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620113620/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:46:06 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806104606*/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>21 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Apr 06 - 12 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000101122101_2007:-1:010200000000_2008:-1:000010001000_2009:-1:000000000000_2010:-1:000001000111_2011:7:000010011000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806104606/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806104606/http://diveintomark.org/archives#p1305">April 4, 2003</a> &#8227;
+<h2>Ask Dr. SQL: task scheduler</h2> (<a href="/web/20110806104606/http://diveintomark.org/tag/howto" rel="tag">howto</a>, <a href="/web/20110806104606/http://diveintomark.org/tag/sql" rel="tag">sql</a>)</div>
+<p>Suppose, for the sake of argument, that we have a series of tasks.  Each of which has a begin date/time and an end date/time.  Each task is run only once, and the results of the completed tasks are stored in a separate table along with various result data.  Thus:</p>
+
+<pre><code>select * from task;
+
+task_uid  begin_date               end_date
+========= ======================== ========================
+1         2003-04-04 00:30:00.000  2003-04-04 01:00:00.000
+2         2003-04-04 00:45:00.000  2003-04-04 01:15:00.000
+3         2003-04-04 01:00:00.000  2003-04-04 01:30:00.000
+4         2003-04-05 10:00:00.000  2003-04-05 10:30:00.000
+
+(4 row(s) affected)
+
+
+select * from result;
+
+result_uid  task_uid
+=========-- =========
+1           1
+
+(1 row(s) affected)</code></pre>
+
+	<p>(The <code>result</code> table also contains other data pertaining to the results of the completed task, but it&#8217;s irrelevant to our current assignment.)</p>
+
+	<p>As you will see in a minute, we will need to know what time it is.  No two <span class="caps">DBM</span>Ses have the same syntax for this; here we&#8217;ll be using Microsoft <span class="caps">SQL </span>Server 2000.  Oracle weenies will select <code>sysdate</code> your ridiculous little <code>dual</code> table.  Other <span class="caps">DBM</span>Ses have a variety of maddeningly inconsistently named functions for the purpose.</p>
+
+	<p>It is currently 12:49 AM on April 4, 2003:</p>
+
+<pre><code>select current_timestamp;
+
+========================
+2003-04-04 00:49:23.597
+
+(1 row(s) affected)</code></pre>
+
+	<p>We are writing a scheduler, which needs to decide which tasks to run.  The scheduler is run once a day.  Tasks which have not been started, should be run now, along with all the other tasks whose starting date will come up before the scheduler is run again.  Tasks that were never completed but whose end date has already passed, should not be run.  (Yes, this means that some tasks may end up being skipped altogether, if the scheduler slips.  For reasons known only to management, this is acceptable and even desired.)</p>
+
+	<p>Furthermore, we shall ignore the possibility of racing conditions, where a task is still &#8220;in progress&#8221; but not completed by the time the scheduler runs again.  Tasks are assumed to run instantaneously.  This assumption gives us the willies, and the dangers of said assumption have been brought up in numerous meetings and have been the subject of numerous <span class="caps">CYA</span> memos, but for now we are simply going to proceed without worrying about it.</p>
+
+	<p>However&#8212;and I am so incredibly not making this up&#8212;we are <em>not</em> allowed to assume that tasks set to begin in the future have not been completed.  The only indication of whether a task has been completed or not is whether it is listed in the <code>result</code> table.  This is affectionately known as the E-TWAP (Evan&#8217;s Time Warp Requirement).</p>
+
+	<p>Now, here&#8217;s our assignment: we need to find the first non-completed task that should have begun by now but hasn&#8217;t ended yet (i.e. the current time is between the task&#8217;s begin date and end date), plus all other non-completed tasks due to start within the next 24 hours of the first task.</p>
+
+	<p>This is a real-world example.  I couldn&#8217;t possibly make up something this contrived.</p>
+
+	<p>First, let&#8217;s focus on figuring out the date of the first task we want to run.  We can use the handy (but little-used) <code>between</code> keyword to find only tasks where the current time is between the <code>begin_date</code> and <code>end_date</code>, then use the <code>min</code> function on <code>begin_date</code> to find the earliest date among those tasks:</p>
+
+<pre><code>select min(t.begin_date) as first_date
+from task t
+where current_timestamp between t.begin_date and t.end_date
+;
+
+first_date
+========================
+2003-04-04 00:30:00.000
+
+(1 row(s) affected)</code></pre>
+
+	<p>Of course, this doesn&#8217;t take into account the tasks that have already completed.  For that, we&#8217;ll need to add a <code>where not exists</code> clause and do a subquery on the <code>result</code> table:</p>
+
+<pre><code>select min(t.begin_date) as first_date
+from task t
+<strong>where not exists (
+  select r.task_uid
+  from result r
+  where t.task_uid = r.task_uid
+)</strong>
+and current_timestamp between t.begin_date and t.end_date
+;
+
+first_date
+========================
+2003-04-04 00:45:00.000
+
+(1 row(s) affected)</code></pre>
+
+	<p>Now we&#8216;re going to use this date to do calcuations against every other <code>begin_date</code> in the <code>task</code> table (to find all the tasks within the next 24 hours of this date).  For this we use a <code>CROSS JOIN</code>.  For larger result sets (more than one row), <code>CROSS JOIN</code> will give you what&#8217;s called a Cartesian Product: every row of the first table crossed with every row of the second table.  And that&#8217;s technically what we&#8217;ll get here, but since the second table will only have one row and one column in it, it&#8217;s a trivial case: that value just kind of gets &#8220;tacked on&#8221; as an extra column to the first table.</p>
+
+	<p>(Note that we&#8216;re going to take our previous <code>SELECT</code> statement, give it a name (<code>m</code>), and use it inline in a larger <code>SELECT</code> statement.  This is called a derived table, and not all databases can do it.  An alternative for those that can&#8217;t: turn the previous statement into a view and then <code>CROSS JOIN</code> with the view.)</p>
+
+<pre><code>select t.task_uid
+, t.begin_date
+<strong>, m.first_date</strong>
+from task t
+<strong>cross join (</strong>
+  select min(t.begin_date) as first_date
+  from task t
+  where not exists (
+    select r.task_uid
+    from result r
+    where t.task_uid = r.task_uid
+  )
+  and current_timestamp between t.begin_date and t.end_date
+<strong>) m</strong>
+;
+
+task_uid  begin_date               first_date
+========= ======================== ========================
+1         2003-04-04 00:30:00.000  2003-04-04 00:45:00.000
+2         2003-04-04 00:45:00.000  2003-04-04 00:45:00.000
+3         2003-04-04 01:00:00.000  2003-04-04 00:45:00.000
+4         2003-04-05 10:00:00.000  2003-04-04 00:45:00.000
+
+(4 row(s) affected)</code></pre>
+
+	<p>This is great as far as it goes, but once again we&#8216;re going to need to look at the <code>result</code> table to see which of these tasks have already been completed.  We did this once before, to figure out the date of the first non-completed task that we cared about, but now we&#8217;ll have to do it again to filter out the tasks in the outer portion of the <code>SELECT</code>.</p>
+
+<pre><code>select t.task_uid
+, t.begin_date
+, m.first_date
+from task t
+cross join (
+  select min(t.begin_date) as first_date
+  from task t
+  where not exists (
+    select r.task_uid
+    from result r
+    where t.task_uid = r.task_uid
+  )
+  and current_timestamp between t.begin_date and t.end_date
+) m
+<strong>where not exists (
+  select r.task_uid
+  from result r
+  where t.task_uid = r.task_uid
+)</strong>
+;
+
+task_uid  begin_date               first_date
+========= ======================== ========================
+2         2003-04-04 00:45:00.000  2003-04-04 00:45:00.000
+3         2003-04-04 01:00:00.000  2003-04-04 00:45:00.000
+4         2003-04-05 10:00:00.000  2003-04-04 00:45:00.000
+
+(3 row(s) affected)</code></pre>
+
+	<p>The final step is to compare each task&#8217;s <code>begin_date</code> to <code>first_date</code>.  Specifically, we want all tasks whose <code>begin_date</code> is between <code>first_date</code> and <code>first_date</code> + 1 day.  No two <span class="caps">DBM</span>Ses use the same date functions; here I&#8217;m using Microsoft <span class="caps">SQL </span>Server&#8217;s <code>DATEADD</code> function.  Oracle weenies would use <code>ADD_DAYS</code>, and so forth.</p>
+
+<pre><code>select t.task_uid
+, t.begin_date
+, m.first_date
+from task t
+cross join (
+  select min(t.begin_date) as first_date
+  from task t
+  where not exists (
+    select r.task_uid
+    from result r
+    where t.task_uid = r.task_uid
+  )
+  and current_timestamp between t.begin_date and t.end_date
+) m
+where not exists (
+  select r.task_uid
+  from result r
+  where t.task_uid = r.task_uid
+)
+<strong>and t.begin_date between m.first_date and dateadd(day, 1, m.first_date)</strong>
+;
+
+task_uid  begin_date               first_date
+========= ======================== ========================
+2         2003-04-04 00:45:00.000  2003-04-04 00:45:00.000
+3         2003-04-04 01:00:00.000  2003-04-04 00:45:00.000
+
+(2 row(s) affected)</code></pre>
+<p class=c>&#167;
+
+<h3 id=comments>Eleven comments here (<a href=/web/20110806104606/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-1221"><p>I could probably come up with alternative ways of doing this, but I fear my head would explode with the effort. </p>
+<p>Still think how much fun it will be to modify this code once the requirements change &#8211; and they will.</p>
+<p>How big is this table going to get? With a couple of &#8216;not exists&#8217; and a nice inline table (as us Oracle weenies call it) I would suspect it may not be that lightning fast. Its possible that the lights wont dim when you fire this up every day but I wouldn&#8217;t like to bet on it.</p>
+<p>But on a positive note, with requirements like these good developers should never be out of work.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104606/http://www.halfcooked.com/mt' rel='external nofollow' class='url'>Andy Todd</a></cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1221" title="April 4, 2003 @ 5:51 am"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1222"><p>&#8220;This assumption gives us the willies&#8221;</p>
+<p>Oh, it should. If anything is likely to screw up, it&#8217;ll be this. I had a problem with some similarities to this about a year ago, and someone in my group kindly made the assumption that everything happens in less than a half-second (who knows where they got that figure from) without letting anyone know. Needless to say, it was a few days of debugging to figure out what went wrong. The culprit was beaten, rightly, with their own shoes.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104606/http://soltiude.vkps.co.uk/' rel='external nofollow' class='url'>GaryF</a></cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1222" title="April 4, 2003 @ 8:05 am"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1223"><p>For what it&#8217;s worth, &#8220;select current_timestamp;&#8221; is<br />
+how it is done in PostgreSQL, too.  I think it<br />
+might even be in some SQL standard or other.  Of course,<br />
+that&#8217;s irrelevant, because Oracle is *the* standard!</p>
+<p class=sig>&#8212;&#8201;<cite>Sean Neakums</cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1223" title="April 4, 2003 @ 8:50 am"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1224"><p>I&#8217;m sorry, but this code explanation sounds dreadfully too complex.</p>
+<p>Given the requirements as outlined here, and the fact that you&#8217;ve stated that these requirements have a very good chance of changing in the future, it would be prudant to abstract and re-factor the code as much as you can.</p>
+<p>This current encarnation looks WAAY too spaghetti like to be actually maintanable, let alone functional.</p>
+<p>One question crops up in my mind&#8230; How are you defining that a particular task has actually been completed in it&#8217;s assigned time slot?</p>
+<p>With that in mind, if you added a new table named:</p>
+<p>tasks_completed</p>
+<p>and had the following columns:</p>
+<p>id, task_id, completed</p>
+<p>you could update this table when running the schedular, and then later query for tasks that were completed quite easily.</p>
+<p>As it stands now, I feel the code given is representative of a codebase that looks to be highly challenging, to say the least. ;)</p>
+<p>Nothing against the authors skill. Please don&#8217;t get me wrong. I just feel it would be prudent to really break down the taks into more manageable chunks. (pun intended. ;)</p>
+<p>My .02 cents.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104606/http://www.beosjournal.org/' rel='external nofollow' class='url'>Chris Simmons</a></cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1224" title="April 4, 2003 @ 9:33 am"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1225"><p>Really nothing to with post, but I noticed you didn&#8217;t use the samp tag.  Everthing is marked up in code.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1225" title="April 4, 2003 @ 10:07 am"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1226"><p>Ha ha ha.  Silly rabbit, you assume I have any control whatsoever over the database design.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806104606/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1226" title="April 4, 2003 @ 10:22 am"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1227"><p>For time and sql related questions, I usually turn to &#8220;Developing time-oriented database applications in sql&#8221; by Richard Snodgrass. 2000. Morgan Kaufmann. ISBN 1-55860-436-7. Lots of code examples for several dbms&#8217;.</p>
+<p class=sig>&#8212;&#8201;<cite>Brad Smith</cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1227" title="April 4, 2003 @ 10:55 am"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1228"><p>You are scaring me Mark, it sounds like you moved back north to work in Yardley.</p>
+<p>We had a very very scarily similar problem, and I would ask you to have your design people call me so I can tell them how WRONG they are.  We assumed up here too that transactions would be completed in a split second, so that a new feature we enabled would send emails when the transaction was done.</p>
+<p>The problem was if you started one transaction, held it open, started a new one, then saved the second one, then saved the first one, you&#8217;d only get one email, when you should get two, one for each transaction.</p>
+<p>Someone conveniently forgot that multiple people might actually be using an ENTERPRISE computer system.</p>
+<p class=sig>&#8212;&#8201;<cite>Adrian</cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1228" title="April 4, 2003 @ 3:42 pm"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1229"><p>Addendum to #5 &#8211; Insanely perfect (X)HTML:</p>
+<p>&lt;pre&gt;&lt;code&gt;select current_timestamp;&lt;/code&gt;</p>
+<p>&lt;samp&gt;========================<br />
+2003-04-04 00:49:23.597</p>
+<p>(1 row(s) affected)&lt;/samp&gt;&lt;/pre&gt;</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1229" title="April 4, 2003 @ 8:31 pm"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1230"><p>The constraints you&#8217;re working under remind me of the Dilbert strip where Dogbert is waving a staff, chanting &#8220;Out, Out, you Demons of Stupidity!&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite>dws</cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1230" title="April 4, 2003 @ 10:13 pm"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1231"><p>Making an initial view that only selects unfinished tasks would reduce your complexity a lot, and at least that rule seems likely to hold.</p>
+<p>Also, if you make it a view, you can left outer join, instead of using Where Not Exists, and I&#8217;m pretty sure the join will be faster.</p>
+<p>create ciew unfinished_task as<br />
+select t.*<br />
+from task t left join result r<br />
+  on t.task_uid = r.task_uid<br />
+where<br />
+  r.task_uid is null<br />
+go</p>
+<p>Then m becomes<br />
+  select min(u.begin_date)<br />
+from unfinished_task u</p>
+<p>And in fact, this would usefully be a user-defined function, since it&#8217;s always a scalar.  This is new in SQL Server 2K.</p>
+<p>Thus:</p>
+<p>create function dbo.earliest_unfinished_task_datetime()<br />
+returns datetime<br />
+as<br />
+begin<br />
+  declare @ret datetime<br />
+  select @ret = min(u.begin_date) from unfinished_task u</p>
+<p>  return @ret<br />
+end<br />
+go</p>
+<p>and your final statement becomes a much nicer:</p>
+<p>select * from unfinished_task u<br />
+where u.begin_date<br />
+between dbo.earliest_unfinished_task_datetime and dateadd(day, 1, earliest_unfinished_task_datetime)</p>
+<p>You might also choose to stick the dateadd in another function, so that if they change their mind on the 1-day window, you just change it in one place.</p>
+<p>While I agree that T/SQL is an unproductive language to program in, when performance is a high priority, you really can milk it.</p>
+<p>Of course, just -try- to do unit testing on it.  Ouch.</p>
+<p class=sig>&#8212;&#8201;<cite>Jeremy Dunck</cite>&#160;<a class=p href="/web/20110806104606/http://diveintomark.org/archives/2003/04/04/ask_dr_sql_task_scheduler#comment-1231" title="April 5, 2003 @ 12:02 am"><img alt="#" src=/web/20110806104606im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806104606/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806104606/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806104606/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806104606/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806104606/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.727 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 11:30:39 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:46:06 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:15 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

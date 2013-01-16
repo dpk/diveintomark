@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Aggregator HTTP tests [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20101101232550/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20101101232550/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20101101232550/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20101101232550im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20101101232550/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" title="Atom aggregator behavior (HTTP level)">
+<link rel=next href="/web/20101101232550/http://diveintomark.org/archives/2003/07/26/if_at_first_you_do_succeed" title="If at first you do succeed">
+<link rel=up href="/web/20101101232550/http://diveintomark.org/archives#p1387" title="July 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Aggregator HTTP tests Comments Feed" href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests/feed" />
+<link rel='index' title='dive into mark' href='/web/20101101232550/http://diveintomark.org/' />
+<link rel='prev' title='Atom aggregator behavior (HTTP level)' href='/web/20101101232550/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level' />
+<link rel='next' title='If at first you do succeed' href='/web/20101101232550/http://diveintomark.org/archives/2003/07/26/if_at_first_you_do_succeed' />
+<link rel='canonical' href='/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests' />
+<link rel='shortlink' href='/web/20101101232550/http://diveintomark.org/?p=1387' />
+<meta name="description" content="Some tests for proper HTTP support in aggregators.">
+<meta name="keywords" content="http,webservices">
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+@font-face {font-family: 'LatinModernRoman10Regular';src: url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.eot');src: local('☺'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.woff') format('woff'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.ttf') format('truetype'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.svg#webfontg3VAmqr8') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'LatinModernRomanSlanted10Regu';src: url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.eot');src: local('☺'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.woff') format('woff'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.ttf') format('truetype'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.svg#webfont5pLJWgYw') format('svg');font-weight: normal;font-style: oblique;}
+@font-face {font-family: 'LatinModernRoman10Bold';src: url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.eot');src: local('☺'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.woff') format('woff'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.ttf') format('truetype'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.svg#webfontDIaNd4lG') format('svg');font-weight: bold;font-style: normal;}
+@font-face {font-family: 'LatinModernRoman10BoldItalic';src: url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.eot');src: local('☺'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.woff') format('woff'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.ttf') format('truetype'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.svg#webfontVm6n5sgb') format('svg');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'LatinModernMono10Regular';src: url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.eot');src: local('☺'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.woff') format('woff'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.ttf') format('truetype'), url('/web/20101101232550/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.svg#webfontThQaD2ST') format('svg');font-weight: normal;font-style: normal;}
+html{background:white url(/web/20101101232550/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium 'LatinModernRoman10Regular',serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:'LatinModernRomanSlanted10Regu',serif;font-style:oblique}
+strong,b{font-family:'LatinModernRoman10Bold',serif;}
+pre,code,var,samp,kbd,tt{font-family:'LatinModernMono10Regular',monospace;}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/07\/22\/aggregator_http_tests";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "1";
+var displayMonth = "Nov";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101101232550" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620052119/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:25:50 Nov 1, 2010">NOV</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111122065630/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Nov 2011"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20100620052119/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" title="5:21:19 Jun 20, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:25:50 Nov 1, 2010">1</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20111122065630/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" title="6:56:30 Nov 22, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090202134120/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 Feb 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:25:50 Nov 1, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111122065630/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Nov 2011"><strong>2011</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20101101232550*/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>44 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">14 Jun 06 - 22 Nov 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001232d41_2007:-1:010100011102_2008:-1:010101100111_2009:-1:010000000000_2010:10:000001000010_2011:-1:000000000010_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20101101232550/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20101101232550/http://diveintomark.org/archives#p1387">July 22, 2003</a> &#8227;
+<h2>Aggregator HTTP tests</h2> (<a href="/web/20101101232550/http://diveintomark.org/tag/http" rel="tag">http</a>, <a href="/web/20101101232550/http://diveintomark.org/tag/webservices" rel="tag">webservices</a>)</div>
+<p>Continuing <a title="Atom aggregator behavior (transport level)" href="/web/20101101232550/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_transport_level.html">yesterday&#8217;s discussion</a>, here are some <a href="/web/20101101232550/http://diveintomark.org/tests/client/http/">tests for proper HTTP support in aggregators</a>.  Comments and bug reports welcome.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Forty three comments here (<a href=/web/20101101232550/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-3733"><p>Semi-related: we&#8217;ve setup some example RSS feeds with the various combinations of SSL and HTTP Basic Authentification for anyone who&#8217;s testing support in aggregators: <a href="/web/20101101232550/http://labs.silverorange.com/archives/2003/july/privaterss">http://labs.silverorange.com/archives/2003/july/privaterss</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://actsofvolition.com/' rel='external nofollow' class='url'>Steven Garrity</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3733" title="July 22, 2003 @ 5:56 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3734"><p>Not really a bug and not relevant for testing, but the Reason Phrase in your Response Status-Line always reads &#8216;OK&#8217; (did not check all tests).</p>
+<p>It would be nice if it made more sense. For example, the Response Status-Line of the 410 test is now &#8216;HTTP/1.x 410 OK&#8217; and could be changed to &#8216;HTTP/1.x 410 Gone&#8217;. However, aggregetors should not do anything with the field anyway&#8230;</p>
+<p>(you didn&#8217;t print the &#8216;OK&#8217; on purpose because the tests *should* return these status codes, did you?)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.cs.vu.nl/~mvermaat/' rel='external nofollow' class='url'>Martijn</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3734" title="July 22, 2003 @ 6:14 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3735"><p>Very nice.  Thanks, Mark.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.chompy.net/blogs/jacob/' rel='external nofollow' class='url'>jacob</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3735" title="July 22, 2003 @ 7:49 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3736"><p>Related question: What does supporting ETags AND Last Modified buy you over just supporting one? </p>
+<p>My MT plugin only implements last-modified checks. It was never clear to me what I was missing not supporting Etags.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://tima.mplode.com/' rel='external nofollow' class='url'>Timothy Appnel</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3736" title="July 22, 2003 @ 7:57 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3737"><p>Timothy &#8211; from an aggregator perspective, it is pretty important to support both Last-Modified and ETag.  Some web servers or scripts generate only ETag or Last-Modified headers &#8211; not both.  If you were to only support one within your HTTP client logic, there&#8217;s a great chance that you&#8217;ll operate unoptimized on a number of sites.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.methodize.org/nntprss' rel='external nofollow' class='url'>Jason Brome</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3737" title="July 22, 2003 @ 8:46 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3738"><p>Some servers support Etag, some support Last-Modified.  Apache seems to include both headers on my feeds, but many custom scripts (such as PHP feed-generating scripts) may only include one or the other.  Clients should support both.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3738" title="July 22, 2003 @ 8:46 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3739"><p>I think the Status line thing is fixed now.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3739" title="July 22, 2003 @ 10:34 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3740"><p>For those of us who&#8217;ve home-brewed their blogs, is there a site where we can test if our feeds are properly tossing out the right headers, etc?</p>
+<p class=sig>&#8212;&#8201;<cite>Ian Evans</cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3740" title="July 23, 2003 @ 1:57 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3741"><p>Ian: ah, you want the *server* aggregator HTTP tests.  Those are coming up.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3741" title="July 23, 2003 @ 2:04 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3771"><cite><a href='/web/20101101232550/http://www.sauria.com/blog//computers/internet/weblogs/397' rel='external nofollow' class='url'>Ted Leung on the air</a></cite>&#160;(trackback)</li>
+<li id="comment-3742"><p>Ian: In the meantime, you might be interested in looking at <a href="/web/20101101232550/http://www.mnot.net/cacheability/">http://www.mnot.net/cacheability/</a></p>
+<p class=sig>&#8212;&#8201;<cite>Jim Dabell</cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3742" title="July 23, 2003 @ 5:02 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3743"><p>Ian: there&#8217;s also this tool for checking the headers of any url (although it doesn&#8217;t tell you the Etag or Last-Modified):<br />
+<a href="/web/20101101232550/http://www.webmasterworld.com/stickymail.cgi?action=headers">http://www.webmasterworld.com/stickymail.cgi?action=headers</a></p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3743" title="July 23, 2003 @ 6:16 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3772"><cite><a href='/web/20101101232550/http://www.intertwingly.net/blog/1526.html' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;(trackback)</li>
+<li id="comment-3744"><p>How about 401 for Unauthorized. I have written an aggregator for a client that had feeds in protected directories, one for each department. I would have liked to use ASP.NET&#8217;s automatic Windows security to provide authentication, although the client preferred it this way.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.miseldine.com/' rel='external nofollow' class='url'>Philip Miseldine</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3744" title="July 23, 2003 @ 7:59 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3745"><p>Another online tool for checking HTTP headers is <a href="/web/20101101232550/http://www.delorie.com/web/headers.html">http://www.delorie.com/web/headers.html</a> &#8211; which also gives you the ETag, if presen</p>
+<p>Personally, I use wget for this: wget -S &#8211;delete-after <a href="/web/20101101232550/http://www.example.com/">http://www.example.com</a> does the job nicely.  If you haven&#8217;t got a version on your system already, <a href="/web/20101101232550/http://www.gnu.org/software/wget/wget.html">http://www.gnu.org/software/wget/wget.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.bersvendsen.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3745" title="July 23, 2003 @ 8:20 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3773"><cite><a href='/web/20101101232550/http://warwick.typepad.com/main/2003/07/marks_http_aggr.html' rel='external nofollow' class='url'>warwick@typepad</a></cite>&#160;(trackback)</li>
+<li id="comment-3746"><p>Thanks for the thoughtful, effective leadership!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://usercreations.com/' rel='external nofollow' class='url'>Robb Beal</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3746" title="July 23, 2003 @ 12:04 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3747"><p>I think there&#8217;s a danger here of simply putting an HTTP tutorial into the Atom RFC.</p>
+<p>Shouldn&#8217;t this kind of stuff be factored out into a &#8220;best practices&#8221; document of some sort?</p>
+<p class=sig>&#8212;&#8201;<cite>Jim Dabell</cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3747" title="July 23, 2003 @ 12:48 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3748"><p>A few links to help you.</p>
+<p><a href="/web/20101101232550/http://jigsaw.w3.org/HTTP/">http://jigsaw.w3.org/HTTP/</a></p>
+<p>And the famous unfortunately not well supported Content Location</p>
+<p><a href="/web/20101101232550/http://jigsaw.w3.org/HTTP/CL/">http://jigsaw.w3.org/HTTP/CL/</a></p>
+<p>and </p>
+<p><a href="/web/20101101232550/http://www.mnot.net/http_compliance/list">http://www.mnot.net/http_compliance/list</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.w3.org/People/karl/' rel='external nofollow' class='url'>Karl Dubost</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3748" title="July 23, 2003 @ 1:42 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3749"><p>Yes, and an XML tutorial, and an HTML tutorial, and so on&#8230;</p>
+<p>However, given the historical lack of compliance with even the most basic HTTP, XML, or HTML consumption practices, a few words of advice would not be out of line.  And there&#8217;s nothing wrong in general with taking general rules (like RFC 2616) and rewriting them as specific rules that go into greater depth about how a specific class of applications should behave.  And writing test cases that cater to that specific class.</p>
+<p>Likely it would go in its own RFC.  But it&#8217;s something that needs to be written, and it needs to be written specifically for aggregators, otherwise the entire class of applications will (based on previous experience) simply ignore the rules out of ignorance.</p>
+<p>Simple question: how many aggregators pass all these tests today?  Based on my logs, very very few.  So there&#8217;s obviously a need here.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3749" title="July 23, 2003 @ 2:55 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3774"><cite><a href='/web/20101101232550/http://www.rassoc.com/gregr/weblog/archive.aspx?post=629' rel='external nofollow' class='url'>Greg Reinacker's Weblog</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-3775"><cite><a href='/web/20101101232550/http://www.unix-girl.com/blog/archives/001037.html' rel='external nofollow' class='url'>kasia in a nutshell</a></cite>&#160;(trackback)</li>
+<li id="comment-3750"><p>NewsGator&#8217;s report card: <a href="/web/20101101232550/http://www.rassoc.com/gregr/weblog/archive.aspx?post=629">http://www.rassoc.com/gregr/weblog/archive.aspx?post=629</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.rassoc.com/gregr/weblog' rel='external nofollow' class='url'>Greg Reinacker</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3750" title="July 23, 2003 @ 9:13 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3751"><p>Greg: Etag and Last-Modified tests are fixed.  Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3751" title="July 23, 2003 @ 10:37 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3752"><p>Cool, working well now, as is your test feed which requires authentication.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.rassoc.com/gregr/weblog' rel='external nofollow' class='url'>Greg Reinacker</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3752" title="July 24, 2003 @ 12:49 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3753"><p>Not sure about the language of some of these &#8211; I see a lot of MUSTs where SHOULD would be much more appropriate. Some of the musts are valid but you seem a bit keen on them. Ditto SHOULDs and MAYs.</p>
+<p>Some feeds return 404 Not Found occasionally, including the BBC News, I guess while a static file is rebuilt, though it could be anything. Polling less often isn&#8217;t a great idea in these cases (if anything it should try again at least once a minute or two later).</p>
+<p>I guess what I&#8217;m saying is, the server isn&#8217;t always right, and the instructions here don&#8217;t let clients make allowances for that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.fondantfancies.com/shrook/' rel='external nofollow' class='url'>Graham Parks</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3753" title="July 24, 2003 @ 7:51 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3754"><p>Specific suggestions would be more helpful than general complaints.  If anything, I would say that SHOULDs ought to be escalated to MUSTs because of the automated, repetitive nature of aggregators.</p>
+<p>For example, polling 404s every minute just in case they come back is, without a doubt, the worst idea I&#8217;ve ever heard.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3754" title="July 24, 2003 @ 10:05 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3755"><p>Maybe it&#8217;s just me, but I read &#8220;try again &#8230; once a minute or two later&#8221; means &#8220;poll again _once_ after a minute or two have elapsed&#8221;, not &#8220;poll _every_ one or two minutes&#8221;.</p>
+<p>Seems to me the real problem is that there isn&#8217;t a dedicated &#8220;temporarily absent&#8221; code. Maybe it&#8217;d be more appropriate for the BBC to issue a 500 in this case? Although ideally it shouldn&#8217;t be going absent at all&#8230;</p>
+<p>(BTW, &#8220;the worst idea I&#8217;ve ever heard&#8221; seems a bit harsh to me.)</p>
+<p class=sig>&#8212;&#8201;<cite>James Kew</cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3755" title="July 24, 2003 @ 1:04 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3756"><p>&#8220;if anything it should try again at least once a minute or two later&#8221;</p>
+<p>At least once a minute or two later. Yeah. And there should be a record of which feeds are &#8216;dead&#8217; too (polled atleast five-ten times and not alive).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3756" title="July 24, 2003 @ 1:21 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3757"><p>re: &#8220;worst idea i&#8217;ve ever heard&#8221;</p>
+<p>You should see my logs.  Full of crawlers that can&#8217;t take a hint.  I said 403 and I meant it; no need to try again, folks!  Full of aggregators requesting feeds over and over that &#8220;permanently&#8221; redirected months ago, or that went 404/410 months ago.  Now on top of that I should deal with clients second-guessing me?</p>
+<p>Clients *have* to assume that servers know what they&#8217;re doing.  That&#8217;s what standards are for.  301 means permanent redirect.  410 means permanently gone.  Now, the standard doesn&#8217;t say whether 404 is permanent, or how long it might last, but surely the answer on the client side is not *more frequent* polling.</p>
+<p>If your ex-girlfriend won&#8217;t take your calls, the correct answer is *not* to call her every 2 minutes hoping she changes her mind.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3757" title="July 24, 2003 @ 1:26 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3758"><p>Use mozilla to watch headers with the Live HTTP Headers tool. Its a simple tool to use.</p>
+<p><a href="/web/20101101232550/http://livehttpheaders.mozdev.org/">http://livehttpheaders.mozdev.org/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://john.beimler.org/' rel='external nofollow' class='url'>John Beimler</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3758" title="July 24, 2003 @ 1:32 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3759"><p>RE: &#8220;For example, polling 404s every minute just in case they come back is, without a doubt, the worst idea I�ve ever heard.&#8221; </p>
+<p>Agreed. This is a very bad idea and is tantamount to building a Denial of Service client. </p>
+<p>I&#8217;m stunned that anyone could see any way this could be considered a useful feature and not the a glaring bug if an application misbehaved in such a manner.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.kuro5hin.org/user/Carnage4Life/diary' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3759" title="July 24, 2003 @ 2:24 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3760"><p>In your analogy 404 is more like no one answering. You can&#8217;t assume she hates you when experience tells you people occasionally leave the house.</p>
+<p>Like people have said for me, I&#8217;m only suggesting clients should check once or twice a minute or two later, not every minute until it comes back. It&#8217;s just in my experience, when a feed returns a 404, if you try again a moment later it&#8217;ll be back. What&#8217;s wrong with incorporating that experience into my client? Obviously the feed should never do this, but it does, and the client should know how best to deal with it. It&#8217;s called robustness.</p>
+<p>A specific example of must/should etc:<br />
+The HTTP RFC says for 410: &#8220;Clients with link editing capabilities SHOULD delete references to the Request-URI after user approval&#8221;. You say MUST unsubscribe, and don&#8217;t imply user approval. I&#8217;d say they MUST inform user asap, and MAY unsubscribe. Users stop using apps that don&#8217;t let them be in control.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.fondantfancies.com/shrook/' rel='external nofollow' class='url'>Graham Parks</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3760" title="July 24, 2003 @ 4:23 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3761"><p>Be in control?  The feed is gone, and the server operator has taken the time to set the appropriate HTTP error code to indicate that it&#8217;s gone for good and it&#8217;s never coming back.  What more do you want?  Flowers?</p>
+<p>I don&#8217;t care what the client actually does in GUI-space, or how it breaks the news to the end user.  Just stop hitting my server.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3761" title="July 24, 2003 @ 5:29 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3762"><p>Graham,<br />
+  So when you call someone&#8217;s house and they don&#8217;t answer do you keep calling back every minute perhaps with the help of a war dialer or some other automated mechanism? </p>
+<p>  What you describe is malicious behavior and I&#8217;d be sure to ban any client that attacked my server in such a manner.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.kuro5hin.org/user/Carnage4Life/diary' rel='external nofollow' class='url'>Dare Obasanjo</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3762" title="July 24, 2003 @ 6:23 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3763"><p>&#8220;If your ex-girlfriend won�t take your calls, the correct answer is *not* to call her every 2 minutes hoping she changes her mind.&#8221;</p>
+<p>I think the message meant &#8220;check one or two times atleast&#8221;, which by no means, last time I checked, &#8220;and repeat ad naseaum&#8221;. It *could* be a high traffic site whose feed is being hit repeatedly and goes 404. I&#8217;ve seen it happen. I ofcourse agree with you that there should be some sort of upper limit. Three tries should be more than enough.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3763" title="July 24, 2003 @ 7:20 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3764"><p>Mark, I agree completely and I am setting my client to stop automatically on a 410, and I&#8217;d call it a must in dictionary-defined lowercase terms. But if you&#8217;re using RFC-defined uppercase terms, you need to be more careful. From RFC2119: &#8220;In particular, [these terms] MUST only be used where it is actually required for interoperation or to limit behavior which has potential for causing harm.&#8221; Unnecessary reloading counts as harm, but that&#8217;s covered by SHOULD&#8217;s &#8220;the full implications must be understood and carefully weighed before choosing a different course.&#8221; As long as it&#8217;s clear that still retrying after a 410 is a boneheaded thing to do, SHOULD is very much appropriate.</p>
+<p>Dare, I&#8217;ve already said that&#8217;s not what I&#8217;m suggesting.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://www.fondantfancies.com/shrook/' rel='external nofollow' class='url'>Graham</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3764" title="July 24, 2003 @ 7:22 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3765"><p>Graham, I&#8217;m sorry I misinterpreted you earlier.  You make a convincing argument for using SHOULD instead of MUST on 410, and I&#8217;ve updated the test suite accordingly.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3765" title="July 24, 2003 @ 11:38 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3766"><p>Also consider the edge case of it *not* being your server which is responding to the request &#8230; say your hosting service screws up and your entire site goes 404 for a while &#8230; once the screaming dies down you then have a huge bunch of subscriptions who have been unceremoniously dumped. </p>
+<p>Hands up those ppl here that have ever had a hosting service screw up.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://iawiki.net/EricScheid' rel='external nofollow' class='url'>Eric Scheid</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3766" title="July 25, 2003 @ 2:27 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3767"><p>Eric&#8211; Mark&#8217;s not dictating that all record of there ever being a subscription on an URL that is now 404 be removed.  He&#8217;s asking that agents not repeatedly bang the server.</p>
+<p>The answer, in UI-space, then, might be to disable any feeds which are 404&#8242;ed, and allow the user to reactivate them.  Or somesuch.  You could make up complicated rules on the client to make a nice experience without punishing the server.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://dunck.us/' rel='external nofollow' class='url'>Jeremy Dunck</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3767" title="July 25, 2003 @ 2:22 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3768"><p>Why isn&#8217;t respect for robots.txt considered important for aggregators? I think they straddle the line between user agent and bot, and erring on the side of caution is probably a good policy&#8230;</p>
+<p>Do ANY aggregators support it?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://karchner.com/' rel='external nofollow' class='url'>Ross Karchner</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3768" title="July 27, 2003 @ 10:54 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3769"><p>Ross: There has been some confusion about my robots.txt position, despite my absolute consistency on the matter.  It has always been my position that agents that simply fetch a single resource over and over do not need to respect robots.txt.  It is only when they follow the links found in that resource and recursively download resources that robots.txt comes into play.</p>
+<p>For example, I have blocked wget in my robots.txt file.  But you can still issue the command:</p>
+<p>$ wget <a href="/web/20101101232550/http://diveintomark.org/">http://diveintomark.org/</a></p>
+<p>and it will download my home page. However, if you say</p>
+<p>$ wget -r http;//diveintomark.org/</p>
+<p>it will download my home page, *then* download robots.txt and see that it is blocked from *following* links, and quit.</p>
+<p>This translates to aggregators like this.  Suppose the aggregator has an option to follow the [link] elements of an RSS feed and download the (HTML) permanent archive pages of each [item].  It should *always* download your RSS feed, but before following those [link] URLs, it should check with robots.txt.</p>
+<p>Anyway, all that should definitely go in an RFC, but not this one.  Probably the one about auto-discovery, which involves a similar situation: an aggregator downloading the home page (at user&#8217;s explicit request to &#8220;subscribe&#8221; to the site), and then following a link in that resource (specifically the [link] element of the [head]) to find the feed.  This second step should also respect robots.txt, and my rssfinder.py module does this.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3769" title="July 27, 2003 @ 11:51 am"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3770"><p>That was helpful, thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101101232550/http://karchner.com/' rel='external nofollow' class='url'>Ross</a></cite>&#160;<a class=p href="/web/20101101232550/http://diveintomark.org/archives/2003/07/22/aggregator_http_tests#comment-3770" title="July 27, 2003 @ 2:39 pm"><img alt="#" src=/web/20101101232550im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20101101232550/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20101101232550/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href=/web/20101101232550/http://code.google.com/u/pilgrim/>code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20101101232550/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20101101232550/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+<!-- Dynamic page generated in 0.354 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-09-22 07:54:47 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:25:50 Nov 1, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:43:08 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

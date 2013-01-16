@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>HTTP Error 410: Gone [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110924042805/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110924042805/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110924042805/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110924042805/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110924042805im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110924042805/http://diveintomark.org/archives/2003/03/26/nntprss_03_released" title="nntp//rss 0.3 released">
+<link rel=next href="/web/20110924042805/http://diveintomark.org/archives/2003/03/29/peaceblogging" title="Peaceblogging">
+<link rel=up href="/web/20110924042805/http://diveintomark.org/archives#p1299" title="March 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; HTTP Error 410: Gone Comments Feed" href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone/feed" />
+<link rel='index' title='dive into mark' href='/web/20110924042805/http://diveintomark.org/' />
+<link rel='prev' title='nntp//rss 0.3 released' href='/web/20110924042805/http://diveintomark.org/archives/2003/03/26/nntprss_03_released' />
+<link rel='next' title='Peaceblogging' href='/web/20110924042805/http://diveintomark.org/archives/2003/03/29/peaceblogging' />
+<link rel='canonical' href='/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone' />
+<link rel='shortlink' href='/web/20110924042805/http://diveintomark.org/?p=1299' />
+<meta name="description" content="Embracing HTTP error code 410 means embracing the impermanence of all things.">
+<meta name="keywords" content="apache,htaccess,http">
+<link href="/web/20110924042805cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110924042805/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/03\/27\/http_error_410_gone";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "24";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/03/27/http_error_410_gone" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110924042805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607154244/http://diveintomark.org/archives/2003/03/27/http_error_410_gone" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 4:28:05 Sep 24, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111122065801/http://diveintomark.org/archives/2003/03/27/http_error_410_gone" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Nov 2011"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110607154244/http://diveintomark.org/archives/2003/03/27/http_error_410_gone" title="15:42:44 Jun 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 4:28:05 Sep 24, 2011">24</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110925090012/http://diveintomark.org/archives/2003/03/27/http_error_410_gone" title="9:00:12 Sep 25, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620025851/http://diveintomark.org/archives/2003/03/27/http_error_410_gone" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 4:28:05 Sep 24, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110924042805*/http://diveintomark.org/archives/2003/03/27/http_error_410_gone" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>124 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">12 Apr 06 - 25 Aug 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000600921143_2007:-1:753220101111_2008:-1:011121595111_2009:-1:100000000000_2010:-1:002111000011_2011:8:000001002120_2012:-1:f00001860000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110924042805/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110924042805/http://diveintomark.org/archives#p1299">March 27, 2003</a> &#8227;
+<h2>HTTP Error 410: Gone</h2> (<a href="/web/20110924042805/http://diveintomark.org/tag/apache" rel="tag">apache</a>, <a href="/web/20110924042805/http://diveintomark.org/tag/htaccess" rel="tag">htaccess</a>, <a href="/web/20110924042805/http://diveintomark.org/tag/http" rel="tag">http</a>)</div>
+<p>Let&#8217;s all talk about HTTP error code 410.</p>
+
+<p>As far as I can tell, it&#8217;s the forgotten stepchild of error 404 (<q>Resource not found</q>).  Error 410 means <q>Resource gone</q>, as in, a resource used to exist at this location, but now it&#8217;s gone.  Not only is it gone, but I don&#8217;t know (or I don&#8217;t want to tell you) where it went.  If I knew where it went, and I wanted to tell you, I would use error 301 (<q>Permanent redirect</q>) and any smart client would simply redirect to the new address.  But 410 means <q>Resource gone, no forwarding address</q>.  Train gone sorry.</p>
+
+<p>Somewhere in my audience is an HTTP guru who can tell me if I&#8217;m getting this right.</p>
+
+<p>Now, there is not a lot of information about error 410.  Oh sure, you can search for <q>http error 410</q> on Google and come up with lots of hits, but they&#8217;re all just pages that list all the error codes and give a brief description of each.  No docs, no further explanation.  I suppose because it addresses a condition that doesn&#8217;t come up very often.  Also, we&#8217;ve all been brainwashed into believing that all resources should be permanent, which simply isn&#8217;t true.</p>
+
+<p>Embracing HTTP error code 410 means embracing the impermanence of all things.</p>
+
+<p>Now then, on to implementation.  Scouring the Apache documentation, I&#8217;ve found several ways to specify that a resource is <q>Gone</q>.  The first uses <a href="/web/20110924042805/http://httpd.apache.org/docs/mod/mod_alias.html#redirect">Redirect</a>:</p>
+
+<blockquote>
+<p><code>Redirect gone /path/to/resource</code></p>
+</blockquote>
+
+<p>For example, if I put up a temporary page:</p>
+
+<blockquote>
+<p><code>http://diveintomark.org/tmp/some-screenshot.png</code></p>
+</blockquote>
+
+<p>&#8230;and I later wanted to delete it to save space (or whatever), I should put this in my <code>.htaccess</code> file:</p>
+
+<blockquote>
+<p><code>Redirect gone /tmp/some-screenshot.png</code></p>
+</blockquote>
+
+<p>The path is the virtual path of the resource on my server, not the full filename on disk, and not the full URL.</p>
+
+<p>You can also use <a href="/web/20110924042805/http://httpd.apache.org/docs/mod/mod_alias.html#redirectmatch">RedirectMatch</a> to match multiple files, using regular expressions.  For instance, this would match all files in my <code>tmp/</code> directory named <code><em>something</em>-screenshot.png</code>:</p>
+
+<blockquote>
+<p><code>RedirectMatch gone /tmp/.*-screenshot\.png</code></p>
+</blockquote>
+
+<p>The third option is to use <a href="/web/20110924042805/http://httpd.apache.org/docs/mod/mod_rewrite.html">mod_rewrite</a>, which allows you to use complex conditionals to decide when to serve up the <q>410 Gone</q> error.  For example, I have a <a href="/web/20110924042805/http://diveintomark.org/mobile/">mobile edition</a> that contains an index page and stripped-down pages of the most recent 5 articles.  These article pages are not meant to be permanent; the whole thing acts like an RSS feed, except that it&#8217;s split across several pages because that&#8217;s how mobile devices expect it.  Each page has its own separate address, but it only lives for a short time.  I also can&#8217;t reuse the same URLs over and over, like always putting the articles in <code>/mobile/1</code> through <code>/mobile/5</code>, because that would confuse AvantGo&#8217;s caching proxies.</p>
+
+<p>So after articles fall off the mobile index page, I delete them from my server, and I want to serve up the appropriate error code to proxies and robots that come looking for them later.  From what I can tell, 410 is the perfect error code for this.  I don&#8217;t want to manually maintain a list of <code>Redirect</code> rules, though, so I use <code>mod_rewrite</code>:</p>
+
+<blockquote>
+<p><code>RewriteCond %{REQUEST_FILENAME} !-f<br />
+RewriteRule mobile/[0-9]{6}\.html$ - [G,L]</code></p>
+</blockquote>
+
+<p>In English, this says:</p>
+
+<ol>
+<li>if there is a request for a file that doesn&#8217;t exist (that&#8217;s the <code>!-f</code> flag),</li>
+<li>and the file is in the <code>mobile/</code> directory and named <em>any-six-digits</em> + <q>.html</q> (that&#8217;s the regular expression),</li>
+<li>then use HTTP error code 410 Gone (that&#8217;s the <code>G</code> flag)</li>
+<li>and immediate return without further ado (that&#8217;s the <code>L</code> flag).</li>
+</ol>
+
+<p>This is not a perfect solution; if you randomly type arbitrary URLs of pages that never existed but that match the pattern, you&#8217;ll get error 410 instead of the more proper 404.  But it does cover the more likely case of a proxy or search engine coming back to a resource it previously spidered, and finding that it no longer exists.  (<strong>Update:</strong> read the comments for some possible solutions to this problem.)</p>
+
+<p>When a client requests a page that you have marked as <q>410 Gone</q>, Apache generates a default error page that looks like this:</p>
+
+<blockquote>
+<p><strong>Gone</strong></p>
+<p>The requested resource<br />
+/path/to/requested/resource<br />
+is no longer available on this server and there is no forwarding address. Please remove all references to this resource.</p>
+</blockquote>
+
+<p>&#8230;which is fine as far as it goes, but it&#8217;s about as aesthetically pleasing as the default <q>404 Not Found</q> error.  However, you can create a custom <q>410 Gone</q> page, in much the same way you can create a custom <q>404 Not Found</q> page, by using the <a href="/web/20110924042805/http://httpd.apache.org/docs/mod/core.html#errordocument">ErrorDocument</a> directive in your <code>.htaccess</code> file:</p>
+
+<blockquote>
+<p><code>ErrorDocument 410 /path/to/custom/page</code></p>
+</blockquote>
+
+<p>Again, this is the virtual path on your server, which is probably just the web address without your domain name.  (It could also be a fully-qualified URL to a remote machine, but in that case, the client would <em>not</em> receive HTTP error code 410; they would receive a redirect status code instead.  So it&#8217;s probably best to keep it local, so clients get both the custom page and the intended 410 error code.)</p>
+
+<p>Other possible uses for 410:</p>
+
+<ul>
+<li>Temporary pages (like screenshots)</li>
+<li>Deleted blog posts</li>
+<li>A trial site on a server that offers hosted sites <q>free for 30 days</q>, after the trial period has expired and the user hasn&#8217;t paid to continue it</li>
+<li>User sites on hosted servers like Geocities, after the user has been deleted</li>
+<li>&#8230;</li>
+</ul>
+
+<p>I don&#8217;t know.  It&#8217;s not a very common situation, and it&#8217;s not a very common error code.  Which is probably why no one has written a tutorial about it before.  I&#8217;m not even totally convinced that I&#8217;m using it correctly, although I <em>am</em> convinced that there are people reading this who know more about it than I do, and who have an opinion about whether I&#8217;m using it correctly.</p>
+
+<p>Discuss.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty eight comments here (<a href=/web/20110924042805/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-1102"><p>Yup, you seem to be right. Check this page out, if you haven&#8217;t already: <a href="/web/20110924042805/http://www.plinko.net/404/history.asp">http://www.plinko.net/404/history.asp</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://web.yaroslavl.ru/weblogs/leonya' rel='external nofollow' class='url'>Leonya</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1102" title="March 27, 2003 @ 8:28 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1103"><p>You are using it correctly, Mark &#8211; I can&#8217;t understand why less people do.</p>
+<p>It&#8217;s just that most people don&#8217;t bother to look through a list of HTTP error codes and find gems like this.</p>
+<p>The W3C protocol reference (<a href="/web/20110924042805/http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)"><a href="/web/20110924042805/http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="nofollow">http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</a>)</a> describes 410 exactly as you have, only with slightly more words and the note that this is expected to be permanent and cachable &#8211; if it&#8217;s temporarily gone, use 404.</p>
+<p>I also like the sound of 402 (Payment Required), although it says it&#8217;s reserved for future use.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.thomasscott.net/' rel='external nofollow' class='url'>Thomas Scott</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1103" title="March 27, 2003 @ 8:33 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1104"><p>By using a 410, aren&#8217;t you effectively saying &#8220;nothing exists at this url, and I am sure that nothing will at any point in the future&#8221;?</p>
+<p>This doesn&#8217;t seem to be the case for a non-existant file in your mobile directory, where you aren&#8217;t sure whether the file has been there and been deleted forever, or if you&#8217;ve just not created that particular file yet.</p>
+<p>I know I&#8217;m being picky, but isn&#8217;t 404 more appropriate for the situation where you aren&#8217;t sure?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.paranoidfish.org/' rel='external nofollow' class='url'>Paul Hammond</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1104" title="March 27, 2003 @ 8:52 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1105"><p>The way to go on this would be to use some sort of database to mark what documents have existed ever on a webserver, and on a 404 page check wether the file has existed or not, and serve up a 410 or 404 depending on the answer.</p>
+<p>You&#8217;re probably gonna do this in Python one way or the other. ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1105" title="March 27, 2003 @ 9:13 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1106"><p>But given that, with the exception of people randomly typing in URLs, who deserve everything they get, the only time you&#8217;d get a 4XX error in that directory is when a mobile device is spidering a now-dead link.</p>
+<p>&#8230;unless Mark mistypes. Hmm.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.thomasscott.net/' rel='external nofollow' class='url'>Thomas Scott</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1106" title="March 27, 2003 @ 9:21 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1107"><p>No need for a database &#8211; instead of deleting old files, you could zero-length them then do something like:</p>
+<p>RewriteCond %{REQUEST_FILENAME} -f<br />
+RewriteCond %{REQUEST_FILENAME} !-s<br />
+RewriteRule mobile/[0-9]{6}\.html$ &#8211; [G,L]</p>
+<p>(which means if the file exists but has zero length, send a 410)</p>
+<p>This seems like a lot of effort for very little gain though&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.paranoidfish.org/' rel='external nofollow' class='url'>paul hammond</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1107" title="March 27, 2003 @ 9:54 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1108"><p>IMHO a 410 error shouldn&#8217;t occur for a file that never has existed, so I&#8217;d probably prefer your first method explicitly using &#8220;Redirect gone&#8221; for every file that&#8217;s been removed.</p>
+<p>Hypothetically, a User-Agent encountering a 410 could try to locate the resource on it&#8217;s own, at alternative sources like Google&#8217;s cache, or even <a href="/web/20110924042805/http://web.archive.org/">http://web.archive.org/.</a>  If you send a 410 for a file that has never existed, such a client could hypothetically make several pointless requests to other sites.</p>
+<p>Also, look at it the other way around: It could even be seen as an explicit &#8216;order&#8217; for caches and search engines to remove the URL in question from their indexes, since it&#8217;s been deliberately removed.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1108" title="March 27, 2003 @ 10:14 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1109"><p>Oooh, I like Paul&#8217;s zero-length solution.  Database interaction, imo, would be overkill.</p>
+<p>But besides the fact that using the -s flag will require keeping tons of zero-length files hanging around, it sounds like it would result in correct usage of the 410, which Mark&#8217;s current solution isn&#8217;t quite yet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.scribbling.net/' rel='external nofollow' class='url'>Gina</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1109" title="March 27, 2003 @ 10:29 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1110"><p>Hey Mark&#8230; Where is my money?  <a href="/web/20110924042805/http://linuxintegrators.com/hl30/blog/technology/?permalink=Open+Letter+to+Mark+Pilgram+regarding+possible+patent+infringement.html">http://linuxintegrators.com/hl30/blog/technology/?permalink=Open+Letter+to+Mark+Pilgram+regarding+possible+patent+infringement.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://cvs.apache.org/~acoliver' rel='external nofollow' class='url'>Andy</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1110" title="March 27, 2003 @ 11:18 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1111"><p>I know I&#8217;m missing something, but how does the webserver know what files existed and what files didn&#8217;t?</p>
+<p>More importantly, how long does it keep this cache of data?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://4proheat.com/' rel='external nofollow' class='url'>pro heat</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1111" title="March 27, 2003 @ 11:44 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1112"><p>> how does the webserver know what files existed and what files didn�t?</p>
+<p>It doesn&#8217;t. A webserver simply produces a &#8217;404 Not found&#8217; when you request a non-existing resource. If that resource has been there but is removed, a &#8217;410 Gone&#8217; would be appropriate. But you have to explicitely tell the webserver to produce a 410 on a particular request.</p>
+<p>How to do that is what Mark explains in this post. Or am I missing something in your question?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.cs.vu.nl/~mvermaat/' rel='external nofollow' class='url'>Martijn</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1112" title="March 27, 2003 @ 12:18 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1113"><p>I was gonna suggest RewriteMap, but it looks like you have to have access to your httpd.conf to do that.  If you have that kind of access, though, you could create a text map listing the files that you&#8217;ve erased and send 410 for those files.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://mah.everybody.org/weblog/' rel='external nofollow' class='url'>Mark A. Hershberger</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1113" title="March 27, 2003 @ 1:00 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1114"><p>Oooh I got it.</p>
+<p>Apparently logical thought has escaped me this morning.</p>
+<p>Thanks Martijn.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://4proheat.com/' rel='external nofollow' class='url'>pro heat</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1114" title="March 27, 2003 @ 1:31 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1115"><p>MAH, if you could write up an example of that (2-3 files in the map would be fine), that&#8217;d be great.  I&#8217;ve never used RewriteMap, since I&#8217;ve never had httpd.conf access on a server where I cared about such things.  But it would be good to have the example, for completeness.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1115" title="March 27, 2003 @ 1:32 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1116"><p>Seems to me that you could add the path to the file that&#8217;s gone to a .htaccess file.  Those are read on each request, right?  This would, of course, result in a large .htaccess file, but I like that idea better than chewing up an inode per gone file (a la the zero-length file sol&#8217;n).</p>
+<p>Another idea might be ensure that you&#8217;re using unique increasing values for your pages (/mobile/1, /mobile/2, etc.) and use a rewrite rule to mark all resources that have a value less than the current minimum value as gone.  That seems pretty clean to me&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://introducingthelalors.org/' rel='external nofollow' class='url'>B</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1116" title="March 27, 2003 @ 1:40 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1118"><p>Ah, make that</p>
+<p>RewriteCond %{REQUEST_URI} >/mobile/000574.html</p>
+<p>Damn off-by-1 bugs.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1118" title="March 27, 2003 @ 2:29 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1119"><p>Mark: Call it PyGones. :D</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1119" title="March 27, 2003 @ 2:41 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1120"><p>Heya Mark</p>
+<p>In answer to your question the other day, yes, it&#8217;s the front row MJ.  =-)</p>
+<p>You got your last word in before I could respond.  Too busy getting my words in on other sites.  *GRIN*</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.emjay.net/' rel='external nofollow' class='url'>emjay</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1120" title="March 27, 2003 @ 3:26 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1121"><p>MJ, how the hell are you?  I must say, it&#8217;s very odd to find you here.  I prefer to labor under the illusion that the separate, unconnected parts of my life are actually separate and unconnected, despite overwhelming evidence to the contrary.  But you&#8217;re most welcome here anyway.  Whatdya think about HTTP error 410?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1121" title="March 27, 2003 @ 3:35 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1122"><p>Heh, Dive into American Deaf Culture. ;)</p>
+<p class=sig>&#8212;&#8201;<cite>Adam</cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1122" title="March 27, 2003 @ 3:44 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1123"><p>Mark,<br />
+  Most people don&#8217;t serve 410 because 404 is the default.  That is, most URLs map to files, and the web server mostly stupidly looks at the file system, sees no file, and doesn&#8217;t know it was ever there.  404 is appropriate, in this poor implementation.</p>
+<p>  For that matter, for practical purposes, the bang isn&#8217;t worth the buck, as far as web authors can tell.  It may save some proxy some fetching, but what does it do for the author?  Nada.  It should be cheap, or free, to properly do 410s.</p>
+<p>  410s, like 404s, shouldn&#8217;t take special effort or hacks to have happen.  The web server should just know.</p>
+<p>  Raising the bar on worthwhile functionality means driving the usual and commonly useful stuff into the infrastructure.</p>
+<p>  Of course, as long as there are clever people hacking workarounds rather than fixes, the infrastructure won&#8217;t be formed.</p>
+<p>  One of these days, someone&#8217;s gonna tell me to put up or shut up.</p>
+<p>  :D</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://dunck.us/' rel='external nofollow' class='url'>Jeremy Dunck</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1123" title="March 27, 2003 @ 3:55 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1124"><p>Mark, you&#8217;ve violated my patent again with your statement: </p>
+<p>MJ, how the hell are you? I must say, it�s very odd to find you here. I prefer to labor under the illusion that the separate, unconnected parts of my life are actually separate and unconnected, despite overwhelming evidence to the contrary. But you�re most welcome here anyway. </p>
+<p>I must insist you send me my money!</p>
+<p>-Andy</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://cvs.apache.org/~acoliver' rel='external nofollow' class='url'>Andy</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1124" title="March 27, 2003 @ 4:00 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1125"><p>Andy, a key element of satire is knowing when to quit.  Also, spelling.  Spelling is key.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1125" title="March 27, 2003 @ 4:07 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1126"><p>Bah.  Speling is for winers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://cvs.apache.org/~acoliver' rel='external nofollow' class='url'>Andy</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1126" title="March 27, 2003 @ 4:39 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1127"><p>Well, since you asked&#8230;</p>
+<p>I&#8217;ve always used the 404 error and never really thought about 410.  That&#8217;s just the way it&#8217;s set up by default in my apache installations.  Being more of a sysadmin than a web designer, I guess it&#8217;s my realm.  It seems to me 410 is the pinky toe of the &#8220;Huh?  What File Was That?&#8221; genre.</p>
+<p>When the average AOL user (or below average web surfer/Cerfer) tries to get a page which is either gone or was never there to begin with, I don&#8217;t think they&#8217;re going to care if it&#8217;s 404 or 410.  The end result is the same&#8230;they&#8217;re scratching their heads wondering what happened and trying to find a link to fire off an email to <a href="mailto:webmaster@domain.tld">webmaster@domain.tld</a></p>
+<p>I completely understand the usage, but as Yogi says, I&#8217;m smarter than your average bear.  I don&#8217;t think it&#8217;ll matter for anyone other than the seriously anal webmaster/sysadmin looking over the log or running webalizer against it.</p>
+<p>I can see how I might like to know how many people are still trying to find a blog post or particularly offensive picture I happen to have on one of my sites.  But when it comes down to it, right now, I don&#8217;t care.  I do however reserve the right to change my opinion on this matter without notice.  =-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.emjay.net/' rel='external nofollow' class='url'>emjay</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1127" title="March 27, 2003 @ 5:03 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1128"><p>Andy: Oh, like Dave of scripting.com?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1128" title="March 27, 2003 @ 5:17 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1129"><p>Mark,</p>
+<p>In my opinion, you&#8217;re wrong. As one of those wacky RESTafarians who waste far too much time thinking about this sorta thing, I&#8217;ve got to agree with Paul Hammond. (See above). 410 is stronger assertion than simply saying &#8216;there&#8217;s no resource here&#8217;. 410 means &#8216;there&#8217;s once was a resource here but it&#8217;s been destroyed and it&#8217;s (very, very likely) never, ever coming back&#8217;. The real purpose (IMHO) of 410 is actually to indicate a successful DELETE operation (that&#8217;s the way I use it). </p>
+<p>So most people are correct in serving only 404s. Still, you might try asking this on the rest-discuss list.</p>
+<p>- Bo</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://codaland.blogspot.com/' rel='external nofollow' class='url'>Bo</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1129" title="March 27, 2003 @ 6:52 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1130"><p>Bo, we&#8217;ve already corrected the problem of not being sure about whether a resource once existed at this location.</p>
+<p><a href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone.html#c000912">http://diveintomark.org/archives/2003/03/27/http_error_410_gone.html#c000912</a></p>
+<p>What else am I wrong about?  I&#8217;m confused.  We seem to be in agreement.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1130" title="March 27, 2003 @ 6:56 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1138"><cite><a href='/web/20110924042805/http://long-ago.twocentsworth.com/2003/03/27/000778.php' rel='external nofollow' class='url'>Twocentsworth</a></cite>&#160;(trackback)</li>
+<li id="comment-1131"><p>I&#8217;ve had 410 support on aagh.net since it&#8217;s first incarnation.  I&#8217;ve not used it much though; last time was when I scrapped the lot and the entire document tree was 410&#8242;d.</p>
+<p><a href="/web/20110924042805/http://www.aagh.net/gone">http://www.aagh.net/gone</a> anyway; unfortunately this implementation requires you to place an entry in a metadata file for each 410, but it&#8217;s better than nothing. It&#8217;ll do until the next rewrite, anyway :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.aagh.net/' rel='external nofollow' class='url'>Freaky</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1131" title="March 27, 2003 @ 7:10 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1117"><p>Re: less-than-min-value.  This could work, since my actual addresses in the mobile edition are padded entry IDs, so they increase <a rel="nofollow" href="/web/20110924042805/http://diveintomark.org/notes-and-chords-mean-nothing-to-me" style="text-decoration:none;border-bottom:1px dotted;background:transparent;color:inherit">monotonically</a>.  This looks promising:</p>
+<p>RewriteCond %{REQUEST_URI} >/mobile/000575.html<br />
+RewriteCond %{REQUEST_URI} &lt;/mobile/002225.html<br />
+RewriteRule mobile/[0-9]{6}\.html$ &#8211; [G,L]</p>
+<p>(Due to a failed initial import, my first entry ID is 575.)</p>
+<p>This would require some maintenance &#8212; incrementing the second line as articles fell off the mobile index page &#8212; but it&#8217;s nothing that couldn&#8217;t be automated.  Yes, Jesper, in Python. :D</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1117" title="March 27, 2003 @ 2:24 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1139"><cite><a href='/web/20110924042805/http://long-ago.twocentsworth.com/2003/03/27/000778.php' rel='external nofollow' class='url'>Twocentsworth</a></cite>&#160;(trackback)</li>
+<li id="comment-1132"><p>Where is the paypal button! A lot of love is going out to you right now and I feel like giving you some of my hard earned bundles of energy. You&#8217;re a benefit to mankind and role model of community service.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.stareat.us/' rel='external nofollow' class='url'>Eric Rolph</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1132" title="March 28, 2003 @ 12:01 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1133"><p>Everybody keep their bundles of energy in their pants.  It&#8217;s only an HTTP error code.</p>
+<p>I didn&#8217;t expect the Spanish Inquisition.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1133" title="March 28, 2003 @ 12:03 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1134"><p>Noone expects the Spanish Inquisition! Our weapon is surprise, surprise and fear, fear and surprise.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1134" title="March 28, 2003 @ 1:43 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1135"><p>Our two main weapons&#8230; er&#8230; oh, sod it, I&#8217;ll come in again.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.thomasscott.net/' rel='external nofollow' class='url'>Thomas Scott</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1135" title="March 28, 2003 @ 5:58 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1136"><p>Quick, close the comment thread!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://dunck.us/' rel='external nofollow' class='url'>Jeremy Dunck</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1136" title="March 28, 2003 @ 9:31 am"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1137"><p>Re: Comment 16</p>
+<p>I&#8217;d just like to point out that Mark used the word<br />
+&#8220;monotonically&#8221;&emdash;a word I have not heard since Calculus II.  Thank you.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110924042805/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken</a></cite>&#160;<a class=p href="/web/20110924042805/http://diveintomark.org/archives/2003/03/27/http_error_410_gone#comment-1137" title="March 28, 2003 @ 12:49 pm"><img alt="#" src=/web/20110924042805im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110924042805/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110924042805/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110924042805/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110924042805/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110924042805/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.342 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:07:39 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 4:28:05 Sep 24, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:23 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

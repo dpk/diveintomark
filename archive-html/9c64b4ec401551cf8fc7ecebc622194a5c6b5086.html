@@ -1,0 +1,435 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Bits and pieces [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110514121012/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110514121012/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110514121012/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110514121012im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110514121012/http://diveintomark.org/archives/2003/03/29/peaceblogging" title="Peaceblogging">
+<link rel=next href="/web/20110514121012/http://diveintomark.org/archives/2003/04/01/in_brief_1_april_2003" title="In brief: 1 April 2003">
+<link rel=up href="/web/20110514121012/http://diveintomark.org/archives#p1301" title="March 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Bits and pieces Comments Feed" href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces/feed" />
+<link rel='index' title='dive into mark' href='/web/20110514121012/http://diveintomark.org/' />
+<link rel='prev' title='Peaceblogging' href='/web/20110514121012/http://diveintomark.org/archives/2003/03/29/peaceblogging' />
+<link rel='next' title='In brief: 1 April 2003' href='/web/20110514121012/http://diveintomark.org/archives/2003/04/01/in_brief_1_april_2003' />
+<link rel='canonical' href='/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces' />
+<link rel='shortlink' href='/web/20110514121012/http://diveintomark.org/?p=1301' />
+<meta name="description" content="In 1995, my dog had an e-mail address and a home page; in 2003, she was the first entry in my LDAP directory. This we call progress.">
+<meta name="keywords" content="apache,google,ldap,linkdump,movabletype,mozilla,mysql,opensource,oreilly,php,spam,spamassassin,spamcop,tango">
+<link href="/web/20110514121012cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110514121012/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/03\/31\/bits_and_pieces";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "May";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/03/31/bits_and_pieces" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110514121012" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110222011514/http://diveintomark.org/archives/2003/03/31/bits_and_pieces" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Feb 2011"><strong>FEB</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 12:10:12 May 14, 2011">MAY</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110222011514/http://diveintomark.org/archives/2003/03/31/bits_and_pieces" title="1:15:14 Feb 22, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 12:10:12 May 14, 2011">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20091102081913/http://diveintomark.org/archives/2003/03/31/bits_and_pieces" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 Nov 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 12:10:12 May 14, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110514121012*/http://diveintomark.org/archives/2003/03/31/bits_and_pieces" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>19 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">17 Jun 06 - 14 May 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001221100_2007:-1:010000000010_2008:-1:101020000000_2009:-1:000000000010_2010:-1:000001000011_2011:4:010010000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110514121012/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110514121012/http://diveintomark.org/archives#p1301">March 31, 2003</a> &#8227;
+<h2>Bits and pieces</h2> (<a href="/web/20110514121012/http://diveintomark.org/tag/apache" rel="tag">apache</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/google" rel="tag">google</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/ldap" rel="tag">ldap</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/linkdump" rel="tag">linkdump</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/movabletype" rel="tag">movabletype</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/mozilla" rel="tag">mozilla</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/mysql" rel="tag">mysql</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/opensource" rel="tag">opensource</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/oreilly" rel="tag">oreilly</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/php" rel="tag">php</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/spam" rel="tag">spam</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/spamassassin" rel="tag">spamassassin</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/spamcop" rel="tag">spamcop</a>, <a href="/web/20110514121012/http://diveintomark.org/tag/tango" rel="tag">tango</a>)</div>
+<ul class="inbrief">
+<li><p>Gosh, I&#8217;m <a href="/web/20110514121012/http://www.macosxhints.com/article.php?story=20030328190234419">looking forward to tomorrow</a>.</p></li>
+<li><p>SpamAssassin has made spam a lot more fun.  My top-rated spam so far is 26.30, which is <a href="/web/20110514121012/http://www.unix-girl.com/blog/archives/000843.html">a far cry from some SA veterans</a>, but then, I&#8217;ve only been running it a few days.  My anti-spam strategy now consists of a combination of the rule-based SpamAssassin, the blacklist-based SpamCop, and the Bayesian-based Mozilla Mail.  I get about two spams a day and block about 50, with no false positives.</p></li>
+<li><p>It has been a lifelong dream of mine to tango at my own wedding.  I have no idea where this dream came from; all I know is that it requires two things: someone to marry me, and someone to give us tango lessons.  Dora has graciously agreed to fill the first role, and now <a href="/web/20110514121012/http://www.tangophilia.com/">Jason Laughlin</a> is filling the second.  It&#8217;s probably best to leave it that way, rather than the other way around.</p></li>
+<li><p>Fuck the warblogs.  You want mainstream?  <a href="/web/20110514121012/http://www.tangophilia.com/blog/">My dance instructor runs Movable Type</a>.</p></li>
+<li><p>I got my complimentary copy of <a href="/web/20110514121012/http://www.oreilly.com/catalog/googlehks/">Google Hacks</a> today.  <a href="/web/20110514121012/http://diveintomark.org/archives/2002/06/04/who_are_the_people_in_your_neighborhood.html">Who are the people in your neighborhood?</a> is on page 192. :)</p></li>
+<li><p>I&#8217;m using <a href="/web/20110514121012/http://www.bradchoate.com/past/mtmacros.php">MT-Macros</a> to auto-generate smilies.  Yes, I have too much time on my hands. They&#8217;re secretly enabled for comments, too, but you&#8217;ll have to look at the source to figure out which ones are supported and how to generate them.  <a href="/web/20110514121012/http://diveintomark.org/inc/macros2">Here are the macros</a>, because you have too much time on your hands too.</p></li>
+<li><p>:) :( :O :D :P  ;)</p></li>
+<li><p>Speaking of having too much time&#8230; based on <a href="/web/20110514121012/http://diveintomark.org/archives/2003/03/13/address_book.html#c000584">advice from my readers</a>, I&#8217;ve set up an LDAP server to maintain our family address book.  (In 1995, my dog had an e-mail address and a home page; in 2003, she was the first entry in my LDAP directory.  This we call progress.)  Specifically, <a href="/web/20110514121012/http://www.openldap.org/">OpenLDAP</a> on <a href="/web/20110514121012/http://www.debian.org/">Debian GNU/Linux</a>.  I maintain the directory with <a href="/web/20110514121012/http://www.horde.org/turba/">Turba</a>, which runs on <a href="/web/20110514121012/http://httpd.apache.org/">Apache</a>, <a href="/web/20110514121012/http://www.php.net/">PHP</a>, and <a href="/web/20110514121012/http://www.mysql.com/">MySQL</a>.  All our mail clients (Mozilla Mail, Mail.app) are LDAP-enabled, so they all automatically look up email addresses by name.  I also do custom searches and generate custom reports with some simple <a href="/web/20110514121012/http://www.python.org/">Python</a> scripts, thanks to <a href="/web/20110514121012/http://python-ldap.sourceforge.net/">python-ldap</a>.  Finally, I use a keyword bookmark in Mozilla that redirects to my search CGI script, so I can type &#8220;a dora&#8221; in my browser to look up my lovely fiance&#8217;s number and bug her at work.</p>
+<p>In the future, there will be <em>so much open source software</em> available, programmers will be judged by how much they know about it and how well they can glue it together to build solutions.</p></li>
+</ul>
+<p class=c>&#167;
+
+<h3 id=comments>Twenty nine comments here (<a href=/web/20110514121012/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-1140"><p>Congrats on getting LDAP setup. I&#8217;ve wanted to put my addresses in there so many times&#8230; but every time I load up the console and try to install OpenLDAP, I get stuck. it would be a great companion to my IMAP accounts. someday.. someday&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://eliot.landrum.cx/' rel='external nofollow' class='url'>eliot</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1140" title="March 31, 2003 @ 1:15 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1141"><p>Oh, and I get stuck because I have no idea how to add entries. Seems like an easy task&#8230; but no.. not for me.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://eliot.landrum.cx/' rel='external nofollow' class='url'>eliot</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1141" title="March 31, 2003 @ 1:15 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1142"><p>> In the future, there will be so much open source<br />
+> software available, programmers will be judged by<br />
+> how much they know about it and how well they can<br />
+> glue it together to build solutions.</p>
+<p>Sounds like in the future programmers will be sys admins.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://www.papascott.de/' rel='external nofollow' class='url'>Scott Hanson</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1142" title="March 31, 2003 @ 1:30 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1143"><p>&#8220;Sounds like in the future programmers will be sys admins.&#8221;</p>
+<p>Programs can be glue. (All gluing is accomplished with programs?) Sometimes you need to write your own script/app/whatever to tie two systems together. A little sysadmin knowledge is good, so you can more easily leverage the work others have already done.</p>
+<p>I think the line between programmer and sysadmin is pretty blurred, with regards to scripting tasks. When do you draw the line between a complex script and a program? Very sophisticated things can be accomplished with languages usually relegated to the &#8220;scripting&#8221; category.</p>
+<p>All my words look funny late at night. Am I making sense?</p>
+<p class=sig>&#8212;&#8201;<cite>Adam</cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1143" title="March 31, 2003 @ 1:42 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1144"><p>&#8220;in the future&#8221;?  It&#8217;s been the case for years that keeping up with the Debian new-packages list and the CPAN updates is a big advantage when building software systems.  Freshmeat has RSS feeds, SourceForge has per-project RSS feeds as well as global ones&#8230;</p>
+<p>Now if only more people would remember that when they come up with a clever software idea, google and see if there&#8217;s another implementation out there already that they can help with :-) (Sure, there are reasons to do it from scratch anyway, the common ones being self-education, licensing, and how well the interface &#8220;fits&#8221; an existing project&#8230; I&#8217;m just objecting to doing that solely out of ignorance.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://www.thok.org/' rel='external nofollow' class='url'>Mark Eichin</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1144" title="March 31, 2003 @ 2:18 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1162"><cite><a href='/web/20110514121012/http://www.alessio.sevenseas.org/weblog/2003/03/000450.html' rel='external nofollow' class='url'>Too Old to Weblog</a></cite>&#160;(trackback)</li>
+<li id="comment-1145"><p>Sounds like that &#8220;middleware&#8221; thing that I ostensibly write. Except instead of trying to get SAP, Domino and Websphere to talk to each other, it&#8217;s actually fun and rewarding.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://fishbowl.pastiche.org/' rel='external nofollow' class='url'>Charles Miller</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1145" title="March 31, 2003 @ 7:09 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1146"><p>&#8220;In the future, there will be so much open source software available, programmers will be judged by how much they know about it and how well they can glue it together to build solutions.&#8221;</p>
+<p>Vernor Vinge, in his sf novel _A Deepness in the Sky&#8221; had the same idea, describing a future where<br />
+you hadn&#8217;t programmers as much as you had software archeologists. Deep deep down in the system there was a layer of software dating to the time the first man set foot on the moon&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://www.cloggie.org/wissewords/' rel='external nofollow' class='url'>Martin Wisse</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1146" title="March 31, 2003 @ 8:06 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1147"><p>Yeah, getting all the pieces together for the LDAP server wasn&#8217;t easy.  I got OpenLDAP up and running (compiled from source, I couldn&#8217;t find an up-to-date apt-gettable package) with a minimum of fuss.  This tutorial helped with the configuration:</p>
+<p><a href="/web/20110514121012/http://www.direct-to-linux.com/TUTORIALS/LinuxTutorialLDAP.html">http://www.direct-to-linux.com/TUTORIALS/LinuxTutorialLDAP.html</a></p>
+<p>Then to delve into the wonderful world of LDAP to figure out how to maintain it.  There are dozens of generic LDAP admin modules, but I wanted one specifically for maintaining a simple address book (i.e. one that was as easy for my fiance to use as all the other ways she&#8217;s previously maintained address books, like Yahoo Mail and Outlook).  I finally settled on Turba, which is not the easiest thing in the world to set up, and relies on the Horde framework, is which also not that easy to set up and has its own dependency issues (apt-get to the rescue, at least for 90% of them).</p>
+<p>Then on to digging into the Turba configuration files to set up the fields we needed and map them to LDAP attributes.  Then finding and delving into RFC 2254 (LDAP search filter syntax) to generate the custom reports and search script.</p>
+<p><a href="/web/20110514121012/http://www.ietf.org/rfc/rfc2254.txt">http://www.ietf.org/rfc/rfc2254.txt</a></p>
+<p>And finally, figuring out why none of it was working in Mozilla Mail (answer: it doesn&#8217;t speak LDAP 3, and OpenLDAP doesn&#8217;t speak LDAP 2 until you put the magical &#8220;allow bind_v2&#8243; option in your slapd.conf file).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1147" title="March 31, 2003 @ 10:30 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1148"><p>I&#8217;m hoping that you have some form of rudimentary authentication happening on the LDAP searches?</p>
+<p>I&#8217;ve seen some spammers mine open LDAP servers for email addresses..</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://don@plasticfruit.net/' rel='external nofollow' class='url'>don</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1148" title="March 31, 2003 @ 11:47 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1149"><p>It&#8217;s not a public LDAP server.  It requires authentication to read anything, plus it&#8217;s behind our family firewall (as are all the search scripts and reports).  It&#8217;s only for the plethora of computers we have in the house.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1149" title="March 31, 2003 @ 12:00 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1150"><p>Mark,</p>
+<p>I know Address Book will read directories; can it not update them? (Meaning can you not drag an address from your AB into a directory?)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://www.redmonk.net/monkinetic' rel='external nofollow' class='url'>Steve Ivy</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1150" title="March 31, 2003 @ 12:10 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1151"><p>No, I could not find a way for Address Book to update the LDAP directory, even when I (temporarily) set it to globally anonymously writeable.  I did not even find a way for it to browse the LDAP directory; it does name-based searches, but that&#8217;s all.</p>
+<p>Keep in mind that both of these limitations are probably Good Things.  Few people ought to be updating an LDAP directory, so it makes no sense for a consumer application to have that functionality.  And most LDAP directories are quite large, so allowing anyone to click a button and browse the entire contents could easily lead to unacceptable levels of network traffic.</p>
+<p>I&#8217;m a strange case, and I&#8217;ve found software that allows my usage patterns.  And where I couldn&#8217;t find it, I made my own.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1151" title="March 31, 2003 @ 12:40 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1152"><p>re comment #8: if you read the Vernor Vinge reference more closely, he makes it clear that the dates go to *shortly after* the moon landing.  It&#8217;s actually a (only-slightly) veiled reference to Unix time which has an epoch of 1970-01-01&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://www.thok.org/' rel='external nofollow' class='url'>Mark Eichin</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1152" title="March 31, 2003 @ 12:45 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1163"><cite><a href='/web/20110514121012/http://www.it.rit.edu/~ell/mamamusings/archives/000405.html' rel='external nofollow' class='url'>mamamusings</a></cite>&#160;(trackback)</li>
+<li id="comment-1153"><p>Let me get this straight: you setup an LDAP server for _fun_? I wish you luck in the ring of hell to which you have descended (little known fact: OpenLDAP is right below the sea of sighs in Canto 8).</p>
+<p>I just finished up a big project using a custom schema, OpenLDAP and python-ldap, and my ears are still ringing. It&#8217;s got to be the most useful undocumented technology on the planet.</p>
+<p>I&#8217;ve now got a binder full of RFCs I really wish I hadn&#8217;t read, and a newfound respect for those that can think in BNF. May you never suffer the same fate at the hands of LDAP.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://alex.netwindows.org/' rel='external nofollow' class='url'>Alex Russell</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1153" title="March 31, 2003 @ 1:00 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1154"><p>Oops, forgot to metion that you&#8217;ll want to get GQ for doing LDAP browsing. It has saved my butt any number of times. It&#8217;s not everying you&#8217;d want out of an LDAP browser, but it&#8217;s the best thing I&#8217;ve found to date for Linux:</p>
+<p><a href="/web/20110514121012/http://biot.com/gq/">http://biot.com/gq/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://alex.netwindows.org/' rel='external nofollow' class='url'>Alex Russell</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1154" title="March 31, 2003 @ 1:06 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1155"><p>Long time listener, first time caller&#8230; ;)</p>
+<p>I feel the need to to pick nits, but I&#8217;ll make it quick&#8230;</p>
+<p>See:<br />
+<a href="/web/20110514121012/http://dictionary.reference.com/search?q=fiancee&r=2">http://dictionary.reference.com/search?q=fiancee&#038;r=2</a></p>
+<p>There are two different spellings for the betrothed depending on who you are referring to, the bride or the groom.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://cryptomeme.com/' rel='external nofollow' class='url'>Damon</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1155" title="March 31, 2003 @ 1:47 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1156"><p>I stand corrected.  I&#8217;m a fiance, she&#8217;s a fiancee.  Actually, fianc&eacute;e, but who&#8217;s counting.</p>
+<p>Yes, I set up an OpenLDAP-based LDAP directory for fun.  In my defense, it actually was kind of fun, and it expanded my knowledge of available technologies quite a bit, which is never a bad thing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1156" title="March 31, 2003 @ 2:46 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1164"><cite><a href='/web/20110514121012/http://sippey.com/recentlybrowsed/#000397' rel='external nofollow' class='url'>recently</a></cite>&#160;(trackback)</li>
+<li id="comment-1157"><p>When describing allowed syntax for parsing and composing, I love BNF.  Love it.</p>
+<p>Only many occasions, I&#8217;ve wished that I could write BNF and be understood by people in general.  It would make writting certain QA-oriented documents ever so much quicker.</p>
+<p>Sure, it&#8217;s dense, but that&#8217;s part of what I like.  You can get -so- much information at once.</p>
+<p>Also, once you&#8217;ve established a good parser/writer for a particular expression, you can ignore that it&#8217;s actually composed of other expressions 9 deep.</p>
+<p>;-)</p>
+<p class=sig>&#8212;&#8201;<cite>Jeremy Dunck</cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1157" title="April 1, 2003 @ 12:21 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1158"><p>Speaking of which, does anyone know of a (E)BNF parser in PHP? Or a lexer, bison, &#8230; ?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://jan.moesen.nu/' rel='external nofollow' class='url'>Jan!</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1158" title="April 1, 2003 @ 4:20 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1159"><p>Dora (la fianc�e) et Mark (le fianc�) se sont fianc�s lors de leurs fian�ailles.<br />
+Easy =)</p>
+<p class=sig>&#8212;&#8201;<cite>Xavier</cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1159" title="April 1, 2003 @ 9:50 am"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1165"><cite><a href='/web/20110514121012/http://blog.cfrq.net/chk/archives/000242.html' rel='external nofollow' class='url'>The Blog of Harald</a></cite>&#160;(trackback)</li>
+<li id="comment-1160"><p>I&#8217;m always looking for weblogs with dance content (esp lindy hop) but I think it more accurate to say that your dance instructor has MT installed. not much sign of him using it. </p>
+<p>I enjoyed my taste of tango last fall!<br />
+<a href="/web/20110514121012/http://www.anitarowland.com/gmarchives/00000659.html">http://www.anitarowland.com/gmarchives/00000659.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://www.anitarowland.com/' rel='external nofollow' class='url'>Anita Rowland</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1160" title="April 1, 2003 @ 12:57 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1166"><cite><a href='/web/20110514121012/http://www.kennsarah.net/archives/000197.shtml' rel='external nofollow' class='url'>Our Story</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-1167"><cite><a href='/web/20110514121012/http://www.kennsarah.net/archives/000197.shtml' rel='external nofollow' class='url'>Our Story</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-1168"><cite><a href='/web/20110514121012/http://www.kennsarah.net/archives/000197.shtml' rel='external nofollow' class='url'>Our Story</a></cite>&#160;(trackback)</li>
+<li id="comment-1161"><p>Have you ever noticed that</p>
+<p><a href="/web/20110514121012/http://dictionary.reference.com/search?q=fiance">http://dictionary.reference.com/search?q=fiance</a></p>
+<p>Is so similar to</p>
+<p><a href="/web/20110514121012/http://dictionary.reference.com/search?q=financier&r=2">http://dictionary.reference.com/search?q=financier&#038;r=2</a></p>
+<p>Co-incidence? I think not&#8230;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514121012/http://www.nik.com.au/' rel='external nofollow' class='url'>Nik</a></cite>&#160;<a class=p href="/web/20110514121012/http://diveintomark.org/archives/2003/03/31/bits_and_pieces#comment-1161" title="April 5, 2003 @ 5:59 pm"><img alt="#" src=/web/20110514121012im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110514121012/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110514121012/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110514121012/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110514121012/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110514121012/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.178 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-14 03:30:34 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 12:10:12 May 14, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:21 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

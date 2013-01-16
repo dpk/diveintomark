@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>A gentle introduction to video encoding, part 5: constraints [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110607183018/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110607183018/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110607183018/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110607183018im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-slides" title="A gentle introduction to video encoding: the slides">
+<link rel=next href="/web/20110607183018/http://diveintomark.org/archives/2009/01/11/bff" title="Immersed in the Googleplex ball pit">
+<link rel=up href="/web/20110607183018/http://diveintomark.org/archives#p2236" title="January 2009">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; A gentle introduction to video encoding, part 5: constraints Comments Feed" href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints/feed" />
+<link rel='index' title='dive into mark' href='/web/20110607183018/http://diveintomark.org/' />
+<link rel='prev' title='A gentle introduction to video encoding: the slides' href='/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-slides' />
+<link rel='next' title='Immersed in the Googleplex ball pit' href='/web/20110607183018/http://diveintomark.org/archives/2009/01/11/bff' />
+<link rel='canonical' href='/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints' />
+<link rel='shortlink' href='/web/20110607183018/http://diveintomark.org/?p=2236' />
+<meta name="description" content="There is no right or wrong. There is only what works and what doesn't.">
+<meta name="keywords" content="encoding,give,video">
+<link href="/web/20110607183018cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110607183018/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2009\/01\/08\/give-part-5-constraints";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "7";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2009/01/08/give-part-5-constraints" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110607183018" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215085253/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 18:30:18 Jun 7, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215085253/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints" title="8:52:53 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 18:30:18 Jun 7, 2011">7</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090828075810/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="28 Aug 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 18:30:18 Jun 7, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110607183018*/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>7 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">18 Feb 09 - 7 Jun 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:010000010000_2010:-1:000001000111_2011:5:000001000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110607183018/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110607183018/http://diveintomark.org/archives#p2236">January 8, 2009</a> &#8227;
+<h2>A gentle introduction to video encoding, part 5: constraints</h2> (<a href="/web/20110607183018/http://diveintomark.org/tag/encoding" rel="tag">encoding</a>, <a href="/web/20110607183018/http://diveintomark.org/tag/give" rel="tag">GIVE</a>, <a href="/web/20110607183018/http://diveintomark.org/tag/video" rel="tag">video</a>)</div>
+<p>[Part of an <a href="/web/20110607183018/http://diveintomark.org/tag/give">ongoing series</a>.]</p>
+
+<p>I had lunch with my father the other day, and I explained this series as well as I could to someone who didn&#8217;t start programming when he was 11.  His immediate reaction was, &#8220;Why are there so many different formats?  Why can&#8217;t everybody just agree on a single format?  It is political, or technical, or both?&#8221;  The short answer is, it&#8217;s both.  The history of video in any medium &#8212; and especially since the explosion of amateur digital video &#8212; has been marred by a string of companies who wanted to use <a href="/web/20110607183018/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats/">container formats</a> and <a href="/web/20110607183018/http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs">video codecs</a> as tools to lock content producers and content consumers into their little fiefdoms.  Own the format, own the future.  And when I say &#8220;history&#8221; &#8212; well, it&#8217;s still going on.  Tried to play a Windows Media Video on Mac OS X lately?  The <a href="/web/20110607183018/http://www.telestream.net/flip4mac-wmv/overview.htm">codec and container support is out there</a>, but it&#8217;s not baked in.  Want to watch <a href="/web/20110607183018/http://www.apple.com/trailers/">movie trailers on Apple.com</a>?  Please install QuickTime.  And so forth and so on.  The only thing that was pre-installed on both platforms was Flash, so when a few startups dipped their toes into the Internet video waters, the ones that used Flash Video won despite it being an objectively inferior codec.  (Some revision of Flash 9 added support for H.264 video, AAC audio, and the MP4 container, which is what <a href="/web/20110607183018/http://www.youtube.com/browse?s=mphd&c=0&l=&b=0">YouTube HD</a> uses.)</p>
+
+<p>So that&#8217;s the politics.  But there are also technical barriers.  As with all engineering, video encoding is primarily about constraints.  I can think of 10 just off the top of my head:</p>
+
+<ol>
+<li><strong>CPU capacity for decoding and playing in real time</strong>.  This is one of the most important constraints, since <em>video is meant to be watched in real time</em>.  That sounds simple, but it&#8217;s incredibly complex.  Every video you&#8217;ve ever watched in your entire life had to be decoded and played in real time.  Otherwise it stutters and the viewing experience sucks.  And we&#8217;re talking about video here; if the viewing experience sucks, there&#8217;s nothing left.  Some codecs are just more complex than others, and that translates into higher system requirements to decode videos in real time.  <a href="/web/20110607183018/http://diveintomark.org/archives/2008/12/19/give-part-2-lossy-video-codecs#h264">As I&#8217;ve mentioned before</a>, some codecs are now decoded by specialized hardware.  iPhones have a little chip inside them that understands H.264 Baseline Profile; without that, the iPhone would need a Core 2 Duo processor to play movies, and it would have a battery life of 10 minutes.</li>
+<li><strong>Codec compatibility</strong>.  Normal people won&#8217;t download codecs or plug-ins just to watch a dog on a skateboard, or even to watch a trailer for a $100 million blockbuster.  (Sadly, they <em>will</em> download plug-ins for porn, but those are invariably trojan horses.  Or so I&#8217;ve read.  Moving on&#8230;)  The phone in your pocket can probably play AMR ringtones, maybe MP3 ringtones, but probably not Vorbis ringtones (unless you have an Android phone) &#8212; and you probably couldn&#8217;t download new codecs even if you wanted to (which, I must reiterate, nobody wants to).  Apple and Real Networks tried for <em>years</em> to corner the web video market, but 99% of schmucks with a browser have Flash, so Flash video won on the web. Meanwhile, Firefox 3.1 will ship with support for the <code>&lt;video&gt;</code> element but will only support Theora and Vorbis in an Ogg container &#8212; even if your underlying operating system ships with other codecs.</li>
+<li><strong>CPU capacity for encoding</strong>.  Encoding takes a long time.  Taking my home movie from iMovie to a DVD used to take 8 hours on a Powerbook G4 laptop.  These days you can rip a DVD movie with Xvid in 30 minutes, or you can rip it with a more complex codec with all optional features turned on, and maybe it&#8217;ll still take 8 hours.  It&#8217;ll look better, but will it look 16 times better?  If you&#8217;re only doing it once, maybe you don&#8217;t care.  If you&#8217;re running YouTube and people are uploading 13 hours of video every minute, maybe you do.  CPU cycles aren&#8217;t free; at that scale, they&#8217;re not even cheap.  (That&#8217;s a real statistic, by the way; I got it from the page on the Google intranet entitled &#8220;What can we tell non-Googlers?&#8221; and it&#8217;s accurate as of September 2008.)</li>
+<li><strong>Acceptable delay between recording and delivery</strong>.  In my own experience, videos I&#8217;ve uploaded on YouTube are available within minutes, which is just mind-boggling when you consider the volume.  If you&#8217;re re-encoding a live stream, even a few minutes delay is probably unacceptable.  That means you&#8217;ll need a faster encoder, a less complex codec, or lower quality settings.</li>
+<li><strong>Audience size</strong>.  It&#8217;s not a big secret that lots of video on the Internet looks like crap.  Partly that&#8217;s because the video uploader uploaded crappy video, but it&#8217;s also because most Internet videos are only watched by a few people, and it&#8217;s just not a worthwhile tradeoff to spend 8 hours re-encoding it.  On the other hand, if you&#8217;re mastering a DVD that&#8217;ll get sold to 10 million people, you&#8217;ll probably use higher quality settings.</li>
+<li><strong>Screen dimensions</strong>.  DVDs can&#8217;t store high-def 1920 x 1080 video because the standard doesn&#8217;t allow for it, which makes perfect sense because it was designed around the screen resolution of standard-def TVs.  Blu-Ray ups the limit, but there&#8217;s still a limit.  Screen sizes vary more for PC video, but there will always be practical upper limits depending on your audience.</li>
+<li><strong>My bandwidth</strong>.  If you&#8217;re streaming or downloading video, some percentage of your audience is probably living in a third-world country like the United States, with limited broadband access, slow speeds, and monthly bandwidth caps. Larger file size = longer wait to play = fewer videos watched overall.</li>
+<li><strong>Your bandwidth</strong>.  Obviously every bit I download is a bit that you upload, and bandwidth ain&#8217;t free either.  &#8220;When I get a little money I buy bandwidth; and if any is left I buy food and clothes.&#8221;  Or something like that.</li>
+<li><strong>Hard limits on storage size</strong>.  As I mentioned before, physical media has upper limits on total size.  Commercial DVDs can hold upwards of 9 GB, which seems like a lot but really isn&#8217;t.  Blu-Ray maxes out at 50 GB, which seems like a lot but really isn&#8217;t.</li>
+<li><strong>Patents / licensing costs</strong>.  Did I mention that most popular video codecs are patent-encumbered?  This is why <a href="/web/20110607183018/http://commons.wikimedia.org/wiki/Commons:Media_help">Wikimedia uses Theora exclusively</a>, and why Firefox can ship a native Theora decoder and but won&#8217;t ever ship H.264.</li>
+</ol>
+
+<p>&#8230;and that&#8217;s the <em>short</em> list.</p>
+
+<p>All of which leads me to the Zen of video encoding, which is this:</p>
+
+<blockquote>
+<p>There is no right or wrong.  There is only what works and what doesn&#8217;t.</p>
+</blockquote>
+
+<p>If you can find even one combination of tools, delivery devices, and target platforms that satisfies your constraints and still accomplishes your goals, congratulations.  You&#8217;re ahead of 99% of the people who&#8217;ve tried.</p>
+
+<p>Tomorrow: specifics on common devices/platforms and their limitations.</p>
+
+<p class=c>&#167;
+
+<h3 id=comments>Six comments here (<a href=/web/20110607183018/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-13071"><p>Points two and ten combine to form one of the impressive ironies of media encoding&#8211;free codecs are unlikely to ever come preinstalled on a proprietary system, even if it would cost the vendor nothing. (<a href="/web/20110607183018/http://pandagon.net/index.php/site/comments/mp3s_free_markets_and_mixed_economies/##80811">I mused about this elsewhere</a>.) Why would Microsoft play FLACs seamlessly on Vista, when it can nudge everyone toward WMA Lossless? It&#8217;s understandable, but it&#8217;s horribly frustrating, and it&#8217;s a persistent cause of codec headaches that has absolutely no legitimate (technical) cause. (The Xiph.org folks have been putting more effort into their quicktime and dshow plugins, seeing that Windows and Mac compatibility are key, but it doesn&#8217;t address the root issue.</p>
+<p>Similarly, Linux &#8220;is broken!&#8221; because it can&#8217;t play MP3s out of the box&#8211;this isn&#8217;t any distributor&#8217;s fault, but the people in a position to fix it aren&#8217;t likely to do so, because doing so would conflict with their business model without providing any real gain to them. It&#8217;s a long-term, intractable problem, and we&#8217;ll be stuck with it unless some free codec gains as much mindshare as MP3 had circa 1999, <i>forcing</i> proprietary vendors to include support.</p>
+<p>We got to that point with still images with JPEG, but it&#8217;s unlikely we&#8217;ll an analogous standard in video or audio any time soon.</p>
+<p>Or, more succinctly: Free codecs are absent from proprietary systems because the vendors don&#8217;t want to include them. Proprietary codecs are absent from free systems because the vendors <i>can&#8217;t</i> include them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607183018/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints#comment-13071" title="January 10, 2009 @ 12:18 pm"><img alt="#" src=/web/20110607183018im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13073"><p>One thing I do not like Apple and Sony is they alway use their own closed format. (Try to maintain the margin?)</p>
+<p>Apple is lucky to have Steve Jobs.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607183018/http://www.xinmart.com/' rel='external nofollow' class='url'>Mike</a></cite>&#160;<a class=p href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints#comment-13073" title="January 10, 2009 @ 6:38 pm"><img alt="#" src=/web/20110607183018im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13080"><p>Nice series.</p>
+<p>By the way, if you are desperate to encode something with a file wart on the end named &#8220;.mp3&#8243;, look at the twolame package, which provides mpeg layer 2 audio encoding.  You&#8217;ll bloat your encoding by about 10-20%, but the license for this codec is not nearly as bad.  If it&#8217;s free enough to show up in debian&#8217;s massive archive, it may be worth a look.</p>
+<p><a href="/web/20110607183018/http://packages.debian.org/stable/sound/twolame" rel="nofollow">http://packages.debian.org/stable/sound/twolame</a></p>
+<p class=sig>&#8212;&#8201;<cite>Avery</cite>&#160;<a class=p href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints#comment-13080" title="January 12, 2009 @ 1:20 pm"><img alt="#" src=/web/20110607183018im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13081"><p>I forgot to add &#8211; many mp3 players will ingest the .mp2 file without batting an eyelid.  Useful for encoding something for family or friends that can&#8217;t, or don&#8217;t, understand the complexity of encoding patent issues coupled with free software.</p>
+<p>&#8220;Here ya go Dad, enjoy this on your mp3 player.&#8221; (hands over mpeg layer 2 file)</p>
+<p class=sig>&#8212;&#8201;<cite>Avery</cite>&#160;<a class=p href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints#comment-13081" title="January 12, 2009 @ 2:53 pm"><img alt="#" src=/web/20110607183018im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13090"><p>&#8220;What can we tell non-Googlers?&#8221;  That would be a neat page to publish to the outside world.  (Assuming it doesn&#8217;t also have comments along the lines of &#8220;You shouldn&#8217;t mention $x, $y, or $z.&#8221;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607183018/http://dwm.me.uk/' rel='external nofollow' class='url'>David</a></cite>&#160;<a class=p href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints#comment-13090" title="January 14, 2009 @ 8:07 am"><img alt="#" src=/web/20110607183018im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13091"><p>Actually, most of it is boring and vague, which is why I was so pleasantly surprised that the Youtube section was so interesting and specific.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110607183018/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110607183018/http://diveintomark.org/archives/2009/01/08/give-part-5-constraints#comment-13091" title="January 14, 2009 @ 11:17 am"><img alt="#" src=/web/20110607183018im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110607183018/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110607183018/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110607183018/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110607183018/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110607183018/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.322 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-23 20:17:12 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 18:30:18 Jun 7, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:04:13 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

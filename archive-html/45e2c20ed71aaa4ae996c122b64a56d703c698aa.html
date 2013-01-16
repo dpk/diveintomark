@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>try harder [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20101214233511/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20101214233511/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20101214233511/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20101214233511im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20101214233511/http://diveintomark.org/archives/2001/11/13/what_i_do_for_a_living" title="What I do for a living">
+<link rel=next href="/web/20101214233511/http://diveintomark.org/archives/2001/11/15/first_things_first" title="first things first">
+<link rel=up href="/web/20101214233511/http://diveintomark.org/archives#p136" title="November 2001">
+<link rel='index' title='dive into mark' href='/web/20101214233511/http://diveintomark.org/' />
+<link rel='prev' title='What I do for a living' href='/web/20101214233511/http://diveintomark.org/archives/2001/11/13/what_i_do_for_a_living' />
+<link rel='next' title='first things first' href='/web/20101214233511/http://diveintomark.org/archives/2001/11/15/first_things_first' />
+<link rel='canonical' href='/web/20101214233511/http://diveintomark.org/archives/2001/11/14/try_harder' />
+<link rel='shortlink' href='/web/20101214233511/http://diveintomark.org/?p=136' />
+<meta name="keywords" content="microsoft,rant,security">
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+@font-face {font-family: 'LatinModernRoman10Regular';src: url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.eot');src: local('☺'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.woff') format('woff'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.ttf') format('truetype'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.svg#webfontg3VAmqr8') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'LatinModernRomanSlanted10Regu';src: url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.eot');src: local('☺'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.woff') format('woff'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.ttf') format('truetype'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.svg#webfont5pLJWgYw') format('svg');font-weight: normal;font-style: oblique;}
+@font-face {font-family: 'LatinModernRoman10Bold';src: url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.eot');src: local('☺'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.woff') format('woff'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.ttf') format('truetype'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.svg#webfontDIaNd4lG') format('svg');font-weight: bold;font-style: normal;}
+@font-face {font-family: 'LatinModernRoman10BoldItalic';src: url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.eot');src: local('☺'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.woff') format('woff'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.ttf') format('truetype'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.svg#webfontVm6n5sgb') format('svg');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'LatinModernMono10Regular';src: url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.eot');src: local('☺'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.woff') format('woff'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.ttf') format('truetype'), url('/web/20101214233511/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.svg#webfontThQaD2ST') format('svg');font-weight: normal;font-style: normal;}
+html{background:white url(/web/20101214233511/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium 'LatinModernRoman10Regular',serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:'LatinModernRomanSlanted10Regu',serif;font-style:oblique}
+strong,b{font-family:'LatinModernRoman10Bold',serif;}
+pre,code,var,samp,kbd,tt{font-family:'LatinModernMono10Regular',monospace;}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20101214233511/http://diveintomark.org/archives/2001/11/14/try_harder">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2001\/11\/14\/try_harder";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "Dec";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2001/11/14/try_harder" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101214233511" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101105004800/http://diveintomark.org/archives/2001/11/14/try_harder" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="5 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:35:11 Dec 14, 2010">DEC</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jan
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101121191023/http://diveintomark.org/archives/2001/11/14/try_harder" title="19:10:23 Nov 21, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:35:11 Dec 14, 2010">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090326145759/http://diveintomark.org/archives/2001/11/14/try_harder" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="26 Mar 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:35:11 Dec 14, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2011
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20101214233511*/http://diveintomark.org/archives/2001/11/14/try_harder" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>17 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">21 Jun 06 - 14 Dec 10</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000001001100_2007:-1:010100000010_2008:-1:101111100000_2009:-1:001000000000_2010:11:000001000021_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20101214233511/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20101214233511/http://diveintomark.org/archives#p136">November 14, 2001</a> &#8227;
+<h2>try harder</h2> (<a href="/web/20101214233511/http://diveintomark.org/tag/microsoft" rel="tag">microsoft</a>, <a href="/web/20101214233511/http://diveintomark.org/tag/rant" rel="tag">rant</a>, <a href="/web/20101214233511/http://diveintomark.org/tag/security" rel="tag">security</a>)</div>
+<p><a href="/web/20101214233511/http://paulboutin.weblogger.com/2001/11/14">Paul Boutin</a> needs a job. [via <a href="/web/20101214233511/http://www.scripting.com/">Scripting News</a>]</p>
+
+<p><cite>John Robb</cite>: <a href="/web/20101214233511/http://jrobb.userland.com/2001/11/13.html#608">Who said anything about hijackers?</a>  <a href="/web/20101214233511/http://jrobb.userland.com/2001/11/14.html#610">It sounds like the plane fell apart in the sky.</a></p>
+
+<p><cite>The Register</cite>: <a href="/web/20101214233511/http://www.theregister.co.uk/content/28/22840.html">Site requires Java to sign up for .NET training</a>.  Brilliant.</p>
+
+<p><cite>The Register</cite>: <a href="/web/20101214233511/http://www.theregister.co.uk/content/6/22831.html">Online anonymity HOWTO</a>.  Anonymity and privacy might seem expensive, until you consider the alternatives.</p>
+
+<p><cite>The Register</cite>: <a href="/web/20101214233511/http://www.theregister.co.uk/content/4/22828.html">XP&#8217;s file search doesn&#8217;t work</a>.  Don&#8217;t worry, it&#8217;s only broken searching in non-Microsoft documents.</p>
+
+<p><strong>Virtual keyboards</strong></p>
+<p><a href="/web/20101214233511/http://www.pcworld.com/news/article/0,aid,70568,00.asp">Virtual Keyboards</a>. [via <a href="/web/20101214233511/http://tomalak.org/">Tomalak's Realm</a>] <q cite="http://www.pcworld.com/news/article/0,aid,70568,00.asp">The developers envision
+   subway cars filled with commuters typing in midair as they key
+   messages into their mobile phones.</q>  Um, yeah, right.  The possibilities for mockery here are, no pun intended, virtually infinite.  &#8220;No really, officer, I wasn&#8217;t molesting her, I was typing.  Where&#8217;s my keyboard, you ask?  It&#8217;s virtual.  No really.  Hey, wait, what are you, ow, hey, I&#8217;m innocent, I tell you, innocent.&#8221;  Next I&#8217;ll introduce you to my imaginary friend, and we can all pretend to talk dirty to each other on my virtual keyboard.</p>
+
+<p>Meanwhile, there&#8217;s the niggly little problem that the virtual keyboards don&#8217;t actually work.  From the same article: <q cite="http://www.pcworld.com/news/article/0,aid,70568,00.asp">A
+   demo of the product didn&#8217;t work so well, however, and produced the
+   gibberish &#8216;DNiSP&#8217; when the tester was asked to type &#8216;Comdex.&#8217;</q>  &#8220;The developers envision subway cars filled with commuters typing gibberish in midair as they post to Slashdot,&#8221; a spokesman did not add.</p>
+
+<p>Well, that&#8217;s not fair.  There were two separate products from different companies; the other one apparently works a little better.  <q cite="http://www.pcworld.com/news/article/0,aid,70568,00.asp">However, both devices are too bulky. Nonfunctional prototypes of the final products are much smaller.</q>  Wow, that&#8217;s amazing!  Look, Bob, if we take out all this functionality, we can make it smaller.</p>
+
+<p>You would think that such a product would at least be wireless, but it isn&#8217;t.  <q cite="http://www.pcworld.com/news/article/0,aid,70568,00.asp">Both models demonstrated this week are wired. However, vendors say by
+   the time their products become commercially available they will
+   support the wireless Bluetooth protocol.</q>  A virtual keyboard with a real cord.  Brilliant.</p>
+
+<p>So what we have here is a product which attempts to solve problems that people don&#8217;t have, based on technology that doesn&#8217;t work, which is too bulky and unwieldy to use anyway.  All for the low low price of $50.  Sounds like Groove.</p>
+
+<p><strong>Full disclosure</strong></p>
+<p><cite>Bruce Schneier</cite>: <a href="/web/20101214233511/http://www.zdnet.com/zdnn/stories/comment/0,5859,2824251,00.html">Bug secrecy vs. full disclosure</a> [via <a href="/web/20101214233511/http://slashdot.org/articles/01/11/13/1959241.shtml">Slashdot</a>] <q cite="http://www.zdnet.com/zdnn/stories/comment/0,5859,2824251,00.html"><a href="/web/20101214233511/http://www.microsoft.com/technet/treeview/default.asp?url=/technet/columns/security/noarch.asp">Culp compares</a> the practice of publishing vulnerabilities to shouting &#8220;Fire&#8221; in a crowded movie theater. What he forgets is that there actually is a fire, the vulnerabilities exist regardless.</q></p>
+
+<p><a href="/web/20101214233511/http://www.theregister.co.uk/content/55/22816.html">The Register</a> comes down on the side of full disclosure, in their own smarmy way.</p>
+
+<p>Incidentally, I noticed that Scott Culp&#8217;s essay is linked to from the latest <a href="/web/20101214233511/http://www.microsoft.com/technet/treeview/default.asp?url=/technet/security/bulletin/ms01-055.asp">Microsoft security vulnerability</a>:</p>
+<blockquote cite="http://www.microsoft.com/technet/treeview/default.asp?url=/technet/security/bulletin/ms01-055.asp"><p><strong>Q. Why isn&#8217;t there a patch for this issue?</strong></p>
+<p>A. The person who discovered this vulnerability has chosen to handle
+     it <a href="/web/20101214233511/http://www.microsoft.com/technet/treeview/default.asp?url=/technet/columns/security/noarch.asp">irresponsibly</a>, and has deliberately made this issue public only
+     a few days after reporting it to Microsoft. It is simply not
+     possible to build, test and release a patch within this timeframe
+     and still meet reasonable quality standards.</p>
+</blockquote>
+
+<p>Daniel Dennett is a modern-day philosopher who pisses off a lot of other philosophers by insisting that their grandiose systems are built not on logic, but on a failure of imagination.  Paraphrasing: &#8220;First it starts innocently with &#8216;I can not conceive of X.&#8217;  But then the philosopher goes too far, sliding into &#8216;No one can conceive of X.&#8217;  And then they go completely overboard: &#8216;It is inconceiveable that X.&#8217;  I don&#8217;t have a quarrel with the original premise, but I draw a different conclusion: &#8216;Try harder.&#8217;&#8221;</p>
+
+<p>Memo to Scott Culp: if you can&#8217;t conceive of how to keep your software secure in a full-disclosure world, that&#8217;s your own fault.  Try harder.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20101214233511/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20101214233511/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href=/web/20101214233511/http://code.google.com/u/pilgrim/>code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20101214233511/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20101214233511/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+<!-- Dynamic page generated in 0.310 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-12-02 09:42:33 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:35:11 Dec 14, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:37:13 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

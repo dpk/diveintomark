@@ -1,0 +1,502 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>History of RSS date formats [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110514132810/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110514132810/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110514132810/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110514132810im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110514132810/http://diveintomark.org/archives/2003/06/19/teach_me_spanish_curse_words" title="Teach me Spanish curse words">
+<link rel=next href="/web/20110514132810/http://diveintomark.org/archives/2003/06/22/why_im_unsubscribing_from_your_blog" title="Why I&#8217;m unsubscribing from your blog">
+<link rel=up href="/web/20110514132810/http://diveintomark.org/archives#p1364" title="June 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; History of RSS date formats Comments Feed" href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats/feed" />
+<link rel='index' title='dive into mark' href='/web/20110514132810/http://diveintomark.org/' />
+<link rel='prev' title='Teach me Spanish curse words' href='/web/20110514132810/http://diveintomark.org/archives/2003/06/19/teach_me_spanish_curse_words' />
+<link rel='next' title='Why I&#8217;m unsubscribing from your blog' href='/web/20110514132810/http://diveintomark.org/archives/2003/06/22/why_im_unsubscribing_from_your_blog' />
+<link rel='canonical' href='/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats' />
+<link rel='shortlink' href='/web/20110514132810/http://diveintomark.org/?p=1364' />
+<meta name="description" content="I want to talk about prior art. But I can't do that yet, because first I need to give my opinion about this funky RSS business.">
+<meta name="keywords" content="rss">
+<link href="/web/20110514132810cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110514132810/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/06\/21\/history_of_rss_date_formats";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "May";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110514132810" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215140554/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 13:28:10 May 14, 2011">MAY</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215140554/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats" title="14:05:54 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 13:28:10 May 14, 2011">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100417083212/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="17 Apr 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 13:28:10 May 14, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110514132810*/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>52 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">22 Apr 06 - 14 May 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000111312650_2007:-1:410201000211_2008:-1:110111121100_2009:-1:010000000000_2010:-1:001211000111_2011:4:000010000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110514132810/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110514132810/http://diveintomark.org/archives#p1364">June 21, 2003</a> &#8227;
+<h2>History of RSS date formats</h2> (<a href="/web/20110514132810/http://diveintomark.org/tag/rss" rel="tag">rss</a>)</div>
+<p>I want to talk about prior art.  But I can&#8217;t do that yet, because first I need to give my opinion about this <q>funky RSS</q> business.</p>
+
+<blockquote>
+<p><strong><em>It&#8217;s FUD.  It&#8217;s crap.  Cut it out.  It&#8217;s exactly the sort of thing that everyone hates Microsoft for: talking trash about competitors, making vague threats of incompatibility, and scaring end users in the process.</em></strong></p>
+</blockquote>
+
+<p>(If you don&#8217;t know what I&#8217;m talking about, trust me, you don&#8217;t want to know.  Stop reading right now before you get sucked into this world.)</p>
+
+<p>My <a href="/web/20110514132810/http://diveintomark.org/xml/rss.xml">RSS 2.0 feed</a> uses Dublin Core (those <code>dc:</code> elements) to express things like dates, authors, and subjects.  This is a perfectly legitimate use of RSS 2.0.  The RSS 2.0 specification explicitly states that <q>a RSS feed may contain elements not described on this page, only if those elements are defined in a namespace</q>.  So anything goes, and it&#8217;s all good.  Furthermore, several Dublin Core elements (like <code>dc:date</code>) are well-supported in the current generation of aggregators.  So not only is it acceptable, it&#8217;s actually supported and useful, right now, today.</p>
+
+<p>However, in RSS 2.0, there are several things that you can express in two different ways.  Dates, for example.  Instead of <code>dc:date</code>, you could use <code>pubDate</code>.  Many people do this.  Given the choice, you may ask why I (and others) would choose to use Dublin Core instead?  The honest answer is, <em>either way works, but we like doing it this way</em>.  This brings me to my original point: respecting prior art.</p>
+
+<p>I have <a href="/web/20110514132810/http://www.intertwingly.net/blog/1460.html#c1055370738">previously taken the position</a> that using Dublin Core respects prior art, but using <code>pubDate</code> does not.  After doing some digging, I am reversing this position.  Both <code>pubDate</code> and <code>dc:date</code> respect prior art.</p>
+
+<p>Dublin Core has been around for years.  It was originally conceived in 1995 as a way of embedding common metadata (like titles, dates, and subjects) into many different types of data.  The original focus was on HTML, but there are now well-defined guidelines for expressing it in XML and RDF as well.  It is widely used, and <a href="/web/20110514132810/http://www.niso.org/international/SC4/n515.pdf" title="PDF">it&#8217;s even an ISO standard now</a>.</p>
+
+<p>Many people (myself included) have chastised Dave Winer in the past for not embracing Dublin Core explicitly in RSS 2.0.  BUT&#8230;  RSS 2.0 simply builds on the precedent set by the RSS 0.9x line.  When Dave introduced the item-level <code>pubDate</code> element in RSS 2.0, he was respecting prior art: the prior art of the original RSS 0.9x line.  Consider:</p>
+
+<p><a href="/web/20110514132810/http://www.purplepages.ie/RSS/netscape/rss0.90.html">Netscape&#8217;s RSS 0.90 specification</a> (March 1999) had no dates of any kind, but Netscape added a channel-level <code>pubDate</code> in <a href="/web/20110514132810/http://my.netscape.com/publish/formats/rss-spec-0.91.html">RSS 0.91</a> (July 1999).  (They also added <code>lastBuildDate</code>.)  These date elements were in <a href="/web/20110514132810/http://www.faqs.org/rfcs/rfc822.html">RFC-822 format</a>; that is, they were in the same format as the dates in email headers and HTTP headers.  This date format has persisted (with the addition of 4-digit years) to the present day.</p>
+
+<p>BUT&#8230; in 1999, why did Netscape add those elements to RSS 0.91, and why did they use that particular date format?  Well, they didn&#8217;t make them up; Netscape took them straight out of Dave&#8217;s competing syndication format, called <a href="/web/20110514132810/http://my.userland.com/stories/storyReader$11">scriptingNews format</a>.  (BTW, this is the basis of Dave&#8217;s claim that he &#8220;co-authored&#8221; RSS.  Please, let&#8217;s not go there today, OK?)</p>
+
+<p>Now, scriptingNews format predates RSS by a wide margin.  Dave started developing it back in 1997, and it had a <code>pubDate</code> element.  But he didn&#8217;t make up a new date format.  He used the one that&#8217;s always been used in email headers, as defined in RFC 822, which dates back to 1982.  (4-digit years were added in <del>RFC 2822</del> <a href="/web/20110514132810/http://www.faqs.org/rfcs/rfc1123.html">RFC 1123</a>.)</p>
+
+<p>Now, the <a href="/web/20110514132810/http://dublincore.org/documents/dces/">Dublin Core element set</a> was stable by 1997, when Dave started work on the scriptingNews format.  (Here&#8217;s <a href="/web/20110514132810/http://www.ariadne.ac.uk/issue10/dublin/">an article from July 1997</a> on how to use Dublin Core in HTML.)  BUT (a) Dublin Core was still very new, and (b) all the work being done with it focused on HTML.  I find no record of it being used in XML until 2000.</p>
+
+<p>BUT&#8230; the ISO 8601 date format (which is what Dublin Core uses, and which is the format <a href="/web/20110514132810/http://www.intertwingly.net/blog/1481.html">that Sam refers to as &#8220;easier to get right&#8221;</a>) <em>did</em> exist in 1997; it dates all the way back to 1988.  In fact, Microsoft&#8217;s early versions of CDF (<a href="/web/20110514132810/http://www.w3.org/TR/NOTE-CDFsubmit.html">submitted to the W3C in March 1997</a>, and later enhanced and used in Internet Explorer 4.0) defined a <code>LastMod</code> element that was a date in ISO 8601 format.</p>
+
+<p>BUT&#8230; the ISO 8601 date format that we know and love today (and that is used in Dublin Core, RSS 1.0, and some RSS 2.0 feeds), didn&#8217;t actually exist in 1997.  The specification we now call ISO 8601 <a href="/web/20110514132810/http://www.cs.tut.fi/~jkorpela/iso8601.html">is really ISO 8601:2000</a>, meaning that there was a revision of the standard in the year 2000.  The revision was made because the 1988 specification (<a href="/web/20110514132810/http://hydracen.com/dx/iso8601.htm">ISO 8601:1988</a>) defined an overly wide variety of date formats that, you guessed it, made it very difficult to parse.</p>
+
+<p><strong>Update:</strong> But wait!  There&#8217;s more!  <a href="/web/20110514132810/http://laughingmeme.org/">Kellan</a> notes that Dublin Core doesn&#8217;t actually use the <em>full</em> ISO 8601 specification, it uses a profile (a restricted subset) <a href="/web/20110514132810/http://www.w3.org/TR/NOTE-datetime">defined by the W3C</a>.  And when was this profile published?  Well, it was submitted in September 1997, but it wasn&#8217;t officially published until August 1998.  So it probably wasn&#8217;t widely known in 1997, when Dave was developing his scriptingNews format.</p>
+
+<p>To recap: in 1982, RFC 822 defined a date format.  In 1997, Dave Winer respected prior art by using that date format for the date elements in his syndication format.  <em>He could have chosen a different date format, but he didn&#8217;t, and his choice made good sense at the time.</em>  In 1999, Netscape respected prior art by taking elements from Dave&#8217;s scriptingNews format and not changing the date format.  In 2000, Dave Winer continued the RSS 0.9x line and respected his own and Netscape&#8217;s prior art by not changing the date format.  In 2002, Dave Winer respected this entire line of prior art by adding item-level <code>pubDate</code>, with the same date format.</p>
+
+<p>Now, none of this is to suggest that namespaces are bad.  That&#8217;s just ridiculous.  Namespaces were the biggest new feature in RSS 2.0; they are <a href="/web/20110514132810/http://www.intertwingly.net/blog/797.html#c1031184855">the very reason RSS 2.0 is called 2.0 and not 0.94</a>.  Yes, using <code>pubDate</code> also respects prior art.  But using Dublin Core also respects prior art, just a different lineage of prior art.  Using either in RSS 2.0 is absolutely legitimate, and every news aggregator I know of, that cares about dates, supports both.</p>
+
+<p>Furthermore, Dublin Core and ISO 8601 have <q>won</q> in the larger worldwide marketplace.  Outside of the Internet, virtually no one uses the RFC 822 date format.  If I were creating a brand new format today, any kind of format, for any reason, I would absolutely use the profile of the ISO 8601 date format <a href="/web/20110514132810/http://www.w3.org/TR/NOTE-datetime">published by the W3C</a>.  If I were creating an RDF-based format, or an XML-based format for namespace-aware consumers, I would absolutely use Dublin Core, straight up.  It&#8217;s here, it works, it&#8217;s its own ISO standard.  But RSS&#8217;s <code>pubDate</code> wasn&#8217;t invented today; it was invented in 1997.  It still works, and you can still use it in your RSS if you want.  I use Dublin Core.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Forty comments here (<a href=/web/20110514132810/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-2982"><p>So, let me get this straight. RFC2822 is the format used by the pubDate element in RSS 2.0, and looks like this: Fri, 21 Nov 1997 09:55:06 -0600</p>
+<p>ISO8601 is used in the dc:date element in RSS 1.0 (and sometimes RSS 2.0) and looks like this: 1998-05-12T14:15:00</p>
+<p>Both formats (at least according to their specifications) can contains more or less information, i.e the time can be left out and the time zone is optional.</p>
+<p>And to confuse matters even more, some feeds that have a pubDate element use ISO8601 (see my rant about RSS dates: <a href="/web/20110514132810/http://simon.incutio.com/archive/2003/04/04/lettingOffSomeSteam">http://simon.incutio.com/archive/2003/04/04/lettingOffSomeSteam</a> )</p>
+<p>I wish there was a vendor independant FAQ about all of this stuff, because when you combine all of the nuances it becomes pretty hard working out what to extract from an RSS feed.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://simon.incutio.com/' rel='external nofollow' class='url'>Simon Willison</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2982" title="June 21, 2003 @ 4:28 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2983"><p>I don&#8217;t see anything in the Netscape 0.91 spec that says that pubDate and lastBuildDate are RFC-822.  The one example given uses RFC-822 + 4-digit years, yes, but it&#8217;s never safe to extrapolate from examples; the example is in GMT, maybe all RSS dates need to be?</p>
+<p>UserLand&#8217;s 0.91 through 0.93 specs explicitely say RFC-822 dates; there&#8217;s nothing at all in the language of those specs that allows 4 digit years.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://molelog.molehill.org/blox/' rel='external nofollow' class='url'>Todd Larason</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2983" title="June 21, 2003 @ 4:49 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2984"><p>Actually RFC-1123 updated RFC-822 to use four digit years in October 1989. Strange enough four digit years were already in RFC-733 in November 1977, but were apparently dropped in RFC-822, which replaced RFC-733.</p>
+<p>If I understand it correctly, RSS 2.0 introduced both the pubDate field and the possibility of namespace extensions. In that case I find it strange to use this extension possibility to introduce a field that already exists.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.curioso.org/' rel='external nofollow' class='url'>Curioso</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2984" title="June 21, 2003 @ 7:04 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2985"><p>Okay, so both have a legitimate claim to be there.</p>
+<p>It&#8217;s still madness to keep pubDate.  Why?  It&#8217;s done better by Dublin Core, authors aren&#8217;t dependent upon pubDate, and readers find it easier to implement Dublin Core.</p>
+<p>So you have two choices: get rid of one, have a tiny amount of backwards compatibility to handle for a short amount of time, and end up ahead in the long run; or put it off, and force everyone to deal with the issues indefinitely.  It looks like Dave chose the latter for RSS 2.0, though I can&#8217;t understand why.</p>
+<p class=sig>&#8212;&#8201;<cite>Jim</cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2985" title="June 21, 2003 @ 7:36 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2986"><p>Great essay. Nicely balanced and very informative. Thanks.</p>
+<p>I think I&#8217;ll stick to using pubDate for the time being, but if I ever decide to use the wider range of dc: elements I will then change my feed to use dc:date. It somehow doesn&#8217;t seem worth the extra syntax bloat to use the dc: namespace for just this one element.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://mar.anomy.net/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2986" title="June 21, 2003 @ 7:56 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3010"><cite><a href='/web/20110514132810/http://www.dienstraum.com/mediamondo/archiv/week_2003_06_15.php#002048' rel='external nofollow' class='url'>DIENSTRAUM MediaMondo</a></cite>&#160;(trackback)</li>
+<li id="comment-2987"><p>Great essaie. I&#8217;d add that at one points there was one date format in RSS and the a second was introduced. I believe dc:date was added to the repertoire in RSS 1.0.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.kbcafe.com/iBLOGthere4iM/' rel='external nofollow' class='url'>Randy</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2987" title="June 21, 2003 @ 10:00 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2988"><p>more&#8230;<br />
+boing boing does have the 822 dates incorrect, but then both you and mark have the iso dates incorrect :) timezone is wrong</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.kbcafe.com/iBLOGthere4iM/' rel='external nofollow' class='url'>Randy</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2988" title="June 21, 2003 @ 10:21 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2989"><p>Dublin Core (and therefore RSS) actually specifies a profile of ISO 8601, a simplified subset of the format sometimes referred to as W3CDTF.  There spec is at:</p>
+<p><a href="/web/20110514132810/http://www.w3.org/TR/NOTE-datetime">http://www.w3.org/TR/NOTE-datetime</a></p>
+<p>Yes some of the pieces are optional, in fact nearly all of it is, but the spec gives clear examples of what is and isn&#8217;t optional, and generally it is a very straight forward spec, as datetime specs go. (be thankful you&#8217;re only parsing RSS and not iCal)</p>
+<p>Sorting:<br />
+The one piece the spec leaves unclear is comparing dates of different granularities (e.g. I post so infrequently that I use only the year for my dc:date, while you have to use fractional secdonds for yours)  This is supposed to be defined by the spec using the standard, a task that both Dublin Core, and RSS punt on.</p>
+<p>The general consensus for sorting dates is with missing info is, assume January 1st on a missing date, assume midnight on a missing time, assume GMT on missing timezone (though having time without a timezone violates the spec)</p>
+<p>Date geek will be horrified at the idea of conflating 2003 with 2003-01-01, but down that road lies madness.</p>
+<p>Parsing:<br />
+Also I&#8217;ve made some code for parsing W3CDTF available, both where quick jobs, so I don&#8217;t guarentee they&#8217;ve been fully debugged (maybe with more users :)</p>
+<p>In Perl, as part of the new Perl DateTime project:<br />
+<a href="/web/20110514132810/http://search.cpan.org/dist/DateTime-Format-W3CDTF/">http://search.cpan.org/dist/DateTime-Format-W3CDTF/</a></p>
+<p>And in PHP as part of my RSS parser Magpie, see parse_w3cdtf in rss_utils.inc:<br />
+<a href="/web/20110514132810/http://magpierss.sf.net/">http://magpierss.sf.net</a></p>
+<p>ps. Randy, Mark&#8217;s timezones look good to me.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://laughingmeme.org/' rel='external nofollow' class='url'>kellan</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2989" title="June 21, 2003 @ 10:49 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3011"><cite><a href='/web/20110514132810/http://www.bradchoate.com/past/001634.php' rel='external nofollow' class='url'>bradchoate.com</a></cite>&#160;(trackback)</li>
+<li id="comment-2990"><p>But while we&#8217;re complaining about RSS date formats, the one that is really really broken is the one used by the syndication module.</p>
+<p><a href="/web/20110514132810/http://purl.org/rss/1.0/modules/syndication/">http://purl.org/rss/1.0/modules/syndication/</a></p>
+<p>Utterly ambigous and non-descriptive.</p>
+<p><a href="/web/20110514132810/http://laughingmeme.org/archives/000392.html">http://laughingmeme.org/archives/000392.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://laughingmeme.org/' rel='external nofollow' class='url'>kellan</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2990" title="June 21, 2003 @ 11:07 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3012"><cite><a href='/web/20110514132810/http://www.pocketsoap.com/weblog/2003/06/1304.html' rel='external nofollow' class='url'>Simon Fell > Its just code</a></cite>&#160;(trackback)</li>
+<li id="comment-2991"><p>kellan, re: mark&#8217;s dates, sorry, must just be me</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.kbcafe.com/iBLOGthere4iM' rel='external nofollow' class='url'>Randy</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2991" title="June 21, 2003 @ 11:38 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2992"><p>Mark, there&#8217;s absolutely nothing wrong with using namespaces in RSS 2.0. </p>
+<p>Second, I chose the more reader-friendly date format for scriptingNews format. I was aware of the new format, I had seen it in stuff created by Microsoft, but I found it impossible to read. One of my goals for formats I design is that they be transparent and absolutely as easy as possible for non-technical people to understand. To me, this was the wonder of HTML, that people with very skimpy technical backgrounds could understand it very quickly. </p>
+<p>More on the subject of simplicity in formats.</p>
+<p><a href="/web/20110514132810/http://davenet.userland.com/2000/09/02/whatToDoAboutRss#rssIsAboutSimplicity">http://davenet.userland.com/2000/09/02/whatToDoAboutRss#rssIsAboutSimplicity</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.scripting.com/' rel='external nofollow' class='url'>Dave Winer</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2992" title="June 21, 2003 @ 12:43 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2993"><p>Mark, there&#8217;s absolutely nothing wrong with using namespaces in RSS 2.0. I disagree with some of the other things you say, I believe I am entitled to an opinion on what other weblog tools vendors do with content using the name RSS, much as they would be interested if one of their competitors changed what Trackback means or what the Blogger API means. I think you have obscured the issue, which is a shame, because it is an important one. </p>
+<p>Second, I did choose the more reader-friendly date format for scriptingNews format. I was aware of the new format, I had seen it in stuff created by Microsoft, but I found it hard to read. One of the goals for formats I design is that they be transparent and absolutely as easy as possible for non-technical people to understand. To me, this was the wonder of HTML, that people with very skimpy technical backgrounds could understand it very quickly. </p>
+<p>Further, since the more human-readable format had been around for a long time, and was use in email headers (as you note), I reasoned that most scripting environments would likely already have support for this format implemented. Even though it&#8217;s harder to parse than the newer format, it wasn&#8217;t that much harder to parse. I think this guess was a good one, I&#8217;ve rarely heard a complaint about this choice. </p>
+<p>More on the subject of simplicity in formats.</p>
+<p><a href="/web/20110514132810/http://davenet.userland.com/2000/09/02/whatToDoAboutRss#rssIsAboutSimplicity">http://davenet.userland.com/2000/09/02/whatToDoAboutRss#rssIsAboutSimplicity</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.scripting.com/' rel='external nofollow' class='url'>Dave Winer</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2993" title="June 21, 2003 @ 12:52 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2994"><p>Dave, Re: reader friendlyness:</p>
+<p>I find ISO dates are more readable than RFC822, because RFC822 assumes English and puts the month before the day. In Spanish (in Britain and in most Europe also, I think) you can understand both YYYY-MM-DD or DD-MM-YYYY, but MM-DD-YYYY is quite unnatural. RFC822 is somehow better than a MM-DD-YYYY format, because at least the month is in letters and this makes it less error prone, but for non-technical Spanish people it is still gibberish (I imagine this holds even more for, say, the 1000 millions of Chinese people).</p>
+<p>But I don&#8217;t really care, so long as the format is easily generatable and parseable in most tools or computer languages.</p>
+<p>Re: Timezone, I tend to prefer using &#8220;Z&#8221; for timestamps or other distributable dates in server side software, but current tool implementation status and bug^H^H^Hfeature sets :-) should be taken into account to avoid further mudding of an already wet field.</p>
+<p>The reason for using UTC is obvious if we consider the alternative is called &#8220;local&#8221; time.<br />
+What does &#8220;local&#8221; mean when I&#8217;m posting from a hotel in San Francisco to a host in Madrid, and pinging machines all around the world, and someone in next room is going to read my pings from a machine in say, Raleigh, VA?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://memojo.com/memojowiki/Wiki.jsp?page=SantiagoGalaBlog' rel='external nofollow' class='url'>Santiago Gala</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2994" title="June 21, 2003 @ 1:31 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3013"><cite><a href='/web/20110514132810/http://weblog.stanton-finley.org/archives/000071.html' rel='external nofollow' class='url'>Observations</a></cite>&#160;(trackback)</li>
+<li id="comment-2995"><p>Santiago &#8212; good point about readability. What I said applies to the US only. We have a nasty habit here of thinking the world revolves around us, and I say that with no sarcasm.</p>
+<p>If I were new to RSS, I would do what I did in the past with HTML and HTTP, find a source that is universally supported and mimic what they do. I did that over and over with Yahoo, figuring if they did something one way, that it had been vetted through lots of iteration and testing, and that if people were going to complain about it, they&#8217;d go to them first, because they&#8217;re so much larger. Same with Apache, Netscape, MSIE. So if I were new to RSS, I&#8217;d mimic the most popular feeds, the ones that the aggregators likely test against, the ones who if they broke them they&#8217;d have to fix their aggregator.</p>
+<p>We used that technique with MORE in the 80s with good results, we always tried to surf in Microsoft&#8217;s wake (they were notoriously difficult for Apple to keep from breaking). We figured we could probably get away with anything they were doing. We also looked at Aldus the same way.</p>
+<p>End of ramble.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.scripting.com/' rel='external nofollow' class='url'>Dave Winer</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2995" title="June 21, 2003 @ 2:06 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3014"><cite><a href='/web/20110514132810/http://www.plaidworks.com/chuqui/blog/000506.html' rel='external nofollow' class='url'>Teal Sunglasses</a></cite>&#160;(trackback)</li>
+<li id="comment-2996"><p>Hasn&#8217;t HTML used 8601 in the datetime attributes of the &lt;ins> and &gt;del> elements since 1997?</p>
+<p>2003-06-21T20:45:00Z</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://pipthepixie.tripod.com/' rel='external nofollow' class='url'>Phil Wilson</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2996" title="June 21, 2003 @ 3:56 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2997"><p>Including a local time offset provides more useful information to associate with a post or comment. It can be relevant to supply the time of day as it gives the audience an idea about whether something was written at 4.00am or 1.00pm, for example, where UTC might not. The time on this comment, when posted, will not be representative of the time it is here (actually, it&#8217;s out by 10 hours and 11 minutes).</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2997" title="June 21, 2003 @ 8:22 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2998"><p>Santiago: dd/mm/yyyy is also the date format used within Australia as well. As far as I know mm/dd/yyyy is used exclusively within America. I wonder how on earth that came to happen, anyway?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2998" title="June 21, 2003 @ 9:36 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2999"><p>Lach: When Americans say dates aloud, we say things like &#8220;June twenty-first, 2003&#8243;. This translates naturally to a format like 6/21/03. (The expaded version, 06/21/2003 is rarely if ever seen.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.eyrie.org/~zednenem/' rel='external nofollow' class='url'>Dave Menendez</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-2999" title="June 21, 2003 @ 10:02 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3015"><cite><a href='/web/20110514132810/http://www.virtuelvis.com/archives/88.html' rel='external nofollow' class='url'>Virtuelvis</a></cite>&#160;(trackback)</li>
+<li id="comment-3000"><p>re. &#8220;funky&#8221; &#8211; yeah, agreed.<br />
+Nice to see the history, thanks Mark. </p>
+<p>Personally I&#8217;d come down strongly in favour of ISO 8601/W3CDTF for purely practical reasons, irrespective of any prior art.</p>
+<p>Away from RSS, I&#8217;ve experienced serious mixups more than once thanks to the US/UK difference on (numeric) mm/dd/yy and dd/mm/yy. As Santiago points out, using the names is hopeless outside of anglo-speaking countries. </p>
+<p>Another significant point that was touched on for other reasons is sorting. W3CDTF&#8217;s sort order is (more or less) the same chronologically and alphabetically. I&#8217;ve started calling folders of photos according to the date as yyyy-mm-dd because is just stacks up right on the file system automagically. </p>
+<p>I don&#8217;t think Dave&#8217;s argument about RFC-822 being easier for users holds very well &#8211; it may be easier (for Americans) to read in the &#8216;view source&#8217; sense, but is harder to parse, so it&#8217;s making extra work for the end user. Unless of course the aim is to merely pass on the date unchanged, in which case why mark it up at all? Let&#8217;s have one-element syndication &#8211; surely content is all you need?</p>
+<p>Finally my usual crit of RSS 2.0 also applies &#8211; pubDate is used just in this stovepipe application domain (blog/newsreading), dc:date can be used *anywhere* (and is being &#8211; aside from RDF, note the use of DC.Date in HTML headers).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://dannyayers.com/' rel='external nofollow' class='url'>Danny Ayers</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3000" title="June 22, 2003 @ 5:45 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3001"><p>I do not understand the practical reasons for choosing the ISO dates. The RFC dates are just as unambiguous, compare &#8220;Sun, 22 Jun 2003 15:55 +0200&#8243; versus &#8220;2003-06-22T15:55+02:00&#8243;. I find the ISO dates somewhat more ambiguous, because something like &#8220;2003-06-22T01:00-05:00&#8243; could be interpreted as between one and five in the night&#8230; Also GMT to me is more clear than Z&#8230; I do not think either of the formats is clearly better or worse than the other, they both originate from a christian-centred world, and thus discriminate against other religions. Internet protocols and formats are english oriented anyway; maybe we should switch to numbered fields or latin, so that everybody has the same disadvantage ;-)))</p>
+<p>This seems to be e recurring cycle in discussions about data formats, to prefer machine readable over human readable, or vice versa. The Internet has a long history in preferring human readable formats, and this is an aspect I like. But since the Internet boom a lot of people have joined from other backgrounds, and are trying to push their side, leading to obfuscation and introduction of variant formats where none are really necessary.</p>
+<p>Seeing that a date is an essential attribute of a weblog entry, I think a date field should be part of the RSS specification, and not be delegated to an extension. Note that RFC-822 specifies a full timestamp, while dc:date leaves a lot open; in practical use of Dublin Core often just a date or year is used, and the time is omitted.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.curioso.org/' rel='external nofollow' class='url'>Curioso</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3001" title="June 22, 2003 @ 10:08 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3002"><p>Curioso: One of the advantages of ISO dates, is sorting and comparing. Since the order of magnitue decreases the further you read to the right, they can be sorted and compared with simple text comparisions [*].  For RFC dates, you first need to put the separate elements of the date into a fitting data structure.</p>
+<p>[*] You will, however, as with RFC Dates need to comvert to a common timezone.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3002" title="June 22, 2003 @ 10:51 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3003"><p>The sorting argument is nice as long as you do not have timezones. I also use YYYYMMDD strings in filenames and folders that I want to keep sorted. But converting 1999-12-31T23:00-05:00 to 2000-01-01T04:00Z is not really trivial, and it is easily overlooked that this is necessary for sorting to work.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.curioso.org/' rel='external nofollow' class='url'>Curioso</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3003" title="June 22, 2003 @ 11:24 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3004"><p>kellan, Sam adjusted his timezone. Must not of been just me.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://www.kbcafe.com/iBLOGthere4iM' rel='external nofollow' class='url'>Randy</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3004" title="June 22, 2003 @ 7:26 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3016"><cite><a href='/web/20110514132810/http://napps.nwfusion.com/compendium/archive/003008.html' rel='external nofollow' class='url'>Compendium</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-3017"><cite><a href='/web/20110514132810/http://www.rodentregatta.com/archives/004643.php' rel='external nofollow' class='url'>Rodent Regatta</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-3018"><cite><a href='/web/20110514132810/http://www.thereisnocat.com/showme490.html' rel='external nofollow' class='url'>There Is No Cat</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-3019"><cite><a href='/web/20110514132810/http://www.innoq.com/blog/st/archives/000164.html' rel='external nofollow' class='url'>Random Stuff</a></cite>&#160;(trackback)</li>
+<li id="comment-3005"><p>I&#8217;ve actually started dating my checks in 8601 format. It&#8217;s so simple! Year-month-date. Can&#8217;t beat it.<br />
+To the poster who said negative timezones could be confused with durations, I believe the spec dictates using forward slashes to indicate duration. For example, I wrote this message 2003-06-24T12:39:33/42:09</p>
+<p class=sig>&#8212;&#8201;<cite>d chalmers</cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3005" title="June 24, 2003 @ 4:53 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3006"><p>I&#8217;ve actually started dating my checks in 8601 format. It&#8217;s so simple! Year-month-day. Can&#8217;t beat it.</p>
+<p class=sig>&#8212;&#8201;<cite>d chalmers</cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3006" title="June 24, 2003 @ 8:30 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3020"><cite><a href='/web/20110514132810/http://www.maximumaardvark.com/archives/2003/06/26.html#001910' rel='external nofollow' class='url'>Maximum Aardvark</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-3021"><cite><a href='/web/20110514132810/http://www.maximumaardvark.com/archives/2003/06/26.html#001910' rel='external nofollow' class='url'>Maximum Aardvark</a></cite>&#160;(trackback)</li>
+<li id="comment-3007"><p>Given the feed formats are data formats, what does it matter if the date format is readable or not by humans?</p>
+<p>Shouldn&#8217;t the aggregator format the datetimes how the user wants? Perhaps even by converting to the user&#8217;s local time.</p>
+<p>It&#8217;s certainly something I&#8217;ve been meaning to add to the mail reader I use.</p>
+<p>(Oh, and the guy who said RFC822 had months before days &#8212; um, no, it doesn&#8217;t.)</p>
+<p>[for those interested, like Kellan I'm helping with the Perl DateTime project. I did DateTime::Format::Mail which handles RFC822, RFC2822 and assorted bastardisations that are common in the wild. Kellan's W3CDTF module is far simpler, lending credence to W3CDTF being a nicer format for these things.]</p>
+<p><a href="/web/20110514132810/http://search.cpan.org/~spoon/DateTime-Format-Mail/">http://search.cpan.org/~spoon/DateTime-Format-Mail/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://iain.truskett.id.au/' rel='external nofollow' class='url'>Iain Truskett</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3007" title="June 26, 2003 @ 9:25 pm"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3008"><p>Why human readable dates? Because developers aren&#8217;t perfect. If every single program written to produce RSS was absolutely perfect at divining what time it is (in UTC, in the server&#8217;s timezone, and in the user&#8217;s timezone, even if the server is in P(S|D)T and the user is in Israel, where daylight savings time is determined by fiat, based on how the holy days fall out in a particular year), then humans wouldn&#8217;t ever need to read it. But as it is, most of the feeds I subscribe to are accurately timed for half the year, and a great many more aren&#8217;t ever right. My favorite counter-argument to &#8220;developers will save us, users don&#8217;t need to ever look at the nasty bits&#8221; is to point at the first month or two of RSS-DEV messages, and ask how many of the developer promises have been broken.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://philringnalda.com/' rel='external nofollow' class='url'>Phil Ringnalda</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3008" title="June 27, 2003 @ 2:47 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3009"><p>That&#8217;s the joy of W3CDTF. Timezones are offsets. Only exception is that of Z, which is +00:00. Most languages have a gmtime function, or similar. The only problem is when the generating machine&#8217;s clock is out. None of this &#8216;CDT&#8217;, &#8216;PST&#8217;, whatever, nonsense.</p>
+<p>Yes, most developers tend to mess up their time handling. Most languages have crappy support for timezones. W3CDTF does tend to be easier to get right than *822 style. If things are, on average, tending more toward correct, then things are good.</p>
+<p>As Mark mentioned in his original entry, people tend to use whatever date format they feel like. So even if we encourage particular formats, what does it matter? We may as well encourage a decent, tidy, format. People will get it wrong no matter what. Heck, RFC822 has been around for *ages*, yet people writing mail programs still get it wrong. My module that I mentioned earlier has a test suite. One file, t/invalid.t, tests that the module &#8216;correctly&#8217; doesn&#8217;t handle particular dates that I&#8217;ve found in the wild. I go to a number of lengths if the parser is in loose mode, but I won&#8217;t go as far as parsing these failures.</p>
+<p><a href="/web/20110514132810/http://search.cpan.org/src/SPOON/DateTime-Format-Mail-0.25/t/invalid.t">http://search.cpan.org/src/SPOON/DateTime-Format-Mail-0.25/t/invalid.t</a></p>
+<p>Anyway, are you suggesting that you read raw RSS as part of your daily aggregating? I think having an easier to format and easier to parse datetime string would tend to more accuracy. If even one more feed has an accurate set of times because of that, then that&#8217;s good.</p>
+<p>Hmm. My apologies if I&#8217;m sounding argumentative. I&#8217;m just a proponent of user ease rather than developer ease, and in this case I think helping the developer helps the user. Win-win.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110514132810/http://iain.truskett.id.au/' rel='external nofollow' class='url'>Iain Truskett</a></cite>&#160;<a class=p href="/web/20110514132810/http://diveintomark.org/archives/2003/06/21/history_of_rss_date_formats#comment-3009" title="June 27, 2003 @ 3:28 am"><img alt="#" src=/web/20110514132810im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110514132810/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110514132810/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110514132810/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110514132810/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110514132810/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 1.049 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-04 18:38:35 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 13:28:10 May 14, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:13:55 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

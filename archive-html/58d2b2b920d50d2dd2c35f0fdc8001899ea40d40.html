@@ -1,0 +1,497 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Cantor sets [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20101214231142/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20101214231142/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20101214231142/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20101214231142im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20101214231142/http://diveintomark.org/archives/2003/12/01/aggregators" title="Aggregator usage is a power law too">
+<link rel=next href="/web/20101214231142/http://diveintomark.org/archives/2003/12/04/infinite-hotel" title="The infinite hotel">
+<link rel=up href="/web/20101214231142/http://diveintomark.org/archives#p1449" title="December 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Cantor sets Comments Feed" href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets/feed" />
+<link rel='index' title='dive into mark' href='/web/20101214231142/http://diveintomark.org/' />
+<link rel='prev' title='Aggregator usage is a power law too' href='/web/20101214231142/http://diveintomark.org/archives/2003/12/01/aggregators' />
+<link rel='next' title='The infinite hotel' href='/web/20101214231142/http://diveintomark.org/archives/2003/12/04/infinite-hotel' />
+<link rel='canonical' href='/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets' />
+<link rel='shortlink' href='/web/20101214231142/http://diveintomark.org/?p=1449' />
+<meta name="description" content="There are an infinite number of points in the Cantor set. There are also an infinite number of points within the original line segment which are not in the Cantor set. Both of these numbers are equally large, and both are as large as the number of points in the original line segment.">
+<meta name="keywords" content="cantor,infinity,math">
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+@font-face {font-family: 'LatinModernRoman10Regular';src: url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.eot');src: local('☺'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.woff') format('woff'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.ttf') format('truetype'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.svg#webfontg3VAmqr8') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'LatinModernRomanSlanted10Regu';src: url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.eot');src: local('☺'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.woff') format('woff'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.ttf') format('truetype'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.svg#webfont5pLJWgYw') format('svg');font-weight: normal;font-style: oblique;}
+@font-face {font-family: 'LatinModernRoman10Bold';src: url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.eot');src: local('☺'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.woff') format('woff'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.ttf') format('truetype'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.svg#webfontDIaNd4lG') format('svg');font-weight: bold;font-style: normal;}
+@font-face {font-family: 'LatinModernRoman10BoldItalic';src: url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.eot');src: local('☺'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.woff') format('woff'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.ttf') format('truetype'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.svg#webfontVm6n5sgb') format('svg');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'LatinModernMono10Regular';src: url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.eot');src: local('☺'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.woff') format('woff'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.ttf') format('truetype'), url('/web/20101214231142/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.svg#webfontThQaD2ST') format('svg');font-weight: normal;font-style: normal;}
+html{background:white url(/web/20101214231142/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium 'LatinModernRoman10Regular',serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:'LatinModernRomanSlanted10Regu',serif;font-style:oblique}
+strong,b{font-family:'LatinModernRoman10Bold',serif;}
+pre,code,var,samp,kbd,tt{font-family:'LatinModernMono10Regular',monospace;}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/12\/03\/cantor-sets";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "Dec";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/12/03/cantor-sets" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101214231142" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101105113240/http://diveintomark.org/archives/2003/12/03/cantor-sets" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="5 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:11:42 Dec 14, 2010">DEC</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jan
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101121183034/http://diveintomark.org/archives/2003/12/03/cantor-sets" title="18:30:34 Nov 21, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:11:42 Dec 14, 2010">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20091124193850/http://diveintomark.org/archives/2003/12/03/cantor-sets" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Nov 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:11:42 Dec 14, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2011
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20101214231142*/http://diveintomark.org/archives/2003/12/03/cantor-sets" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>37 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Jun 06 - 14 Dec 10</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000002221044_2007:-1:610121000001_2008:-1:010101100000_2009:-1:100000000010_2010:11:000001000021_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20101214231142/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20101214231142/http://diveintomark.org/archives#p1449">December 3, 2003</a> &#8227;
+<h2>Cantor sets</h2> (<a href="/web/20101214231142/http://diveintomark.org/tag/cantor" rel="tag">cantor</a>, <a href="/web/20101214231142/http://diveintomark.org/tag/infinity" rel="tag">infinity</a>, <a href="/web/20101214231142/http://diveintomark.org/tag/math" rel="tag">math</a>)</div>
+<p>To construct the Cantor set, take a line segment of finite length, say from 0 to 1, and take out the middle third.  You are left with two segments of equal length (1/3), and a space in between.  Now cut each of the two remaining segments into thirds, so you are left with 4 segments each of length 1/9.  Do this forever, and the points you have left make up the Cantor set.</p>
+
+<p><a href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#endcantorset">Skip over ASCII art</a></p>
+
+<pre>
+0      1/3       2/3      1
+***************************  Original segment
+
+*********         *********  Step 1
+
+***   ***         ***   ***  Step 2
+
+* *   * *         * *   * *  Step 3
+</pre>
+
+<p id="endcantorset">And so forth.</p>
+
+<p>There are an infinite number of points in the Cantor set.  There are also an infinite number of points within the original line segment which are not in the Cantor set.  Both of these numbers are equally large (in technical terms, they have the same cardinality), and both are as large as the number of points in the original line segment.  The Cantor set is an infinite number of points spread over a finite line segment which, combined, have 0 length.</p>
+
+<p>A 2-dimensional version of this is called a Sierpinski carpet.  To construct it, take a solid square, break it into a 3 x 3 grid of squares (like a tic-tac-toe board), and remove the middle square.  You are left with 8 squares around an empty space.  Do the same thing to each of these 8 squares, and so on forever.</p>
+
+<p>I once rendered <a href="/web/20101214231142/http://diveintomark.org/tmp/fractal.html">an approximation of a Sierpinski carpet</a> using nothing but nested tables.  <a href="/web/20101214231142/http://en.wikipedia.org/wiki/Sierpinski_carpet">Here&#8217;s a more detailed image</a> in the Wikipedia.  A Sierpinski carpet contains an infinite number of solid squares that combine to have 0 area.</p>
+
+<p>A 3-dimensional version of this is called a Menger sponge.  To construct it, start with a solid cube.  Split each face into 9 squares and drill out the center square, all the way to the opposing face of the cube.  This will leave you with 20 smaller cubes.  Do the same thing to each of them, and so on forever.  If this is confusing, <a href="/web/20101214231142/http://images.google.com/images?q=menger+sponge">here are a number of images</a> to help you visualize the process and the result.  Someone built an approximation of a Menger sponge <a href="/web/20101214231142/http://www.origami.as/gallery.php?gallery=14&image=181">entirely out of business cards</a>, and someone else <a href="/web/20101214231142/http://www.fractal-landscapes.co.uk/images2.html">made a poster of one</a>.</p>
+
+<p>A Menger sponge has infinite surface area but 0 volume.  Each face of a Menger sponge forms a Sierpinski carpet, and each cross-section diagonal of a Menger sponge forms a Cantor set.</p>
+
+<p>Tomorrow we&#8217;ll see why there are more real numbers between 0 and 1 than there are integers in the entire universe.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty nine comments here (<a href=/web/20101214231142/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-5475"><p>This reminds me of a paradox from Calculus III.  </p>
+<p>Take a function like y = 1 / x from 1 -> infinity and rotate it about the x axis.  It has infinite length and therefore infinite surface area, but finite volume.</p>
+<p>So you could never paint the surface, but you could fill the interior with paint.  ;-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://ziggy@panix.com/' rel='external nofollow' class='url'>ziggy</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5475" title="December 3, 2003 @ 3:23 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5476"><p>I once took a 4th-year undergrad math course in something called &#8220;Measure theory&#8221; of which I recall very little; a set can have something called &#8220;Measure&#8221; &#8211; if the set is points on a line, the measure is non-zero if it includes &#8220;contiguous chunks&#8221; of the line.</p>
+<p>The orgasmic climax of the course came during the last lecture when the prof proved that the Cantor set had the cardinality of the continuum (i.e. is uncountable) but nonetheless measure zero.  The fact that I was unable to care about this was a premonition that I was headed away from math career-wise.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.tbray.org/ongoing/' rel='external nofollow' class='url'>Tim Bray</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5476" title="December 3, 2003 @ 3:30 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5477"><p>Because there are no integers *in* the universe! </p>
+<p>(I&#8217;m assuming that you are going to whip out the diagonal argument, but just for laughs, on a technical note, I think we are all Platonists to the extent that there are no integers in the universe.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://sylloge.com/' rel='external nofollow' class='url'>Stewart</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5477" title="December 3, 2003 @ 3:31 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5478"><p>And here I was telling Mark in IRC that Lynne and I were just discussing sets of Lebesgue measure 0 at the dinner table a couple weeks ago. I can only wonder at the damage caused to my children&#8217;s mental health.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://bitworking.org/' rel='external nofollow' class='url'>Joe</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5478" title="December 3, 2003 @ 3:36 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5479"><p>I just got done reading David Foster Wallace&#8217;s &#8220;Everything and More&#8221;, which is as good of an explaination of the history of infinity as applies to mathematics as anyone can hope to do without having a doctorate.  Because of that book, I actually already know how to prove what you&#8217;re going to show us tomorrow.</p>
+<p>Plus, he&#8217;s a great writer and makes the stuff accessible even if you haven&#8217;t had college math (which I have), and clearly delineates things that are IYI (If You&#8217;re Interested) only.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://feralboy.com/' rel='external nofollow' class='url'>Matt Comroe</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5479" title="December 3, 2003 @ 3:37 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5480"><p>Tim, that&#8217;s called the Lebesgue measure, and yes, the Cantor set has measure 0, which is (as mathematicians say) interesting.  Also interesting is the fact that you can construct variations of the Cantor set using other fractions (say, lopping off 1/4 of each segment instead of 1/3) and the resulting set will always have measure 0.  I believe this can be generalized to any rational number between 0 and 1.</p>
+<p>However, the *really* interesting part is that if you lop off a smaller and smaller amount in each step, you can construct a set with is homeomorphic to the Cantor set, but has a measure greater than 0.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5480" title="December 3, 2003 @ 3:37 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5481"><p>this reminds me of a problem i read about someone solving recently, but i can&#8217;t find a source right now. it&#8217;s something like this: before you can walk any distance, you have to walk half the distance, and before you can walk that half, you have to walk half of that half, and so on into infinity. so any distance contains an infinite number of smaller distances, which should take us an infinite amount of time to walk. but for some reason it doesn&#8217;t.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://weblog.randomchaos.com/' rel='external nofollow' class='url'>Scott Reynen</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5481" title="December 3, 2003 @ 3:37 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5482"><p>i smell a diagonalization proof coming&#8230; :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.columbia.edu/~anders/' rel='external nofollow' class='url'>anders</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5482" title="December 3, 2003 @ 3:39 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5483"><p>Well, geez, if everybody who adds a dimension to a Cantor set gets to name it, can I claim the tesseract version?  I just need to come up with a noun that describes an infinitely empty fourth-dimensional structure and: ta-da, the Knauss vacation.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.eod.com/' rel='external nofollow' class='url'>Greg Knauss</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5483" title="December 3, 2003 @ 3:39 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5484"><p>There&#8217;s only one thing worse than a Mac geek&#8230; and thats a MATH geek ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://thedevilsadvocate.org/' rel='external nofollow' class='url'>Adrian</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5484" title="December 3, 2003 @ 3:41 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5485"><p>Scott, that&#8217;s called Zeno&#8217;s paradox, and it rests on the fact that the sum of an infinite series can yield a finite result.</p>
+<p>Interestingly, there is a road near my house called Zeno Road.  It is a dead-end in both directions (you can only enter it from a cross street in the middle).  I used to have a running route where I jogged to the end of Zeno Road, and back.  Beat that with a stick.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5485" title="December 3, 2003 @ 3:42 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5486"><p>I always heard it called the Sierpinsky Sponge, when did it get changed to Menger?</p>
+<p>BTW, if you&#8217;re into this sort of stuff, I highly recommend the seminal cyberpunk novel &#8220;White Light, or What Is Cantor&#8217;s Continuum Problem?&#8221; by Rudy Rucker. It was out of print for years and extremely rare, but now it&#8217;s back in print.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://ceicher.homeunix.com/' rel='external nofollow' class='url'>Charles</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5486" title="December 3, 2003 @ 3:45 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5487"><p>Scott, you&#8217;re thinking of Zeno&#8217;s paradox. see: <a href="/web/20101214231142/http://www.mathacademy.com/pr/prime/articles/zeno_tort/index.asp">http://www.mathacademy.com/pr/prime/articles/zeno_tort/index.asp</a></p>
+<p>also Douglas Hofstadter&#8217;s book, Goedel Escher Bach, has a good discussion of the resolution of the paradox (along with a lot of other fun stuff).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.columbia.edu/~anders/' rel='external nofollow' class='url'>anders</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5487" title="December 3, 2003 @ 3:46 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5488"><p><a href="/web/20101214231142/http://en2.wikipedia.org/wiki/Aleph-null">http://en2.wikipedia.org/wiki/Aleph-null</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.intertwingly.net/blog/' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5488" title="December 3, 2003 @ 4:01 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5489"><p>For those who can&#8217;t bear the suspense, here&#8217;s the spoiler:</p>
+<p><a href="/web/20101214231142/http://minutillo.com/ponderful/mti.php">http://minutillo.com/ponderful/mti.php</a> &#8211; diagonalization away!</p>
+<p>The best thing about this topic is you get to talk about &#8501;.</p>
+<p>I &#9829; &#8501;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://minutillo.com/steve/weblog/' rel='external nofollow' class='url'>steve minutillo</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5489" title="December 3, 2003 @ 4:07 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5490"><p>_G�del, Escher, Bach_ should be required reading in any vaguely science-related field.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://zenaku.net/' rel='external nofollow' class='url'>kami</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5490" title="December 3, 2003 @ 4:13 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5491"><p>Mathworld has cool spinnning Java3D Menger sponges.</p>
+<p><a href="/web/20101214231142/http://mathworld.wolfram.com/MengerSponge.html">http://mathworld.wolfram.com/MengerSponge.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://zenaku.net/' rel='external nofollow' class='url'>kami</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5491" title="December 3, 2003 @ 4:28 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5492"><p>Aleph-Null bottles of beer on the wall,<br />
+       Aleph-Null bottles of beer<br />
+     You take one down &#038; pass it around<br />
+       Aleph-Null bottles of beer on the wall!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5492" title="December 3, 2003 @ 4:42 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5493"><p>Aleph-One bottles of beer on the wall,<br />
+Aleph-One bottles of beer<br />
+Take infinity down &#038; pass them around<br />
+Aleph-One bottles of beer on the wall!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5493" title="December 3, 2003 @ 4:44 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5494"><p>Will be be doing the Infinite Hotel thing as well? Ah go on&#8230;</p>
+<p>And I can second the recommendation of White Light.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.bofh.org.uk:8080/' rel='external nofollow' class='url'>Piers Cawley</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5494" title="December 3, 2003 @ 5:10 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5495"><p>But what about angular momentum?</p>
+<p class=sig>&#8212;&#8201;<cite>dws</cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5495" title="December 3, 2003 @ 5:13 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5496"><p>This reminds me of a graphics programming class in college.. </p>
+<p>Not that this adds much to the discussion, but there it is anyway.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.unix-girl.com/blog/' rel='external nofollow' class='url'>kasia</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5496" title="December 3, 2003 @ 5:21 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5497"><p>Good.</p>
+<p>Why?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5497" title="December 3, 2003 @ 5:21 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5498"><p>// I used to have a running route where I jogged to the end of Zeno Road, and back. //</p>
+<p>Did you then jog halfway to the end and back, and then _quarterway to the end and back, and so on ad infinitum?</p>
+<p>And how long did it take?</p>
+<p class=sig>&#8212;&#8201;<cite>James Kew</cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5498" title="December 3, 2003 @ 5:57 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5499"><p>&lt;comment type=&#8221;self promotion&#8221; mode=&#8221;shameless&#8221;&gt;</p>
+<p>So, when I was at sixth form (which I think roughly corresponds of high school is the US &#8211; age 17-18), I helped produce the maths magazine, which was shamelessly called Hypotenews. Better still, I produced an HTML version, which has been preserved in all its invalid glory here:<br />
+<a href="/web/20101214231142/http://zeus.jesus.cam.ac.uk/~jg307/hypo/index.html">http://zeus.jesus.cam.ac.uk/~jg307/hypo/index.html</a><br />
+Not only that, but one of the longest and most tedious articles I ever wrote for the magazine was all about infinite numbers, it contains a lot of the topics that Mark&#8217;s mentioning:<br />
+<a href="/web/20101214231142/http://zeus.jesus.cam.ac.uk/~jg307/hypo/h12/hypotenews.html">http://zeus.jesus.cam.ac.uk/~jg307/hypo/h12/hypotenews.html</a><br />
+The writing sucks. Sorry.<br />
+In fact, the cover of issue 12 contained a Menger Sponge (well, a picture of one):<br />
+<a href="/web/20101214231142/http://zeus.jesus.cam.ac.uk/~jg307/hypo/h13/hypotenews.html">http://zeus.jesus.cam.ac.uk/~jg307/hypo/h13/hypotenews.html</a><br />
+Not only that, but if anyone owns a Casio 9750G calculator, we published programs you can use to generate mandelbrot and julia set fractals:<br />
+<a href="/web/20101214231142/http://zeus.jesus.cam.ac.uk/~jg307/hypo/h13/hypotenews.html">http://zeus.jesus.cam.ac.uk/~jg307/hypo/h13/hypotenews.html</a><br />
+(yeah, that&#8217;s really loosley related, I&#8217;m really wondering if anyone else in the world has those calculators)</p>
+<p>I should say, there seems to be a character coding issue that I need to sort out; hopefully it won&#8217;t impair readability.</p>
+<p>Mark, I&#8217;m very impressed by your tables-only Sierpinski carpet.<br />
+&lt;/comment&gt;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://zeus.jesus.cam.ac.uk/~jg307/' rel='external nofollow' class='url'>jgraham</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5499" title="December 3, 2003 @ 5:59 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5500"><p>jgraham: thanks.  I would just like to add that my Sierpinski carpet is valid XHTML 1.1.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5500" title="December 3, 2003 @ 6:05 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5501"><p>Argh. I messed those links up. Whose stupid idea was it to use frames?*</p>
+<p>Infinity:<br />
+<a href="/web/20101214231142/http://zeus.jesus.cam.ac.uk/~jg307/hypo/h12/infinity.html">http://zeus.jesus.cam.ac.uk/~jg307/hypo/h12/infinity.html</a></p>
+<p>Fractal programs:<br />
+<a href="/web/20101214231142/http://zeus.jesus.cam.ac.uk/~jg307/hypo/h13/calcguide.html">http://zeus.jesus.cam.ac.uk/~jg307/hypo/h13/calcguide.html</a></p>
+<p>Sorry.</p>
+<p>*Mine. But I really regret it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://zeus.jesus.cam.ac.uk/~jg307/' rel='external nofollow' class='url'>jgraham</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5501" title="December 3, 2003 @ 6:05 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5502"><p>Charles, I think the 3D Sierpinski one is called a Sierpinski gasket, and it&#8217;s triangular.  I think.  I found out about Menger sponges after running into the business card version&#8230;</p>
+<p>kami, we&#8217;ve all got cool spinning 3D Menger Sponge applets, right?<br />
+<a href="/web/20101214231142/http://www.tom-carden.co.uk/p5/menger_flat_mouse/applet/">http://www.tom-carden.co.uk/p5/menger_flat_mouse/applet/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.tom-carden.co.uk/' rel='external nofollow' class='url'>Tom</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5502" title="December 3, 2003 @ 8:15 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-5513"><cite><a href='/web/20101214231142/http://earthlingsoft.net/ssp/blog/2003/12/good_bad' rel='external nofollow' class='url'>Quarter Life Crisis</a></cite>&#160;(trackback)</li>
+<li id="comment-5503"><p><a href="/web/20101214231142/http://mathworld.wolfram.com/SierpinskiSponge.html">http://mathworld.wolfram.com/SierpinskiSponge.html</a></p>
+<p>Tom: okay, you got the Menger. How about the Sierpinski? Oh, and that would be &#8220;tetrahedral&#8221;, not &#8220;triangular&#8221;. ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://zenaku.net/' rel='external nofollow' class='url'>kami</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5503" title="December 3, 2003 @ 9:08 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5504"><p>Re: comment #1, that&#8217;s called Gabriel&#8217;s horn, and was considered a paradox when it was first discovered in the 17th century.  The empiricists were the dominant philosophical paradigm of the era, and they believed that our finite minds could never comprehend the infinite because all our comprehension was based on sense impressions, which were necessarily finite.  This seems ridiculous nowadays, but I guess most overthrown paradigms are like that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5504" title="December 3, 2003 @ 9:21 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5505"><p>If you&#8217;re interested in Cantor sets, a friend of mine wrote up a proof about the sums of Cantor sets some months ago &#8211; that is, the startling fact that any number in the interval [0,2] can be represented as the sum of two points in the middle-third Cantor set defined on [0,1]. It&#8217;s very informative and quite funny: <a href="/web/20101214231142/http://meghanrose.blogspot.com/2003_04_01_meghanrose_archive.html#93439869">http://meghanrose.blogspot.com/2003_04_01_meghanrose_archive.html#93439869</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://cpe000103c34069-cm014300001653.cpe.net.cable.rogers.com/weblogs/ben/' rel='external nofollow' class='url'>Gnomon</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5505" title="December 4, 2003 @ 12:21 am"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5506"><p>I did Calc II OK but am lost.  Have dumped a bunch of PDFs of all this and hope I will be as wise as the rest of you tomorrow when I&#8217;ve had some sleep.  :)</p>
+<p class=sig>&#8212;&#8201;<cite>Jerry</cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5506" title="December 4, 2003 @ 12:26 am"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5507"><p>When I was in fifth grade (age 10ish) there was a wooden cone at school sliced into three pieces that revealed three conic sections: circle, ellipse, and parabola.  At the time I was curious to know what the relationship was between the slope of the intersecting plane relative to the axis of the cone and the resulting conic section.  I didn&#8217;t have the vocabulary to articulate it that way at the time, but that&#8217;s what I wanted to know.</p>
+<p>Fast forward to college.  I enrolled in Calculus III as an elective even though it wasn&#8217;t part of the architecture requirements.  I was specifically was looking forward to formally answering that question about cones and intersecting planes (finally).  They were using the same text book as Calc II and the next couple chapters covered three-dimensional geometry.</p>
+<p>One of the first things out of the instructor&#8217;s mouth was &#8220;We&#8217;re going to skip the chapters on three-dimensional geometry because it really isn&#8217;t very interesting.  Instead we&#8217;ll jump straight into infinite series.&#8221;</p>
+<p>Bastard.</p>
+<p>( a longer story is at <a href="/web/20101214231142/http://dobbse.net/thinair/2003/12/000158.html">http://dobbse.net/thinair/2003/12/000158.html</a> and some discussion of infinity and vanishing points is at <a href="/web/20101214231142/http://dobbse.net/reflection/2003/12/000157.html">http://dobbse.net/reflection/2003/12/000157.html</a> )</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://dobbse.net/' rel='external nofollow' class='url'>Eric Dobbs</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5507" title="December 4, 2003 @ 1:24 am"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5508"><p>Speaking of images: here&#8217;s a one-dimensional cellular atomata. </p>
+<p>This contains no images, and validates as XHTML 1.0 strict:</p>
+<p>  <a href="/web/20101214231142/http://www.xefer.com/cell.aspx">http://www.xefer.com/cell.aspx</a></p>
+<p>It works well on ie, firebird and mozilla but I haven&#8217;t tested it on the Mac.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5508" title="December 4, 2003 @ 8:48 am"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5509"><p>My six year old asks, &#8220;what&#8217;s infinity plus infinity&#8221;. I reply &#8220;infinity&#8221;. Which of us understands it more?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://little-bits.blogspot.com/' rel='external nofollow' class='url'>Paul Morriss</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5509" title="December 4, 2003 @ 9:04 am"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5510"><p>There is an interesting quantity that can be associated with Cantor-set-like objects (and more generally any set of points in n-dimensional space), namely the Hausdorff (or &#8220;fractal&#8221;) dimension.  The Cantor set has Hausdorff dimension log(2)/log(3) (approximately 0.631), which can be handwavingly explained by saying that if you triple its size you get two Cantor sets (whereas if you triple the size of a filled square you get nine of them, hence the filled square has dimension log(9)/log(3)=2).  The Sierpinski carpet has dimension log(8)/log(3) or approximately 1.893.  The Menger sponge has dimension log(20)/log(3) or nearly 2.727.  The Sierpinski triangle has dimension log(3)/log(2) or about 1.585.  And so on.  But not only linearly self-similar objects have an associated Hausdorff dimension: it was proven, for example, that the boundary of the Mandelbrot set has Hausdorff dimension 2.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.eleves.ens.fr:8080/home/madore/' rel='external nofollow' class='url'>David</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5510" title="December 4, 2003 @ 9:11 am"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5511"><p>I am nearly amazed that there have been this many comments without some poor attempt to relate Cantor sets to blogging &#8211; i.e., if you keep trying to comment on something enough, dividing each point until the it disappears, you end up with a blog entry that amounts to nothing.</p>
+<p>Oops ;)</p>
+<p class=sig>&#8212;&#8201;<cite>David</cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5511" title="December 4, 2003 @ 3:49 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5512"><p>You took us from 2 dimentions to 3 &#8211; what happens when you extend the idea to the 4th dimention (time)?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101214231142/http://www.actsofvolition.com/' rel='external nofollow' class='url'>Steven Garrity</a></cite>&#160;<a class=p href="/web/20101214231142/http://diveintomark.org/archives/2003/12/03/cantor-sets#comment-5512" title="December 4, 2003 @ 9:12 pm"><img alt="#" src=/web/20101214231142im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20101214231142/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20101214231142/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href=/web/20101214231142/http://code.google.com/u/pilgrim/>code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20101214231142/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20101214231142/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+<!-- Dynamic page generated in 0.347 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-12-02 09:40:46 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:11:42 Dec 14, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:12:03 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Pay for what you get [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110607191237/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110607191237/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110607191237/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110607191237im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110607191237/http://diveintomark.org/archives/2001/12/27/crazy_busy" title="Crazy busy">
+<link rel=next href="/web/20110607191237/http://diveintomark.org/archives/2001/12/29/fu2" title="FU2">
+<link rel=up href="/web/20110607191237/http://diveintomark.org/archives#p175" title="December 2001">
+<link rel='index' title='dive into mark' href='/web/20110607191237/http://diveintomark.org/' />
+<link rel='prev' title='Crazy busy' href='/web/20110607191237/http://diveintomark.org/archives/2001/12/27/crazy_busy' />
+<link rel='next' title='FU2' href='/web/20110607191237/http://diveintomark.org/archives/2001/12/29/fu2' />
+<link rel='canonical' href='/web/20110607191237/http://diveintomark.org/archives/2001/12/28/pay_for_what_you_get' />
+<link rel='shortlink' href='/web/20110607191237/http://diveintomark.org/?p=175' />
+<meta name="keywords" content="drm,opensource">
+<link href="/web/20110607191237cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110607191237/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110607191237/http://diveintomark.org/archives/2001/12/28/pay_for_what_you_get">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2001\/12\/28\/pay_for_what_you_get";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "7";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2001/12/28/pay_for_what_you_get" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110607191237" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110221174500/http://diveintomark.org/archives/2001/12/28/pay_for_what_you_get" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="21 Feb 2011"><strong>FEB</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:12:37 Jun 7, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110221174500/http://diveintomark.org/archives/2001/12/28/pay_for_what_you_get" title="17:45:00 Feb 21, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:12:37 Jun 7, 2011">7</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20080517031033/http://diveintomark.org/archives/2001/12/28/pay_for_what_you_get" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="17 May 2008"><strong>2008</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:12:37 Jun 7, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110607191237*/http://diveintomark.org/archives/2001/12/28/pay_for_what_you_get" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>19 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Jul 06 - 7 Jun 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000211040_2007:-1:000012100000_2008:-1:000010000000_2009:-1:000000000000_2010:-1:000001000111_2011:5:010001000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110607191237/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110607191237/http://diveintomark.org/archives#p175">December 28, 2001</a> &#8227;
+<h2>Pay for what you get</h2> (<a href="/web/20110607191237/http://diveintomark.org/tag/drm" rel="tag">drm</a>, <a href="/web/20110607191237/http://diveintomark.org/tag/opensource" rel="tag">opensource</a>)</div>
+<p>A hearty &#8220;Fuck you!&#8221; goes out to <a href="/web/20110607191237/http://jrobb.userland.com/">John Robb</a> today for dismissing open source as one of the <a href="/web/20110607191237/http://jrobb.userland.com/2001/12/27.html">Top Flops of 2001</a>, saying <q cite="http://jrobb.userland.com/2001/12/27.html">You get what you pay for.</q>  I guess he would probably extend that sentiment to <a href="/web/20110607191237/http://diveintopython.org/">open source books</a>, too.</p>
+<p>Yes, most open source programs are crap.  Most closed source programs are crap.  <a href="/web/20110607191237/http://httpd.apache.org/">Apache</a>, <a href="/web/20110607191237/http://us1.samba.org/samba/samba.html">Samba</a>, <a href="/web/20110607191237/http://www.mozilla.org/">Mozilla</a>, <a href="/web/20110607191237/http://www.python.org/">Python</a>, <a href="/web/20110607191237/http://www.gnu.org/software/emacs/">Emacs</a>, <a href="/web/20110607191237/http://www.openssh.org/">OpenSSH</a>, <a href="/web/20110607191237/http://www.jboss.org/">JBoss</a>, <a href="/web/20110607191237/http://jakarta.apache.org/tomcat/">Tomcat</a>, <a href="/web/20110607191237/http://jakarta.apache.org/ant/">Ant</a>, <a href="/web/20110607191237/http://www.redhat.com/">Red Hat Linux</a> with <a href="/web/20110607191237/http://www.ximian.com/">Ximian GNOME</a> &#8212; I use these on a daily basis, and I&#8217;m most definitely getting more than I paid for.  <a href="/web/20110607191237/http://manila.userland.com/">Manila</a>, <a href="/web/20110607191237/http://www.opera.com/">Opera</a>, <a href="/web/20110607191237/http://www.ultraedit.com/">UltraEdit</a>, <a href="/web/20110607191237/http://www.apple.com/macosx/">Mac OS X</a>, <a href="/web/20110607191237/http://www.apple.com/itunes/">iTunes</a> &#8212; I use these too, and happily pay for them.  (iTunes isn&#8217;t free, it&#8217;s just bundled, so I&#8217;ve already paid for it.)  As any good investor will tell you, the key is to find the pockets of excellence where you get more than you pay for.</p>
+<p><a href="/web/20110607191237/http://jrobb.userland.com/2001/12/28.html#a875"><cite>John Robb</cite> responds</a>.  Much more politely than you might expect.  What a guy.  Someday he&#8217;ll hire me, and then we can argue in person.</p>
+<p><a href="/web/20110607191237/http://scriptingnews.userland.com/backissues/2001/12/28#l935c0ea10e84b28e8ba2e35a744a7a9b"><cite>Dave Winer</cite></a>: <q cite="http://scriptingnews.userland.com/backissues/2001/12/28#l935c0ea10e84b28e8ba2e35a744a7a9b">The problem of course is that [open source advocates] set the expectations too high.</q></p>
+<p><a href="/web/20110607191237/http://www.ericsink.com/weblog.py?filter=all&cmd=day&day=20011228">Eric Sink</a>: <q cite="http://www.ericsink.com/weblog.py?filter=all&amp;cmd=day&amp;day=20011228">I bought into this hype in a big way [producing AbiWord] &#8230; [but] I&#8217;m not bitter.</q></p>
+<p><a href="/web/20110607191237/http://www.burningbird.net/weblog/2001_12_23_burningbird_archive.php#8236665"><cite>Shelley Powers</cite></a>: <q cite="http://www.burningbird.net/weblog/2001_12_23_burningbird_archive.php#8236665">Overhyped?  We haven&#8217;t hyped these efforts enough!</q></p>
+<p><a href="/web/20110607191237/http://www.deveiate.org/code/journal/archives/000007.html#000007"><cite>dev(E)iate</cite></a>: <q cite="http://www.deveiate.org/code/journal/archives/000007.html#000007">I use open source because it works for me.</q> Amen.</p>
+<p><a href="/web/20110607191237/http://archipelago.phrasewise.com/2001/12/28"><cite>Daniel Berlinger</cite></a>: <q cite="http://archipelago.phrasewise.com/2001/12/28">This is the religious war that replaced the OS wars.</q></p>
+<p>Dave Winer (in private email): <q>There&#8217;s nothing on your site that refutes what he said.</q>  OK, here&#8217;s something:</p>
+<blockquote><p>And calling open source a flop doesn&#8217;t make it one.</p>
+<p>First, John is (presumably) only talking about open-source-based businesses, like Red Hat.  Volunteer-based open source development is as strong as ever.  But he doesn&#8217;t say that; he just paints all open source with a broad brush, putting altruistic developers and venture capitalists in the same boat.  That&#8217;s silly.</p>
+<p>Furthermore, John is thinking only of the dom-com-era business models that relied on giving stuff away for free in order to GetBigQuick in order to aggegrate eyeballs in order to magically cash in later or whatever they thought they were doing.  Those were obviously a failure (obvious now, not obvious then &#8212; and there were a lot of non-open-source-based companies trying the same thing for a while).</p>
+<p>That&#8217;s why most serious open source businesses (Red Hat and Ximian come to mind here, but there are others) now have much more traditional loss-leader-based business models.  Red Hat gives away Linux but charges for documentation, training, support, and consulting services.  Ximian gives away Evolution but charges for add-ons, like their Exchange connector.  JBoss is free but up-to-date documentation is only available in hardcopy (for a price).  Etc.</p>
+<p>I&#8217;m sure John was thinking all of these things and more (he&#8217;s a smart guy), but the way he expressed it so nonchalantly just raised my hackles.</p>
+</blockquote>
+
+<p><a href="/web/20110607191237/http://www.pressplay.com/faq.html">PressPlay FAQ</a>.  Distinctly less than you pay for.</p>
+<ul>
+<li>Windows-only.  Specifically, 98, ME, 2000, and XP.  No 95 or NT.  Certainly no Macintosh.</li>
+<li>WMA-only, playable by Windows Media Player only.</li>
+<li>No handheld music players.  No iPod.  I got 7 CDs for Christmas and haven&#8217;t listened to any of them&#8230; directly.  I open the CD, rip it in iTunes, sync with my iPod, and put the CD on the shelf until the day I switch music formats and have to re-rip it.</li>
+<li><q cite="http://www.pressplay.com/faq.html">Music is streamed at either 20 Kbps or 32 Kbps depending on your modem speed.</q>  With iTunes, I can consistently find trance music streamed at 128 Kbps.  Ditto WinAmp.</li>
+<li><q cite="http://www.pressplay.com/faq.html">The streams allotted for your billing period do not carry over [to the next month].</q>  Use &#8216;em or lose &#8216;em.</li>
+<li><q cite="http://www.pressplay.com/faq.html">You can use the pressplay Sync/Restore feature to restore your downloads to one additional computer at no extra charge.</q>  Gee, thanks.</li>
+<li><q cite="http://www.pressplay.com/faq.html">If you have used sync/restore already, please contact Customer Care to redownload your tracks.</q>  I liked music better before it required tech support.</li>
+<li>Music expires and must be renewed every month.  <q cite="http://www.pressplay.com/faq.html">If you have not been online since the rights for that track renewed for a succeeding month, you may be prompted to connect momentarily to acquire the license renewal.</q> <a href="/web/20110607191237/http://www.mp3newswire.net/stories/2001/drmhack.html">Or not.</a></li>
+<li><q cite="http://www.pressplay.com/faq.html">If you choose to cancel your pressplay membership, you will lose the ability to play the downloads that you acquired through pressplay at the end of the period you paid through.</q> Oh, and you don&#8217;t get your money back if you prepay and then cancel.</li>
+<li><q cite="http://www.pressplay.com/faq.html">If the track has streamed for more than 30 seconds, the stream is counted against your membership.</q>  Even if transmission is interrupted by slow servers, faulty modems, or annoying kid sisters.</li>
+<li><q cite="http://www.pressplay.com/faq.html">Each time you initiate a download, pressplay will display the number of downloads remaining for the month and a confirmation that you wish to download the selected track. If you do not have enough downloads remaining to download the track(s), you will be asked if you want to upgrade your membership. If you choose not to upgrade, or you already have a platinum membership, you will have to wait until the beginning of the next billing period to download the track(s).</q></li>
+<li><q cite="http://www.pressplay.com/faq.html">The unused downloads allotted for your membership period do not carry over to the next month.</q></li>
+<li><q cite="http://www.pressplay.com/faq.html">pressplay&#8217;s current licensing agreements with the music labels only allow two tracks to be burned for each artist per month.</q></li>
+<li><q cite="http://www.pressplay.com/faq.html">Any track that has the burn icon displayed in the Options column of the search results can be burned to CD.</q>  So not every song can be burned.</li>
+<li><q cite="http://www.pressplay.com/faq.html">You can burn a track as many times as you like, but each burn counts towards your membership, regardless if it is the same track.</q>  Presuming, of course, that the publisher has decided to allow you the privilege of paying for the privilege of wading through the privilege of burning it.</li>
+<li><q cite="http://www.pressplay.com/faq.html">The unused burns allotted for your membership period do not carry over to the next month.</q></li>
+</ul>
+<p><a href="/web/20110607191237/http://www.pressplay.com/privacypolicy.html">PressPlay Privacy Policy</a>.  Actually, I liked music better before it had a privacy policy.</p>
+<p><cite>Dave Matthews Band</cite>: <a href="/web/20110607191237/http://www.purelyrics.com/index.php?lyrics=exhkgmqz">Pay For What You Get</a>.</p>
+<blockquote cite="http://www.purelyrics.com/index.php?lyrics=exhkgmqz"><p>work ourselves, fingers to the bone <br />
+suck the morrow, drain my soul <br />
+pay your dues, and your debts <br />
+pay your respects, everybody tells you <br />
+you pay for what you get</p></blockquote>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110607191237/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110607191237/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110607191237/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110607191237/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110607191237/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.304 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-24 02:38:12 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:12:37 Jun 7, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:36:29 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>CSS and Universal Design [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20101218060117/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20101218060117/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20101218060117/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20101218060117im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20101218060117/http://diveintomark.org/archives/2002/02/14/move_over_bt" title="Move over, BT">
+<link rel=next href="/web/20101218060117/http://diveintomark.org/archives/2002/02/17/css_for_newbies" title="CSS for Newbies">
+<link rel=up href="/web/20101218060117/http://diveintomark.org/archives#p346" title="February 2002">
+<link rel='index' title='dive into mark' href='/web/20101218060117/http://diveintomark.org/' />
+<link rel='prev' title='Move over, BT' href='/web/20101218060117/http://diveintomark.org/archives/2002/02/14/move_over_bt' />
+<link rel='next' title='CSS for Newbies' href='/web/20101218060117/http://diveintomark.org/archives/2002/02/17/css_for_newbies' />
+<link rel='canonical' href='/web/20101218060117/http://diveintomark.org/archives/2002/02/15/css_and_universal_design' />
+<link rel='shortlink' href='/web/20101218060117/http://diveintomark.org/?p=346' />
+<meta name="keywords" content="accessibility,css">
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+@font-face {font-family: 'LatinModernRoman10Regular';src: url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.eot');src: local('☺'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.woff') format('woff'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.ttf') format('truetype'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.svg#webfontg3VAmqr8') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'LatinModernRomanSlanted10Regu';src: url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.eot');src: local('☺'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.woff') format('woff'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.ttf') format('truetype'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.svg#webfont5pLJWgYw') format('svg');font-weight: normal;font-style: oblique;}
+@font-face {font-family: 'LatinModernRoman10Bold';src: url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.eot');src: local('☺'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.woff') format('woff'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.ttf') format('truetype'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.svg#webfontDIaNd4lG') format('svg');font-weight: bold;font-style: normal;}
+@font-face {font-family: 'LatinModernRoman10BoldItalic';src: url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.eot');src: local('☺'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.woff') format('woff'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.ttf') format('truetype'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.svg#webfontVm6n5sgb') format('svg');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'LatinModernMono10Regular';src: url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.eot');src: local('☺'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.woff') format('woff'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.ttf') format('truetype'), url('/web/20101218060117/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.svg#webfontThQaD2ST') format('svg');font-weight: normal;font-style: normal;}
+html{background:white url(/web/20101218060117/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium 'LatinModernRoman10Regular',serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:'LatinModernRomanSlanted10Regu',serif;font-style:oblique}
+strong,b{font-family:'LatinModernRoman10Bold',serif;}
+pre,code,var,samp,kbd,tt{font-family:'LatinModernMono10Regular',monospace;}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20101218060117/http://diveintomark.org/archives/2002/02/15/css_and_universal_design">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/02\/15\/css_and_universal_design";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "18";
+var displayMonth = "Dec";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/02/15/css_and_universal_design" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101218060117" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101028192804/http://diveintomark.org/archives/2002/02/15/css_and_universal_design" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="28 Oct 2010"><strong>OCT</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 6:01:17 Dec 18, 2010">DEC</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jan
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215131908/http://diveintomark.org/archives/2002/02/15/css_and_universal_design" title="13:19:08 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 6:01:17 Dec 18, 2010">18</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20081014183804/http://diveintomark.org/archives/2002/02/15/css_and_universal_design" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 Oct 2008"><strong>2008</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 6:01:17 Dec 18, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2011
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20101218060117*/http://diveintomark.org/archives/2002/02/15/css_and_universal_design" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>12 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">26 May 06 - 18 Dec 10</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000011000000_2007:-1:010000000010_2008:-1:000001010100_2009:-1:000000000000_2010:11:000001000112_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20101218060117/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20101218060117/http://diveintomark.org/archives#p346">February 15, 2002</a> &#8227;
+<h2>CSS and Universal Design</h2> (<a href="/web/20101218060117/http://diveintomark.org/tag/accessibility" rel="tag">accessibility</a>, <a href="/web/20101218060117/http://diveintomark.org/tag/css" rel="tag">css</a>)</div>
+<p>This essay assumes you know what cascading style sheets are, you just don&#8217;t know why you should use them.  If you don&#8217;t know what <abbr title="cascading style sheets">CSS</abbr> is, the Open Directory maintains an excellent <a href="/web/20101218060117/http://directory.google.com/Top/Computers/Programming/Internet/CSS/Tutorials/" title="search Google directory for CSS tutorials">directory of CSS tutorials</a>.</p>
+
+<p>we&#8217;ve already covered technical, aesthetic, and business arguments for CSS.  It promotes <a href="/web/20101218060117/http://diveintomark.org/archives/00000128.html" title="CSS style switcher">separation of content and design</a>.  It <a href="/web/20101218060117/http://radio.weblogs.com/0100630/stories/2002/02/13/cssKoolaidForNewbies.html" title="CSS Koolaid for Newbies: just say no to font tags">eases maintenance</a>.  It can even <a href="/web/20101218060117/http://diveintomark.org/archives/00000137.html" title="use CSS to Save Money Fast ;-)">save you money</a> if you use it wisely.  Now for the moral argument.  The moral argument for CSS is accessibility.</p>
+
+<p>These days, if you own any kind of public building (store, office, school, library, etc.) in the United States, you need to make sure that people in wheelchairs can get in the front door, move around the premises, use the bathrooms, and generally do everything that people not in wheelchairs can do.  This requires a multi-pronged approach.  If you have stairs leading up to your entrance, you need a wheelchair ramp or a separate wheelchair-accessible entrance.  If you have multiple floors, you need accessible elevators.  If you have bathrooms, they need a stall with wider doors and handrails.  And so forth.</p>
+
+<p>This is all now so commonplace that it seems odd to even elaborate on it.  But it was not always this way.  Prior to 1990, accessibility in the real world was haphazard at best.  But on July 26, 1990, President Bush (Sr.) signed into law the <a href="/web/20101218060117/http://directory.google.com/Top/Society/Issues/Disabilities/Laws/Americans_with_Disabilities_Act/" title="search the Google Directory for Americans With Disabilities Act">Americans With Disabilities Act</a>, which mandated this sort of equal access.  Store owners and overworked bureaucrats bitched and moaned.  There was a flurry of accessibility-related lawsuits.  Accessibility advocates sued cities to provide wheelchair mini-ramps on all curbsides &#8212; and won.  Students sued universities to create accessible dorms &#8212; and won.  Eventually, companies and institutions absorbed the increased cost of doing business and got on with life.</p>
+
+<p>Then an interesting thing happened.  Instead of just slapping &#8220;accessible&#8221; quick-fixes on existing designs, people started rethinking designs from the ground up.  It turns out that, if you design for everyone (not just sighted, hearing, able-bodied people), there are enormous benefits for everyone (even for sighted, hearing, able-bodied people).  This is <a href="/web/20101218060117/http://design6.ap.buffalo.edu/~idea/publications/free_pubs/pubs_cud.html">the concept of universal design</a>: having one intelligent design that accomodates everyone in a group can be <em>better</em> for each individual in the group than maintaining separate designs for each person.  An entrance without stairs is better for people in wheelchairs (who don&#8217;t need to navigate a lengthy ramp), but it&#8217;s also better for people carrying suitcases, people with strollers, and terminally clumsy people who just trip on stairs all the time.  It&#8217;s also better for the building owner in the long run, not only because federal law would mandate a separate accessible ramp, but because it increases business (the easier it is for people to come in, the more likely they are to give you money once they&#8217;re inside) and reduces accidents (which can lead to lawsuits).</p>
+
+<p>How does this relate to the web?  The web in 2002 is like the physical world in 1991: the rules of the game have changed, but not everyone has noticed yet.  The same government that mandated real-world accessibility then is now <a href="/web/20101218060117/http://www.section508.gov/" title="Section 508 homepage">mandating accessibility on the web</a> (for all federal websites).  Meanwhile, companies that don&#8217;t provide accessible sites are finding they are <a href="/web/20101218060117/http://www.computeruser.com/news/00/08/29/news4.html" title="Newsbytes: Olympics Site Discriminates Against The Blind">losing both revenue and credibility</a>.  At the same time, most people still view accessibility as an expensive &#8220;add-on&#8221;, just another cost of doing business.  Thus, stores have <a href="/web/20101218060117/http://www.amazon.com/exec/obidos/subst/home/home.html/t/103-2360512-2223817" title="text-only Amazon.com home page">separate text-only sites</a>, news sites have <a href="/web/20101218060117/http://news.com.com/2102-1001-837821.html" title="sample text-only story from CNET">separate &#8220;Print story&#8221; pages</a>, and content management systems have options to generate <a href="/web/20101218060117/http://manila.userland.com/?print-friendly=true" title="print-friendly Manila home page">separate text-only versions of each page</a>.</p>
+
+<p>In one sense, having separate text-only pages &#8220;solves&#8221; the accessibility &#8220;problem&#8221; &#8212; the content is in fact accessible to everyone, and if the feature is built into your content management system, your accessible content is guaranteed to stay in sync with your inaccessible content.  So why does the W3 consortium, in their long but surprisingly well-thought-out <a href="/web/20101218060117/http://www.w3.org/TR/WAI-WEBCONTENT/" title="Web Content Accessibility Guidelines 1.0">accessibility guidelines</a>, call a separate text-only page <a href="/web/20101218060117/http://www.w3.org/TR/WAI-WEBCONTENT-TECHS/wcag10-tech.html#alt-page-note" title="W3 note about text-only pages">a last resort</a>?  Because, no matter how well-implemented, it&#8217;s a hack.  It treats accessibility as a problem, and sets about to solve it in the quickest and dirtiest way possible.  Along the way, it breaks the fundamental premise of the web: that <em>this</em> content is available at <em>this</em> address.</p>
+
+<p>There are real-world parallels to the &#8220;text-only&#8221; page.  I have seen ATMs with one step up to a platform, and a little sign next to the step that reads &#8220;a wheelchair-accessible ATM is available at [some intersection two blocks away]&#8220;.  Congratulations, you have met your legal obligations &#8212; and done absolutely nothing that benefits you or any of your customers.  In the same way, a web site that relies on separate text-only pages is &#8220;accessible&#8221; in a very narrow sense, but step back for a minute and think about the end user experience.  Someone with a text-only browser follows a link to an article halfway down a page deep within your site.  Now what?  Do they have to hunt around the page for the &#8220;text-only&#8221; or &#8220;printer-friendly&#8221; link?  If it&#8217;s on the page somewhere, can they even find it?  (I have seen news sites with a &#8220;print this story&#8221; image link with no ALT tag.)  Or do they have to navigate back to your home page, click on the link to take them to your separate text-only site, and re-find the article they want?  you&#8217;ve &#8220;solved&#8221; the accessibility &#8220;problem&#8221; by making a problem (&#8220;oh, you need to have <em>text</em>?!? [grumble grumble]&#8220;) and providing a solution&#8230; but you haven&#8217;t really solved anything.</p>
+
+<p>So where does CSS fit into this?  <em>CSS is a crucial part of universal design.</em>  Not &#8220;separate-but-accessible&#8221; design, but universal design.  One page accomodates everyone: people with desktop PCs with modern web browsers, people on older PCs with older web browsers, people using WebTV, people using text-only browsers, people printing your web page, people with Braille readers, people with speech synthesizers.  Each client device selects the best stylesheet it can handle (maybe the most complex one, maybe a device-specific one, or maybe no stylesheet at all), and the content of the page is rendered appropriately.  This selection happens automatically, without user intervention.  This means people coming to your site from an outside link don&#8217;t need to hunt around for a separate accessible site, because your site is universally accessible.  No separate wheelchair ramps, just come right in.  Oh, you have small children?  I&#8217;ll bet you didn&#8217;t even notice that you could wheel them right in, too (but you did).</p>
+
+<p>Common criticisms against CSS:</p>
+
+<ul>
+
+<li><strong>CSS is hard to implement</strong>, because browsers (even the latest browsers) have bugs.  It is true that each browser has different levels of CSS support, but this sort of problem has existed with every new technology (tables, frames, even FONT tags), and the only thing you could do about it was limit yourself to the lowest common denominator of supported HTML tags, or include workarounds in <em>every single page</em>.  With CSS, you can degrade gracefully and seamlessly, for example, having one stylesheet for modern browsers and one for Netscape 4.  And smaller browser-specific workarounds are only coded once (in the stylesheet) instead of on each page.  <a href="/web/20101218060117/http://www.websitetips.com/css/index.shtml" title="Website Tips for Designers: CSS">Website Tips for Designers</a> is a good starting point for these issues.</li>
+
+<li><strong>CSS is incomplete</strong> and doesn&#8217;t let me do all the layout tricks I want.  This is a valid complaint, but you need to step back and decide how important those &#8220;layout tricks&#8221; really are.  This depends on what kind of site you have.  Any site that accumulates content over the course of time (news sites, magazines, weblogs) should make their content their first priority, because it will last longer than any particular layout.  If you absolutely must use tricks and hacks, you can still use CSS for other parts of your layout to maximize accessibility.</li>
+
+<li><strong>CSS is a waste of time</strong> because none of my users use alternative browsers.  This is just ignorance, and it perpetuates a self-fulfilling prophecy.  It&#8217;s like a shopkeeper who says, &#8220;Why do I need an f-ing handicapped ramp?  None of my customers are f-ing cripples.&#8221;  Yeah, none of your customers are f-ing cripples, because none of the f-ing cripples could get into your f-ing store, so they all took their f-ing money and spent it somewhere else.</li>
+
+</ul>
+
+<p>Reactions?  Corrections?  Criticisms?  <a href="mailto:f8dy@diveintomark.org" title="send email to the author">Email me</a>.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20101218060117/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20101218060117/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href=/web/20101218060117/http://code.google.com/u/pilgrim/>code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20101218060117/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20101218060117/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+<!-- Dynamic page generated in 0.809 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-12-06 15:33:32 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 6:01:17 Dec 18, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:33:29 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>My Good Easy (2007) [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806100429/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806100429/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806100429/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806100429/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806100429im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/links-for-2007-03-15" title="links for 2007-03-15">
+<link rel=next href="/web/20110806100429/http://diveintomark.org/archives/2007/03/19/two-visions" title="Two visions">
+<link rel=up href="/web/20110806100429/http://diveintomark.org/archives#p1667" title="March 2007">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; My Good Easy (2007) Comments Feed" href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806100429/http://diveintomark.org/' />
+<link rel='prev' title='links for 2007-03-15' href='/web/20110806100429/http://diveintomark.org/archives/2007/03/15/links-for-2007-03-15' />
+<link rel='next' title='Two visions' href='/web/20110806100429/http://diveintomark.org/archives/2007/03/19/two-visions' />
+<link rel='canonical' href='/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007' />
+<link rel='shortlink' href='/web/20110806100429/http://diveintomark.org/?p=1667' />
+<meta name="description" content="Now that I'm using Linux full-time, I thought I'd share some of my other current configuration files.">
+<meta name="keywords" content="commandline,conffiles,emacs,linux,productivity,ratpoison,screen,urxvt,zsh">
+<link href="/web/20110806100429cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806100429/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2007\/03\/15\/good-easy-2007";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2007/03/15/good-easy-2007" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806100429" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607151754/http://diveintomark.org/archives/2007/03/15/good-easy-2007" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:04:29 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110927015325/http://diveintomark.org/archives/2007/03/15/good-easy-2007" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110718035550/http://diveintomark.org/archives/2007/03/15/good-easy-2007" title="3:55:50 Jul 18, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:04:29 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110927015325/http://diveintomark.org/archives/2007/03/15/good-easy-2007" title="1:53:25 Sep 27, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620065152/http://diveintomark.org/archives/2007/03/15/good-easy-2007" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:04:29 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806100429*/http://diveintomark.org/archives/2007/03/15/good-easy-2007" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>31 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">19 Mar 07 - 5 Mar 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:004121000111_2008:-1:111011101011_2009:-1:010000000000_2010:-1:000111000011_2011:7:000001111000_2012:-1:001000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806100429/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806100429/http://diveintomark.org/archives#p1667">March 15, 2007</a> &#8227;
+<h2>My Good Easy (2007)</h2> (<a href="/web/20110806100429/http://diveintomark.org/tag/commandline" rel="tag">commandline</a>, <a href="/web/20110806100429/http://diveintomark.org/tag/conffiles" rel="tag">conffiles</a>, <a href="/web/20110806100429/http://diveintomark.org/tag/emacs" rel="tag">emacs</a>, <a href="/web/20110806100429/http://diveintomark.org/tag/linux" rel="tag">linux</a>, <a href="/web/20110806100429/http://diveintomark.org/tag/productivity" rel="tag">productivity</a>, <a href="/web/20110806100429/http://diveintomark.org/tag/ratpoison" rel="tag">ratpoison</a>, <a href="/web/20110806100429/http://diveintomark.org/tag/screen" rel="tag">screen</a>, <a href="/web/20110806100429/http://diveintomark.org/tag/urxvt" rel="tag">urxvt</a>, <a href="/web/20110806100429/http://diveintomark.org/tag/zsh" rel="tag">zsh</a>)</div>
+<p><a href="/web/20110806100429/http://diveintomark.org/archives/2002/10/07/my_good_easy">My Good Easy</a> from 2002 is interesting reading, if only to see how little I&#8217;ve changed over the years.  I still obsessively prune my Start menu, I still set my home page to <samp>about:blank</samp>, I still use Emacs locally and vi remotely.  In fact, my <samp>.emacs</samp> file has stayed virtually unchanged for seven years on three platforms and a dozen different Linux distributions.  It&#8217;s true that you can spend a lot of time editing configuration files, but most people don&#8217;t realize how portable they are and how long they remain useful.  The cost of customizability is amortized over years, not months.  The cost of setting up a new workstation is near-zero.</p>
+
+<p>Now that I&#8217;m using Linux full-time, I thought I&#8217;d share some of my other current configuration files.</p>
+
+<p><samp>~/.xinitrc</samp> runs the <a href="/web/20110806100429/http://www.nongnu.org/ratpoison/">ratpoison</a> window manager when I start X.  Ratpoison is a minimalist window manager with no window borders, no title bars, no panels, no docks, no menus, no icons, no eye candy, and no mouse commands of any kind.  All keyboard commands are prefixed by a special key to minimize application conflicts.  Naturally the default prefix key (<kbd>Ctrl-T</kbd>) conflicts with a command I use constantly (&#8220;open new tab&#8221; in Firefox/Iceweasel), but you can change it in <samp>.ratpoisonrc</samp> (below).  Of course the mouse still works in applications, if you need it.</p>
+
+<blockquote><pre>[<a href="/web/20110806100429/http://wearehugh.com/public/2007/03/xinitrc">~/.xinitrc</a>]</pre></blockquote>
+
+<p>Did I mention Ratpoison is minimalist?  It&#8217;s also configurable.  <samp>~/.ratpoisonrc</samp> configures ratpoison the way I like it.</p>
+
+<blockquote><pre>[<a href="/web/20110806100429/http://wearehugh.com/public/2007/03/ratpoisonrc">~/.ratpoisonrc</a>]</pre></blockquote>
+
+<p><kbd>Ctrl-Space</kbd> gives me a ratpoison input line to run arbitrary programs; <kbd>PrintScreen</kbd> does what I expect (GNOME users install <samp>ksnapshot</samp> now, you&#8217;re missing out); <kbd>Ctrl-Alt-arrows</kbd> switch between frames if I have multiple frames open.  <kbd>F12</kbd> runs <samp>~/bin/f12</samp>, a little script I whipped up to make <samp>urxvt</samp> act like <a href="/web/20110806100429/http://tilda.sourceforge.net/wiki/index.php/Main_Page"><samp>tilda</samp></a> or <a href="/web/20110806100429/http://yakuake.uv.ro/"><samp>yakuake</samp></a>.  I want to be able to press <kbd>F12</kbd> to toggle a full-screen terminal session (with <samp>screen</samp>, see below).</p>
+
+<blockquote><pre>[<a href="/web/20110806100429/http://wearehugh.com/public/2007/03/f12">~/bin/f12</a>]</pre></blockquote>
+
+<p>Of course that window-finding algorithm relies on the fact that the terminal window always starts with &#8220;urxvt&#8221; regardless of what&#8217;s going on inside the terminal.  I use <a href="/web/20110806100429/http://www.zsh.org/"><samp>zsh</samp></a> as my primary shell, and I define functions in <samp>.zshrc</samp> to ensure the terminal window is always findable.</p>
+
+<blockquote><pre>[<a href="/web/20110806100429/http://wearehugh.com/public/2007/03/zshrc">~/.zshrc</a>]</pre></blockquote>
+
+<p><a href="/web/20110806100429/http://www.jedsoft.org/most/"><samp>most</samp></a> is the best pager ever.  Install it now.  It has Emacs-style key bindings and displays man pages in color.  <samp>less</samp> is better than <samp>more</samp>, but <samp>most</samp> is better than both.</p>
+
+<p>My <samp>.zshrc</samp> integrates with <samp>screen</samp> to dynamically set the caption of each &#8220;tab&#8221; in <samp>screen</samp> based on what&#8217;s being executed in that tab.  The <samp>preexec</samp> and <samp>precmd</samp> functions handle setting the caption, then my <samp>.screenrc</samp> displays them in a caption bar that is always showing on the last line of the terminal window.  There is no way to do this properly in Bash.  zsh has a reputation for being bloated and slow, but who cares?  It&#8217;s 2007.  I have a 3 GHz processor.  Two of them, in fact.  zsh can autocomplete <samp>apt-get</samp>/<samp>aptitude</samp> queries.  It can dynamically set captions in <samp>screen</samp>.  It can do mindblowing things like autocomplete pathnames <em>over ssh</em>.  I can&#8217;t begin to describe how useful that is.</p>
+
+<blockquote><pre>[<a href="/web/20110806100429/http://wearehugh.com/public/2007/03/screenrc">~/.screenrc</a>]</pre></blockquote>
+
+<p>There&#8217;s a nice symmetry in using my left ring finger to hit the prefix key in <samp>screen</samp> and my right ring finder to hit the prefix key in <samp>ratpoison</samp>.  I tried blackslash instead of Pause, but it made Python programming hell.</p>
+
+<p><samp>~/bin/nowplaying</samp> is a quick script to display the artist/title of the song currently playing in <a href="/web/20110806100429/http://www.musicpd.org/">MPD</a> (Music Player Daemon), which I can control with <a href="/web/20110806100429/http://hem.bredband.net/kaw/ncmpc/"><samp>ncmpc</samp></a>, which is automatically opened with a new <samp>screen</samp>.  If nothing is playing, it displays the hostname instead, which is especially useful when ssh&#8217;ing into the screen session over the network.  My <samp>mpd.conf</samp> is nothing special, so I&#8217;ll skip it.</p>
+
+<blockquote><pre>[<a href="/web/20110806100429/http://wearehugh.com/public/2007/03/nowplaying">~/bin/nowplaying</a>]</pre></blockquote>
+
+<p>Ratpoison takes care of maximizing the terminal window and trimming off the window borders, but I still want <samp>urxvt</samp> to fill the screen, with a nice font, readable line spacing, and no scroll bar (since I&#8217;m always inside <samp>screen</samp> which implements its own per-tab backscroll).  <samp>~/.Xresources</samp> takes care of that.</p>
+
+<blockquote><pre>[<a href="/web/20110806100429/http://wearehugh.com/public/2007/03/Xresources">~/.Xresources</a>]</pre></blockquote>
+
+<p>That also takes care of customizing Emacs&#8217; appearence in X.  Sometimes I run it within screen, depending on the nature of my edits.  And it&#8217;s set as the EDITOR in my <samp>.zshrc</samp>, so it gets used for quick edits like crontabs.  Putting appearance-related configuration in <samp>.Xresources</samp> ensures that these tweaks only apply to Emacs-in-X, not Emacs-in-terminal.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty four comments here (<a href=/web/20110806100429/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-8714"><p>Holy crap.  I didn&#8217;t think there was a human alive that could switch between emacs and vi regularly and voluntarily.</p>
+<p>Proof that Mark Pilgrim has two brains.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://unto.net/' rel='external nofollow' class='url'>DeWitt Clinton</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8714" title="March 15, 2007 @ 11:52 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8716"><p>Nice one Mark. I&#8217;ve added up <a href="/web/20110806100429/http://ndunn.com/2007/big-easy">mine too</a>.</p>
+<blockquote><p>
+1:59 AM Neil: I feel a seminal blog post coming where you talk about config files and a thousand people flock to read it. If I did that the only comment I&#8217;d get would be from my sister asking what the fuck it all means!
+</p></blockquote>
+<p>I was right :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://ndunn.com/' rel='external nofollow' class='url'>Neil Dunn</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8716" title="March 16, 2007 @ 12:55 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8717"><p>`sudo update-alternatives &#8211;config pager`, sir yes sir. Not too convinced by KSnapshot (I’m anal-retentive, I post process my screenshots in GIMP anyway); also, Bash *can* complete dirs over SSH, but I’ll give zsh a try one day (same for ratpoison).</p>
+<p>Use ThinkPads, you’ll get your mouse in the middle of the keyboard!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://shot.pl/1/125/' rel='external nofollow' class='url'>Shot</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8717" title="March 16, 2007 @ 4:12 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8718"><blockquote><p>zsh can autocomplete apt-get/aptitude queries.</p></blockquote>
+<p>bash too.</p>
+<blockquote><p>It can dynamically set captions in screen.</p></blockquote>
+<p>bash too, <a href="/web/20110806100429/http://glyf.livejournal.com/63106.html">apparently</a>.</p>
+<blockquote><p>It can do mindblowing things like autocomplete pathnames over ssh.</p></blockquote>
+<p>bash too.</p>
+<blockquote><p>zsh has a reputation for being bloated and slow, but who cares?</p></blockquote>
+<p>bash too :-)</p>
+<p class=sig>&#8212;&#8201;<cite>saharvetes</cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8718" title="March 16, 2007 @ 5:26 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8719"><p>How about some screenshots? :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://andre.cabine.org/blog' rel='external nofollow' class='url'>André Cruz</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8719" title="March 16, 2007 @ 6:28 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8720"><p>Proof that the Linux Desktop (KDE/Gnome) is dead with a WM like ratpoison. ;)</p>
+<p>I&#8217;ve been using <a href="/web/20110806100429/http://www.suckless.org/wiki/dwm">dwm</a> as my bloat-free desktop WM. Though you need to compile dwm to configure it.</p>
+<p>I&#8217;m stealing some stuff of your .screenrc and putting into my <a href="/web/20110806100429/http://svn.natalian.org/home/">configs</a>. I would like to try zsh, though I am happy with bash.</p>
+<p>I recommend `scrot` for screenshots.  I use `feh` for a bg image if I want one and for general image viewing.</p>
+<p>Good to see you here Mark. Best wishes,</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://natalian.org/' rel='external nofollow' class='url'>Kai Hendry</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8720" title="March 16, 2007 @ 7:33 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-8721"><cite><a href='/web/20110806100429/http://www.skippy.net/blog/2007/03/16/qotd-most/' rel='external nofollow' class='url'>skippy dot net &raquo; QOTD: most</a></cite>&#160;(pingback)</li>
+<li id="comment-8722"><p><abbr title="By the way">Btw</abbr>, it’s technically better to write the conditionals in your F12 script like so:</p>
+<p><code>if ratpoison -c info | grep -c $foo 2&gt;&amp;- ; then<br />
+&#160; &#160; .<b></b>..<br />
+fi</code></p>
+<p>That avoids spawning an extra subshell on each and every <code>if</code>.</p>
+<p>Although this is so long that I’d write a function for it:</p>
+<p><code>have_window() { ratpoison -c info | grep -c &quot;$@&quot; 2&gt;&amp;- ; }<br />
+&#160;<br />
+if have_window $foo ; then<br />
+&#160; &#160; .<b></b>..<br />
+fi</code></p>
+<p>PS.: be nice if your typographic smartening doodad skipped the contents of <code>&lt;code&gt;</code> tags…</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8722" title="March 16, 2007 @ 9:46 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8724"><p>The escape codes in your .zshrc have <a href="/web/20110806100429/http://diveintomark.org/feed/">invalidated your feed</a>.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8724" title="March 16, 2007 @ 11:17 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8725"><p>FYI, the escape codes in your .zshrc have <a href="/web/20110806100429/http://diveintomark.org/feed/">invalidated your feed</a>.</p>
+<p class=sig>&#8212;&#8201;<cite>random passerby</cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8725" title="March 16, 2007 @ 11:18 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-8727"><p>Fucking WordPress.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8727" title="March 16, 2007 @ 11:44 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8728"><p><a href="/web/20110806100429/http://www.google.com/search?hl=en&q=Fucking+Wordpress&btnG=Google+Search">Not just yet, Mark</a>&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Arthur</cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8728" title="March 16, 2007 @ 12:05 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8729"><p>Another (generally) non-tiled window fan here too, using <a href="/web/20110806100429/http://www.suckless.org/wiki/dwm">dwm</a> here running on Xorg/FreeBSD. Two thumbs up for your comment on the usable lifespan of config customization for *nix apps &#8211; amortizing all that fiddling makes it dirt cheap. </p>
+<p>dwm appealed to me more than its predecessor <a>wmii</a>  which I used and it appealed to me more than ratpoison and other similar wms. Might have been the default keybindings, or window handling &#8211; can&#8217;t remember why now. Suspect it was the way wmii stacked windows initially but I grew frustrated with its slavish devotion to plan9 style configuration mechanics. dwm you edit a config.h and that&#8217;s it.</p>
+<p>My dwm &#8211; vim style keybindings for moving around windows, moving windows. Zoom any terminal window with alt-space alt-enter. Handles floating windows well enough. Status line simply based on dwm&#8217;s stdin, so hack up a script in anything &#8211; I&#8217;ve got a small python script putting mpd | sysload | date time together. </p>
+<p>Editing config.h for keybindings and the 5 second recompile and install works for me; most often a `pull` and `update` from dwm&#8217;s Mercurial repository and make install just-works. Thoughtful improvements continuously noted over the past year.</p>
+<p>DWM is not xinerama capable on purpose, so I run dwm on two displays and xwarppointer assigned to ctrl-\ to flip screens.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://mikewatkins.ca/' rel='external nofollow' class='url'>Mike</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8729" title="March 16, 2007 @ 12:34 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8730"><p>How do you manage to use Emacs effectively with your window manager stealing Control-space?  Do you bind M-space to set-mark-command?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://www.hungry.com/~fn/' rel='external nofollow' class='url'>Faried Nawaz</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8730" title="March 16, 2007 @ 2:06 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8731"><p>Cool! I have a trick similar to your f12 for my urxvts that works on any WM with the tool wmctrl, but it&#8217;s WM-independent:</p>
+<p><a href="/web/20110806100429/http://technomancy.us/blog/post/65" rel="nofollow">http://technomancy.us/blog/post/65</a></p>
+<p>I still can&#8217;t believe you don&#8217;t touch your .emacs&#8230; I thought regularly improving that was an essential part of the Dao of Emacs. Maybe after you&#8217;ve been improving it for ten years it could become hard to think of new things to do&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://technomancy.us/' rel='external nofollow' class='url'>Phil</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8731" title="March 16, 2007 @ 2:09 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8732"><p>Might not matter to you, but I like to have the load as the last line in my screen sessions:</p>
+<p><code><br />
+defmonitor            on<br />
+hardstatus alwayslastline "%-Lw%{= bW}%50&gt;%n%f* %t%{-}%+Lw%</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://hexmode.com/' rel='external nofollow' class='url'>Mark A Hershberger</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8732" title="March 16, 2007 @ 2:21 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-8733"><cite><a href='/web/20110806100429/http://autotraderblogs.info/my-good-easy-2007/' rel='external nofollow' class='url'>truck trader &raquo; My Good Easy (2007)</a></cite>&#160;(pingback)</li>
+<li id="comment-8735"><p>How about posting your .emacs file (and other custom emacs files)? I am a very recent convert from vim (3+ years) to emacs. I would love to see what your setup looks like.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://cslab.wheaton.edu/~psanford' rel='external nofollow' class='url'>Peter</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8735" title="March 16, 2007 @ 3:01 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8736"><p><a href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8732">Mark A.</a>: use <code>caption always</code> instead of <code>hardstatus alwayslastline</code>. This looks the same, but leaves the <code>status</code> available so you can also say something like this:</p>
+<p><code># pass hardstatus through to xtermtermcapinfo xterm*|rxvt* &#39;hs:ts=\E]2;:fs=07:ds=\E]2;screen07&#39;</code></p>
+<p>Then the title of the xterm displaying your Screen session can be changed just as if Screen wasn’t there.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8736" title="March 16, 2007 @ 3:24 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8738"><p>Good call on most.  I&#8217;m on a Mac, and have found that antiword + most handles the majority of my copy deck reading needs.  Way better than firing up a GUI-based word processor.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://thefantasticos.com/andrew/' rel='external nofollow' class='url'>Andrew White</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8738" title="March 16, 2007 @ 4:33 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8739"><p>regarding bash setting screen captions.  The &#8216;trap&#8217; command can trap bash events and attach commands to them.</p>
+<p>&#8220;trap &#8216;echo hello&#8217; DEBUG&#8221; traps the DEBUG event which fires *just before* a command line is executed &#8211; this prints hello just before it executes a command.</p>
+<p>$BASH_COMMAND contains the name of said command.</p>
+<p>echo -e &#8220;\ekHello!\e\\&#8221; will set your screen&#8217;s title to &#8220;Hello!&#8221;</p>
+<p>Combining all these we have:<br />
+   trap &#8216;echo -ne &#8220;\ek${BASH_COMMAND%%\ *}\e\\&#8221;&#8216; DEBUG</p>
+<p>Tada!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://phraktured.net/' rel='external nofollow' class='url'>aaron griffin</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8739" title="March 16, 2007 @ 4:56 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8740"><p>Ah crap, I posted before i finished&#8230;</p>
+<p>Just wanted to say I generally work in a similar fashion, though I really just use two(ish) applications &#8211; firefox and urxvt/screen.  I do most things at the terminal simply because of the same concept you bring up &#8211; the ability to &#8216;pipe&#8217; plain text around is lost in gui-land.</p>
+<p>While a bit contrived, here&#8217;s a recent screenshot of how I actually work:<br />
+<a href="/web/20110806100429/http://img.phraktured.net/screenshots/screenshot-20070305122500.png" rel="nofollow">http://img.phraktured.net/screenshots/screenshot-20070305122500.png</a></p>
+<p>Please note, the screen vsplit is in CVS.  I don&#8217;t actually work that way, but screenshots are always flashier!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://phraktured.net/' rel='external nofollow' class='url'>aaron griffin</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8740" title="March 16, 2007 @ 5:01 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-8741"><cite><a href='/web/20110806100429/http://matthewm.boedicker.org/blog/?p=100' rel='external nofollow' class='url'>mmb &raquo; Blog Archive &raquo; links for 2007-03-16</a></cite>&#160;(pingback)</li>
+<li id="comment-8744"><p>How do you copy/paste from [k|c]onsole to firefox? (The other way around I use Ctrl-C / Shift-Insert)</p>
+<p class=sig>&#8212;&#8201;<cite>Peter van Kampen</cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8744" title="March 17, 2007 @ 9:38 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-8747"><cite><a href='/web/20110806100429/http://www.genehack.org/2007/03/18/tab-dump-20070318/' rel='external nofollow' class='url'>genehack.org &raquo; Blog Archive &raquo; tab dump // 20070318</a></cite>&#160;(pingback)</li>
+<li id="comment-8749"><p>&gt; less is better than more, but most is better than both.</p>
+<p>Or to put it another way:</p>
+<p>Less is more than more, but most is more than less.</p>
+<p>:)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://daemons.net/~clay' rel='external nofollow' class='url'>Clay</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8749" title="March 18, 2007 @ 7:33 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8751"><p>Mark: are you still using Ubuntu, or did you conclude that <a href="/web/20110806100429/http://diveintomark.org/archives/2006/11/06/gnewsense">gNewSense</a> ready for primetime day-to-day use in the end?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8751" title="March 19, 2007 @ 3:37 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-8756"><p>Actually I switched to Debian around the first of the year, on my primary machine.  I have Ubuntu Feisty on an old laptop.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8756" title="March 19, 2007 @ 7:02 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-8757"><p>> How do you copy/paste from [k|c]onsole to firefox</p>
+<p>Pipe to /tmp/1, which I have bookmarked.</p>
+<p>Embrace the minimalism.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8757" title="March 19, 2007 @ 7:03 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8769"><p>Any chance of an illustrative screenshot?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8769" title="March 19, 2007 @ 8:00 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8773"><p>&gt; Pipe to /tmp/1</p>
+<p>Heh, nice.  I&#8217;ll have to keep that trick in mind.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://sporkmonger.com/' rel='external nofollow' class='url'>Bob Aman</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8773" title="March 19, 2007 @ 8:12 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8816"><blockquote><p>How do you copy/paste from [k|c]onsole to firefox?</p></blockquote>
+<p> You select the text in the terminal using hold-mouse-button-and-drag, then middle-click to paste the selection. Just as god intended. This doesn’t just work with terminals, it works with pretty much any selectable text anywhere in X. I barely ever use the clipboard; when I’m forced to work on Windows, the absence of the <i>select → middleclick</i> gesture alone is enough to make me cranky.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8816" title="March 20, 2007 @ 9:53 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8828"><p>You have a problem with firefox -remote &#8216;openURL(http://poop.example/)&#8217;?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://meat.net/' rel='external nofollow' class='url'>dbt</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8828" title="March 20, 2007 @ 12:10 pm"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-8910"><p>Doesn&#8217;t anyone else use CTRL-SHIFT-C to copy from gnome-terminal or konsole, and regular old CTRL-V to paste into Firefox? Maybe it depends on desktop-environment integration, but it&#8217;s been part of the whole Just Works thing that Ubuntu does since I first installed Breezy last year.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806100429/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110806100429/http://diveintomark.org/archives/2007/03/15/good-easy-2007#comment-8910" title="March 21, 2007 @ 10:05 am"><img alt="#" src=/web/20110806100429im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806100429/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806100429/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806100429/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806100429/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806100429/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.425 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 13:13:52 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:04:29 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:07:29 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

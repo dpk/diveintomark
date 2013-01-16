@@ -1,0 +1,546 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Pure CSS tabs [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110902041903/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110902041903/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110902041903/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110902041903/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110902041903im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/band" title="Band">
+<link rel=next href="/web/20110902041903/http://diveintomark.org/archives/2003/03/25/web_site_optimization_review" title="Web Site Optimization review">
+<link rel=up href="/web/20110902041903/http://diveintomark.org/archives#p1294" title="March 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Pure CSS tabs Comments Feed" href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs/feed" />
+<link rel='index' title='dive into mark' href='/web/20110902041903/http://diveintomark.org/' />
+<link rel='prev' title='Band' href='/web/20110902041903/http://diveintomark.org/archives/2003/03/24/band' />
+<link rel='next' title='Web Site Optimization review' href='/web/20110902041903/http://diveintomark.org/archives/2003/03/25/web_site_optimization_review' />
+<link rel='canonical' href='/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs' />
+<link rel='shortlink' href='/web/20110902041903/http://diveintomark.org/?p=1294' />
+<meta name="description" content="I've put up an example page to demonstrate the technique I'm using for pure CSS tabs.">
+<meta name="keywords" content="css">
+<link href="/web/20110902041903cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110902041903/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/03\/24\/pure_css_tabs";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "2";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/03/24/pure_css_tabs" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110902041903" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215094825/http://diveintomark.org/archives/2003/03/24/pure_css_tabs" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 4:19:03 Sep 2, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120114192117/http://diveintomark.org/archives/2003/03/24/pure_css_tabs" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 Jan 2012"><strong>JAN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215094825/http://diveintomark.org/archives/2003/03/24/pure_css_tabs" title="9:48:25 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 4:19:03 Sep 2, 2011">2</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110910225027/http://diveintomark.org/archives/2003/03/24/pure_css_tabs" title="22:50:27 Sep 10, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620102731/http://diveintomark.org/archives/2003/03/24/pure_css_tabs" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 4:19:03 Sep 2, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110902041903*/http://diveintomark.org/archives/2003/03/24/pure_css_tabs" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>118 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">10 Apr 06 - 14 May 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000705952134_2007:-1:552211010121_2008:-1:112122fd4210_2009:-1:100000000000_2010:-1:001201000111_2011:8:000000002000_2012:-1:300010000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110902041903/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110902041903/http://diveintomark.org/archives#p1294">March 24, 2003</a> &#8227;
+<h2>Pure CSS tabs</h2> (<a href="/web/20110902041903/http://diveintomark.org/tag/css" rel="tag">css</a>)</div>
+<p>I&#8217;ve put up <a href="/web/20110902041903/http://diveintomark.org/public/tabs-example.html">an example page</a> to demonstrate the technique I&#8217;m using for pure CSS tabs.  As you can see from the source, the <q>tabs</q> are actually an unordered list of links.  Rotating the list into a set of horizontal tabs is accomplished entirely in CSS.</p>
+
+<p>The <q>obvious</q> method, in the sense that any advanced CSS can be considered obvious, would be to set the <code>&lt;li&gt;</code> elements to <code>display: inline</code>.  This is, in fact, what <code>display:inline</code> is for.  Unfortunately, this approach fails in a variety of odd ways in a variety of browsers.  Internet Explorer for Windows adds padding to the right of each item which is not covered by the link (thus destroying the <q>tab</q> effect when highlighting the link).  Internet Explorer 5 for Macintosh just goes all wacky.</p>
+
+<p>The technique demonstrated here (and that I&#8217;m currently using throughout my site) accomplishes the same effect, but it sets each <code>&lt;li&gt;</code> element to <code>display: block</code> and <code>float: left</code>, and then uses a dummy element after the list to clear the float.</p>
+
+<p>(Boy, I really sound like I know what I&#8217;m talking about, don&#8217;t I?  In reality I have only the vaguest understanding of floats.  This technique quite literally came to me in a dream, and I hacked the details until it looked good in 4 major browsers.  This CSS stuff is <em>hard</em>; don&#8217;t let anybody tell you different.)</p>
+
+<p>Then there&#8217;s a bit of wacky positioning: I use <code>position: relative; top: -1.32em</code> to line up the tabs to the bottom of the logo area.  Not 1.33, which would make the tabs too high in Camino, and not 1.31, which would make the tabs too low in Mozilla.  All of this is no doubt dependent on the <code>font-size</code> of the tabs.  Doing everything in pixels would be easier but wouldn&#8217;t scale properly in Internet Explorer for Windows (thanks, Microsoft).</p>
+
+<p>And since we&#8217;re using floats, we need a dummy element after the list to clear the float (<code>display: block; clear: both</code>).  Except that we don&#8217;t need to do this in Internet Explorer for Windows, for reasons that are not at all clear (no pun intended).  In fact, the presence of a clearing element in IE/Win makes everything go completely out of whack.  So we use a CSS hack to make the spacer invisible (<code>display: none</code>) for IE/Win but visible and clearing for everybody else.</p>
+
+<p>After all that, it works in Mozilla 1.3, IE 6 for Windows, IE 5 for Mac, Camino 0.7, and Safari build 60, but not Opera.  In all versions of Opera, the tabs do not line up to the bottom of the logo area; they&#8217;re not even close.  Phooey.  It&#8217;s live anyway.  Suggestions welcome.</p>
+
+<p><strong>Update:</strong> through judicious use of my <a href="/web/20110902041903/http://diveintomark.org/safari/csshacks/star7.html">*7 CSS hack</a> (a hack so unpopular that even the fine folks at the <a href="/web/20110902041903/http://css-discuss.incutio.com/?page=CssHacks">css-discuss wiki</a> have attempted to discredit it), I have gotten this to work in Opera.  Thanks to absolutely no one who suggested this, and double thanks to the Opera employee who suggested that I change my tabs so that they worked in Opera and nothing else.</p>
+
+<p>Further reading:</p>
+
+<ul>
+<li><cite>Marek Prokop</cite>: <a href="/web/20110902041903/http://www.sovavsiti.cz/css/horizontal_menu.html">CSS Workshop: Horizontal Menu</a>.</li>
+<li><cite>Ian Andolina</cite>: <a href="/web/20110902041903/http://nontroppo.org/test/tab1.html">CSS Tabbed Navigation</a>.</li>
+<li><cite>Alex Russel</cite>: <a href="/web/20110902041903/http://alex.netwindows.org/tabs/tabs-example2.html">an extension of this technique</a> using fixed-width tabs and CSS background images for a nice rounded tab effect.  The HTML markup is unchanged (still a list, still all-text).</li>
+</ul>
+<p class=c>&#167;
+
+<h3 id=comments>Sixty comments here (<a href=/web/20110902041903/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-970"><p>Phooey? But it _does_ work in Opera 7 PC</p>
+<p>Observe: <a href="/web/20110902041903/http://allyn.karynova.com/images/diveintomark1.gif">http://allyn.karynova.com/images/diveintomark1.gif</a></p>
+<p>:)</p>
+<p>Anyway, I like it, nice work.</p>
+<p class=sig>&#8212;&#8201;<cite>Allyn Edwards</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-970" title="March 25, 2003 @ 12:10 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-971"><p>I have O7 PC as well, and I think that the tabs are supposed to more smothly allign with the bottom of the colored area, as they were before the &#8220;All CSS&#8221; method was adopted.  Of course, I read this all in a newsreader anyway, so I don&#8217;t really care ;)</p>
+<p class=sig>&#8212;&#8201;<cite>Jonathan</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-971" title="March 25, 2003 @ 12:54 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-972"><p>Cool. I suppose there is no real &#8220;correct&#8221; way of doing this stuff so long as it works eh?</p>
+<p>Keep on.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://ihorace.com/' rel='external nofollow' class='url'>Marty</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-972" title="March 25, 2003 @ 1:05 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-973"><p>Yeah, I assume that Mark was referring to the gap between the tabs and the bottom of the header area when he said it didn&#8217;t work in Opera 7. Hey, At least it&#8217;s usable and clean, if not quite perfect.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.darkglass.org/' rel='external nofollow' class='url'>tamaracks</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-973" title="March 25, 2003 @ 1:27 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-974"><p>Hmm, although strangely, when viewing the site in Opera 7 for Windows, the tab links sometimes stop working. I was flipping through the tabs looking at the different colors, and then the tabs stopped responding as links. No hover colors, no hyperlink pointer, no hyperlinking when clicked. Very odd, but I&#8217;m not sure what triggers it, or maybe it was just that I was clicking on the tabs too fast.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.darkglass.org/' rel='external nofollow' class='url'>tamaracks</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-974" title="March 25, 2003 @ 1:31 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-975"><p>Reminds me of <a href="/web/20110902041903/http://www.sovavsiti.cz/css/horizontal_menu.html">http://www.sovavsiti.cz/css/horizontal_menu.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://holloway.co.nz/' rel='external nofollow' class='url'>matthew</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-975" title="March 25, 2003 @ 3:04 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-976"><p>Just yesterday I thought up a way to make this site look like it did the first time you had this design (and, I think, a little better). (This is in fact probably IE only, but that&#8217;s only because I couldn&#8217;t get the technique I mention below to work in Mozilla for some reason.)</p>
+<p>I use the Proxomitron ( <a href="/web/20110902041903/http://www.proxomitron.com/">http://www.proxomitron.com</a> ) and a set of rules inserting the id diveintomark-org-html on the html tag (so that my multisite stylesheet could control individual pages via classes (body#diveintomark-org.index doesn&#8217;t seem to be valid)) and inserting <a href="/web/20110902041903/http://wootest.net/css.php">http://wootest.net/css.php</a> as a stylesheet. I tried having the hover tabs have the background image on hover but in fact it didn&#8217;t look too well. Feel free to try this out, I can give you the exact rules on request.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-976" title="March 25, 2003 @ 3:33 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-977"><p>Mark,</p>
+<p>I&#8217;m writing this from a cybercafe in Belgium &#8211; looked up your site and got a couple of messages about how their computer has dialers and spyware installed.</p>
+<p>How the hell did you do that?!</p>
+<p class=sig>&#8212;&#8201;<cite>Thomas Scott</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-977" title="March 25, 2003 @ 4:29 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-978"><p>I was thinking, why isn&#8217;t it working for me? But you never meant it to let it work just like the glazman css-only tabs, found here:<br />
+<a href="/web/20110902041903/http://daniel.glazman.free.fr/weblog/targetExample.html">http://daniel.glazman.free.fr/weblog/targetExample.html</a><br />
+(only working in the Mozilla 1.3)<br />
+Never seen that one?</p>
+<p class=sig>&#8212;&#8201;<cite>Martijn</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-978" title="March 25, 2003 @ 4:37 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-979"><p>There&#8217;s also this example of css tabbed navigation, which you may have seen:<br />
+<a href="/web/20110902041903/http://nontroppo.org/test/tab1.html">http://nontroppo.org/test/tab1.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.timandkathy.co.uk/' rel='external nofollow' class='url'>Tim</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-979" title="March 25, 2003 @ 4:56 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-980"><p>I have used the same style of doing menu bars as well both on my site and for a few work pages I have done. </p>
+<p>The one thing I can&#8217;t seem to get is fixed tab sizes. I can&#8217;t seem to get the width of all my LI tags the same.</p>
+<p>Anyone manage that?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.sevitz.com/' rel='external nofollow' class='url'>Adrian Sevitz</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-980" title="March 25, 2003 @ 6:12 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-981"><p>Actually just figured it out. You need to set your li tags to display block as well, then you can set the width of all your tabs to be the same.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.sevitz.com/' rel='external nofollow' class='url'>Adrian Sevitz</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-981" title="March 25, 2003 @ 6:29 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-982"><p>Oops I mean set you anchor tags in the li to be block.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.sevitz.com/' rel='external nofollow' class='url'>Adrian Sevitz</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-982" title="March 25, 2003 @ 6:45 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1021"><cite><a href='/web/20110902041903/http://www.simiandesign.com/blog-fu/2003/03/001484.cfm' rel='external nofollow' class='url'>Blog-Fu</a></cite>&#160;(trackback)</li>
+<li id="comment-983"><p>Misaligned in Opera 6.1 on linux..</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.unix-girl.com/blog/' rel='external nofollow' class='url'>kasia</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-983" title="March 25, 2003 @ 8:35 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-984"><p>using images:</p>
+<p><a href="/web/20110902041903/http://alex.netwindows.org/tabs/tabs-example2.html">http://alex.netwindows.org/tabs/tabs-example2.html</a></p>
+<p>derived from a cleanup I did for a clients totally fsck&#8217;d Dreamweaver JavaScript tab setup:</p>
+<p><a href="/web/20110902041903/http://alex.netwindows.org/tabs/rollover_effect2.html">http://alex.netwindows.org/tabs/rollover_effect2.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://alex.netwindows.org/' rel='external nofollow' class='url'>Alex Russell</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-984" title="March 25, 2003 @ 9:23 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-985"><p>oops, forgot to mention that the above won&#8217;t work on lame browsers (IE, for example)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://alex.netwindows.org/' rel='external nofollow' class='url'>Alex Russell</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-985" title="March 25, 2003 @ 9:24 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-986"><p>See my vewsion on CSS manu, based only on &lt;a&gt; styles.<br />
+[link removed]</p>
+<p class=sig>&#8212;&#8201;<cite>@leX</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-986" title="March 25, 2003 @ 10:27 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-987"><p>@lex, I removed your link because:</p>
+<p>1. You seem to be plugging your company.  If you really wanted to just show us a CSS example, you would have put up an isolated test page.</p>
+<p>2. The technique you&#8217;re using does not use proper list markup, which is a prerequisite for this discussion.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-987" title="March 25, 2003 @ 10:37 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-988"><p>A List Apart has a good article on this as well:</p>
+<p><a href="/web/20110902041903/http://www.alistapart.com/stories/taminglists/">http://www.alistapart.com/stories/taminglists/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://blogs.bwerp.net/' rel='external nofollow' class='url'>Adam</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-988" title="March 25, 2003 @ 10:40 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-989"><p>Great code, which I&#8217;m attempting to re-use (in part), however, when I try to validate your CSS with the W3C validator, I get &#8220;Parse Error&#8221; for the part for changing the colors of the active tabs&#8230;</p>
+<p><a href="/web/20110902041903/http://jigsaw.w3.org/css-validator/validator?uri=http://diveintomark.org/">http://jigsaw.w3.org/css-validator/validator?uri=http://diveintomark.org/</a></p>
+<p class=sig>&#8212;&#8201;<cite>RPW</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-989" title="March 25, 2003 @ 10:56 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-990"><p>Off-topic, but in answer to Thomas, the spyware notices are generated by a script that searches for installed Class-IDs of known parasites.  More info here:</p>
+<p><a href="/web/20110902041903/http://doxdesk.com/parasite/">http://doxdesk.com/parasite/</a></p>
+<p>You can install the script on your own server (as I have):</p>
+<p><a href="/web/20110902041903/http://doxdesk.com/software/js/parasite.html">http://doxdesk.com/software/js/parasite.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-990" title="March 25, 2003 @ 10:57 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-991"><p>Good call on the CSS validator!  Fixed by replacing &#8220;nav_index&#8221; with &#8220;nav-index&#8221;, etc.  I updated the example page too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-991" title="March 25, 2003 @ 11:02 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-992"><p>Your tabs don&#8217;t work quite right in Konqueror (the Linux/KDE browser).  They seem to be in the right position, but the text inside them seems to start 1 or 2 characters too far right, overflow the tab it&#8217;s supposed to be in, then is truncated by the next-to-the-right tab.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeK</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-992" title="March 25, 2003 @ 11:21 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-993"><p>What version of Konq are you using?  I&#8217;m not interested in supporting 2.x, which had wretched CSS support.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-993" title="March 25, 2003 @ 11:32 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-994"><p>It doesn&#8217;t work in Opera 7.04 unless I toggle to &#8216;user mode.&#8217; Author mode is completely blank!<br />
+sigh&#8230;  Your article fits right in with SitePoint at <a href="/web/20110902041903/http://www.sitepoint.com/search/search.php?ps=10&q=css&submit=Search">http://www.sitepoint.com/search/search.php?ps=10&#038;q=css&#038;submit=Search</a> (a search on css). They just published an article on pure css rollovers&#8230; darn&#8230; don&#8217;t have the url for you right off&#8230;<br />
+neato stuff. Opera is strange, isn&#8217;t it</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://radio.weblogs.com/0107233/' rel='external nofollow' class='url'>M. Ford</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-994" title="March 25, 2003 @ 11:41 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-995"><p>I tried using lists as tabs a while back, as cleanest, but gave up after the browser-specific workaround list got too long for the technique to be maintainable. I settled for *gasp* tables. Yeah that&#8217;s right, and I&#8217;ve even convinced myself that it&#8217;s semantically more appropriate. I don&#8217;t think it&#8217;s an obscure pun linking &#8220;tab&#8221; with &#8220;table&#8221; &#8211; consider tab delimiting as a rough means of representing a table. What&#8217;s more, unlike ul/li, table/tr/td/th has a natural candidate for &#8220;selected tab&#8221; &#8211; th. On view:</p>
+<p><a href="/web/20110902041903/http://style.tigris.org/nonav/dev/t2/docs/sampler_inst.html">http://style.tigris.org/nonav/dev/t2/docs/sampler_inst.html</a></p>
+<p class=sig>&#8212;&#8201;<cite>todd</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-995" title="March 25, 2003 @ 12:28 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-996"><p>Proper list mark-up. Ok. What happens if you don&#8217;t use lists? Is that invalid or incorrect? </p>
+<p>I&#8217;m so confused. Following steps in Eric Meyer on CSS &#8211; he presents a method sans lists &#8211; which has worked for me and I&#8217;m using this method&#8230; and on some recent sites a hybrid of li tags and sans li&#8230; </p>
+<p>Is  one method more correct than another?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://ihorace.com/' rel='external nofollow' class='url'>Marty</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-996" title="March 25, 2003 @ 12:32 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-997"><p>Re: tables.  Your linked example appears to be a misuse of the TH element.  TH has two purposes: being a header for column of table cells (in which case you would have a row of TH elements, then multiple rows of TD elements), or being a header for the row of table cells (in which case you would have a row with one TH, then multiple TDs).  Your example uses TH simply to affect visual styling.  You&#8217;d be better off simply using TD class=&#8221;highlighted&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-997" title="March 25, 2003 @ 12:57 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-998"><p>If you don&#8217;t use list markup, God will strike you down and punish you.</p>
+<p>No, really, you should use list markup because what you&#8217;re marking up is a list.  In previous incarnations of my site, I had the same list along the right-hand side of the page.  And guess what: I used list markup, because it was a list.  Making it display horizontally doesn&#8217;t change the fact that it&#8217;s a list.</p>
+<p>XHTML 2.0 has a new element specifically for navigation lists.  If this site were XHTML 2.0 (ha!) I would use the &lt;nl&gt; element, but in HTML 4 and XHTML 1.x, the best markup available is &lt;ul&gt;.</p>
+<p><a href="/web/20110902041903/http://www.w3.org/TR/xhtml2/mod-list.html#sec_10.2.">http://www.w3.org/TR/xhtml2/mod-list.html#sec_10.2.</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-998" title="March 25, 2003 @ 1:02 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-999"><p>re: Re: tables: i understand that my usage departs from the normative use cases for th, but i maintain that using th to indicate &#8220;selected/active/heading tab&#8221; is more accessible (in the commonsense case &#8211; not WAI-ish specifically) than loading td or li with private class semantics (selected, highlighted, etc) to indicate a critical distinction. it has little to do with the default rendering of th, which i have modified heavily anyway. the exception is the no-CSS case. the example is visually intelligible in nav2/3/4, while a list is much less so</p>
+<p>it would be best if the table didn&#8217;t terminate where it does, suggesting the end of the scope of the th. but html is full of examples of stacked structures that we are asked to interpret as nests. a sequence of Hn elements and &#8220;children&#8221;, for instance.</p>
+<p>i like lists for lists, btw. note that the navigation elements along the side are lists &#8211; with dt standing in for &#8220;label&#8221; until we see nl/label et al.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-999" title="March 25, 2003 @ 1:27 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1000"><p>The default visual rendering of TH elements has no bearing on whether you are using them correctly.  Also, overloading words like &#8220;accessible&#8221;, which have specific technical meanings, is a pet peeve of me.  Especially here, when the choice of markup actually has consequences for accessibility (in the WCAG sense).</p>
+<p>Layout tables in general are clumsy to navigate in screen readers, and display poorly in text-only browsers.</p>
+<p>Tables with improperly mixed TD/TH cells may confuse the screen reader into thinking that this is a data table instead of a layout table (which has a different mode of operation).  Note: I have not tested this specifically, so this may not actually be a problem, but I *believe* that JAWS goes into data table mode the minute it sees a TH element.</p>
+<p>Consecutive &lt;a&gt; tags with no text between them read poorly in screen readers (especially Home Page Reader, which simply reads links in an alternate voice, without any pause or spoken indication that a new link is starting), and display poorly in text-only browsers (where, unsurprisingly, they are displayed strung together without any space between them).</p>
+<p>Real lists read well in screen readers (some announce the start of a list and how many items it contains, and they pause a natural amount between list items) and display well in text-only browsers (which generally put each list item on a separate line preceded by an asterisk, as you might type yourself in a plain-text email or other text-only context).</p>
+<p>Markup matters.  If you only care about visual design, try Flash.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1000" title="March 25, 2003 @ 1:42 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1001"><p>I was just going to ask about what difference does it make if I used lists for my navigation or not. You just answered. Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://ihorace.com/' rel='external nofollow' class='url'>Marty</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1001" title="March 25, 2003 @ 2:26 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1002"><p>Marty,<br />
+  Just about everything can be a list, just as just about everything can be a table.  A document is a list of paragraphs.  A paragraph can be a list of spans encompassing each sentence.  Ad nauseum.</p>
+<p>  It&#8217;s all shades of grey.</p>
+<p>  I personally prefer lists for nav links, and Mark&#8217;s outlined his (good) reasons for preferring lists.</p>
+<p>  XHTML2 includes nl, which is an element specifically for a navigation list, and we might expect this list to be used a lot for nav links&#8230; but I also expect its &#8220;purity&#8221; to be subverted as the teeming masses (that&#8217;s us) use it for things that it&#8217;s useful for.<br />
+  <a href="/web/20110902041903/http://www.w3.org/TR/xhtml2/mod-list.html#edef_list_nl">http://www.w3.org/TR/xhtml2/mod-list.html#edef_list_nl</a></p>
+<p>  The degree of subversion is directly related to the lack of tool support, the complexity of the standard, and the variety of people attempting to use the standard.</p>
+<p>  This subversion of purity, and therefore diluted utility of &#8220;semantics&#8221;, will continue as long as people must hand-code, or while the standards they attempt to code are too complicated to understand in their entirity easily.</p>
+<p>  And that looks to be a long while yet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://dunck.us/' rel='external nofollow' class='url'>Jeremy Dunck</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1002" title="March 25, 2003 @ 2:47 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1003"><p>Also, mu.</p>
+<p><a href="/web/20110902041903/http://diveintomark.org/archives/2003/01/15/markup_mu.html">http://diveintomark.org/archives/2003/01/15/markup_mu.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1003" title="March 25, 2003 @ 3:00 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1004"><p>Why are you using the body class to highlight the active tab?</p>
+<p>It seems like a nice idea and it works well, but to me it seems much more appropriate to embed the &lt;a&gt; tags in, say, a &lt;strong&gt; tag.</p>
+<p>By doing this, your markup says something about the tab currently active. Users which are unable to apply a given stylesheet can still see the difference.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.cs.vu.nl/~mvermaat/' rel='external nofollow' class='url'>Martijn</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1004" title="March 25, 2003 @ 3:00 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1005"><p>That&#8217;s a good point and I&#8217;ll consider it.  The real answer is that I&#8217;m using server-side includes to include the navbar, so it&#8217;s going to be the same for every page.  There are lots of other clues on the page as to what section you&#8217;re in (page title, breadcrumb trails, H2 tags).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1005" title="March 25, 2003 @ 3:38 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1006"><p>Dumb question. Why &lt;ul&gt; instead of &lt;ol&gt;? A links list strikes me as ordered, at least to some extent (e.g. &#8220;Home&#8221; is pretty much always the first link). Is it because &lt;ol&gt; implies some sort of ordering marker (numbers, letters, etc)?</p>
+<p>I admit this question came up because I was working through Cheetah templates in my head and determined that I&#8217;d better represent my navbars as Python lists rather than Python dictionaries. Kinda need that ordering. :)</p>
+<p class=sig>&#8212;&#8201;<cite>Dorothea Salo</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1006" title="March 25, 2003 @ 3:45 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1007"><p>&#8220;and display poorly in text-only browsers (where, unsurprisingly, they are displayed strung together without any space between them)&#8221;: Not really, no. See links 25 and 26 adjacent in screenshots below from </p>
+<p><a href="/web/20110902041903/http://home.clara.net/ianlloyd/blog/2003_03_01_archive.htm#200035758">http://home.clara.net/ianlloyd/blog/2003_03_01_archive.htm#200035758</a></p>
+<p><a href="/web/20110902041903/http://joeclark.org/aaLynx.jpg">http://joeclark.org/aaLynx.jpg</a><br />
+<a href="/web/20110902041903/http://joeclark.org/aaLinks.jpg">http://joeclark.org/aaLinks.jpg</a><br />
+<a href="/web/20110902041903/http://joeclark.org/aaW3M.jpg">http://joeclark.org/aaW3M.jpg</a></p>
+<p>(First two examples with link enumeration turned on. Don&#8217;t leave home without it. W3M lets you tab to links, which are underlined when active.)</p>
+<p>The sequence &lt;a&gt;&lt;/a&gt;&lt;a&gt;&lt;/a&gt;&lt;a&gt;&lt;/a&gt; is programmatically unambiguous, and any device that can&#8217;t make that sequence usable is misrendering standard HTML.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1007" title="March 25, 2003 @ 4:56 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1008"><p>Re: UL vs. OL.  Amazingly, I don&#8217;t have a strong opinion either way.  My instinct says that this list does not have a natural ordering (other than home being logically first).  For instance, I&#8217;m not suggesting that you visit about before archives, or archives before projects.</p>
+<p>If someone wants to make a case for OL over UL, I am certainly open to changing it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1008" title="March 25, 2003 @ 7:21 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1009"><p>Re: &#8220;programmatically unambiguous&#8221;.  Plain text is programmatically unambiguous, but we use markup because it has advantages.  Proper markup has even more advantages.  List markup, in this case, has specific advantages over non-list markup in many situations &#8212; including in a text browser in the default configuration (without link numbering).</p>
+<p>I do, however, agree with your general point that assistive technology should handle the degraded markup better.  They should do lots of things better.  All browsers should do everything better.  IE 5 should have gotten the box model right, but it didn&#8217;t.  JAWS should support aural stylesheets, but it doesn&#8217;t.  Maybe link numbering should be on by default in Lynx, but it isn&#8217;t.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1009" title="March 25, 2003 @ 7:27 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1010"><p>RE: #37<br />
+I thought of the extra complexity you get when using a &lt;strong&gt; tag for an active tab (list-item) after submitting my post. But that&#8217;s a maintainer&#8217;s issue.</p>
+<p>After giving this approach some more thought, I&#8217;m not sure if you actually *want* to highlight the active tab in your markup. You can think about the navigation as being a static part of the application, and not as a part of the real content. In that case, I think it would be a styling issue to highlight the active tab, so it would be a good thing to do this by using CSS only (your approach using the body class).</p>
+<p>It&#8217;s a thin line, and I&#8217;m not sure which side to choose.</p>
+<p>And, of course, you&#8217;re absolutely right there are plenty of other hints to not be confused about your current &#8216;location&#8217;.</p>
+<p>RE: UL vs. OL<br />
+I can&#8217;t think of a better unordered list example than the navigation items on this site. I really don&#8217;t see an obvious ordering in them. So an UL would deffinately fit here.</p>
+<p>An ordered list would be appropriate for a list of previous postings as you see in many weblog navigation bars. The ordering in this case will be the time of publicing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.cs.vu.nl/~mvermaat/' rel='external nofollow' class='url'>Martijn</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1010" title="March 25, 2003 @ 7:52 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1022"><cite><a href='/web/20110902041903/http://alevin.com/weblog/archives/001026.html' rel='external nofollow' class='url'>BookBlog</a></cite>&#160;(trackback)</li>
+<li id="comment-1011"><p>My take on tabs.</p>
+<p><a href="/web/20110902041903/http://homepage.ntlworld.com/jared.williams/css-discuss/tabs.htm">http://homepage.ntlworld.com/jared.williams/css-discuss/tabs.htm</a></p>
+<p>Thou Opera doesnt seem to quite get it right.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://homepage.ntlworld.com/jared.williams/css-discuss/tabs.htm' rel='external nofollow' class='url'>Ren</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1011" title="March 26, 2003 @ 4:43 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1012"><p>Opera doesn&#8217;t like the negative top value for the tabs. Just hiding that will show the tabs in the expected position in Opera 7. I haven&#8217;t checked older versions.</p>
+<p>Why is the negative top value needed in the first place? The containing DIV with the background should enclose the tabs, as there is a clearing element beneath them. Maybe I&#8217;m missing something ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://people.opera.com/rijk/opera/' rel='external nofollow' class='url'>Rijk van Geijtenbeek</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1012" title="March 26, 2003 @ 5:29 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1023"><cite><a href='/web/20110902041903/http://www.jayallen.org/journey/2003/03/list_markup_for_navigation' rel='external nofollow' class='url'>JayAllen - The Daily Journey</a></cite>&#160;(trackback)</li>
+<li class=me id="comment-1013"><p>Yes, I know what it takes to get it to work in Opera 7 (it&#8217;s still in my testing regimen &#8212; for now), but doing that breaks every single other browser on Earth.  (Try it.  I did.)  At which point, I frankly don&#8217;t care whether Opera is &#8220;right&#8221;, because it&#8217;s lost the popularity contest with 4 other rendering engines that all agree.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1013" title="March 26, 2003 @ 9:09 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1014"><p>While we are talking about CSS tabs, I thought I would throw an attempt I made a while ago into the mix. </p>
+<p><a href="/web/20110902041903/http://www.oldstpatsvision.org/">http://www.oldstpatsvision.org/</a></p>
+<p>They were a bigger pain than I thought they would be and I am still not enirely happy with them.  I&#8217;ll look at athe code of some of the other examples and see if I can come up with something better.  Any comments would be appreciated.  The site is maintained by the client with Macromedia&#8217;s Contribute, so I can&#8217;t promise everything will validate.</p>
+<p class=sig>&#8212;&#8201;<cite>Faust</cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1014" title="March 26, 2003 @ 10:07 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1015"><p>We use CSS tabs at UpMyStreet: <a href="/web/20110902041903/http://www.upmystreet.com/overview/?l1=bs3+1qp">http://www.upmystreet.com/overview/?l1=bs3+1qp</a></p>
+<p>And I was quite pleased with the CSS tabs I did for Pepys&#8217; Diary: <a href="/web/20110902041903/http://www.pepysdiary.com/">http://www.pepysdiary.com/</a> (although I didn&#8217;t bother with drawing in the &#8220;off&#8221; tabs).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.gyford.com/' rel='external nofollow' class='url'>Phil Gyford</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1015" title="March 26, 2003 @ 11:12 am"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1024"><cite><a href='/web/20110902041903/http://www.nicomorgan.com/2parchives/001198.php' rel='external nofollow' class='url'>My 2p</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-1025"><cite><a href='/web/20110902041903/http://www.nicomorgan.com/2parchives/001198.php' rel='external nofollow' class='url'>My 2p</a></cite>&#160;(trackback)</li>
+<li id="comment-1016"><p>My immediate reaction is that I would have wanted a little more vertical white space within each tab. Imagine my surprise when I added some top and bottom padding to the anchor tag, and NOTHING happened! Oh well, the wonders of CSS will never cease&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://nicomorgan.com/' rel='external nofollow' class='url'>Nico</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1016" title="March 26, 2003 @ 12:27 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1017"><p>Mark.  You&#8217;re a bloody genius. What would we do without you?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.irritant.dircon.co.uk/enter.html' rel='external nofollow' class='url'>irritant</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1017" title="March 26, 2003 @ 12:31 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1018"><p>I&#8217;m so relieved to hear you say CSS is hard. I was beginning to worry about myself&#8230; thought I had some horrible mental blockage.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://nicelytoasted.net/' rel='external nofollow' class='url'>Lisa</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1018" title="March 26, 2003 @ 1:51 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1019"><p>I&#8217;m abandoning them, after several months of trying to make them work. non-troppo set a useful &#8220;how-to&#8221; a while back here</p>
+<p><a href="/web/20110902041903/http://nontroppo.org/test/tab1.html">http://nontroppo.org/test/tab1.html</a></p>
+<p>which I modified to make </p>
+<p><a href="/web/20110902041903/http://www.richlyon.net/">http://www.richlyon.net</a></p>
+<p>but I can only get them (like yours) to go in two-out-of-three of IE5.5, IE6 and Opera 7.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://www.richlyon.net/' rel='external nofollow' class='url'>Rich</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1019" title="March 26, 2003 @ 2:03 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1020"><p>Rich, be sure to toss Mozilla, Camino, and Safari into the testing mix.  You&#8217;re sure to shake out a few more quirks!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110902041903/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110902041903/http://diveintomark.org/archives/2003/03/24/pure_css_tabs#comment-1020" title="March 26, 2003 @ 3:16 pm"><img alt="#" src=/web/20110902041903im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1026"><cite><a href='/web/20110902041903/http://perso.all-3rd.net/manu/blog/archives/000033.html' rel='external nofollow' class='url'>blog out</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-1027"><cite><a href='/web/20110902041903/http://perso.all-3rd.net/manu/blog/archives/000033.html' rel='external nofollow' class='url'>blog out</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-1028"><cite><a href='/web/20110902041903/http://www.fortysomething.ca/mt/etc/archives/002325.php' rel='external nofollow' class='url'>ETC. Indulging my inner geek</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-1029"><cite><a href='/web/20110902041903/http://www.thelimeybrit.com/blog/archives/000325.php' rel='external nofollow' class='url'>the Limey Brit</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110902041903/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110902041903/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110902041903/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110902041903/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110902041903/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.505 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:59:04 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 4:19:03 Sep 2, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:30 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

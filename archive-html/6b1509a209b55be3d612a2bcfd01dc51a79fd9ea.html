@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>More on RSS auto-discovery [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110719032941/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110719032941/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110719032941/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110719032941/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110719032941im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110719032941/http://diveintomark.org/archives/2002/05/30/introduction_to_xml_namespaces" title="Introduction to XML Namespaces">
+<link rel=next href="/web/20110719032941/http://diveintomark.org/archives/2002/05/31/rss_autodiscovery_in_python" title="RSS auto-discovery in Python">
+<link rel=up href="/web/20110719032941/http://diveintomark.org/archives#p828" title="May 2002">
+<link rel='index' title='dive into mark' href='/web/20110719032941/http://diveintomark.org/' />
+<link rel='prev' title='Introduction to XML Namespaces' href='/web/20110719032941/http://diveintomark.org/archives/2002/05/30/introduction_to_xml_namespaces' />
+<link rel='next' title='RSS auto-discovery in Python' href='/web/20110719032941/http://diveintomark.org/archives/2002/05/31/rss_autodiscovery_in_python' />
+<link rel='canonical' href='/web/20110719032941/http://diveintomark.org/archives/2002/05/31/more_on_rss_autodiscovery' />
+<link rel='shortlink' href='/web/20110719032941/http://diveintomark.org/?p=828' />
+<meta name="keywords" content="autodiscovery,markup,rss,webservices">
+<link href="/web/20110719032941cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110719032941/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110719032941/http://diveintomark.org/archives/2002/05/31/more_on_rss_autodiscovery">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/05\/31\/more_on_rss_autodiscovery";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "19";
+var displayMonth = "Jul";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/05/31/more_on_rss_autodiscovery" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110719032941" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101031104623/http://diveintomark.org/archives/2002/05/31/more_on_rss_autodiscovery" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="31 Oct 2010"><strong>OCT</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 3:29:41 Jul 19, 2011">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101031104623/http://diveintomark.org/archives/2002/05/31/more_on_rss_autodiscovery" title="10:46:23 Oct 31, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 3:29:41 Jul 19, 2011">19</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620021451/http://diveintomark.org/archives/2002/05/31/more_on_rss_autodiscovery" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 3:29:41 Jul 19, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110719032941*/http://diveintomark.org/archives/2002/05/31/more_on_rss_autodiscovery" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>42 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">10 Apr 06 - 19 Jul 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000201122310_2007:-1:220202100011_2008:-1:111121104101_2009:-1:000010000001_2010:-1:000001000100_2011:6:000000100000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110719032941/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110719032941/http://diveintomark.org/archives#p828">May 31, 2002</a> &#8227;
+<h2>More on RSS auto-discovery</h2> (<a href="/web/20110719032941/http://diveintomark.org/tag/autodiscovery" rel="tag">autodiscovery</a>, <a href="/web/20110719032941/http://diveintomark.org/tag/markup" rel="tag">markup</a>, <a href="/web/20110719032941/http://diveintomark.org/tag/rss" rel="tag">rss</a>, <a href="/web/20110719032941/http://diveintomark.org/tag/webservices" rel="tag">webservices</a>)</div>
+<p><cite>Jenny Levine</cite>: <a href="/web/20110719032941/http://www.theshiftedlibrarian.com/2002/05/30.html#a2087">Trying it out</a>.  After reading <a href="/web/20110719032941/http://diveintomark.org/archives/2002/05/30.html#rss_autodiscovery">RSS auto-discovery</a> yesterday, Jenny added a <samp class="sgmltag">link</samp> tag to her site which points to her syndicated RSS feed.  I added a similar tag to my site.  <a href="/web/20110719032941/http://matt.griffith.com/weblog/2002/05/30.html#a60">Matt Griffith added it</a> to his site.  Now, he says, <q cite="http://matt.griffith.com/weblog/2002/05/30.html#a60">I just need an aggregator that supports it.</q></p>
+
+<p>Here&#8217;s something that may connect the dots and spur <abbr title="content management system">CMS</abbr> developers and weblog authors to implement this as a new standard:</p>
+
+<ul>
+<li><a href="/web/20110719032941/http://diveintomark.org/projects/autorss/radio.html">Radio auto-subscribe bookmarklet</a></li>
+<li><a href="/web/20110719032941/http://diveintomark.org/projects/autorss/amphetadesk.html">AmphetaDesk auto-subscribe bookmarklet</a></li>
+<li><a href="/web/20110719032941/http://fyuze.com/customize/subscribe_bookmarklet.php">&#8220;add to fyuze&#8221; bookmarklet</a></li>
+</ul>
+
+<p>Follow the link for your news aggregator, and you&#8217;ll see a page with a &#8220;Subscribe&#8221; link.  This is a bookmarklet, which you can drag to your links toolbar (<abbr title="Internet Explorer">IE</abbr> 5+, Netscape 6+, Mozilla should all work) to create a &#8220;Subscribe&#8221; button.  Whenever you visit a site (that implements the <samp class="sgmltag">link</samp> tag) and you want to add it to your news aggregator, just click your &#8220;Subscribe&#8221; button and away you go.</p>
+
+<p>Try it on my site now.  Then visit <a href="/web/20110719032941/http://www.theshiftedlibrarian.com/">Jenny&#8217;s site</a> and try it there.  Then visit <a href="/web/20110719032941/http://matt.griffith.com/weblog/">Matt&#8217;s site</a> and try it again.  Or <a href="/web/20110719032941/http://www.perceive.net/pages/page/articles/year/2002/month/5#19">Eric Vitiello</a>, <a href="/web/20110719032941/http://www.decafbad.com/news_archives/000170.phtml">0xDECAFBAD</a>, <a href="/web/20110719032941/http://www.pipetree.com/qmacro/2002/May/31#htmllink">DJ Adams</a>, <a href="/web/20110719032941/http://www.beblogging.com/blog/20020531-180001">Ugo Cei</a>, <a href="/web/20110719032941/http://www.papascott.de/2002/05/31/index.php#001744">Christopher Ryan</a>, <a href="/web/20110719032941/http://www.zopenewbies.net/1022864584/index_html">ZopeNewbies</a>, <a href="/web/20110719032941/http://rss.benhammersley.com/archives/000063.html">Ben Hammersley</a>, <a href="/web/20110719032941/http://www.oreillynet.com/~rael/2002/May/31#auto_discovery_of_rss">Rael Dornfest</a>, <a href="/web/20110719032941/http://www.flutterby.com/">Dan Lyke</a>.  (The list keeps growing.  <del>Boy, I&#8217;d love to see it on <a href="/web/20110719032941/http://www.scripting.com/">Scripting News</a>.</del>  Update: <a href="/web/20110719032941/http://www.scripting.com/">Dave Winer</a> has added the <samp class="sgmltag">link</samp> tag to Scripting News.  Thanks!)</p>
+
+<p>Since the bookmarklet, in effect, asks the site where its feed is, it will work with any type of site that implements the tag: Radio, Manila, Movable Type, GreyMatter, Blogger Pro, whatever.  If we can persuade existing weblog authors to insert <a href="/web/20110719032941/http://diveintomark.org/archives/2002/05/30.html#rss_autodiscovery">this one line of code</a>, and then get it into the default templates of weblogging tools, and we could make news aggregation an order of magnitude easier.</p>
+
+<ol>
+<li>Manila: this would be easiest, since Manila itself could automatically generate the <samp class="sgmltag">link</samp> tag as part of the <samp>{meta}</samp> macro.  The hosting provider updates once, and all hosted weblogs instantly take advantage of it.  (Update: <a href="/web/20110719032941/http://manilanewbies.userland.com/linkToRssFromHtml">Manila support is now fully implemented.</a>)</li>
+<li>Radio: I&#8217;ve asked Dave to add the tag to Radio&#8217;s default templates.  (Update: <a href="/web/20110719032941/http://radio.userland.com/linkToRssFromHtml">Radio support is now fully implemented.</a>  If you have a Radio weblog, don&#8217;t miss this.  Thanks, Dave!)</li>
+<li>Blosxom: <a href="/web/20110719032941/http://www.oreillynet.com/~rael/2002/May/31#auto_discovery_of_rss">Rael is way ahead of me</a>.</li>
+<li>Drupal: <a href="/web/20110719032941/http://www.natrak.net/node.php?id=98">Kjartan Mannes is working on Drupal support.</a></li>
+<li>Nucleus: <a href="/web/20110719032941/http://dev.nucleuscms.org/index.php?itemid=2919">Wouter Demuynck has implemented it in Nucleus</a>.</li>
+<li><p>Movable Type: The next release of Movable Type <a href="/web/20110719032941/http://www.movabletype.org/support/ib3/ikonboard.cgi?s=3cf7e597493effff;act=ST;f=12;t=438">will include the tag to MT&#8217;s default templates</a>.  If you&#8217;re already running Movable Type, insert this into the <samp class="sgmltag">head</samp> section of your Main Index template and each of your Archive templates (6/2/2002: example updated to reflect latest standard):</p>
+
+<blockquote>
+<p><samp><code>&lt;link rel="alternate" type="application/rss+xml" title="RSS" href="&lt;$MTBlogURL$&gt;index.rdf" /&gt;</code></samp></p>
+</blockquote>
+
+</li>
+</ol>
+
+<p>I never thought I&#8217;d say it, but&#8230; <em>Bing!</em></p>
+
+<p>Update: several syndication services also now support this.</p>
+
+<ol>
+<li><a href="/web/20110719032941/http://www.newsisfree.com/">News Is Free</a>: every channel page includes the tag.  Try the bookmarklet on <a href="/web/20110719032941/http://www.newsisfree.com/sources/info/2499/">the diveintomark channel</a>. It will use the site&#8217;s original feed, if any, or fall back to the NewsIsFree scraped feed if necessary.  (Thanks, Mike Krus.)</li>
+<li><a href="/web/20110719032941/http://www.syndic8.com/">Syndic8</a>: every feed info page includes the tag.  Try the bookmarklet on <a href="/web/20110719032941/http://www.syndic8.com/feedinfo.php?FeedID=7404">the diveintomark feed info page</a>.  Syndic8 has information on over 5,800 feeds!  Browse and subscribe to your heart&#8217;s content.  (Thanks, Jeff Barr.)</li>
+<li><a href="/web/20110719032941/http://meerkat.oreillynet.com/">Meerkat</a>: every HTML page generated by Meerkat includes the tag, pointing to the associated RSS version of the same content.  (Thanks, Rael Dornfest.)</li>
+</ol>
+
+<p><cite>MaximumAardvark</cite>: <q cite="http://www.maximumaardvark.com/archives/000421.html#000421"><a href="/web/20110719032941/http://www.maximumaardvark.com/archives/000421.html#000421">I&#8217;ve added the requesite code</a> for an as-yet-nonexistent aggregator to automatically find my RSS feed.</q>  No, no, that&#8217;s the cool part: the bookmarklets work with the news aggregators that already exist.  The aggregators themselves could be updated to auto-discover a site&#8217;s RSS feed on their own, but the bookmarklets work today.</p>
+
+<p><a href="/web/20110719032941/http://philringnalda.com/archives/002218.php">Phil Ringnalda is patiently waiting</a> for this to reach a tipping point and become mainstream.  Being an early adopter is like that.  You can use the bookmarklet at <a href="/web/20110719032941/http://www.newsisfree.com/">News Is Free</a> or <a href="/web/20110719032941/http://www.syndic8.com/">Syndic8</a> while you wait.</p>
+
+<p>This would make a cool Mozilla sidebar.  Surf to any page of a site, see the site&#8217;s current RSS feed in the sidebar, with a link to subscribe.  Wish I knew <a href="/web/20110719032941/http://developer.netscape.com/docs/manuals/browser/sidebar/index.html">how to program Mozilla sidebars</a>. (Thanks, <a href="/web/20110719032941/http://www.marginalia.org/">Bill</a> for the link.)</p>
+
+<p><cite>BlahStuff</cite>: <q cite="http://www.blahstuff.com/common/single.asp?xml=2002_05_26_blahblog_arch.xml&amp;id=85132492"><a href="/web/20110719032941/http://www.blahstuff.com/common/single.asp?xml=2002_05_26_blahblog_arch.xml&id=85132492">It&#8217;s a grass-roots effort</a> to define how an aspect of HTML is utilized.</q>  Actually, this part of HTML was designed to be extensible; the only trick is getting enough people (and tools) to agree on how to interpret a particular extension.</p>
+
+<p>In email, <a href="/web/20110719032941/http://radio.weblogs.com/0101146/">Robert K. Brown</a> asks, <q>I&#8217;ve got that cute little Radio coffee cup that will allow a Radio user to subscribe to my feed &#8230; How has the subscription process changed
+because of this?</q></p>
+
+<p>Answer: keep your XML coffee cup, and add this too.  The XML icon is a link, meant to be clicked; the <samp class="sgmltag">link</samp> tag is just invisible metadata.  Links are for humans; metadata is for machines.  Metadata lets programs be smarter, and easier to use.  For instance, current versions of Radio and AmphetaDesk require you to type (or paste) in the entire URL of a feed in order to subscribe to it.  (The coffee cup link allows Radio users to shortcut this process, but it only works for Radio, and only if the weblog author supports it.  AmphetaDesk has a different addressing scheme, other aggregators like <a href="/web/20110719032941/http://bitworking.org/Aggie.html">Aggie</a> have no addressing scheme at all, and many syndicateable sites have no coffee cup link, just a regular XML link you have to copy and paste.)</p>
+
+<p>But what if you could just type the address of the site itself, and your aggregator could ask the site where its feed was and then subscribe to it?  Wouldn&#8217;t that be easier?  That&#8217;s the kind of improvement that metadata makes possible.</p>
+
+<p>In a later email, Robert ponders the possibility of Google picking up on these tags and exposing it somehow.  You can already search Google by file type (use &#8220;filetype:rss&#8221; as part of your search), but this misses a lot (like &#8220;filetype:rdf&#8221;, or &#8220;filetype:xml&#8221;, or feeds <a href="/web/20110719032941/http://www.voidstar.com/rssify.php">generated dynamically by PHP scripts</a>).</p>
+
+<p>Or how about GoogleBox 2.0?  You could write a script using the <a href="/web/20110719032941/http://www.google.com/apis/">Google API</a> to find sites related to yours, then automatically ask each site for its RSS feed.  (Maybe a future version of the Google API could even return this information as part of your search results.)  That sounds useful.</p>
+
+<p><cite title="O'Reilly Network">Ben Hammersley</cite>: <a href="/web/20110719032941/http://www.oreillynet.com/cs/weblog/view/wlg/1475">Automatic Discovery of RSS feeds</a>.  <q cite="http://www.oreillynet.com/cs/weblog/view/wlg/1475">By adding a line like this &#8230; a site would be providing metadata as to the location of its feed &#8211; and this would allow newsreaders, browsers and search engines to automatically locate the feed.</q></p>
+
+<p><cite>Dave Winer</cite>: <a href="/web/20110719032941/http://scriptingnews.userland.com/backissues/2002/05/31#fromTheMoreflieswithhoneyDept">From the More-Flies-With-Honey Dept.</a>  <q cite="http://scriptingnews.userland.com/backissues/2002/05/31#fromTheMoreflieswithhoneyDept">I don&#8217;t think the idea is too great &#8230; I can&#8217;t imagine giving users instructions that include &#8220;View the source of the page and if it has a link element..&#8221;</q></p>
+
+<p>God no, don&#8217;t do that; make software that does that for them.  Think of all the places during the course of a program where you have a site&#8217;s main URL; now imagine that in all of those places, your program could get the site&#8217;s RSS feed too.  <a href="/web/20110719032941/http://radio.weblogs.com/0101679/stories/2002/05/31/beyondBacklinks.html" title="Sam Ruby, May 31, 2002: Beyond Backlinks">Sam Ruby wants his aggregator to suggest feeds</a> that would be of interest.  Think of all the ways you can determine what sites might be of interest:</p>
+
+<ol>
+<li>Counting outgoing links</li>
+<li>Looking at incoming referrers</li>
+<li>Asking Google for &#8220;related&#8221; links</li>
+<li>Asking Blogdex or Daypop which other sites are linking to the same stories you&#8217;re linking to</li>
+<li>Asking Blogrolling.com <a href="/web/20110719032941/http://www.blogrolling.com/search_linked.phtml?q=scripting.com">whose blogrolls overlap yours</a></li>
+</ol>
+
+<p>Now take each of those sites and find its associated RSS feed, and suggest it to Sam.</p>
+
+<p>Sunday update: please note, <strong><a href="/web/20110719032941/http://diveintomark.org/archives/2002/06/02.html#important_change_to_the_link_tag">the standard has changed slightly</a></strong>.  If you implemented the old version, please read this and update your site and/or tool accordingly.  (Don&#8217;t you love being an early adopter?)</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110719032941/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110719032941/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110719032941/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110719032941/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110719032941/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.154 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 15:01:59 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 3:29:41 Jul 19, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:24:20 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>What if this is as good as it gets? [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806103408/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806103408/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806103408/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806103408/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806103408im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806103408/http://diveintomark.org/archives/2011/01/09/dive-into-2010" title="Dive into 2010">
+<link rel=next href="/web/20110806103408/http://diveintomark.org/archives/2011/04/15/nativity-scene" title="Translation From MS-Speak to English of Selected Portions of Dean Hachamovitch&#8217;s &#8220;Native HTML5&#8243; announcement">
+<link rel=up href="/web/20110806103408/http://diveintomark.org/archives#p2666" title="February 2011">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; What if this is as good as it gets? Comments Feed" href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806103408/http://diveintomark.org/' />
+<link rel='prev' title='Dive into 2010' href='/web/20110806103408/http://diveintomark.org/archives/2011/01/09/dive-into-2010' />
+<link rel='next' title='Translation From MS-Speak to English of Selected Portions of Dean Hachamovitch&#8217;s &#8220;Native HTML5&#8243; announcement' href='/web/20110806103408/http://diveintomark.org/archives/2011/04/15/nativity-scene' />
+<link rel='canonical' href='/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6' />
+<link rel='shortlink' href='/web/20110806103408/http://diveintomark.org/?p=2666' />
+<meta name="description" content="Thank you, Microsoft. Please sir, may I have another?">
+<meta name="keywords" content="html5">
+<link href="/web/20110806103408cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806103408/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2011\/02\/18\/ie9-is-the-new-ie6";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806103408" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112107/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:34:08 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110924060525/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112107/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" title="11:21:07 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:34:08 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110924060525/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" title="6:05:25 Sep 24, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2010
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:34:08 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806103408*/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>6 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">21 Feb 11 - 24 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:7:030010011000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806103408/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806103408/http://diveintomark.org/archives#p2666">February 18, 2011</a> &#8227;
+<h2>What if this is as good as it gets?</h2> (<a href="/web/20110806103408/http://diveintomark.org/tag/html5" rel="tag">html5</a>)</div>
+<p>First off, I would like to thank Microsoft for regrouping, restaffing, and developing Internet Explorer 9. There is much to be thankful for. Very soon, new Windows 7 users will have, by default and without any installation, a browser that supports</p>
+
+<ul>
+<li><a href="/web/20110806103408/http://diveintohtml5.org/canvas.html">Canvas</a> without JavaScript translation libraries</li>
+<li><a href="/web/20110806103408/http://www.w3.org/Graphics/SVG/">SVG</a> without <a href="/web/20110806103408/http://code.google.com/p/svgweb/">amazing translating-to-Flash hacks</a>, including <a href="/web/20110806103408/http://hacks.mozilla.org/2010/05/firefox-4-the-html5-parser-inline-svg-speed-and-more/">inline SVG in HTML</a></li>
+<li><a href="/web/20110806103408/http://diveintohtml5.org/geolocation.html">Geolocation</a> without plugins</li>
+<li><a href="/web/20110806103408/http://diveintohtml5.org/storage.html">Persistent local storage</a> (note: this is already in IE8)</li>
+<li><a href="/web/20110806103408/http://diveintohtml5.org/video.html#licensing">H.264 video</a> without plugins</li>
+<li><a href="/web/20110806103408/http://diveintohtml5.org/semantics.html">New semantics elements</a> without JavaScript shims</li>
+<li><a href="/web/20110806103408/http://msdn.microsoft.com/en-us/ie/ff468705#_CSS3_BG_Borders">Rounded corners</a> and other CSS improvements</li>
+</ul>
+
+<p>This is quite remarkable. I&#8217;ve been busily updating <a href="/web/20110806103408/http://diveintohtml5.org/">Dive Into HTML5</a>, changing phrases like &#8220;no version of Internet Explorer supports&#8230;&#8221; to &#8220;versions of IE before 9.0 did not support&#8230;&#8221; I never, ever, ever thought this day would come. Thank you, Microsoft.</p>
+
+<p>So here&#8217;s a downer: what if this is it? What if, after years of increasing evangelism and fever-pitch hype and demos and speeches and books and talks and blogs and tweets and <a href="/web/20110806103408/http://www.businessinsider.com/html5-logo-funny-2011-1">logos</a>, Microsoft shifts direction once again, destaffs the IE team, and &#8220;deprioritizes&#8221; any notion of an IE 10? And all these promising technologies die on the vine, or at most, grow up to smack hard against the glass ceiling of &#8220;no version of Internet Explorer supports&#8230;&#8221;
+
+<ul>
+<li><a href="/web/20110806103408/http://diveintohtml5.org/forms.html">Web Forms 2.0</a> (datepickers, validation, and so forth)</li>
+<li><a href="/web/20110806103408/http://wearehugh.com/public/2010/08/html5-web-workers/">Web Workers</a> (background JavaScript)</li>
+<li><a href="/web/20110806103408/http://dev.w3.org/html5/websockets/">WebSockets</a> (real-time bidirectional communication)</li>
+<li><a href="/web/20110806103408/http://diveintohtml5.org/offline.html">AppCache</a> (offline web applications)</li>
+<li><a href="/web/20110806103408/http://en.wikipedia.org/wiki/WebGL">WebGL</a> (3-D canvas)</li>
+<li><a href="/web/20110806103408/http://diveintohtml5.org/video.html#vp8">WebM</a> (open video)</li>
+<li><a href="/web/20110806103408/http://hacks.mozilla.org/2010/06/comparing-indexeddb-and-webdatabase/">IndexedDB</a> (advanced persistent local storage)</li>
+<li><a href="/web/20110806103408/https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history#Adding_and_modifying_history_entries">History API</a> (twiddle with the entire URL without reloading)</li>
+<li><a href="/web/20110806103408/http://blog.whatwg.org/whats-next-in-html-episode-1">Device API</a> (videoconferencing without plugins)</li>
+<li><a href="/web/20110806103408/https://developer.mozilla.org/en/using_files_from_web_applications">File API</a> (sandboxed in-browser filesystem)</li>
+<li><a href="/web/20110806103408/https://wiki.mozilla.org/Audio_Data_API">Audio data API</a> (dynamically creating music with JavaScript)</li>
+<li><a href="/web/20110806103408/http://people.mozilla.com/~prouget/ie9/">and on and on</a>&#8230;</li>
+</ul>
+
+<p><em>What if this is as good as it gets?</em></p>
+<p class=c>&#167;
+
+<h3 id=comments>Twenty four comments here (<a href=/web/20110806103408/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-14077"><p>If?  Download Firefox or Chrome, Install Linux, buy a Mac, just pick one and move on.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://deviladv.wordpress.com/' rel='external nofollow' class='url'>Adrian</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14077" title="February 18, 2011 @ 9:35 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14078"><p>MSFT has been playing catch-up in the browser game for a while now (ie since they started caring again).  They know they can&#8217;t lead on their own, and will be much more inclined to support something if everything other browser supports it and starts gaining traction without them.  Their not-caring impulse would need to be strong indeed to put IE out on an ice floe, and historically they can&#8217;t seem to resist the urge to throw lots of people and marketing at a space where they feel they should be competing (search, game consoles, MP3 players).</p>
+<p class=sig>&#8212;&#8201;<cite>JP</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14078" title="February 18, 2011 @ 11:03 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14079"><p>Mark, do you have any reason to believe this will happen? I don&#8217;t really understand the purpose of this post. IE 9 exists because Microsoft&#8217;s web strategy shifted dramatically, for the first time since IE was created. Their IE team is guided by totally different principles than those which brought us IE 6. I find it highly unlikely IE will ever stagnate that way again, at least not before IE itself becomes irrelevant.</p>
+<p class=sig>&#8212;&#8201;<cite>Trevor</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14079" title="February 18, 2011 @ 11:26 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14080"><p>Local storage is going to change the world.</p>
+<p class=sig>&#8212;&#8201;<cite>amitraman1</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14080" title="February 18, 2011 @ 11:56 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14081"><p>Adrian, you are missing the point completely.</p>
+<p class=sig>&#8212;&#8201;<cite>Josh</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14081" title="February 19, 2011 @ 12:06 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14082"><p>If they fail to support the new tech, then they will die and others will eat their lunch. It&#8217;s already begun happening, thus we have IE9&#8230;</p>
+<p>If the benefits of new tech are compelling enough, even Joe Average will stir from his sofa to download a better browser &#8211; everyone forgets, back in the dark ages of the web, EVERYONE had to download a browser, but because the web was compelling enough compare to what we had before (i.e nothin much), then that&#8217;s exactly what people did.</p>
+<p class=sig>&#8212;&#8201;<cite>Daron Robinson</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14082" title="February 19, 2011 @ 12:27 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14083"><p>At Mobile World Congress this week, Microsoft made some noise about IE9 running on Windows Phone 7 Series Phone. So long as Microsoft wants to compete in mobile, I think that they&#8217;re going to continue to invest in IE.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://redefine.dyndns.org/~andyr' rel='external nofollow' class='url'>Andy Reitz</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14083" title="February 19, 2011 @ 12:28 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14084"><p>I can&#8217;t tell if you&#8217;re really worried about this.</p>
+<p>I think a significant enough portion of Microsoft now understands how important the web and the cloud has become (i.e. _the_ application platform).  I expect to see competitive Office-y apps built by MS using open web technologies and this will only increase the need for browser updates on their part.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://codedread.com/blog' rel='external nofollow' class='url'>Jeff Schiller</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14084" title="February 19, 2011 @ 1:10 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14085"><p>There are at least three strong contenders. IE&#8217;s market share will simply decline further until no one cares for it anymore.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://dirkjan.ochtman.nl/' rel='external nofollow' class='url'>Dirkjan Ochtman</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14085" title="February 19, 2011 @ 3:58 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14086"><p>So this is a post to raise your concern about a large non-flexible company suddenly turning their strategy 180 degress around because they have done it once before? I might be naive, but I see this as just as likely as Google doing the same with their browser.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://fuzzy76.net/' rel='external nofollow' class='url'>Håvard Pedersen</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14086" title="February 19, 2011 @ 6:33 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14087"><p>Microsoft has been open and clear about not supporting parts of the standard that are still too much in flux. So a number of standards that have changed the past few months, such as Web Sockets, can probably be counted out from IE 9 just because of that.</p>
+<p>Microsoft is for whatever reason being much more cautious about implementing standards that are still not quite stabilized than Google or Mozilla.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://sonaten.se/' rel='external nofollow' class='url'>Jonas</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14087" title="February 19, 2011 @ 7:34 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14088"><p>Meh. I think this is as bad as it gets. HTML was a lot nicer circa 3.2 days. Right now, writing a web browser takes dozens if not hundreds of man years. Tons of innovation died because we only have four browser engines (WebKit, IE, Gecko, and Opera). We can&#8217;t parse the web anymore, so a ton of expected features never came to be (remember all those web agents that did things for you?) </p>
+<p>Personally, I&#8217;d rather have simplicity and all those things not there.</p>
+<p class=sig>&#8212;&#8201;<cite>Peter</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14088" title="February 19, 2011 @ 7:55 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14089"><p>@adrian: i wish it were that easy. with 60% of the web rocking ie &#8230; it&#8217;s the proverbial gorilla in the room. i wish that weren&#8217;t the case, but when the majority of the web is crippled we&#8217;re forced into countless compromises and frustrations.</p>
+<p>it&#8217;s one major reason i&#8217;m enjoying mobile development &#8212; but sadly windows phone 7 is running an ie variant? ah, jesus christ, way to ruin my day&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://celsius.ws/' rel='external nofollow' class='url'>celsius</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14089" title="February 19, 2011 @ 9:53 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14090"><p>No worries. This is not as good as it&#8217;s going to get.</p>
+<p>IE9 is all about the mobile space. Desktop is an afterthought. The reason IE9 was such a huge upgrade from IE8 is that Microsoft doesn&#8217;t have a decent mobile browser, and that is a serious problem for Windows Phone 7 and its competitiveness with other mobile platforms. Hence IE9, which is now being ported to mobile (release October, or that&#8217;s what they say).</p>
+<p>Besides, where IE still has the lion&#8217;s share of desktop browsing, it doesn&#8217;t have anything even remotely comparable on mobile. Windows Mobile/Phone 7 now has 4% sales market share, and many old Windows Mobile phones run Opera as the default browser, and not IE. Why not? Because IE Mobile sucks. And you can&#8217;t win the mobile platform war with a sucky browser.</p>
+<p>Once IE9 has arrived on Windows Phone 7, other mobile browser vendors will have upgraded theirs, and Microsoft once again has to catch up (though hopefully not as dramatically as IE8-&gt;9). Hence a good IE10 (or 9.1 or however the marketing geniuses will call it) is a given.</p>
+<p>What I do think will happen is that prority will be given to features that are important on mobile. Any local storage system, device APIs, WebGL, etc. But your list is pretty much what&#8217;s important to mobile, so I expect IE10 to support most of it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://quirksmode.org/' rel='external nofollow' class='url'>ppk</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14090" title="February 19, 2011 @ 10:12 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14091"><p>I&#8217;m a MS employee but I&#8217;m not on the IE team so these are just my observations.  </p>
+<p>I was under the impression that html5 would be a sideshow at MS, enough to get IE back in  the game and the coast.  But I&#8217;m finding that is not the case.  html5 is being promoted as the default way to create web apps and our star proprietary technology, Silverlight, is being relegated to very specific use cases (WP7, highly complex web apps, etc). As a 10+ year MS employee, this is remarkable.  So MS is betting big on html5.</p>
+<p>The real question is how quickly will MS rev IE?  A 2-3 cycle is not going to work.  Some of the missing functionality is available in test form here:<br />
+<a href="/web/20110806103408/http://html5labs.interoperabilitybridges.com/" rel="nofollow">http://html5labs.interoperabilitybridges.com/</a><br />
+Hopefully these will make it into IE rapidly.  Perhaps the upcoming MIX conference in April will provide a roadmap. <a href="/web/20110806103408/http://live.visitmix.com/" rel="nofollow">http://live.visitmix.com/</a></p>
+<p>-HM</p>
+<p>PS:  thanks for all of your books, tweets, blog posts, etc.  Truly remarkable.</p>
+<p class=sig>&#8212;&#8201;<cite>HM</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14091" title="February 19, 2011 @ 11:22 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14092"><p>What if Google shifts direction, destaffs the Chrome team, and “deprioritizes” any notion of a Chrome 11? What if the recession reduces the pool of available open source developers and there is no real improvement in Firefox? What if a Tsunami wipes out all of us? </p>
+<p>Pointless mental exercise ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://me@here.com/' rel='external nofollow' class='url'>me</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14092" title="February 19, 2011 @ 2:50 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14093"><p>force the government to break-up microsoft.<br />
+imagine how many innovative ideas would come about.</p>
+<p class=sig>&#8212;&#8201;<cite>janice</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14093" title="February 19, 2011 @ 4:00 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14094"><p>Ugh, I hope not. The last decade of IE stagnation was probably/maybe on purpose to retard the growth of web applications &#8211; attempting to stop them cannibalizing desktop application sales (Google Docs, anyone). I think that ship has sailed now either way, without Microsoft on it, and I think (hope) that the competitive landscape has changed enough to ensure that it doesn&#8217;t happen again. Anyway, I really hope so.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://www.codeistry.com/' rel='external nofollow' class='url'>Duncan Lock</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14094" title="February 19, 2011 @ 4:20 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14095"><p>Thanks for your feedback Mark.</p>
+<p>With many HTML5 technologies still under active development, our approach is to give developers better choices and avoid false dichotomies around standards support.</p>
+<p>In the IE9 product [0], we’re delivering on the key parts of HTML5 that are site-ready. IE9 offers support for real-world web patterns that developers are using today as well as the HTML5 patterns we expect to become more mainstream. IE9 does this because we want to improve interoperability on the web by providing developers a consistent programming model through the same mark-up.</p>
+<p>At the same time we are (and will) also offering prototype implementations for the more experimental or unfinished parts of HTML5 that some developers may want to try, but consumers can’t depend on yet. For example, we shipped in the last months implementations of the Web Sockets and IndexDB on HTML5 Labs [1], keeping them updated with the specification changes in W3C.</p>
+<p>As these specifications become stable, you can expect we will implement them in IE as we have throughout the development of IE9.</p>
+<p>It&#8217;s been an exciting journey and we are looking forward to continuing on this path. It&#8217;s inspiring to see what web developers and designers already built today using HTML5! [2]</p>
+<p>[0] <a href="/web/20110806103408/http://blogs.msdn.com/b/ie" rel="nofollow">http://blogs.msdn.com/b/ie</a><br />
+[1] <a href="/web/20110806103408/http://html5labs.interoperabilitybridges.com/" rel="nofollow">http://html5labs.interoperabilitybridges.com</a><br />
+[2] <a href="/web/20110806103408/http://www.beautyoftheweb.com/" rel="nofollow">http://www.beautyoftheweb.com</a></p>
+<p>Best regards,<br />
+Giorgio Sardo<br />
+HTML5 &amp; IE Sr. Technical Evangelist &#8211; Microsoft Corp</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://blogs.msdn.com/Giorgio' rel='external nofollow' class='url'>Giorgio Sardo</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14095" title="February 19, 2011 @ 10:53 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14096"><p>Evidence today that Microsoft is still looking ahead: <a href="/web/20110806103408/http://tech.groups.yahoo.com/group/svg-developers/message/64577" rel="nofollow">http://tech.groups.yahoo.com/group/svg-developers/message/64577</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://www.codedread.com/blog' rel='external nofollow' class='url'>Jeff Schiller</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14096" title="February 20, 2011 @ 5:02 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14097"><p>If Microsoft stops, there&#8217;s always Google Chrome Frame.<br />
+<a href="/web/20110806103408/http://www.google.com/chromeframe" rel="nofollow">http://www.google.com/chromeframe</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://hughisaacs2.googlepages.com/' rel='external nofollow' class='url'>Hugh Isaacs II</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14097" title="February 22, 2011 @ 4:58 am"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14098"><p>Their <em>rhetoric</em> certainly suggests that IE9 isn&#8217;t the end of their newfound love for the web and for web standards. But their rhetoric also suggested HTML5 that HTML5 IE9 HTML5 would HTML5 HTML5 HTML5. And the reality was somewhat less than that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://markjaquith.com/' rel='external nofollow' class='url'>Mark Jaquith</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14098" title="February 22, 2011 @ 1:13 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14099"><p>Obviously this is a concern, because IE is bringing up the rear when it comes to providing these rich APIs.</p>
+<p>I think Andy Reitz has a great point.  As long as its Windows Phone 7 platform suffers and they don&#8217;t have a big native app ecosystem, the best way they are going to entice developer mindshare is focusing on the web, which means upgrading IEMobile to be IE9 (hopefully plus Offline Cache Manifest).  Of course, they could focus entirely on IEMobile and let their desktop browser stagnate.</p>
+<p>Google has a vested interest in keeping people on the web, it benefits their bottom line.  Mozilla and Opera&#8217;s main product is the web browser.  Apple and Microsoft both have too many external influences to predict what&#8217;s going to happen.</p>
+<p>Who knows?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103408/http://www.zachleat.com/' rel='external nofollow' class='url'>Zach Leatherman</a></cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14099" title="February 22, 2011 @ 2:08 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14101"><p>Oh wow, did you just say H.264 video without plugins? I thought you worked for Google.</p>
+<p class=sig>&#8212;&#8201;<cite>rob</cite>&#160;<a class=p href="/web/20110806103408/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6#comment-14101" title="February 24, 2011 @ 2:22 pm"><img alt="#" src=/web/20110806103408im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806103408/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806103408/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806103408/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806103408/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806103408/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.379 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:47:08 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:34:08 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:03:21 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Message of the day [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20101215013212/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20101215013212/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20101215013212/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20101215013212im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20101215013212/http://diveintomark.org/archives/2003/04/24/zeldman_has_an_rss_feed" title="Zeldman has an RSS feed">
+<link rel=next href="/web/20101215013212/http://diveintomark.org/archives/2003/04/30/translations" title="Translations">
+<link rel=up href="/web/20101215013212/http://diveintomark.org/archives#p1329" title="April 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Message of the day Comments Feed" href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day/feed" />
+<link rel='index' title='dive into mark' href='/web/20101215013212/http://diveintomark.org/' />
+<link rel='prev' title='Zeldman has an RSS feed' href='/web/20101215013212/http://diveintomark.org/archives/2003/04/24/zeldman_has_an_rss_feed' />
+<link rel='next' title='Translations' href='/web/20101215013212/http://diveintomark.org/archives/2003/04/30/translations' />
+<link rel='canonical' href='/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day' />
+<link rel='shortlink' href='/web/20101215013212/http://diveintomark.org/?p=1329' />
+<meta name="description" content="You know what's cool? Backups.">
+<meta name="keywords" content="hosting,rsync,ssh,wedding">
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+@font-face {font-family: 'LatinModernRoman10Regular';src: url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.eot');src: local('☺'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.woff') format('woff'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.ttf') format('truetype'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-regular-webfont.svg#webfontg3VAmqr8') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'LatinModernRomanSlanted10Regu';src: url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.eot');src: local('☺'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.woff') format('woff'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.ttf') format('truetype'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmromanslant10-regular-webfont.svg#webfont5pLJWgYw') format('svg');font-weight: normal;font-style: oblique;}
+@font-face {font-family: 'LatinModernRoman10Bold';src: url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.eot');src: local('☺'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.woff') format('woff'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.ttf') format('truetype'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-bold-webfont.svg#webfontDIaNd4lG') format('svg');font-weight: bold;font-style: normal;}
+@font-face {font-family: 'LatinModernRoman10BoldItalic';src: url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.eot');src: local('☺'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.woff') format('woff'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.ttf') format('truetype'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmroman10-bolditalic-webfont.svg#webfontVm6n5sgb') format('svg');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'LatinModernMono10Regular';src: url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.eot');src: local('☺'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.woff') format('woff'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.ttf') format('truetype'), url('/web/20101215013212/http://wearehugh.com/public/2010/09/lmmono10-regular-webfont.svg#webfontThQaD2ST') format('svg');font-weight: normal;font-style: normal;}
+html{background:white url(/web/20101215013212/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium 'LatinModernRoman10Regular',serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:'LatinModernRomanSlanted10Regu',serif;font-style:oblique}
+strong,b{font-family:'LatinModernRoman10Bold',serif;}
+pre,code,var,samp,kbd,tt{font-family:'LatinModernMono10Regular',monospace;}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/04\/28\/message_of_the_day";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "15";
+var displayMonth = "Dec";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/04/28/message_of_the_day" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101215013212" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615060558/http://diveintomark.org/archives/2003/04/28/message_of_the_day" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 1:32:12 Dec 15, 2010">DEC</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jan
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101121223342/http://diveintomark.org/archives/2003/04/28/message_of_the_day" title="22:33:42 Nov 21, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 1:32:12 Dec 15, 2010">15</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20080610090433/http://diveintomark.org/archives/2003/04/28/message_of_the_day" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="10 Jun 2008"><strong>2008</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 1:32:12 Dec 15, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2011
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20101215013212*/http://diveintomark.org/archives/2003/04/28/message_of_the_day" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>21 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">15 May 06 - 15 Dec 10</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000010221001_2007:-1:410100000010_2008:-1:100021000000_2009:-1:000000000000_2010:11:000001000011_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20101215013212/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20101215013212/http://diveintomark.org/archives#p1329">April 28, 2003</a> &#8227;
+<h2>Message of the day</h2> (<a href="/web/20101215013212/http://diveintomark.org/tag/hosting" rel="tag">hosting</a>, <a href="/web/20101215013212/http://diveintomark.org/tag/rsync" rel="tag">rsync</a>, <a href="/web/20101215013212/http://diveintomark.org/tag/ssh" rel="tag">ssh</a>, <a href="/web/20101215013212/http://diveintomark.org/tag/wedding" rel="tag">wedding</a>)</div>
+<p>You know what&#8217;s cool?  <a href="/web/20101215013212/http://cornerhost.blogspot.com/">Backups</a>.</p>
+
+<p>Also, <a href="/web/20101215013212/http://diveintomark.org/photos/2003_04_27_shower/">bridal showers</a>.</p>
+
+<p><del>Database connection is down, so no comments, no permalink, no site search. Please stand by.</del>  Everything should be working now.  Until the DNS change propagates, the entire site will visibly redirect to <code>diveintomark.org.new.cr.sabren.com</code>.  Don&#8217;t panic.</p>
+
+<p>In case you&#8217;re interested, <a href="/web/20101215013212/http://inessential.com/?comments=1&postid=2473">here&#8217;s what happened</a>.  I have not yet decided whether to seek new hosting.  I can&#8217;t deal with it until after the wedding.  And honeymoon.  So realistically, not until June.  But suggestions are always welcome for UNIX hosting providers that provide shell access, have Python 2 installed, use <code>Override All</code> in <code>httpd.conf</code>, allow multiple sites on a single account, multiple subdomains per domain, with 1 GB of disk space and bandwidth of ~10GB per month (shared between all sites).</p>
+
+<p>I taught myself how to use <kbd>rsync</kbd> today.  Better late than never.  And <a href="/web/20101215013212/http://intertwingly.net/blog/">Sam</a> taught me how to set up <kbd>ssh</kbd> with private and public keys so I can log into my remote servers without being prompted for a password each time, which means I can set up a <code>crontab</code> that calls <kbd>rsync</kbd> over <kbd>ssh</kbd> and securely and efficiently back up all my sites to my iMac.  I tell you, this UNIX thing&#8230; it&#8217;s gonna catch on.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty nine comments here (<a href=/web/20101215013212/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-1899"><p>You can get root on your own virtual server for $65 (FreeBSD) or $75 (Linux) per month at johncompanies:</p>
+<p><a href="/web/20101215013212/http://www.johncompanies.com/collocation/">http://www.johncompanies.com/collocation/</a></p>
+<p>You&#8217;d certainly have whatever control you need over your httpd.conf, plus you could run your own DNS and mail services too!  :)</p>
+<p>Testimonials on k5:<br />
+<a href="/web/20101215013212/http://www.kuro5hin.org/story/2003/4/14/104336/193">http://www.kuro5hin.org/story/2003/4/14/104336/193</a></p>
+<p class=sig>&#8212;&#8201;<cite>phyx</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1899" title="April 28, 2003 @ 9:39 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1900"><p>I just got that recommendation over IM too, from a current user.  Definitely worth looking into.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1900" title="April 28, 2003 @ 9:42 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1901"><p>You might also check out Kattare at <a href="/web/20101215013212/http://kattare.com/"><a href="/web/20101215013212/http://kattare.com/" rel="nofollow">http://kattare.com/</a>.</a> The host is physically located in Corvallis, OR just over the mountains from me. I use them to host an account.</p>
+<p class=sig>&#8212;&#8201;<cite>Brad Smith</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1901" title="April 28, 2003 @ 10:05 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1902"><p>So, it&#8217;s a bit difficult to find information on this on the web, but: a bridal shower is an event where the bride&#8217;s friends and family give her loads of presents before the wedding? Cool. (The reason it&#8217;s difficult to find that out is that pretty much every site about bridal showers assumes you know what they are.) In the UK, presents are covered by the wedding list, and everyone brings a present to the ceremony itself; does that happen over there too? If so, even better, although I concede that weddings aren&#8217;t meant to be primarily looked at as a source for loot.<br />
+Oh, and: nice house, too. Am I getting old because I now notice these things?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.kryogenix.org/' rel='external nofollow' class='url'>Stuart Langridge</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1902" title="April 28, 2003 @ 10:31 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1903"><p>pair.com: <a href="/web/20101215013212/http://www.pair.com/pair/shared/">http://www.pair.com/pair/shared/</a></p>
+<p>And not just because I like their hostnames. <a href="/web/20101215013212/http://www.pair.com/pair/support/library/serverconfig/serverdetails.html">http://www.pair.com/pair/support/library/serverconfig/serverdetails.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.coxesroost.net/journal/' rel='external nofollow' class='url'>Will</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1903" title="April 28, 2003 @ 10:52 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1904"><p><a href="/web/20101215013212/http://www.python-hosting.com/">http://www.python-hosting.com/</a> looks interesting. I&#8217;m going to give them a whirl myself soon.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1904" title="April 28, 2003 @ 11:00 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1905"><p>Oh boy, tell me[1] about backups[2]. I&#8217;ve gone through data recovery hell this weekend. The good thing is that I have it mostly back. I was thinking the whole weekend, &#8220;wouldn&#8217;t it have been so easy to burn a CD last week?&#8221;</p>
+<p>That&#8217;s a very beautiful dog in the photos (not to mention the fiance!)!</p>
+<p>[1] <a href="/web/20101215013212/http://eliot.landrum.cx/archives/2003/04/25/have_i_mentioned_lately_that_i_hate_computers.php">http://eliot.landrum.cx/archives/2003/04/25/have_i_mentioned_lately_that_i_hate_computers.php</a><br />
+[2] <a href="/web/20101215013212/http://eliot.landrum.cx/archives/2003/04/27/and_all_the_saints_said.php">http://eliot.landrum.cx/archives/2003/04/27/and_all_the_saints_said.php</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://eliot@landrum.cx/' rel='external nofollow' class='url'>eliot</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1905" title="April 28, 2003 @ 11:07 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1906"><p>While I love the convienence and security of ssh pubkey authentication, I&#8217;m just a bit paranoid and I don&#8217;t think I&#8217;d feel too good about having the private keys sitting unencrypted on a machine for unattended logins.  If your host with the private keys is comprimised, every account you have your public keys in is comprimised.  I only have my private keys in two spots &#8211; on my desktop machine and on my laptop, and when I log out I kill the ssh agent.  Ideally, I will become even more paranoid and get one of those USB flashdrive thingys and keep my private keys on that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://gammatron.novarese.net/' rel='external nofollow' class='url'>Paul Victor Novarese</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1906" title="April 28, 2003 @ 11:08 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1931"><cite><a href='/web/20101215013212/http://roub.net/blahg/archives/000004.html' rel='external nofollow' class='url'>blahg</a></cite>&#160;(trackback)</li>
+<li id="comment-1907"><p>You should consider implementing snapshot backups with rsync as described by Mike Rubel at <a href="/web/20101215013212/http://www.mikerubel.org/computers/rsync_snapshots/">http://www.mikerubel.org/computers/rsync_snapshots/</a> .  Using the method described by Mike Rubel, you can keep several snapshots of your server using a little more storage than it takes to keep a single snapshot.  </p>
+<p>Here&#8217;s the script that I use to backup my server to my iMac. You will need to adjust the rsync src argument and the $BASE variable to match your situation.</p>
+<p>&#8212;-<br />
+#!/bin/sh</p>
+<p>BASE=/Backup/server</p>
+<p>if [ -d $BASE.3 ]<br />
+then<br />
+	echo &#8220;rm $BASE.3&#8243;<br />
+	rm -rf $BASE.3<br />
+fi</p>
+<p>if [ -d $BASE.2 ]<br />
+then<br />
+	echo &#8220;mv $BASE.2 $BASE.3&#8243;<br />
+	mv $BASE.2 $BASE.3<br />
+fi</p>
+<p>if [ -d $BASE.1 ]<br />
+then<br />
+	echo &#8220;mv $BASE.1 $BASE.2&#8243;<br />
+	mv $BASE.1 $BASE.2<br />
+fi</p>
+<p>if [ -d $BASE ]<br />
+then<br />
+	echo &#8220;cp $BASE $BASE.1&#8243;<br />
+	(cd $BASE &#038;&#038; find . -print | cpio -dpl $BASE.1)<br />
+fi</p>
+<p>rsync -avR &#8211;delete -e ssh &#8216;beagledreams.com:`cat /home/gary/backupfiles`&#8217; $BASE</p>
+<p>touch $BASE</p>
+<p>&#8212;-<br />
+This Unix thing on the Mac is awsome.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://gary.burd.info/' rel='external nofollow' class='url'>Gary Burd</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1907" title="April 29, 2003 @ 12:29 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1932"><cite><a href='/web/20101215013212/http://www.yezbick.com/blog/archives/000401.html' rel='external nofollow' class='url'>yezbick.com: This is Your Brain on Blog</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-1933"><cite><a href='/web/20101215013212/http://www.yezbick.com/blog/archives/000401.html' rel='external nofollow' class='url'>yezbick.com: This is Your Brain on Blog</a></cite>&#160;(trackback)</li>
+<li id="comment-1908"><p>I&#8217;m just chipping in with my support for JohnCompanies.  We&#8217;ve been with them for around six months, and they are *clueful*.  It makes a nice change, especially at their prices.</p>
+<p>Paul,</p>
+<p>With ssh public key authentication, your private key resides on the machine you are sitting at.  It&#8217;s your public key that sits on the servers you want to log into.  When you think about it, it&#8217;s entirely logical &#8211; it&#8217;s your private key you need to prove who you are, and you need to prove who you are to the server, not the other way around.</p>
+<p class=sig>&#8212;&#8201;<cite>Jim</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1908" title="April 29, 2003 @ 2:27 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1909"><p>I use pair too &#8211; they&#8217;re a bit on the pricy side but I&#8217;ve had 99.9+% uptime and never any issues what so ever over the last 5.5 years (note they&#8217;ve been in business for a long time!)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.jacobsen.no/anders/blog/' rel='external nofollow' class='url'>Anders</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1909" title="April 29, 2003 @ 5:07 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1910"><p>I&#8217;ve used Pair myself as well. Quite good. Just be sure that you fit into their acceptable use pattern &#8211; they have clauses that are a little more stringent than many web hosts (to protect the integrity of the systems and experience for all). For example, they actually limit SMTP bulk mail; scripts that do what amounts to hit logging, etc.</p>
+<p>Heard good things about Johns Companies; but ended up buying my own machine and co-locating it. If it dies, its my fault. ;-)</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1910" title="April 29, 2003 @ 5:18 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1911"><p>10G/month?  We can probably swing that for free if you don&#8217;t mind a box that&#8217;s running on a cheapo host, and provided you&#8217;re not going to make a relatively busy 1.7GHz Celeron cry.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.aagh.net/' rel='external nofollow' class='url'>Freaky</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1911" title="April 29, 2003 @ 5:27 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1934"><cite><a href='/web/20101215013212/http://www.ezoons.com/~gblake/archives/002934.html' rel='external nofollow' class='url'>life - listed chronologically</a></cite>&#160;(trackback)</li>
+<li id="comment-1912"><p>I&#8217;ll have to chip in another plus for Pair &#8211; when I first signed up with them, I was on kappa (6th server) &#8211; they&#8217;re now around number 400. Pair has grown well, and has far exceeded my expectations of stability.</p>
+<p>The downside: they&#8217;re slow to upgrade to new software, instead taking a conservative route in upgrading. It&#8217;s not bleeding edge, but you know that they run a tight ship.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.paulparadise.com/' rel='external nofollow' class='url'>Paul</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1912" title="April 29, 2003 @ 7:18 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1913"><p>I wholewheartedly recommend Dreamhost (<a href="/web/20101215013212/http://www.dreamhost.com/rewards.cgi?czottmann">http://www.dreamhost.com/rewards.cgi?czottmann</a> &#8211; yes, that&#8217;s a referrer ID at the end). With the features you want you&#8217;d need a CodeMonster account for roughly $40/month (includes 1 free domain registration, 7 full domains (hosting), 35 subdomains, 1000 MB Disk, 30 GB Transfer, 140 Mailboxes, SpamAssassin, Procmail, 35 Users, CVS, DNS, SSH etc. etc.). Python 2 is installed on their boxes although it&#8217;s not noted anywhere.</p>
+<p>I&#8217;m a customer there for 2.5yrs by now, and I love it. I run a medium size blogging community (<a href="/web/20101215013212/http://G-Blog.net)">http://G-Blog.net)</a> as well as about a dozen pet projects there w/o any problems. I even used to run a gaming community site with ~1.5mio pageviews/month on this server, and it didn&#8217;t even choke.</p>
+<p>As I&#8217;ve said, recommended.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://g-spotting.net/' rel='external nofollow' class='url'>Carlo</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1913" title="April 29, 2003 @ 7:40 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1914"><p>Yes, rsync truly is the cat&#8217;s pajamas. I update my site on a test server, then mirror it to the production server with rsync. Quick and easy.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://blogs.bwerp.net/' rel='external nofollow' class='url'>Adam</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1914" title="April 29, 2003 @ 7:44 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1915"><p>A BIG no on DreamHost. My uptime went down hard, during the early part of this year. But my uptime stats didn&#8217;t reflect it. I felt cheated. Others have had problems and they (DH) never admitted it. If you&#8217;re running Movable Type (you are), then you&#8217;re definately going to have problems&#8230;as the rebuilding will tax their server and a script will kill your cgi&#8217;s. </p>
+<p>I finally left and moved to BlogOMania.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://weblog.mkelley.net/' rel='external nofollow' class='url'>M.Kelley</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1915" title="April 29, 2003 @ 7:48 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1916"><p>Check out Atof: <a href="/web/20101215013212/http://www.atof.net/">http://www.atof.net</a></p>
+<p>I&#8217;m a bit partial to it since it&#8217;s run by a friend of mine.</p>
+<p>It looks like you&#8217;d need the business account:<br />
+<a href="/web/20101215013212/http://www.atof.net/hosting/signup/?action=showBusinessAccount">http://www.atof.net/hosting/signup/?action=showBusinessAccount</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.whatweate.com/' rel='external nofollow' class='url'>Carl</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1916" title="April 29, 2003 @ 8:31 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1917"><p>I&#8217;d recommend pair.com as well! Not that I do anything to push their machines&#8230;just a basic account for e-mail and a itty-bitty website&#8230;but no down-time and their prices DROP while their features increase since I&#8217;ve been hosting with them. What more can you ask for!</p>
+<p class=sig>&#8212;&#8201;<cite>Jeff</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1917" title="April 29, 2003 @ 9:48 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1918"><p>Switching providers over one problem seems a little extreme, Mark. Or were you already dissatisfied?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://timeistight.com/' rel='external nofollow' class='url'>Arthur</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1918" title="April 29, 2003 @ 11:37 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1919"><p>I just switched over to IExpressHost (<a href="/web/20101215013212/http://www.iexpresshost.com)."><a href="/web/20101215013212/http://www.iexpresshost.com)" rel="nofollow">http://www.iexpresshost.com)</a>.</a> Not sure if they&#8217;ve got the Python thing going on but they&#8217;ve got everything else. I&#8217;ve got a 1gb disk space, 30gb bandwidth, 8 domains and unlimited subdomains and MySQL databases. $100/year. Been running with them for about 3 months now and haven&#8217;t had a single issue.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.slavin.org/' rel='external nofollow' class='url'>sean</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1919" title="April 29, 2003 @ 11:55 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1920"><p>I&#8217;ve been on pair.com for several years and have been very happy.  I&#8217;ve never had downtime problems.  Their servers are rock solid.  They have maintained their prices the whole time I&#8217;ve been with them AND increased disk and band width allocation.</p>
+<p>Highly recommended: <a href="/web/20101215013212/http://www.pair.com/">http://www.pair.com/</a></p>
+<p>- Hans</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.hanskellner.com/' rel='external nofollow' class='url'>Hans</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1920" title="April 29, 2003 @ 1:30 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1921"><p>It must be national &#8220;Torture your hosts by restaging your hosting services and make them make backups or lose all their data&#8221; month.</p>
+<p>Something similar happened to me, except much worse.  It was mostly my fault, but it seemed rather silly.  My host upgraded all their servers and said that all my files would be lost, but I didn&#8217;t thoroughly read their emails to me.  I think its silly for a hosting company to demand I backup my own files and instead should simply restore them as best as they can after any upgrades.  Oh well&#8230; what can you expect for $2.50 a month.</p>
+<p>Fortunately Mark the wonderboy reminded me about Google Cache and one by one, painfully, I restored my posts.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.thedevilsadvocate.org/' rel='external nofollow' class='url'>Adrian</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1921" title="April 29, 2003 @ 2:22 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1922"><p>Interesting to see all the comments about Pair. I find a lot of &#8220;low end&#8221; consumers know nothing about them &#8211; very odd to see so many of us vouching for them.</p>
+<p>They really are a class act; when I first stumbled across them I noted that their terms of service were somewhat restrictive, when compared to most hosts. But then I thought about why they made certain choices &#8212; its all about stablity.</p>
+<p>I&#8217;m not a Pair client any more but that&#8217;s only because I outgrew their packaged dedicated server offering &#8211; I needed to be able to get in my own trouble, and not worth through another sysadmin. They tried valiantly to meet my needs &#8211; but it was too hard having to &#8220;tell someone what I needed done&#8221; rather than just doing it.</p>
+<p>But I do miss the Pair safety net&#8230; that&#8217;s for sure.</p>
+<p class=sig>&#8212;&#8201;<cite>Mike</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1922" title="April 29, 2003 @ 4:11 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1923"><p>Another seemingly good hosting service is <a href="/web/20101215013212/http://www.onsmart.net/" rel="nofollow">http://www.onsmart.net</a> &#8211; they&#8217;ve got some very good deals on Virtual Private Servers. I&#8217;ve moved some sites over to them (too recently to tell if they are as good as they look), but everything I&#8217;ve heard about them is positive so far. Definitely worth a look.</p>
+<p class=sig>&#8212;&#8201;<cite>RPW</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1923" title="April 29, 2003 @ 6:04 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1924"><p>hey,</p>
+<p>i don&#8217;t know you and you don&#8217;t know me, so feel free to tell me to (blow|fuck|eat) myself.</p>
+<p>lose the sandals.  nobody likes to see a guy&#8217;s toes.</p>
+<p>buy yourself a hip pair of kicks.  puma anjans, nike air bruins, adidias campus, something&#8230;</p>
+<p>if you post your address and shoe size, i&#8217;ll send you a pair as a bridal shower present.</p>
+<p>just promise me that you&#8217;ll lose the sandals.</p>
+<p class=sig>&#8212;&#8201;<cite>b</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1924" title="April 29, 2003 @ 8:04 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1925"><p>Slashdot has a thread going along the same lines. There seem to be some good hosts mentioned.</p>
+<p><a href="/web/20101215013212/http://ask.slashdot.org/article.pl?sid=03/04/28/185257&mode=nested&threshold=-1">http://ask.slashdot.org/article.pl?sid=03/04/28/185257&#038;mode=nested&#038;threshold=-1</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://blogs.bwerp.net/' rel='external nofollow' class='url'>Adam</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1925" title="April 29, 2003 @ 9:41 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1926"><p>Rats, I thought it was a /. thread on whether Mark should wear sandals. With maybe a fork to discuss that can of Sprite. Sprite? Squirt rulez, but Sprite&#8217;s just lame.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://philringnalda.com/' rel='external nofollow' class='url'>Phil Ringnalda</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1926" title="April 30, 2003 @ 3:05 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1927"><p>Mark, you inspired me to share a little Perl I use to CRON a backup and then FTP my MySQL databases to an offsite location.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.healyourchurchwebsite.com/archives/000802.shtml#000802' rel='external nofollow' class='url'>Mean Dean</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1927" title="April 30, 2003 @ 8:02 am"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1935"><cite><a href='/web/20101215013212/http://www.kennsarah.net/archives/000231.shtml' rel='external nofollow' class='url'>Our Story</a></cite>&#160;(trackback)</li>
+<li id="comment-1928"><p>Mark, bridal showers ROCK.  I remember coming back to my then-not-yet-in-laws&#8217; house and just finding all this new, cool STUFF (and lots of left-over food)!</p>
+<p>Hope that was a thank you list that I saw on the coffee table.  It&#8217;s easy to get so excited about opening things that you overlook keeping track of whom you have to thank for what.  Blech, thank you notes&#8230;Sarah and I were writing the things for weeks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken Walker</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1928" title="April 30, 2003 @ 1:21 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1929"><p>What we do is host a CVS repository on our internal server that everybody works from, and check it out from the live server when ready.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1929" title="April 30, 2003 @ 1:32 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1936"><cite><a href='/web/20101215013212/http://www.kennsarah.net/archives/000231.shtml' rel='external nofollow' class='url'>Ken &amp; Sarah :: Our Story</a></cite>&#160;(trackback)</li>
+<li id="comment-1930"><p>re: ssh authentication.</p>
+<p>You should always protect the private part of your key-pair with a passphrase.  Otherwise, as people here have mentioned, anyone who finds them can use them to access the hosts that you have your public key on.  A key-pair without a passphrase should only be used when you want to limit it to one command (like rsync).  This limiting can be done using &#8216;command=&#8221;command to limit key to&#8221;&#8216; in your ~/.ssh/authorized_keys on the remote host.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20101215013212/http://mah.everybody.org/weblog/' rel='external nofollow' class='url'>Mark A. Hershberger</a></cite>&#160;<a class=p href="/web/20101215013212/http://diveintomark.org/archives/2003/04/28/message_of_the_day#comment-1930" title="April 30, 2003 @ 3:12 pm"><img alt="#" src=/web/20101215013212im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1937"><cite><a href='/web/20101215013212/http://www.kennsarah.net/archives/000231.shtml' rel='external nofollow' class='url'>Ken &amp; Sarah :: Our Story</a></cite>&#160;(trackback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20101215013212/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20101215013212/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href=/web/20101215013212/http://code.google.com/u/pilgrim/>code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20101215013212/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20101215013212/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+<!-- Dynamic page generated in 0.340 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-12-03 20:55:47 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 1:32:12 Dec 15, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:14:41 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

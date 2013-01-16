@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Mozilla Accessibility Summit 2006 [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110608002246/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110608002246/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110608002246/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110608002246im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110608002246/http://diveintomark.org/archives/2006/10/06/apex-fire" title="Liveblogging the Apex chemical fire">
+<link rel=next href="/web/20110608002246/http://diveintomark.org/archives/2006/10/15/fish-fish-fish-fish-fish" title="Fish fish fish fish fish">
+<link rel=up href="/web/20110608002246/http://diveintomark.org/archives#p1577" title="October 2006">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Mozilla Accessibility Summit 2006 Comments Feed" href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit/feed" />
+<link rel='index' title='dive into mark' href='/web/20110608002246/http://diveintomark.org/' />
+<link rel='prev' title='Liveblogging the Apex chemical fire' href='/web/20110608002246/http://diveintomark.org/archives/2006/10/06/apex-fire' />
+<link rel='next' title='Fish fish fish fish fish' href='/web/20110608002246/http://diveintomark.org/archives/2006/10/15/fish-fish-fish-fish-fish' />
+<link rel='canonical' href='/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit' />
+<link rel='shortlink' href='/web/20110608002246/http://diveintomark.org/?p=1577' />
+<meta name="description" content="My notes from the Mozilla Accessibility Summit in Cambridge MA.">
+<meta name="keywords" content="accessibility,accessibilityworks,atk,conference,dhtml,firefox,liveregion,lsr,mac,mathml,mozilla,newatk,planetmozilla,svg,voiceover,xul,xulrunner">
+<link href="/web/20110608002246cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110608002246/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2006\/10\/13\/mozilla-accessibility-summit";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "8";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110608002246" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215095722/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 0:22:46 Jun 8, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120114152404/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 Jan 2012"><strong>JAN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215095722/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" title="9:57:22 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 0:22:46 Jun 8, 2011">8</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120114152404/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" title="15:24:04 Jan 14, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090312095714/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="12 Mar 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 0:22:46 Jun 8, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110608002246*/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>36 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">9 Nov 06 - 20 Jan 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000034_2007:-1:511022100010_2008:-1:111120001000_2009:-1:001000000000_2010:-1:000001000111_2011:5:000001000000_2012:-1:300000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110608002246/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110608002246/http://diveintomark.org/archives#p1577">October 13, 2006</a> &#8227;
+<h2>Mozilla Accessibility Summit 2006</h2> (<a href="/web/20110608002246/http://diveintomark.org/tag/accessibility" rel="tag">accessibility</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/accessibilityworks" rel="tag">accessibilityworks</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/atk" rel="tag">atk</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/conference" rel="tag">conference</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/dhtml" rel="tag">dhtml</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/firefox" rel="tag">firefox</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/liveregion" rel="tag">liveregion</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/lsr" rel="tag">lsr</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/mac" rel="tag">mac</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/mathml" rel="tag">mathml</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/mozilla" rel="tag">mozilla</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/newatk" rel="tag">newatk</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/planetmozilla" rel="tag">planetmozilla</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/svg" rel="tag">svg</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/voiceover" rel="tag">voiceover</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/xul" rel="tag">xul</a>, <a href="/web/20110608002246/http://diveintomark.org/tag/xulrunner" rel="tag">xulrunner</a>)</div>
+<p>Tuesday, October 10 &ndash; Thursday, October 12, 2006</p>
+
+<p>The summit was sponsored by the Mozilla Foundation and hosted by IBM in Cambridge, MA.</p>
+
+<ul>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#opening">Opening</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#dhtml">Web 2.0</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/osk">On-screen keyboard</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#firevox">Fire Vox</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#accessibilityworks">AccessibilityWorks</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#lsr">LSR</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#xul">XUL accessibility checker and guidelines</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#mac">Mac Firefox + VoiceOver</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#newatk">Firefox ATK improvements</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#svg">SVG/MathML</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#dinner">Group dinner</a></li>
+<li><a href="/web/20110608002246/http://diveintomark.org/archives/2006/10/13/mozilla-accessibility-summit#other">Other attendees and anecdotes</a></li>
+</ul>
+
+<h4 id="opening">Opening</h4>
+
+<p>Aaron Leventhal opened the summit with a presentation on the current state of the Mozilla accessibility &#8220;ecosystem&#8221;. This included specifics on what is missing and how we can fill in those pieces. He later led a discussion on how Firefox exposes web content and user interface &#8220;chrome&#8221; via accessibility APIs.</p>
+
+<h4 id="dhtml">Web 2.0</h4>
+
+<p>Aaron Leventhal also presented on <a href="/web/20110608002246/http://developer.mozilla.org/en/docs/Accessible_DHTML">DHTML Accessibility</a>.  He then hosted a lively discussion of the <a href="/web/20110608002246/http://www.w3.org/WAI/PF/GUI/roleTaxonomy-20060508.html#Structure">proposed &#8220;live region&#8221; technique</a> that will allow assistive technologies to be notified of in-page changes in AJAX web applications.  Bill Haneman of Sun expressed concern over the semantics of a live region&#8217;s &#8220;politeness&#8221; level (that&#8217;s the actual attribute name at the moment).  He also suggested a more streamlined markup to indicate which elements on the page are live regions.  Aaron agreed to take all of these suggestions back to the WAI working group.</p>
+
+<h4 id="osk">On-screen keyboard</h4>
+
+<p><a href="/web/20110608002246/http://elgg.net/stevelee/profile/">Steve Lee</a> presented his ideas for a cross-platform on-screen keyboard for head pointers and switch users.  We talked through several approaches and agreed on a XULRunner/SVG/Python approach.  As much as possible, the on-screen display will get out of the way and highlight interface elements on screen.  Inspired by <a href="/web/20110608002246/http://www.treebuilder.de/default.asp?file=257091.xml">the SVG XULRunner clock</a>, The use of SVG will allow it to have a scalable interface that looks good at any resolution.  Steve is putting together a Mozilla Foundation grant proposal for further work.</p>
+
+<h4 id="firevox">Fire Vox</h4>
+
+<p>Charles Chen gave a demonstration of <a href="/web/20110608002246/http://www.firevox.clcworld.net/">Fire Vox</a>, his GPL-licensed Firefox extension that can speak and navigate web pages, and supports both the CSS 3 speech module and MathML markup.  Fire Vox works on Windows, Mac OS X, and Linux and is available today.  I first saw it at the <a href="/web/20110608002246/http://www.csun.edu/cod/conf/">CSUN conference</a> in March, and since then Charles has been hard at work adding multilingual support.  He demonstrated a web page marked up with text in multiple languages, and Fire Vox changed speech engines automatically and spoke each paragraph in its correct language.  (The speech engines are licensed separately.  Windows users can <a href="/web/20110608002246/http://www.microsoft.com/downloads/details.aspx?FamilyId=5E86EC97-40A7-453F-B0EE-6583171B4530&displaylang=en">download two additional voices for no charge</a>.)</p>
+
+<p>Charles is also putting together a Mozilla Foundation grant proposal to integrate &#8220;live region&#8221; support into Fire Vox, making it the first assistive technology to support the upcoming standard.</p>
+
+<h4 id="accessibilityworks">AccessibilityWorks</h4>
+
+<p>Cal Swart of IBM gave a demo of <a href="/web/20110608002246/http://domino.research.ibm.com/comm/research_projects.nsf/pages/access.index.html">AccessibilityWorks</a>, a program which provides accessibility customizations in both Internet Explorer and Firefox.  It can display a larger cursor, override document styles, increase letter spacing and line spacing, speak text as you hover your cursor over a word or paragraph, and much more.  AccessibilityWorks is currently a technology preview that works on Windows, Mac OS X, and Linux.</p>
+
+<h4 id="lsr"><abbr title="Linux Screen Reader">LSR</abbr></h4>
+
+<p>Peter Parente of IBM was also present.  Peter is working on <a href="/web/20110608002246/http://live.gnome.org/LSR">LSR</a>, a new open source screenreader for Linux.  LSR is unique among screenreaders on any platform because it can manage multiple audio tracks simultaneously.  For example, it can announce an incoming instant message in a background window while reading a web page in the foreground, or announce a notification area alert bubble while echoing user input in a terminal window.  LSR can mimic the visual space in a 3-dimensional aural space, for instance by making background events sound further away.  Peter and Aaron Leventhal have been collaborating for several months to get LSR to work correctly with Firefox 3.  Peter has published <a href="/web/20110608002246/http://www.gnome.org/~parente/lsr/screencast/lsr-gsummit06.html">a 14-minute screencast of LSR</a> (requires Flash).</p>
+
+<h4 id="xul">XUL accessibility checker</h4>
+
+<p>Shane Anderson and Aaron Andersen of <a href="/web/20110608002246/http://www.webaim.org/">WebAIM</a> were also there.  WebAIM has received a Mozilla Foundation grant to write an open source XUL accessibility checker.  It will be available as a server-side tool and as a client-side Firefox extension that can fully check installed Firefox extensions and Firefox itself.  They will also be updating the <a href="/web/20110608002246/http://www.mozilla.org/access/xul-guidelines">XUL Accessibility Guidelines</a> to bring them in line with <a href="/web/20110608002246/http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>.  Shane, Aaron, and I brainstormed for six hours, and we ended up with a list of 119 techniques which their accessibility checker can programmatically test in XUL interfaces.</p>
+
+<h4 id="mac">Mac Firefox + VoiceOver</h4>
+
+<p>H&aring;kan Waara received a Mozilla Foundation grant earlier this year to integrate Firefox with <a href="/web/20110608002246/http://www.apple.com/accessibility/voiceover/">VoiceOver</a>, Apple&#8217;s accessibility architecture for Mac OS X.  Using his private build of Firefox 3, he demonstrated visiting Google and performing a web search.  VoiceOver correctly announced the Firefox window on launch, spoke the current page URL in the location bar, and spoke the type and text of links and form controls as he tabbed through the home page and the search results page.  Given the dearth of documentation from Apple, this is nothing short of miraculous.</p>
+
+<p>H&aring;kan traveled to the summit from his home country of Sweden with his desktop iMac in a suitcase.  We were unable to reach consensus on which of these achievements was more impressive.</p>
+
+<h4 id="newatk">Firefox/ATK improvements</h4>
+
+<p>Bill Haneman and several other other Sun employees hosted a discussion of Firefox accessibility on Linux/Solaris, informally dubbed &#8220;<a href="/web/20110608002246/http://www.mozilla.org/access/unix/new-atk.html">New-ATK</a>&#8220;.  The consensus was that the way Firefox 3 exposes HTML via ATK is slightly non-standard but acceptable.  Specifically, Firefox will continue to use embedded object characters for any non-text child in a text container, and Bill will note the Firefox implementation as an exception case in the ATK documentation.  We also agreed on how autocomplete textboxes and combo boxes should be exposed.  New states may be added to ATK/AT-SPI in the future to indicate inline vs. dropdown autocompletion.</p>
+
+<p>With this consensus behind us, we are entering the &#8220;home stretch&#8221; for Firefox 3 accessibility support on Linux; from here on out, it&#8217;s just polishing the code and squashing bugs.  And speaking of bugs, Will Walker of Sun sat down and hacked out a prototype to walk the Firefox accessibility hierarchy, which exposed several previously unknown issues.  All in all, a three-hour discussion led to six new bugs being filed in Bugzilla.</p>
+
+<h4 id="svg">SVG/MathML</h4>
+
+<p>Despite initial hopes going into the summit, no one volunteered to tackle the accessibility of MathML and SVG content.  The Mozilla Foundation would be willing to sponsor such work (you know, with cash and stuff) if anyone were interested.  Aaron Leventhal also maintains <a href="/web/20110608002246/http://www.mozilla.org/access/projects">a list of other potential projects</a> that are waiting for the right person to write a grant proposal.</p>
+
+<h4 id="dinner">Group dinner</h4>
+
+<p>Frank Hecker of the Mozilla Foundation was there on Tuesday.  He didn&#8217;t give a presentation, but between sessions he engaged with nearly everyone throughout the week.  He also treated everyone to dinner and drinks at the <a href="/web/20110608002246/http://www.cambrew.com/">Cambridge Brewing Company</a>.</p>
+
+<h4 id="other">Other attendees and anecdotes</h4>
+
+<p>Other attendees:</p>
+
+<ul>
+<li>Ginn Chen, Nian Liu, William Walker, Peter Korn, and Mike Pedersen of Sun</li>
+<li>Nagappan Alagappan of Novell</li>
+<li>Rich Caloggero of WGBH</li>
+<li>Frank Schwichtenberg of IBM</li>
+<li>Joe Lazzaro from ITD, Commonwealth of Massachusetts</li>
+</ul>
+
+<p>Miscellaneous anecdotes:</p>
+
+<ul>
+<li>This was H&aring;kan&#8217;s first trip to the United States.  We introduced him to Radio Shack and Starbucks.</li>
+<li>Another H&aring;kan anecdote: his demonstration required two trips to the local Apple Store, once to buy a VGA adapter to connect his iMac to the projector, and once to return it and buy a different one because the Apple geniuses convinced us to buy the wrong one the first time.  Many thanks to Frank Schwichtenberg for making both trips.</li>
+<li><a href="/web/20110608002246/http://www.songbirdnest.com/">Songbird</a> provided an excellent opportunity to explore how many ways you can make a XUL application inaccessible.  That&#8217;s a harsh assessment, but we were actually quite grateful.  Reviewing Songbird revealed how our expertise can sometimes hinder our work, because outrageously inaccessible techniques simply don&#8217;t occur to us.  WebAIM&#8217;s documentation and validator tools will be better for it.</li>
+<li>Most people stayed in the <a href="/web/20110608002246/http://www.hotelmarlowe.com/">Hotel Marlowe</a>, which was quite nice.  Due to scheduling conflicts, I ended up spending the last night in the <a href="/web/20110608002246/http://www.kendallhotel.com/">Kendall Hotel</a>, which is a charming little hotel located in what used to be a firehouse.  I would recommend either of them for anyone traveling to Cambridge.</li>
+</ul>
+
+<p><em>Disclaimer: the Mozilla Foundation paid my expenses to attend this summit.</em></p>
+<p class=c>&#167;
+
+<h3 id=comments>Five comments here (<a href=/web/20110608002246/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li class=pb id="comment-7561"><cite><a href='/web/20110608002246/http://webaim.org/blog/2006/10/16/making-firefox-accessible/' rel='external nofollow' class='url'>WebAIM: Blog - Making Firefox Accessible</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7562"><cite><a href='/web/20110608002246/http://gaoming.name/blog/?p=48' rel='external nofollow' class='url'>Gao Ming&#8217;s Blog(高明的博客) &raquo; Blog Archive &raquo; Mozilla Accessibility Summit 2006</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7565"><cite><a href='/web/20110608002246/http://blog.mozilla.com/seth/2006/10/17/supporting-accessibility/' rel='external nofollow' class='url'>seth&#8217;s blog &raquo; Blog Archive &raquo; Supporting Accessibility</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7566"><cite><a href='/web/20110608002246/http://www.lerningkerv.com/wp/?p=235' rel='external nofollow' class='url'>Indirect Manipulation &raquo; Blog Archive &raquo; Comfortable Expectations</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7567"><cite><a href='/web/20110608002246/http://www.phillystandards.org/blog/2006/10/20/mozilla-accessibility-and-target/' rel='external nofollow' class='url'>Philadelphia Standards Organization &raquo; Blog Archive &raquo; Mozilla, Accessibility, and Target</a></cite>&#160;(pingback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110608002246/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110608002246/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110608002246/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110608002246/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110608002246/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.288 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-28 05:06:07 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 0:22:46 Jun 8, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:09:13 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

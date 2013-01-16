@@ -1,0 +1,698 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>OBJECT and Internet Explorer [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110926232939/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110926232939/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110926232939/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110926232939/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110926232939im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110926232939/http://diveintomark.org/archives/2003/04/12/about_the_sponsored_links" title="About the sponsored links">
+<link rel=next href="/web/20110926232939/http://diveintomark.org/archives/2003/04/14/safari_build_73_is_out" title="Safari build 73 is out">
+<link rel=up href="/web/20110926232939/http://diveintomark.org/archives#p1318" title="April 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; OBJECT and Internet Explorer Comments Feed" href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer/feed" />
+<link rel='index' title='dive into mark' href='/web/20110926232939/http://diveintomark.org/' />
+<link rel='prev' title='About the sponsored links' href='/web/20110926232939/http://diveintomark.org/archives/2003/04/12/about_the_sponsored_links' />
+<link rel='next' title='Safari build 73 is out' href='/web/20110926232939/http://diveintomark.org/archives/2003/04/14/safari_build_73_is_out' />
+<link rel='canonical' href='/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer' />
+<link rel='shortlink' href='/web/20110926232939/http://diveintomark.org/?p=1318' />
+<meta name="description" content="I've been playing with the OBJECT element, which will rise to prominence in XHTML 2.0. Can we start using it now to replace IMG?">
+<meta name="keywords" content="html,ie,markup,webstandards">
+<link href="/web/20110926232939cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110926232939/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/04\/13\/object_and_internet_explorer";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "26";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110926232939" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514121837/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:29:39 Sep 26, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Oct
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514121837/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer" title="12:18:37 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:29:39 Sep 26, 2011">26</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20111021004900/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer" title="0:49:00 Oct 21, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615073053/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:29:39 Sep 26, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110926232939*/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>57 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">2 May 06 - 21 Oct 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000013211111_2007:-1:441111001111_2008:-1:111021441100_2009:-1:000000000000_2010:-1:002121000311_2011:8:000010001100_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110926232939/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110926232939/http://diveintomark.org/archives#p1318">April 13, 2003</a> &#8227;
+<h2>OBJECT and Internet Explorer</h2> (<a href="/web/20110926232939/http://diveintomark.org/tag/html" rel="tag">html</a>, <a href="/web/20110926232939/http://diveintomark.org/tag/ie" rel="tag">ie</a>, <a href="/web/20110926232939/http://diveintomark.org/tag/markup" rel="tag">markup</a>, <a href="/web/20110926232939/http://diveintomark.org/tag/webstandards" rel="tag">webstandards</a>)</div>
+<p>I&#8217;ve been playing with the <code>OBJECT</code> element, which has been around for ages, but was never much used because Netscape 4 didn&#8217;t support it.  I don&#8217;t care about Netscape 4, but I do care about Internet Explorer for Windows.  Here&#8217;s my problem:</p>
+
+<p>I want to replace the <code>IMG</code> element.  Why, you ask?  Because I&#8217;m a markup wanker who won&#8217;t leave well enough alone.  Also, <code>IMG</code> has been removed from XHTML 2.0, in favor of <code>OBJECT</code>, and I&#8217;m wondering if there&#8217;s a smooth migration path.  The question of the day is: Can we start using <code>OBJECT</code> now to replace <code>IMG</code>?</p>
+
+<p>This is <q>old-style</q> markup:</p>
+
+<blockquote>
+<p><code>&lt;img src="http://diveintomark.org/public/2002/07/beagle-gimli.jpg" alt="A beagle sitting in a woman's lap" width="152" height="160" /&gt;</code></p>
+</blockquote>
+
+<p>Which produces this image:</p>
+
+<p><img src="/web/20110926232939im_/http://diveintomark.org/public/2002/07/beagle-gimli.jpg" alt="A beagle sitting in a woman's lap" width="152" height="160"></p>
+
+<p>This is <q>new-style</q> markup:</p>
+
+<blockquote>
+<p><code>&lt;object type="image/jpeg" data="http://diveintomark.org/public/2002/07/beagle-gimli.jpg" width="152" height="160"&gt;A beagle sitting in a woman's lap&lt;/object&gt;</code></p>
+</blockquote>
+
+<p>Which produces this image:</p>
+
+<p><object type="image/jpeg" data="http://diveintomark.org/public/2002/07/beagle-gimli.jpg" width="152" height="160">A beagle sitting in a woman&#8217;s lap</object></p>
+
+<p>I think the parallels speak for themselves.  My problem is with Internet Explorer.  (There may be other problems with other browsers that I don&#8217;t know about yet.  Leave messages in the comments if you can&#8217;t see this image at all.)  The <code>IMG</code>-based image and the <code>OBJECT</code>-based image look identical in Mozilla and Opera.  However, in Internet Explorer for Windows, the <code>OBJECT</code>-based image has internal padding within the <code>OBJECT</code>.  Since the image is the same size as the <code>OBJECT</code>, this means we get ugly scroll bars.  There is also a visible border around the <code>OBJECT</code>.</p>
+
+<p>Now, I know a little about CSS, but none of the obvious tricks to get rid of this padding or border have worked.  Searching Google for information about the <code>OBJECT</code> element is almost fruitless, since <q>object</q> is a very generic term, and all of the examples focus on embedding multimedia or Java objects.  For example, here is the <a href="/web/20110926232939/http://msdn.microsoft.com/workshop/author/dhtml/reference/objects/object.asp">MSDN documentation on <code>OBJECT</code></a>, which notes both a <code>BORDER</code> attribute and a <code>border</code> style property, neither of which removes the visible border, and a full complement of <code>padding</code> style properties, none of which remove the padding.</p>
+
+<p>Basically, nobody actually uses the <code>OBJECT</code> element this way (because <code>IMG</code> is easier and more direct, and also possibly because it doesn&#8217;t work in Internet Explorer &#8212; that&#8217;s what I want to find out), but if the W3C gets its way, everyone will in the future.</p>
+
+<p><strong>Update:</strong> thanks to several commenters, I have found these references:</p>
+
+<ul>
+<li><cite>Tom Gilder</cite>: <a href="/web/20110926232939/http://lists.w3.org/Archives/Public/w3c-wai-ig/2002AprJun/0865.html">Re: OBJECT tag and IE</a>.  <q cite="http://lists.w3.org/Archives/Public/w3c-wai-ig/2002AprJun/0865.html">IE/win&#8217;s handling of &lt;object&gt; is severely broken.</q></li>
+<li><cite>Jukka Korpela</cite>: <a href="/web/20110926232939/http://lists.w3.org/Archives/Public/w3c-wai-ig/2002AprJun/0868.html">More on OBJECT tag and IE</a>.  <q cite="http://lists.w3.org/Archives/Public/w3c-wai-ig/2002AprJun/0868.html">And there are serious problems with other browsers as well.</q></li>
+<li><a href="/web/20110926232939/http://www.robinlionheart.com/stds/html4/objects.html">Robin&#8217;s HTML 4 conformance test: <code>OBJECT</code></a>.  This shows just how incredibly broken IE/Win&#8217;s <code>OBJECT</code> handling is.</li>
+</ul>
+
+<p><strong>Update #2:</strong>: in case <q>I&#8217;m a wanker who can&#8217;t leave well enough alone</q> is not a good enough explanation for you, <a href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer.html#c001223">this comment</a> goes into more depth about why I am bothering.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Sixty six comments here (<a href=/web/20110926232939/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-1490"><p>Mark&#8230;</p>
+<p>FWIW, both images appear fine on IE5.2 for Mac as well as in Mozilla/Netscape variants on that platform. I&#8217;ve only got Version 5.0 of Opera on Mac but it works there as well.</p>
+<p>So this sounds like an IE Windows-specific problem from here.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.eclecticity.com/' rel='external nofollow' class='url'>Dan Shafer</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1490" title="April 13, 2003 @ 1:07 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1491"><p>There are problems with the alternative text and OBJECT as well.</p>
+<p>Neither Opera 7.10 (build 2840) nor Phoenix (last nightly build) display the alternative text for the image produced by OBJECT when images are disabled, and MSIE will display the OBJECT image even with images completely disabled. (All browsers tested on WinXP)</p>
+<p>I don&#8217;t think browsers are ready for OBJECT yet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://members.outpost10f.com/%7Ejor/' rel='external nofollow' class='url'>Jor</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1491" title="April 13, 2003 @ 1:10 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1492"><p>Also, the OBJECT element doesn&#8217;t allow for LONGDESC functionality.</p>
+<p>Incidentally, I think the HTML Working Group is nuts for wanting to take IMG out.</p>
+<p>&#8211;Kynn</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://kynn.com/' rel='external nofollow' class='url'>Kynn</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1492" title="April 13, 2003 @ 1:12 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1493"><p>Is there a timeline for when they expect XHTML 2 to actually be adopted?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.karchner.com/update/' rel='external nofollow' class='url'>Ross</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1493" title="April 13, 2003 @ 1:23 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1494"><p>I&#8217;m wondering why I can select the IMG one, but not the OBJECT one (in Mozilla 1.3). If I paste it in Word for example, the Img is pasted as image, the Object is pasted as HTML code. So it&#8217;s not quite all right in Mozilla neither I think.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1494" title="April 13, 2003 @ 1:29 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1495"><p>Mark, awhile back I went on the exact same quest for knowledge about how to get rid of the padding in IEwin.  It was totally fruitless. There is neither a CSS nor proprietary MSHTML solution.  </p>
+<p>A possible solution might involve using an ActiveX control.  SWF files don&#8217;t have the padding right?  So perhaps there is an ActiveX control you can use with the Object tag.  </p>
+<p>Problem, however, is that currently Mozilla chokes when the classid attribute is used in an Object tag.  Mozilla 1.4 is supposed to fix this problem from what I&#8217;ve heard.</p>
+<p>The Object tag, so elegantly designed to be degradeable in older browsers was spoiled a long time ago. What a shame.</p>
+<p>Anyways, simply setting an image as the background of a DIV seems to be the pragmatic solution to dropping the img tag at the moment.  Zeldman had a write-up about it last month.</p>
+<p>or</p>
+<p>you can use conditional IE statements to produce pages that should still validate (the img tag being commented out to all browsers but IE).</p>
+<p>or</p>
+<p>you can wait until its actually practical to use XHTML.  You&#8217;re the one who reverted back to HTML 4.01 so do you really want to travel back down this road again so soon?  It can only result in needless frustration.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1495" title="April 13, 2003 @ 1:35 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1496"><p>Ignoring the whole &#8220;yeah right whatever&#8221; nature of XHTML, I&#8217;ll note that Safari handles the above fine, but NetNewsWire Lite only shows the first image in the feed, though the second one gives a grey box.  It gets the size of the box right, so I&#8217;d guess it is parsing it somewhat&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.thok.org/' rel='external nofollow' class='url'>Mark Eichin</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1496" title="April 13, 2003 @ 1:36 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1497"><p><a href="/web/20110926232939/http://lists.w3.org/Archives/Public/w3c-wai-ig/2002AprJun/0865.html">http://lists.w3.org/Archives/Public/w3c-wai-ig/2002AprJun/0865.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.slightlybent.com/' rel='external nofollow' class='url'>Ron Green</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1497" title="April 13, 2003 @ 1:37 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1498"><p>Dan, Jor, Kynn, and everyone else who knows more about OBJECT than I do: thank you.  All of this is very helpful.</p>
+<p>I will likely be incorporating these comments into an upcoming XML.com article (possibly this week like I promised last month, possibly next month).  Many of the things we &#8220;lose&#8221; in XHTML 2.0 are easily replaced or worked around.  IMG &#8211;> OBJECT and forms &#8211;> XForms are the 2 big stumbling blocks, I think.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1498" title="April 13, 2003 @ 1:38 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1499"><p>For some reason, in Apple&#8217;s HTML component (as used in NetNewsWire), the object version shows up as a big gray square. This probably isn&#8217;t a showstopper, but it is sort of weird that it knows enough to render it as a square, but doesn&#8217;t fetch the image. </p>
+<p>Maybe it&#8217;s looking for a src attribute and not a data one?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1499" title="April 13, 2003 @ 1:38 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1500"><p>Mark, here is another possible solution.<br />
+It seems that IEwin will only accept &quot;image/jpeg&quot; and not &quot;image/jpg&quot; for the type attribute.<br />
+Therefore:<br />
+&lt;object type=&quot;image/jpg&quot; data=&quot;example.jpg&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;<br />
+&lt;div id=&quot;stupidIE&quot;&gt;&lt;/div&gt;<br />
+&lt;/object&gt;<br />
+Where #stupidIE has a background-image of &quot;example.jpg&quot;.<br />
+or<br />
+&lt;object type=&quot;image/jpg&quot; data=&quot;example.jpg&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;<br />
+&lt;!&#8211;[if expression]&gt;<br />
+&lt;img src=&quot;example.jpg&quot; width=&quot;&quot; height=&quot;&quot; /&gt;<br />
+&lt;![endif]&#8211;&gt;<br />
+&lt;/object&gt;<br />
+note: conditional statements are optional. I included them if its necessary to &quot;fool&quot; the validator.<br />
+or<br />
+&lt;object type=&quot;image/jpg&quot; data=&quot;example.jpg&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;<br />
+Your browser does not support the Object tag. Boo hoo.<br />
+&lt;/object&gt;</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1500" title="April 13, 2003 @ 1:51 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1501"><p>Thanks Mark. Looking forward to the article.</p>
+<p>I&#8217;ve done a bit more testing, and Opera 7 has a similar problem like Mozilla does as described in comment #5 &#8212; the &#8216;Image Popup Menu&#8217; is not called, in fact, no context menu at all appears.</p>
+<p>This means it is not possible to copy the image or even the image URL. If the object is a link, only the link context menu appears.</p>
+<p>Opera appears to handle all objects like plugins, even those that are handled internally (and thus cannot be disabled by disabling plugins!).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://members.outpost10f.com/%7Ejor/' rel='external nofollow' class='url'>Jor</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1501" title="April 13, 2003 @ 1:54 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1502"><p>This just goes to show how much Internet Explorer is holding back the rest of the Internet.  (As if we needed *more* proof.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.angelfire.com/alt/nachomama/' rel='external nofollow' class='url'>nachomama</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1502" title="April 13, 2003 @ 1:56 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1503"><p><a href="/web/20110926232939/http://www.alistapart.com/stories/flashsatay/">http://www.alistapart.com/stories/flashsatay/</a> is all about using objects for Flash movies. His findings should also apply to images and other media.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://jan.moesen.nu/' rel='external nofollow' class='url'>Jan!</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1503" title="April 13, 2003 @ 2:00 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1504"><p>I think I&#8217;ll just stay with my img tags.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://noeljackson.com/' rel='external nofollow' class='url'>noel</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1504" title="April 13, 2003 @ 2:23 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1505"><p>MikeyC: if we&#8217;re going to do background images, we may as well skip OBJECT altogether and do the Fahrner Image Replacement.  For those who don&#8217;t know what this is, here are some links:</p>
+<p>- <a href="/web/20110926232939/http://www.stopdesign.com/articles/css/replace-text/">http://www.stopdesign.com/articles/css/replace-text/</a><br />
+- <a href="/web/20110926232939/http://www.stopdesign.com/log/default.asp?date=20030313">http://www.stopdesign.com/log/default.asp?date=20030313</a><br />
+- <a href="/web/20110926232939/http://www.stopdesign.com/log/default.asp?date=20030314">http://www.stopdesign.com/log/default.asp?date=20030314</a><br />
+- <a href="/web/20110926232939/http://www.zeldman.com/daily/0203c.shtml#cssbgben">http://www.zeldman.com/daily/0203c.shtml#cssbgben</a><br />
+- <a href="/web/20110926232939/http://www.zeldman.com/daily/0203c.shtml#cssbg">http://www.zeldman.com/daily/0203c.shtml#cssbg</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1505" title="April 13, 2003 @ 2:27 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1506"><p>Using backgrounds for images is unsuitable for any meaningful images.  There is no decent way of falling back (the &#8220;guiltless image use&#8221; article already mentions some of them).</p>
+<p>Going to &lt;object> would be nice, I investigated this some time ago.  Unfortunately, the fallbacks don&#8217;t work as they should in a lot of browsers, and the rendering is nasty in IE.</p>
+<p>The reason for dropping &lt;img> is that it doesn&#8217;t really do anything.  It&#8217;s merely a specialisation of &lt;object> that is less capable.  The only reason people are so attached to it is because they have been using it so long.</p>
+<p>Now, ignoring user-agent bugs (which we can, since XHTML2 isn&#8217;t final, let alone implemented by any user-agents), and ignoring backwards compatibility (because XHTML2 is explicitly not backwards-compatible), is there any justification for keeping the &lt;img> element?</p>
+<p class=sig>&#8212;&#8201;<cite>Jim</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1506" title="April 13, 2003 @ 2:44 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1507"><p>Re: going down this road again.  Hey, I admitted to being a markup wanker.  What more do you want?</p>
+<p>Long answer: I initially gave up on XHTML 2.0 because of its intentional (and in some cases, seemingly spiteful) backward incompatibility.  I was convinced that people would need a migration path in order to adopt it, and that there was no such migration path.  I still believe the former, but I am no longer convinced of the latter.  I am working through individual issues (like this one) to explore what such a migration path would look like.</p>
+<p>All the work I have seen so far in the XHTML 2.0 world has been about what it would be like to *be* there.  Which makes sense, since it&#8217;s not finished yet and they&#8217;re still hashing out the details.  However, there has been a distressing lack of information about what it will take to *get* there, from where we are now.  Even assuming that where we are now is &#8220;valid XHTML 1, used properly&#8221; (a huge assumption for most sites), there is *still* no information about how to make the leap from there to XHTML 2.</p>
+<p>Members of the HTML Working Group seem totally unconcerned with this.  They have indicated publicly (on www-html and elsewhere) that they see no need for a migration path from XHTML 1 to XHTML 2.  XHTML 2 is for new documents, they say, and no one will bother converting existing documents and applications.</p>
+<p>Bluntly, I believe they are full of shit.</p>
+<p>Experience has shown us that there *is* a natural demand for the latest and greatest, if only out of fear.  Developers see &#8220;XHTML 2&#8243; and assume that it is a replacement for &#8220;XHTML 1&#8243;, and they fear that if they only know &#8220;XHTML 1&#8243;, HR departments will soon start rejecting their resumes because they are filtering on &#8220;XHTML 2&#8243;.  As I have pointed out before, this assumption is incorrect (at least the part about it being a replacement &#8212; the part about HR departments is probably true), but the HTML Working Group seems determined to further misconceptions about this new markup language (which is explicitly *not* a replacement for XHTML 1, and which is explicitly *not* compatible with XHTML 1) by giving it the same name, the next major version number, and the same MIME type.</p>
+<p>So, the question I&#8217;m trying to answer is: &#8220;Assume XHTML 2 takes off.  Given what I know now and what my documents look like now, how fucked will I be when prospective employer asks what I know about this newfangled XHTML 2 thing?  Or when a client comes to me and demands XHTML 2 compliance?&#8221;  I am attempting to answer this question by positing a hypothetical developer trying to &#8220;future-proof&#8221; documents and practices now.  Some things are simply radically different (like forms), but with other things, there are ways to do things now that will directly translate into an XHTML 2 world.  If There&#8217;s More Than One Way To Do It, some ways are better than others.</p>
+<p>What if a client comes to you and says &#8220;I want XHTML 2 for newer clients that support it, and XHTML 1 for older clients.&#8221;  How do you do that?  Saying &#8220;the world doesn&#8217;t work like that, it&#8217;s all or nothing&#8221; isn&#8217;t a helpful answer.  You better find a way to make the world work like that, or the client will go somewhere else.  I think this is a likely scenario, since it is likely that XHTML 2 will someday have desirable features that are not backported to XHTML 1.  Even assuming you&#8217;ve got all your raw content separated from your markup, you&#8217;ll need equivalency maps to make both sets of output transformations.  The closer those transformations can be to each other, the easier they will be to test, debug, and maintain.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1507" title="April 13, 2003 @ 3:03 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1508"><p>Hi Mark,</p>
+<p>the problem ist that IE handles object tags the way that it renders its data with another IE instance if no classid for an active-x component is given.<br />
+what happens if you just load your image alone in your IE? right the same white borders and no way to influence anything because you don&#8217;t load any markup.<br />
+there is one way to get around that, just delete the height and width parameters of your object tag and all is fine.</p>
+<p>best regards, andi</p>
+<p>ps.: also don&#8217;t define width and height via css.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://w3log.server-wg.de/' rel='external nofollow' class='url'>Andi</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1508" title="April 13, 2003 @ 3:16 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1509"><p>Andi, if I delete my width and height parameters, IE 6 shows me nothing at all.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1509" title="April 13, 2003 @ 3:19 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1510"><p>sad, i was using IE 5.0 :-(</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://w3log.server-wg.de/' rel='external nofollow' class='url'>Andi</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1510" title="April 13, 2003 @ 3:20 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1511"><p>anyway, the problems is the component which renders the object tag.<br />
+another solution could be using png as you can see in this example: <a href="/web/20110926232939/http://www.libpng.org/pub/png/pngs-bg.html">http://www.libpng.org/pub/png/pngs-bg.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://w3log.server-wg.de/' rel='external nofollow' class='url'>Andi</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1511" title="April 13, 2003 @ 3:27 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1512"><p>on my machine quicktime renders png&#8217;s.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://w3log.server-wg.de/' rel='external nofollow' class='url'>Andi</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1512" title="April 13, 2003 @ 3:28 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1513"><p>It might also be worth mentioning that IE/Win has a problem with PNG images as objects: it doesn&#8217;t display them. Rather, it displays the &#8220;fallback&#8221; content.</p>
+<p>It would be a shame to forever ignore such a versatile element because one browser&#8211;even it that browser is the most popular one&#8211;fails to properly support it. Perhaps we can use the lack of backwards-compatibility in XHTML 2.0 to our advantage here, assuming Microsoft can be convinced to fix their implementation of the object element for XHTML 2.0 documents.</p>
+<p class=sig>&#8212;&#8201;<cite>Greg H.</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1513" title="April 13, 2003 @ 4:46 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1514"><p>Opera 7 treats &#8216;object&#8217; now like &#8216;iframe&#8217;. I have iframes disabled most of the time, because they are often used for ads. Thus I can&#8217;t see the content of the &#8216;object&#8217; element. In Opera 6 for Windows I see it.<br />
+Hmmm&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://scholz-webdesign.de/' rel='external nofollow' class='url'>Thomas Scholz</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1514" title="April 13, 2003 @ 5:38 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1515"><p>&#8220;Assume XHTML 2 takes off. Given what I know now and what my documents look like now, how fucked will I be when a client comes to me and demands XHTML 2 compliance?&#8221;</p>
+<p>I think any client that knows enough to ask for &#8220;XHTML 2&#8243; would probably know enough about the realities of implementing it given the state of browser support (yes this is a big assumption I am probably wrong about).  </p>
+<p>But, I&#8217;ve never had a client come to me and ask for &#8220;HTML 4.01&#8243; or &#8220;HTML 3.2&#8243; or anything else of that nature.  I *have* had clients ask for things that simply weren&#8217;t possible like embedding fonts in a cross-browser/cross-platform way in HTML documents. That&#8217;s the kind of stuff that clients ask for.  But its the developer&#8217;s job, at that point, to explain to the client why it isn&#8217;t possible/practical.  </p>
+<p>Quite frankly, I have never encountered a client who has said a word about standards-compliance, so even if they asked for &#8220;XHTML 2.0&#8243;, you could probably just go ahead and use the IMG tag anyways (as evil as that may be).  Lets get real for a moment: no browser maker in their right mind is going to strictly enforce XML syntax in their product without a fallback &#8220;loose&#8221; rendering mode (I think you touched upon this in your last article on malformed rss feeds).  It just ain&#8217;t gonna happen.  The future belongs to &#8220;million-dollar programming&#8221; (like Opera&#8217;s small-screen rendering) and not &#8220;million-dollar mark-up&#8221;.</p>
+<p>Don&#8217;t get me wrong: This isn&#8217;t necessarily how I think things *should* be, but simply how I see things unfolding.</p>
+<p>HTML is dirty and XHTML will be just as dirty.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1515" title="April 13, 2003 @ 6:25 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1516"><p>MikeyC&#8230;</p>
+<p>the funny thing about the markup that browsers will never enforce&#8230; makes me laugh each time. It&#8217;s just a question of doing it, not about legacy. When Netscape was unable to display table when the end tag was not here, all people have closed their tables. So when a browser enforce a rule people follow. If you have a new language which gives you to do that and respect the rules, you&#8217;ll see that people will follow it.</p>
+<p>Because as Mark and you said, people just want to see their page. So if having a stricter code make your page visible, people will do.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.la-grange.net/' rel='external nofollow' class='url'>karl</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1516" title="April 13, 2003 @ 6:48 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1517"><p>Sorry about the previous double post&#8230;<br />
+Anyways, here&#8217;s another possible &quot;solution&quot;.<br />
+Ok&#8230;IE will display SVG without the padding (this may rely on the Adobe SVG plugin being installed&#8230;i didn&#8217;t try uninstalling it for this test) which means you can embed your image in an SVG file. OpenOffice will let you do this among other programs. Mozilla/Opera(?) as yet do not support SVG so we have a nested Object tag providing a jpeg version to those browsers.<br />
+IE, however, doesn&#8217;t respect the &quot;cascade&quot; of the Object tag and simply places nested Objects next to their parents (which, by the way, is why we are forced to use the embed tag for Flash files&#8211;not because of a Mozilla/Netscape/Opera deficiency, but to deal with IE&#8217;s finicky behaviour with regards to nesting) so we use IE conditional statements to hide the nested Object. This will not break the validity of the document, and is actually a clever feature that MS came up with to deal with the crappiness of their browser.</p>
+<p>&lt;object type=&quot;image/svg+xml&quot; data=&quot;beagle-gimli.svg&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;<br />
+&lt;![if !IE]&gt;<br />
+&lt;object type=&quot;image/jpeg&quot; data=&quot;beagle-gimli.jpg&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;&lt;/object&gt;<br />
+&lt;![endif]&gt;<br />
+&lt;/object&gt;</p>
+<p>This method should be both XHTML 2.0 compatible and work in most(?) modern browsers. I think you can even point to an external image file from an SVG document so the amount of duplication would be minimized to a small SVG &quot;container&quot; file. When Mozilla finally adds native SVG support (and Opera?) to the trunk we would be able to simplify the coding down to the parent Object alone.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1517" title="April 13, 2003 @ 7:01 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1518"><p>&#8220;When Netscape was unable to display table when the end tag was not here, all people have closed their tables. So when a browser enforce a rule people follow.&#8221;</p>
+<p>Yeah, but that was during the time when Netscape had more than 3% marketshare.  You know how many pages I encounter that break horribly in browsers other than IE due to bad HTML?  A lot.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1518" title="April 13, 2003 @ 7:05 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1519"><p>I&#8217;ve posted the example in #29.</p>
+<p>a couple things: first off, I wasn&#8217;t able to link to the jpeg (i think its possible to do so but I am not positive) so its embedded instead.</p>
+<p>Second off, the validator is telling me the IE conditional statements are invalid in that they are &#8220;not reserved words&#8221;.  I recall reading somewhere that they should validate. So I don&#8217;t know if its the validator or the statements&#8230;</p>
+<p>Anyways, take a look:</p>
+<p><a href="/web/20110926232939/http://members.rogers.com/divx/object/">http://members.rogers.com/divx/object/</a></p>
+<p>Would be interested to hear from people who don&#8217;t have an SVG plugin installed in IE.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1519" title="April 13, 2003 @ 7:41 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1552"><cite><a href='/web/20110926232939/http://blog.slf.homelinux.net/archives/000204.php' rel='external nofollow' class='url'>Lucas Thompson</a></cite>&#160;(trackback)</li>
+<li id="comment-1520"><p>>Second off, the validator is telling me the IE >conditional statements are invalid in that they >are &#8220;not reserved words&#8221;.</p>
+<p>&bull; validator.w3.org says its an error.</p>
+<p>&bull; HTML-Tidy says that the page is error-free XHTML strict.</p>
+<p>I&#8217;m not sure what the answer is. I do know that the validator isn&#8217;t always perfect&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1520" title="April 14, 2003 @ 12:24 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1521"><p>Since the current support for object is so bad, isn&#8217;t it possible to take a XHTML 2 document and use XSLT to transform it into another version of XHTML / HTML with img&#8217;s for older browsers?</p>
+<p class=sig>&#8212;&#8201;<cite>Peter Winnberg</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1521" title="April 14, 2003 @ 5:45 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1522"><p>I&#8217;m currently on a locked-down computer. I get a ActiveX security error and the image doesn&#8217;t show.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.boycottinfo.co.uk/' rel='external nofollow' class='url'>matt pusey</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1522" title="April 14, 2003 @ 7:58 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1523"><p>When viewing the object in Syndirella, it looks like a text area with scroll bars.  No image appears.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://unraveled.com/joshua/' rel='external nofollow' class='url'>Joshua Kaufman</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1523" title="April 14, 2003 @ 10:52 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1524"><p>The object version triggers the &#8220;Would you like to allow programs such as ActiveX controls to Run?&#8221; dialog. I have somewhat paranoid security settings; they help me avoid some of the evil active content out there (like automatically downloaded Gator software). So even though it has no code (it is just an image), IE warns me, and I almost always click &#8220;No&#8221; on that box.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://blog.cfrq.net/chk/' rel='external nofollow' class='url'>Harald</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1524" title="April 14, 2003 @ 10:58 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1525"><p>To be fully consistent with the OBJECT/IMG tag distinction (comment #17, IMG as a specialized version of OBJECT), XHTML 2.x should eliminate all textual markup such as CODE, EM, CITE, and ACRONYM, which are in effect specialized versions of SPAN.</p>
+<p>I don&#8217;t think that&#8217;s quite feasible.  IMG means, quite bluntly, &#8220;image&#8221;, and promotion of OBJECT leads to needless page bloat.</p>
+<p class=sig>&#8212;&#8201;<cite>Andre</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1525" title="April 14, 2003 @ 12:11 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1526"><p>Getting in very late here, but MikeyC, Mark, there&#8217;s a huge problem with Fahrner (as referenced here &#8211; <a href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer.html#c001221)"><a href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer.html#c001221" rel="nofollow">http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer.html#c001221</a>)</a> in, get this, Mozilla-based browsers.</p>
+<p>No, really:</p>
+<p><a href="/web/20110926232939/http://www.mezzoblue.com/tests/mozilla-bg-bug/">http://www.mezzoblue.com/tests/mozilla-bg-bug/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.mezzoblue.com/' rel='external nofollow' class='url'>Dave S.</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1526" title="April 14, 2003 @ 12:48 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1527"><p>No image at all on IE6/Win. :-(</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1527" title="April 14, 2003 @ 1:29 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1528"><p>Not sure on the might as well &#8220;do the Fahrner Image Replacement&#8221; technique. It&#8217;s mostly been used for typography and a few small decorative gifs, hasn&#8217;t it?</p>
+<p>I did try it awhile back with the content of what I was using for &#8220;longdesc&#8221; for a JPEG in the bit hidden with CSS, and putting the image (a 500&#215;348 JPEG) in for CSS-reading graphical browsers with background-image. IE and Opera browsers distorted the photo horribly, cutting off the bottom and stretching it horizontally like some kind of wide-angle lens.</p>
+<p class=sig>&#8212;&#8201;<cite>Michael</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1528" title="April 14, 2003 @ 1:44 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1529"><p>Another problem with  is that IE (6 at least) doesn&#8217;t let you position anything over it.</p>
+<p>For instance, you can create a draggable  on top of an , but you can&#8217;t do that over an</p>
+<p class=sig>&#8212;&#8201;<cite>Ziad</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1529" title="April 14, 2003 @ 4:07 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1530"><p>Damn no HTML !<br />
+Another problem with OBJECT is that IE (6 at least) doesn�t let you position anything over it.</p>
+<p>For instance, you can create a draggable DIV on top of an IMG, but you can�t do that over an OBJECT</p>
+<p class=sig>&#8212;&#8201;<cite>Ziad</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1530" title="April 14, 2003 @ 4:10 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1531"><p>Andrew, (comment #38), those other tags have a special meaning, whereas image adds nothing special to its own definition. Also, object is a far better tag to use once it is feasible, rather than image because of its way of handling alternative content.</p>
+<p>Let&#8217;s face it, alt=&#8221;" is a hack, simple as that, whereas object allows you to have an image fallback within a flash movie, which itself has a fallback to several paragraphs describing the movie with a link for more information. Or whatever else you want to do.</p>
+<p>Mark, have you thought of having &#8220;comment #xx&#8221;s automatically turned into links to the appropriate comment?Not necfessary, but it&#8217;d be nice when you&#8217;re down at comment number 59 and someone references comment number 2, which you&#8217;ve forgotten by that time.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1531" title="April 14, 2003 @ 10:47 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1532"><p>Sorry Andre, &#8220;Andrew&#8221; was a typo.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1532" title="April 14, 2003 @ 10:49 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1533"><p>MikeyC, as for clients asking for XHTML 2, I should clarify: they won&#8217;t ask for XHTML 2 specifically, they&#8217;ll just ask for things that can only be done in XHTML 2.  Again, this is theoretical, since the spec isn&#8217;t final and no such things exist yet.  But I&#8217;m positing that they *will* exist.  Remember, even if XHTML 2 isn&#8217;t a &#8220;replacement&#8221; for XHTML 1, it is the only language in the family that is evolving.  Members of the HTML Working Group have stated publicly that there will be no XHTML 1.2.  (And there sure as heck won&#8217;t be any HTML 5.)</p>
+<p><a href="/web/20110926232939/http://lists.w3.org/Archives/Public/www-html/2003Jan/0378.html">http://lists.w3.org/Archives/Public/www-html/2003Jan/0378.html</a></p>
+<p>So it is reasonable to assume that XHTML 2-only features are in our future.  And even if the client doesn&#8217;t know that XHTML 2 is a prerequisite for the advanced features they want, you&#8217;ll be stuck trying to find some way to serve a dual site.  Such a site will *have* to use some sort of server-side transformations (XSLT would be one choice), but obviously anything you can do to make those transformations easier to maintain will reduce your development costs.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1533" title="April 15, 2003 @ 11:27 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1553"><cite><a href='/web/20110926232939/http://www.dashes.com/links/archives/20030413.php#005850' rel='external nofollow' class='url'>anil dash's daily links</a></cite>&#160;(trackback)</li>
+<li id="comment-1534"><p>The example above puzzled me quite a bit (specifically the &#8220;new-style&#8221; example) until I discovered that the firewall/proxy in the office has stripped out the object tag completely. As far as I can make out it&#8217;s the data=&#8221;" bit that triggers the alarm bells. Just one more reason why the OBJECT tag isn&#8217;t much use right now.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1534" title="April 15, 2003 @ 1:01 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1535"><p>I do not see what is so wrong about XHTML 2.0 being a major departure from 1.0.</p>
+<p>You argue that clients will demand XHTML 2.0 compliance.  What?!!  What clients even demand 1.0 compliance?  Compliance is a largely web developer intitiated selling point on why they are, as a web developer, the web developer of choice!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://textfuse.ex-okay.com/' rel='external nofollow' class='url'>James Head</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1535" title="April 15, 2003 @ 1:13 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1536"><p>Interesting experiment in IE 6:<br />
+Assign an id value to the object element (I assume &#8216;newstyleimage&#8217; in the following).</p>
+<p>Set the onLoad funtion to the following JavaScript:</p>
+<p>   function fixPadding ()<br />
+   {<br />
+      newstyleimage.body.style.margin = &#8217;0&#8242;;<br />
+      newstyleimage.body.style.padding = &#8217;0&#8242;;<br />
+   }</p>
+<p>Explanation: Think of the object tag as an IFRAME.</p>
+<p class=sig>&#8212;&#8201;<cite>John</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1536" title="April 15, 2003 @ 1:26 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1537"><p>John: if that works, that&#8217;s excellent.  Now, can we expand that into a solution that doesn&#8217;t require the script to know the specific ID?  I&#8217;m thinking of some unobtrusive Javascript (that we can just link in and call once) that finds all the OBJECTs on a page that are images (probably key off a list of common image MIME type) and does this to them automatically.  Any takers?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1537" title="April 15, 2003 @ 1:32 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-1538"><p>James: as I have explained repeatedly, clients will not demand XHTML 2 compliance per se, but I strongly believe that there will eventually be web features which are XHTML 2-only, and clients will demand those (not realizing or caring that those features require XHTML 2).</p>
+<p>XHTML 1 is not expanding.  HTML 4 is not expanding.  Brooklyn is not expanding.  The HTML Working Group has said publicly that there will be no XHTML 1.2, no HTML 5.  All future innovations/specifications/modules/etc. coming out of the W3C will build on XHTML 2, not 1.</p>
+<p>Plus, there&#8217;s still the matter of HR departments demanding XHTML 2 knowledge.  Don&#8217;t tell me *that* will never happen.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1538" title="April 15, 2003 @ 1:37 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1539"><p>Mark,<br />
+Don&#8217;t get too excited yet. Right now, I don&#8217;t know how to suppress the right scroll bar. Still not sure if this is useful or no. Oh, BTW newstyleimage.body.style.border = &#8216;none&#8217;; gets rid of the sunken border, so the pesky scrollbar is the remaining fly in the ointment.</p>
+<p class=sig>&#8212;&#8201;<cite>John</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1539" title="April 15, 2003 @ 1:42 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1540"><p>use<br />
+imageid.body.scroll = &#8216;no&#8217;<br />
+in your script to remove the scrollbars</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1540" title="April 15, 2003 @ 2:11 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1541"><p>Progress!</p>
+<p>To remove borders and scroll bars, use this code:</p>
+<p>   function fixPadding ()<br />
+   {<br />
+      newstyleimage.body.style.margin = &#8217;0&#8242;;<br />
+      newstyleimage.body.style.padding = &#8217;0&#8242;;<br />
+      newstyleimage.body.style.border = &#8216;none&#8217;;<br />
+      newstyleimage.body.style.overflow = &#8216;hidden&#8217;;<br />
+   }</p>
+<p class=sig>&#8212;&#8201;<cite>John</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1541" title="April 15, 2003 @ 2:11 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1542"><p>This is the final hack. Works OK with IE6 (not tried with earlier versions. Interestingly the JavaScript doesn&#8217;t cause an error in Opera 7 or gecko (Phoenix 0.5 tested). Probably should sniff the newstyleimage.body value to see if not null. </p>
+<p>The code:</p>
+<p>      function fixPadding ()<br />
+      {<br />
+         var objs = document.getElementsByTagName (&#8216;OBJECT&#8217;);<br />
+         for (n = 0; n = 0) || (strPath.indexOf(&#8216;.gif&#8217;) >= 0))<br />
+               {<br />
+                  fixObject (obj);<br />
+               }<br />
+            }<br />
+         }<br />
+      }</p>
+<p>      function fixObject (obj)<br />
+      {<br />
+         obj.style.margin = &#8217;0&#8242;;<br />
+         obj.body.style.padding = &#8217;0&#8242;;<br />
+         obj.body.style.border = &#8216;none&#8217;;<br />
+         obj.body.style.overflow = &#8216;hidden&#8217;;<br />
+      }<br />
+      // Only do this for IE !<br />
+      window.onload = fixPadding;</p>
+<p>Anyone got a better way to detect the image type? Sadly, IE doesn&#8217;t handle png images, so there is no test for them.</p>
+<p class=sig>&#8212;&#8201;<cite>John</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1542" title="April 15, 2003 @ 2:53 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1543"><p>Sorry for previous posting &#8212; the greater than / less than chrs created a mess. Here is the code again (Why didn&#8217;t I preview it first?). And please note that the data path needs to be in your domain or you will get a &#8216;permission denied&#8217; message.</p>
+<p>      function fixPadding ()<br />
+      {<br />
+         var objs = document.getElementsByTagName (&#8216;OBJECT&#8217;);<br />
+         for (n = 0; n &lt; objs.length; n++)<br />
+         {<br />
+            var obj = objs [n];<br />
+            if (obj != null &#038;&#038; obj.data != null)<br />
+            {<br />
+               var strPath = obj.data;<br />
+               if ((strPath.indexOf(&#8216;.jpg&#8217;) &gt;= 0) || (strPath.indexOf(&#8216;.gif&#8217;) &gt;= 0))<br />
+               {<br />
+                  fixObject (obj);<br />
+               }<br />
+            }<br />
+         }<br />
+      }</p>
+<p>      function fixObject (obj)<br />
+      {<br />
+         obj.style.margin = &#8217;0&#8242;;<br />
+         obj.body.style.padding = &#8217;0&#8242;;<br />
+         obj.body.style.border = &#8216;none&#8217;;<br />
+         obj.body.style.overflow = &#8216;hidden&#8217;;<br />
+      }<br />
+      // Only do this for IE !<br />
+      window.onload = fixPadding;</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1543" title="April 15, 2003 @ 3:00 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1544"><p>if ( (obj.type == &#8220;image/jpeg&#8221;) || (obj.type == &#8220;image/gif&#8221;) ) {<br />
+    stuff();<br />
+}</p>
+<p>should work, but untested</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1544" title="April 15, 2003 @ 3:29 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1554"><cite><a href='/web/20110926232939/http://www.markme.com/jd/archives/002078.cfm' rel='external nofollow' class='url'>JD on MX</a></cite>&#160;(trackback)</li>
+<li id="comment-1545"><p>Anonymous,<br />
+Yes, (obj.type == &#8220;image/jpeg&#8221;)etc. works nicely. Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite>John</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1545" title="April 15, 2003 @ 3:51 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-1555"><cite><a href='/web/20110926232939/http://www.7nights.com/asterisk/archives/big_bad_xhtml_2.php' rel='external nofollow' class='url'>asterisk*</a></cite>&#160;(trackback)</li>
+<li id="comment-1546"><p>anyone feel like posting a completed version of the script in use?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1546" title="April 16, 2003 @ 11:32 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1547"><p>For all of you too busy (or lazy) to put the pieces together, here is the current version in full. Works (for me) on IE6 &#8212; and, interestingly, causes no error in gecko (Phoenix 0.5) or Opera 7.  I guess a production version should sniff for (obj.body != null). </p>
+<p>&lt;script type=&#8221;text/javascript&#8221;&gt;<br />
+      function fixObjectImages ()<br />
+      {<br />
+         var objs = document.getElementsByTagName (&#8216;OBJECT&#8217;);<br />
+         for (n = 0; n &lt; objs.length; n++)<br />
+         {<br />
+            var obj = objs [n];<br />
+            if ((obj != null &#038;&#038; obj.type != null)<br />
+              &#038;&#038; ((obj.type == &#8220;image/jpeg&#8221;) || (obj.type == &#8220;image/gif&#8221;)))<br />
+            {<br />
+               fixObject (obj);<br />
+            }<br />
+         }<br />
+      }</p>
+<p>      function fixObject (obj)<br />
+      {<br />
+         obj.body.style.margin = &#8217;0&#8242;;<br />
+         obj.body.style.border = &#8216;none&#8217;;<br />
+         obj.body.style.overflow = &#8216;hidden&#8217;;<br />
+      }<br />
+      // To do: Only do this for IE !<br />
+      window.onload = fixObjectImages;<br />
+&lt;/script&gt;</p>
+<p class=sig>&#8212;&#8201;<cite>John</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1547" title="April 16, 2003 @ 12:17 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1548"><p>I&#8217;ve been through this just like everyone else, unable to get IE to display images in OBJECT tags.</p>
+<p>If XHTML 2 was a current standard, then I&#8217;d be upset.  But, XHTML 2 is in the draft stage, so what&#8217;s the big deal?  There are things that aren&#8217;t supported in any browser that are part of XHTML 2, albeit browsers like Mozilla will probably let you style them nonetheless.</p>
+<p>I don&#8217;t know, this whole argument seems silly.  If anyone started calling out the CSS 1 spec because certain features didn&#8217;t work in Netscape 4 they&#8217;d be laughed at, and CSS 1 is a SPEC, not a DRAFT.  Oh well, maybe I missed something.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://stilleye.com/' rel='external nofollow' class='url'>David</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1548" title="April 17, 2003 @ 1:00 pm"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1549"><p>David Wrote: &#8220;If XHTML 2 was a current standard, then I�d be upset. But, XHTML 2 is in the draft stage, so what�s the big deal? &#8230;Oh well, maybe I missed something.&#8221;</p>
+<p>What you seem to be missing is that the Object tag isn&#8217;t something new that&#8217;s been designed for XHTML 2, but has been around for many years already and its an absolute shame that browser-makers messed up its potential by implementing it so poorly.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1549" title="April 18, 2003 @ 12:16 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1550"><p>Even if MS fixes the behaviour of OBJECT in IE7 (if it ever comes out), about 40% of users are still using IE5 or older.</p>
+<p>So even with we assume that all IE6 users upgrade, 2 in every 5 web users will not be able to the images properly. Not good.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://www.neilturner.me.uk/' rel='external nofollow' class='url'>Neil T.</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1550" title="April 18, 2003 @ 11:39 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-1551"><p>Reply to comment #2:<br />
+Alternative text (and HTML) for the image produced by OBJECT *has* worked in earlier Opera versions, at least v6. Since Opera 7 was rewritten from scratch, I suppose it&#8217;s just been temporarily left out.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110926232939/http://nisch.com/bjorn/' rel='external nofollow' class='url'>Bj�rn Br�ndewall</a></cite>&#160;<a class=p href="/web/20110926232939/http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer#comment-1551" title="April 24, 2003 @ 6:50 am"><img alt="#" src=/web/20110926232939im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110926232939/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110926232939/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110926232939/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110926232939/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110926232939/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.442 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 13:33:32 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:29:39 Sep 26, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:14:56 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

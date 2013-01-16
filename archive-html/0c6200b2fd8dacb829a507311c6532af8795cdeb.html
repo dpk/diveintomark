@@ -1,0 +1,580 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Dive into accountability [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110608001317/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110608001317/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110608001317/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110608001317im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110608001317/http://diveintomark.org/archives/2003/07/16/rule_of_thumb" title="Rule of thumb">
+<link rel=next href="/web/20110608001317/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level" title="Atom aggregator behavior (HTTP level)">
+<link rel=up href="/web/20110608001317/http://diveintomark.org/archives#p1385" title="July 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Dive into accountability Comments Feed" href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability/feed" />
+<link rel='index' title='dive into mark' href='/web/20110608001317/http://diveintomark.org/' />
+<link rel='prev' title='Rule of thumb' href='/web/20110608001317/http://diveintomark.org/archives/2003/07/16/rule_of_thumb' />
+<link rel='next' title='Atom aggregator behavior (HTTP level)' href='/web/20110608001317/http://diveintomark.org/archives/2003/07/21/atom_aggregator_behavior_http_level' />
+<link rel='canonical' href='/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability' />
+<link rel='shortlink' href='/web/20110608001317/http://diveintomark.org/?p=1385' />
+<meta name="description" content="Day by day and almost minute by minute the past was brought up to date.">
+<meta name="keywords" content="blogging,gpl,movabletype,mysql">
+<link href="/web/20110608001317cs_/http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110608001317/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Cabin,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Cabin,serif;font-style:oblique}
+strong,b{font-family:Cabin,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/07\/18\/dive_into_accountability";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "8";
+var displayMonth = "Jun";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/07/18/dive_into_accountability" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110608001317" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215132318/http://diveintomark.org/archives/2003/07/18/dive_into_accountability" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 0:13:17 Jun 8, 2011">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120121070725/http://diveintomark.org/archives/2003/07/18/dive_into_accountability" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="21 Jan 2012"><strong>JAN</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215132318/http://diveintomark.org/archives/2003/07/18/dive_into_accountability" title="13:23:18 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 0:13:17 Jun 8, 2011">8</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120121070725/http://diveintomark.org/archives/2003/07/18/dive_into_accountability" title="7:07:25 Jan 21, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100607010327/http://diveintomark.org/archives/2003/07/18/dive_into_accountability" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 0:13:17 Jun 8, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110608001317*/http://diveintomark.org/archives/2003/07/18/dive_into_accountability" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>40 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Apr 06 - 20 Feb 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000111312000_2007:-1:420211100102_2008:-1:111110001100_2009:-1:100100000000_2010:-1:000002010011_2011:5:000001000000_2012:-1:110000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110608001317/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110608001317/http://diveintomark.org/archives#p1385">July 18, 2003</a> &#8227;
+<h2>Dive into accountability</h2> (<a href="/web/20110608001317/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20110608001317/http://diveintomark.org/tag/gpl" rel="tag">gpl</a>, <a href="/web/20110608001317/http://diveintomark.org/tag/movabletype" rel="tag">movabletype</a>, <a href="/web/20110608001317/http://diveintomark.org/tag/mysql" rel="tag">mysql</a>)</div>
+<blockquote cite="http://www.gerenser.com/1984/quote.html">
+<p>Day by day and almost minute by minute the past was brought up to date. In this way every prediction made by the Party could be shown by documentary evidence to have been correct; nor was any item of news, or any expression of opinion, which conflicted with the needs of the moment, ever allowed to remain on record. All history was a palimpsest, scraped clean and reinscribed exactly as often as was necessary.</p>
+
+<p class="attribution">George Orwell, <cite class="book">1984</cite></p>
+</blockquote>
+
+<p>Or not.</p>
+
+<p><a href="/web/20110608001317/http://diveintomark.org/projects/misc/history-20030717.tgz">Source code</a>.  <q>Rough code, badly documented</q>.  Requires Python 2.2, <a href="/web/20110608001317/http://sourceforge.net/projects/mysql-python">MySQLdb</a>, <a href="/web/20110608001317/http://www.cheetahtemplate.org/">Cheetah</a>, Movable Type 2.6x running off a MySQL database, and the ability to run cron jobs (I run <code>history.py</code> once a minute to update the revision history database). GPL-licensed.  Ask questions in the comments or by email.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Seventy eight comments here (<a href=/web/20110608001317/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li class=me id="comment-3596"><p>Completely.  Missing.  The.  Point.</p>
+<p>Look at the revision history.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3596" title="July 18, 2003 @ 12:24 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3597"><p>And that&#8217;s Godwin, not Goodwin.</p>
+<p><a href="/web/20110608001317/http://info.astrian.net/jargon/terms/g/Godwin_s_Law.html">http://info.astrian.net/jargon/terms/g/Godwin_s_Law.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3597" title="July 18, 2003 @ 12:26 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3598"><p>&#8220;Completely. Missing. The. Point.<br />
+And that�s Godwin, not Goodwin.&#8221;</p>
+<p>Cut me a break its past midnight! ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.zeit.ca/' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3598" title="July 18, 2003 @ 12:28 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3599"><p>Okay I didn&#8217;t see the revision thing&#8230;font too small&#8230;acknowledgement of revision&#8230;accountability&#8230;got it&#8230;but you throw in a passage from 1984 and what do you expect people to think when they are half asleep&#8230; ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.zeit.ca/' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3599" title="July 18, 2003 @ 12:35 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3600"><p>[applause]</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://deepshell.net/' rel='external nofollow' class='url'>sleeper</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3600" title="July 18, 2003 @ 12:35 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3601"><p>Nice.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3601" title="July 18, 2003 @ 12:38 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3602"><p>Nice implementation.  Care to publish the code?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.waxy.org/' rel='external nofollow' class='url'>Andy Baio</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3602" title="July 18, 2003 @ 12:42 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3603"><p>+1</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://bitsko.slc.ut.us/' rel='external nofollow' class='url'>Ken MacLeod</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3603" title="July 18, 2003 @ 12:43 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3604"><p>Revision history, so what?  This is so trivial and obvious.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://minutillo.com/steve/weblog/' rel='external nofollow' class='url'>steve minutillo</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3604" title="July 18, 2003 @ 12:44 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3605"><p>See, &#8220;font too small&#8221; is useful feedback.  Changed it to same size as everything else, but italic.  Better?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3605" title="July 18, 2003 @ 12:46 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3606"><p>Code is coming, but it&#8217;s not for the weak or the masses.  Python directly querying Movable Type&#8217;s tables in a MySQL database.  Code irreversibly intertwingled with layout (thanks Cheetah for making it so trivially easy to mix them!) and everything specific to my environment.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3606" title="July 18, 2003 @ 12:49 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3607"><p>&#8220;Changed it to same size as everything else, but italic. Better?&#8221;</p>
+<p>Nah its still not obvious enough&#8230;</p>
+<p>How about: {text-decoration:blink !important;}</p>
+<p>;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.zeit.ca/' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3607" title="July 18, 2003 @ 12:49 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3608"><p>So, supposing I wanted to be able to compare other XML feeds for diffs with highlighting via a web interface.  How could I do it?</p>
+<p>I don&#8217;t need your code line by line if you&#8217;re not prepared to release it; rather, I&#8217;m just after a logic walk-through.  We grab a feed and isolate entries, (storing each entry in a databse?).  When we next grab the feed, we compare posts (with the same permanent link?  the same pubDate?) and look for diffs and highlight.  I just need a little more specifics before I could roll my own.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://thefriedmans.net/blog' rel='external nofollow' class='url'>Lex</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3608" title="July 18, 2003 @ 12:51 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3609"><p>Interesting. I was just talking to my roommate about the ability to track changes in weblog posts and whether it would be a useful feature or not.</p>
+<p>The problem is, of course, that unless there is an unbiased and unaffiliated party tracking the changes, then the revision-list history of posts is only as trustworthy as those managing the system &#8211; in your case, only as trustworthy as you.</p>
+<p>Regardless, very interesting indeed.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.sunsetdawning.com/' rel='external nofollow' class='url'>Dan</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3609" title="July 18, 2003 @ 12:51 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3610"><p>Oh, comment-posting-temporal-overlap.  Damn CPTO.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://thefriedmans.net/blog' rel='external nofollow' class='url'>Lex</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3610" title="July 18, 2003 @ 12:53 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3611"><p>Steve: bwahahahahaha.</p>
+<p>The thing is, though, you&#8217;re right.  It *is* obvious.  Many wikis do it (like MoinMoin, which we&#8217;re using for the Atom project).  Many high-end CMSes do it.  Operating systems have done it for decades (cough, VMS, cough).  Why not weblogs?</p>
+<p>(It was also trivial to code.  A few hours tops, and most of that time was spent dicking around on IRC, er, I mean planning.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3611" title="July 18, 2003 @ 12:53 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3613"><p>Mark, I&#8217;ve noticed that in the last few minutes you&#8217;ve changed the layout of the revision markers (added/deleted/changed)&#8230;</p>
+<p>Perhaps a revisions page for the revisions page is in order?</p>
+<p>Okay enough jokes&#8230;i&#8217;ve gotta go to work in less than 6 hours&#8230;damn you Mark and these late night postings!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.zeit.ca/' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3613" title="July 18, 2003 @ 1:08 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3614"><p>Dan: yup, I still have &#8220;god mode&#8221; over the database and the server its on, so this doesn&#8217;t solve the integrity problem in the long run.  But it adds transparency in the short run; assuming you *already* trust me, you can use this to get more information from me than before.  And if you&#8217;re not sure whether to trust me, I&#8217;m giving you *more information* with which to decide.  (If you already think I&#8217;m the spawn of the devil, well, buh bye.  Don&#8217;t bother to write.  I&#8217;ve gotten enough hate mail from clueless sheep this week.)</p>
+<p>I promise never to muck with my own revision history.  It&#8217;ll get messy, especially on those long linkdumps (where I may add new links to the same entry 5 or 10 times throughout the day).  But it&#8217;ll all be there.  The script checks for updates every 60 seconds.  As long as I keep the script running and the history available, I promise I&#8217;ll never muck with it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3614" title="July 18, 2003 @ 1:16 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3615"><p>MikeyC: I haven&#8217;t made any changes in the past few minutes.  Most likely, your browser is finally getting around to refreshing the CSS stylesheet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3615" title="July 18, 2003 @ 1:21 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3616"><p>Surely you used the standard library difflib<br />
+(<a href="/web/20110608001317/http://www.python.org/doc/current/lib/module-difflib.html)"><a href="/web/20110608001317/http://www.python.org/doc/current/lib/module-difflib.html" rel="nofollow">http://www.python.org/doc/current/lib/module-difflib.html</a>)?</a> ;-) Its algorithm is a bit different from the standard unix diff and the like. The algorithm even has that used-to-be-buzzword-but-no-more, &#8220;gestalt&#8221;, in its name.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.hole.fi/jajvirta/weblog/' rel='external nofollow' class='url'>Jarno Virtanen</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3616" title="July 18, 2003 @ 1:23 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3617"><p>Jarno: yes.  Actually I&#8217;m using Aaron Swartz&#8217;s diff.py, which is an easy-to-use wrapper for using difflib on HTML.</p>
+<p><a href="/web/20110608001317/http://www.aaronsw.com/2002/diff.py">http://www.aaronsw.com/2002/diff.py</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3617" title="July 18, 2003 @ 1:28 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3619"><p>Back in the Don Park thread, I wondered whether you&#8217;d be willing to apply the same technology to your own weblog. I guess this answers my question&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.papascott.de/' rel='external nofollow' class='url'>Scott Hanson</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3619" title="July 18, 2003 @ 3:10 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3620"><p>This all looks technically nice and interesting, but what does this have to do with accountability?</p>
+<p>Mark you wrote: I promise never to muck with my own revision history.  It�ll get messy&#8230;..</p>
+<p>The beauty of the print industry is the static nature of publication &#8212; but they have editors who respond, invariably, with a corrections column. Even those cases are based on an element of trust. </p>
+<p>I can understand the fascination when someone on his/her personal site decides to publish something then revises it, to change tone or content. Monitoring that is smart if we can trust the arbiter &#8212; the changes are made, the original is lost, the monitor logs both. Couldn&#8217;t the log be manipulated? You alude to that. Historical engineering can happen on both sides.</p>
+<p>I suppose my point is of the &#8216;who watches the watchmen&#8217; ilk, and since you say it&#8217;s a matter of trust then that&#8217;s fine. </p>
+<p>On an objective slant this is not accountability since you&#8217;re making yourself accountable through a system *you* control. Whether I or anyone else trusts you isn&#8217;t the point. Accountability only matters to the people who would like to hold you to your words, and by their nature they probably don&#8217;t trust you. Maybe you should revise the title: Dive Into Mark&#8217;s Accountability.</p>
+<p class=sig>&#8212;&#8201;<cite>Gummi</cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3620" title="July 18, 2003 @ 3:57 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3595"><p>hmm&#8230; <del>Dave Winer == Big Brother?</del></p>
+<p>I see your point Mark (if that is your point), but the difference is that Dave has no actual control over your life. <del>Some might suggest that &#8216;Winer Watcher&#8217; was a form of Big Brother&#8230;</del></p>
+<p>&#8220;Goodwin postulated that as the length of a discussion thread grows, the probability approaches one (1) that one participant will introduce the terms &#8220;Hitler&#8221; or &#8220;Nazi&#8221;.&#8221;</p>
+<p>&#8230;i&#8217;d add &#8216;Orwellian&#8217;/1984 to that list.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.zeit.ca/' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3595" title="July 18, 2003 @ 12:22 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3612"><p>&#8220;then the revision-list history of posts is only as trustworthy as those managing the system &#8211; in your case, only as trustworthy as you.&#8221;</p>
+<p>The difference, i think, is that if you were caught playing dirty there really could be no excuse and your credibility would be entirely shot.  <del>Currently Dave hides behind the &#8220;I publish at 10pm&#8221; disclaimer so he feels that he can revise at will&#8230; like it or not it is a reason&#8230;</del> playing dirty with your list of revisions is something 1,000 worse. Someone would eventually call you on it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.zeit.ca/' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3612" title="July 18, 2003 @ 12:57 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3668"><cite><a href='/web/20110608001317/http://bill.simonifamily.net/archives/000003.html' rel='external nofollow' class='url'>Binary By Accident</a></cite>&#160;(trackback)</li>
+<li id="comment-3621"><p>The only alternative, Gummi, is a system like the Winer Watcher (run by a third party), and we&#8217;ve all seen how well that went over (Danger!  Falling lead balloons!  Though I don&#8217;t think that Mark would have the same reaction to such a system turned on him as Dave did.)</p>
+<p>Personally, I trust Mark when he says that he&#8217;s not going to muck around with his revision tracking.  I think that even offering such a service on a personal weblog is a pretty brave step forward.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://wantingseed.com/' rel='external nofollow' class='url'>John</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3621" title="July 18, 2003 @ 6:30 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3622"><p>This is a feature I think many people would welcome in feedster. They already have the rss cache; this is a logical extension of that. I think we will see this in feedster real soon, if Mark doesn&#8217;t go and patent it or something :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://nonymous.org/weblog/' rel='external nofollow' class='url'>phyx</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3622" title="July 18, 2003 @ 6:31 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3623"><p>Maybe this quote from 1984 would be more appropriate:</p>
+<p>&#8220;With those children, he thought, that wretched woman must lead a life of terror. Another year, two years, and they would be watching her night and day for symptoms of unorthodoxy. Nearly all children nowadays were horrible. What was worst of all was that by means of such organizations as the Spies they were systematically turned into ungovernable little savages, and yet this produced in them no tendency whatever to rebel against the discipline of the Party. On the contrary, they adored the Party and everything connected with it. The songs, the processions, the banners, the hiking, the drilling with dummy rifles, the yelling of slogans, the worship of Big Brother &#8212; it was all a sort of glorious game to them. All their ferocity was turned outwards, against the enemies of the State, against foreigners, traitors, saboteurs, thought-criminals. It was almost normal for people over thirty to be frightened of their own children. And with good reason, for hardly a week passed in which The Times did not carry a paragraph describing how some eavesdropping little sneak &#8212; &#8216;child hero&#8217; was the phrase generally used &#8212; had overheard some compromising remark and denounced its parents to the Thought Police.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.poochkiss.com/' rel='external nofollow' class='url'>Chi Lambda</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3623" title="July 18, 2003 @ 6:41 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3618"><p>Since manilla obviously doesn&#8217;t support a revision history, maybe Dave could just put something like:</p>
+<p>Update: I changed blah blah blah.</p>
+<p>at the end of his posts when he changes it.  <del>Personally, I think he just has a fear of commitment.  He doesn&#8217;t want to commit to being as accountable as most professionals are. </del></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.perceive.net/' rel='external nofollow' class='url'>Eric Vitiello</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3618" title="July 18, 2003 @ 1:53 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3624"><p>The idea of getting post diffs is probably better applied in aggregators. Like others have commented, automated versioning doesn&#8217;t make others accept your accountability when you&#8217;re the one who controls the switch and can turn it on and off.</p>
+<p>But it would sure make it easier to handle something like this: <a href="/web/20110608001317/http://corky.net/dotan/log/2003/04/08.html#001222">http://corky.net/dotan/log/2003/04/08.html#001222</a><br />
+(for those who don&#8217;t care to follow the link, it&#8217;s a post where I offended someone, he flamed me in the comments, and I later modified my post, while trying to keep  the original text so that his offended comments would still make sense).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://corky.net/dotan/' rel='external nofollow' class='url'>Dotan</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3624" title="July 18, 2003 @ 7:14 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3626"><p>That&#8217;s a long weekend project! [ <a href="/web/20110608001317/http://diveintomark.org/archives/2002/12/27/pushing_the_envelope.html">http://diveintomark.org/archives/2002/12/27/pushing_the_envelope.html</a> ]</p>
+<p>I did something like this over at <a href="/web/20110608001317/http://waffle.wootest.net/past/000339.php">http://waffle.wootest.net/past/000339.php</a> although not quite so `diff`-ish.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3626" title="July 18, 2003 @ 7:36 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3627"><p>Mark: &#8220;If you already think I�m the spawn of the devil, well, buh bye.&#8221;</p>
+<p>No worries.  Spawn of a lesser demon I could quite accept, but definitely not the devil.  (wink).</p>
+<p>Mark: &#8220;I promise never to muck with my own revision history.&#8221;</p>
+<p>Good enough for me.  But then, it was good enough for me before.  Now it&#8217;s just more interesting.</p>
+<p>Also, maybe I&#8217;m a dirty liar, but didn&#8217;t you have a per-post RSS feed available that would aggregate all the comments to a particular entry?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.sunsetdawning.com/' rel='external nofollow' class='url'>Dan</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3627" title="July 18, 2003 @ 7:38 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3628"><p>Hey Mark, I can&#8217;t seem to reconcile this:</p>
+<p>&#8220;[Last updated at  1:25AM on July 18, 2003 � revision history]&#8221;</p>
+<p>with</p>
+<p>&#8220;There are 2 versions of this post:</p>
+<p>2003-07-18 12:09AM<br />
+2003-07-18 12:05AM&#8221;</p>
+<p>If it was last updated at 1:25AM, shouldn&#8217;t there be a version from 1:25AM?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.sunsetdawning.com/' rel='external nofollow' class='url'>Dan</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3628" title="July 18, 2003 @ 7:41 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3629"><p>Dan: He could have updated it without making any changes, like saving the entry as a way to force a rebuild without having to use the rebuild popup.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3629" title="July 18, 2003 @ 8:11 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3630"><p>Ok, I just caught up on the feedster guy&#8217;s blog, and see he&#8217;s decided to _not_ implement rss diffs for the time being. Pity.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://nonymous.org/weblog/' rel='external nofollow' class='url'>phyx</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3630" title="July 18, 2003 @ 8:24 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3631"><p>A very nice proof-of-concept. Just because diffs work on Wikis doesn&#8217;t necessarily mean they&#8217;ll work, or have any value on blogs. I think you&#8217;ve nicely demonstrated they can be useful. I&#8217;m sure we&#8217;ll see this as standard functionality on the more sophisticated blog tools before long. </p>
+<p>Shelley is dead right about perspective.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://dannyayers.com/' rel='external nofollow' class='url'>Danny Ayers</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3631" title="July 18, 2003 @ 8:24 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3669"><cite><a href='/web/20110608001317/http://dannyayers.com/archives/001581.html' rel='external nofollow' class='url'>Raw Blog</a></cite>&#160;(trackback)</li>
+<li id="comment-3632"><p>re: comment 28, Dave.</p>
+<p>I made it explicit that trust is not an issue for people who obviously trust Mark. It falls down when it becomes a matter for people who don&#8217;t trust him. Whether I do or not is beside the point, it holds no consequence regarding my comment.</p>
+<p>If the idea is to show changes and evolution of posts then that&#8217;s fine. When it becomes an accountability machine then it patently isn&#8217;t. Where&#8217;s the independence? Lets use an analogue, what would a person who knows nothing about Mark or his motives think? Please don&#8217;t take this the wrong way, but objectivity is the key of accountability. </p>
+<p>Quoting Orwell is fine, posit: calling the machine a measure of accountability when its under the control of the person it&#8217;s watching could be considered Orwellian in itself. </p>
+<p>Perspective is the right way to go.</p>
+<p class=sig>&#8212;&#8201;<cite>Gummi</cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3632" title="July 18, 2003 @ 8:36 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3633"><p>Wouldn&#8217;t it be possible to create a post checksum based on a single post? You&#8217;d have to avoid using the tags so that a layout change wouldn&#8217;t corrupt it, but if different applications had a way of keeping track (such as RSS readers) it would be a way of keeping a revision history without storing the whole page. You could track more sites this way (drawback being that you couldn&#8217;t see what was changed, just be alerted to the fact that it had). Another solution might be for somenoe like technorati to implement it, as then it would apply to a lot of people quickly and easily. Everytime the checksum changes, the post has been edited.</p>
+<p>I&#8217;m not as technically savvy as the rest of you&#8230; What are the drawbacks to something like this? Besides the fact that everyone is vehemently against having their edits publicized.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.binarytoybox.com/' rel='external nofollow' class='url'>jfournier</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3633" title="July 18, 2003 @ 8:41 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3634"><p>Here&#8217;s the deal with the last modified date:</p>
+<p>It&#8217;s MTLastModified (thanks Kevin), so it&#8217;s maintained by MT and can never get out of date.  That&#8217;s a good thing, except that MT updates the entry_modified_on column whenever I save the entry, whether or not there are any changes.  I thought about it and decided *not* to display these in the revision history, because it&#8217;s not useful for my purpose.  The purpose of the revision history is to show when the text /changes/, not just when I click &#8216;save&#8217;.</p>
+<p>For example, when I moderate comments, I have to click &#8216;save&#8217; to rebuild the entry afterwards.  At some point I&#8217;ll close the comment thread, and that will require another &#8216;save&#8217;.  And so forth.</p>
+<p>I should either make this clear, or remove the MTLastModified display altogether and just rely on the separate revision history page.  Since the system is hacked in and not-quite-real-time (updates on a cron job), I don&#8217;t think I can get a perfectly accurate date-of-actual-last-modification-of-text on the entry page.  Which, given the nature of the feature, will obviously lead to conspiracy theories.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3634" title="July 18, 2003 @ 8:56 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3635"><p>Re:Dan (35): Mark&#8217;s feed of comments is only for the most recent blog entry. Luckily, feedster archives it all and makes it searchable, even across many posts:<br />
+<a href="/web/20110608001317/http://www.feedster.com/drill.php?id=32148">http://www.feedster.com/drill.php?id=32148</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://nonymous.org/weblog/' rel='external nofollow' class='url'>phyx</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3635" title="July 18, 2003 @ 9:04 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3636"><p>This is about taking the pledge not to be a Winston Smith, not calling someone else &#8220;Big Brother&#8221;.  I suspect that Mark is quoting Orwell to illustrate where the bottom of the &#8220;depublication&#8221; slippery slope lies, not to make veiled slanders against he-who-must-not-be-flamed.</p>
+<p class=sig>&#8212;&#8201;<cite>MIke Champion</cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3636" title="July 18, 2003 @ 9:06 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3670"><cite><a href='/web/20110608001317/http://www.dailything.com/archives/007893.php' rel='external nofollow' class='url'>The Daily Thing</a></cite>&#160;(trackback)</li>
+<li id="comment-3637"><p>&#8212;Orwell? For God&#8217;s sake man: get over yourself! It seems you needed to be reminded of The Golden Rule. Now move on.&#8212;</p>
+<p class=sig>&#8212;&#8201;<cite>James</cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3637" title="July 18, 2003 @ 9:11 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3638"><p>I think some of you need a refresher course in allusion.  Haven&#8217;t any of you said that you were &#8220;slaughtered&#8221; in a competition of some sort, or remarked that finishing work that day was a &#8220;Sysiphean&#8221; effort? </p>
+<p>Gummi:  Hypothetically, if Mark was dishonest in his revision history, I&#8217;m sure somebody would notice, and if they cared enough, they could set up a &#8220;Pilgrim Watcher.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://anode.anotrash.com/' rel='external nofollow' class='url'>anode</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3638" title="July 18, 2003 @ 9:22 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3639"><p>OK, I tried a couple of different things to get the dates to match up, but I can&#8217;t do it.  MT just doesn&#8217;t store the date-of-last-modification -to-this-particular-field, and I can&#8217;t reliably hack it in.  So now it just says &#8220;revision history&#8221;.  The history is still just as complete; it tracks changes to the main entry text, nothing more.  If I change categories or moderate comments or change excerpt text or add keywords or just go in to the entry and save it for no reason, that doesn&#8217;t create a new revision.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3639" title="July 18, 2003 @ 9:23 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3640"><p>Re: comment feeds.  This is slightly off-topic, but OK.  I have never had per-item comment feeds.  I have one main comment feed at <a href="/web/20110608001317/http://diveintomark.org/xml/comments.xml">http://diveintomark.org/xml/comments.xml</a> which lists the most recent 15 comments to any post.  Today there is only one post that has comments enabled, so that&#8217;s the trivial case; other days there have been multiple discussions going on at once, and the comment feed will track comments in all of them.</p>
+<p>Unlike Sam&#8217;s comment feeds, mine only include comments, not trackbacks.  This might be a simple change since I&#8217;m using MTSimpleComments, I should look into it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3640" title="July 18, 2003 @ 9:27 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3641"><p>Several people have commented that the owner of a blog has control over the revision history just as easily as the entry itself.  While that&#8217;s true, the conclusion that it&#8217;s impossible to have accountability in that environment is incorrect.</p>
+<p>RFC3161, Internet X.509 Public Key Infrastructure Time-Stamp Protocol, lays out the principles for a Time Stamping Authority, but folks like <a href="/web/20110608001317/http://time.certum.pl/">http://time.certum.pl/</a> make it available to the common folk, for free.</p>
+<p>Certum takes a GET/POST with a field &#8216;sha1&#8242;, time-stamps it, and returns an RFC3161 application/timestamp-reply (an ASN1 blob).  A requestor need only find a format that can be sha1sum&#8217;ed by themselves and others, then Certum notarizes it as having been summed at a certain time.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://bitsko.slc.ut.us/' rel='external nofollow' class='url'>Ken MacLeod</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3641" title="July 18, 2003 @ 9:31 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3642"><p>I would like to note, for the record, that the comment of Dan&#8217;s that I referred to as (35) before is now numbered (34), because Mark deleted a post I made above it, shifting all of the numbers after it down one. My deleted post is archived at <a href="/web/20110608001317/http://nonymous.org/data/mark302.txt">http://nonymous.org/data/mark302.txt</a> for posterity, or something. I&#8217;m saddened, Mark. I really liked your red line technique, and deleting legitimate comments really sucks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://nonymous.org/weblog/' rel='external nofollow' class='url'>phyx</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3642" title="July 18, 2003 @ 9:38 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3643"><p>Mark, how about using &lt;MTPerlScript&gt; to grab the latest revision&#8217;s date and time from whatever the revision history grabs its data from?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3643" title="July 18, 2003 @ 9:43 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3644"><p>phyx: my comment policy is *really quite clear*.  Off-topic comments are deleted without warning.  Asking about link redirection in a thread devoted to a new revision history feature is off-topic.  I&#8217;m letting your second comment stand, just so I can make this point publicly and not fuel any further conspiracy theories.  Any further comments on this topic will be deleted without warning.</p>
+<p>If you want to ask me about something I&#8217;m doing on my site, I&#8217;m happy to answer questions via email.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3644" title="July 18, 2003 @ 9:52 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3645"><p>re:comment 47, anode.</p>
+<p>I&#8217;m sorry, maybe I&#8217;m not making it very clear, or if I am it&#8217;s of no consequence.<br />
+The question is not whether Mark will be dishonest, it&#8217;s a question of he *could* be dishonest. The capability exists. In a similar vein, a Pilgrim Watcher would have the same problem. In both cases the tools would not be a good measure of accountability. Just because I mention the words Mark and dishonesty in the same sentence it doesn&#8217;t mean I believe they belong together, others may.<br />
+The feedster idea could have been a better measure along these lines. If you needed it.</p>
+<p class=sig>&#8212;&#8201;<cite>Gummi</cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3645" title="July 18, 2003 @ 10:37 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3646"><p>I could have sworn Mark was talking about our old boy George W Bush.   We see what we want to see I guess.  RSS feed / deleted posts / unlwaful regimes in a democracy &#8211; same diff.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.emilypetrick.com/' rel='external nofollow' class='url'>Emily</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3646" title="July 18, 2003 @ 10:52 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3647"><p>If I could spell, it would have read &#8220;UNLAWFUL&#8221; &#8211; but it looks strangely like &#8220;awful&#8221; so that&#8217;s ok too!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.emilypetrick.com/' rel='external nofollow' class='url'>Emily</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3647" title="July 18, 2003 @ 10:53 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3648"><p>Bravo, Mark. I think the revision history option is wonderful. I&#8217;m building my own blogging system (sick of Blogger&#8217;s lack of development&mdash;it&#8217;s just not robust and doesn&#8217;t seem to be getting robust anytime soon) and I&#8217;m definitely going to squeeze that feature in. Not for me, of course, because I always clearly demarcate any changes, but I&#8217;m taking someone else&#8217;s blogging system as a base and modifying the hell out of it.</p>
+<p>As for the quote, that pretty much sums everything up.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.bbrown.info/blogs/bblog/' rel='external nofollow' class='url'>Bill Brown</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3648" title="July 18, 2003 @ 10:59 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3649"><p><a href="/web/20110608001317/http://diveintomark.org/cgi-bin/history.cgi?id=2329">http://diveintomark.org/cgi-bin/history.cgi?id=2329</a></p>
+<p>My brain just shorted out&#8211;this is so damn cool.  </p>
+<p>Nicely done.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.sidesh0w.com/' rel='external nofollow' class='url'>Ethan</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3649" title="July 18, 2003 @ 11:05 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3650"><p>As much as I&#8217;d love to continue this discussion, I&#8217;m getting on a plane in 2 hours, and I always prefer to close the site to new input while I&#8217;m travelling.  I&#8217;ll open it up when I&#8217;m home safely.  Cheers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3650" title="July 18, 2003 @ 11:32 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3625"><p><del>Oh. Good. Lord. Quoting 1984 because of this whole thing when we&#8217;re in a country that is about to prosecute men on an island somewhere that this country has labeled terrorists. Who have been denied due process of our laws. Who has arrested people in this country on circumstantial evidence. Who get records from the library to see what we read. I wrote the following in another comment:</del></p>
+<p><del>Mark sees himself as the persecuted crusader seeking justice in a world controlled by one man. But Mark&#8217;s actions give the control to the one man, and becomes himself the controller through his use of technology.</del></p>
+<p><del>Not thoughtful discussion, not honest rage, but mindless automation is Mark&#8217;s weapon, his spear, his quest for truth. And the masses look at him in awe as some harbinger of What is Right &#8212; when he is really nothing more than the other side of the same coin.</del></p>
+<p><del>In other words &#8212; give me a friggen break. George Orwell because webloggers edit? Quoting 1984 because of Dave Winer shenanigans? Mark, what a compliment to Winer. The ultimate compliment &#8212; you gave him ultimate power.</del></p>
+<p><del>Folks, get a life and a sense of perspective comes to mind about now. I&#8217;ll post this in Mark&#8217;s comments. I wonder if it will be deleted (Ah, yes. Mark deletes comments he considers an attack &#8212; bad form for a crusader, don&#8217;t you think?)</del></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://weblog.burningbird.net/' rel='external nofollow' class='url'>Shelley Powers</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3625" title="July 18, 2003 @ 7:16 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3651"><p>I&#8217;m home safely.  Code is up.  Comments are on.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3651" title="July 19, 2003 @ 9:27 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3652"><p>Next step: Public Revision History web service which one pings whenever an entry is changed?</p>
+<p>Unfortunately, that&#8217;d require changes to MT since it will only send pings automatically when an entry is first published.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://jogin.com/weblog/' rel='external nofollow' class='url'>Tomas</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3652" title="July 19, 2003 @ 12:00 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3653"><p>Kevin (of staggernation.com) tells me that MT plugins can hook in as an entry is being created, and could probably do enough to produce a real-time revision history (as opposed to what I&#8217;m doing, which is polling the database for changes every 60 seconds).  Presumably such a plugin could also check that the entry being edited was on the front page, and then call the ping routine to ping whatever pingable services had been configured.</p>
+<p>Or I could just be talking out of my ass.  Yes, that seems more likely.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3653" title="July 19, 2003 @ 12:30 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3654"><p>Mark:<br />
+I really like the revision history. It&#8217;s a nice touch regardless of how difficult (or not) it was to implement.<br />
+Shelley:<br />
+Circumstantial evidence does not equate to weak evidence. I&#8217;m not taking a position on either side of your argument, just pointing out a slight problem with your argument. Sometimes circumstantial evidence is extremely strong and people are sent to prison because of it every day.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.xml-blog.com/' rel='external nofollow' class='url'>Christian Romney</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3654" title="July 19, 2003 @ 2:04 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3655"><p>Tomas, those services already exist, they&#8217;re called Time Stamping Authorities (RFC3161).  Details for easily using TSAs with ordinary weblogs at:</p>
+<p>  <a href="/web/20110608001317/http://intertwingly.net/wiki/pie/EntryAccountability">http://intertwingly.net/wiki/pie/EntryAccountability</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://bitsko.slc.ut.us/' rel='external nofollow' class='url'>Ken MacLeod</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3655" title="July 19, 2003 @ 3:52 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3656"><p>For those looking for feed history, Syndic8 stores snapshotted copies of a feed&#8217;s content, taken 2 to 4 times per day, for 3 weeks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.syndic8.com/' rel='external nofollow' class='url'>Jeff Barr</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3656" title="July 20, 2003 @ 12:33 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3671"><cite><a href='/web/20110608001317/http://www.nosightatnight.co.uk/archive/000005.html' rel='external nofollow' class='url'>No Sight at Night</a></cite>&#160;(trackback)</li>
+<li id="comment-3657"><p>Great concept, particularly for monitoring news  organization sites who are always falling over themselves to publish news first (often at the expense of accuracy). Would have been great to have something like this on 9-11 keeping track of all of the reports with inconsistencies  that I saw live but that were never mentioned again.</p>
+<p>As far as monitoring Dave Winer is concerned, I&#8217;m not sure that many people really care. I&#8217;m sure the page will get a lot of hits from people curious to see how it works, but few are gonna be checking it regularly.</p>
+<p>As far as what it does to the monitored poster: I don&#8217;t think something that makes someone think a bit more carefully before choosing words is really such a bad thing. If we were publishing to PAPER instead of the web, we&#8217;d make darn sure our thoughts were in order, spelling and grammar correct, etc.  It seems that publishing to the web just lets us be a little bit sloppier/impulsive. Realizing that our errors may be caught for posterity only gives us more incentive to get it right the first time. I don&#8217;t see how it can be construed at evil or something terrible to do to our neighbor, particularly if our neighbor is in the habit of saying he didn&#8217;t say things that he in reality did say.</p>
+<p>Confused yet?<br />
+: )</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://brainspatter.blogspot.com/' rel='external nofollow' class='url'>Darren Addy</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3657" title="July 21, 2003 @ 1:03 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3658"><p>The &#8220;revision history&#8221; concept is worthwhile, but the flap about the &#8220;Winer Watcher&#8221; wasn&#8217;t about the technical merits of revision tracking. Looking at it from the standpoint of enforcing accountability is only one side of the coin; the other side is that it prevents someone who has that accountability forced upon them from ever reconsidering their words. Sometimes an addition isn&#8217;t enough: if you&#8217;ve posted something in the heat of anger, perhaps, and you&#8217;ve said things you regret, you can&#8217;t take them down.</p>
+<p>If we&#8217;re to leave Mark Pilgrim&#8217;s personality out of this and abstract it, that means we have to leave Dave Winer&#8217;s personality out as well&#8211;as well as his record in revision without notation. The tool itself and the concept for tracking revisions on weblogs is fine, but the tool doesn&#8217;t address the ethical issue of whether one person should track someone else&#8217;s website, without their consent, to highlight all changes made. I don&#8217;t recall ever deleting a post on my own weblog nor making any substantive edits, but if I learned someone&#8211;particularly someone I might have had public spats with in the recent past&#8211;was tracking my words that closely, I would be pretty uncomfortable.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.ranea.org/watts/' rel='external nofollow' class='url'>Watts Martin</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3658" title="July 21, 2003 @ 9:10 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-3672"><cite><a href='/web/20110608001317/http://www.padawan.info//trusted_comments.html' rel='external nofollow' class='url'>padawan.info</a></cite>&#160;(trackback)</li>
+<li id="comment-3659"><p>I have no idea what this amounts to, but I&#8217;ll throw in an orwellian reference by saying Mark&#8217;s work is &#8220;doubleplusgood&#8221; ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://thedevilsadvocate.org/' rel='external nofollow' class='url'>Adrian</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3659" title="July 22, 2003 @ 2:40 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3660"><p>I agree that while Winer Watcher per se has little value to most people (and great value to an ever growing niche) the idea has broader application.</p>
+<p>Monitor governemnt websites for changes in content.  Monitor the HR page @ yourcompany to see when those policies change.  Specific to blogs, as more and more politicians use them as a tool, the ability to monitor edits becomes a valuable tool for muckraking.</p>
+<p>And the merits of monitoring FoxNews or the NY Times for edits in stories are self-evident.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://danisaacs.com/blog' rel='external nofollow' class='url'>Dan Isaacs</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3660" title="July 23, 2003 @ 8:40 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3661"><p>Suggestion: how about only displaying the [revision history] link when the post has been edited at least once? Even better, how about [2 previous revisions] (or listing the number of previosu revisions in a title attribute of the link).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://simon.incutio.com/' rel='external nofollow' class='url'>Simon Willison</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3661" title="July 23, 2003 @ 10:19 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3662"><p>As alluded to earlier, the revision history system is completely seperate MT, so I can&#8217;t offer better affordances (like counting the number of actual revisions).  If some kind soul (*cough* Kevin Shay *cough*) who knows Perl better than I (not hard) would come up with a similar system as an MT plugin, we could get better affordances.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3662" title="July 23, 2003 @ 10:41 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-3663"><p>On re-reading, that sounds unspeakably rude.  In my defense, Kevin *did* express interest (via email) in writing such a system.  If my Perl were better than &#8220;um, that&#8217;s a for loop, right?&#8221; I might attempt it myself.  Alas.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3663" title="July 23, 2003 @ 11:48 am"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3664"><p>The LastModified plugin has an MTIfModified tag that will display conditionally if the entry&#8217;s modified date is different from its creation date. That doesn&#8217;t mean a change was actually made (see #34 and #42 above), but you could put the Revision History link in it and it wouldn&#8217;t display if a post has never been re-saved&#8211;in other words, you&#8217;d still get some false positives, but no false negatives.</p>
+<p>Mark, I should have some code to send you by tomorrow. Hadn&#8217;t thought about including a template tag to display the number of revisions, but it&#8217;s a good idea and should be easy to stick in&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://www.staggernation.com/' rel='external nofollow' class='url'>Kevin</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3664" title="July 23, 2003 @ 12:14 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3665"><p>Small bug:</p>
+<p><a href="/web/20110608001317/http://validator.w3.org/check?verbose=1;ss=1;outline=1;uri=http%3A//diveintomark.org/cgi-bin/history.cgi%3Fid%3D2330">http://validator.w3.org/check?verbose=1;ss=1;outline=1;uri=http%3A//diveintomark.org/cgi-bin/history.cgi%3Fid%3D2330</a></p>
+<p>I always thought it&#8217;s a shame INS and DEL can&#8217;t be &#8220;embedded&#8221; in things like list items. Luckily, XHTML 2 solves that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http://jan.moesen.nu/' rel='external nofollow' class='url'>Jan!</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3665" title="July 24, 2003 @ 6:14 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3666"><p>Any chance of a decent url for the revision history? Something like <a href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability/revision_history/">http://diveintomark.org/archives/2003/07/18/dive_into_accountability/revision_history/</a><br />
+or seomthing?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3666" title="July 25, 2003 @ 2:34 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-3667"><p>interesting</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110608001317/http:///' rel='external nofollow' class='url'>peja</a></cite>&#160;<a class=p href="/web/20110608001317/http://diveintomark.org/archives/2003/07/18/dive_into_accountability#comment-3667" title="July 25, 2003 @ 3:00 pm"><img alt="#" src=/web/20110608001317im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110608001317/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110608001317/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110608001317/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110608001317/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110608001317/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.427 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-05-24 00:22:22 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 0:13:17 Jun 8, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:13:24 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

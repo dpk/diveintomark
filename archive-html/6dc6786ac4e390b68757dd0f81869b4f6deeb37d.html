@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>The Ws of weblogging [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20100620101345/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20100620101345/http://www.google.com/profiles/pilgrim>
+<link rel=search type=application/opensearchdescription+xml href=/web/20100620101345/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20100620101345im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20100620101345/http://diveintomark.org/archives/2003/06/15/fathers_day" title="Father&#8217;s Day">
+<link rel=next href="/web/20100620101345/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery" title="RDF photo gallery">
+<link rel=up href="/web/20100620101345/http://diveintomark.org/archives#p1359" title="June 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; The Ws of weblogging Comments Feed" href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging/feed" />
+<link rel='index' title='dive into mark' href='/web/20100620101345/http://diveintomark.org/' />
+<link rel='prev' title='Father&#8217;s Day' href='/web/20100620101345/http://diveintomark.org/archives/2003/06/15/fathers_day' />
+<link rel='next' title='RDF photo gallery' href='/web/20100620101345/http://diveintomark.org/archives/2003/06/17/rdf_photo_gallery' />
+<link rel='canonical' href='/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging' />
+<meta name="description" content="Sam Ruby has kicked off a fascinating discussion to distill the technical aspects of weblogging, in The Anatomy of a Well-Formed Log Entry.">
+<meta name="keywords" content="blogging,pie">
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+@import url(/web/20100620101345/http://fonts.googleapis.com/css?family=Vollkorn);
+html{background:white url(/web/20100620101345/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Vollkorn,'Gill Sans','Gill Sans MT',sans-serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+h2,h3{font-weight:bold}
+blockquote{font-style:oblique}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/06\/16\/the_ws_of_weblogging";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "20";
+var displayMonth = "Jun";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20100620101345" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20080704000133/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="4 Jul 2008"><strong>JUL</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:13:45 Jun 20, 2010">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20080704000133/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging" title="0:01:33 Jul 4, 2008" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:13:45 Jun 20, 2010">20</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20080704000133/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="4 Jul 2008"><strong>2008</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:13:45 Jun 20, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2011
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20100620101345*/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>11 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">12 May 06 - 20 Jun 10</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000011011101_2007:-1:010100000010_2008:-1:000000100000_2009:-1:000000000000_2010:5:000001000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20100620101345/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20100620101345/http://diveintomark.org/archives#p1359">June 16, 2003</a> &#8227;
+<h2>The Ws of weblogging</h2> (<a href="/web/20100620101345/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20100620101345/http://diveintomark.org/tag/pie" rel="tag">pie</a>)</div>
+<p>All the action is here: <a href="/web/20100620101345/http://www.intertwingly.net/wiki/pie/">Anatomy of a Well-Formed Log Entry</a>.  (<a href="/web/20100620101345/http://www.intertwingly.net/blog/1472.html">Original weblog post</a> from <cite>Sam Ruby</cite>.)  A distillation of all that we&#8217;ve learned about the technical aspects of this publishing genre.</p>
+
+<p>My thoughts:</p>
+
+<ul>
+<li><a href="/web/20100620101345/http://www.plasticbag.org/archives/2003/06/on_permalinks_and_paradigms.shtml">Permalinks are essential</a>.  They are the <strong>where</strong> of weblogging.  They enable cross-site conversations through linking, the fundamental activity on the web.  Note that permalinks don&#8217;t always map to individual pages.  Some publishing systems (Movable Type, LiveJournal) default to page == permalink.  Others (Radio, Blogger) default to page == date range, with multiple permalinks per page.  But both are equally linkable, which is what matters.</li>
+<li><a href="/web/20100620101345/http://www.useit.com/alertbox/981129.html">Dates are essential</a>.  Obviously, they are the <strong>when</strong> of weblogging.  When matters.  It&#8217;s great that online publishing is so freeform, but it also means we need to create our own context, since so little is provided by default.  Making dates visible establishes important context.  People stumble onto old content all the time; referrals from search engines constitute over 50% of my daily hits.  (This does not mean that every collection of posts needs to be arranged or displayed in reverse chronological order.)</li>
+<li>Authors are essential.  Visible authorship is the <strong>who</strong> of weblogging.  Weblogging is about voice: finding your own, and recognizing others.  Sign your name on everything you write.  Even if it&#8217;s a pseudonym, sign your invented name on everything you write.  Build an identity.  (Of course, a single weblog can have more than one author.  <a href="/web/20100620101345/http://boingboing.net/">Boing Boing</a> is a collective weblog, with an evolving collection of authors.  Each post is signed by its individual author.)</li>
+<li>MIME types are essential.  They are the <strong>what</strong> of weblogging.  Weblogging is on the web, and on the web we distinguish content by MIME types.  Some people post HTML, <a href="/web/20100620101345/http://fotolog.net/">or images</a>, <a href="/web/20100620101345/http://www.audblog.com/">or audio</a>, <a href="/web/20100620101345/http://www.buzzmachine.com/archives/2002_12.html#000418">or even video</a>.  <a href="/web/20100620101345/http://norman.walsh.name/">Some people</a> apparently think entirely in XML.  More power to them.  Every piece of content has a MIME type; get it right.</li>
+</ul>
+
+<p>More thoughts from <a href="/web/20100620101345/http://weblog.burningbird.net/fires/001284.htm"><cite>Shelley Powers</cite></a>, <a href="/web/20100620101345/http://www.tbray.org/ongoing/When/200x/2003/06/16/Pie"><cite>Tim Bray</cite></a>, <a href="/web/20100620101345/http://bitworking.org/news/Anatomy_of_a_Well_Formed_Log_Entry"><cite>Joe Gregorio</cite></a>, <a href="/web/20100620101345/http://norman.walsh.name/2003/06/17/isablog"><cite>Norman Walsh</cite></a>.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty comments here (<a href=/web/20100620101345/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-2782"><p>What about formats which don&#8217;t have MIME types yet? Tim Berners-Lee has long lamented that he used mime types instead of just URIs (because MIME types aren&#8217;t available for all formats, take a while to get, and needlessly create another central authority). Why should we make the same mistake?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.aaronsw.com/' rel='external nofollow' class='url'>Aaron Swartz</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2782" title="June 16, 2003 @ 11:22 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2783"><p>Actually, with the vendor specific registration now available, there really isn&#8217;t any excuse for not having a mime-type.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://bitworking.org/' rel='external nofollow' class='url'>joe</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2783" title="June 16, 2003 @ 11:51 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2784"><p>There are reserved mime-types you can use while you wait. I see no reason why it would be hard to tell product vendors to support x-temporary mime-type and support x-official mime-type for once the mime-type has been registered.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://illuminosity.net/' rel='external nofollow' class='url'>Lach</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2784" title="June 17, 2003 @ 12:01 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2785"><p>Suspiciously missing is the &#8220;why,&#8221; which, in this case, is to educate readers on the Ws of Weblogging.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://waded.org/' rel='external nofollow' class='url'>Wade</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2785" title="June 17, 2003 @ 2:54 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2786"><p>Are mime types essential? Why?</p>
+<p>Yeah, I know, they&#8217;re important technically, but essential to a blogpost?</p>
+<p>Nope. </p>
+<p>Not in the same way dates and permalinks are.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.cloggie.org/wissewords/' rel='external nofollow' class='url'>Martin Wisse</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2786" title="June 17, 2003 @ 9:24 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2802"><cite><a href='/web/20100620101345/http://www.ghostcassette.com/archives/2003/06/17/the_ws_of_weblogging.html' rel='external nofollow' class='url'>Ghost Cassette</a></cite>&#160;(trackback)</li>
+<li id="comment-2787"><p>APIs &#8211; the &#8216;how&#8217; of weblogging?</p>
+<p>Personally, I would leave the &#8216;why&#8217; up to the author &#8211; that&#8217;s their perogative ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.alexhudson.com/' rel='external nofollow' class='url'>Alex</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2787" title="June 17, 2003 @ 10:20 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2788"><p>MIME types are essential.  Weblogging is on the web, and of the web.  The web works on MIME types (like it or not).  In print media we only have two media types (not including those stupid scratch-and-sniff inserts): text and images, and we rely on the end human reader to distinguish between them.  On the web we have a potentially infinite variety of media types and markup languages, and computers are stupid, so we use MIME types to help them distinguish.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2788" title="June 17, 2003 @ 10:45 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2789"><p>I&#8217;ll take the risk of playing the fool&#8230; but is there a resource I can view to find out about how to use MIME types, including syntax? Most discussions I see about them assume knowledge on the part of the reader, which I don&#8217;t have. But I&#8217;m willing to learn.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.mezzoblue.com/' rel='external nofollow' class='url'>Dave S,</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2789" title="June 17, 2003 @ 11:18 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2803"><cite><a href='/web/20100620101345/http://www.alessio.sevenseas.org/weblog/2003/06/000803.html' rel='external nofollow' class='url'>Too Old to Weblog</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2804"><cite><a href='/web/20100620101345/http://fuse.ghostcassette.com/archives/2003/06/mime_types.html' rel='external nofollow' class='url'>Fuse</a></cite>&#160;(trackback)</li>
+<li id="comment-2790"><p>Admittedly fodder, for whatever enjoyment you may get from it:</p>
+<p>Why is it so fashionable, now, to concern ourselves with mimes when we&#8217;ve spent so much time with their derision?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.media-portal.com/muraii/' rel='external nofollow' class='url'>Muraii</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2790" title="June 17, 2003 @ 12:58 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2791"><p>I&#8217;m with Martin Wisse &#8212; I don&#8217;t see how you can put MIME types into this &#8220;set of requirements&#8221;. Your first few points are good usability suggestions; your last is an *extremely* technical suggestion, not relevant (sorry) to the general public.</p>
+<p>Users don&#8217;t care, or need to care, about MIME type. They just want to point and click; to see, hear and read. The page doesn&#8217;t have to declare a MIME type to do that.</p>
+<p>And bloggers don&#8217;t need to know how to declare MIME type, or what MIME type even is, in order to add images, video, audio, flash movies and/or whatever else they like to their posts. </p>
+<p>(Similarly, bloggers don&#8217;t need to know how to include .GEO metadata information &#8212; which is the *geographical* indication of &#8220;where&#8221;.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.michaelheraghty.com/' rel='external nofollow' class='url'>Michael Heraghty</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2791" title="June 17, 2003 @ 1:14 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-2792"><p>None of the things I listed are generated by the end user.  Permalinks are generated automatically; dates default automatically (although some CMSs let the user change them); author information is entered once and then re-displayed/generated on demand, on every post; MIME types are handled by the CMS or underlying web server.  What do end users have to do with it?  We&#8217;re not talking about end users.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2792" title="June 17, 2003 @ 1:34 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2793"><p>Good points in this post. I still have not mastered the used of MIME types, but will be looking at that next, to see what I can do to make things tight. I want to give users access to a variety of different video/audio formats, and I hate when things don&#8217;t work properly due to (what I am assuming) are unspecified MIME types. Anyways, should be interesting to learn.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.submunition.com/' rel='external nofollow' class='url'>Submunition</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2793" title="June 17, 2003 @ 4:45 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2794"><p>Good points in this post. I still have not mastered the use of MIME types, but will be looking at that next, to see what I can do to make things tight. I want to give users access to a variety of different video/audio formats, and I hate when things don&#8217;t work properly due to (what I am assuming) are unspecified MIME types. Anyways, should be interesting to learn.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.submunition.com/' rel='external nofollow' class='url'>Submunition</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2794" title="June 17, 2003 @ 4:45 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2805"><cite><a href='/web/20100620101345/http://www.21stnews.com/blog/archives/000005.html' rel='external nofollow' class='url'>Family Fun</a></cite>&#160;(trackback)</li>
+<li id="comment-2795"><p>I think what Michael is trying to say that most users will still play with settings like date, and permalinks (what is used as a peramlink for example) etc etc.  The vast majority of users however don&#8217;t even know what a mime time is let alone how to use it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.sevitz.com/' rel='external nofollow' class='url'>Adrian Sevitz</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2795" title="June 17, 2003 @ 5:35 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2806"><cite><a href='/web/20100620101345/http://www.padawan.info//cms_and_weblog_systems.html' rel='external nofollow' class='url'>padawan.info</a></cite>&#160;(trackback)</li>
+<li id="comment-2796"><p>I saw a mime on the street the other day.  It appeared as if he was trapped inside an invisible box and couldn&#8217;t get out! How absurd, I thought, and then I started to realize how much the internet has turned into an invisible box that I can&#8217;t seem to get out of&#8230; stupid mime.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.zeit.ca/' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2796" title="June 17, 2003 @ 7:30 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2797"><p>Confucious Say: &#8220;Mime type on invisible keyboard&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://server.circlepeer.com/pirana/' rel='external nofollow' class='url'>P-man</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2797" title="June 17, 2003 @ 8:57 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2807"><cite><a href='/web/20100620101345/http://kadyellebee.com/mt/past/2003/06/008025.php' rel='external nofollow' class='url'>kadyellebee</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2808"><cite><a href='/web/20100620101345/http://www.fultonchain.net/mt/archives/000824.html' rel='external nofollow' class='url'>FultonChain ... weblog by Al Sessions</a></cite>&#160;(trackback)</li>
+<li id="comment-2798"><p>Still disagree about mime types.</p>
+<p>Permalinks, dates and author are all visible, functional parts of a weblog entry. A mime type isn&#8217;t. It&#8217;s a technical requirement.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://www.cloggie.org/wissewords/' rel='external nofollow' class='url'>Martin Wisse</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2798" title="June 18, 2003 @ 3:43 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-2809"><cite><a href='/web/20100620101345/http://www.virtuelvis.com/archives/87.html' rel='external nofollow' class='url'>Virtuelvis</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2810"><cite><a href='/web/20100620101345/http://www.thirdsuperpower.com/previously/2003/06/18/10/10/index.html' rel='external nofollow' class='url'>Third Superpower</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-2811"><cite><a href='/web/20100620101345/http://relativepath.org/875/archives/000301.html' rel='external nofollow' class='url'>875: the blog</a></cite>&#160;(trackback)</li>
+<li id="comment-2799"><p>There are 3 items, and only 3 items, that constitute a web log.</p>
+<p>1 &#8211; Author<br />
+2 &#8211; Date<br />
+3 &#8211; Chronology (implies date)</p>
+<p>You can&#8217;t have a chronology without dates, so item 2 and 3 go together. It stands to reason that you need a human author. I think allowing an automated program to be regarded as an author is not in the spirit.</p>
+<p>There certainly does not have to be Permalinks and it certainly does not have to be in *reverse* chronology. Permalink is a nice-to-have feature. It makes referencing easy. But if I read &#8220;a log&#8221; and it wasn&#8217;t in reverse chron and didn&#8217;t have permalinks could I not call it a web log? If not &#8212; I would be denying the fact that I am staring at a chronological listing of human-written entries, otherwise known as a, (gulp) &#8212; log!</p>
+<p class=sig>&#8212;&#8201;<cite>Steven</cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2799" title="June 19, 2003 @ 10:35 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2800"><p>What about comments? Aren&#8217;t they essential, too?<br />
+And what about RSS feeds?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20100620101345/http://blojj.blogalia.com/' rel='external nofollow' class='url'>JJ</a></cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2800" title="June 22, 2003 @ 12:38 pm"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-2801"><p>I think your mom is essential to a proper post&#8230;<br />
+sorry, it&#8217;s 5 in the morning and I couldn&#8217;t resist. Anyway.. forgotten. Why and how. I think both of these should concern being clear in your posts. Why: why you should go to a link. Why you are posting.. etc, How: Is it flash? do I need a plugin/program? How will this affect me? just a thought..</p>
+<p class=sig>&#8212;&#8201;<cite>Fidel</cite>&#160;<a class=p href="/web/20100620101345/http://diveintomark.org/archives/2003/06/16/the_ws_of_weblogging#comment-2801" title="June 28, 2003 @ 7:22 am"><img alt="#" src=/web/20100620101345im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20100620101345/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20100620101345/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href=/web/20100620101345/http://code.google.com/u/pilgrim/>code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20100620101345/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20100620101345/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:13:45 Jun 20, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:14:04 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

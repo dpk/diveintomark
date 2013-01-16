@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Dive into history, 2009 edition [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806095251/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806095251/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806095251/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806095251/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806095251im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806095251/http://diveintomark.org/archives/2009/03/21/accessibility-is-a-harsh-mistress" title="Accessibility is a harsh mistress">
+<link rel=next href="/web/20110806095251/http://diveintomark.org/archives/2009/04/07/hhgregg-doa" title="hhgregg: DOA">
+<link rel=up href="/web/20110806095251/http://diveintomark.org/archives#p2302" title="March 2009">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Dive into history, 2009 edition Comments Feed" href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806095251/http://diveintomark.org/' />
+<link rel='prev' title='Accessibility is a harsh mistress' href='/web/20110806095251/http://diveintomark.org/archives/2009/03/21/accessibility-is-a-harsh-mistress' />
+<link rel='next' title='hhgregg: DOA' href='/web/20110806095251/http://diveintomark.org/archives/2009/04/07/hhgregg-doa' />
+<link rel='canonical' href='/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition' />
+<link rel='shortlink' href='/web/20110806095251/http://diveintomark.org/?p=2302' />
+<meta name="description" content="Putting an entire chapter on one page sounds bloated, but consider this: my longest chapter so far would be 75 printed pages, and it loads in under 5 seconds. On dialup.">
+<meta name="keywords" content="diveintopython,docbook,html">
+<link href="/web/20110806095251cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806095251/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2009\/03\/27\/dive-into-history-2009-edition";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806095251" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514111957/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:52:51 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111121035807/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="21 Nov 2011"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514111957/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition" title="11:19:57 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:52:51 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110810051133/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition" title="5:11:33 Aug 10, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615065607/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:52:51 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806095251*/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>12 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">30 Mar 09 - 13 Jan 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:001000000000_2010:-1:001021000000_2011:7:000010040010_2012:-1:100000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806095251/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806095251/http://diveintomark.org/archives#p2302">March 27, 2009</a> &#8227;
+<h2>Dive into history, 2009 edition</h2> (<a href="/web/20110806095251/http://diveintomark.org/tag/diveintopython" rel="tag">diveintopython</a>, <a href="/web/20110806095251/http://diveintomark.org/tag/docbook" rel="tag">docbook</a>, <a href="/web/20110806095251/http://diveintomark.org/tag/html" rel="tag">html</a>)</div>
+<a href="/web/20110806095251/http://diveintomark.org/archives/2002/08/04/dive_into_history">Again</a>, this is more for my benefit than for yours. If I don&#8217;t write this down, I&#8217;ll forget it.
+
+<p><a href="/web/20110806095251/http://diveintopython3.org/">Dive Into Python 3</a> was commissioned in January 2009 by Apress, who published the original <a href="/web/20110806095251/http://diveintopython.org/">Dive Into Python</a> in 2004. Upon agreeing to contract terms, I registered a ten-year lease on <code>diveintopython3.org</code> and immediately published a draft table of contents.</p>
+
+<p>The original <abbr title="Dive Into Python">DiP</abbr> was written in DocBook <abbr>XML</abbr>. As I&#8217;ve mentioned before, I chose DocBook <abbr>XML</abbr> because I wanted to learn <abbr>XML</abbr> and XSL, and DocBook seemed to be <i>Just The Thing</i> for technical documentation. There was also a bit of self-grandeur involved. I was writing a book <i>For The Ages</i>, so it was important that it be in a <i>Format Of Forever</i>. And in the short term, I could transform <i>The Format Of Forever</i> into useful (but lowly) <i>Output Formats</i>, so I could do unimportant things like publish it online.</p>
+
+<p><i>For The Ages</i> turned out to be about 10 years. <i>The Format Of Forever</i> <a href="/web/20110806095251/http://www.docbook.org/specs/docbook-5.0-spec-cs-01.html">is still going strong</a>, but Python itself changed so quickly that it didn&#8217;t matter.</p>
+
+<p>Oh, and there was one other little thing that happened between 2000 and 2009: <a href="/web/20110806095251/http://www.google.com/">search stopped sucking and took over the web</a>. Kids today may not remember, but it used to be <em>hard</em> to find stuff on the web. Once you found it, you wanted to download it so you could read it offline.</p>
+
+<p>Remember being &#8220;offline&#8221;?</p>
+
+<p>Anyway, I now realize that there were some hidden assumptions behind my design decisions in 2000. Some of those assumptions turned out to be wrong, or at least not-completely-right. Sure, a lot of people downloaded <abbr>DiP</abbr>, but it still pales in comparison to the number of visitors I got from search traffic. In 2000, I fretted about my &#8220;home page&#8221; and my &#8220;navigation aids.&#8221; Nobody cares about any of that anymore, and I have nine years of access logs to prove it.</p>
+
+<p>So, I am writing <abbr title="Dive Into Python3 ">DiP3</abbr> in pure <abbr>HTML</abbr> and, modulo some <a href="/web/20110806095251/http://diveintopython3.org/about.html">lossless minimizations</a>, publishing exactly what I write. This makes the proofreading feedback cycle faster &#8212; instead of &#8220;building&#8221; the <abbr>HTML</abbr> output, I just hit <kbd>Ctrl-R</kbd>. I expected it to make some things more complicated, but they turn out not to matter very much.</p>
+
+<p>Some examples:</p>
+
+<ul>
+<li>DocBook autonumbers callouts in code blocks. In <abbr>HTML</abbr>, if I insert a callout in the middle of a code block, I have to renumber the other callouts manually. This has happened a few times, but it&#8217;s not something I do all the time.</li>
+<li>When I used DocBook, I used custom <abbr>XML</abbr> entities for each code fragment in a code block. (<i>i.e.</i> I show a complete function, then I have separate code blocks to show and talk about individual lines of code.) In <abbr>HTML</abbr>, I copy-and-paste. This hasn&#8217;t bit me much yet because I haven&#8217;t had to refactor much code. Then again, the <abbr>XML</abbr> entities technique was also difficult after refactoring, and it required escaping to <abbr>XML</abbr>&#8216;s weird quoting rules.</li>
+<li>DocBook let me &#8220;chunk&#8221; the <abbr>HTML</abbr> output differently &#8212; by section, by chapter, or everything in one big file. I published by section online and let people download as one big file. Nobody cared, and I have logs to prove it. Furthermore, the chapter was always the atomic unit &#8212; I would take one concept or one piece of code and build lessons around it for an entire chapter. Splitting up a chapter into multiple pages was just annoying for people who came in from search engines and landed in the middle of a chapter wouldn&#8217;t immediately understand the context. And <em>everyone</em> comes in from search engines.</li>
+<li>Related to the previous point, <strong><abbr>HTML</abbr> is not an output format.</strong> <abbr>HTML</abbr> is <i>The Format</i>. Not <i>The Format Of Forever</i>, but damn if it isn&#8217;t <i>The Format Of The Now</i>. Looking back on it now, the <abbr>HTML</abbr> output from DocBook was <em>atrociously inefficient</em>. Tables-for-layout for callouts and tips, empty anchors everywhere, and lots of other markup cruft everywhere. Writing my own <abbr>HTML</abbr>, I can put in only the markup I need &#8212; and it turns out I need very little. Callouts are now ordered lists, tips are now blockquotes, etc. Putting an entire chapter on one page sounds bloated, but consider this: my longest chapter so far would be 75 printed pages, and it loads in under 5 seconds. On dialup.</li>
+</ul>
+
+<p>Furthermore, I am no longer under the illusion that this book will be useful forever. Python will either continue to evolve or it will die; either way, static documentation has a shelf life. Today&#8217;s cutting edge code is tomorrow&#8217;s mainstream code is next year&#8217;s legacy code. <abbr>DiP</abbr>&#8216;s shelf life was about 10 years. I am supremely confident that the <abbr>HTML</abbr> I&#8217;m writing today will still be readable 10 years from now, and after that it won&#8217;t matter because I&#8217;ll have to rewrite the whole damn book anyway.</p>
+
+<p>See you in 2020 for <cite>Dive Into Python 4</cite>!</p>
+<p class=c>&#167;
+
+<h3 id=comments>Twenty comments here (<a href=/web/20110806095251/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-13095"><p>For curiosity&#8217;s sake: how well does HTML as The Format work for the paper version?</p>
+<p class=sig>&#8212;&#8201;<cite>James Kew</cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13095" title="March 27, 2009 @ 1:44 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13096"><p>How does publishing into PDF / print work if your source is HTML? Do those PDF2HTML things actually work? I thought all prints used LaTeX, which isn&#8217;t so bad from one of my encounters, unless you like diagrams and tables.</p>
+<p class=sig>&#8212;&#8201;<cite>Oliver</cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13096" title="March 27, 2009 @ 1:45 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13097"><p>AFAIK, publishing to paper is about the same as it was in 2004. I take my HTML and import it into MS Word, where the copyeditor complains that my Word document doesn&#8217;t use to proper styles. I backport all the changes I care about back to my original HTML (previously DocBook XML) on my own time. In the final proofing phases, everything is done in PDF with Adobe&#8217;s editing tools. Again, any changes I care to backport are backported.</p>
+<p>In this regard, DocBook vs. HTML makes no difference whatsoever. Nobody else in the &#8220;biz&#8221; uses either.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13097" title="March 27, 2009 @ 2:32 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13098"><p>&gt; Nobody else in the “biz” uses either.<br />
+It depends upon your publisher. At the very least Manning Publishing allows authors to use Docbook (which is what I&#8217;m using for my current book).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://ejohn.org/' rel='external nofollow' class='url'>John Resig</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13098" title="March 27, 2009 @ 3:10 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13099"><p>With Prince XML and a bit of additional CSS the HTML could easily work as The Format for the paper version too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://www.fngtps.com/' rel='external nofollow' class='url'>Thijs van der Vossen</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13099" title="March 27, 2009 @ 3:14 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13100"><p>Check out Pandoc, which converts surprisingly well between LaTeX (print), HTML (web), Markdown (source).</p>
+<p>  <a href="/web/20110806095251/http://johnmacfarlane.net/pandoc/" rel="nofollow">http://johnmacfarlane.net/pandoc/</a></p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13100" title="March 27, 2009 @ 3:54 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13101"><p>Heh. When I did my book (Practical Common Lisp) for Apress, I used a home-brew Markdown like scheme which I then used to generate PDFs for my own pen-and-paper editing, HTML to put on the web, and RTF which I submitted to Apress. I got a comment about how my Word documents were the cleanest they had ever seen. Which, of course, was because all my styles had been unerringly applied by software, rather than a human being. I&#8217;m curious how you edit your HTML&#8211;some Wysiwyg editor or in a text editor? I think I tried using raw HTML for a while but editing it in Emacs was too annoying.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://www.gigamonkeys.com/' rel='external nofollow' class='url'>Peter Seibel</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13101" title="March 27, 2009 @ 4:53 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13102"><p>Mark, looking forward to this one. Fwiw, buying &#8220;free&#8221; books tends to be worth every penny.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://dehora.net/journal' rel='external nofollow' class='url'>Bill de hÓra</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13102" title="March 27, 2009 @ 4:54 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13103"><p>&#8220;The Format Of The Now.&#8221;</p>
+<p>Missed that the first time. Suggestion: The Format Of The Long Now.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://dehora.net/journal' rel='external nofollow' class='url'>Bill de hÓra</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13103" title="March 27, 2009 @ 4:55 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13104"><p>Mmm, I&#8217;m not sure sure &#8220;Nobody else in the “biz” uses either.&#8221; is a very accurate statement. Also announced today: <a href="/web/20110806095251/http://bitbucket.org/bos/hgbook/src/" rel="nofollow">http://bitbucket.org/bos/hgbook/src/</a> Which is all in docbook and is used to generate <a href="/web/20110806095251/http://hgbook.red-bean.com/read/" rel="nofollow">http://hgbook.red-bean.com/read/</a> and allows for public comments. The DocBook is also used to generate the PDF that will go directly to the printer. Some publishers may still be using word for everything and be doing layout by hand. Not all of them are.</p>
+<p class=sig>&#8212;&#8201;<cite>Gavin</cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13104" title="March 27, 2009 @ 5:34 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13105"><p>> I&#8217;m curious how you edit your HTML</p>
+<p>On Windows, Emacs + <a href="/web/20110806095251/http://www.martyn.se/code/emacs/darkroom-mode/" rel="nofollow">http://www.martyn.se/code/emacs/darkroom-mode/</a></p>
+<p>On Linux, Emacs-GTK + Alt-F11 (fullscreen mode)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13105" title="March 27, 2009 @ 5:53 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13106"><p>That&#8217;s a creative use of XML Entities. Extra points if you can come up with an actual use case for XML External Entities&#8230;. good luck.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://codinginparadise.org/' rel='external nofollow' class='url'>Brad Neuberg</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13106" title="March 28, 2009 @ 12:15 am"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13107"><p>God this just sounds horrid to me.  The Format of Now is &#8220;wiki text&#8221;, and LaTeX.  HTML *is* an output format.  The thing about wiki-style text markups (asciidoc, markdown, dokuwiki, wikimedia, etc, etc, holy crap there are a lot of them), is that they allow to to just write *text*.  LaTeX is the king of this because if you just use it as simple text, you get a nice looking print document, but if you need something more complicated it can do it.  Honestly though if I&#8217;m just writing text, it&#8217;s easier to use markdown and convert to LaTeX or HTML depending on needs.  If it&#8217;s print-centric, use LaTeX from the get-go.  The more transparent the markup language, the better.  HTML is terrible for this with all its brackets and tags.</p>
+<p class=sig>&#8212;&#8201;<cite>Steve</cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13107" title="March 28, 2009 @ 1:15 am"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13108"><p>I prefer Markdown to HTML for editing these days; it doesn&#8217;t get in the way (much) when I need to stick random HTML in there, and it&#8217;s more readable in source format.  Jottit is a convenient way to see your Markdown changes rendered to HTML as you edit.</p>
+<p>Flying Saucer is a fairly competent HTML-to-PDF renderer that is shaping up to be a good free alternative to Prince.  It&#8217;s not 100% there yet, and e.g. loading non-default fonts is a bit of a pain, but it&#8217;s not bad.  Beats OpenOffice Writer, which isn&#8217;t terrible either.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://canonical.org/~kragen/' rel='external nofollow' class='url'>Kragen Javier Sitaker</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13108" title="March 28, 2009 @ 2:11 am"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13109"><p>HTML5 &#8211; the format of the soon.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://friendfeed.com/u0421793' rel='external nofollow' class='url'>Ian Tindale</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13109" title="March 28, 2009 @ 4:07 am"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13110"><p>That&#8217;s some great-looking HTML indeed (both the markup and the page design).</p>
+<p class=sig>&#8212;&#8201;<cite>Daniel Serodio</cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13110" title="March 28, 2009 @ 12:14 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13111"><p>I have met the nice people from <a href="/web/20110806095251/http://en.flossmanuals.net/" rel="nofollow">http://en.flossmanuals.net/</a><br />
+and they reached to the same concept and i agree<br />
+use html for the book , also they have an modified wiki engine but with the<br />
+content in html format ,<br />
+what was amazing for me was that they could generate an book in 2 days (in an sprint) and the output is what you see there<br />
+I have recomended already to the firebird project</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://flamerobin.org/' rel='external nofollow' class='url'>mariuz</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13111" title="March 28, 2009 @ 12:18 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13112"><p>Pandoc&#8217;s extended/enhanced/whatever Markdown format is the best I&#8217;ve found after long years of trying different doc markup formats. After discovering it, and finding out how reliable pandoc is, I now use it for pretty much everything. Does very nice conversion to HTML and LaTeX (for pdf).</p>
+<p class=sig>&#8212;&#8201;<cite>John</cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13112" title="March 28, 2009 @ 4:47 pm"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13114"><p>Any reason why you didn&#8217;t want to do it like the Django book did?</p>
+<p><a href="/web/20110806095251/http://www.djangobook.com/en/2.0/" rel="nofollow">http://www.djangobook.com/en/2.0/</a></p>
+<p>I kind of think their feedback / annotation system was a pretty good way to make the book better with each iteration&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806095251/http://bexhuff.com/' rel='external nofollow' class='url'>bex</a></cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13114" title="March 31, 2009 @ 10:40 am"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13115"><p>Can someone explain why plain text or HTML formatted text would ever be converted to PDF ?</p>
+<p>The whole point of PDF was to allow the conversion of less portable documents to more portable documents.</p>
+<p>But that doesn&#8217;t mean that PDF is the MOST portable.  It&#8217;s not.  Plain ascii text is simpler and more portable than PDF, and yet I am constantly barraged by PDF files that contain nothing other than a page or two of plain ascii text.  Further, in the above discussion, converting HTML to PDF is discussed (!).  Again, PDF is very portable, but HTML is more portable.</p>
+<p>Please do convert your MS Word and graphical layouts and (insert less portable, proprietary format here) files to PDF.  Please stop converting plain text and HTML to PDF.</p>
+<p>Nobody anywhere has an operating environment that can read PDF, but cannot read plain text or HTML.</p>
+<p class=sig>&#8212;&#8201;<cite>Constantly Amazed</cite>&#160;<a class=p href="/web/20110806095251/http://diveintomark.org/archives/2009/03/27/dive-into-history-2009-edition#comment-13115" title="March 31, 2009 @ 11:07 am"><img alt="#" src=/web/20110806095251im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806095251/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806095251/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806095251/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806095251/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806095251/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.385 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:48:37 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:52:51 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:04:08 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,585 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Redesign: squares [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110714062710/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110714062710/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110714062710/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110714062710/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110714062710im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110714062710/http://diveintomark.org/archives/2003/11/05/overrated" title="Redesign (again)">
+<link rel=next href="/web/20110714062710/http://diveintomark.org/archives/2003/11/10/surprise" title="Redesign Surprise">
+<link rel=up href="/web/20110714062710/http://diveintomark.org/archives#p1435" title="November 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Redesign: squares Comments Feed" href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah/feed" />
+<link rel='index' title='dive into mark' href='/web/20110714062710/http://diveintomark.org/' />
+<link rel='prev' title='Redesign (again)' href='/web/20110714062710/http://diveintomark.org/archives/2003/11/05/overrated' />
+<link rel='next' title='Redesign Surprise' href='/web/20110714062710/http://diveintomark.org/archives/2003/11/10/surprise' />
+<link rel='canonical' href='/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah' />
+<link rel='shortlink' href='/web/20110714062710/http://diveintomark.org/?p=1435' />
+<meta name="description" content="Going crazy every now and then is good for the sake of comparison.">
+<meta name="keywords" content="css,redesign">
+<link href="/web/20110714062710cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110714062710/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/11\/06\/bah";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "Jul";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/11/06/bah" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110714062710" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101215013915/http://diveintomark.org/archives/2003/11/06/bah" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Dec 2010"><strong>DEC</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 6:27:10 Jul 14, 2011">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110911123400/http://diveintomark.org/archives/2003/11/06/bah" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="11 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101215013915/http://diveintomark.org/archives/2003/11/06/bah" title="1:39:15 Dec 15, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 6:27:10 Jul 14, 2011">14</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110911123400/http://diveintomark.org/archives/2003/11/06/bah" title="12:34:00 Sep 11, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620020403/http://diveintomark.org/archives/2003/11/06/bah" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 6:27:10 Jul 14, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110714062710*/http://diveintomark.org/archives/2003/11/06/bah" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>28 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">3 May 06 - 11 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000012222001_2007:-1:010101000111_2008:-1:101110001100_2009:-1:000000000000_2010:-1:000011000011_2011:6:000000101000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110714062710/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110714062710/http://diveintomark.org/archives#p1435">November 6, 2003</a> &#8227;
+<h2>Redesign: squares</h2> (<a href="/web/20110714062710/http://diveintomark.org/tag/css" rel="tag">css</a>, <a href="/web/20110714062710/http://diveintomark.org/tag/redesign" rel="tag">redesign</a>)</div>
+<p>Thanks to everyone who <a href="/web/20110714062710/http://diveintomark.org/archives/2003/11/05/overrated">gave constructive feedback on my last design idea</a>.  (To everyone who gave non-constructive feedback, <q>Bah.</q>)  It sucked, but it was very interesting to hear why it sucked.  Going crazy every now and then is good for the sake of comparison.</p>
+
+<p>So anyway, I was poking around in all the usual places for inspiration, and came across <a href="/web/20110714062710/http://www.csszengarden.com/?cssfile=/050/050.css&page=0">this entry in the CSS Zen Garden</a> (a project which keeps getting better and better every time I check it, mad props to <a href="/web/20110714062710/http://www.mezzoblue.com/">Dave Shea</a> for kicking it off).  Which got me thinking about my <a href="/web/20110714062710/http://diveintomark.org/100/">100 stories</a> project, which led off into a long quiet digression of nostalgia and reminiscence, as it was meant to do.  And then <a href="/web/20110714062710/http://diveintomark.org/public/2003/11/squares.html">this design idea popped out</a>.</p>
+
+<p>Love it?  Hate it?  Let&#8217;s do all that again, that thing where we sit around and talk about me and my self-created problems.  That was fun.</p>
+
+<p>Update: <a href="/web/20110714062710/http://diveintomark.org/public/2003/11/squares2.html">iteration #2</a>.  Should fix the overlapping main text in older browsers, rearranges the markup for the squares to look better in Lynx, and adds back the search box.</p>
+
+<p>Update: <a href="/web/20110714062710/http://diveintomark.org/public/2003/11/squares3.html">iteration #3</a>.  Tightened vertical space above and below squares, added hover effects on navigation.  The hover effects fail spectacularly in Safari 1.1 (and possibly earlier versions) &#8212; the hover color applies, but then doesn&#8217;t consistently go away when you move the cursor away.  It&#8217;s the world&#8217;s simplest CSS, so I think it&#8217;s just a Safari bug, but I&#8217;d be happy to be proven wrong.</p>
+
+<p>Update: <a href="/web/20110714062710/http://diveintomark.org/public/2003/11/squares4.html">iteration #4</a>.  On <a href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#c004484">Noel&#8217;s suggestion</a>, I made both the squares and main text the same fixed width.  A few other tweaks.  Still having hover problems in Safari.  Out of ideas.  Going to bed.</p>
+
+<p>Update: as several people have kindly pointed out, the entire design is now completely borked in all versions of IE/Win.  Am regressing the home page until I can sort it out.</p>
+
+<p>Update: <a href="/web/20110714062710/http://diveintomark.org/public/2003/11/squares5.html">iteration #5</a>.  Fixes IE/Win craziness.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Eighty five comments here (<a href=/web/20110714062710/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-5205"><p>That&#8217;s betterer.  In fact, it&#8217;s beautiful.  Now, be happy for a bit and leave well alone.</p>
+<p class=sig>&#8212;&#8201;<cite>ant metter</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5205" title="November 6, 2003 @ 4:44 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5206"><p>In all honesty, I really liked your original look. As in, what&#8217;s still showing in your individual entries.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.jasmeet.net/' rel='external nofollow' class='url'>Jasmeet</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5206" title="November 6, 2003 @ 4:54 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5207"><p>Clean, easy to read. What&#8217;s not to like? I keep wanting to click on those images at the top though, expecting them to go somewhere.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.robertbrook.com/' rel='external nofollow' class='url'>Robert Brook</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5207" title="November 6, 2003 @ 4:56 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5208"><p>I like it a lot &#8212; much more simple, cleaner etc &#8212; and I get to see your latest post straight from <a href="/web/20110714062710/http://blo.gs!">http://blo.gs!</a> I agree with Robert, though &#8212; I also keep trying to click on the pictures! Might be an interesting thing to make them link to random (or possibly related via category?) blog posts or whatever&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://blog.meriwilliams.com/' rel='external nofollow' class='url'>Meri</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5208" title="November 6, 2003 @ 5:08 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5209"><p>I like it a lot! It&#8217;s clean, simple, just great.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.manuzhai.nl/' rel='external nofollow' class='url'>Manuzhai</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5209" title="November 6, 2003 @ 5:34 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5210"><p>It might be my problem, but I only see a blank page as your front page.<br />
+Anyway, I like the new design more than yesterday&#8217;s, only I would suggest to reduce the height of the squares, so visitors with smaller screens (800&#215;600) don&#8217;t have to scroll to read the first entry.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://jeroensangers.com/' rel='external nofollow' class='url'>Jeroen</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5210" title="November 6, 2003 @ 5:38 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5211"><p>Well, I didn&#8217;t say anything about the last one because it clearly sucked.  This one is better in a &#8220;less interfering way&#8221; and those peekaboo blocks can obviously be used as a faceroll later which is cute.</p>
+<p>In general, I think bloggers should resist &#8216;full makeovers&#8217; temptations and make only continual &#8216;partial renovations&#8217; so readers don&#8217;t feel like a Stranger in a Strangeland.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.docuverse.com/blog/donpark/' rel='external nofollow' class='url'>Don Park</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5211" title="November 6, 2003 @ 5:41 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5212"><p>A Stranger in a Strange Land ( <a href="/web/20110714062710/http://www.amazon.com/exec/obidos/tg/detail/-/0441790348?v=glance">http://www.amazon.com/exec/obidos/tg/detail/-/0441790348?v=glance</a> )?</p>
+<p>Or a stranger in Strangeland ( <a href="/web/20110714062710/http://www.screenit.com/movies/1998/strangeland.html">http://www.screenit.com/movies/1998/strangeland.html</a> )?</p>
+<p>Googling for &#8220;a stranger in a strange land&#8221; brings up &#8220;Sponsored Links &#8211; Free Vibrator &#8211; dildos &#038; adult sex toys. Free UK delivery &#038; discreet packaging. aff.&#8221; as a text ad. Heinlein would be so proud.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://insom.me.uk/blog/' rel='external nofollow' class='url'>Aaron Brady</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5212" title="November 6, 2003 @ 6:01 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5213"><p>I like it.</p>
+<p>I&#8217;m also with Jeroen: I came to the page the first time with no problem, but after following the permalink and then wanting to go back for a second look, all I got was a blank page.  I&#8217;m using Firebird 0.7 on Windows XP.  Only happened that once, though, so it&#8217;s probably something funky on my end.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://socialistsushi.com/' rel='external nofollow' class='url'>Bryan L. Fordham</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5213" title="November 6, 2003 @ 7:01 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5214"><p>The table and pics are all over the text when using Netscape 7.01 on Windows XP.  Nice design though.</p>
+<p class=sig>&#8212;&#8201;<cite>Jake</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5214" title="November 6, 2003 @ 7:15 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5215"><p>I like this design too, it&#8217;s clean and elegant.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://dataportalen.com/pho/' rel='external nofollow' class='url'>H�vard Skj�veland</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5215" title="November 6, 2003 @ 7:37 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5216"><p>Nice. But why not make some of the images in the squares links?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.weholt.org/' rel='external nofollow' class='url'>Thomas Weholt</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5216" title="November 6, 2003 @ 7:41 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5217"><p>If pictures are your thing, then it&#8217;s nifty.  Bookending the site links with pictures does make them stand out, but I would give them some hover state.</p>
+<p>Also, there is now no link to the main page at all!  Being that this *is* a main page, that&#8217;s not a problem, but you&#8217;d need to add one to apply this design site-wide.</p>
+<p>Oh, and viewing your new header without styles applied just looks silly.  It obliterates the title.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://mikemariano.com/weblog/' rel='external nofollow' class='url'>Mike Mariano</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5217" title="November 6, 2003 @ 8:01 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5218"><p>I like it a lot.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.alessio.sevenseas.org/weblog/' rel='external nofollow' class='url'>alessio</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5218" title="November 6, 2003 @ 8:13 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5219"><p>It breaks in older versions of Mozilla. Using Mozilla 1.2.1 on a default redhat 9 installation, all the text is covered by pictures, as seen in this screenshot : <a href="/web/20110714062710/http://zeus.jesus.cam.ac.uk/~jg307/mozilla/screenshot-mark.png.">http://zeus.jesus.cam.ac.uk/~jg307/mozilla/screenshot-mark.png.</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://zeus.jesus.cam.ac.uk/~jg307/' rel='external nofollow' class='url'>jgraham</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5219" title="November 6, 2003 @ 8:17 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5220"><p>FYI Graham, that link is dead.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://dataportalen.com/pho/' rel='external nofollow' class='url'>H�vard Skj�veland</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5220" title="November 6, 2003 @ 8:33 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5221"><p>Mark:</p>
+<p>I like it much better than either previous version.  Clean, simple, yet expressive.  The pictures provide a personal and human touch to the page and lend your words something more than a standard weblog/journal/personal site.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://houseofwarwick.com/' rel='external nofollow' class='url'>Steve Kirks</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5221" title="November 6, 2003 @ 8:36 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5222"><p>No, Mark&#8217;s autolinking system is just rubbish. Let&#8217;s try again without the . :</p>
+<p><a href="/web/20110714062710/http://zeus.jesus.cam.ac.uk/~jg307/mozilla/screenshot-mark.png">http://zeus.jesus.cam.ac.uk/~jg307/mozilla/screenshot-mark.png</a></p>
+<p class=sig>&#8212;&#8201;<cite>jgraham</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5222" title="November 6, 2003 @ 8:39 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5223"><p>Sweet! It&#8217;s much better than the last one, and a lot less impersonal than the one before that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.talideon.com/' rel='external nofollow' class='url'>Keith Gaughan</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5223" title="November 6, 2003 @ 8:52 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5224"><p>I really like it quite a bit; as clean as your other designs have been, but the pictures are a great addition.</p>
+<p>It did take me a moment to find your primary navigation; I don&#8217;t know if that&#8217;s because of its position, or the subdued type.  That&#8217;s the only feedback I could possibly offer &mdash; really looks great.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.sidesh0w.com/' rel='external nofollow' class='url'>Ethan</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5224" title="November 6, 2003 @ 9:03 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5225"><p>Turning off CSS produces an interesting effect:</p>
+<p>d i v e i n t o _about_blog_code_pics_ m a r k</p>
+<p>&#8230; with pictures interspersed between the the words.</p>
+<p>Given the way the span&#8217;ed items are positioned in CSS, there doesn&#8217;t seem to be any need for this information to be placed in the same linear order in your source.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.intertwingly.net/blog/' rel='external nofollow' class='url'>Sam Ruby</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5225" title="November 6, 2003 @ 9:21 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5226"><p>I like this one infinitely better than the previous.</p>
+<p>I did not express my opinion on the previous design, so I will put it in a nutshell: Idea, nice. Execution, bad.</p>
+<p>Good job.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://home.planet.nl/~acjbizar/' rel='external nofollow' class='url'>ACJ</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5226" title="November 6, 2003 @ 10:02 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5227"><p>Love it!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.superluminal.com/dave/weblog/' rel='external nofollow' class='url'>Dave Seidel</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5227" title="November 6, 2003 @ 10:07 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5228"><p>Oh, sorry Graham. I should&#8217;ve seen it.</p>
+<p>I think it degrades nicely with CSS turned off. In fact, it looks nifty and interesting.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://dataportalen.com/pho/' rel='external nofollow' class='url'>H�vard Skj�veland</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5228" title="November 6, 2003 @ 10:22 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5229"><p>I think its better,</p>
+<p>but it takes too long to load the &#8220;content&#8221; (aka blog entries). If you placed the images as background it would load in the &#8220;background&#8221; and &#8220;deliver&#8221; the content right away&#8230;</p>
+<p>PS: I&#8217;m using a &#8220;20th century&#8221; technology &#8211; 56k :)</p>
+<p class=sig>&#8212;&#8201;<cite>S�rgio Nunes</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5229" title="November 6, 2003 @ 10:30 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5230"><p>Surely you can think of a way to do it without double-nested SPANs and strange source ordering. While it&#8217;s certainly better than the last experiment, you can do better. Regarding the photos it would be nice if they were optimized a bit with a program like Photoshop or Gimp. The levels and contrast on a few of them seem off and would look a lot better with a little tweaking.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://photomatt.net/' rel='external nofollow' class='url'>Matt</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5230" title="November 6, 2003 @ 10:31 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5231"><p>I liked the previous version.  With the new one, I was immediately disappointed that I couldn&#8217;t click on a picture at the top and link to that page (easily fixed, I am sure).  Regardless, I liked the random flow of the previous design.  It&#8217;s a little like entering a 300-room mansion and wandering from room to room, without any map or previous destination, discovering as you go what&#8217;s waiting around the next corner.</p>
+<p class=sig>&#8212;&#8201;<cite>Michael A. Strieb</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5231" title="November 6, 2003 @ 10:52 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5232"><p>my reaction is: &#8220;fantastic&#8221;.</p>
+<p>i haven&#8217;t convinced myself yet, though, that my reasons for disliking the last one were justified.  i think my main issue was the unfamiliarity of it.  i hadn&#8217;t seen similar things like it before.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://deepshell.net/' rel='external nofollow' class='url'>sleeper</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5232" title="November 6, 2003 @ 11:25 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5233"><p>My URL detection system is not perfect, but this particular case is not one that can be solved.  A period is a valid character in a URL.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5233" title="November 6, 2003 @ 11:31 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5234"><p>21: I don&#8217;t see that, I see, Dive, Into, about blog code pics and Mark all interspersed with pictures.<br />
+Overall, I think it&#8217;s alrighty.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.iamsparticus.co.uk/' rel='external nofollow' class='url'>Sparticus</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5234" title="November 6, 2003 @ 11:32 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5235"><p>I like the idea of using background pics on the divs instead.  They should load after the main content, and it would also make it easier to change the pictures per-page (or per-section).  And they&#8217;d be invisible in Lynx.</p>
+<p>I&#8217;ll tweak the markup to put the navbar after the &#8220;dive into mark&#8221;, and make the header letters a real header.  That should make it look better in Lynx.  It&#8217;ll still read like crap in screen readers (one letter at a time, since they&#8217;re in separate spans) but you can&#8217;t have everything (where would you put it?)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5235" title="November 6, 2003 @ 11:34 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5236"><p>In case no one else says it, I&#8217;ve always found the previous design to be one of the most readable weblogs around, thanks to both format and type treatment. The new one keeps the format but changes the type; time will tell whether the readability holds through that change or not.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.mezzoblue.com/' rel='external nofollow' class='url'>Dave S.</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5236" title="November 6, 2003 @ 11:48 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5237"><p>Ah, I liked the earlier design! Though, granted, it required navigation to get to the actual blog entry, which wasn&#8217;t as nice.</p>
+<p>Maybe you could bring it back as a white-on-white background text thing&#8230; with the massive linkage and popup text that could be really fun.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.sidhe.org/~dan/blog/' rel='external nofollow' class='url'>Dan</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5237" title="November 6, 2003 @ 11:52 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5238"><p>Mark, I&#8217;m sitting here slacking and working, intermittently nodding my head yes, shaking my head no, laughing and crying, wishing I could have a cigarette, any kind of cigarette, having just discovered your 100 stories project.  Gee.  I can&#8217;t help but wonder what you&#8217;re holding back.  The design is fine.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.disarranging.com/review/' rel='external nofollow' class='url'>Marie</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5238" title="November 6, 2003 @ 12:00 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5239"><p>I just had to gather some feedback from students about our university homepage.  What was the one thing they hated the most?  Boxes&#8230;  It wasn&#8217;t what was _in_ the boxes, rather that the info was *in* boxes.  It was the very strange.  The practically begged for rounded corners or at least feathering the edges.</p>
+<p>Me?  I don&#8217;t mind boxes&#8230;but then I like geometry ;-)  Just passing along something I didn&#8217;t know.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.patandkat.com/pat/weblog/' rel='external nofollow' class='url'>Patrick Berry</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5239" title="November 6, 2003 @ 12:32 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5240"><p>Easier on the eyes than the old blue and white design. Refine it a little more and it will be quite nice!</p>
+<p class=sig>&#8212;&#8201;<cite>Josh</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5240" title="November 6, 2003 @ 12:33 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5241"><p>I like it alot, but the b-links are a little distracting. Could they be placed elsewhere, maybe at the bottom spanning horizontally.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5241" title="November 6, 2003 @ 12:53 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5242"><p>I think the title&#8217;s a little too tall &#8211; and the buttons underneath it aren&#8217;t *nearly* obvious enough &#8211; it took me ages to find where they&#8217;d been moved to.</p>
+<p>I&#8217;d cut it down to one, perhaps two, rows of boxes. Other than that &#8211; looks good, if still a little unpolished.</p>
+<p class=sig>&#8212;&#8201;<cite>Daniel Walker</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5242" title="November 6, 2003 @ 1:28 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5243"><p>It looks a whole lot better.</p>
+<p>I have this issue with design: I&#8217;m never content for one amount of time. I need to find a design that I&#8217;m happy with for a set amount of time. Oh well, I learn more every time I redesign.</p>
+<p>And yes to this layout.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.leftinfront.com/' rel='external nofollow' class='url'>Brendyn</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5243" title="November 6, 2003 @ 1:40 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5244"><p>Clean.  Simple.</p>
+<p>Nice.  (As is your existing look.)</p>
+<p>But then, Clean + Simple = Nice seems to be true more often then not.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://jclark.org/weblog' rel='external nofollow' class='url'>Jason Clark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5244" title="November 6, 2003 @ 1:44 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5245"><p>I&#8217;d love to see a:focus rules in addition to a:hover rules.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.zenaku.net/' rel='external nofollow' class='url'>kami</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5245" title="November 6, 2003 @ 2:04 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5246"><p>While on the first sight I like the squares for their _looks_ (I am easily impressed&#8230;), I don&#8217;t think it&#8217;s a good idea for a couple of reasons:</p>
+<p>Firstly it wastes the most precious bit of web page space for a banner. Finding a way to re-do that banner vertically, so the text can start right at the top would be much more efficient.</p>
+<p>Secondly,  as many others said before, that is really a waste as the images don&#8217;t serve any purpose &#8211; no links no extra information. Having a photo of a person on the page _can_ be helpful, but that&#8217;s one photo and not photos of the whole family at all ages. Basically, I &#8211; and I suppose most other readers &#8211; will not consider them as important as you do. While this may reflect your priorities, it&#8217;s probably not in the best interest of your readers. If you want to provide those photos, do so on a separate page and those who care will enjoy them more. </p>
+<p>Thirdly, the banner is so busy that it&#8217;s hard to spot the only useful bits in there and recognise them as navigation features. My experience is that the seasoned web user tends to simply ignore anything that looks like a banner. I</p>
+<p>Finally, and not directly related &#8211; what happened to full text feed entries? Not only do they allow people to download everything and then read it when they don&#8217;t have network access but it also makes the writing &#8216;design invariant&#8217; by letting regular readers simply read the texts in their aggregator. (Letting you do to they layout whatever you want without anybody minding.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://earthlingsoft.net/ssp/blog/' rel='external nofollow' class='url'>Sven-S. Porst</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5246" title="November 6, 2003 @ 2:55 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5247"><p>Banners are not intrinsically evil.  I like this design. The underlying HTML for the banner is elegant (all CSS, eh?) and attractive and usable.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.dotcommunist.us/' rel='external nofollow' class='url'>Sean G.</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5247" title="November 6, 2003 @ 4:43 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5248"><p>So when do we get to see it on the rest of the site? The original format was good, but a change every once in a while is nice. The site isn&rsquo;t serving to Mozilla/1.5/Win though. It&rsquo;s just giving me &lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://bloglenny.blogspot.com/' rel='external nofollow' class='url'>Lenny</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5248" title="November 6, 2003 @ 4:50 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5249"><p>OK, &#8220;rubbish&#8221; was a bit harsh. A period at the end of a URL seems pretty unlikely (though probably not impossible)- I would expect more errors to occur if you allow that than there would be if you stripped it out.</p>
+<p>Conclusion:</p>
+<p>URL autolinking is hard, so don&#8217;t do it. Make people do it themselves. Allow &lt;a&gt; tags. If that&#8217;s considered too hard for your intended audience, put a button in that will allow them to insert a hyperlink automatically by specifying the link text and URL.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://zeus.jesus.cam.ac.uk/~jg307/' rel='external nofollow' class='url'>jgraham</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5249" title="November 6, 2003 @ 5:02 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5250"><p>Re: Mozilla 1.5, it&#8217;s buggy.  I get that too sometimes, on various sites.  I&#8217;m pretty sure there&#8217;s nothing I&#8217;m doing wrong to trigger it, but if anyone knows anything more or can point to a Bugzilla report about it, I&#8217;d be grateful.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5250" title="November 6, 2003 @ 5:32 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5251"><p>I like the new banner. It looks great, the pictures dotted around are a nice effect, and the negatives are pretty nit-picky if you ask me.</p>
+<p>As for URL autolinking: the only punctuation you&#8217;re at all likely to see at the end of a URL is the slash (and very rarely, the semi-colon). If you make auto-linking code ignore all other punctuation at the end of a URL, you end up with something that is technically incorrect, but much less error-prone in practice.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://fishbowl.pastiche.org/' rel='external nofollow' class='url'>Charles Miller</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5251" title="November 6, 2003 @ 5:34 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5252"><p>Love it, love it, love it.  </p>
+<p>Menu items could use mouseover effects (change background images?) to help me find them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.kennsarah.net/' rel='external nofollow' class='url'>Ken Walker</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5252" title="November 6, 2003 @ 6:30 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5253"><p>It&#8217;s nice.  I agree that the four links need a hover, say, inverting the square.  The banner takes up too much vertical space &#8211; the whitespace on top, especially, could stand to go.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://jemimap.ficml.org/moveabletype/' rel='external nofollow' class='url'>Jemima</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5253" title="November 6, 2003 @ 6:32 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5254"><p>Thanks to Matt for the suggestion of optimizing the thumbnails.  I didn&#8217;t realize how much further they could be pared down, but ImageMagick made short work of them.</p>
+<p>mogrify -colors 256 format:jpg *thumbnail.jpg</p>
+<p>(Warning: overwrites originals, make backups)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5254" title="November 6, 2003 @ 7:42 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5255"><p>Cool, the images seem to be loading faster for me now (on my 2k/sec 56k connection).</p>
+<p>Regarding iteration #3: I get no hover effect on navigation links, except for a title attribute tool-tip thing. Camino 0.7 and Firebird 0.7</p>
+<p>I notice the tabs on the archive pages are square again. They work better in Camino than the rounded ones.</p>
+<p class=sig>&#8212;&#8201;<cite>Chris Burkhardt</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5255" title="November 6, 2003 @ 8:37 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5256"><p>Re: 3rd iteration.</p>
+<p>Much better. :) I�m not a big fan of �faces staring at you� themes, but the look is clean and an improvement over the current one.</p>
+<p>I do feel that the main font is out of place though. Perhaps it�s the line-height I�m uncomfortable with, or the font itself. I can�t quite nail it, but feel that your current choice of Trebuchet MS would fit better than Georgia.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.conans.co.uk/' rel='external nofollow' class='url'>Conan</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5256" title="November 6, 2003 @ 8:41 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5257"><p>Two things&#8230;</p>
+<p>1) The banner is a fixed width, but the text isn&#8217;t. If you stretch the browser window out really far the banner just looks alone up at the top. The text should be a fixed width (as in your old design) so that the banner and text look like the belong together.</p>
+<p>2) What&#8217;s with all the double nested spans in the h1 element? Mark, what were you thinking?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://leavesrustle.com/' rel='external nofollow' class='url'>Noel D. Jackson</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5257" title="November 6, 2003 @ 9:19 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5258"><p>The text was not a fixed width in my old design.</p>
+<p>I did do some tests with a fixed width #main (that holds the text).  The problem is that there&#8217;s not room for the main text and the left sidebar (and possibly the right sidebar with ads on some pages) on an 800 x 600 screen.  I experimented with an 8 x 5 banner which was narrow enough to make all fixed width columns work, but a bunch of people aren&#8217;t gonna like it because it takes too much space vertically.</p>
+<p><a href="/web/20110714062710/http://diveintomark.org/public/2003/11/squares8x5.html">http://diveintomark.org/public/2003/11/squares8x5.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5258" title="November 6, 2003 @ 9:25 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5259"><p>I like it. The previous design took me by surprise and was a bit too, uhm, expiremental for my taste. </p>
+<p>This is light, clean, aesthetically  pleasing. Count me among the people who tried clicking on the pictures. It would be nice if they went somewhere, but I wouldn&#8217;t move/delete them. True, you provide an extraordinary amount of technical information, but, unless I&#8217;m mistaken, it&#8217;s still a personal site and the design should reflect as much. This reader for one appreciates the personal touch and I&#8217;m more than willing to scroll down a little to see the content.</p>
+<p>As for the b-links. I think the way you have them styled now is nice, less obtrusive than before.</p>
+<p>Of course, me talking about clean design is like a first grader trying to discuss Picasso. My site isn&#8217;t the cleanest thing in the world. But hey, it&#8217;s my site. :)</p>
+<p>Nice job, Mark.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://lunanina.com/musings/' rel='external nofollow' class='url'>Patricia</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5259" title="November 6, 2003 @ 9:49 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5260"><p>What you have now is a lot better than what you had before. The only thing I want to know is will we ever see that list of links again? &#8230;I actually went through a few of them and found most of them at least a little interesting.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://anythinagpplies.com/' rel='external nofollow' class='url'>Rick</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5260" title="November 6, 2003 @ 10:01 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5261"><p>Love it.  Nicely designed, easy to read.  Great job.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.sinewaves.org/' rel='external nofollow' class='url'>James LaBove</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5261" title="November 6, 2003 @ 11:39 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5262"><p>Re: Iteration #4&#8230;</p>
+<p>Yay! The hover on the nav links work now, and the pictures are checkered and look nice.</p>
+<p class=sig>&#8212;&#8201;<cite>Chris Burkhardt</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5262" title="November 7, 2003 @ 12:17 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5263"><p>Very nice :) .</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.neilturner.me.uk/' rel='external nofollow' class='url'>Neil T.</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5263" title="November 7, 2003 @ 3:19 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5264"><p>A (PHP) url detection regex that will solve the trailing punctuation problem:</p>
+<p>function urlDisco($text) {<br />
+return preg_replace(&#8220;/(?:(http:&#92;/&#92;/)|(www&#92;.))(&#92;S+&#92;b&#92;/?)([[:punct:]]*)(&#92;s|$)/i&#8221;,<br />
+&#8220;&#60;a href=&#92;&#8221;&#104;ttp://$2$3&#92;&#8221;&#62;$1$2$3&#60;/a&#62;$4$5&#8243;, $text);<br />
+}</p>
+<p>(Splendid redesign, light and fast, notwithstanding the persistence of Trebuchet.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://textism.com/' rel='external nofollow' class='url'>Dean Allen</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5264" title="November 7, 2003 @ 3:41 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5265"><p>Fucking smilies. Worked on preview.</p>
+<p>That should be &#58;( of course.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://textism.com/' rel='external nofollow' class='url'>Dean Allen</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5265" title="November 7, 2003 @ 3:43 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5266"><p>It&#8217;d be nice to see one font used for both headings and body text, whatever that font may be. Otherwise, good job.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://mencybaby.com/' rel='external nofollow' class='url'>Menc</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5266" title="November 7, 2003 @ 4:18 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5267"><p>Very nice, it looks good and is perfectly readable.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://yobanjin.org/' rel='external nofollow' class='url'>Simon Gill</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5267" title="November 7, 2003 @ 5:01 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5268"><p>Mark, you&#8217;re probably already aware, but in IE6 the left sidebar is merging with the main content.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://dataportalen.com/pho/' rel='external nofollow' class='url'>H�vard Skj�veland</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5268" title="November 7, 2003 @ 5:20 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5269"><p>UP</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://dataportalen.com/pho/' rel='external nofollow' class='url'>H�vard Skj�veland</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5269" title="November 7, 2003 @ 5:25 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5270"><p>Yah, just noticed all versions of IE/Win are seriously borked.  Am regressing the home page until I can sort it out.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5270" title="November 7, 2003 @ 6:45 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5271"><p>I like #3.  Something bothered me about it though, and then I realized its the pictures.  You need better quality pictures.  For example, the one of your father is way too dark.  It&#8217;s functional AND artistic, but the art falls on its face because you can&#8217;t get the contrasts in peoples faces to jump out at you easily.</p>
+<p>Of course, it could be my monitor, as no PC monitor I&#8217;ve ever worked with had good color representation, but I do have the contrast turned all the way up.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://thedevilsadvocate.org/' rel='external nofollow' class='url'>Adrian</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5271" title="November 7, 2003 @ 10:51 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5272"><p>IE/Win has been worked around.  Stupid IE.</p>
+<p><a href="/web/20110714062710/http://diveintomark.org/public/2003/11/squares5.html">http://diveintomark.org/public/2003/11/squares5.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5272" title="November 7, 2003 @ 10:58 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5273"><p>I like it! I did like the experimental page that was up before, except for the use of b-links. Try making the link squares in your new layout use different hover background colours like the last page had.</p>
+<p>I prefer this layout to the dark blue, dark green, dark red etc one still evident throughout the site. I&#8217;m not sure why. Please make the rest of the site look like the main page now and I will be happy!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.designdetector.com/' rel='external nofollow' class='url'>Chris Hester</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5273" title="November 7, 2003 @ 11:55 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5274"><p>Why should headings and body text use the same font?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://xianlandia.com/' rel='external nofollow' class='url'>xian</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5274" title="November 7, 2003 @ 12:24 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5275"><p>Optima. Optima. It may look &#8216;lickably good&#8217; with quartz anti-aliasing, but its strokes are made of gentle tapers that require quartz to smear like mad at the cost of crispness, and as a such it *reads* like a page submerged beneath a half inch of brackish water.</p>
+<p>Full justification, on the other hand: <a href="/web/20110714062710/http://textism.com/article/327/">http://textism.com/article/327/</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://textism.com/' rel='external nofollow' class='url'>Dean Allen</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5275" title="November 7, 2003 @ 12:52 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5276"><p>No complaints here.  Muuuuuuuuuuuuuuch better than the previous two designs.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.9rules.com/whitespace/' rel='external nofollow' class='url'>Scrivs</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5276" title="November 7, 2003 @ 12:55 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5277"><p>Ah yes, it was late when I posted and now I realize that you did not use fixed width columns in the previous design.</p>
+<p>You could always put the b-link sidebar underneath the first entry and to the left with a little padding. I ran into the same problem on my site and this seems to be a fairly good answer to the problem. See my homepage for an example <a href="/web/20110714062710/http://leavesrustle.com/">http://leavesrustle.com</a></p>
+<p>Also, you could make the squares (in the banner) a tad larger increasing the width to the maximum of around 720px (for 800 x 600 viewers) and then the sidebar would fit nicely in the center column and to the left or right.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://leavesrustle.com/' rel='external nofollow' class='url'>Noel D. Jackson</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5277" title="November 7, 2003 @ 2:37 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5278"><p>totally Wrox!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.franklinmint.fm/' rel='external nofollow' class='url'>Robert Sayre</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5278" title="November 7, 2003 @ 3:17 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5279"><p>Hover over colors (on the top navigation boxes) should be a different color than you-are-here colors, as a usability thing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.geeklife.com/' rel='external nofollow' class='url'>Dave Bug</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5279" title="November 7, 2003 @ 3:28 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5280"><p>I agree that the photos definitely need some contrast tweaking. Do you have any plans for picture rotating?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://bloglenny.blogspot.com/' rel='external nofollow' class='url'>Lenny</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5280" title="November 7, 2003 @ 5:07 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5281"><p>Very fast loading and clean.  Excellent work.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.webtechin.com/' rel='external nofollow' class='url'>Mahesh</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5281" title="November 8, 2003 @ 10:42 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5282"><p>I&#8217;m taking lessons from a real graphic designer about the contrast issue.  She agrees with others here that the banner-with-interspersed-photos would be better if the interspersed photos were better.  Still working on it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5282" title="November 8, 2003 @ 11:59 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5283"><p>How about rotating the images in the boxes from your 100 Stories?</p>
+<p>Also, it kind of seems to me like the boxes are detached from the rest of the page. Maybe adding similar boxes around the content would help.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://mxn.netfirms.com/notes/index.html' rel='external nofollow' class='url'>Minh Nguy&#x1ec5;n</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5283" title="November 8, 2003 @ 1:18 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5284"><p>You&#8217;re a sex machine. Go wild. I love the way this site&#8217;s design changes &#8211; it&#8217;s a constant challenge and example to sites with old-school design! Thanks for showing me the light and encouraging others to burn brightly! The web does NOT have to be &#8216;electronic brochures&#8217;!!!!!! YEEEEEEEEHHAAAAWWWW!!!!!!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.macwebguru.com/' rel='external nofollow' class='url'>M. Douglas Wray</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5284" title="November 8, 2003 @ 9:47 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5285"><p>Hey Mark, the hover problems you had with the squares are caused by a bug in Safari 1.1 and 1.0.  The hover problem can also be observed on <a href="/web/20110714062710/http://www.mezzoblue.com/" rel="nofollow">http://www.mezzoblue.com</a>.  At any rate, the problem has been fixed since 1.1, and so things should work nicely in the next release.</p>
+<p class=sig>&#8212;&#8201;<cite>Dave Hyatt</cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5285" title="November 9, 2003 @ 3:50 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5286"><p>BTW, the design is clearly derivative: <a href="/web/20110714062710/http://livingjuicy.com/">http://livingjuicy.com/</a> . Just kidding of course, it just struck me.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://photomatt.net/' rel='external nofollow' class='url'>Matt</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5286" title="November 9, 2003 @ 7:38 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5287"><p>I guess it&#8217;s only fair that I comment on this one, since I ripped into the previous one. I must say I like this about a thousand times better. Very nicely done.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://www.liminality.org/' rel='external nofollow' class='url'>CDL</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5287" title="November 10, 2003 @ 3:37 am"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-5288"><p>Very nice new banner. It&#8217;s clean and visually pleasing. One suggestion &#8211; some photographs in your banner appear overly dark. I suggest taking them into photoshop and adjusting the levels a wee bit.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://kristastevens.com/' rel='external nofollow' class='url'>PrairieGal</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5288" title="November 10, 2003 @ 12:39 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-5289"><p>Yup, I&#8217;m doing just that.  Just learned how this weekend.  See <a href="/web/20110714062710/http://diveintomark.org/public/2003/11/squares6.html">http://diveintomark.org/public/2003/11/squares6.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110714062710/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110714062710/http://diveintomark.org/archives/2003/11/06/bah#comment-5289" title="November 10, 2003 @ 2:03 pm"><img alt="#" src=/web/20110714062710im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110714062710/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110714062710/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110714062710/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110714062710/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110714062710/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.477 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-14 01:18:09 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 6:27:10 Jul 14, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:12:21 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

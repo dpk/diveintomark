@@ -1,0 +1,486 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>A gentle introduction to video encoding, part 4: captioning [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110911122338/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110911122338/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110911122338/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110911122338/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110911122338im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110911122338/http://diveintomark.org/archives/2008/12/30/give-part-3-lossy-audio-codecs" title="A gentle introduction to video encoding, part 3: lossy audio codecs">
+<link rel=next href="/web/20110911122338/http://diveintomark.org/archives/2009/01/08/give-slides" title="A gentle introduction to video encoding: the slides">
+<link rel=up href="/web/20110911122338/http://diveintomark.org/archives#p2217" title="January 2009">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; A gentle introduction to video encoding, part 4: captioning Comments Feed" href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning/feed" />
+<link rel='index' title='dive into mark' href='/web/20110911122338/http://diveintomark.org/' />
+<link rel='prev' title='A gentle introduction to video encoding, part 3: lossy audio codecs' href='/web/20110911122338/http://diveintomark.org/archives/2008/12/30/give-part-3-lossy-audio-codecs' />
+<link rel='next' title='A gentle introduction to video encoding: the slides' href='/web/20110911122338/http://diveintomark.org/archives/2009/01/08/give-slides' />
+<link rel='canonical' href='/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning' />
+<link rel='shortlink' href='/web/20110911122338/http://diveintomark.org/?p=2217' />
+<meta name="description" content="If you printed out the SMIL 3.0 specification on US-Letter-sized paper, it would weigh in at 395 pages. So don't do that.">
+<meta name="keywords" content="accessibility,captioning,give,haali,mp4,mplayer,sami,smil,srt,ssa,subtitles,video,vlc,vsfilter">
+<link href="/web/20110911122338cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110911122338/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2009\/01\/07\/give-part-4-captioning";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "11";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2009/01/07/give-part-4-captioning" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110911122338" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607150248/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 12:23:38 Sep 11, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120220075146/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Feb 2012"><strong>FEB</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110607150248/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning" title="15:02:48 Jun 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 12:23:38 Sep 11, 2011">11</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110925043703/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning" title="4:37:03 Sep 25, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100316184537/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="16 Mar 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 12:23:38 Sep 11, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110911122338*/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>7 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">28 Aug 09 - 20 Feb 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000010000_2010:-1:001000000100_2011:8:000001002000_2012:-1:010000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110911122338/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110911122338/http://diveintomark.org/archives#p2217">January 7, 2009</a> &#8227;
+<h2>A gentle introduction to video encoding, part 4: captioning</h2> (<a href="/web/20110911122338/http://diveintomark.org/tag/accessibility" rel="tag">accessibility</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/captioning" rel="tag">captioning</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/give" rel="tag">GIVE</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/haali" rel="tag">haali</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/mp4" rel="tag">mp4</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/mplayer" rel="tag">mplayer</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/sami" rel="tag">sami</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/smil" rel="tag">smil</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/srt" rel="tag">srt</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/ssa" rel="tag">ssa</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/subtitles" rel="tag">subtitles</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/video" rel="tag">video</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/vlc" rel="tag">vlc</a>, <a href="/web/20110911122338/http://diveintomark.org/tag/vsfilter" rel="tag">vsfilter</a>)</div>
+<p>[Part of an <a href="/web/20110911122338/http://diveintomark.org/tag/give">ongoing series</a>.]</p>
+
+<p>The first thing you need to know about captions and subtitles is that <a href="/web/20110911122338/http://joeclark.org/access/captioning/bpoc/ST.html">captions and subtitles are different</a>.  The second thing you need to know about captions and subtitles is that you can safely ignore the differences unless you&#8217;re creating your own from scratch.  I&#8217;m going to use the terms interchangeably throughout this article, which will probably drive you crazy if you happen to know and care about the difference.</p>
+
+<p>Historically, captioning has been driven by the needs of deaf and hearing impaired consumers, and captioning technology has been designed around <a href="/web/20110911122338/http://en.wikipedia.org/wiki/Closed_captioning#Television_and_video">the technical quirks of broadcast television</a>.  In the United States, so-called &#8220;<a href="/web/20110911122338/http://main.wgbh.org/wgbh/pages/mag/services/captioning/faq/">closed captions</a>&#8221; are embedded into a part of the NTSC video source (&#8220;Line 21&#8243;) that is normally outside the viewing area on televisions.  In Europe, they use a completely different system that is embeddable in the PAL video source.  Over time, each new medium (VHS, DVD, and now online digital video) has dealt a blow to the accessibility gains of the previous medium.  For example:</p>
+
+<ul>
+<li>PAL VHS tapes did not have enough bandwidth to store closed captions at all.</li>
+<li>DVDs have the technical capability, but producers often manage to screw it up anyway; e.g. DVDs of low-budget television shows are often released without the closed captions that accompanied the original broadcast.</li>
+<li>HDMI cables drop &#8220;Line 21&#8243; closed captions altogether.  If you play an NTSC DVD on an HDTV over HDMI, you&#8217;ll never see the closed captions, even if the DVD has them.</li>
+</ul>
+
+<p>And <a href="/web/20110911122338/http://joeclark.org/book/sashay/serialization/Chapter13.html">accessible online video is just fucking hopeless</a>.  (And no, it won&#8217;t change <a href="/web/20110911122338/http://www.alistapart.com/articles/thisishowthewebgetsregulated/">unless new regulation forces it to change</a>.  When it comes to captioning, Joe Clark has been right longer than many of you have been alive.)</p>
+
+<p>So even in broadcast television, captioning technology was fractured by different broadcast technologies in different countries.  Digital video had the capability of unifying the technologies and learning from their mistakes.  Of course, exactly the opposite happened.  Early caption formats split along company lines; each major video software platform (RealPlayer, QuickTime, Windows Media, Adobe Flash) implemented captioning in their own way, with levels of adoption ranging from nil to zilch.  At the same time, an entire subculture developed around &#8220;<a href="/web/20110911122338/http://en.wikipedia.org/wiki/Fansub">fan-subbing</a>,&#8221; i.e. using captioning technology to provide translations of foreign language videos.  For example, non-Japanese-speaking consumers wanted to watch Japanese anime films, so amateur translators stepped up to publish their own English captions that could be overlaid onto the original film.  In the 1980s, fansubbers would actually take VHS tapes and overlay the English captions onto a new tape, which they would then (illegally) distribute.  Nowadays, translators can simply publish their work on the Internet as a standalone file.  English-speaking consumers can have their DVDs shipped directly from Japan, and they use software players that can overlay standalone English caption files while playing their Japanese-only DVDs.  The legality of distributing these unofficial translations (even separately, in the form of standalone caption files) <a href="/web/20110911122338/http://www.nytimes.com/2005/08/21/arts/21solo.html">has been disputed in recent years</a>, but the fansubbing community persists.</p>
+
+<p>Technically, there is a lot of variation in captioning formats.  At their core, captions are a combination of text to display, start and end times to display it, information about where to position the text on a screen, fonts, styling, alignment, and so on.  Some captions roll up from the bottom of the screen, others simply appear and disappear at the appropriate time.  Some caption formats mandate where each caption should be placed and how it should be styled; others merely suggest position and styling; others leave all display attributes entirely up to the player.  Almost every conceivable combination of these variables has been tried.  Some forms of media try multiple combinations at once.  DVDs, for example, can have two entirely distinct forms of captioning &#8212; closed captioning (as used in NTSC broadcast television) embedded in the video stream, and one or more subtitle tracks.  DVD subtitle tracks are used for many different things, including subtitles (just the words being spoken, in the same language as the audio), captions for the hearing impaired (which include extra notations of background noises and such), translations into other languages, and director&#8217;s commentary.  Oh, and they&#8217;re stored on the DVD as images, not text, so the end user has no control over fonts or font size.</p>
+
+<p>Beyond DVDs, most caption formats store the captions as text, which inevitably raises the issue of character encoding.  Some caption formats explicitly specify the character encoding, others only allow UTF-8, others don&#8217;t specify any encoding at all.  On the player side, most players respect the character encoding if present (but may only support specific encodings); in its absence, some players assume UTF-8, some guess the encoding, and some allow the user to override the encoding.  Obviously standalone caption files can be in any format, but if you want to embed your captions as a track within a <a href="/web/20110911122338/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats">video container</a>, your choices are limited to the caption formats that the video container supports.</p>
+
+<p>And remember when I said that there were a <a href="/web/20110911122338/http://diveintomark.org/archives/2008/12/30/give-part-3-lossy-audio-codecs">metric fuck-ton of audio codecs</a>?  Forget that.  There are an <em>imperial fuck-ton</em> of caption formats (i.e. multiply by 9/5 and add 32).  Here is a <em>partial</em> list of caption formats, taken from the list of formats supported by <a href="/web/20110911122338/http://www.urusoft.net/products.php?cat=sw">Subtitle Workshop</a>, which I used to caption my <a href="/web/20110911122338/http://diveintomark.org/tag/diveintomarkshow">short-lived video podcast series</a>:</p>
+
+<blockquote cite="http://www.urusoft.net/products.php?cat=sw">
+<p>Adobe Encore DVD, Advanced SubStation Alpha, AQTitle, Captions 32, Captions DAT, Captions DAT Text, Captions Inc., Cheetah, CPC-600, DKS Subtitle Format, DVD Junior, DVD Studio Pro, DVD Subtitle System, DVDSubtitle, FAB Subtitler, IAuthor Script, Inscriber CG, JACOSub 2.7+, Karaoke Lyrics LRC, Karaoke Lyrics VKT, KoalaPlayer, MacSUB, MicroDVD, MPlayer, MPlayer2, MPSub, OVR Script, Panimator, Philips SVCD Designer, Phoenix Japanimation Society, Pinnacle Impression, PowerDivX, PowerPixel, QuickTime Text, RealTime, SAMI Captioning, Sasami Script, SBT, Sofni, Softitler RTF, SonicDVD Creator, Sonic Scenarist, Spruce DVDMaestro, Spruce Subtitle File, Stream SubText Player, Stream SubText Script, SubCreator 1.x, SubRip, SubSonic, SubStation Alpha, SubViewer 1.0, SubViewer 2.0, TMPlayer, Turbo Titler, Ulead DVD Workshop 2.0, ViPlay Subtitle File, ZeroG.</p>
+</blockquote>
+
+<p>Which of these formats are important?  The answer will depend on whom you ask, and more specifically, how you&#8217;re planning to distribute your video.  This series is primarily focused on videos delivered as files to be played on PCs or other computing devices, so my choices here will reflect that.  These are some of the most well-supported caption formats:</p>
+
+<ul>
+<li><a href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#srt">SubRip</a></li>
+<li><a href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#ass">SubStation Alpha</a></li>
+<li><a href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#mp4tt">MPEG-4 Timed Text</a></li>
+<li><a href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#sami">SAMI</a></li>
+<li><a href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#smil">SMIL</a></li>
+</ul>
+
+<h3 id="srt"><a href="/web/20110911122338/http://en.wikipedia.org/wiki/SubRip">SubRip</a></h3>
+
+<p>SubRip is the <a href="/web/20110911122338/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats">AVI</a> of caption formats, in the sense that its basic functionality is supported everywhere but various people have tried to extend it in mostly incompatible ways and the result is a huge mess.  As a standalone file, SubRip captions are most commonly seen with a <code>.srt</code> extension.  SubRip is a text-based format which can include font, size, and position information, as well as a limited set of HTML formatting tags, although most of these features are <a href="/web/20110911122338/http://ale5000.altervista.org/subtitles.htm">poorly supported</a>.  Its &#8220;official&#8221; specification is <a href="/web/20110911122338/http://forum.doom9.org/showthread.php?p=470941#post470941">a doom9 forum post from 2004</a>.  Most players assume that <code>.srt</code> files are encoded in Windows-1252 (what Windows programs frequently call &#8220;ANSI&#8221;), although some can detect and switch to UTF-8 encoding automatically.</p>
+
+<p>Because <code>.srt</code> files are so often <a href="/web/20110911122338/http://www.opensubtitles.org/en">published</a> separately from the video files they describe, the most common use case is to put your <code>.srt</code> file in the same directory as your video file and give them the same name (up to the file extensions).  But it is also possible to embed SubRip captions directly into AVI files with <a href="/web/20110911122338/http://www.alexander-noe.com/video/amg/">AVI-Mux GUI</a>, into MKV files with <a href="/web/20110911122338/http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvmerge-gui.html">mkvmerge</a>, and into MP4 files with <a href="/web/20110911122338/http://gpac.sourceforge.net/packager.php">MP4Box</a>.</p>
+
+<p>You can play SubRip captions in Windows Media Player or other DirectShow-based video players after installing <a href="/web/20110911122338/http://www.videohelp.com/tools/VSFilter_DirectVobSub">VSFilter</a>; in QuickTime after installing <a href="/web/20110911122338/http://www.perian.org/">Perian</a>; on Linux, both <a href="/web/20110911122338/http://www.mplayerhq.hu/DOCS/HTML/en/index.html">mplayer</a> and <a href="/web/20110911122338/http://www.videolan.org/vlc/">VLC</a> support it natively.</p>
+
+<h3 id="ass"><a href="/web/20110911122338/http://en.wikipedia.org/wiki/SubStation_Alpha">SubStation Alpha</a></h3>
+
+<p>SubStation Alpha and its successor, Advanced SubStation Alpha, are the preferred caption formats of the fansubbing community.  As standalone files, they are commonly seen with <code>.ssa</code> or <code>.ass</code> extensions.  They have <a href="/web/20110911122338/http://www.matroska.org/technical/specs/subtitles/ssa.html">a spec longer than three paragraphs</a>.  They are actually miniature scripting languages.  A <code>.ass</code> file contains a series of commands to control position, scrolling, animation, font, size, scaling, letter spacing, borders, text outline, text shadow, alignment, and so on; and a series of time-coded events for displaying text given the current styling parameters.  It has support for multiple character encodings.</p>
+
+<p>The playing requirements for SubStation Alpha captions are almost identical to SubRip.  The same plugins are required for Windows and Mac OS X.  On Linux, mplayer prides itself on having the most complete SSA/ASS implementation.</p>
+
+<h3 id="mp4tt"><a href="/web/20110911122338/http://en.wikipedia.org/wiki/MPEG-4_Part_17">MPEG-4 Timed Text</a></h3>
+
+<p>a.k.a. &#8220;MPEG-4 Part 17,&#8221; a.k.a. <a href="/web/20110911122338/http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=39478">ISO 14496-17</a>, MPEG-4 Timed Text (hereafter &#8220;MP4TT&#8221;) is the one and only caption format for the <a href="/web/20110911122338/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats">MP4 container</a>.  It is not a file format; it is only defined in terms of a track within an MP4 container.  As such, it can not be embedded in any other video container, and it can not exist as a separate file.  (Note: the last sentence was a lie; the MPEG-4 Timed Text format is really the 3GPP Timed Text format, and it can very much be embedded in a 3GPP container.  What I meant to say is that the format can not be embedded in any of the other popular video container formats like AVI, MKV, or OGG.  I could go on about the subtle differences between MPEG-4 Timed Text in an MP4 container and 3GPP Timed Text in a 3GPP container, but it would just make you cry, and besides, technical accuracy is for pussies.)</p>
+
+<p>MP4TT defines detailed information on text positioning, fonts, styles, scrolling, and text justification.  These details are encoded into the track at authoring time, and can not be changed by the end user&#8217;s video player.  The most readable description of its features is actually <a href="/web/20110911122338/http://gpac.sourceforge.net/doc_ttxt.php">the documentation for GPAC</a>, an open source implementation of much of the MPEG-4 specification (including MP4TT).  Since MP4TT doesn&#8217;t define a text-based serialization, GPAC invented one for their own use; since their format is designed to capture all the possible information in an MP4TT track, it turns out to be an easy way to read about all of MP4TT&#8217;s features.</p>
+
+<p><a href="/web/20110911122338/http://gpac.sourceforge.net/packager.php">MP4Box</a>, part of the GPAC project, can take an <code>.srt</code> file and convert it into a MPEG-4 Timed Text track and embed it in an existing MP4 file.  It can also reverse the process &#8212; extract a Timed Text track from an MP4 file and output a <code>.srt</code> file.</p>
+
+<p>On Mac OS X, QuickTime supports MP4TT tracks within an MP4 container, but only if you rename the file from <code>.mp4</code> to <code>.3gp</code> or <code>.m4v</code>.  <a href="/web/20110911122338/http://diveintomark.org/archives/2006/07/23/video-howto#qt7">I shit you not</a>.  (On the plus side, changing the file extension will allow you to sync compatible video to an iPod or iPhone, which will actually display the captions.  Still not kidding.)  On Windows, any DirectShow-based video player (such as Windows Media Player or <a href="/web/20110911122338/http://sourceforge.net/project/showfiles.php?group_id=205650">Media Player Classic</a>) supports MP4TT tracks once you install <a href="/web/20110911122338/http://haali.cs.msu.ru/mkv/">Haali Media Splitter</a>.  On Linux, VLC has supported MP4TT tracks for several years.</p>
+
+<h3 id="sami"><a href="/web/20110911122338/http://en.wikipedia.org/wiki/SAMI">SAMI</a></h3>
+
+<p>SAMI was Microsoft&#8217;s first attempt to create a captioning format for PC video files (as opposed to broadcast television or DVDs).  As such, it is natively supported by Microsoft video players, including Windows Media Player, without the need for third-party plugins.  It has <a href="/web/20110911122338/http://msdn.microsoft.com/en-us/library/ms971327.aspx">a specification on MSDN</a>.  It is a text-based format that supports a large subset of HTML formatting tags.  SAMI captions are almost always embedded in an <a href="/web/20110911122338/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats">ASF container</a>, along with Windows Media video and Windows Media audio.</p>
+
+<p>Don&#8217;t use SAMI for new projects; it has been superceded by <a href="/web/20110911122338/http://en.wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language">SMIL</a>.  For historical purposes, you may enjoy reading about <a href="/web/20110911122338/http://www.webaim.org/techniques/captions/windows/">creating SAMI captions and embedding them in an ASF container</a>, as long as you promise to never, ever try it at home.</p>
+
+<h3 id="smil"><a href="/web/20110911122338/http://en.wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language">SMIL</a></h3>
+
+<p>SMIL (Synchronized Multimedia Integration Language) is not actually a captioning format.  It is &#8220;an XML-based language that allows authors to write interactive multimedia presentations.&#8221;  It also happens to have a <a href="/web/20110911122338/http://www.w3.org/TR/SMIL3/smil-timing.html">timing and synchronization module</a> that can, in theory, be used to display text on a series of moving pictures.  That is to say, if you think of SMIL as a way to provide captions for a video, you&#8217;re doing it wrong.  You need to invert your thinking &#8212; your video and your captions are each merely components of a SMIL presentation.  SMIL captions are not embedded into a <a href="/web/20110911122338/http://diveintomark.org/archives/2008/12/18/give-part-1-container-formats">video container</a>; the video and its captions are referenced from a SMIL document.</p>
+
+<p>SMIL is <a href="/web/20110911122338/http://www.w3.org/AudioVideo/">a W3C standard</a>; the most recent revision, <a href="/web/20110911122338/http://www.w3.org/TR/SMIL3/">SMIL 3.0</a>, was just published in December 2008.  If you printed out the SMIL 3.0 specification on US-Letter-sized paper, it would weigh in at 395 pages.  So don&#8217;t do that.</p>
+
+<p>QuickTime supports <a href="/web/20110911122338/http://developer.apple.com/documentation/QuickTime/IQ_InteractiveMovies/quicktimeandsmil/chapter_10_section_1.html">a subset of SMIL 1.0</a>.  WebAIM provides a nice <a href="/web/20110911122338/http://www.webaim.org/techniques/captions/quicktime/">tutorial on using SMIL to add captions to a QuickTime movie</a>.</p>
+
+<h3>Further reading</h3>
+
+<ul>
+<li><a href="/web/20110911122338/http://joeclark.org/book/sashay/serialization/Chapter13.html">Multimedia Accessibility [Joe Clark]</a></li>
+<li><a href="/web/20110911122338/http://www.webaim.org/techniques/captions/">Web Captioning Overview [WebAIM]</a></li>
+<li><a href="/web/20110911122338/http://www.afterdawn.com/guides/archive/subtitle_formats_explained.cfm">Subtitle formats explained [AfterDawn]</a></li>
+<li><a href="/web/20110911122338/http://www.opensubtitles.org/en/downloads">How to play subtitles [OpenSubtitles]</a></li>
+<li><a href="/web/20110911122338/http://en.wikipedia.org/wiki/Subtitle_(captioning)">Subtitle (captioning) [Wikipedia]</a></li>
+<li><a href="/web/20110911122338/http://en.wikipedia.org/wiki/Closed_captioning">Closed captioning [Wikipedia]</a></li>
+<li><a href="/web/20110911122338/http://forum.doom9.org/showthread.php?t=62723">MP4 FAQ [doom9]</a></li>
+<li><a href="/web/20110911122338/http://help.youtube.com/support/youtube/bin/answer.py?answer=100077&cbid=-evuehvvzg96r&src=cb&lev=answer">Adding/editing captions on Youtube videos</a></li>
+</ul>
+
+<p class=c>&#167;
+
+<h3 id=comments>Twenty one comments here (<a href=/web/20110911122338/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-13043"><p>CMML and Kate are the subtitle technologies promoted by Xiph.org Foundation.</p>
+<p class=sig>&#8212;&#8201;<cite>Matthew</cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13043" title="January 7, 2009 @ 4:31 am"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13044"><p>Jeez, you are not making this any easier you know&#8230; I was about to get started on some captioning recommendations but I&#8217;m back to the drawing board thanks to you:-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://www.peterkrantz.com/' rel='external nofollow' class='url'>Peter Krantz</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13044" title="January 7, 2009 @ 5:02 am"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13045"><p>@Mark, I’ve been told that 3GPP TimedText encodes a subset of W3C TimedText in MP4. So wouldn’t that make (a subset of) DFXP the standalone file version of 3GPP TimedText? </p>
+<p>@Matthew, it seems to me that neither CMML nor Kate is really properly promoted as a subtitle solution by Xiph. Instead, there’s an ongoing effort to solve the captioning / subtitling issue in Ogg. See the archives of the mailing list called accessibility at xiph dot org.</p>
+<p>My understanding is that CMML defines how to put metadata text into Ogg but doesn’t properly specify how to reuse the format for subtitles, and I hear that the single implementation of Kate is currently tied to Linux-oriented libraries, which might not be nice if you want to play it in a Windows of Mac OS X app.</p>
+<p>P.S. I’d have included URLs, but the commenting system appeared to barf on URLs.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://hsivonen.iki.fi/' rel='external nofollow' class='url'>Henri Sivonen</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13045" title="January 7, 2009 @ 6:50 am"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13046"><p>You&#8217;ve got a trailing &#8216;(&#8216; at the end of the second paragraph on SubRip. Is something missing there?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://grendelkhan.livejournal.com/' rel='external nofollow' class='url'>grendelkhan</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13046" title="January 7, 2009 @ 9:46 am"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13047"><p>I just checked my VHS recordings and they do, in fact, retain the closed captions. Apparently, the bandwidth limitation does not apply to <em>Super</em> VHS. Who knew?</p>
+<p>There’s a rogue round bracket in your SubRip section.</p>
+<p class=sig>&#8212;&#8201;<cite>David</cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13047" title="January 7, 2009 @ 10:30 am"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13048"><p>All NTSC home video formats (VHS, Beta, 8mm, laserdisc) could and did store closed captions. It was PAL formats that couldn’t (except for Super VHS). I have hundreds of closed-captioned videotapes. So does anyone who ever taped programming off the TV.<br />
+More care, please, Mark.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13048" title="January 7, 2009 @ 10:55 am"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13049"><p>Indeed, VHS keeps NTSC field 21 intact. I used to tape ST:TNG in the late &#8217;80s and rewatch them wth captions (being deaf).</p>
+<p>I recently discovered that, in terms of screen resolution, DVDs displayed in 480p, 720p or 1080p cannot carry captions, and I&#8217;m still not certain why this is the case. I have two players that can handle DVDs: a Philip DVP640 and a nicer, upscaling Toshiba HD-A2. The former is connected over component, the latter over HDMI. The former is the only one that can play captions, IFF the display is set to 480i. The latter doesn&#8217;t seem to be able to display 480i, so, basically, when I get a DVD from Netflix that doesn&#8217;t have English subtitles but has captions, I put it in the lesser DVD player. It&#8217;s a terrible arrangement.</p>
+<p>I completely agree that the only solution that&#8217;ll stick is legislation.</p>
+<p class=sig>&#8212;&#8201;<cite>Jubal</cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13049" title="January 7, 2009 @ 10:56 am"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13050"><p>@grendelkhan: fixed, thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13050" title="January 7, 2009 @ 1:17 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13051"><p>@Joe: fixed, thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13051" title="January 7, 2009 @ 1:17 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13052"><p>@Henri, re DFXP: I have no idea.  <a href="/web/20110911122338/http://gpac.sourceforge.net/doc_ttxt.php" rel="nofollow">http://gpac.sourceforge.net/doc_ttxt.php</a> states &#8220;There is no official textual representation of a text stream. Moreover, the specification relies on IsoMedia knowledge for most structure descriptions.&#8221;  I have no reason not to believe them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13052" title="January 7, 2009 @ 1:19 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13053"><p>@Matthew: Henri is correct, the wiki pages that describe those formats make it clear that they are not endorsed by Xiph.org.  For example, <a href="/web/20110911122338/http://wiki.xiph.org/index.php/OggKate" rel="nofollow">http://wiki.xiph.org/index.php/OggKate</a> starts with &#8220;This is not a Xiph codec, though it may be embedded in Ogg alonside other Xiph codecs, such as Vorbis and Theora. As such, please do not assume that Xiph has anything to do with this, much less responsibility.&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13053" title="January 7, 2009 @ 1:20 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13054"><p>Based on my experience, I&#8217;ve ever seen only Koreans using SAMI or SMIL and anime-fansubbers using SSA or ASS. The rest of the non-commercial world uses SubRip and MicroDVD formats. Having dealt with many of these formats, both watching videos with subtitles and writing code to read and write subtitle files, I feel the need to rant about how much they suck.</p>
+<p>SubRip is actually the only format that does not suck. It&#8217;s very simple, easy enough to edit with a text editor if needed. It does not contain anything excessive and is fairly easy to parse. No specification, but the syntax is obvious and of the markup tags, I&#8217;ve only seen italics and fonts used. The Extended SubRip format that specifies corner coordinates in pixels for each subtitle is rather mad and useless though.</p>
+<p>MicroDVD is a decent frame based format with a bit more style definitions than SubRip. The big problem with MicroDVD is that markup tags affect either the whole subtitle or one entire line; it&#8217;s impossible to, for example, italicize only one word.</p>
+<p>SSA and ASS are far too complex formats with a horrible syntax. If you take a look at the spec (google for &#8216;ass-specs.doc&#8217;) you&#8217;ll find things like fields that are not used, fields that even the spec writer does not know what it does, two different linebreaks: &#8216;\n&#8217; and &#8216;\N&#8217;, their own version of the hexadecimal color string: &#8220;hexadecimal RGB value, but in reverse order. Leading zeroes are not required.&#8221; and even functions for drawing squares and circles.</p>
+<p>In addition to the above, I have dealt with TMPlayer format that does not specify any end times for subtitles and MPL2, which has its own set of markup tags, but can also use markup tags of the MicroDVD format (this was the upgrade from MPL1). SAMI and SMIL I have managed to stay away from.</p>
+<p>Many of these formats are completely lacking specs and often they come in different versions or other varieties with undocumented and incompatible differences. TMPlayer is the craziest; it apparently exists in five different varieties, all under the same name, with completely insignificant syntactical differences.</p>
+<p>The main problem with most of these subtitle file formats is that they try to define far too much what the subtitles should look like. With subtitles that quickly dissapear, readability is very important. The viewer should be able to choose the font, size, color, outline, default placement, etc. of the subtitles. The only effects I consider usable in subtitles is italics and possibly placement exceptions to avoid overlapping with other text on the screen. Even the placement should be defined just as Top, Bottom, Left, Right or something similar instead of pixel coordinates (as most formats do) which break when viewing with a different resolution or even a different font size. Stuff like rotation angle and letter-spacing should have nothing to do with subtitles.</p>
+<p class=sig>&#8212;&#8201;<cite>Osmo Salomaa</cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13054" title="January 7, 2009 @ 1:59 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13055"><p>HDMI cables kill Line 21 captions. There is no workaround.<br />
+If we’re doing corrections, let’s note that the example given of uncaptioned DVDs (some TV series) is true almost exclusively of B- and C-tier series. Due to company policies and a class-action lawsuit, TV series released by major labels always have captioning. Now, they may pointlessly recaption the episodes instead of using the original captions, but they’re there nearly all the time. This does not apply to Canada, which, as in so many things, remains half-assed.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13055" title="January 7, 2009 @ 2:06 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13056"><p>QuickTime Player will also display 3GPP Timed Text streams if you rename the file&#8217;s extension to .m4v. These m4v files will offer working captions on iPhones and iPod touches, which leads to the salutary side effect of the captions not being overlaid over the content on wide aspect-ratio video.<br />
+Timed Text subtitles can be stripped into MP4 containers on Mac OS X using a program called Muxo, which is perpetually pre-release, does very poor bounds-checking (leading to broken video files until the busted text track is stripped out), and is generally not very polished, but which does the job.<br />
+Perian&#8217;s interpolation of subtitles from accompanying .ass, .ssa or .srt files is not 100% reliable &#8212; in fact, I haven&#8217;t been able to get it to work for months, using the latest stable release of Perian.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://www.driftglass.org/' rel='external nofollow' class='url'>Forrest L Norvell</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13056" title="January 7, 2009 @ 3:00 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13057"><p>@Joe: I added a note about HDMI.  Also changed &#8220;television shows&#8221; to &#8220;low-budget television shows.&#8221;  Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13057" title="January 7, 2009 @ 6:20 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13058"><p>@Forrest: I added a note about .m4v and captions on iPhones.  Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13058" title="January 7, 2009 @ 6:20 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13059"><p>@Forrest: there are unofficial binaries of MP4Box for Mac OS X/Darwin.  Surely that&#8217;s a better solution than some pre-alpha hack that corrupts files.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13059" title="January 7, 2009 @ 6:22 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13060"><p>re: Xiph and subtitles<br />
+CMML has a version with explicit caption tags, but it didn&#8217;t get implemented, because we are now working on a better, more inclusive format for time-aligned text.<br />
+As for Kate being not endorsed &#8211; Xiph is very careful in promoting codecs that are immature. Kate has now been around for more than a year and has seen massive development. There are patches for almost all open source video players. Of the new codecs in development, Kate is probably the closes to getting endorsed. But it doesn&#8217;t mean that Kate is the one and only time-aligned text solution supported by Xiph. Kate is awesome when trying to get all time-aligned text into the Ogg container. It is not so awesome as an authoring and display format for the Web. Which is why there may well be an alternative soon. So you get a better choice depending on your aims.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://blog.gingertech.net/' rel='external nofollow' class='url'>Silvia Pfeiffer</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13060" title="January 7, 2009 @ 9:01 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-13061"><p>Thanks, Silvia. That makes a lot of sense.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13061" title="January 7, 2009 @ 9:33 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13072"><p>Hey, Mark.  Really enjoying this series, keep it up!</p>
+<p>Can you site a source for the fact that HDMI drops Line 21?  Ran into this issue the other day at work and we couldn&#8217;t figure out if it was the playout device, the monitor, or the cable that was stripping the CC data.  Would be nice to be able to point to something and say &#8220;Yup, it&#8217;s the cable.&#8221;</p>
+<p>Thanks!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://www.hallucinogenesis.net/' rel='external nofollow' class='url'>Lucas Emery</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13072" title="January 10, 2009 @ 1:37 pm"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-13075"><p>Lucas: Years of discussion on the Captioning mailing list. Not everything in the world has a permalink yet.</p>
+<p>Maybe someone could add a mention on the error-strewn Wikipedia article on captioning (or on HDMI or both). But then you’d need a source like a small-town newspaper or Jimmy Wales.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110911122338/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110911122338/http://diveintomark.org/archives/2009/01/07/give-part-4-captioning#comment-13075" title="January 11, 2009 @ 1:59 am"><img alt="#" src=/web/20110911122338im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110911122338/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110911122338/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110911122338/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110911122338/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110911122338/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.449 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 12:52:30 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 12:23:38 Sep 11, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:04:15 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

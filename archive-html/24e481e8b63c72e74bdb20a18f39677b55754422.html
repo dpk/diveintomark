@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>The &#8220;book&#8221; is dead [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806103711/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806103711/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806103711/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806103711/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806103711im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806103711/http://diveintomark.org/archives/2011/04/15/nativity-scene" title="Translation From MS-Speak to English of Selected Portions of Dean Hachamovitch&#8217;s &#8220;Native HTML5&#8243; announcement">
+<link rel=next href="/web/20110806103711/http://diveintomark.org/archives/2011/06/02/schema-org" title="The unofficial guide to migrating Google Rich Snippets to schema.org">
+<link rel=up href="/web/20110806103711/http://diveintomark.org/archives#p2680" title="April 2011">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; The &#8220;book&#8221; is dead Comments Feed" href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806103711/http://diveintomark.org/' />
+<link rel='prev' title='Translation From MS-Speak to English of Selected Portions of Dean Hachamovitch&#8217;s &#8220;Native HTML5&#8243; announcement' href='/web/20110806103711/http://diveintomark.org/archives/2011/04/15/nativity-scene' />
+<link rel='next' title='The unofficial guide to migrating Google Rich Snippets to schema.org' href='/web/20110806103711/http://diveintomark.org/archives/2011/06/02/schema-org' />
+<link rel='canonical' href='/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead' />
+<link rel='shortlink' href='/web/20110806103711/http://diveintomark.org/?p=2680' />
+<meta name="description" content="Long live content.">
+<meta name="keywords" content="publishing,writing">
+<link href="/web/20110806103711cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806103711/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2011\/04\/29\/the-book-is-dead";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2011/04/29/the-book-is-dead" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806103711" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514111439/http://diveintomark.org/archives/2011/04/29/the-book-is-dead" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:37:11 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110925064642/http://diveintomark.org/archives/2011/04/29/the-book-is-dead" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="25 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110709024819/http://diveintomark.org/archives/2011/04/29/the-book-is-dead?" title="2:48:19 Jul 9, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:37:11 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110811055258/http://diveintomark.org/archives/2011/04/29/the-book-is-dead" title="5:52:58 Aug 11, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2010
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:37:11 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120817201556/http://diveintomark.org/archives/2011/04/29/the-book-is-dead" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="17 Aug 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806103711*/http://diveintomark.org/archives/2011/04/29/the-book-is-dead" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>22 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">3 May 11 - 17 Aug 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:7:000020132100_2012:-1:900000220000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806103711/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806103711/http://diveintomark.org/archives#p2680">April 29, 2011</a> &#8227;
+<h2>The &#8220;book&#8221; is dead</h2> (<a href="/web/20110806103711/http://diveintomark.org/tag/publishing" rel="tag">publishing</a>, <a href="/web/20110806103711/http://diveintomark.org/tag/writing" rel="tag">writing</a>)</div>
+<p>David Flanagan, author of <a href="/web/20110806103711/http://www.amazon.com/gp/product/0596805527/ref=as_li_ss_tl?ie=UTF8&tag=davidflanagancom&linkCode=as2&camp=217145&creative=399349&creativeASIN=0596805527">JavaScript: The Definitive Guide</a>, <a href="/web/20110806103711/http://www.davidflanagan.com/2011/04/javascript-the-1.html">writes</a>:</p>
+
+<blockquote>
+<p>For 15 years I&#8217;ve been one of those lucky authors who has been able to support himself and his family almost entirely on book royalties. But the publishing industry has been in decline and my royalties checks have decreased more-or-less steadily since the dot-com bust, and I&#8217;ve now decided that I need to look for a salaried job.</p>
+</blockquote>
+
+<p>15 years is a long time. What a blessing to have been able to do something you love for that long, and get paid for it.</p>
+
+<p>But then he goes off into the weeds a little bit and starts in with his opinions of piracy and Google&#8217;s role in the world. [Note: I work for Google but not on search. I don't speak for Google and they don't speak for me. It works out well.]</p>
+
+<p>David continues:</p>
+
+<blockquote>
+<p>I was trying to be provocative when I tweeted the question &#8220;Does Google enable piracy?&#8221; But I do think it is a valid question. If Google indexes sites like ebookee that link directly to download sites and makes it easy to find the pirated content you want and even offers suggestions on what to search for, I think there is a case to be made that they&#8217;re encouraging piracy.</p>
+</blockquote>
+
+<p>Note how quickly we&#8217;ve moved the goalposts from &#8220;enabling&#8221; piracy to &#8220;encouraging&#8221; piracy. Lots of technology &#8220;enables&#8221; piracy; after all, it&#8217;s only 1s and 0s. In the analog world, even libraries &#8220;enable&#8221; piracy by putting a photocopier in the same building as a bunch of books. But do libraries &#8220;encourage&#8221; piracy? No, there are big signs next to the photocopier warning you about copyright law, and photocopies are prohibitively expensive to do anything more than copy a few pages for reference. Does technology &#8220;encourage&#8221; digital piracy? No, it&#8217;s only 1s and 0s.</p>
+
+<p>More importantly, contrary to David&#8217;s assertion, ebookee <em>does not have David&#8217;s latest book</em>. The entire site is a scam to get people to sign up for Usenet or &#8220;premium&#8221; file sharing services. They have a page for every book in the universe. A small fraction of them actually have download links, most of which are broken. Mostly, the site just goes round and round. There&#8217;s a case to be made that the site should be delisted because it&#8217;s fucking useless, but its existence in search results does not bolster David&#8217;s argument that Google is &#8220;encouraging&#8221; piracy.</p>
+
+<blockquote>
+<p>And now JavaScript: The Definitive Guide is out. I don&#8217;t have a copy of it yet, but illegal copies are free for anyone who wants one.</p>
+</blockquote>
+
+<p>This is not true; see above.</p>
+
+<blockquote>
+<p>And Google will suggest those illegal downloads to anyone who tries to research the book (see the screenshot).</p>
+</blockquote>
+
+<p>That screenshot actually shows the results of <a href="/web/20110806103711/http://searchengineland.com/how-google-instant-autocomplete-suggestions-work-62592">Google&#8217;s existing filtering program</a> for piracy-related terms like &#8220;bittorrent,&#8221; &#8220;rapidshare,&#8221; and &#8220;megaupload.&#8221; Without that filtering, the suggestion box would be full of piracy-related terms. But more to the point, it would be full of piracy-related terms <em>because that&#8217;s what people search for</em>. Google&#8217;s suggestions come from actual searches. It&#8217;s a mirror onto the world, descriptive not prescriptive. If you don&#8217;t like how the world looks in the mirror, don&#8217;t blame the mirror.</p>
+
+<p>David continues:</p>
+
+<blockquote>
+<p>Here are some small steps that might help:
+
+<ul>
+<li>Google could filter its search suggestions so that they do not actively suggest piracy.</li>
+</ul>
+</blockquote>
+
+<p>Google already does this; see above.</p>
+
+<blockquote>
+<ul>
+<li>Google could flag (without filtering) search results that are likely links to pirated content. Google already flags some results with &#8220;this site may harm your computer&#8221;. Why not flag pirate sites: &#8220;Downloading content from this site may result in legal action by the copyright holder&#8221; or &#8220;Downloads from this site may be illegal&#8221;. Or nice and simple: &#8220;this site may harm your karma&#8221;.</li>
+</ul>
+</blockquote>
+
+<p>The difference is that &#8220;this site may harm your computer&#8221; is based on an objective measurement. You can <a href="/web/20110806103711/http://googleonlinesecurity.blogspot.com/2008/02/all-your-iframe-are-point-to-us.html">read how it works</a>. Suspected sites are automatically verified in a virtual machine running an unpatched browser. It is both fascinating and mind-boggling to imagine that it works at all, much less works at Internet scale in near-real time.</p>
+
+<p>On the other hand, legal concepts like &#8220;copyrighted material&#8221; are more difficult to automate at Internet scale. This is not to say it&#8217;s impossible; YouTube has its <a href="/web/20110806103711/http://www.youtube.com/t/contentid">Content ID program</a> for audio and video, but it relies on the fact that people are actually uploading content to YouTube directly. To replicate this program on RapidShare, Google would need to download everything from RapidShare in order to identify it. Ironically, RapidShare makes this technically difficult in order to discourage third-party downloader programs that help users &#8220;steal&#8221; content from RapidShare without viewing ads or paying for &#8220;premium&#8221; membership.</p>
+
+<p>And even if all the technical hurdles could be overcome, it <em>still</em> wouldn&#8217;t necessarily warrant flagging sites like ebookee, which only hosts <a href="/web/20110806103711/http://www.google.com/search?q=links%20to%20infringing%20content">links to infringing content</a> and not the content itself. (And if Google did start flagging them, they would just add another layer of indirection, or cloak their download URLs, or some other damn thing. You&#8217;ll never beat piracy this way.)</p>
+
+<p>Speaking of &#8220;beating&#8221; piracy, <a href="/web/20110806103711/http://www.davidflanagan.com/2011/04/javascript-the-1.html#comment-2016">an anonymous commenter makes this point</a>:</p>
+
+<blockquote>
+<p>One of the reasons iTunes is so successful is that they successfully compete with the file sharers. &#8230; Why should I waste time looking for an mp3 that may or may not be of any decent quality when I can download immediately at low cost from iTunes?</p>
+</blockquote>
+
+<p>Commenter &#8220;Peter&#8221; <a href="/web/20110806103711/http://www.davidflanagan.com/2011/04/javascript-the-1.html#comment-2020">makes a related point</a>:</p>
+
+<blockquote>
+<p>I have been an OReilly Safari subscriber for several years. I can recommend this to every developer out there. &#8230; Yet, must admit it still pains me that for ~$500/year we as honest subscribers can not get the same convenience (offline access, unencumbered PDF&#8217;s) as people who just download a pirated PDF library for free.</p>
+</blockquote>
+
+<p>So is piracy really the problem? Is it even <em>a</em> problem? David has provided no evidence that his book is, in fact, wildly pirated. It&#8217;s not even available yet from dedicated pirate sites. But the larger, more disturbing question is this: who bothers to steal books these days when you can go to Stack Overflow or a web forum or, yes, even Google, type a question, and get an answer?</p>
+
+<p>I&#8217;ll close with <a href="/web/20110806103711/http://www.davidflanagan.com/2011/04/javascript-the-1.html#comment-2022">this observation from &#8220;Curt&#8221;</a>:</p>
+
+<blockquote>
+<p>Most technical book are actually really painful to navigate, but at [one] time they were the only option, now I can find context relevant information in seconds hence books are <em>less</em> convenient <em>and</em> they cost money. The default is now deeply linked, highly specific data. IMHO you are not losing money to piracy, you are failing to make money due to the inadequacy of the book as a medium for technical data.</p>
+</blockquote>
+
+<p>I think David would actually agree with this. In response to another comment, <a href="/web/20110806103711/http://www.davidflanagan.com/2011/04/javascript-the-1.html#comment-2007">David himself wrote</a>:</p>
+
+<blockquote>
+<p>I will say that my book was written as a book, and it probably wouldn&#8217;t work well online (regardless of whether it could work financially that way). And maybe that is a big piece of my revenue problem: I&#8217;m producing content in an old-fashioned medium.</p>
+</blockquote>
+
+<p>The &#8220;book&#8221; is dead. Long live &#8220;content.&#8221; And God help us all if world-class writers like David can&#8217;t make a living from it.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty nine comments here (<a href=/web/20110806103711/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-14102"><p>I use Google to search developer.mozilla.org. That&#8217;s what makes me not need to buy JS books&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://ian.mckellar.org/' rel='external nofollow' class='url'>Ian McKellar</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14102" title="April 30, 2011 @ 1:09 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14103"><p>As long as there is no search interface on each paper book I buy, I&#8217;l keep &#8220;pirating&#8221; digital copies of them for quick access.</p>
+<p class=sig>&#8212;&#8201;<cite>Henk Poley</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14103" title="April 30, 2011 @ 1:16 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14104"><p>It is not Google&#8217;s fault. The foundation of our capitalist society is to use lowest cost to get maximum benefit. This is not a bad thing, it encourages technological advancement, majority could get more for less. This pushes old fashioned industry to rethink and find new ways to benefit themselves as well as  to the society.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://www,blog.highub.com' rel='external nofollow' class='url'>Shi Chuan</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14104" title="April 30, 2011 @ 2:18 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14105"><p>I believe David thinks the publishing business is different than the movie business, who in turn think the movie business is different from the music business, and so on&#8230; Like you say, it&#8217;s all 0s and 1s.</p>
+<p>The thing is, I have all of David&#8217;s books (even the Ruby one), and have some of them repeated in PDF to carry around on the iPad (you can&#8217;t really just drop &#8220;Java in a Nutshell&#8221; in you backpack), and this is because O&#8217;Reilly is the iTunes of book publishers: &#8220;You have the paper version? Here, have a bazillion (ok, 4) different unencumbered digital formats of it for $5&#8243;.</p>
+<p>Now, why would I waste time on Google and a bunch of shady sites when O&#8217;Reilly gives me a far better experience for $5? Given that I live in England, it&#8217;s something like £2.99. I can&#8217;t even get a pint for £2.99!</p>
+<p>So yes David, &#8220;The world has changed&#8221;. Not Google, or piracy. And to paraphrase Mark, it&#8217;ll be a sad day when authors like you can&#8217;t do what you want.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://pedrofigueiredo.org/' rel='external nofollow' class='url'>Pedro Figueiredo</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14105" title="April 30, 2011 @ 3:14 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14106"><p>I&#8217;m not even going to lie. I use Google to find pirated material all the time. Until it removes sites from its index, I&#8217;ll continue to use it.</p>
+<p class=sig>&#8212;&#8201;<cite>Jack</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14106" title="April 30, 2011 @ 3:24 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14107"><p>I hardly know what Java is, but if I write </p>
+<p>JavaScript The Definitive Guide site:mediafire.com</p>
+<p>on Google&#8217;s search page, cha-ching! Presto.</p>
+<p class=sig>&#8212;&#8201;<cite>A guy of the internets</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14107" title="April 30, 2011 @ 4:48 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14108"><p>Regarding &#8220;Why should I waste time looking for an mp3 that may or may not be of any decent quality when I can download immediately at low cost from iTunes?&#8221; see method above, and swap JavaScript for &#8211; say &#8211; name of band and The Definitive Guide to &#8211; say &#8211; album title. Works like a charm :)</p>
+<p class=sig>&#8212;&#8201;<cite>That guy from the internets</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14108" title="April 30, 2011 @ 4:50 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14109"><p>The book isn&#8217;t dead&#8230; traditional publishers and retailers are. Why support an industry that gives so little to its content producers?</p>
+<p class=sig>&#8212;&#8201;<cite>Dannii</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14109" title="April 30, 2011 @ 7:08 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14110"><p>With Kindle, Kobo, and iBooks being so easy to use, my absolute first step whenever I want to buy a book is those three sources.  Yet I can&#8217;t believe how many reference books are either not available, or nearly the same price as the physical edition.</p>
+<p>Publishers need to wake up and learn the same lessons that it&#8217;s taken the music industry a decade tostill struggle to  understand.  Affordable prices and ease of access can beat piracy.</p>
+<p class=sig>&#8212;&#8201;<cite>Brian G</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14110" title="April 30, 2011 @ 9:02 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14111"><p>Excellent post, Mark. Your voice of reason in a world filled with FUD is a relief to read. Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite>Dylan Parker</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14111" title="April 30, 2011 @ 9:41 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14112"><p>Mark,<br />
+With your experiment with &#8220;Dive Into HTML5&#8243; did you find that it hurt or drove your book sales? I think a blended approach of having content available online, and a deeper amount available as a bound and/or ebook edition is the right approach. </p>
+<p>I can say with certainty that having the ability to read parts of your book online drove my purchase of it.</p>
+<p>Largely because it&#8217;s fucking brilliant.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://www.simpleprimate.com/' rel='external nofollow' class='url'>James Williamson</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14112" title="April 30, 2011 @ 9:50 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14113"><p>Google works great for finding PDF of books. If I can&#8217;t find something on the pirate bay, i search on google using filteype filter and google always points me to a working torrent file. Keep the good work guys!</p>
+<p class=sig>&#8212;&#8201;<cite>John Adams</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14113" title="April 30, 2011 @ 11:12 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14114"><p>It&#8217;s kind of sad that the contents of a novel or a book of poems will never be more than &#8216;content&#8217; to you, but it&#8217;s to be expected of geeks, I suppose. Anyway, painting is dead now that we have photography.</p>
+<p class=sig>&#8212;&#8201;<cite>arparp</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14114" title="April 30, 2011 @ 12:30 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14115"><p>If you still want to sell books just remember this:<br />
+I have never found a book with an index that listed up the 5 most relevant words.<br />
+I am not interested in your life, your family, your prof, your funny jokes or what you had for lunch. No prologue, no preamble, no preface, no introduction, no proem and no whatsoever I don&#8217;t care about. If I want to read stories, I buy books about stories.<br />
+I want a book that is complete in itself, when I see that book in an online store and just below the corrections, I will not buy it. Work hard and you will deserve my money I worked hard for.<br />
+I will not buy a book that is just in my shelf behind me to impress my customers in my office.<br />
+I need a reference, a book that is so well organised that I can find information faster than if I had to read all top 5 links provided by google.<br />
+I have never managed to compile given code in the way it was described in books, not even when the compiler was on the same cd in the envelope, necessary adjustments and customising had always to be done.</p>
+<p>If you want to sell me books, make it worth it ..</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://kuche.myminicity.com/env' rel='external nofollow' class='url'>Harry Pachty</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14115" title="April 30, 2011 @ 12:53 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14116"><p>Few thoughts:<br />
+- there are tons of books published (most of not so good quality) and Google helps to search for the good ones<br />
+- we don&#8217;t really relay on reading for knowledge gathering (so it might be that Google killed reading!)<br />
+- who have time for books anyway?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://www.inquisitivechap.com/' rel='external nofollow' class='url'>Stefan</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14116" title="April 30, 2011 @ 1:17 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14117"><p>Exactly. I used to buy a lot of tech books. Now, I maybe buy 1 book on a new subject, get most of what I need from that, then fill in for the unknown bits with articles, sites like CodeProject and StackOverflow.</p>
+<p>Also, a lot of tech books are really quite poorly written, which means that I now need a lot of people recommending a book before I&#8217;ll pick it up.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://www.timalmond.com/' rel='external nofollow' class='url'>Tim Almond</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14117" title="April 30, 2011 @ 1:23 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14118"><p><b>15 years is a long time. What a blessing to have been able to do something you love for that long, and get paid for it.</b></p>
+<p>And after that condescending phrase, bs ensues&#8230;</p>
+<p>I would love to see the opinions on the same matter of a Marc Pilgrim FIRED from Google and forced to make by with the occasional programming gig and book royalties&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>foljs</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14118" title="April 30, 2011 @ 1:45 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14119"><p>Also have in mind that the iTunes Store model &#8220;works&#8221; but it hasn&#8217;t been adapted to all the world, let me explain, I&#8217;m from Honduras (Central America) and there&#8217;s a reason why you heard about so many piracy news or really scary numbers coming from our countries. First, we have no access to the iTunes Store; we cannot buy mp3s or else via iTunes Store (if you try most likely you&#8217;ll get a message like this: &#8220;Sorry, not available to your country&#8221;); second, PayPal will not accept your debit card or bank account, it just doesn&#8217;t work, so if you think about the number of payment methods depending upon PayPal or credit card emitted in a specific subset of countries (for example Europe or North America) YOU (publishers/stores) ARE DELIBERATELY BLOCKING US FROM PAYING. On the top of that, there&#8217;s a real difference in the world, some people in my country live with under US$2 a day!, so when you say US$0.99c a song to a person in the US or in England, yeah for them it&#8217;s really cheap but it&#8217;s not the same for the rest of the world. There has to be some kind of price translation, but then people will think &#8220;I will buy it in X country because it&#8217;s cheaper&#8221; so the whole thing it&#8217;s kinda broken&#8230; I do think the best model so far is Mark&#8217;s because it doesn&#8217;t block the access to the content (it&#8217;s free! it won&#8217;t force to be a &#8220;pirate&#8221;) which is the goal at the end right?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://yamilgonzales.com/' rel='external nofollow' class='url'>Yamil Gonzales</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14119" title="April 30, 2011 @ 1:51 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14120"><p>@Dannii<br />
+<b>The book isn’t dead… traditional publishers and retailers are. Why support an industry that gives so little to its content producers?</b></p>
+<p>Yes, because people do what they do out of interest for the producers of the stuff they buy/pirate&#8230;</p>
+<p>People don&#8217;t seem to have a problem to support the industries that produce 95% of the imported goods cheaply at subsistence (or barely above) wages in third world countries (seeing that stuff like &#8220;Fair Trade&#8221; products are niche at best) &#8211;but when it comes to how much &#8220;content producers&#8221; are paid, everyone is suddenly a bleeding heart and wants to stick it to the big content&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14120" title="April 30, 2011 @ 1:54 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14121"><p>I love when authors publish thee technical content online for free &#8211; Bruce eckel is another author that does this. He makes money from serves he has too like training.  I am glad to see authors like you guys innovating and helping push the industry forward.  I love reading and buy my books on kindle&#8230; Too bad so few tech books are available there.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://jamesrsullivan.com/' rel='external nofollow' class='url'>James Sullivan</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14121" title="April 30, 2011 @ 2:33 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14122"><p>@ Yamil Gonzales (&amp; @all to):<br />
+Thank you for speaking up. I live in Tangier, Morocco, and the same goes by here. The make-me-feel-in-da-place-stores have very restricted access in a lot of countries. I may have 500$ to blow for &#8220;content&#8221; each month, but online resellers doesn&#8217;t want it. True that there are finance and banking rules messing with us (ex. all world currencies aren&#8217;t &#8220;freely exchangeable&#8221;, and local governments may prevent &#8220;currency export&#8221;), but [/strike]The Stores[/strike] The Big Artists Supporters are a revival of the old era when, as a customer, you were geographically constrained (shocking!): you have to be * somewhere* in order to buy and access something: oh ma! Internet is no longer The Internet!</p>
+<p>One can extend the philosophical implications of our geographical constraints as a customer (possibility of paying with local currency?), and, dare I, as a citizen (because of random born location, the &#8220;global digital content&#8221; is actually not global..?)..</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://www.achrafkassioui.com/' rel='external nofollow' class='url'>Achraf Kassioui</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14122" title="April 30, 2011 @ 3:08 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14123"><p>About ebooke, I think you are wrong. They have real links to tons of books. If the links are broken is because publishers complain.<br />
+Let&#8217;s be honest, a search like book-title + rapidshare, torrent or ebookee or whatever fileshare service will have the &#8220;correct&#8221; pirated-books results from Google. There is no excuse, you know that, everybody knows that.<br />
+Certainly Google can fix that, if that is morally correct or not, that&#8217;s a different issue.</p>
+<p class=sig>&#8212;&#8201;<cite>Chris</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14123" title="April 30, 2011 @ 3:13 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14124"><p>As I wrote to Gruber about the original article, and before I had read the above:<br />
+This is nothing more than a marketing failure. It&#8217;s a modern, search-engine-driven marketing failure, but a marketing failure all the same. The worst thing an author can do is to let anyone else manage their product.<br />
+Who is responsible for marketing these books?<br />
+What additional value are legitimate purchasers offered?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://steveweller.com/' rel='external nofollow' class='url'>Steve Weller</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14124" title="April 30, 2011 @ 3:27 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14126"><p>I find it interesting that the price structure for this book is such that Amazon charges less money to provide someone a physical copy of this book to their home or office then the cost of purchasing the kindle version of this same book.</p>
+<p class=sig>&#8212;&#8201;<cite>Ken Vedaa</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14126" title="April 30, 2011 @ 3:54 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14127"><p>&#8220;15 years is a long time. What a blessing to have been able to do something you love for that long, and get paid for it.&#8221;</p>
+<p>15 years takes you from 25 to 40. yay, go ahead and start a new career, competing against the 25-year-olds. np.</p>
+<p class=sig>&#8212;&#8201;<cite>hapa</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14127" title="April 30, 2011 @ 4:08 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14128"><p>There&#8217;s always been two kinds of technical book &#8211; pedagogic (Dive Into being an excellent example) and reference. Actually, there&#8217;s a 3rd type, which is the one that mixes the two into a gigantic piece of bloat.</p>
+<p>Reference is definitely best replaced by Hypertext, but I think pedagogic still has legs. (Books still beat video tutorials by a long way).</p>
+<p class=sig>&#8212;&#8201;<cite>JulesLt</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14128" title="April 30, 2011 @ 4:12 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14129"><p>All this BS is irrelevant. Google has no interest in books except as a tool to entrench their monopoly. It doesn&#8217;t matter how books are delivered, via piracy or legit online venues, as long as Google controls access. Google is trying to become a quasi-governmental copyright registrar AND book seller, profiting from both administering and registering copyrights, as well as selling those copyrighted materials. That is THE definition of a monopoly It is only a miracle that Google&#8217;s orphan books settlement was overturned in the courts. If it hadn&#8217;t, Google would have seized the entire publishing industry by the balls, they were already dictating their own terms to the publishers. Mark, aren&#8217;t you tired of helping Google become evil? Or can you segregate your little coding jobs from the big picture, and wash your hands of it all?</p>
+<p class=sig>&#8212;&#8201;<cite>Charles</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14129" title="April 30, 2011 @ 4:14 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14130"><p>Really inspiring! Couldn&#8217;t agree more with the analysis, except:<br />
+on the &#8220;Google is more convenient for an answer than (stealing) a book&#8221;, Seth Godin will think differently &#8211; books(are supposed to) contain an author&#8217;s big chunk of time as well as his &#8211; as an individual&#8217;s &#8211; IDEA (<a href="/web/20110806103711/http://www.thedominoproject.com/2011/04/two-of-the-things-that-make-a-book-a-book.html" rel="nofollow">http://www.thedominoproject.com/2011/04/two-of-the-things-that-make-a-book-a-book.html</a>). </p>
+<p>Wikipedia outdated dictionaries, google/forums outdated manuals(even programming techniques, as long as they are easily written in instructions/steps). But IDEAS (programming aesthetics, how to change the world for the better via programming) cannot be explained in a few words from a google search result. A book may do this (books e.g. Linchpin, The War of Art, DV Rebel&#8217;s Guide). DV Rebel&#8217;s Guide polar-reversed my perception of film-making: to give it the least credit it has explained filmmaking so well that I am sure it is my career as opposed to the vague Electrical Engineering major. What got me to read the book &#8211; the revolutionary Canon DSLR Camera and its internet sensation &#8211; is comparably in-human, it does not give IDEAS. (btw I pirated the book but bought 3 copies later to give to my colleagues &#8211; but not to support &#8220;pirating&#8221;)</p>
+<p>Summing up the above chaotic paragraph &#8211; Money and the means to Write merely empowers a writer&#8217;s freedom to spread ideas &#8211; Spreading of IDEAS are what writers live for &#8211; I hope</p>
+<p class=sig>&#8212;&#8201;<cite>Dan Liu</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14130" title="April 30, 2011 @ 4:42 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14131"><p>Yamil Gonzalez is absolutely right. I live in Argentina. No iTunes store for my country. Want to see a free TV show available legally free in the US? Nope, not available in your region. And what about software? It &#8216;s generally more expensive in dollars than in the US. Content producers should take note of a simple math problem: $100 x 0 units is much less than $10 x some units. Do that and you will get two benefits: a) real revenue; b) educate users into paying.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://www.fiscaldemesa.com.ar/' rel='external nofollow' class='url'>fahirsch</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14131" title="April 30, 2011 @ 5:17 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14132"><p>If you write tech books, sure, books are dead. I don&#8217;t see the benefit of looking up and cross indexing novels to do deep searching of the plot or whatever. But who&#8217;s counting novels as books, right?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://www.ademloos.be/' rel='external nofollow' class='url'>Koen van Hees</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14132" title="April 30, 2011 @ 5:21 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14133"><p>TLDR; Google isn&#8217;t promoting piracy, but yet another industry is being destroyed by the internet through no fault of Google&#8217;s with no business model to replace it.  Google doesn&#8217;t care.</p>
+<p>Has it occurred to you that stackoverflow might be good for quick answers but is a vacant lot when it comes to depth?  Depth and analysis take the time of individuals &#8211; they don&#8217;t arise naturally from the postings of a million monkeys. For individuals to take time, they must be able to support themselves.  Google employees are perhaps the least likely to care about how other people make a living given that they are some of the most privileged employees on the planet.  Do they believe that everyone else lives as they do? Google may be paying the best programmers to optimize advertising&#8230;</p>
+<p>&#8230;but where is the GooglePlex for authors?</p>
+<p>Not all ways of organizing the world&#8217;s information are equally good.  Forcing everyone else to dumb it down into little chunks may make the Google&#8217;s work easier and may make it easier to sell ads against it, but in the end, humanity loses.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://www.google.com/' rel='external nofollow' class='url'>Interested</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14133" title="April 30, 2011 @ 5:43 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14134"><p>Be careful in comparing Google with a library. Remember that libraries paid for the book at least once.</p>
+<p class=sig>&#8212;&#8201;<cite>Ronbo</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14134" title="April 30, 2011 @ 5:56 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14135"><p>&#8220;A small fraction of them actually have download links&#8221; &#8211; I disagree. Most stuff I find on ebookee works. But here&#8217;s the interesting part. After having a good look at &#8220;Filemaker 11 Bible&#8221; or &#8220;Visual Quickstart Guide to InDesign&#8221; and realizing the content/format works for me, I head to Amazon and BUY the book.</p>
+<p>Seems to work well for Cory Doctorow, too, who GIVES AWAY his books THE SAME DAY they are put on the shelves of bookstores. He sells MORE books this way. For the vast, Vast, VAST majority of writers, musicians and artists of all kinds, piracy is not the problem &#8211; obscurity is.</p>
+<p><a href="/web/20110806103711/http://www.forbes.com/2006/11/30/cory-doctorow-copyright-tech-media_cz_cd_books06_1201doctorow.html" rel="nofollow">http://www.forbes.com/2006/11/30/cory-doctorow-copyright-tech-media_cz_cd_books06_1201doctorow.html</a></p>
+<p class=sig>&#8212;&#8201;<cite>Pirate</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14135" title="April 30, 2011 @ 6:01 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14136"><p>@James Williamson &#8211; I don&#8217;t know the overall numbers, but I bought Mark&#8217;s book precisely *because* he gave away so much if it for free online. It made me want to buy the paperback to (a) have a hard copy I could reference and (b) support him in exchange for his generosity.</p>
+<p>I&#8217;d be curious to find out what the total sales numbers are, and if Mark thinks this approach boosted the numbers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103711/http://jscariati.wordpress.com/' rel='external nofollow' class='url'>James</a></cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14136" title="April 30, 2011 @ 10:44 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14137"><p>Dismissing long form content and the power it have to communicate overarching idears and presenting tones of information in a standardised way is something most ppl dismiss the importance of right up to the point that they dont have that option anymore.</p>
+<p>Books are not the cutting edge and amazons singles short form writing is an interesting way forward. But throwing out copyright will lead to all content being styled as infotainment with the amount of effort going intoinfotainment is near zero.</p>
+<p class=sig>&#8212;&#8201;<cite>Jakob Damkjær</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14137" title="May 1, 2011 @ 2:47 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14138"><p>Your argument about piracy is, &#8220;Your product is going to fail to make money and/or nobody is looking for it, so what difference does it make if people pirate it?&#8221;. Moron. This is totally written from the point of view of an ivory tower code monkey and not creative artist. Regardless of the nature of David&#8217;s technical books and their widely available content, you make ignorant, overarching comments about all of publishing and piracy. Remember how steve jobs talks about the intersection of technology with the humanities? Not that Apple is performing that perfectly, but it is exactly what Google doesn&#8217;t understand.. just a bunch of geeks.</p>
+<p class=sig>&#8212;&#8201;<cite>joey</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14138" title="May 1, 2011 @ 2:51 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14139"><p>I make my living as a writer too &#8212; albeit as a reporter and not a book author (I&#8217;d write technical books if I had the time/was contractually allowed to pursue the topics I&#8217;m approached about) &#8212; so I understand David&#8217;s frustration, but I&#8217;m also a consumer and I think he misses his target a bit. </p>
+<p>Have I pirated books before? Yes. Was it because it was faster/easier than ordering a print copy? Almost always, yes. I got your book from the Kindle store and love having the combination of a digital copy with the tangibility of a paper book (thanks iPad!), unfortunately, most technical publishers still make getting a quality PDF version of a boom a chore, or the PDF is poorly done or the price is more than print. </p>
+<p>Authors should take a more proactive role not just in digital licensing, but marketing. Safari Online works well but has a horrendous interface. If I could buy a digital edition with updates, for example, I&#8217;d buy a lot more technical books. As it stands, the speed in which technical books are outdated by the time they are puished is to me, the bigger concern for those authors than piracy. </p>
+<p>I was asked to write an iPad book last fall &#8212; I had to turn it down because of a clause in my contract, but in retrospect, I&#8217;m glad I did. The book (by another author) was published a week after iPad 2 was released. That instantly dated half the information. </p>
+<p>This gets off the topic of piracy, but it underscores to me, the greater problem of immediacy. It&#8217;s not just that StackOverflow is free or faster, it&#8217;s that it&#8217;s often more up to date than a reference book. When I was learning C in 8th grade, I could use the book from Barnes &amp; Noble. When I was learning Diango two summers ago, the web with it&#8217;s updated, real-time nature was better. God, why even bother pirating a jQuery book now that&#8217;s already out of date. </p>
+<p>I don&#8217;t know the solution for David but it will probably need to include reassessing what he writes about and for what medium.</p>
+<p class=sig>&#8212;&#8201;<cite>Christina Warren</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14139" title="May 1, 2011 @ 3:30 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14140"><p>David comes across as a whiney brat.  Oh no, now he has to get &#8220;a real job&#8221;!  The horrors!</p>
+<p>He is correct when he says &#8220;If I can&#8217;t whine on my blog, where can I whine?&#8221;  That&#8217;s his prerogative, absolutely.</p>
+<p>But especially with technical material, and the sites you mentioned like Stack Overflow, you can get targeted, direct answers and information, either in real time or close to it.  The fact that David has been able to earn a living from writing tech books for 15 years is amazing &#8211; he should be proud &#8211; but all good things must come to an end *sometime*.</p>
+<p>Hell, I graduated top of my class in Computer Engineering from one of the most prestigious schools in the U.S., and every day my boss (the company CTO) is asking me &#8220;How can we outsource more of our hardware and software development to China &amp; India?  At least in cases where it makes sense?&#8221;  (There&#8217;s the disconnect, I think a lot of outsourcing is a false economy these days, but I am probably not the most objective on this topic, as I&#8217;m often the one cleaning the mess left from the most recent Chinese or Indian outsourcing experiment.)</p>
+<p>Anyway, David needs to learn how to compete, how to monetize the value, the unique selling proposition, that he brings to the table.  What does he do that others cannot?  Maybe he should consult (a tough path, I know it), blog &amp; put up ads (then he&#8217;ll cry about AdBlock et. al.) or just go to Dice.com &amp; find a nice Javascript job formatting input text fields or something.</p>
+<p>Adapt or Die, David.  The world is changing at an accelerating pace, figure out where you want to be and work towards it.</p>
+<p>Regarding his rant against Google, it holds no water.  I won&#8217;t say any more about that.</p>
+<p>One last thing &#8212; regarding ORA&#8217;s Safari.  I have tried it 2x and still can&#8217;t stand it.  Like many operations, they treat their paying customers like criminals. DRM, limited download capability, crumb-at-time visibility, etc&#8230;  It&#8217;s sad, but I&#8217;ve seen many people who own books still go out &amp; download the PDF version simply because it&#8217;s compact &amp; searchable.  I&#8217;m not justifying it, I&#8217;m just explaining the reality. But old school firms (publishers, movies, TV, etc.) are resisting change instead of embracing it, because they&#8217;ve lived high on the hog for so long, they&#8217;re terrified of anything that threatens the &#8220;perpertual ATM&#8221; business model they&#8217;ve enjoyed.</p>
+<p>ORA should provide a PDF of every copy of their book when you buy a hardcopy. I know they&#8217;d argue &#8220;but then it will get pirated!&#8221; &#8211; guys, you &amp; I both know that probably every ORA title that&#8217;s ever been printed is available somewhere for download.  Why?  There are 1 billion Chinese, and 1 billion Indians, with little money, and lots of free time, little opportunity, and a huge thirst for knowledge &amp; advancement/betterment.  Of course it&#8217;s worth the time for someone to scan/rip &amp; share the book.  All it takes is one.</p>
+<p>David, take a look in the mirror, face reality, put on a clean suit, and re-enter the job market with a smile on your Javascript face.  All things considered, you don&#8217;t really have it so bad.</p>
+<p class=sig>&#8212;&#8201;<cite>Oliver H</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14140" title="May 5, 2011 @ 2:22 pm"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14141"><p>Copyright law is stronger in the US than any other country&#8230;and it is holding us back. The countries with the strongest growth, China and India, have the least copyright protection. Copyright beyond a short limit holds back economies. While I own a physical copy of david&#8217;s book, I use the pdf of it three times as often.</p>
+<p>The real question is how writing would be affected if copyright law were changed. Would we have fewer good books if we shortened copyright terms from 70 years after author death to 20 years after author death? I doubt it. Would fewer good books be written if google eliminated all of its links to unauthorized copies of books. No way.</p>
+<p>Copyright owners are all seeking a handout but the real truth is what improves society most is a very limited copyright.</p>
+<p class=sig>&#8212;&#8201;<cite>Andrew</cite>&#160;<a class=p href="/web/20110806103711/http://diveintomark.org/archives/2011/04/29/the-book-is-dead#comment-14141" title="May 6, 2011 @ 1:57 am"><img alt="#" src=/web/20110806103711im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806103711/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806103711/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806103711/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806103711/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806103711/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.405 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:48:23 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:37:11 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:03:18 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

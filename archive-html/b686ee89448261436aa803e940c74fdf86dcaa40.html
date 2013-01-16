@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Foolproof [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806105624/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806105624/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806105624/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806105624/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806105624im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806105624/http://diveintomark.org/archives/2003/10/16/atom_revealed" title="Atom revealed">
+<link rel=next href="/web/20110806105624/http://diveintomark.org/archives/2003/10/22/blackjack" title="Naming">
+<link rel=up href="/web/20110806105624/http://diveintomark.org/archives#p1427" title="October 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Foolproof Comments Feed" href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806105624/http://diveintomark.org/' />
+<link rel='prev' title='Atom revealed' href='/web/20110806105624/http://diveintomark.org/archives/2003/10/16/atom_revealed' />
+<link rel='next' title='Naming' href='/web/20110806105624/http://diveintomark.org/archives/2003/10/22/blackjack' />
+<link rel='canonical' href='/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof' />
+<link rel='shortlink' href='/web/20110806105624/http://diveintomark.org/?p=1427' />
+<meta name="description" content="An allegory of technology.">
+<meta name="keywords" content="breadmachine,humor,lighthouse,personal">
+<link href="/web/20110806105624cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806105624/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/10\/20\/foolproof";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/10/20/foolproof" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806105624" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514114027/http://diveintomark.org/archives/2003/10/20/foolproof" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:56:24 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514114027/http://diveintomark.org/archives/2003/10/20/foolproof" title="11:40:27 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:56:24 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620062806/http://diveintomark.org/archives/2003/10/20/foolproof" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:56:24 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806105624*/http://diveintomark.org/archives/2003/10/20/foolproof" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>37 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">17 Apr 06 - 6 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000101382100_2007:-1:010111000010_2008:-1:211100001100_2009:-1:100000000010_2010:-1:100001000021_2011:7:000010010000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806105624/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806105624/http://diveintomark.org/archives#p1427">October 20, 2003</a> &#8227;
+<h2>Foolproof</h2> (<a href="/web/20110806105624/http://diveintomark.org/tag/breadmachine" rel="tag">breadmachine</a>, <a href="/web/20110806105624/http://diveintomark.org/tag/humor" rel="tag">humor</a>, <a href="/web/20110806105624/http://diveintomark.org/tag/lighthouse" rel="tag">lighthouse</a>, <a href="/web/20110806105624/http://diveintomark.org/tag/personal" rel="tag">personal</a>)</div>
+<div class="punch">
+<img src="/web/20110806105624im_/http://wearehugh.com/public/2003/10/bread.jpg" alt="[bread loaf]" title="" width="240" height="180">
+<p><a href="/web/20110806105624/http://flickr.com/photos/vieuxbandit/279856665/">Bread-y-oh</a> &copy; <a href="/web/20110806105624/http://flickr.com/people/vieuxbandit/">Helene Jutras</a> / <a title="used under Creative Commons Attribution 2.0 License" href="/web/20110806105624/http://creativecommons.org/licenses/by/2.0/">CC</a></p>
+</div>
+
+<p>I have been coping with my new bread machine <a href="/web/20110806105624/http://diveintomark.org/archives/2003/05/05/in_brief_bread_machine_edition">for several months now</a>, with distinctly mixed results.  The first loaf came out great, an outcome which I attribute entirely to beginner&#8217;s luck.  The second loaf failed spectacularly, by which I mean that it failed to mix, bake, or rise, three steps which are generally considered crucial to successful breadmaking.</p>
+
+<p>At this point I decided to quietly stop blogging about it, in an attempt to project, as they say in The Matrix, a somewhat fantasized mental projection of my digital self.  Online, I am a god who commands the respect and adoration of thousands.  Offline, I am a moron who can&#8217;t bake bread in a bread machine.  This blogging thing, it has legs, but not for the reasons you&#8217;ve been told about.</p>
+
+<p>Anyway, it turned out that the bread machine basket, in which you mix the ingredients and then lower into the bread machine proper, was not properly inserted.  It goes in, in fact it goes in deceptively easily, but apparently you have to give the basket an extra push right at the end to get it past a set of two locking tabs.  My old bread machine, which I remember fondly, did not work like this.  My old bread machine, which outlived four relationships, three apartments, two states, and a cat, just needed a little twist at the end to lock the basket in place.  My old bread machine was better.</p>
+
+<p>Things went downhill from there.  One loaf failed because I forgot to add yeast.  (<q>It puts the lotion in the basket, or else it gets the hose&#8230;</q>)  One loaf failed because I incorrectly inserted the basket into the bread machine proper <em>in exactly the same way as I had failed before</em>.  One failed for reasons that are not entirely clear, but may have been related to my following a recipe I found on an Internet site that also advertised amateur home videos with names like <q>Julia Child Gone Wild</q>, a variety of food fetish sites, and the movie <q>American Pie</q>.</p>
+
+<p>In between these spectaular failures, there were intermittent successes, a fact which in no way mitigates the shame and humilation of discovering, after 3 and a half hours, that you have failed to bake bread <em>in a fucking bread machine</em>.</p>
+
+<p>I am here to report the latest &#8212; and mostly likely final &#8212; failure.  I decided last night to rush headlong into the fray once more, and furthermore decided to use the ultra-sophisticated timer function in order to have fresh bread first thing in the morning.  This is generally beyond my capabilities, since it involves doing math in my head, but I cheated and used my wireless-Internet-enabled laptop to do the calculation in the Google calculator, thus utilizing over $3000 dollars worth of hardware and software locally and God-only-knows how much hardware remotely (<q>there are fields, endless fields, where Google servers are no longer born, they are grown</q>) in order to compensate for my inability to count to 8 without wandering off and logging on to IRC.</p>
+
+<p>I set the timer successfully, and I woke up this morning to discover that I had failed to push <q>Start</q>.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty eight comments here (<a href=/web/20110806105624/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li class=tb id="comment-4957"><cite><a href='/web/20110806105624/http://feralboy.com/log/links/archives/2003_10_20.html#000593' rel='external nofollow' class='url'>Link Sideblog</a></cite>&#160;(trackback)</li>
+<li id="comment-4930"><p>Don&#8217;t you think that at this point, it might be worth the effort to buy some LEGO MindStorms, build a robotic arm attachment for the breakmaker, and whip up a Python web service that will automagically convert simple instructions submitted in the form of an extended Atom API into the proper sequence of button presses?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://dougal.gunters.org/' rel='external nofollow' class='url'>Dougal Campbell</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4930" title="October 20, 2003 @ 3:20 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4931"><p>&#8220;It puts the lotion in the basket&#8230;&#8221;</p>
+<p>Damn you for making me picture that scene. Now I&#8217;m creeped out.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://www.decaffeinated.org/' rel='external nofollow' class='url'>Chris Clark</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4931" title="October 20, 2003 @ 3:33 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4932"><p>Paul: I made bread<br />
+Jamie: Bread?<br />
+Paul: Yes, I made bread!<br />
+Jamie: In what?<br />
+Paul: You know the thing we keep the rice in? Turns out it&#8217;s a bread machine.<br />
+Jamie: Where&#8217;d you put the rice?<br />
+Paul: For now can we just enjoy the bread?</p>
+<p>I miss &#8220;Mad About You&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://zanshin.net/' rel='external nofollow' class='url'>mark</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4932" title="October 20, 2003 @ 3:34 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4933"><p>Thanks Mark, that entry made my day :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://www.netalive.org/' rel='external nofollow' class='url'>Henning Koch</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4933" title="October 20, 2003 @ 3:49 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4934"><p>Me too &#8211; my crappy day has officially been salvaged, as of right now. And not because I now know that you might be able to out-program me with one eyelash, but I would win a bread machine bake-off.  Don&#8217;t feel bad &#8211; we don&#8217;t use ours at all.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://donna@deliriouscool.org/' rel='external nofollow' class='url'>Donna</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4934" title="October 20, 2003 @ 4:00 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4935"><p>They have stores that sell that stuff &#8212; pre-made.  Yeah, I know home made is better, but in your particular situation&#8230;..</p>
+<p>nice blog</p>
+<p class=sig>&#8212;&#8201;<cite>Joel Goldstick</cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4935" title="October 20, 2003 @ 5:02 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4958"><cite><a href='/web/20110806105624/http://www.illuminated.co.uk/blog/archives/000507.html' rel='external nofollow' class='url'>Blah on steroids</a></cite>&#160;(trackback)</li>
+<li id="comment-4936"><p>I have the luck of having relatives that live and work in the country, and bake their own bread in a brick oven (hope that the word is the right one O:-)), using their own corn, and with nothing more than corn, water and salt. It&#8217;s the best in the world :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://retrincos.net/' rel='external nofollow' class='url'>Xouba</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4936" title="October 20, 2003 @ 5:42 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4937"><p>&#8220;It puts the lotion in the basket, or else it gets the hose&#8230;&#8221;</p>
+<p>Congratulations! First time I&#8217;ve laughed out loud in about a week. Many thanks, it is an unguent for my tortured soul.</p>
+<p>OBBreadMachineFauxPas: Back in my bachelor days I had a fine Crusty French bread fail because my cat &#8212; curious about the new, oddly gyrating machine on the counter &#8212; turned it off when he placed his dainty little paws on the top to peek in. I had to endure much commenting from friends and family when they noticed my bread machine sitting in my bathroom, at that time the only room not occupied by my traitorous feline.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://coldforged.org/' rel='external nofollow' class='url'>ColdForged</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4937" title="October 20, 2003 @ 6:14 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4938"><p>I stand by my previous statement ( <a href="/web/20110806105624/http://diveintomark.org/archives/2003/05/05/in_brief_bread_machine_edition#c001826">http://diveintomark.org/archives/2003/05/05/in_brief_bread_machine_edition#c001826</a> ) and alternate between laughing at you and feeling sorry for you. I&#8217;m having difficulties getting up in the mornings myself, so I&#8217;m no ideal exactly.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4938" title="October 20, 2003 @ 6:15 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4939"><p>During programming sessions I&#8217;m able to make bread the old-fashioned way. You start 8 am in the morning, and it&#8217;ll be done around 4pm. Perfect working day.</p>
+<p>Life as a programmer can be fun, alright.<a href="/web/20110806105624/http://hoogervorst.dyndns.org/~arthur/weblog/recipefile/archives/000292.html">http://hoogervorst.dyndns.org/~arthur/weblog/recipefile/archives/000292.html</a><br />
+(your recipe to succesful geeky bread)</p>
+<p class=sig>&#8212;&#8201;<cite>Arthur</cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4939" title="October 20, 2003 @ 7:28 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4959"><cite><a href='/web/20110806105624/http://blog.netwarriors.org/d/2003/10/20/17.04.21/index.html' rel='external nofollow' class='url'>The Book of FSCK</a></cite>&#160;(trackback)</li>
+<li id="comment-4940"><p>Your bread machine wouldn&#8217;t be a Summus brand would it?&#8211;it sounds suspiciously like my VCR.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4940" title="October 20, 2003 @ 8:42 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4941"><p>&#8220;It puts the lotion in the basket&#8230;&#8221; &#8212; what is that *from*? I recall it from South Park, but it is obviously from somewhere else.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://www.zenaku.net/' rel='external nofollow' class='url'>kami</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4941" title="October 20, 2003 @ 9:14 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4942"><p>&#8220;On the Internet, nobody knows you&#8217;re a dog [who can't bake bread in a bread machine].&#8221;</p>
+<p><a href="/web/20110806105624/http://www.unc.edu/depts/jomc/academics/dri/idog.jpg">http://www.unc.edu/depts/jomc/academics/dri/idog.jpg</a></p>
+<p>Thanks for the laughs, Mark. I quite enjoyed the Google reference.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://blog.warmbrain.com/' rel='external nofollow' class='url'>Dylan</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4942" title="October 20, 2003 @ 9:15 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4943"><p>kami: Silence of the Lambs</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4943" title="October 20, 2003 @ 9:53 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4944"><p>kami: It is definitely from Silence of the Lambs.  But, you were right about it also being from a south park episode.  It&#8217;s from episode 610.   In that episode Cartman played &#8220;Lambs&#8221; with BeBe.  Him and Bebe lowered a basket with lotion in it down to Carman&#8217;s doll &#8216;polly prissy pants.&#8217;  <a href="/web/20110806105624/http://images.southparkstudios.com/media/images/610/610_img_17.jpg">http://images.southparkstudios.com/media/images/610/610_img_17.jpg</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://www.ic.sunysb.edu/Clubs/lugsb' rel='external nofollow' class='url'>Mark Drago</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4944" title="October 20, 2003 @ 10:28 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4945"><p>That&#8217;s not as bad as you think: I&#8217;ve forgotten to put the &#8220;mixing paddle&#8221; back into the basket after washing SIX times now (My wife has kept count).  </p>
+<p>Run a breadmaker for three hours with unmixed yeast, flour (and other mix junk), and warm water.  See if you forget to add the paddle again. or again. or again.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://weblogs.asp.net/prieck/' rel='external nofollow' class='url'>Philip</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4945" title="October 20, 2003 @ 11:17 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4960"><cite><a href='/web/20110806105624/http://jhave.typepad.com/blog/2003/10/foolproof_dive_.html' rel='external nofollow' class='url'>A Dane in Luxembourg</a></cite>&#160;(trackback)</li>
+<li id="comment-4946"><p>Sounds like me and my coffee maker at home. Countless times I will put in the coffee, add the water, and go off and do something else. Then, when I come back later to pour a cup of freshly brewed coffee, I discover I&#8217;ve never actually turned it on.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://mylnd.blogspot.com/' rel='external nofollow' class='url'>Tom</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4946" title="October 21, 2003 @ 9:20 am"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4961"><cite><a href='/web/20110806105624/http://www.sillybean.net/archives/absurdity/001272.html' rel='external nofollow' class='url'>Sillybean</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-4962"><cite><a href='/web/20110806105624/http://chortle.org.uk/blog/mcfilter/archives/personal/the_backlash_begins.html' rel='external nofollow' class='url'>McFilter</a></cite>&#160;(trackback)</li>
+<li id="comment-4947"><p>Brilliant. I often turn the oven on. Put food in it. Come back half an hour later to discover I have only turned on the oven light.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://www.sevitz.com/' rel='external nofollow' class='url'>Adrian Sevitz</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4947" title="October 21, 2003 @ 10:45 am"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4963"><cite><a href='/web/20110806105624/http://mar.anomy.net/entry/2003/10/21/15.03.02/' rel='external nofollow' class='url'>M�r �rlygsson</a></cite>&#160;(trackback)</li>
+<li id="comment-4948"><p>This is why people make bread by hand.  Less time-consuming and less opportunity for mistake.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4948" title="October 21, 2003 @ 11:10 am"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4964"><cite><a href='/web/20110806105624/http://blog.cfrq.net/chk/archives/000482.html' rel='external nofollow' class='url'>The Blog of Harald</a></cite>&#160;(trackback)</li>
+<li id="comment-4949"><p>Don&#8217;t worry Mark, I have the same problem with Irons.</p>
+<p>I nearly ruined a shirt because I didn&#8217;t understand that my grandmother&#8217;s iron doesn&#8217;t work quite like mine.  What&#8217;s more, the female&#8217;s in the family laugh at me because I apparently didn&#8217;t know how to use an iron.</p>
+<p>I politely reminded them I never laugh at them when they all come to me with a computer problem (I am the family computer expert), and if they would like to keep it that way they should be nice to me about irons&#8230; ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://thedevilsadvocate.org/' rel='external nofollow' class='url'>Adrian</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4949" title="October 21, 2003 @ 4:09 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4950"><p>Hilarious.. Can&#8217;t say it saved my day, because I&#8217;ve had a good day[*]. But my girlfriend can&#8217;t sleep because I&#8217;m giggling in my squeaky computer chair two feet from the bed.</p>
+<p>[*] I finished and returned my database applications project today (University studies..). It&#8217;s a weblog system written in Python. After I finished printing it, the automatic radio in my head tuned into Elgar&#8217;s &#8220;Pomp and Circumstance&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite>Timo Virkkala</cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4950" title="October 21, 2003 @ 4:10 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4965"><cite><a href='/web/20110806105624/http://jcwinnie.us/MT/archives/000204.html' rel='external nofollow' class='url'>Your Guess Is As Good As Mine</a></cite>&#160;(trackback)</li>
+<li id="comment-4951"><p>I have done a similar thing several times with my vegetable steamer (which otherwise I adore!), where I turn the timer, but haven&#8217;t plugged it in.  the timer isn&#8217;t electric, so it&#8217;ll go, and ding after 12 minutes or whatever, and I&#8217;ll go to get my steamed carrots, and they&#8217;re still cold.  grrr.</p>
+<p>especially since I&#8217;m usually so braindead at dinnertime that I often make teriyaki entirely on autopilot, rice in one machine, vegetables in the other, and chicken in the frying pan.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://www.epersonae.com/' rel='external nofollow' class='url'>Elaine</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4951" title="October 21, 2003 @ 7:37 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-4966"><cite><a href='/web/20110806105624/http://www.epersonae.com/snapping2/2003/10/21/entirely_unrelated_stuff.php' rel='external nofollow' class='url'>Snapping Links II (The Revenge)</a></cite>&#160;(trackback)</li>
+<li class=tb id="comment-4967"><cite><a href='/web/20110806105624/http://brycebenton.us/humdrum/archives/2003/10/21/breadmaker' rel='external nofollow' class='url'>the humdrum</a></cite>&#160;(trackback)</li>
+<li id="comment-4952"><p>I too bought a breadmaker many moons ago, and like you my first loaf attempt was perfection itself&#8230; or was it, on closer inspection the loaf had been rendered incomplete as the blades leave impressions in the loaf.  I&#8217;d never considered this before purchasing, now I just use the machine to produce and rise the dough before baking it in the oven.  Much as I realise it would be considerably more complex &#8211; can someone please invent a breadmaker with retractable mixing blades!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://www.ianstopher.com/' rel='external nofollow' class='url'>Ian</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4952" title="October 22, 2003 @ 5:59 am"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4953"><p>Build a device even a fool can use, and only a fool will use it&#8230;..</p>
+<p>May I suggest a better method?   Go outside.  Get in the car.  Wander around a section of town you haven&#8217;t been in before.  When you do so, no matter what town you are in, you will invariably take a wrong turn that leads to a sidestreet that leads to a winding country road.   Go down this road until you think you should turn back, then go a little further.  Around the next curve after that, you will find a small, out-of-the-way diner/family restaurant.  Only the immediate neighbors and people who have lived in the area for at least 30 years know of it.   Park.  Go on in.  Enjoy dinner the best meal you&#8217;ve had this month.   Then, upon leaving, stop by the front counter, and look through the glass at the veritable plethora of desserts and other home-baked items.   Select a loaf.  Find your way home.  Enjoy it for breakfast.  It will certainly be better than anything a bread machine could make.</p>
+<p class=sig>&#8212;&#8201;<cite>Michael A. Strieb</cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4953" title="October 22, 2003 @ 10:56 am"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4954"><p>I am currently eating a sandwich made with&#8230; bread-maker bread! Some of it is on the floor after reading the post.</p>
+<p>I didn&#8217;t make the bread, my wife did. I&#8217;ve had a few fiascoes with that particular machine, similar to yours. I often forget to put water in the coffee machine, or get distracted and then try to fill the machine again, pouring water all over the counter.  I&#8217;ve put OJ in my coffee, and I&#8217;ve put dirty dishes in the fridge (by mistake, honest!).</p>
+<p>&#8230;perhaps it&#8217;s just that time of the morning (usually between 5 and 6).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://filmer.blogspot.com/' rel='external nofollow' class='url'>Paul E. Filmer</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4954" title="October 22, 2003 @ 2:13 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4955"><p>You need to read &#8220;Life without Bread&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4955" title="October 22, 2003 @ 4:26 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-4956"><p>That&#8217;s exactly the reason why I buy bread at the grocery store (we used to have one of those machines, but tossed it away for very much the same reasons).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806105624/http://www.softwolves.pp.se/blog/' rel='external nofollow' class='url'>Peter Karlsson</a></cite>&#160;<a class=p href="/web/20110806105624/http://diveintomark.org/archives/2003/10/20/foolproof#comment-4956" title="October 23, 2003 @ 2:50 pm"><img alt="#" src=/web/20110806105624im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806105624/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806105624/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806105624/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806105624/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806105624/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.348 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 14:56:35 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:56:24 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:12:31 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

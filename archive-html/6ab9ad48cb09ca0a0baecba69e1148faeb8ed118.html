@@ -1,0 +1,576 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>The road to XHTML 2.0 [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806112031/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806112031/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806112031/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806112031/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806112031im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/pytextile" title="PyTextile">
+<link rel=next href="/web/20110806112031/http://diveintomark.org/archives/2003/03/21/confessions_of_a_platypus_creator" title="Confessions of a platypus creator">
+<link rel=up href="/web/20110806112031/http://diveintomark.org/archives#p1290" title="March 2003">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; The road to XHTML 2.0 Comments Feed" href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806112031/http://diveintomark.org/' />
+<link rel='prev' title='PyTextile' href='/web/20110806112031/http://diveintomark.org/archives/2003/03/19/pytextile' />
+<link rel='next' title='Confessions of a platypus creator' href='/web/20110806112031/http://diveintomark.org/archives/2003/03/21/confessions_of_a_platypus_creator' />
+<link rel='canonical' href='/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20' />
+<link rel='shortlink' href='/web/20110806112031/http://diveintomark.org/?p=1290' />
+<meta name="description" content="I'm positioning myself to be Mr. XHTML 2.0. Because if there's one thing the world really needs right now, it's more irony.">
+<meta name="keywords" content="oreilly,xhtml2">
+<link href="/web/20110806112031cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806112031/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2003\/03\/19\/the_road_to_xhtml_20";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806112031" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115341/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 11:20:31 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120212011050/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="12 Feb 2012"><strong>FEB</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514115341/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20" title="11:53:41 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 11:20:31 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120212011050/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20" title="1:10:50 Feb 12, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620102814/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 11:20:31 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806112031*/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>25 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Apr 06 - 12 Feb 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000101121300_2007:-1:010100100001_2008:-1:020101000001_2009:-1:000000000000_2010:-1:000001000111_2011:7:000010010000_2012:-1:010000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806112031/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806112031/http://diveintomark.org/archives#p1290">March 19, 2003</a> &#8227;
+<h2>The road to XHTML 2.0</h2> (<a href="/web/20110806112031/http://diveintomark.org/tag/oreilly" rel="tag">oreilly</a>, <a href="/web/20110806112031/http://diveintomark.org/tag/xhtml2" rel="tag">xhtml2</a>)</div>
+<p><cite title="XML.com">Mark Pilgrim</cite>: <a href="/web/20110806112031/http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html">The Road to XHTML 2.0: MIME Types</a>.  First in a series.</p>
+
+<blockquote cite="http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html" title="Mark Pilgrim">
+<p>Here&#8217;s a dirty little secret: browsers aren&#8217;t actually treating your XHTML as XML. Your validated, correctly DOCTYPE&#8217;d, completely standards compliant XHTML markup is being treated as if it were still HTML with a few weird slashes in places they don&#8217;t belong.  Why?  The answer is MIME types.</p>
+</blockquote>
+
+<p>I&#8217;m positioning myself to be <q>Mr. XHTML 2.0</q>.  Because if there&#8217;s one thing the world really needs right now, it&#8217;s more irony.</p>
+<p class=c>&#167;
+
+<h3 id=comments>Forty seven comments here (<a href=/web/20110806112031/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-817"><p>Heh; the answer is *always* &#8220;MIME types&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://monkeyfist.com/' rel='external nofollow' class='url'>Kendall Clark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-817" title="March 19, 2003 @ 11:17 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-818"><p>&#8220;Most current browsers don&#8217;t handle the application/xhtml+xml MIME type correctly, so you&#8217;ll need to make provisions for serving up your XHTML the old-fashioned way (as text/html) to these browsers.&#8221;</p>
+<p>After toying around with the OBJECT tag for a few minutes I discovered a way to get around Internet Explorer&#8217;s &#8220;prompt to download&#8221; behaviour when encountering XHTML files sent out with the application/xhtml+xml MIME type.</p>
+<p>Here&#8217;s what you do: use &#8220;application/xml&#8221; or &#8220;text/xml&#8221; for the TYPE attribute in the OBJECT tag.  Tested in IE6, you will not be prompted to download the file. This way you can send your files out with the correct MIME type to Internet Explorer (and possibly other browsers).</p>
+<p>Unfortunately, your browser does not support XHTML 2.0!</p>
+<p>You can make the OBJECT tag fill the entire screen so the user will not realize they are viewing the page through an OBJECT tag.</p>
+<p>I am half asleep right now, so If any of the above  is dumb, then that&#8217;s my excuse.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://members.rogers.com/cacciottolo/float' rel='external nofollow' class='url'>MikeyC</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-818" title="March 20, 2003 @ 12:46 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-819"><p>My mark-up was stripped out of the last message lets try it again&#8230;</p>
+<p>example:</p>
+<p>&lt;object data=&#8221;<a href="/web/20110806112031/http://www.w3.org/People/mimasa/test/xhtml/media-types/test3.xhtml"><a href="/web/20110806112031/http://www.w3.org/People/mimasa/test/xhtml/media-types/test3.xhtml" rel="nofollow">http://www.w3.org/People/mimasa/test/xhtml/media-types/test3.xhtml</a>&#8220;</a> type=&#8221;application/xml&#8221; width=&#8221;100%&#8221; height=&#8221;100%&#8221;>your browser doesn&#8217;t support XHTML 2.0!&lt;/object></p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-819" title="March 20, 2003 @ 12:49 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-820"><p>Unfortunately, IE object support is broken enough to  not support this.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-820" title="March 20, 2003 @ 1:09 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-821"><p>The article says &#8220;Mozilla and its derivatives are the only major browsers that can handle the XHTML MIME type&#8221;.</p>
+<p>I don&#8217;t know about your definition of &#8220;handle&#8221; or &#8220;major browser&#8221;, but Opera will also parse pages differently for MIME types of application/xml or application/xhtml+xml, stopping when it comes to malformed syntax with an error message.</p>
+<p>See <a href="/web/20110806112031/http://www.opera.com/docs/specs/#html">http://www.opera.com/docs/specs/#html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://trats.ozforces.com.au/' rel='external nofollow' class='url'>Kevin W</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-821" title="March 20, 2003 @ 2:31 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-822"><p>Opera does application/xhtml+xml &#8211; but keep in mind that the script element isn&#8217;t supported in this mode.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://www.virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-822" title="March 20, 2003 @ 3:59 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-823"><p>&#8220;Unfortunately, IE object support is broken enough to not support this.&#8221;</p>
+<p>It seems to work in IE6.  Are you talking about IE4/IE5?</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-823" title="March 20, 2003 @ 8:37 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-824"><p>I base that statement on these results:</p>
+<p><a href="/web/20110806112031/http://www.w3.org/People/mimasa/test/xhtml/media-types/results">http://www.w3.org/People/mimasa/test/xhtml/media-types/results</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-824" title="March 20, 2003 @ 9:44 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-825"><p>Mark, there&#8217;s a quite serious bug in the code snippets and discussion of the http accept header.  There is no discussion or handling of the weighting values that may be part of the accept header.</p>
+<p>For example, there are a few user-agents (such as pocket ie) that display xml processing instructions as part of the content.  I know of at least one person who sends an accept header that explicitly says he does not want xhtml &#8211; which would show up in your code snippets as one of the cases where xhtml would send.</p>
+<p>How about a short one-liner saying &#8220;watch out for&#8230;&#8221;?</p>
+<p class=sig>&#8212;&#8201;<cite>Jim</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-825" title="March 20, 2003 @ 9:53 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-826"><p>I believe the mod_rewrite rule takes this into account, but if you&#8217;re correct, then the PHP and Python snippets should be updated.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-826" title="March 20, 2003 @ 10:27 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-827"><p>&#8220;Unfortunately, IE object support is broken enough to not support this.&#8221;</p>
+<p>Follow-up: Just tested it in IE5 (Win) and it works!  On IE5 (Mac) you get the disclaimer &#8220;Your browser does not support XHTML 2.0&#8243;. In both cases, this means that the Object tag is working well enough in IE to accomplish the goal at hand.</p>
+<p>So the two browsers that make up about 95% of the market (IE5 and IE6 on Windows) display the page content instead of prompting a download box.</p>
+<p>So you can send out one MIME type to all browsers if you are willing to accept that older browsers will simply get the disclaimer to upgrade their browser.</p>
+<p>Extensive testing hasn&#8217;t been done so I might have missed a crucial detail, but I think everything is kosher.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-827" title="March 20, 2003 @ 10:31 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-828"><p>Could you remind why we should bother?</p>
+<p>It seems like things got ugly for you when you went from XHTML1.0 to 1.1.</p>
+<p><a href="/web/20110806112031/http://diveintomark.org/archives/2002/11/21/a_warning_to_others.html">http://diveintomark.org/archives/2002/11/21/a_warning_to_others.html</a></p>
+<p>So why not just stick with 1.0 for now? (Having to do server tweaks to change mime-types based on browser seems like a significant barrier for lots of people.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://webseitz.fluxent.com/wiki' rel='external nofollow' class='url'>BillSeitz</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-828" title="March 20, 2003 @ 11:32 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-829"><p>Short answer: beats me.  But I know a lot about it, so I may as well get paid for it.</p>
+<p>Long answer:</p>
+<p>I really don&#8217;t know why you should bother with the proper MIME types (in this specific case &#8212; of course in general they&#8217;re very useful).  Serving XHTML as application/xhtml+xml is a lot of hassle for (as far as I can tell) no actual payoff.  Which leads to the questions &#8220;will it ever get any easier?&#8221; and &#8220;will the payoff ever get any bigger?&#8221;  If you answer both of these questions &#8220;no&#8221;, then the question becomes &#8220;why bother with XHTML 1.x at all?&#8221;</p>
+<p>I have heard a variety of answers to this &#8212; there are a few things the XHTML 1.x offers that HTML 4 does not (Ruby annotations, embedding MathML), but I&#8217;m not using any of those and have no plans to.  Other answers like &#8220;well, it keeps me honest&#8221; are bogus; take your sado-markupchism elsewhere.</p>
+<p>The other answer that we (I) used to give is &#8220;XHTML 1.x provides a migration path to 2.0.&#8221;  But we now all know that&#8217;s not true; XHTML 2.0 isn&#8217;t backwardly compatible with XHTML 1.x.  (Admittedly, some people knew this sooner than others, but we all figured it out when the first proposal draft of XHTML 2.0 came out.)  I guess it&#8217;s true to a limited extent, in the sense that you need to close your P and LI tags and so forth, but you *could* have been doing that in HTML 4 all along.  (Maybe this is where the &#8220;well it keeps me honest&#8221; sentiment comes from.)</p>
+<p>The rest of the series will be about ways you can limit your markup and practices now (stop using IMG, for example) so you&#8217;ll have fewer headaches when the time comes to migrate your app/CMS/documents to XHTML 2.0.  I still don&#8217;t know why anyone would *want* to do this (and the XHTML authors seem to think that no one will), but people spent a lot of time migrating systems from HTML 4 to XHTML 1, so I&#8217;m assuming there will be a similar demand once XHTML 2 goes final.</p>
+<p>Meanwhile, I&#8217;m sticking with HTML 4.  Oh, the irony.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-829" title="March 20, 2003 @ 11:58 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-830"><p>&#8220;MUST be served with a MIME-type of application/xhtml+xml.&#8221;</p>
+<p>Haha! That&#8217;s a funny one.</p>
+<p>I *do* use XHTML1.1+MathML2.0 on my blog. So, indeed, I *do* send application/xhtml+xml to Mozilla. But I don&#8217;t want to send it to other standards-compliant browsers (like Safari or, ironically, Camino) which can handle the application/xhtml+xml MIME-type, but which don&#8217;t understand MathML. They *must* get text/html.</p>
+<p>This &#8220;MUST&#8221; specification is simply divorced from reality.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-830" title="March 20, 2003 @ 12:22 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-831"><p>Re: OBJECT.</p>
+<p><a href="/web/20110806112031/http://diveintomark.org/public/object-test.html">http://diveintomark.org/public/object-test.html</a></p>
+<p>Source code:</p>
+<p><a href="/web/20110806112031/http://diveintomark.org/public/object-test.txt">http://diveintomark.org/public/object-test.txt</a></p>
+<p>Does not work in IE6SP1 on WinXP (I get &#8220;your browser does not support&#8221; message).</p>
+<p>Works on Mozilla (makes sense) but URL in location bar never changes (also makes sense &#8212; this is like &#8220;framing&#8221; an entire web site, only with MIME types thrown in for added confusion).</p>
+<p>Bottom line: this is not a viable solution.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-831" title="March 20, 2003 @ 12:22 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-832"><p>Re: MathML not supported by all browsers that support application/xhtml+xml.  This is a known problem; once you start mixing and matching, Content-type is woefully inadequate.  See:</p>
+<p><a href="/web/20110806112031/http://www.xml.com/pub/a/2002/01/23/tag.html">http://www.xml.com/pub/a/2002/01/23/tag.html</a></p>
+<p>Don&#8217;t know if there has been further discussion or a solution (the article is over a year old), but I&#8217;m sure an enterprising soul can point us in the right direction.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-832" title="March 20, 2003 @ 12:26 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-833"><p>Test comment.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-833" title="March 20, 2003 @ 1:34 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-834"><p>Test comment #2.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-834" title="March 20, 2003 @ 1:35 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-835"><p>Interesting article. A fascinating explanation of why XML is a rat&#8217;s nest.</p>
+<p>But, in my situation, the problem isn&#8217;t about XML namespaces versus media-types, but about whether Camino (say) should be envoking its XML parser at all. I actually *want* it to treat my document as &#8220;tag soup&#8221; and *ignore* the tags from the MathML namespace.</p>
+<p>In Camino&#8217;s case, what I really want is for them to grab an updated gecko engine from the Mozilla trunk. Non-gecko-based browsers are unlikely to understand MathML in the forseable future. So I don&#8217;t think I will ever want them using their XML parser to handle my blog.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-835" title="March 20, 2003 @ 1:43 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-836"><p>&#8220;Re: OBJECT.</p>
+<p><a href="/web/20110806112031/http://diveintomark.org/public/object-test.html">http://diveintomark.org/public/object-test.html</a></p>
+<p>Source code:</p>
+<p><a href="/web/20110806112031/http://diveintomark.org/public/object-test.txt">http://diveintomark.org/public/object-test.txt</a></p>
+<p>Does not work in IE6SP1 on WinXP (I get &#8220;your browser does not support&#8221; message).&#8221;</p>
+<p>Mark, in my example I wrote: either use application/xml or text/xml, not application/xhtml+xml for the type attribute.  It works in my example.</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-836" title="March 20, 2003 @ 1:49 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-837"><p>Another problem with your example is that the page you have set in the data attribute is being sent out with a text/html MIME type.</p>
+<p>&lt;object data=&#8221;<a href="/web/20110806112031/http://diveintoaccessibility.org/"><a href="/web/20110806112031/http://diveintoaccessibility.org/" rel="nofollow">http://diveintoaccessibility.org/</a>&#8220;</a> type=&#8221;application/xml&#8221; width=&#8221;100%&#8221; height=&#8221;100%&#8221;>your browser doesn&#8217;t support application/xhtml+xml MIME type&lt;/object></p>
+<p>Try my example exactly as I have it in #3.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-837" title="March 20, 2003 @ 1:58 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-838"><p>On my fledgeling blog I currently have Moveable Type generating neither HTML nor XHTML, but rather an XML &#8220;blog&#8221; vocabulary of my design. I then use AxKit (<a href="/web/20110806112031/http://www.axkit.org/">http://www.axkit.org/</a> ) and a few XSLT stylesheets to turn those xml files into XHTML 1.1.</p>
+<p>Why? Well, as a sandbox for playing with the tech mostly. The XHTML 1.1 compliance was just another thing to try to hit, and it wasnt really that hard. It&#8217;s easier to generate XML from XSLT than non XML, so it was simpler to create some form of XHTML than it was to create non validating HTML4.</p>
+<p>I do, however, send everything as text/html. The MIME type is set as a function of the XSLT stylesheet, set in the  tag. Eventually I may work up an AxKit output filter to do the correct type.</p>
+<p>The only problem I had with XHTML 1.1 is that it doesnt like many things as container tags. Any li or form tags need to be wrapped in their own div or p.</p>
+<p>The description of my setup is at <a href="/web/20110806112031/http://cthompson.com/entries/2003/03/15/">http://cthompson.com/entries/2003/03/15/</a> and if you wanted to see the raw html of that file with no stylesheet applied, it&#8217;s <a href="/web/20110806112031/http://cthompson.com/entries/2003/03/15/?passthru=1">http://cthompson.com/entries/2003/03/15/?passthru=1</a> though you&#8217;ll probably have to view source to see it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://cthompson.com/' rel='external nofollow' class='url'>Chris Thompson</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-838" title="March 20, 2003 @ 4:44 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-839"><p>For the MathML problem: According to <a href="/web/20110806112031/http://www.ietf.org/rfc/rfc3236.txt">http://www.ietf.org/rfc/rfc3236.txt</a> (not a standard) you could use<br />
+application/xhtml+xml;profile=&#8221;<a href="/web/20110806112031/http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd"><a href="/web/20110806112031/http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd" rel="nofollow">http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd</a>&#8220;</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://w3future.com/weblog/' rel='external nofollow' class='url'>Sjoerd Visscher</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-839" title="March 20, 2003 @ 4:49 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-840"><p>Chris, I don&#8217;t understand quite what you mean about container tags; the rules for block-level elements in XHTML are well-defined, and haven&#8217;t changed since HTML 4.  Also, that page you linked doesn&#8217;t validate.  It appears to be well-formed XML (sent as text/html), but it&#8217;s not valid XHTML 1.1.</p>
+<p>No wonder writing browsers is hard.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-840" title="March 20, 2003 @ 5:05 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-841"><p>I think XHTML has been adopted as a publishing format well before it was sensible to do so.  Why? </p>
+<p>  All the cool kids are doing it.  That&#8217;s all I can figure.  Imagine everyone replacing all their JPGs and GIFs with SVG and PNG -now-, and you&#8217;d get about the same mess.  Well&#8211; except that there are reasonable tools for converting amongst -those- formats.</p>
+<p>  The platform wasn&#8217;t ready, and people started hacking about.  Calamity ensued.</p>
+<p>  Content negotiation is a key to the long-term health of the web, but it gets no attention.  It sits uncomfortably in that space only readily visible to publishers, but too technical and abstract for J. Random HTML-slinger to &#8220;get&#8221;, much less do anything about.   </p>
+<p>  Web server architecture doesn&#8217;t support conneg well at all.  Yes, I&#8217;m aware Apache does conneg.  But not well enough.</p>
+<p>  MIME is insufficient in namespaced XML.  Conneg has provisions for &#8220;feature&#8221;-based negotiation, but features have never been implemented anywhere. </p>
+<p> This is likely because the weight of fine-grained conneg based on UA feature capabilities in every request would overwhelm HTTP.  Imagine a token for every little &#8220;recommendation&#8221; * version * module supported being included in each request.  That&#8217;s what you need to properly do server-side conneg, and that&#8217;s a -lot- of data up to the server.</p>
+<p>My feeling is the following is needed to unravel this mess:</p>
+<p>1) Decoupling of URIs and File-paths.  It&#8217;s a clever hack, but there&#8217;s no law stating that a URI=a file.  </p>
+<p>2) Widespread implementation of feature-based conneg.  Client-side would be better, but server-side is more technically possible (that is, there&#8217;s less impetus on the server).</p>
+<p>3) Better web server infrastructure to identify and serve alternates, plus web development tools to render the same content in various negotiated formats.</p>
+<p>&#8230;Or we could just stick with HTML.  Really.</p>
+<p>There&#8217;s sort of an obsession with making the Semantic Web sit atop rather than alongside the Dumb Web.  I fear this approach will diminish the value of both.  Time will tell.  :)</p>
+<p class=sig>&#8212;&#8201;<cite>Jeremy Dunck</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-841" title="March 20, 2003 @ 5:47 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-842"><p>Jeremy, I agree with you.  However, you win the modified Godwin&#8217;s Law award for being the first to mention the Semantic Web, which means that rational conversation will now cease.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-842" title="March 20, 2003 @ 5:56 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-843"><p>Re: #3.  I tried it exactly as you typed it, and I get a big old blank OBJECT in IE6/SP1/WinXP.  That is, I see the border and the scrollbar of where the OBJECT should be, but there&#8217;s nothing inside it.</p>
+<p><a href="/web/20110806112031/http://diveintomark.org/public/object-test-3.html">http://diveintomark.org/public/object-test-3.html</a><br />
+<a href="/web/20110806112031/http://diveintomark.org/public/object-test-3.txt">http://diveintomark.org/public/object-test-3.txt</a></p>
+<p>Further investigation by someone else may determine the difference between your test and mine.</p>
+<p>Also, this doesn&#8217;t solve the problem of the location bar never changing (making it impossible to bookmark).  And what happens if someone right-clicks a site link and opens it in a new window?  If the file itself is being served as application/xhtml+xml, then wouldn&#8217;t non-aware browsers offer to download it?</p>
+<p>In other words, you&#8217;ve reduced your entire site to a single unbookmarkable window.  If I wanted to do that, I&#8217;d just use Flash.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-843" title="March 20, 2003 @ 6:08 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-844"><p>&lt;object data=&#8221;<a href="/web/20110806112031/http://diveintoaccessibility.org/"><a href="/web/20110806112031/http://diveintoaccessibility.org/" rel="nofollow">http://diveintoaccessibility.org/</a>&#8220;</a> type=&#8221;application/xml&#8221; width=&#8221;100%&#8221; height=&#8221;100%&#8221;&gt;your browser doesn&#8217;t support application/xhtml+xml MIME type&lt;/object&gt;</p>
+<p>and </p>
+<p>&lt;object data=&#8221;<a href="/web/20110806112031/http://www.w3.org/People/mimasa/test/xhtml/media-types/test3.xhtml"><a href="/web/20110806112031/http://www.w3.org/People/mimasa/test/xhtml/media-types/test3.xhtml" rel="nofollow">http://www.w3.org/People/mimasa/test/xhtml/media-types/test3.xhtml</a>&#8220;</a> type=&#8221;application/xml&#8221; width=&#8221;100%&#8221; height=&#8221;100%&#8221;&gt;your browser doesn&#8217;t support XHTML 2.0!&lt;/object&gt;</p>
+<p>never load anything (data or error message). When the mime types are changed to application/xhtml+xml I get the error messages.</p>
+<p>IE6 WIN2K</p>
+<p class=sig>&#8212;&#8201;<cite>gilli</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-844" title="March 20, 2003 @ 6:13 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-845"><p>&#8220;Re: #3. I tried it exactly as you typed it, and I get a big old blank OBJECT in IE6/SP1/WinXP. That is, I see the border and the scrollbar of where the OBJECT should be, but there&#8217;s nothing inside it.&#8221;</p>
+<p>Occasionally I&#8217;ve noticed this does happen (like one out of ten times).  But when it does, I reload and it works once again.</p>
+<p>I&#8217;ve tried this at home and at work (3 separate computers in total) and its worked every time for me.  Something special about Toronto (besides being the home of Joe Clark)?</p>
+<p>Its not really a solution to anything, but I just thought that it was kind of interesting that I was able to get IE to display a file with an Application/XHTML+XML MIME type instead of prompting me to download it and may have provided a stepping stone towards an actual solution.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-845" title="March 20, 2003 @ 6:21 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-846"><p>Jeremy, I thought a few comments were in order:</p>
+<p>&quot;Imagine a token for every little &#8216;recommendation&#8217; * version * module supported being included in each request.&quot;</p>
+<p>Obviously what&#8217;s needed here is a little indirection. a UA string can be associated on the server with a profile of features, and only if the UA wanted to override the defaults for the UA would additional information need to be supplied. UA strings can be extended with a sub-profile identifier for a little more flexibility, as well.</p>
+<p>&quot;Decoupling of URIs and File-paths. It&#8217;s a clever hack, but there&#8217;s no law stating that a URI=a file.&quot;</p>
+<p>Some server technologies already do this. Zope, my personal favorite, generally maps path elements to objects-contained-within-objects, although you can override the path traversal code to interpret some path elements as arguments instead. This let&#8217;s you do some pretty cool (and occasionally strange) things when developing web applications, while still keeping the URLs &#8216;normal&#8217; looking.</p>
+<p>&quot;&#8230;Or we could just stick with HTML. Really.</p>
+<p>There&#8217;s sort of an obsession with making the Semantic Web sit atop rather than alongside the Dumb Web. I fear this approach will diminish the value of both.&quot;</p>
+<p>I&#8217;m pretty sure that both semantic and dumb web philosophies will continue to be used. As long as the HTTP protocol itself isn&#8217;t *improved* to make it smarter, smart and dumb clients will be able to interact with smart and dumb servers, in any combination.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://www.michaelbernstein.com/' rel='external nofollow' class='url'>Michael Bernstein</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-846" title="March 20, 2003 @ 9:54 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-847"><p>I use to be very much into the whole XHTML bandwagon. Its clean &#8211; I can be purist &#8211; someone 8000 miles away may think I&#8217;m cool. But in all honesty what it the real point ?</p>
+<p>1. It�s accepted that serving up XHTML with an incorrect MIME type is wrong. I&#8217;d prefer to wait 10 years until browsers actually understand it before going back to it.</p>
+<p>2. XHTML surely should be kept to being the product of transforming XML<br />
+documents when development necessitates this and not as a web community &#8216;status&#8217; thing.</p>
+<p>3. Accessibility (text and braille browsers) is a good thing, but this can be achieved with well structured HTML and skilled use of CSS. Tag Soup is optional with HTML which people seem to forget.</p>
+<p class=sig>&#8212;&#8201;<cite>Marz</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-847" title="March 21, 2003 @ 6:50 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-848"><p>If we&#8217;re going to have a long-winded conversation on the topic, perhaps email would be better?<br />
+Then again, if Mark doesn&#8217;t mind hosting here, it might be more generally useful. </p>
+<p>===<br />
+Michael,<br />
+I disagree with the indirection idea.� I mean, yes you get away from the big-header problem, but you introduce another one.� Namely, versioning of UAs, and propogation of server-side knowledge of the universe of UAs. </p>
+<p>Only the UA really knows what the UA can do.� It must have the choice over alternates, either by passing request information to the server and letting the server decide, or by asking the server for just any old thing, and the server returning a list of alternates, allowing the UA to decide which alternate it can handle or is best for that UA. </p>
+<p>Also, in my dreamworld, open-source browsers near perfect implementations of standards (by selfish fixing of bugs, rather than authoring workaround hacks), meaning that browsers would (hopefully) have a new, better version every day. </p>
+<p>Regarding the meshing of SW and DW, yes, you&#8217;re right, as long as the underlying infrastructure stays the same, it&#8217;s possible that both will flourish.� Dandy. </p>
+<p>My issue here is the attempt to combine the two ideas.� That is, all this talk of sematic markup (XHTML, don&#8217;t use tables for layout, etc etc), in terms of &#8220;XHTML is more semantic than HTML&#8221; is often a bunch of hopeless angst and gnashing of teeth, because it&#8217;s all not terribly semantic in useful ways.� </p>
+<p>All the geeks out in hand-coding land devote an awful lot of energy &#8220;doing the right thing&#8221;, and it gets in the way of people saying what they need to say. </p>
+<p>And it turns out not to be the right thing.� It&#8217;s terribly frustrating. </p>
+<p>There&#8217;s an awful lot of assumptions made by a lot of people about the &#8220;most semantic&#8221; way to do something, and there&#8217;s been a lot of really smart people displaying a complete lack of understanding in the process. </p>
+<p>Some people will want to annotate their stuff w/ RDF and be quite semantic.� Some people want text on the world&#8217;s screens, yesterday, and RDF doesn&#8217;t serve their needs at all. </p>
+<p>As in nearly all important things, there&#8217;s no easy answer.� Do what&#8217;s right for you. </p>
+<p>The tool should serve the people&#8230; not the other way around. </p>
+<p>Gah.. I sound like Mark.� I gotta get outta here.� ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://dunck.us/' rel='external nofollow' class='url'>Jeremy Dunck</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-848" title="March 21, 2003 @ 9:27 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-849"><p>Mark, </p>
+<p>Sorry about bringing up SW.� I did, in fact, mean to be helpful.� :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://dunck.us/' rel='external nofollow' class='url'>Jeremy Dunck</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-849" title="March 21, 2003 @ 9:28 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-850"><p>Just a few comments on the MIME-types:</p>
+<p>For the moment, I see no reason why the mimetype for xhtml is &#8216;application/xhtml+xml&#8217;. Actually, because of xml&#8217;s lack of script inclusion mechanism (except the controversial PIs), &#8216;text/html&#8217; is more likely to be an application.</p>
+<p>And, xhtml is human readable to at least as high level as html. There&#8217;s user agents that handle mimetypes by what the first part of the mime-type is. &#8216;application&#8217; gets sent to the default handler for that format. &#8216;image&#8217; get rendered, or sent to the default handler, depending on whether the user agent is able to render it. &#8216;text&#8217; gets parsed if the user agent has a parser for it, otherwise it&#8217;s simply displayed.</p>
+<p>So, if your xhtml document is actually a document to be read, not an application to run, using &#8216;application/xhtml+xml&#8217; is fooling the user agent. It would be better if there existed a &#8216;text/xhtml+xml&#8217;, but for documents, I feel there&#8217;s good reason to avoid &#8216;application/xhtml+xml&#8217;. Perhaps &#8216;text/xml&#8217; might be a more appropriate alternative to &#8216;text/html&#8217;, though.</p>
+<p>(Just a side note, in IE, try sending the document with &#8216;application/xhtml+xml&#8217; with a multi-line comment on the line after the xml declaration but before the doctype.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://liorean.web-graphics.com/' rel='external nofollow' class='url'>liorean</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-850" title="March 21, 2003 @ 10:00 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-860"><cite><a href='/web/20110806112031/http://www.phoukka.org/archives/000009.html' rel='external nofollow' class='url'>phoukka's thoughts</a></cite>&#160;(trackback)</li>
+<li id="comment-851"><p>Mark, just goes to show that writing validating pages is not a one shot deal, but an ongoing process. The pages HAD validated, and I went and broke them by adding Javascript to the page in a way that 1.1 didn&#8217;t like. The page validates now.</p>
+<p>As to container tags, perhaps it has been that way since HTML4 and I just didn&#8217;t know as I was never validating my ugly pages.</p>
+<p>What I was refering to was the apparent requirements of nesting. For example, the validator groaned at me when I tried to do &lt;form>&#8230;&lt;/form> at the same level as my &lt;p>&#8230;&lt;/p> blocks. The only way it was happy was with &lt;p>&lt;form>&#8230;&lt;/form>&lt;/p>. (Or with &lt;div> instead of &lt;p>).</p>
+<p>If that is, in fact, a &#8220;must&#8221; in HTML 4 and not a &#8220;should&#8221;, then I was completely unaware of that. I had assumed that was a new feature of XHTML 1.x.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://cthompson.com/' rel='external nofollow' class='url'>Chris Thompson</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-851" title="March 21, 2003 @ 11:28 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-852"><p>Chris,<br />
+  I&#8217;m gonna teach you to fish, rather than giving you a fish.</p>
+<p>  Understanding DTD definitions is (sadly) still important to the author wishing to produce valid markup.</p>
+<p>The [HTML DTD] describes what elements can be directly contained within a given element in HTML.</p>
+<p>Specifically:<br />
+&lt;!ELEMENT BODY O O (%block;|SCRIPT)+ +(INS|DEL) &#8212; document body &#8211;&gt;</p>
+<p>This says, among other things, that the body element can contain element described by %block;, or a SCRIPT element.</p>
+<p>So you go look at the definition of the %block; entity:</p>
+<p>&lt;!ENTITY % block<br />
+     &#8220;P | %heading; | %list; | %preformatted; | DL | DIV | NOSCRIPT |<br />
+      BLOCKQUOTE | FORM | HR | TABLE | FIELDSET | ADDRESS&#8221;&gt;</p>
+<p>  This means that %block; expands to one of the listed elements.</p>
+<p>  Notice that there&#8217;s three more entities in the list.  Namely, %heading;, %list;, and %preformatted;.  That means we need to go see what these mean, before we can really understand what %block; means, and therefore, before we can understand what the body element can contain.</p>
+<p>  If you&#8217;re not lost yet, you should see the pattern: when you see an entity, you can look up that entity to expand it into hard references.</p>
+<p>  You can think of entities in DTDs as roughly analagous to function calls&#8211; that is, they are a concise way of describing (and reusing) something more verbose.</p>
+<p>Going through the needed expansions, then, you should be able to determine all of the tags that the body element can contain.</p>
+<p>If you want validation that you&#8217;ve done it correctly (and learned how to read at least part of DTDs), post your answer here.  :)</p>
+<p>[HTML DTD]<br />
+<a href="/web/20110806112031/http://www.w3.org/TR/html401/sgml/dtd.html#body">http://www.w3.org/TR/html401/sgml/dtd.html#body</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://dunck.us/' rel='external nofollow' class='url'>Jeremy Dunck</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-852" title="March 21, 2003 @ 12:25 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-861"><cite><a href='/web/20110806112031/http://www.wilddog.com/mt/archives/000110.html' rel='external nofollow' class='url'>Jim Mangan's Weblog</a></cite>&#160;(trackback)</li>
+<li id="comment-853"><p>I don&#8217;t know why the MIME type is &#8220;application/xhtml+xml&#8221;, rather than &#8220;text/xhtml+xml&#8221;, but there it is.</p>
+<p>It seems to me that (since the core of XHTML 1.x *is* HTML 4) the only reason to use this MIME type in preference to &#8220;text/html&#8221; is if you really are making use of the &#8220;+xml&#8221; part. That is, if you are using extensions which go beyond HTML.</p>
+<p>Are these extensions (MathML, SVG, &#8230;) supported by user-agents? And if a user-agent doesn&#8217;t support the extension in question, what is it supposed to do? Give up? Ignore those tags and render the rest of the document (a la &#8216;tag soup&#8217;)?</p>
+<p>About the only extension which has any significant support in current user-agents is MathML (and that support is pretty pitiful).</p>
+<p>I&#8217;m *stuck* using &#8220;application/xhtml+xml&#8221;. Most everyone else (IMHO) should just relax and send out &#8220;text/html&#8221; because that&#8217;s<br />
+a)easier<br />
+b)a more accurate description of their actual content.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://golem.ph.utexas.edu/~distler/blog/' rel='external nofollow' class='url'>Jacques Distler</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-853" title="March 21, 2003 @ 1:49 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-862"><cite><a href='/web/20110806112031/http://wellbourne.dyndns.org:81/~rsanders/blog/archives/000078.html' rel='external nofollow' class='url'>slouching toward bethlehem</a></cite>&#160;(trackback)</li>
+<li id="comment-854"><p>Mark, fair enough. Simply a bad assumption on my part. While in the past I attempted to write reasonable HTML (Not doing things like skipping trailing &lt;/td> or &lt;/li> as some people do, and  using &lt;p> along with $lt;/p> as a container, not as a standalone vertical spacer) I never tried to validate. So when I actually did validate I was attributing the error to big bad XHTML being too strict. Mea culpa.</p>
+<p>I have just checked and all of my pages now validate. My skeleton templates were fine, it was mostly content in a few of the stories that were causing problems.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://cthompson.com/' rel='external nofollow' class='url'>Chris Thompson</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-854" title="March 21, 2003 @ 5:01 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-855"><p>I just tested the MikeyC object code in Mozilla and IE6 on Windows XP and it worked for me in both. But why is IE6 rejecting half the formatting? Forms aren&#8217;t shown as forms but text for instance. And simple links, like the email address at the bottom, aren&#8217;t clickable!</p>
+<p>Also, not only do you not see the page address in the address bar, but the browser still shows the title of the previous page you visited.</p>
+<p>Worse, try clicking on the first &#8220;Option Selector&#8221; form drop-down menu. It flashes the screen black and white in a most horrid way every time you click. Although this might be due to a black background applied to the main body.</p>
+<p>Doing anything with an XML declaration is difficult anyway at this moment in time because IE6 requires the DOCTYPE to be on the first line to produce XHTML! Otherwise it acts as if the document is HTML (by serving it up in &#8220;Quirks Mode&#8221;). It&#8217;s a known bug.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://www.designdetector.com/' rel='external nofollow' class='url'>Chris Hester</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-855" title="March 21, 2003 @ 7:37 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-856"><p>&#8220;I just tested the MikeyC object code in Mozilla and IE6 on Windows XP and it worked for me in both.&#8221;</p>
+<p>Thanks for at least proving I&#8217;m not crazy and that the example (while admittedly useless) does indeed work.</p>
+<p class=sig>&#8212;&#8201;<cite>MikeyC</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-856" title="March 22, 2003 @ 1:36 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-857"><p>- &#8220;why bother with XHTML 1.x at all?&#8221;</p>
+<p>Because it is valid XML.</p>
+<p>This is especially usefull when all my html is built using XSL stylesheets.  XHTML provides me with a namespace that not only lets the code I produce be valid, but the code that generates it as well.</p>
+<p class=sig>&#8212;&#8201;<cite>Peter</cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-857" title="March 23, 2003 @ 1:45 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-858"><p>The XSL argument is bogus.  This is standard XSL:</p>
+<p>&lt;xsl:output method=&#8221;html&#8221; version=&#8221;4.0&#8243;/&gt;</p>
+<p><a href="/web/20110806112031/http://www.w3.org/TR/xslt#section-HTML-Output-Method">http://www.w3.org/TR/xslt#section-HTML-Output-Method</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-858" title="March 23, 2003 @ 2:07 pm"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=tb id="comment-863"><cite><a href='/web/20110806112031/http://www.padawan.info//call_for_comments_on_xhtml_20.html' rel='external nofollow' class='url'>Padawan.info</a></cite>&#160;(trackback)</li>
+<li id="comment-859"><p>Nice article, but I think you really should be less cavalier about throwing away the qvalues.  An example of why, and code that handles them properly, is at:  <a href="/web/20110806112031/http://www.klio.org/marks/2003_04_archive.html#entry-40">http://www.klio.org/marks/2003_04_archive.html#entry-40</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806112031/http://www.klio.org/marks/' rel='external nofollow' class='url'>Mike Kozlowski</a></cite>&#160;<a class=p href="/web/20110806112031/http://diveintomark.org/archives/2003/03/19/the_road_to_xhtml_20#comment-859" title="April 13, 2003 @ 10:49 am"><img alt="#" src=/web/20110806112031im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806112031/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806112031/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806112031/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806112031/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806112031/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.851 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-14 00:13:58 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 11:20:31 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:15:36 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

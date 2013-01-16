@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>How liberal is too liberal? [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110910161252/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110910161252/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110910161252/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110910161252/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110910161252im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110910161252/http://diveintomark.org/archives/2002/08/20/it_happens" title="It happens">
+<link rel=next href="/web/20110910161252/http://diveintomark.org/archives/2002/08/20/the_persistence_of_memory" title="The persistence of memory">
+<link rel=up href="/web/20110910161252/http://diveintomark.org/archives#p975" title="August 2002">
+<link rel='index' title='dive into mark' href='/web/20110910161252/http://diveintomark.org/' />
+<link rel='prev' title='It happens' href='/web/20110910161252/http://diveintomark.org/archives/2002/08/20/it_happens' />
+<link rel='next' title='The persistence of memory' href='/web/20110910161252/http://diveintomark.org/archives/2002/08/20/the_persistence_of_memory' />
+<link rel='canonical' href='/web/20110910161252/http://diveintomark.org/archives/2002/08/20/how_liberal_is_too_liberal' />
+<link rel='shortlink' href='/web/20110910161252/http://diveintomark.org/?p=975' />
+<meta name="description" content="A dialogue with Joe Gregorio on the merits of an ultra-liberal RSS parser.">
+<meta name="keywords" content="draconian,feedparser,markup,rss,webservices,xml">
+<link href="/web/20110910161252cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110910161252/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110910161252/http://diveintomark.org/archives/2002/08/20/how_liberal_is_too_liberal">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/08\/20\/how_liberal_is_too_liberal";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "10";
+var displayMonth = "Sep";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/08/20/how_liberal_is_too_liberal" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110910161252" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607182105/http://diveintomark.org/archives/2002/08/20/how_liberal_is_too_liberal" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 16:12:52 Sep 10, 2011">SEP</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Oct
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110607182105/http://diveintomark.org/archives/2002/08/20/how_liberal_is_too_liberal" title="18:21:05 Jun 7, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 16:12:52 Sep 10, 2011">10</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20081210125015/http://diveintomark.org/archives/2002/08/20/how_liberal_is_too_liberal" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="10 Dec 2008"><strong>2008</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 16:12:52 Sep 10, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110910161252*/http://diveintomark.org/archives/2002/08/20/how_liberal_is_too_liberal" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>21 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Apr 06 - 10 Sep 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000101102200_2007:-1:110020100010_2008:-1:101020001001_2009:-1:000000000000_2010:-1:000000000000_2011:8:000001001000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110910161252/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110910161252/http://diveintomark.org/archives#p975">August 20, 2002</a> &#8227;
+<h2>How liberal is too liberal?</h2> (<a href="/web/20110910161252/http://diveintomark.org/tag/draconian" rel="tag">draconian</a>, <a href="/web/20110910161252/http://diveintomark.org/tag/feedparser" rel="tag">feedparser</a>, <a href="/web/20110910161252/http://diveintomark.org/tag/markup" rel="tag">markup</a>, <a href="/web/20110910161252/http://diveintomark.org/tag/rss" rel="tag">rss</a>, <a href="/web/20110910161252/http://diveintomark.org/tag/webservices" rel="tag">webservices</a>, <a href="/web/20110910161252/http://diveintomark.org/tag/xml" rel="tag">xml</a>)</div>
+<p><cite>Joe Gregorio</cite>: <a href="/web/20110910161252/http://bitworking.org/Aug2002.html#X631653502731774368">Against an ultra-liberal RSS parser</a>.</p>
+
+<blockquote cite="http://bitworking.org/Aug2002.html#X631653502731774368" title="Joe Gregorio">
+<p>But if we all build parsers that accept non well-formed XML then where is the motivation to fix those feeds? Where is the motivation for the developers of tools that produce non well-formed RSS to fix their products? If it is no longer XML than I can&#8217;t use off-the-shelf XML parsers nor can I stuff the feed through an XSLT transform. If it ceases being valid XML then it is not as amenable to the wonderful re-purposing that the internet allows.</p>
+</blockquote>
+
+<p>All excellent points, except for one thing: I&#8217;m building a parser that will be used in an end-user product, and end users don&#8217;t care about RSS or XML or XSLT or standards of any kind.  Nor should they care, nor should they be required to care.</p>
+
+<p>Look at it this way: imagine you made a browser that only rendered sites authored in valid HTML or XHTML.  How much of the web would your users be able to see?  1%?  0.1%?  Less?  My site validates (most days &#8212; but not all days, because sometimes I accidentally add invalid content and don&#8217;t fix it until later), and a few other sites authored by fellow anal-retentive markup freaks.  But your users wouldn&#8217;t be able to read any of the <a href="/web/20110910161252/http://www.top9.com/news_media/news_sources.html">top 9 news sources</a>, because none of them validate:</p>
+
+<ol>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.cnn.com%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">CNN &#8211; invalid</a></li>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.msnbc.com%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">MSNBC &#8211; invalid</a></li>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.abcnews.com%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">ABCNews &#8211; invalid</a></li>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.bbc.co.uk%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">BBC &#8211; invalid</a></li>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.foxnews.com%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">FOXNews &#8211; invalid</a></li>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.cnbc.com%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">CNBC &#8211; invalid</a></li>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.cbsnews.com%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">CBSNews &#8211; invalid</a></li>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.newsmax.com%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">NewsMax &#8211; invalid</a></li>
+<li><a href="/web/20110910161252/http://validator.w3.org/check?uri=http%3A%2F%2Fwww.npr.org%2F&charset=%28detect+automatically%29&doctype=%28detect+automatically%29">NPR &#8211; invalid</a></li>
+</ol>
+
+<p>Having said that, I should reiterate that <em>developers</em> should absolutely care about standards, because they have all sorts of benefits <em>for developers</em>.  For instance, I have gone to great lengths to code this weblog (and my other sites) to standards: it is valid XHTML 1.0 Strict, it is valid CSS, it complies with all published accessibility standards as well as I understand them, its feed is valid RSS 1.0 (as far as I can tell, though it&#8217;s impossible to be sure, since there are no validators for RSS 1.0 capable of catching errors like <a href="/web/20110910161252/http://diveintomark.org/archives/2002/08/09.html#rss_10_tweaks">the one Bill Kearney caught</a>, and yes, I&#8217;ve known about <a href="/web/20110910161252/http://www.ldodds.com/rss_validator/1.0/validator.html">Leigh Dodd&#8217;s validator</a> for <a href="/web/20110910161252/http://diveintomark.org/archives/2002/05/24.html#upgrades">several months now</a>, but it doesn&#8217;t catch that sort of error either).  The benefits <em>to me, as a developer</em>, are direct and immediate.  Using pure CSS for layout allows my templates to be dead simple and easier to maintain and enhance, and it allows me to use semantic markup in ways that enhance accessibility (like using real headers).  Using valid RSS 1.0 allows me the flexibility to extend my feed to include <a href="/web/20110910161252/http://groups.yahoo.com/group/rss-dev/files/Modules/Proposed/mod_cc.html">licensing information</a>, <a href="/web/20110910161252/http://web.resource.org/rss/1.0/modules/link/">link information</a>, <a href="/web/20110910161252/http://web.resource.org/rss/1.0/modules/subscription/">subscription information</a>, and <a href="/web/20110910161252/http://directory.google.com/Top/Reference/Libraries/Library_and_Information_Science/Technical_Services/Cataloguing/Metadata/Resource_Description_Framework_-_RDF/Applications/RSS/Specifications/RSS1.0_Modules/">all kinds of other fun stuff</a> which is so bleeding edge and convoluted that it could only realistically be read by a pure RDF parser that required valid RDF.</p>
+
+<p>And you know what?  End users don&#8217;t care about any of that.  Even I, as the sole end user of my own ultra-liberal RSS parser (which I use in my homegrown RSS-to-email news aggregator), don&#8217;t care about any of that.  At least not when I&#8217;m being an end user.  In fact, one of the motivations for writing my parser in the first place was Aggie&#8217;s insistence on XML validity, which meant that I missed days at a time worth of news from <a href="/web/20110910161252/http://boingboing.net/">Boing Boing</a>, <a href="/web/20110910161252/http://www.theregus.com/">The Register</a>, and other sites I follow whose feeds are less than perfect.  Let me repeat that.  I.  Was.  Missing.  News.  For days at a time.  And I didn&#8217;t even realize it (because I didn&#8217;t scroll down in Aggie&#8217;s display to notice the error message).  As a developer, I sympathize with your position.  As an end user, I consider your position a fatal design flaw.</p>
+
+<p>Postscript: if you want to evangelize, Syndic8 maintains a list of <a href="/web/20110910161252/http://www.syndic8.com/feedlist.php?OrderBy=feedid&OrderDir=asc&ShowScraped=a&ShowStatus=AwaitingRepair&ShowLanguage=*&ShowCreatedRel=Before&ShowApprovedRel=Before&ShowChangedRel=Before">broken RSS feeds</a>.  You can even <a href="/web/20110910161252/http://www.syndic8.com/register.php">become a Syndic8 user</a> and volunteer to help fix them.  There are currently <a href="/web/20110910161252/http://www.syndic8.com/stats.php?section=overview">1366 feeds awaiting repair</a>.</p>
+
+<p>If you want to evangelize within your program, I recommend doing something <a href="/web/20110910161252/http://www.icab.de/smile.html">like iCab does</a>.  When it encounters a page authored in valid HTML, it puts a little green smily icon next to the address bar.  News aggregators could do something similar: try to parse the feed with a real RDF or XML parser (and indicate success with a smily), and only fall back to a more liberal parser if the strict parser failed (and indicate this with a frown).  But you must fall back to something, or you&#8217;ll just end up punishing your own users for the mistakes of web developers, which accomplishes nothing.</p>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110910161252/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110910161252/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110910161252/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110910161252/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110910161252/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.474 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 15:32:18 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 16:12:52 Sep 10, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:21:36 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

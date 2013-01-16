@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Dive into 2010 [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806103500/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806103500/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806103500/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806103500/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806103500im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806103500/http://diveintomark.org/archives/2010/12/14/zip-chip" title="HOWTO control a Zip Chip programmatically">
+<link rel=next href="/web/20110806103500/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6" title="What if this is as good as it gets?">
+<link rel=up href="/web/20110806103500/http://diveintomark.org/archives#p2654" title="January 2011">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Dive into 2010 Comments Feed" href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806103500/http://diveintomark.org/' />
+<link rel='prev' title='HOWTO control a Zip Chip programmatically' href='/web/20110806103500/http://diveintomark.org/archives/2010/12/14/zip-chip' />
+<link rel='next' title='What if this is as good as it gets?' href='/web/20110806103500/http://diveintomark.org/archives/2011/02/18/ie9-is-the-new-ie6' />
+<link rel='canonical' href='/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010' />
+<link rel='shortlink' href='/web/20110806103500/http://diveintomark.org/?p=2654' />
+<meta name="description" content="The shit that nobody gives about my beloved Peeks, Pokes & Pointers chart is rivaled only by the shit that nobody gives about microdata.">
+<meta name="keywords" content="diveintohtml5,html5,oreilly,personal,publishing">
+<link href="/web/20110806103500cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806103500/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2011\/01\/09\/dive-into-2010";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2011/01/09/dive-into-2010" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806103500" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112900/http://diveintomark.org/archives/2011/01/09/dive-into-2010" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:35:00 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110930135344/http://diveintomark.org/archives/2011/01/09/dive-into-2010" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="30 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514112900/http://diveintomark.org/archives/2011/01/09/dive-into-2010" title="11:29:00 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:35:00 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110825104838/http://diveintomark.org/archives/2011/01/09/dive-into-2010" title="10:48:38 Aug 25, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2010
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:35:00 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120807071840/http://diveintomark.org/archives/2011/01/09/dive-into-2010" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Aug 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806103500*/http://diveintomark.org/archives/2011/01/09/dive-into-2010" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>53 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">12 Jan 11 - 21 Sep 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:7:300010021100_2012:-1:600001fe5000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806103500/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806103500/http://diveintomark.org/archives#p2654">January 9, 2011</a> &#8227;
+<h2>Dive into 2010</h2> (<a href="/web/20110806103500/http://diveintomark.org/tag/diveintohtml5" rel="tag">diveintohtml5</a>, <a href="/web/20110806103500/http://diveintomark.org/tag/html5" rel="tag">html5</a>, <a href="/web/20110806103500/http://diveintomark.org/tag/oreilly" rel="tag">oreilly</a>, <a href="/web/20110806103500/http://diveintomark.org/tag/personal" rel="tag">personal</a>, <a href="/web/20110806103500/http://diveintomark.org/tag/publishing" rel="tag">publishing</a>)</div>
+<p>My big accomplishment of 2010 was finishing the first edition of <a href="/web/20110806103500/http://diveintohtml5.org/">Dive Into HTML5</a> and working with O&#8217;Reilly to publish it on paper as <a href="/web/20110806103500/http://www.amazon.com/HTML5-Up-Running-Mark-Pilgrim/dp/0596806027?ie=UTF8&tag=diveintomark-20&creativeASIN=0596806027">HTML5: Up &amp; Running</a> (as well as <a href="/web/20110806103500/http://oreilly.com/catalog/9780596806033">several downloadable DRM-free formats</a>). I also accomplished a few minor personal things, but in this post I&#8217;m going to focus on the book.</p>
+
+<p>The book went on sale in mid-August and earned out almost immediately. &#8220;Earning out&#8221; is a publishing term which means that the book has sold enough copies that my cut of the profits has paid back the advance payments that O&#8217;Reilly gave me during the writing process. Which means that I&#8217;m already receiving <a href="/web/20110806103500/http://twitpic.com/3migsw">royalty checks for real money</a>. Of the four books I&#8217;ve published through traditional publishers, this is only the second book to earn out. (The original <a href="/web/20110806103500/http://diveintopython.org/">Dive Into Python</a> was the first, and it was on sale for over two years before it earned out.)</p>
+
+<div style="display:block;float:right;font-style:oblique;font-size:xx-large;width:42%;margin:0 0 .75em .75em;background:steelblue;color:white;padding:0.75em;border:1px solid;border-radius:1em;line-height:1.3">I write free books and people buy them. It works out surprisingly well. </div><p>&#8220;HTML5: Up &amp; Running&#8221; sold over 14,000 copies in the first six weeks, of which about 25% were digital downloads and 75% were books on paper. Folks sure do love them some paper. The book continues to be <a href="/web/20110806103500/http://diveintohtml5.org/">available online for free</a>, as it was during the entire writing process, under the liberal Creative Commons Attribution license. This open publishing model generated buzz well in advance of the print publication, and it resulted in over 1,500 pre-orders which shipped the day the book went on sale. <i lang="la" title="The thing speaks for itself">Res ipsa loquitur.</i></p>
+
+<p>The online edition at <a href="/web/20110806103500/http://diveintohtml5.org/">diveintohtml5.org</a> includes Google Analytics so I can <del>evilly track your every movement</del> find out what the hell is going on. The analytics tell me many things. Some highlights:</p>
+
+<ul>
+<li>Throughout 2010, the site served 2 million visitors and 3.9 million pageviews. Each chapter is on its own page because that&#8217;s how I wrote the book (in HTML5). I don&#8217;t need to inflate pageviews for non-existent advertisers (I work for Google so I&#8217;m not allowed to put ads on it anyway), and I never got around to writing a split-chapter-into-multiple-pages script.</li>
+<li>40% of the site&#8217;s traffic came from search engines. 30% came from direct traffic or non-web applications like Twitter or email clients. 30% came from one of over 8,900 referring sites.</li>
+<li>98.7% of the search engine traffic came from Google. Less than 1% came from Bing. The rest came from search engines that I didn&#8217;t know still existed.</li>
+<li><a href="/web/20110806103500/http://daringfireball.net/">John Gruber</a> sent me three times as much traffic as Bing.</li>
+<li>The most popular chapters tracked closely with the most popular incoming search keywords. <a href="/web/20110806103500/http://diveintohtml5.org/video.html">HTML5 video</a> was the most popular topic, logging almost half a million pageviews alone. #2 was <a href="/web/20110806103500/http://diveintohtml5.org/forms.html">web forms</a>, followed closely by <a href="/web/20110806103500/http://diveintohtml5.org/canvas.html">canvas</a>, <a href="/web/20110806103500/http://diveintohtml5.org/semantics.html">semantics</a>, and <a href="/web/20110806103500/http://diveintohtml5.org/geolocation.html">Geolocation</a>. <a href="/web/20110806103500/http://diveintohtml5.org/extensibility.html">Microdata</a> was in dead last. Seriously, the shit that nobody gives about my beloved <a href="/web/20110806103500/http://diveintohtml5.org/peeks-pokes-and-pointers.html">Peeks, Pokes &amp; Pointers</a> chart is rivaled only by the shit that nobody gives about microdata.</li>
+<li>My little <a href="/web/20110806103500/http://diveintohtml5.org/past.html">history of HTML</a> logged almost a quarter million pageviews, and the average visitor spent almost four minutes reading it. (Only the video chapter was higher, at 4:45.) Folks love them some Internet folklore.</li>
+<li>6% of visitors used some version of Internet Explorer. That is not a typo. The site works fine in Internet Explorer &#8212; the site practices what it preaches, and the live examples use a variety of fallbacks for legacy browsers &#8212; so this is entirely due to the subject matter. Microsoft has completely lost the web development community.</li>
+<li>4% of visitors read the site on a mobile device. Of those people, 85% used an iOS device (iPhone + iPad + iPod Touch). 14% used Android, and the rest used mobile devices that I didn&#8217;t know had browsers.</li>
+<li>The site itself, its typography, and the book&#8217;s live examples have led to bug fixes in at least four browsers and <a href="/web/20110806103500/http://www.thibault.org/fonts/essays/">one font</a>. Hooray for living on the bleeding edge.</li>
+</ul>
+
+<p>Although it makes little sense to talk about &#8220;editions&#8221; of a web site (you can see a <a href="/web/20110806103500/http://hg.diveintohtml5.org/">changelog</a> if you like), O&#8217;Reilly and I have already discussed the possibility of doing a new edition of the printed book. Besides rolling up all the updates since August, we&#8217;ve discussed one chapter on Web Workers and another on web sockets. Since all the world&#8217;s browsers have recently <a href="/web/20110806103500/http://annevankesteren.nl/2010/12/websocket-protocol-vulnerability">disabled their web sockets implementations</a> due to <a href="/web/20110806103500/http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html">a subtle (but fatal) protocol-level security vulnerability</a>, the Web Workers chapter will probably come first. No promises, you understand. No promises at all.</p>
+
+<p>If there are new chapters someday, I will urge O&#8217;Reilly to provide them for free to everyone who has already bought a digital copy. But understand that the final decision is not mine to make. Not mine at all. In any event, it will be available online at <code>diveintohtml5.org</code> for free, like the rest of the book.</p>
+
+<p>I&#8217;m not big on predictions, but I do have one for 2011: HTML5 will continue to be popular, because anything popular will get labeled &#8220;HTML5.&#8221;</p>
+<p class=c>&#167;
+
+<h3 id=comments>Thirty five comments here (<a href=/web/20110806103500/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li id="comment-14034"><p>OTOH, I didn&#8217;t see many of the reports of groovy new devices at CES saying &#8220;and it runs HTML5&#8243;, and I am thankful for that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://lookit.proper.com/' rel='external nofollow' class='url'>Paul Hoffman</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14034" title="January 9, 2011 @ 3:24 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14035"><p>Really nice work, Mark. I&#8217;ve been following your stuff since &#8220;Dive Into Accessibility&#8221; and your work on HTML5 is as good, if not better for its sheer level of pedantic detail, as anything I&#8217;ve read.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://graphicpush.com/' rel='external nofollow' class='url'>Kevin Potts</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14035" title="January 9, 2011 @ 4:22 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14036"><p>Having not browsed you site and therefore having not left footprints or useful preference data :) I&#8217;d like to cast a vote for expanding the information on canvas. What I found in the book was enough to convince me that either it was totally useless or that I had somehow miss-understood the subject. My test project was a chess board with movable pieces. No canvas combination made that particularly doable.  Great book non the less. Just noticed the partial Mandelbrot set at the bottom&#8212; code to draw same on canvas would be useful if only for the classic &#8216;pretty picture&#8217; effect. Code that allowed diving would be spectacular :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://sdragons.org/' rel='external nofollow' class='url'>Hugh Shannon Myers</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14036" title="January 9, 2011 @ 5:03 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14038"><p>I can safely say that I bring up the microdata chapter at least once a week.  It has fans, and it&#8217;s place in reality will exist eventually.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://wsj.com/' rel='external nofollow' class='url'>Erin Sparling</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14038" title="January 9, 2011 @ 10:39 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14042"><p>Glad you decided you to present your knowledge free for everybody to use!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://www.kalvster.com/' rel='external nofollow' class='url'>Kalvster</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14042" title="January 10, 2011 @ 12:02 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14043"><p>It&#8217;s a beautiful book, you deserve the money. Congratulations.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://math.hiremebecauseimsmart.com/' rel='external nofollow' class='url'>Human Mathematics</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14043" title="January 10, 2011 @ 12:35 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14044"><p>Can you give browser family breakdowns for the other 94%</p>
+<p>IE, 6%<br />
+Firefox, ?%<br />
+Chrome, ??%<br />
+Safari, ??%</p>
+<p>Cheers</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://skdjlsdjkf/' rel='external nofollow' class='url'>Eric</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14044" title="January 10, 2011 @ 1:53 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14045"><p>Good wark man, nicely done!</p>
+<p class=sig>&#8212;&#8201;<cite>Crabore Numbnuts</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14045" title="January 10, 2011 @ 3:13 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14046"><p>I love the honesty in the wya you write, the underlying Microsoft bashing from a Google employee, but your so honest about it! Well done on your achievement and that for the interesting stats.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://europeanmarketingnetwork.com/' rel='external nofollow' class='url'>Khyne</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14046" title="January 10, 2011 @ 3:36 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14047"><p>And I liked the Peeks, Pokes, and Pointers.</p>
+<p class=sig>&#8212;&#8201;<cite>Eric Tully</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14047" title="January 10, 2011 @ 5:08 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14048"><p>Hi Mark,  Very impressive site and contents (diveintohtml5.org).  Apart from content, I really liked the clean design.  Thanks !!</p>
+<p>BTW, Where can I find such nice b/w royalty-free images ? Or did you make them yourself ?</p>
+<p>Thanks,</p>
+<p class=sig>&#8212;&#8201;<cite>nirakar</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14048" title="January 10, 2011 @ 6:05 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-14049"><p>Other browser breakdown: Firefox 40%, Chrome 27%, Safari 21%, Opera 4%.</p>
+<p>Public domain images came from <a href="/web/20110806103500/http://www.openclipart.org/" rel="nofollow">http://www.openclipart.org/</a> , mostly <a href="/web/20110806103500/http://www.openclipart.org/user-detail/johnny_automatic" rel="nofollow">http://www.openclipart.org/user-detail/johnny_automatic</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14049" title="January 10, 2011 @ 8:14 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14050"><p>I think the chapter on canvas is brilliant &#8211; it&#8217;s been my standard reference for all my experiments. A combination of that and the MDC tutorial (<a href="/web/20110806103500/https://developer.mozilla.org/en/canvas_tutorial" rel="nofollow">https://developer.mozilla.org/en/canvas_tutorial</a>).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://skilldrick.co.uk/' rel='external nofollow' class='url'>Skilldrick</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14050" title="January 10, 2011 @ 8:46 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-14051"><p>Another fun fact from my diveintohtml5.org analytics: traffic drops by 50% on the weekends. (This is also true of Python and Python 3.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14051" title="January 10, 2011 @ 9:27 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14052"><p>If you want to &#8220;find out what the hell is going on&#8221; without the &#8220;evil&#8221; google thing and in the process reappropriate your own data, there&#8217;s piwik, it&#8217;s an opensource realtime web analytics software from the guys of phpmyvisites fame, it&#8217;s worth the try. there an online demo on their website: <a href="/web/20110806103500/http://piwik.org/" rel="nofollow">http://piwik.org/</a></p>
+<p class=sig>&#8212;&#8201;<cite>ramina</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14052" title="January 10, 2011 @ 9:27 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14053"><p>&#8220;all the world’s browsers&#8221; have disabled web sockets? Pretty sure it&#8217;s currently still enabled in Chrome, Safari and iOS Safari 4.2.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://a.deveria.com/' rel='external nofollow' class='url'>Alexis Deveria</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14053" title="January 10, 2011 @ 9:29 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14054"><p>Splendid proof that you can live on the bleeding edge (as opposed to one version behind) and still work just fine. I love the site and plan on picking up the book soon. It has been an invaluable resource for me and people I have shared it with.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://joshuakehn.com/' rel='external nofollow' class='url'>Joshua Kehn</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14054" title="January 10, 2011 @ 10:46 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14056"><p>I bought a copy and reading much of it off the web site first. It is my pleasure to support technology authors. I am sure thats a tough gig.</p>
+<p class=sig>&#8212;&#8201;<cite>Jeff Bendixsen</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14056" title="January 10, 2011 @ 12:21 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14057"><p>It was a pleasure reading it as it appeared on the website, and a pleasure reading my ePub copy. I look forward to referring to it for years to come.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://pauldwaite.co.uk/' rel='external nofollow' class='url'>Paul D. Waite</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14057" title="January 10, 2011 @ 12:29 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14058"><p>Lovely font for your title by the way. It tricked me at first, I thought you had stuck an image of a predigital page for the front. Where did you find Essays 1743? Love the book.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://paradepro.com/' rel='external nofollow' class='url'>Enoch</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14058" title="January 10, 2011 @ 12:56 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14059"><p>That&#8217;s great news!<br />
+I did want to point out a few things about your stats:<br />
+- Your time on page stats are likely well under the actual figures. As you probably know, Google counts time on page by calculating the difference between two tracking pixel loads. If some of your readers only spent time on the first page they saw and then left (shown as a bounce), it would actually be averaged in as 0 seconds. You might find it neat to sample a little traffic using ClickTale (which constantly hits the tracker) to get a better insight. Plus, it&#8217;s kind of cool to see mouse movement, scroll reach, and attention on their heatmaps.</p>
+<p>-Since GA is a JavaScript based tracker, your mobile numbers aren&#8217;t going to represent browsers that can&#8217;t or don&#8217;t execute it. Biggest case is BlackBerry, which at least on older phones disabled JS by default.</p>
+<p class=sig>&#8212;&#8201;<cite>Danielle R</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14059" title="January 10, 2011 @ 1:03 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14060"><p>After liking a lot Dive into Python, I will have to take a look (some day, as my thesis work is piling up) at this book. Thanks for writing it, and above all, for the free+paid way. It is a brilliant way to go, and I guess that it encourages more buying than anything.</p>
+<p>Cheers, </p>
+<p>Ruben</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://www.mostlymaths.net/' rel='external nofollow' class='url'>Ruben Berenguel</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14060" title="January 10, 2011 @ 2:26 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14061"><p>Hugh Myers,</p>
+<p>My game wouldn&#8217;t exist in HTML without Canvas, so I can tell you that it&#8217;s not useless.  A chess board is orthogonal enough, it would actually be easier using traditional HTML animation techniques, not a canvas.  You need a better example.</p>
+<p>But when you start wanting to generate graphics dynamically, combining images, and transformations, there&#8217;s no substitute for the Canvas.  The hero in my game for instance, is a Will-o-Wisp, a barely cohesive blob of randomly moving lights.  His parts are in constant motion, even when he&#8217;s not.  So, my game never draws him exactly the same way twice.  That would be terribly difficult without a Canvas.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://runestonewisp.appspot.com/' rel='external nofollow' class='url'>Newell Rose</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14061" title="January 10, 2011 @ 3:08 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-14062"><p>> Where did you find Essays 1743?</p>
+<p>It&#8217;s packaged in Debian and Ubuntu.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14062" title="January 10, 2011 @ 3:44 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14064"><p>let me ask directly, to be clear.</p>
+<p>does the license allow me to<br />
+create an e-book of this content<br />
+and give it away for free?</p>
+<p>-bowerbird</p>
+<p class=sig>&#8212;&#8201;<cite>bowerbird</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14064" title="January 10, 2011 @ 4:29 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-14065"><p>> does the license allow me to create an e-book of this content and give it away for free?</p>
+<p>Yes, as long as you retain my copyright statement, i.e. don&#8217;t try to take credit for actually writing it.</p>
+<p>It also allows unlimited translations, although for some reason I&#8217;ve had more success there with my Python books than with this one.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14065" title="January 10, 2011 @ 4:46 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14066"><p>I&#8217;m one of those who purchased the digital version of HTML 5 up and running. I thought the price was fair for the job so I paid it. Books are easy to &#8216;get&#8217; for free if you use sharing webs (i.e. rapidshare) but it is senseless to steal something that saves you lots of hours and headaches. At the end you earn money due to the productivity of your learning so you shouldn&#8217;t be afraind of paying a fee.<br />
+This is my perspective.</p>
+<p class=sig>&#8212;&#8201;<cite>Pau</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14066" title="January 10, 2011 @ 4:48 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14067"><p>thanks for confirming that, mark.       :+)</p>
+<p>for people who receive the e-book for free,<br />
+and who want to pay you for &#8220;your cut&#8221;,<br />
+do you have a way for them to do that?</p>
+<p>what amount would you &#8220;recommend&#8221;?<br />
+for instance, how much do you receive<br />
+when o&#8217;reilly sells a digital copy?</p>
+<p>-bowerbird</p>
+<p>p.s.  i&#8217;ll let you address pau, and his<br />
+use of the &#8220;steal&#8221; word, if you want to.</p>
+<p class=sig>&#8212;&#8201;<cite>bowerbird</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14067" title="January 10, 2011 @ 5:02 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14068"><p>Absolutely love your work and can&#8217;t thank you enough for writing about HTML5 when you did. I&#8217;ve been engrossed in it ever since.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://blog.gronski.org/' rel='external nofollow' class='url'>Michael Gronski</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14068" title="January 10, 2011 @ 8:00 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14069"><p>Oh, I did not know about that web socket issue.<br />
+Congrats, you write great books!</p>
+<p class=sig>&#8212;&#8201;<cite>Montreal Web Design</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14069" title="January 10, 2011 @ 8:17 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14071"><p>Perhaps I&#8217;m the umptieth to point this out (but I can&#8217;t tell) but the new comments do not show up. I only see 4 comments despite frantic refreshing (no proxy).</p>
+<p class=sig>&#8212;&#8201;<cite>P. van Kampen</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14071" title="January 11, 2011 @ 4:34 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14072"><p>Great business model giving away free ebooks online and making money from people who request the print. Never knew that would work quite so well. Thanks for sharing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://successgmat.com/' rel='external nofollow' class='url'>Willie</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14072" title="January 11, 2011 @ 8:30 am"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14073"><p>I&#8217;m glad it works out well- but are e-ink readers generating or reducing sales? Have you noticed an impact since they started to mainstream? (I&#8217;m assuming your readers are likely early adopters)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://www.degabrielle.name/stephen' rel='external nofollow' class='url'>Stephen De Gabrielle</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14073" title="January 12, 2011 @ 3:23 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14075"><p>Your writing is very spoken-wordy, no matter the subject. I think people relate really well to that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806103500/http://ybits.net/' rel='external nofollow' class='url'>Ryan</a></cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14075" title="January 14, 2011 @ 1:01 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-14076"><p>Sir, I commend you on the Peaks &amp; Pokes chart. I remember those well from my youth. Thank you for a smile.</p>
+<p class=sig>&#8212;&#8201;<cite>Michael Kohne</cite>&#160;<a class=p href="/web/20110806103500/http://diveintomark.org/archives/2011/01/09/dive-into-2010#comment-14076" title="January 15, 2011 @ 9:46 pm"><img alt="#" src=/web/20110806103500im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806103500/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806103500/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806103500/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806103500/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806103500/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.449 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 10:37:15 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:35:00 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:03:23 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,1042 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Essentials, 2006 edition [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806090047/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806090047/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806090047/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806090047/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806090047im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806090047/http://diveintomark.org/archives/2006/06/16/juggling-oranges" title="Juggling oranges">
+<link rel=next href="/web/20110806090047/http://diveintomark.org/archives/2006/06/27/diveintomark-show" title="It&#8217;s the Dive Into Mark show!">
+<link rel=up href="/web/20110806090047/http://diveintomark.org/archives#p1552" title="June 2006">
+<link rel="alternate" type="application/rss+xml" title="dive into mark &raquo; Essentials, 2006 edition Comments Feed" href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006/feed" />
+<link rel='index' title='dive into mark' href='/web/20110806090047/http://diveintomark.org/' />
+<link rel='prev' title='Juggling oranges' href='/web/20110806090047/http://diveintomark.org/archives/2006/06/16/juggling-oranges' />
+<link rel='next' title='It&#8217;s the Dive Into Mark show!' href='/web/20110806090047/http://diveintomark.org/archives/2006/06/27/diveintomark-show' />
+<link rel='canonical' href='/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006' />
+<link rel='shortlink' href='/web/20110806090047/http://diveintomark.org/?p=1552' />
+<meta name="description" content="Now that I've completed my move to Linux (sorry Mac fanboys, the install was flawless and everything worked out of the box), someone emailed me to suggest that I update my essential software list.">
+<meta name="keywords" content="essentials,linux,software,ubuntu">
+<link href="/web/20110806090047cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806090047/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2006\/06\/26\/essentials-2006";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2006/06/26/essentials-2006" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806090047" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110607151412/http://diveintomark.org/archives/2006/06/26/essentials-2006" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Jun 2011"><strong>JUN</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 9:00:47 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110927020109/http://diveintomark.org/archives/2006/06/26/essentials-2006" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Sep 2011"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110718040613/http://diveintomark.org/archives/2006/06/26/essentials-2006" title="4:06:13 Jul 18, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 9:00:47 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110811142003/http://diveintomark.org/archives/2006/06/26/essentials-2006" title="14:20:03 Aug 11, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100615031823/http://diveintomark.org/archives/2006/06/26/essentials-2006" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 9:00:47 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806090047*/http://diveintomark.org/archives/2006/06/26/essentials-2006" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>111 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">28 Jun 06 - 3 Aug 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000002ef2037_2007:-1:952210301221_2008:-1:212121172100_2009:-1:010000000000_2010:-1:001111000021_2011:7:000001122100_2012:-1:300000010000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806090047/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806090047/http://diveintomark.org/archives#p1552">June 26, 2006</a> &#8227;
+<h2>Essentials, 2006 edition</h2> (<a href="/web/20110806090047/http://diveintomark.org/tag/essentials" rel="tag">essentials</a>, <a href="/web/20110806090047/http://diveintomark.org/tag/linux" rel="tag">linux</a>, <a href="/web/20110806090047/http://diveintomark.org/tag/software" rel="tag">software</a>, <a href="/web/20110806090047/http://diveintomark.org/tag/ubuntu" rel="tag">ubuntu</a>)</div>
+<p>Now that I&#8217;ve completed my move to Linux (sorry Mac fanboys, the install was flawless and everything worked out of the box), someone emailed me to suggest that I update <a href="/web/20110806090047/http://diveintomark.org/archives/2004/05/01/essentials">my essential software list</a>.  So here you go.</p>
+
+<ol>
+<li><a href="/web/20110806090047/http://www.ubuntu.com/">Ubuntu</a>, which is an ancient African word meaning &#8220;can&#8217;t install Debian&#8221;.</li>
+<li><a href="/web/20110806090047/http://www.gnu.org/software/emacs/">GNU Emacs</a>, for people who think that the main problem with XEmacs is that it&#8217;s <em>too user friendly</em>.  (I kid, I kid.  Also, I enabled the universe repository and installed <kbd>apt-get install emacs-snapshot-gtk</kbd>, which has normal menus and dialogs and stuff.)</li>
+<li><a href="/web/20110806090047/http://www.mozilla.com/firefox/">Mozilla Firefox</a> + <a href="/web/20110806090047/http://adblockplus.mozdev.org/">Adblock Plus</a> + <a href="/web/20110806090047/https://addons.mozilla.org/firefox/1136/">Adblock Filterset.G.Updater</a> + <a href="/web/20110806090047/http://firefox.exxile.net/">All-In-One Sidebar</a> + <a href="/web/20110806090047/http://bookburro.org/">Book Burro</a> + <a href="/web/20110806090047/http://www.customizegoogle.com/">CustomizeGoogle</a> + <a href="/web/20110806090047/http://del.icio.us/help/firefox/extension">del.icio.us</a> + <a href="/web/20110806090047/http://www.joehewitt.com/software/firebug/">FireBug</a> + <a href="/web/20110806090047/http://forecastfox.mozdev.org/">ForecastFox</a> + <a href="/web/20110806090047/https://addons.mozilla.org/firefox/173/">Gmail Notifier</a> + <a href="/web/20110806090047/http://greasemonkey.mozdev.org/">Greasemonkey</a> + <a href="/web/20110806090047/http://extensionroom.mozdev.org/more-info/keyconfig">keyconfig</a> + <a href="/web/20110806090047/http://menueditor.mozdev.org/">Menu Editor</a> + <a href="/web/20110806090047/http://nextplease.mozdev.org/">NextPlease</a> + <a href="/web/20110806090047/http://www.noscript.net/">NoScript</a> + <a href="/web/20110806090047/http://www.pdfdownload.org/">PDF Download</a> + <a href="/web/20110806090047/http://tmp.garyr.net/">Tab Mix Plus</a> + <a href="/web/20110806090047/http://chrispederick.com/work/webdeveloper/">Web Developer</a>.  Damn it, why is Firefox taking 600 MB?</li>
+<li><a href="/web/20110806090047/http://gaim.sourceforge.net/">GAIM</a> + <a href="/web/20110806090047/http://guifications.sourceforge.net/Guifications/">Guifications</a> + <a href="/web/20110806090047/http://gaim-extprefs.sourceforge.net/ep.shtml">Extended Preferences</a> + <a href="/web/20110806090047/http://gaim-hotkeys.sourceforge.net/">Global Hotkeys</a> + <a href="/web/20110806090047/http://gaim-encryption.sourceforge.net/">Encryption</a>.  Not that I have anything to hide.  <kbd>apt-get install gaim gaim-guifications gaim-extendedprefs gaim-hotkeys gaim-encryption</kbd></li>
+<li><a href="/web/20110806090047/http://www.digikam.org/">digiKam</a> + <a href="/web/20110806090047/http://extragear.kde.org/apps/kipi/">Kipi plugins</a>.  It&#8217;s just like iPhoto except it calls albums &#8220;tags&#8221;, exports to Flickr for free, exports to HTML that validates, stores my important metadata in a SQLite database, can be operated entirely with a keyboard, and doesn&#8217;t suck.  <kbd>apt-get install digikam digikamimageplugins kipi-plugins</kbd></li>
+<li><a href="/web/20110806090047/http://amarok.kde.org/">amaroK</a>.  It&#8217;s just like iTunes except it automatically fetches lyrics from Argentina, automatically looks up bands on Wikipedia, automatically identifies songs with MusicBrainz, and its developers are actively working on features that don&#8217;t involve pushing DRM-infected crap down my throat.  <a href="/web/20110806090047/http://kubuntu.org/announcements/amarok-1.4.php">Add the amarok repository</a> to get the latest version.  <kbd>apt-get install amarok</kbd></li>
+<li><a href="/web/20110806090047/http://www.mozilla.com/thunderbird/">Mozilla Thunderbird</a>.  It&#8217;s just like Evolution, except it&#8217;s intelligently designed.  <kbd>apt-get install mozilla-thunderbird</kbd></li>
+<li><a href="/web/20110806090047/http://www.kinodv.org/">Kino</a>.  It&#8217;s just like iMovie except&#8230; no, it&#8217;s nothing like iMovie.  Damn.  I miss iMovie.  <kbd>apt-get install kino kinoplus</kbd></li>
+<li><a href="/web/20110806090047/http://www.getdemocracy.com/">Democracy Player</a>.  I tried and failed this weekend to explain to my wife why I love <a href="/web/20110806090047/http://www.zefrank.com/theshow/">the show with zefrank</a>.  Ubuntu repositories are out of date; install the latest version from <a href="/web/20110806090047/http://www.getdemocracy.com/downloads/ubuntu.php">Democracy&#8217;s Ubuntu download page</a>.</li>
+<li><a href="/web/20110806090047/http://ktorrent.org/">KTorrent</a>.  It&#8217;s like Azureus without the Java.  <kbd>apt-get install ktorrent</kbd></li>
+<li><a href="/web/20110806090047/http://konversation.kde.org/">Konversation</a>.  It&#8217;s like a standalone version of Chatzilla but doesn&#8217;t periodically tell me that its internal data structures are corrupted and point me to a Bugzilla entry where no one seems to be able to fix the problem.  (An anonymous Chatzilla developer assures me that this bug has since been fixed.  Time to update my copy on my work laptop.  I still prefer Konversation under Linux though.)  <kbd>apt-get install konversation</kbd></li>
+<li><a href="/web/20110806090047/http://k9copy.sourceforge.net/">k9copy</a>.  It&#8217;s MacTheRipper and DVD2OneX all wrapped into one.  Really.  <kbd>apt-get install k9copy</kbd></li>
+<li><a href="/web/20110806090047/http://raphael.slinckx.net/deskbar/">GNOME Deskbar</a>.  It&#8217;s like Quicksilver, only without the plugins.  And the bezels.  And the Growl support.  Damn.  I miss Quicksilver.  And Growl.  <kbd>apt-get install deskbar-applet</kbd></li>
+<li><a href="/web/20110806090047/http://kmymoney2.sourceforge.net/index2.html">KMyMoney</a>.  It&#8217;s like Quicken without the monopolistic dickwads.  <kbd>apt-get install kmymoney2</kbd></li>
+<li><a href="/web/20110806090047/http://www.openssh.com/">OpenSSH</a>.  It&#8217;s like nothing else.  Duh.  <kbd>apt-get install openssh-client openssh-server</kbd></li>
+<li><a href="/web/20110806090047/http://subversion.tigris.org/">Subversion</a> (<a href="/web/20110806090047/http://www.logemann.org/day/archives/000099.html">over SSH</a>).  It&#8217;s like CVS without the <a href="/web/20110806090047/http://www.delorie.com/gnu/docs/cvs/cvsclient_3.html">I LOVE YOU / I HATE YOU</a>.  Also, <code>svn move</code>.  My entire home directory is in a private Subversion repository, including configuration files.  <kbd>apt-get install subversion</kbd></li>
+<li><a href="/web/20110806090047/http://www.mplayerhq.hu/">MPlayer</a> (and <a href="/web/20110806090047/http://www.mplayerhq.hu/DOCS/HTML/en/encoding-guide.html">MEncoder</a>).  Compiled from source, yo (only because the version in the repositories is out of date).  It&#8217;s the only thing I&#8217;ve felt the need to recompile, or indeed compile in the first place.</li> 
+<li><a href="/web/20110806090047/http://samba.anu.edu.au/rsync/">rsync</a>, for <a href="/web/20110806090047/http://diveintomark.org/archives/2006/05/08/backup">backups</a> (over Gigabit ethernet, w00t!)  You do have backups, right?  <code>rsync -avz</code>, baby.  Yes, I know about Unison.  Shut the fuck up about Unison!  I tried it!  I don&#8217;t like it!  It&#8217;s okay that you do!  It&#8217;s a big world!  We can both co-exist!</li>
+</ol>
+
+<p><strong>Update:</strong> some things I forgot, plus some things I learned about from my comments&#8230;</p>
+
+<ul>
+<li><a href="/web/20110806090047/http://easyubuntu.freecontrib.org/">EasyUbuntu</a>.  Play MP3s, DVDs, AVIs, and Flash.</li>
+<li><a href="/web/20110806090047/http://beagle-project.org/">Beagle</a>, which indexes your life and integrates with GNOME Deskbar.  <kbd>apt-get install beagle</kbd></li>
+<li><a href="/web/20110806090047/http://www.k3b.org/">k3b</a>, a CD/DVD burner like Roxio Toast.  <kbd>apt-get install k3b</kbd></li>
+<li><a href="/web/20110806090047/http://konsole.kde.org/">Konsole</a>.  After tweaking the keyboard shortcuts a bit, I have been convinced that it is better than GNOME Terminal.  <kbd>apt-get install konsole</kbd></li>
+<li><a href="/web/20110806090047/http://www.gnu.org/software/screen/">screen</a> for managing multiple terminal windows when I&#8217;m SSHing into my box from elsewhere (and even occasionally when I&#8217;m sitting in front of it).  Still the best after all these years.  <kbd>apt-get install screen</kbd></li>
+<li><a href="/web/20110806090047/http://openoffice.org/">OpenOffice</a>, for the rare moments when I need to open a Microsoft Office document.  <kbd>apt-get install openoffice.org openclipart-openoffice.org</kbd></li>
+<li><a href="/web/20110806090047/http://alltray.sourceforge.net/">AllTray</a> for minimizing any application to the Linux equivalent of the system tray.  Not in the official repositories; you&#8217;ll need to add <a href="/web/20110806090047/http://asher256-repository.tuxfamily.org/english.php">Asher256&#8242;s repository</a> and <kbd>apt-get install alltray</kbd>.</li>
+<li><a href="/web/20110806090047/http://checkgmail.sourceforge.net/">CheckGmail</a>.  Also in Asher256&#8242;s repository.  <kbd>apt-get install checkgmail</kbd></li>
+<li><a href="/web/20110806090047/http://packages.ubuntulinux.org/dapper/gnome/brightside">Brightside</a>, which adds a &#8220;Screen Actions&#8221; item under Preferences to let you do things (like hide all windows, or switch to another desktop) when you move your cursor to a screen corner or edge.  <kbd>apt-get install brightside</kbd></li>
+<li><a href="/web/20110806090047/http://www.koffice.org/krita/">Krita</a> for my light graphic editing needs.  <a href="/web/20110806090047/http://kubuntu.org/announcements/koffice-151.php">Add the KOffice repository</a> to get the latest version.  <kbd>apt-get install krita</kbd></li>
+<li><a href="/web/20110806090047/http://www.videolan.org/vlc/">VLC</a> for playing wacky formats that MPlayer can&#8217;t.  <kbd>apt-get install vlc</kbd></li>
+<li><a href="/web/20110806090047/http://freshmeat.net/projects/ksnapshot/">KSnapshot</a> for taking screen grabs of specific windows or regions.  <kbd>apt-get install ksnapshot</kbd></li>
+<li><a href="/web/20110806090047/http://www.alexander-noe.com/video/amg/">AVI-Mux GUI</a>, one of the tools I use to help create my video podcasts.  <kbd>apt-get install mkvtoolnix-gui</kbd></li>
+<li>Lots of fun games.  <kbd>apt-get install supertux gweled briquolo chromium criticalmass frozen-bubble fb-music-high lbreakout2 pingus powermanga rrootage gnome-sudoku tuxpuck</kbd></li>
+</ul>
+<p class=c>&#167;
+
+<h3 id=comments>Two hundred forty four comments here (<a href=/web/20110806090047/http://diveintomark.org/recentcomments>latest comments</a>)</h3>
+<ol class=cl>
+<li class=pb id="comment-6738"><cite><a href='/web/20110806090047/http://www.minid.net/?p=2874' rel='external nofollow' class='url'>Minid.net &raquo; Blog Archive &raquo; Ubuntu: muahahaha</a></cite>&#160;(pingback)</li>
+<li id="comment-6739"><p>I use GNOME desktop so, most of your apps aren&#8217;t in my list. I use Linux mainly for work stuff: svn, ruby, lighttpd, liferea reader, gaim, firefox, google maps, and xmms. Evolution for e-mail, because i&#8217;m not a freak of e-mail (check twice a day). Oh, MPlayer Movie Player for movies every day, sweet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.minid.net/' rel='external nofollow' class='url'>mini-d</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6739" title="June 26, 2006 @ 3:00 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6740"><p>Hi,</p>
+<p>just wondering why you use GNOME, when half of your applications are KDE anyway and some of those missing are in KDE already (IIRC, Quicksilver = Katapult in KDE). And sorry, KMail is way more powerful than Thunderbird &#8212; I tried it just week ago and I am glad to be back in KMail.</p>
+<p>Best,</p>
+<p>Matej</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://matej.ceplovi.cz/blog/' rel='external nofollow' class='url'>Matej Cepl</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6740" title="June 26, 2006 @ 3:01 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6741"><p>I like Nautilus better than Konqueror, GNOME Terminal better then KTerm (edit: oops, it&#8217;s called Konsole), and GNOME Deskbar better than Katapult.  But yeah, I end up with KDE libs loaded most of the time. :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6741" title="June 26, 2006 @ 3:05 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6742"><p>Pan-OS: Firefox (default browser outside of OS X).</p>
+<p>Windows: Paint Shop Pro, Trillian, ActivePerl, PuTTY, FlashFXP, EditPad Pro.</p>
+<p>Mac OS X: Apple Mail, iPhoto, iTunes (all three of them by active choice and not just settling for what ships), Flip4Mac (WMV QuickTime codec), VLC (because its Mac GUI sucks less than mplayer and appears to be actively developed), SubEthaEdit, NetNewsWire, Acquisition (made by Dave Watanabe, the Soup Nazi of independent Mac application developers), Inquisitor (ditto), Adium, Growl, Synergy (for showing iTunes bezels), Camino, OmniWeb (default browser), Safari, Opera (why yes, I am a web developer).</p>
+<p>Linux (and the command line parts of OS X): I look forward to installing Ubuntu when my MacBook gets delivered. Until then, some outdated and meager notions: nano/pico (and emacs over vi on the account of being slightly less insane if I have to choose), curl over wget (but not by much), Galeon over Konqueror (built-in vertical tabs; I prefer Firefox over Galeon), GIMP over&#8230; wait, just say GIMP, GAIM, apt-get.</p>
+<p>Many of those are proprietary applications. As a software developer, this bugs me more than I&#8217;d like to admit. As a user, old habits die hard, and by &#8220;old habits die hard&#8221; I really mean &#8220;not switching unless confronted with a better alternative or slightly worse but with available source&#8221; instead of &#8220;I&#8217;m a retarded bigot&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://waffle.wootest.net/' rel='external nofollow' class='url'>Jesper</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6742" title="June 26, 2006 @ 3:08 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6743"><p>Here some other programs you might be interrested in:</p>
+<p><a href="/web/20110806090047/http://listengnome.free.fr/" rel="nofollow">http://listengnome.free.fr/</a> &#8211; Listen which supports my iPod perfectly, has got a very nice gtk frontend. I even like it more then amarok since it fetches more lyrics, the wikipedia support looks a bit better. And I like it since GTK looks better than Qt.</p>
+<p>I havn&#8217;t tried diva by now (<a href="/web/20110806090047/http://www.diva-project.org/" rel="nofollow">http://www.diva-project.org/</a>) but it tries to create an easy to use, scalable, open-source video editing software for the GNOME desktop.</p>
+<p>Instead of Konversation I use X-Chat (<a href="/web/20110806090047/http://xchat.org/" rel="nofollow">http://xchat.org/</a>) which just rocks :-) Check out tomboy. It&#8217;s a very cool way for managing notes on the desktop and don&#8217;t forget to install beagle since the deskbar supports it :-)</p>
+<p>And finally &#8212; use gvim instead of emacs :D *scnr*</p>
+<p>Regards,<br />
+Armin</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://lucumr.pocoo.org/' rel='external nofollow' class='url'>Armin Ronacher</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6743" title="June 26, 2006 @ 3:33 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6744"><p>SessionSaver is a &#8220;must install&#8221; Firefox extension.</p>
+<p class=sig>&#8212;&#8201;<cite>Sérgio Nunes</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6744" title="June 26, 2006 @ 3:58 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6745"><p>Oh yeah, I have Beagle too.  It&#8217;s very pretty, but I haven&#8217;t used it &#8220;for real&#8221; yet.  I never used Spotlight either, or Google Desktop Search, or Copernicus, or whatnot.  Don&#8217;t really know why; I guess they just don&#8217;t match up with how I want to find stuff.  I&#8217;m not sure how I find stuff.  They also tend to uncover a lot of stuff that I would prefer to keep buried.  I don&#8217;t think it&#8217;s healthy to have your entire life&#8217;s work a constant distance away.  This isn&#8217;t about excluding specific directories, I know Beagle can do that.  It&#8217;s more about &#8220;show me all the email messages that contain these keywords, except the ones from Randi after 1999, Kim after 1998 or between 1989 and 1991, and the ones I sent to the info-mac moderators in 1993.&#8221;  Is there a desktop search engine that helps you lose things?  That would be very useful.  Really.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6745" title="June 26, 2006 @ 4:05 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6746"><p>Tab Mix Plus has a SessionSaver feature, and Firefox 2 will have one built-in.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6746" title="June 26, 2006 @ 4:06 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6747"><p>Well, I&#8217;m still on a Mac. But this is pretty strong stuff.</p>
+<p>I&#8217;d really miss OmniGraffle and OmniOutliner though.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://robertbrook.com/' rel='external nofollow' class='url'>Robert Brook</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6747" title="June 26, 2006 @ 4:38 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6748"><p>Feel free to stop calling us “fanboys.”</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6748" title="June 26, 2006 @ 5:14 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6749"><p>GNOME Terminal a KTerm are bloatware. Any X Terminal Emulator that lets you change the background &#8220;picture&#8221; is bloatware &#8211; xterm is powerful, simple and chaperons 90% of communication with my computer.</p>
+<p>GNOME looks nicer than KDE and is easier to use IMO but <a href="/web/20110806090047/http://www.modeemi.fi/~tuomov/ion/" rel="nofollow">Ion3</a> is a graphical <i>usable</i> interface for people who value keyboard navigation and hate the mouse.</p>
+<p>I have found amaroK to be slow and buggy &#8211; no GNU/Linux application has yet to handle my medium to large music collection with ease, though I like Rhythmbox the most.</p>
+<p>At any one time it is guaranteed that I will be using xterm and Firefox and Gaim. Everything else is by the by.</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6749" title="June 26, 2006 @ 5:57 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6750"><p>I have a couple of Ubuntu installs with all manner of things crammed on them. I have a new one I&#8217;ve been using for 2-3 weeks, and it turns out this stuff is what I *really* need in addition to the stock install:</p>
+<p>* GNU Emacs + my modes and such<br />
+* GAIM<br />
+* Firefox + Firebug<br />
+* Ethereal<br />
+* Chatzilla + XULRunner 1.8.0.4 tarball (no stability warnings yet)<br />
+* Erlang + yaws<br />
+* Thunderbird<br />
+* Lots of non-free codecs and such<br />
+* Netbeans 5.x for J2ME<br />
+* Wine for J2ME codegen scripts<br />
+* IDEA for other Java<br />
+* All the dev packages needed for building mozilla</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://franklinmint.fm/' rel='external nofollow' class='url'>Robert Sayre</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6750" title="June 26, 2006 @ 6:03 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6751"><p>Stuff I use that you don&#8217;t:<br />
+* WMI &#8211; (nee WMII) a window manager optimized for switching between windows. Nothing else comes close. It sucks for anything else, so ymmv.<br />
+* vim7 &#8211; I</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://gr.ayre.st/' rel='external nofollow' class='url'>Karl Guertin</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6751" title="June 26, 2006 @ 6:14 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6752"><p>ah well, comment eaten.</p>
+<p>I prefer &#8220;Macolyte&#8221; or &#8220;the faithful&#8221; over mac fanboys.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://gr.ayre.st/' rel='external nofollow' class='url'>Karl Guertin</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6752" title="June 26, 2006 @ 6:17 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6753"><p>> Lots of non-free codecs and such</p>
+<p>Oh yes, I forgot the obligatory link to <a href="/web/20110806090047/http://easyubuntu.freecontrib.org/" rel="nofollow">EasyUbuntu</a>, an application designed to take all the pain out of violating patents, breaking laws, and compromising the very principles that led you to Linux in the first place, in exchange for being able to watch a recreation of the latest box office hit <a href="/web/20110806090047/http://www.google.com/search?q=%22in+30+seconds+with+bunnies%22" rel="nofollow">in 30 seconds with bunnies</a>.</p>
+<p>Yeah, I installed that too.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6753" title="June 26, 2006 @ 6:39 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6754"><p>EasyUbuntu is so last year! I found <a href="/web/20110806090047/http://www.getautomatix.com/" rel="nofollow">Automatix</a> to be a big improvement.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://franklinmint.fm/' rel='external nofollow' class='url'>Robert Sayre</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6754" title="June 26, 2006 @ 6:44 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6755"><p>I looked at Automatix (even installed it while testing off a Live CD while waiting an interminable length of time for Lenovo to ship me my computer) but ended up going with EasyUbuntu because I only need like 1/10th the stuff that EasyUbuntu does and 1/100% of what Automatix does.  But either way, who could resist getting their software from a group that calls themselves the <a href="/web/20110806090047/http://doc.ubuntu-fr.org/doc/plf" rel="nofollow">Penguin Liberation Front</a>?  Not to be confused with the Penguin Freedom Front, the Penguin Front of Liberation, or the Liberation Front of Penguins.  Fucking Penguin Front of Liberation.  What a bunch of wankers.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6755" title="June 26, 2006 @ 6:53 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6756"><p>I actually love Epiphany as my default web browser. It&#8217;s even got some extensions such as AdBlock, although it doesn&#8217;t support those that Firefox uses. Epiphany may look like a dumbed-down version of Firefox at first, but it&#8217;s well integrated into GNOME (which also means having a session manager built in as long as you don&#8217;t close it both manually AND cleanly (you have to either have GNOME quit it or be evil and kill it using a signal; I know that&#8217;s dumb, but it makes sense in a weird kind of way)) and a real pleasure to use. I especially like its highly usable tab-based interface and its search bookmarks.</p>
+<p>It&#8217;s simple, it&#8217;s efficient and It Doesn&#8217;t Suck (or at least not as much as other browsers do ;)). I&#8217;d be even happier if it used the GNOME keyring in order to store web passwords. Oh well. Will have to wait for that feature, I guess.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://matthias.benkard.de/' rel='external nofollow' class='url'>Matthias Benkard</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6756" title="June 26, 2006 @ 7:34 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6757"><p>i&#8217;ll second pretty much everything on that list. my additions:</p>
+<p>* mutt + gnupg<br />
+* gkrellm2<br />
+* ion (the windowless window manager)<br />
+* screen<br />
+* xsane (for scanning drawings)<br />
+* gimp (for cleaning up the scans)<br />
+* bittorrent (just the plain vanilla commandline version straight from Bram)<br />
+* and i prefer rox as a file manager when i want to click around my files instead of opening an xterm</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://thraxil.org/users/anders/' rel='external nofollow' class='url'>Anders</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6757" title="June 26, 2006 @ 7:36 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6758"><cite><a href='/web/20110806090047/http://corymyers.com/subversion-home-folder/' rel='external nofollow' class='url'>Paralysis by Analysis &raquo; Subversion Home Folder</a></cite>&#160;(pingback)</li>
+<li id="comment-6759"><p>Take a look at urxvt for terminal emulation. Faster with less CPU load than xterm (never mind the desktop-enabled emulators), even when using Xft+AA, and smaller memory footprint. Loads up <em>instantly</em>.</p>
+<p>Another vote for mutt ( + fetchmail + procmail + <a href="/web/20110806090047/http://esmtp.sf.net/" rel="nofollow">esmtp</a>), too. (Though it seems to be a Vim-er’s thing; being an Emacsian, you’re more likely to want Gnus.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://plasmasturm.org/' rel='external nofollow' class='url'>Aristotle Pagaltzis</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6759" title="June 26, 2006 @ 7:57 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6760"><p>Thanks, Aristotle. urxvt looks nice. I think it might work. </p>
+<p>Gnus is fabulous feature-wise, but it&#8217;s just so *slow*, especially accessing remote inboxes over imap. I tried really hard to use it instead of mutt for a few months since I have emacs open 24/7 anyway, but then one day I started up mutt by accident and was reminded how much faster it was and just couldn&#8217;t go back.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://thraxil.org/users/anders/' rel='external nofollow' class='url'>Anders</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6760" title="June 26, 2006 @ 8:39 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6761"><p>With all due respect&#8230;<br />
+And call me a fanboy for all I care&#8230;</p>
+<p>I use a Mac. I don&#8217;t like sentences with &#8220;It&#8217;s like&#8230;&#8221;. I like using the &#8220;&#8230;&#8221;</p>
+<p>I don&#8217;t mind if the software is closed-source or propriety, my *data* isn&#8217;t.</p>
+<p class=sig>&#8212;&#8201;<cite>Musti</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6761" title="June 26, 2006 @ 9:56 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6762"><p>btw. What about a screeshot? ^^</p>
+<p>Regards,<br />
+Armin</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://lucumr.pocoo.org/' rel='external nofollow' class='url'>Armin Ronacher</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6762" title="June 26, 2006 @ 10:21 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6763"><p><i>MPlayer (and MEncoder). Compiled from source, yo. It’s the only thing I’ve felt the need to recompile, or indeed compile in the first place.</i></p>
+<p>Any particular reason you had to compile? Or just &#8216;cos it&#8217;s fun? :-)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://antrix.net/' rel='external nofollow' class='url'>antrix</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6763" title="June 26, 2006 @ 10:53 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6764"><p>Mark,</p>
+<p>I really respect and admire your decision to switch to linux. I have been using Linux full-time for about a year now havn&#8217;t looked back once. I absolutely love it.</p>
+<p>From your post, I realized that Linux really needs something like quicksilver: something that will change the way they use their computer. &#8220;Openoffice.org does what Word does&#8221;, etc, IMO does not want to make people change their operating system. Stuff like amarok and Xgl/Compiz are getting there, but isn&#8217;t quite that &#8220;killer app&#8221; that you can barely live without once you&#8217;ve used it (much like quicksilver).</p>
+<p>So here&#8217;s to GNOME3 and KDE4, hoping that they&#8217;ll innovate upon the modern desktop and truly change the way a person uses their computer.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://evdawg.com/' rel='external nofollow' class='url'>Evan</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6764" title="June 26, 2006 @ 11:06 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6765"><p><a href="/web/20110806090047/http://dirvish.org/" rel="nofollow">Dirvish</a> is cool for keeping more than just the last backup in a space-efficient manner.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://spek.org/' rel='external nofollow' class='url'>Brent</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6765" title="June 26, 2006 @ 11:15 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6766"><p>I was trying to find out what &#8220;chingada madre&#8221; translates into English because a very close friend of mine says it all the time yet refuses to tell me what it means so I set out to find out on my own. I came across this site in my search and saw your comment about how you said you would love to learn how to say &#8220;I have the fire of the sun in my pants.&#8221; in Spanish. I don&#8217;t know if you&#8217;ve already found out the translation but it&#8217;s &#8220;Tengo el fuego del sol en mis pantalones&#8221;. Just thought I&#8217;d help you out. Nicole</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6766" title="June 26, 2006 @ 11:22 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6767"><cite><a href='/web/20110806090047/http://proletarium.org/2006/06/27/links-for-2006-06-27' rel='external nofollow' class='url'>Proletarium &mdash; links for 2006-06-27</a></cite>&#160;(pingback)</li>
+<li id="comment-6768"><p>great list! ubuntu of course. i have been all over the place in a decade &#8211; windows, freebsd, linux, osx&#8230;ubuntu is the first distro that cured me of wanting to try other distros. maybe suse is better &#8211; i have no idea, until ubuntu disappoints me, i am sticking with it.</p>
+<p>my firefox set up is almost identical. i rarely see ads at all. the filtering tools are amazingly effective.</p>
+<p>emacs, natch. </p>
+<p>for backups of data, i use DAVs connecting to my boutique email provider, fastmail.fm ($ but worth it), who provide IMAP, DAVs, file storage, etc etc. i can use mutt or thunderbird with it&#8230;with IMAP my client is a matter of daily whim.</p>
+<p>i replaced open office with abiword and gnumeric, but honestly i very rarely use these. </p>
+<p>i go between mocp and rhythmbox for music. mocp is nice, as mutt is to thunderbird, mocp is to graphical music players. </p>
+<p>i also use elinks from time to time. its nice to know you can live in a console if you have to.</p>
+<p class=sig>&#8212;&#8201;<cite>grumpY!</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6768" title="June 27, 2006 @ 12:33 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6769"><p>I know it would be considered blasphey because it&#8217;s closed source, proprietary (costs very little money) AND java but over the years of looking for proper Quicken replacement that runs on Linux (short of running Quicken under VMware) I have yet to find one which is more useable than MoneyDance.<br />
+My first concern is QIF file import because this is what all the financial institutes provide to download but beyond that its interface seems the most understandable and &#8220;make sense&#8221;.</p>
+<p class=sig>&#8212;&#8201;<cite>Amos Shapira</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6769" title="June 27, 2006 @ 1:07 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6770"><p>Nice list of Ubuntu applications Mark! For blocking ads and micromanaging my HTTP stream like a swiss papercutter on benzedrine, I use <a href="/web/20110806090047/http://www.privoxy.org/" rel="nofollow">Privoxy</a> with FireFox. Yeah, it&#8217;s old but I&#8217;m used to tweaking it and it&#8217;s flexible enough to deal with new marketing insults.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.farlops.com/' rel='external nofollow' class='url'>Pace Arko</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6770" title="June 27, 2006 @ 4:24 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6771"><cite><a href='/web/20110806090047/http://leonidkhachaturov.com/2006/06/27/455/' rel='external nofollow' class='url'>Мысли о&#8230; &raquo; Blog Archive &raquo; The state of Open Source, 2006</a></cite>&#160;(pingback)</li>
+<li id="comment-6772"><p>Great list, and great suggestions in the comments. There&#8217;s not muhc left for me to add. But I would definitel add:</p>
+<p>screen (like tabbed consoles without the [visual] tabs, and also keep on running in the background when detached/logged off)<br />
+irssi + Bitlbee (all IM protocols on irc on a console)<br />
+Alltray (which allows you to tray any application)<br />
+linux-phc (undervolt your Pentium M and enjoy cooler and fanless working)<br />
+truecrypt (kiler-feature: it&#8217;s cross-platform)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.sencer.de/' rel='external nofollow' class='url'>Sencer</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6772" title="June 27, 2006 @ 5:20 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6773"><p>Errr&#8230; if somebody can recommend me a spell-checker&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.sencer.de/' rel='external nofollow' class='url'>Sencer</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6773" title="June 27, 2006 @ 5:21 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6774"><p>Sencer, emacs has one built in &#8211; press `M-x ispell-buffer&#8217;.</p>
+<p>From the console:</p>
+<p>$ ispell filename.txt</p>
+<p class=sig>&#8212;&#8201;<cite>Noah Slater</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6774" title="June 27, 2006 @ 6:52 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6775"><p>Thumbs up for another linux user!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://blog.w-nz.com/' rel='external nofollow' class='url'>Bas Westerbaan</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6775" title="June 27, 2006 @ 7:00 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6776"><p>> Any particular reason you had to compile [mplayer/mencoder]?</p>
+<p>Because a major new release came out about a week after Dapper shipped, and I wanted to try it.  Also, I wanted support for more video codecs than the prebuilt binary included.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6776" title="June 27, 2006 @ 7:43 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6778"><p>So did you buy a new camera? </p>
+<p>extra credit:<br />
+Have you tested it with your shiny new install?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://cub1cle.com/' rel='external nofollow' class='url'>David Dean</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6778" title="June 27, 2006 @ 9:24 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6779"><p>I&#8217;m contemplating the setup of a Linux box. These lists of software options are incredibly helpful. Elsewhere, I&#8217;ve been reading of the benefits of the ZFS file system in OpenSolaris. For a rookie in the Linux realm, will the app&#8217;s listed here run on OpenSolaris and how does OpenSolaris compare or contrast with Ubuntu? Ultimately, it boils down to which of the OS&#8217;s allows a newbie to get up and running with minimal Tylenol consumption?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://rodentregatta.com/' rel='external nofollow' class='url'>Steve</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6779" title="June 27, 2006 @ 10:09 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6780"><p>> So did you buy a new camera? extra credit: Have you tested it with your shiny new install? </p>
+<p>Yes, as I noted <a href="/web/20110806090047/http://diveintomark.org/archives/2006/05/30/bye-apple" rel="nofollow">a few weeks ago</a>, I bought the Canon PowerShot SD450.  When I plugged the camera into my shiny new install, Ubuntu immediately recognized it and offered to import the photos, which I did, and it worked.  I believe this is the work of <a href="/web/20110806090047/http://gphoto.sourceforge.net/" rel="nofollow">libgphoto2</a>, which is one of those amazing little libraries that does one incredibly useful thing incredibly well and just keeps getting better for free.  Someone out there *really* cares about interfacing with digital cameras, in much the same way that I *really* care about parsing RSS and Atom feeds.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6780" title="June 27, 2006 @ 10:28 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6781"><cite><a href='/web/20110806090047/http://www.laflamme.us/art/?p=360' rel='external nofollow' class='url'>For What It&#8217;s Worth &raquo; Blog Archive &raquo; Around the web: 27 June</a></cite>&#160;(pingback)</li>
+<li id="comment-6782"><p>I just wish my laptop&#8217;s network card would work with Ubuntu&#8230; I spent about 6 hours I didn&#8217;t have working on it the other day, to no avail. Grrrr&#8230; I love Ion, but I can&#8217;t be wired up all the time.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://billmill.org/' rel='external nofollow' class='url'>Bill Mill</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6782" title="June 27, 2006 @ 11:14 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6783"><cite><a href='/web/20110806090047/http://plasticboy.com/archives/2006/06/27/essential-software/' rel='external nofollow' class='url'>PlasticBoy &raquo; Blog Archive &raquo; Essential Software</a></cite>&#160;(pingback)</li>
+<li id="comment-6784"><p><a href="/web/20110806090047/http://www.sebpayne.com/2006/06/27/one-thing-apple-did-right/" rel="nofollow">http://www.sebpayne.com/2006/06/27/one-thing-apple-did-right/</a> might help Mark! The Linux &#8216;version&#8217; of the iLife suite but this may not suit you! </p>
+<p>I&#8217;m considering making the jump &#8211; albeit with Linux on PowerPC laptop as I couldn&#8217;t afford a new laptop at the this point but I have plenty of spare desktop boxes! Would you recommend it? Is it worth it?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.sebpayne.com/' rel='external nofollow' class='url'>Seb Payne</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6784" title="June 27, 2006 @ 11:27 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6785"><p>I&#8217;d give some thought to using something other than Gnome. I use the Ice Window Manager (IceWM) with nautilus turned off, (but available from the taskbar when I need a file/icon manager.) If you don&#8217;t mind hand-editing some configuration files, Idesk will manage your icons and do absolutely nothing else. It saves a lot of overhead.</p>
+<p class=sig>&#8212;&#8201;<cite>Troutwaxer</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6785" title="June 27, 2006 @ 12:26 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6791"><p>Mark, did you partition your disk /, /home, /usr, etc&#8230;?  If so, can you point to a good recommendation for sizing?  If not, why?<br />
+Thanks for sharing your insights into your recent switch.  I&#8217;m running both Tiger and Ubuntu at home.  I&#8217;m trying to spend more time on my Ubuntu box though.  Some things just seem easier to do in Ubuntu than OS X.<br />
+Thanks.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://yokimbo.blogspot.com/' rel='external nofollow' class='url'>Yokimbo</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6791" title="June 27, 2006 @ 2:48 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6794"><p>(parted) print<br />
+Disk geometry for /dev/sda: 0kB &#8211; 750GB<br />
+Disk label type: msdos<br />
+Number  Start   End     Size    Type      File system  Flags<br />
+1       32kB    107MB   107MB   primary   ext2<br />
+2       107MB   3323MB  3216MB  primary   linux-swap<br />
+3       3323MB  25GB    21GB    primary   ext3<br />
+4       25GB    750GB   725GB   primary   xfs</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6794" title="June 27, 2006 @ 3:06 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6795"><p>Oops, that&#8217;s missing the mount points.  1 is /boot, 2 is swap, 3 is /, 4 is /home.  I ln -s /tmp to /home/tmp since things like k9copy like to store DVD images in /tmp.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6795" title="June 27, 2006 @ 3:08 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6796"><p>@Steve: If you really want to play with an OpenSolaris-based distro, there&#8217;s Nexenta (gnusolaris.org), which attempts to bring an Ubuntu-ish GNOME desktop, Debian packages, and the GNU userland to OpenSolaris. It&#8217;s still a work in progress &#8212; they&#8217;ve got a little more than half of the Ubuntu packages in their repositories, but it&#8217;s not as polished or tightly integrated as more mature distributions. Probably not for most rookies, though.</p>
+<p>If you want a distro that Just Works, the answer is at the top of this page: Ubuntu. (In my case, I use Kubuntu with a few GNOME apps like Gaim, though in the end, my list is similar to Mark&#8217;s.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://ianking.ca/' rel='external nofollow' class='url'>Ian King</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6796" title="June 27, 2006 @ 3:31 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6800"><p>Thanks, Ian. With further digging, I see that OpenSolaris with ZFS might be the ticket for a web server, but for a newbie learning Linux, clearly Ubuntu is the better desktop choice. Mark&#8217;s discussion of his software decisions just paves the way for those of us who are clueless.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://rodentregatta.com/' rel='external nofollow' class='url'>Steve</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6800" title="June 27, 2006 @ 4:13 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6805"><p>I&#8217;m a long-time Debian desktop and server user and I recently installed Kubuntu on my main desktop, just to see what it was like. I have no problems installing Debian (because I&#8217;m used to it and I built all my machines so I don&#8217;t have any hardware compatibility issues) however I spent the rest of the day in shock as Kubuntu installed while I was making coffee, and just worked. Wow. I&#8217;d second the recommendation to try out KMail, it&#8217;s the only mail application that seems to handle my massive IMAP mailboxes properly, I use a Mac at home and Mail on OSX is intolerably slow.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.rachelandrew.co.uk/' rel='external nofollow' class='url'>Rachel</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6805" title="June 27, 2006 @ 5:11 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6806"><cite><a href='/web/20110806090047/http://www.davecentral.net/2006/06/28/ubuntu-essential-software/' rel='external nofollow' class='url'>Ubuntu essential software - davecentral Planet David Central &amp; Dave Central Planet</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6807"><cite><a href='/web/20110806090047/http://eneve.wordpress.com/2006/06/27/ubuntu-essentials-2006-edition/' rel='external nofollow' class='url'>Travelling Through The Wire &raquo; Blog Archive &raquo; Ubuntu essentials 2006 edition</a></cite>&#160;(pingback)</li>
+<li id="comment-6808"><p>I tried to make the switch to Linux with SuSE 8.0 a few years back, but it didn&#8217;t stick. I tried Ubuntu on a whim about a month ago and I love it. I&#8217;ve tried several distro&#8217;s live CD&#8217;s and I keep coming back to Ubuntu. I also have PCLinuxOS and opensuse installed. I&#8217;ll probably sh**can suse. Just too much bloat that I don&#8217;t need. About the only thing I miss from Windoze is xplorer², which rocks.</p>
+<p class=sig>&#8212;&#8201;<cite>buzz</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6808" title="June 27, 2006 @ 6:25 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6809"><p>What about the Airport card in my iBook G4?  Is that fully supported?</p>
+<p class=sig>&#8212;&#8201;<cite>Autrelle</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6809" title="June 27, 2006 @ 7:31 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6810"><p>Regarding zfs, just wait a bit longer for it to be open sourced and ported to linux/ubuntu.<br />
+I imagine with Sun backing ubuntu on its server line you will see zfs on ubuntu before other linux distros. There was something on the net recently about open sourcing zfs so it is probably a done deal. Rock on!</p>
+<p class=sig>&#8212;&#8201;<cite>Daver</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6810" title="June 27, 2006 @ 7:33 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6811"><p>> What about the Airport card in my iBook G4? Is that fully supported?</p>
+<p>No.  I believe it just made it into the latest kernel last week.  Better wait until the next release of your favorite distribution; recompiling your own kernel is a lousy introduction to Linux.  I believe the next version of Ubuntu is due out in October.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6811" title="June 27, 2006 @ 7:48 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6812"><p>Mark: about your photo manager application, have you tried f-spot( <a href="/web/20110806090047/http://f-spot.org/" rel="nofollow">http://f-spot.org/</a> )? Since i don&#8217;t have a camera i can&#8217;t really recommend it, but all people i know that use linux just rave about this application.</p>
+<p>What i like about your list is the mix of applications from both Gnome &amp; KDE. Most people, like myself, tend to use only applications avaiable to the Desktop Environment they use and somehow end in restricting themselves. You on the other hand went and picked the best of each one and seem to be doing ok :)</p>
+<p>Btw, another mention for Tomboy. So simple, yet so amazing.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.derangedhermit.com/' rel='external nofollow' class='url'>Andre Costa</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6812" title="June 27, 2006 @ 8:14 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6814"><p>Nice list. Thanks. FWIW, I run OpenSuSE, and before that SuSE, as far back as 7.3, as essentially a desktop system / power user. Haven&#8217;t run Windows for other than games for something like three years. two years.</p>
+<p>Additions:</p>
+<p>- I like a mind mapping tool. Freemind is a good one.</p>
+<p>- I also like having a very generic &#8220;stonepile&#8221; manager for collecting notes to self, and pieces of writing in progress (referring to the metaphor in Weinberg&#8217;s book on writing, subtitled &#8220;the Fieldstone Method.) A personal wiki workes nicely for that. I&#8217;m using MoinMoin at the moment.</p>
+<p>- Don&#8217;t see OpenOffice. There&#8217;s some griping about it, here and there. Don&#8217;t get that. It works just fine for me.</p>
+<p>- Firefox extensions: Bookmark Duplicate Detector, Dictionary search, Sage (vs. feeds other places), and StumbleUpon, for extra time wasting fun.</p>
+<p class=sig>&#8212;&#8201;<cite>Jim Bullock</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6814" title="June 27, 2006 @ 8:19 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6819"><p>Gaim encryption? Weak tea. It&#8217;s time to go _<a href='/web/20110806090047/http://www.cypherpunks.ca/otr/' rel="nofollow">Off the Record</a>_.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://kanjidict.com/' rel='external nofollow' class='url'>Nuthatch</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6819" title="June 27, 2006 @ 9:15 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6821"><cite><a href='/web/20110806090047/http://www.genehack.org/2006/06/27/youve-probably-already-seen/' rel='external nofollow' class='url'>genehack.org &raquo; Blog Archive &raquo; You&#8217;ve probably already seen&#8230;</a></cite>&#160;(pingback)</li>
+<li id="comment-6823"><p>Ha!  Thanks for the tips and the humor all wrapped up for me to discover &amp; chortle my way thru.</p>
+<p>I don&#8217;t get the whole Gnome/KDE divide, either.  I use a mix as well; some programs are simply Better regardless of what desktop they&#8217;re based on, and if you&#8217;re running one, there&#8217;s no obstacle to running stuff based on the other, so wtf is the problem?</p>
+<p>I had no clue gaim has plugins!  And now finally I can get rid of those obnoxiously stupid WARN and BLOCK buttons that I&#8217;m forever accidentally hitting&#8230;</p>
+<p>I need to learn more about Quicksilver and why it is that all macboys (ha) wax rhapsodic about it regardless of their relationship otherwise with mac&#8230;</p>
+<p>Cheers,<br />
+Cindy</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.digitalramble.com/' rel='external nofollow' class='url'>cindy</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6823" title="June 27, 2006 @ 10:16 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6827"><cite><a href='/web/20110806090047/http://greencrab.wordpress.com/2006/06/27/links-for-2006-06-28/' rel='external nofollow' class='url'>greencrab capsules &raquo; links for 2006-06-28</a></cite>&#160;(pingback)</li>
+<li id="comment-6829"><p>Quite an extensive set of jibes and the software list ain&#8217;t bad neither. Would add&#8230; Application: qtparted. Firefox extension: FireFTP; Spellbound had become quite nice, so of course it&#8217;s broken again.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://jcwinnie.biz/wordpress/' rel='external nofollow' class='url'>jcwinnie</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6829" title="June 28, 2006 @ 12:17 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6830"><p>Mark,</p>
+<p>  I was astonished to see such an excellent list. Good choices! k3b should definately be in there ;) </p>
+<p>  Now.. I may have to start rediscovering software! :) Congradulations on remaining OS X free. Those Apple bastards&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.iceburg.net/' rel='external nofollow' class='url'>Brice Burgess</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6830" title="June 28, 2006 @ 12:37 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6832"><p>RE: &#8220;Tengo el fuego del sol en mis pantalones&#8221;. Trousers are generally not as funny.</p>
+<p>I think it is therefore &#8220;Tengo el fuego del sol en mis mutandes&#8221;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.angel.cc/' rel='external nofollow' class='url'>mick angel</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6832" title="June 28, 2006 @ 2:02 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6834"><cite><a href='/web/20110806090047/http://www.opensourcebiz.info/?p=157' rel='external nofollow' class='url'>Open Source Business &raquo; Essential software - Open Source Business News</a></cite>&#160;(pingback)</li>
+<li id="comment-6835"><p>&#8220;GNU Emacs, for people who think that the main problem with XEmacs is that it’s too user friendly.&#8221;</p>
+<p>Uh, I guess you are 4 years behind times, approximately.  User friendliness of Emacs went par with 21.1 (at least if you are using X11). But catching up another 4 years is still nice to do, so take the emacs-snapshot-gtk package (it&#8217;s even in Ubuntu universe).  While this is &#8220;unreleased developer software&#8221;, it works quite better than what other people call released.</p>
+<p>The main problem with XEmacs nowadays probably is that it can&#8217;t deal well with utf-8.</p>
+<p class=sig>&#8212;&#8201;<cite>David Kastrup</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6835" title="June 28, 2006 @ 4:09 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6836"><p>Mark, if you like rsync for backups, you might love rsnapshot &#8211; give it a looksie. Uses rsync underneath, but adds a helping of brains on top.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.alexhudson.com/' rel='external nofollow' class='url'>Alex Hudson</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6836" title="June 28, 2006 @ 5:30 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6837"><p>> emacs-snapshot-gtk</p>
+<p>Yeah, I already have that.  HTML needs a sarcasm tag.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6837" title="June 28, 2006 @ 7:22 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6841"><p>I&#8217;ll just add that Ze Frank Rocks!!! But some people just don&#8217;t seem to get it. Muy Fabuloso!!!</p>
+<p class=sig>&#8212;&#8201;<cite>Eric</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6841" title="June 28, 2006 @ 9:40 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6842"><p>I used to be a XEmacs zealot, but a killer app came along and I learned to love emacs for its differences.  The app is &#8216;nxml-mode&#8217;.  I adore it to bits.  Fractional bits, perhaps even.</p>
+<p class=sig>&#8212;&#8201;<cite>emacs vs. XEmacs</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6842" title="June 28, 2006 @ 9:41 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6845"><p>Is missing to the list, PlanetaMessenger.org, Universal Java messenger for win/Linux/Solaris/ &#8230;..</p>
+<p><a href="/web/20110806090047/http://www.planetamessenger.org/" rel="nofollow">http://www.planetamessenger.org</a></p>
+<p>Juan</p>
+<p class=sig>&#8212;&#8201;<cite>Juan</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6845" title="June 28, 2006 @ 11:02 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6846"><p>well, why not?  everyone is listing their favs anyway&#8230;</p>
+<p>can&#8217;t live without:<br />
+* vim<br />
+* bash<br />
+* grep<br />
+* elinks (to read html docs)<br />
+* gcc<br />
+* python</p>
+<p>yea.  i also have a few standalone command-line audio players for particular formats:  timidity, nosefart, mikmod etc</p>
+<p>why fancy costly GUIs?  you should all learn to see beyond the Matrix illusion&#8230; :P</p>
+<p>hey, nice &#8220;comment preview&#8221;&#8230; ;)</p>
+<p class=sig>&#8212;&#8201;<cite>namekuseijin</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6846" title="June 28, 2006 @ 11:11 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6847"><p>The XEmacs beta does support utf-8, as long as we&#8217;re comparing snapshots.  The only XEmacs features that keep me from moving to Gnu Emacs (particularly Gnu Emacs CVS with Xft support) are buffer tabs and clickable line numbers in Python exception output.</p>
+<p class=sig>&#8212;&#8201;<cite>Daverz</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6847" title="June 28, 2006 @ 11:47 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6848"><cite><a href='/web/20110806090047/http://www.robertmonroe.org/blog/?p=406' rel='external nofollow' class='url'>Attack of the Rob Bot! - proof that I use the internet &raquo; links for 2006-06-28</a></cite>&#160;(pingback)</li>
+<li id="comment-6853"><p>I&#8217;ve been using Ubuntu for nearly two years now and these software lists appear stranger and stranger over time.  Nowdays I&#8217;d have to stop and think about which program I was using for any particular task, or even look it up.  Instead it&#8217;s just &#8220;whatever program runs when I open this file&#8221;.  The lists are also strange because they&#8217;re nearly all programs that you can try out in the Applications-&gt;Add/Remove menu or via Synaptic.  If you have too much time on your hands and a reasonable internet connection you can try every music player in the repository to see which one suits your personal tastes best, then remove the ones you don&#8217;t like just by selecting them from the menus.  An actual comparative review of some category would be much more useful than a list of titles.</p>
+<p>PS:  If you&#8217;re switching and you want to help out, keep a journal of all the annoying/confusing things and bugs that you find and when you get a better feel for what you&#8217;re doing send the items off to those who can fix them for the next person.</p>
+<p class=sig>&#8212;&#8201;<cite>Michael</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6853" title="June 28, 2006 @ 12:41 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6865"><p>first: nice list.</p>
+<p>however, it&#8217;s &#8216;konsole&#8217; not &#8216;kterm&#8217;. or maybe that&#8217;s your problem: you&#8217;re running some mutant app called kterm instead of konsole? ;) oh, and if you want something truly neat and handy in the terminal world, check out yakuake:</p>
+<p><a href="/web/20110806090047/http://www.google.com/search?client=safari&rls=en-us&q=yakuake&ie=UTF-8&oe=UTF-8" rel="nofollow">http://www.google.com/search?client=safari&#038;rls=en-us&#038;q=yakuake&#038;ie=UTF-8&#038;oe=UTF-8</a></p>
+<p>or just `apt-get install yakuake` in *buntu</p>
+<p>start it from the Run Command dialog (session management will take care of starting it on subsequent log-ins) and when it&#8217;s up hit F12. ooooH! =)</p>
+<p class=sig>&#8212;&#8201;<cite>Aaron J. Seigo</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6865" title="June 28, 2006 @ 3:34 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6866"><p>*sigh* i guess it helps to paste the correct tab&#8217;s url, doesn&#8217;t it? yakuake is actually: <a href="/web/20110806090047/http://yakuake.uv.ro/" rel="nofollow">http://yakuake.uv.ro/</a></p>
+<p class=sig>&#8212;&#8201;<cite>Aaron J. Seigo</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6866" title="June 28, 2006 @ 3:35 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6871"><p>The ChatZilla problem you were running into was nothing to do with data corruption.  It was a firefox bug with timers and has been fixed.</p>
+<p class=sig>&#8212;&#8201;<cite>a ChatZilla developer</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6871" title="June 28, 2006 @ 5:26 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6876"><p>I see it mentioned elsewhere by others, but I&#8217;ll 2nd or 3rd Tomboy notes. On Windows I used a combo of MS OneNote and ActionOutline, but I find I get more done in less time with Tomboy. Bonus: It&#8217;s free (as in speech AND beer)!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.kisskraft.com/' rel='external nofollow' class='url'>Jonathan</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6876" title="June 28, 2006 @ 7:17 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6877"><cite><a href='/web/20110806090047/http://www.likeyourwork.com/likeyourwork/?p=117' rel='external nofollow' class='url'>Like Your Work &raquo; Blog Archive &raquo; links for 2006-06-29</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6878"><cite><a href='/web/20110806090047/http://seahawk.wordpress.com/2006/06/29/links-for-2006-06-29/' rel='external nofollow' class='url'>Jet Grrl &raquo; Blog Archive &raquo; links for 2006-06-29</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6879"><cite><a href='/web/20110806090047/http://indoloony.com/2006/06/28/links-for-2006-06-29/' rel='external nofollow' class='url'>Nerd. and so much more!</a></cite>&#160;(pingback)</li>
+<li id="comment-6880"><p>G&#8217;day from a developer of the GNOME Deskbar.</p>
+<p>You say &#8220;Quicksilver, only without the plugins&#8221;.  Well, the GNOME Deskbar does plugins, but it just doesn&#8217;t have that many of them&#8230; yet.  And plugin management currently sucks (it&#8217;s copy this .py file that you downloaded from some random geezer&#8217;s website into this secret directory) &#8211; we&#8217;re working on it.</p>
+<p>Since Santa has yet to give me a Mac, could you elaborate on what I&#8217;m missing out on with QS plugins (or just QS in general)?</p>
+<p>P.S.  +1 re Epiphany and Tomboy.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://blogs.gnome.org/nigeltao' rel='external nofollow' class='url'>Nigel Tao</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6880" title="June 28, 2006 @ 9:41 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6881"><cite><a href='/web/20110806090047/http://onwalking.org/2006/06/28/links-for-2006-06-29/' rel='external nofollow' class='url'>onwalking.org &raquo; Blog Archive &raquo; links for 2006-06-29</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6882"><cite><a href='/web/20110806090047/http://www.fromconcentratesoftware.com/2006/06/28/fcs-essentials-2006/' rel='external nofollow' class='url'>From Concentrate Software</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6883"><cite><a href='/web/20110806090047/http://www.brunoalves.eti.br/arquivo/2006/06/28/links-for-2006-06-28.html' rel='external nofollow' class='url'>Bruno Alves &raquo; links for 2006-06-28</a></cite>&#160;(pingback)</li>
+<li id="comment-6884"><p>&#8220;I was trying to find out what “chingada madre” translates into English&#8230; and saw your comment about how you said you would love to learn how to say “I have the fire of the sun in my pants.”</p>
+<p>The literal translation of &#8220;chingada madre&#8221; is &#8220;fucked and/or raped mother&#8221;. (not  &#8220;fucked-up mother&#8221;) It&#8217;s a versatile exclamatory speech-act similar to &#8220;bloody hell&#8221;, &#8220;fucking hell&#8221;, &#8220;mother fucker!&#8221;,etc.<br />
+My renditions of &#8220;I have the fire&#8230;&#8221;  vary according to the meaning I want to convey:&#8221;Siento en la entrepierna la energía de una potente bomba de hidrógeno&#8221;; &#8220;Tengo la verga achicharrada por la insolación que cogí en la playa&#8221;, &#8220;Me han dado por el culo con candela&#8230; solar&#8221;, &#8220;Quiero coger contigo.Mi aparato es un gigante rojo&#8221;.(as in stellar red giant)</p>
+<p>&#8220;Ubuntu&#8221; is also Yoruba for Atis,(Annona squamosa-Sugar Apple) my favorite fruit.</p>
+<p class=sig>&#8212;&#8201;<cite>Rubem</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6884" title="June 29, 2006 @ 3:33 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6885"><p>> could you elaborate on what I&#8217;m missing out on with QS plugins (or just QS in general)?</p>
+<p>Yeah, I&#8217;ll steal my old Powerbook back from my wife long enough to take some screenshots and write up some thoughts to go with them.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6885" title="June 29, 2006 @ 7:30 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6886"><cite><a href='/web/20110806090047/http://www.technomojo.info/2006/06/29/links-for-2006-06-29/' rel='external nofollow' class='url'>Techno Mojo &raquo; Blog Archive &raquo; links for 2006-06-29</a></cite>&#160;(pingback)</li>
+<li id="comment-6888"><p>Marc, welcome to a new world of fanboys: KDE vs. GNOME, Emacs vs. Vim, GUI vs. TUI and more, just name it and there&#8217;ll be a fanboy waiting :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://micampe.it/' rel='external nofollow' class='url'>Michele</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6888" title="June 29, 2006 @ 8:52 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6891"><p>Here&#8217;s another difference between the two fanboy worlds, and one that&#8217;s heartening to see:  with the Free Software world, the developers of the apps you&#8217;re using for free head over to your blog and ask what they can do to improve things for you.  :)</p>
+<p>- C.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://blog.printf.net/' rel='external nofollow' class='url'>Chris</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6891" title="June 29, 2006 @ 11:26 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6892"><p>Wow, after reading about all the time spent geeking out on workarounds, etc.  I&#8217;m thinking I just want to get work done&#8230; not be constantly spending my time dealing with workarounds to make things work so I can get things to work to get work done&#8230;  I&#8217;m sticking with my Mac and OS X.  It simply gets my work done immediately&#8230; fast.  Very fast.  My computer is a money-making tool, not a hobby. The DRM is optional on Macs, BTW.  Have fun tinkering.   : /</p>
+<p class=sig>&#8212;&#8201;<cite>Revolution</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6892" title="June 29, 2006 @ 11:32 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6893"><cite><a href='/web/20110806090047/http://nozell.com/blog/2006/06/29/another-list-of-ubuntu-essentials/' rel='external nofollow' class='url'>Nozell, rhymes with Oh Hell &raquo; Another list of Ubuntu essentials</a></cite>&#160;(pingback)</li>
+<li id="comment-6894"><p>You could try cinelarra it does a lot more than kino, though its not as easy as iMovie.</p>
+<p>Instructions for ubuntu are here<br />
+<a href="/web/20110806090047/http://www.kiberpipa.org/~gandalf/ubuntu/README" rel="nofollow">http://www.kiberpipa.org/~gandalf/ubuntu/README</a></p>
+<p class=sig>&#8212;&#8201;<cite>Dan</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6894" title="June 29, 2006 @ 11:56 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6895"><p>Does anybody dual-boot OS-X and Ubuntu?  For making presentations, I can&#8217;t live without easy cut-and-paste and resizing of PDFs.  Nothing seems to do this as well as OS X.</p>
+<p class=sig>&#8212;&#8201;<cite>Marshall</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6895" title="June 29, 2006 @ 12:13 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6896"><p>&#8230;RE: “Tengo el fuego del sol en mis pantalones”. Trousers are generally not as funny.</p>
+<p>I think it is therefore “Tengo el fuego del sol en mis mutandes”&#8230;</p>
+<p>Either way, it&#8217;d be *los* pantalones/mutandes, not mis. You can&#8217;t use posessives with articles of clothing.</p>
+<p class=sig>&#8212;&#8201;<cite>abk</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6896" title="June 29, 2006 @ 12:18 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6897"><cite><a href='/web/20110806090047/http://nogg3r5.blogsome.com/2006/06/29/869/' rel='external nofollow' class='url'>Nogz Blogz &raquo;</a></cite>&#160;(pingback)</li>
+<li id="comment-6898"><p>I&#8217;ll second the use if mplayer.  I don&#8217;t see why you&#8217;d need iMovie though. I&#8217;m a huge mplayer fanboy.</p>
+<p>My other issue is that OS X still doesn&#8217;t do a very good job running X applications.  Emacs and xterm (which only uses about 1M of memory so is a fav of mine) just don&#8217;t work very well.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://tailrank.com/' rel='external nofollow' class='url'>Kevin Burton</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6898" title="June 29, 2006 @ 12:48 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6899"><p>&gt; Ubuntu, which is an ancient African word meaning “can’t install Debian”.</p>
+<p>I know, I know, it&#8217;s supposed to be funny, but I can&#8217;t help but mentally translate &#8220;can&#8217;t install Debian&#8221; to &#8220;if you need it, you&#8217;re a frickin&#8217; moron.&#8221;</p>
+<p>So, um, yeah, not funny.</p>
+<p class=sig>&#8212;&#8201;<cite>regeya</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6899" title="June 29, 2006 @ 1:02 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6900"><p>Inkscape for vector graphics.  (And of course, The GIMP, duh.)  And Gwenview for quickly browsing image files.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.jaykayess.com/' rel='external nofollow' class='url'>jayKayEss</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6900" title="June 29, 2006 @ 1:19 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6901"><p>PS: to replace iMovie you can try MainActor.  It&#8217;s very similar to Adobe Premiere (and also costs money, a cool $200.)  The demo is free, however.</p>
+<p><a href="/web/20110806090047/http://www.mainconcept.com/site/index.php?id=395" rel="nofollow">http://www.mainconcept.com/site/index.php?id=395</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.jaykayess.com/' rel='external nofollow' class='url'>jayKayEss</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6901" title="June 29, 2006 @ 1:22 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6902"><p>You left out VLC the &#8220;it actually plays what you want to play&#8221; movie player.</p>
+<p>Quanta Plus, the best *ml editor for any platform.</p>
+<p>KFlickr for pushing those images from Digikam to the interwebs.</p>
+<p>Cedega for playing the World of Warcraft.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.screaming-penguin.com/' rel='external nofollow' class='url'>kebernet</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6902" title="June 29, 2006 @ 1:37 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6903"><cite><a href='/web/20110806090047/http://imagesafari.com/clip/1456/mark-pilgrims-ubuntu-essentials/' rel='external nofollow' class='url'>imagesafari blog &raquo; Blog Archive &raquo; Mark Pilgrim&#8217;s Ubuntu Essentials</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6905"><cite><a href='/web/20110806090047/http://www.timothybaskin.com/index.php/2006/06/29/mark-pilgrim-switched-to-ubuntu-and-all-i-got-was-this-awesome-list-of-linux-apps.html' rel='external nofollow' class='url'>TimothyBaskin.com | Timothy Baskin&#8217;s home on teh interwebs | Comic Book Art / Illustration / Musings / Rants &raquo; Mark Pilgrim switched to Ubuntu, and all I got was this awesome list of Linux apps</a></cite>&#160;(pingback)</li>
+<li id="comment-6906"><p>Did you check out Strigi for search? It&#8217;s faster and lighter than beagle. The KDE3 GUI requires konqueror though. No GNOME GUI yet although that should be easy to program.</p>
+<p class=sig>&#8212;&#8201;<cite>Lais</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6906" title="June 29, 2006 @ 1:57 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6907"><p>For those who are looking to get a machine that, unfortunately, comes preinstalled with Windows yet you have no intention of running it, a fine resource for getting a refund of the &#8220;Microsoft Tax&#8221; is <a href="/web/20110806090047/http://www.windowsrefund.org/" rel="nofollow">WindowsRefund.org</a></p>
+<p class=sig>&#8212;&#8201;<cite>bmouring</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6907" title="June 29, 2006 @ 2:03 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6908"><cite><a href='/web/20110806090047/http://www.megginson.com/blogs/quoderat/archives/2006/06/29/macos-vs-ubuntu-linux/' rel='external nofollow' class='url'>Quoderat &raquo; MacOS vs. Ubuntu Linux</a></cite>&#160;(pingback)</li>
+<li id="comment-6909"><p>&gt; Nigel</p>
+<p>You can take a look at the Quicksilver screencasts here,<br />
+<a href="/web/20110806090047/http://theappleblog.com/category/screencasts/" rel="nofollow">http://theappleblog.com/category/screencasts/</a></p>
+<p>although I find it difficult to get a sense of what is going on in those screencasts. I think it&#8217;s one of those things you have to actually use to appreciate.</p>
+<p class=sig>&#8212;&#8201;<cite>anonymous</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6909" title="June 29, 2006 @ 2:23 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6910"><p>This list is proof that you are not an average computer user. </p>
+<p>Most people don&#8217;t much care which OS they&#8217;re using as long as they can use the tools that they need to get their particular job done. As graphic designer, the limiting factor right now is the poor quality (or complete lack) of professional-quality apps. I mean, GIMP is great as a free application, but itsn&#8217;t even close to being a replacement for Photoshop. </p>
+<p>I understand the concern with portability of data and open formats, but I can&#8217;t afford to cut off my nose to spite my face. At this point I feel that my data is portable enough (meaning that I can back it out to portable, open, formats as well now as I&#8217;ll likely be able to in the future) and I&#8217;ve resigned myself to the fact that there will be an ongoing premium expense for using the Mac. I&#8217;m ok with that &#8212; my time is more valuable.</p>
+<p>By the way, I&#8217;m with Joe Clark: your use of the term mac-fanboy isn&#8217;t up to the quality of the rest of what you have to say.</p>
+<p class=sig>&#8212;&#8201;<cite>Tim Swan</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6910" title="June 29, 2006 @ 2:44 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6911"><p>I&#8217;ll add Samba, which is essential if there be Windows boxes in your local (or office) network. Takes much of the pain out of maintaining a Windows/Mac/*nix LAN. And apt-get &#8212; keeping your whole system up to date that easily is surely a part of that &#8220;usability&#8221; thing. </p>
+<p>Funny thing is that Ubuntu&#8217;s installer for versions 4.10 through 5.10 was actually based on debian-installer, so maybe &#8220;can&#8217;t install Debian&#8221; doesn&#8217;t really apply.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://ianking.ca/' rel='external nofollow' class='url'>Ian King</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6911" title="June 29, 2006 @ 3:05 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6912"><p>> This list is proof that you are not an average computer user.</p>
+<p>Never claimed I was.</p>
+<p>> As graphic designer, the limiting factor right now is the poor quality (or complete lack) of professional-quality apps.</p>
+<p>Agreed 100%.  However, I am not a graphic designer.</p>
+<p>> I mean, GIMP is great as a free application, but itsn&#8217;t even close to being a replacement for Photoshop.</p>
+<p>Never claimed it was, and I uninstalled it anyway.  I use Krita for my (very light) graphic editing needs.</p>
+<p>> At this point I feel that my data is portable enough</p>
+<p>Then you&#8217;re probably right.  At least you&#8217;ve looked at the problem that way, which is more than most people do.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6912" title="June 29, 2006 @ 3:05 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6913"><p>I suspect somebody&#8217;s not going to like this.  But never mind Mac, what about Windows programs you really don&#8217;t want to give up? What&#8217;s the state of play for running something like Parallels on Ubuntu and being able to stick (for the moment) with the Windows programs you know and love. Like for instance, Skype v2.5?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.voidstar.com/' rel='external nofollow' class='url'>Julian Bond</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6913" title="June 29, 2006 @ 3:20 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6914"><p>Hi Mark,<br />
+I&#8217;d like to hear about how your folders are set up; Can Ubuntu be set up so most of the commands are the same or do the same things as on a Mac? How about the permissions, so it&#8217;s as secure as a Mac and if you would, talk about how  syncing goes, that is, moving from Mac to Ubuntu.</p>
+<p> I have half a dozen Macs and would be willing to sell them all and jump to a linux box if my learning curve would be &#8220;Here&#8217;s the basic Mac architecture, plus all these features, minus these features..for now&#8230;&#8221; I don&#8217;t do web development, so I&#8217;m not so concerned about eye candy as I am about having a familiar feature set &amp; having to spend a lot of time at the command line.</p>
+<p>Thanks! Great start on the article!</p>
+<p class=sig>&#8212;&#8201;<cite>Josh</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6914" title="June 29, 2006 @ 3:23 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6915"><p>Not that it&#8217;s directly related to my linux install, but <a href="/web/20110806090047/http://www.rockbox.org/" rel="nofollow">Rockbox</a> is great if you have an iPod. I drooled over the iPod, but wouldn&#8217;t buy one because it didn&#8217;t support Ogg. Then I found out about Rocbox &#8211; two days later I had an iPod.<br />
+Also, for the linux machine, I just recently installed a new distro &#8211; <a href="/web/20110806090047/http://www.archlinux.org/index.php" rel="nofollow">Arch</a> &#8211; and had to make sure it had all my essentials. Beyond your list: I use Opera primarily, but also Firefox. <a href="/web/20110806090047/http://nsd.dyndns.org/pwsafe/" rel="nofollow">pwsafe</a> is important. It&#8217;s not really a user app, but I need <a href="/web/20110806090047/http://httpd.apache.org/" rel="nofollow">Apache</a>. And <a href="/web/20110806090047/http://www.zsh.org/" rel="nofollow">zsh</a> is my preferred shell. And others have mentioned it, but VIM is a basic requirement. XEmacs too, though &#8211; you gotta have both.</p>
+<p class=sig>&#8212;&#8201;<cite>Decasm</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6915" title="June 29, 2006 @ 3:57 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6916"><p>> What&#8217;s the state of play for running something like Parallels on Ubuntu and being able to stick (for the moment) with the Windows programs</p>
+<p>I haven&#8217;t tried any of these, but&#8230;</p>
+<p><a href="/web/20110806090047/http://qemu.org/" rel="nofollow">QEmu</a> is probably what you&#8217;re looking for.  The base emulator is open source, but there is also a proprietary-but-no-cost add-on called QEmu Accelerator that works much like Parallels does (programs run on the host CPU instead of an emulated CPU).</p>
+<p>Or you could download the proprietary-but-freeware VMWare Player and hack the disk image to install Windows.  Search Google for HOWTOs on that.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6916" title="June 29, 2006 @ 4:10 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6917"><p>After being nearly 100% *n?x (bsd, then linux) since 1993, I just got a macbook pro. Why? Tired of screen issues (can&#8217;t hook up random external display like a projector), power management, and various other persistent and frustrating problems.</p>
+<p>I wouldn&#8217;t have done this if my m200 with Debian hadn&#8217;t been stolen :(, but now I&#8217;ll be able to test things with Windows &amp; MacOS X, so I&#8217;m prioritizing my audience&#8217;s POV as well as my technical/ideological preferences. Oh, and have a slick fast computer.</p>
+<p>Anyway that&#8217;s how I justify it, maybe I just want to try something new. :) Often I felt with Gnome that their striving for user friendliness &#8211; through limited, pre made  choices &#8211; was turning the desktop into something I didn&#8217;t want anyway. This is exemplified on both platforms by hiding the terminal under Utilities, whereas its a main application for a lot of users. The other problem with the open source world being the prominant and background apps come and go (hotplug, xine, etc, etc). However, I&#8217;m not going to adopt any non open software (and servers are still Linux based).</p>
+<p>Anyway, good luck, and I have little doubt I&#8217;ll be be working my way back once I get sick of the glitz.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://zooid.org/~vid' rel='external nofollow' class='url'>davidm</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6917" title="June 29, 2006 @ 4:20 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6918"><cite><a href='/web/20110806090047/http://lugopolis.net/blog/index.php/2006/06/29/essentials-2006-edition-dive-into-mark/' rel='external nofollow' class='url'>blog &raquo; Essentials, 2006 edition [dive into mark] .::. no lo se</a></cite>&#160;(pingback)</li>
+<li id="comment-6919"><p>I made the switch from Mac to Linux back in early &#8217;97 (those were the days!), and the open-format, plain-text-if-you-can habits I developed in my Linux years stayed with me when I moved back to the Mac last year. I wish you well in this new venture, though I believe you could meet your goals on a Mac with fewer hassles.</p>
+<p>Oh, I know Emacs has a powerful gravitational pull, but consider <a href="/web/20110806090047/http://www.nedit.org/" rel="nofollow">NEdit</a>. It has a pretty powerful macro language and rational keyboard equivalents.</p>
+<p>[You have the best comment previewer I have ever seen!]</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.leancrew.com/all-this' rel='external nofollow' class='url'>Dr. Drang</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6919" title="June 29, 2006 @ 4:40 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6920"><cite><a href='/web/20110806090047/http://raincontreras.com/2006/06/30/another-instance-of-ubuntu-love/' rel='external nofollow' class='url'>raincontreras.com &raquo; Another instance of Ubuntu love!</a></cite>&#160;(pingback)</li>
+<li id="comment-6921"><p>Welcome to Linux, I made the switch from Mac last August and am still enjoying it very much. I did move from Gnome to KDE as the way the GUI works just makes so much more sense to me. I also noticed that you list several KDE applications.</p>
+<p>Give Kubuntu a try (ubuntu&#8217;s kde brother).</p>
+<p>At the moment I run it on an IBM Thinkpad but I am planning to get a MacBook which WILL get Kubuntu on it. Just nice to be able to switch.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.eccosys.net/' rel='external nofollow' class='url'>Gerard van Schip</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6921" title="June 29, 2006 @ 4:50 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6922"><p>So, just so we&#8217;re clear&#8230; What &#8220;proprietary&#8221; file formats were you fed up with? I&#8217;m really curious, &#8217;cause honestly I don&#8217;t see very many that could be called Apple only. Sure there&#8217;s formats for certain applications, but isn&#8217;t that how it goes with any environment?</p>
+<p class=sig>&#8212;&#8201;<cite>Anonymous</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6922" title="June 29, 2006 @ 5:26 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6923"><p>&#8230;for backups? backuppc! all the way.</p>
+<p class=sig>&#8212;&#8201;<cite>datakid</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6923" title="June 29, 2006 @ 5:33 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6925"><p>My ibm t30 whos original hdd contained xp and ibm recovery tools failed reciently. After frustrating myself for a 3 days trying to reinstall xp, I installed Dapper Ubuntu Its pretty vanilla except for skype. </p>
+<p>Installation was simple enough, and most of the programs I used in xp are already installed in Ubuntu. This is a second computer for my wife to web surf wirelessly in the living room and keep me outta the my den. And she can still access my sons baby photos on my other windows machine (via smb) &#8211; sweet!</p>
+<p>However</p>
+<p>I want to play mpg and avi files, but the package mplayer-686 has an GDebi error(Dependancy is not satisfisble: mplayer) and I cannot figure out how to install gcc 2.95.3 used to compile mplayer source. Does anyone have a step by step howto for a n00b like me?</p>
+<p class=sig>&#8212;&#8201;<cite>nada_hax0r</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6925" title="June 29, 2006 @ 5:42 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6926"><p>I spend most of my time on WinXP, but more than a trivial amount of time on Mac OS X and Linux. Here are my must-have apps:</p>
+<p>Firefox (all platforms) + Greasemonkey + Adblock + BugMeNot + RadialContext + PDF Download + Sage + Chatzilla + SessionSaver + Linky + Disable Targets for Downloads + Copy URL Plus + Always Remember Password + Performancing + MR Tech Disable XPI Install Delay + repagination + Flat bookmark editing + rikaichan + del.icio.us. Greasemonkey scripts: Flickr Related Tags Display, Secure GMail, Weather Underground Reorg, Flickr Remove My Yahoo Link, Flickr Photo Page enhancer, eBay Hacks, eBay Negs, Google Cache Continue, Flickr EXIF.</p>
+<p>Hmm, why is Firefox thrashing my disk?</p>
+<p>Thunderbird (all platforms) + Enigmail + Sync on arrival + Unselect message + Advanced remove duplicates + Leet key (for the occasional ROT13 punchline) + Mbox import + Attachment tools + Remember mismatched domains (I ssh forward localhost to my smtp and imap servers, this extension supresses the &#8220;security certificate for mail.foo.com coming from machine localhost, do you want to trust this?&#8221; dialog.</p>
+<p>Cygwin (Windows) &#8211; I&#8217;m not ready to wrestle with Linux on a laptop. I try every few years, and there&#8217;s always some mix of sound / video / suspend / power save / wireless that doesn&#8217;t work or needs patches / tweaking. Life is too short. WinXP is stable on my notebook and Cygwin gives me 95% of the things I want from a Linux machine: ssh, rsync, wget, GNU textutils, X, Emacs, python, and perl.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://ptufts.blogspot.com/' rel='external nofollow' class='url'>Patrick Tufts</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6926" title="June 29, 2006 @ 5:44 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6927"><p>I&#8217;ve read that you aren&#8217;t a graphic designer or web developer? I wonder if anyone know what apps you could find to do this web page and how long it would take to build compared to using Mac OS X.  I&#8217;m very skeptical that a designer could do it in even the fraction of the time it takes using OS X, but I would love for someone to prove me wrong b/c I&#8217;m always open to new ideas and OS platforms if they are worth it (time-wise): [spam removed, please cut it out -Mark]</p>
+<p class=sig>&#8212;&#8201;<cite>Revolution</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6927" title="June 29, 2006 @ 5:57 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6928"><p>&gt; Sure there’s formats for certain applications, but isn’t that how it goes with any environment?</p>
+<p>No, really it isn&#8217;t. There&#8217;s nothing preventing an application being written so it stores its data in a non-opaque, well-documented data format.</p>
+<p>When applications appear that fail to store all data in open formats, the wise thing to do is avoid them so you keep control of your own data.</p>
+<p>When an operating system (or more precisely, its vendor) consistently pushes applications that fail to store all data in open formats, the wise thing to do is escape from that operating system.</p>
+<p class=sig>&#8212;&#8201;<cite>bignose</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6928" title="June 29, 2006 @ 6:20 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6929"><cite><a href='/web/20110806090047/http://www.churbuck.com/wordpress/?p=646' rel='external nofollow' class='url'>Ubuntu Essentials, 2006 edition at Churbuck.com</a></cite>&#160;(pingback)</li>
+<li id="comment-6930"><p>Try gDesklets&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite>one</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6930" title="June 29, 2006 @ 7:00 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6931"><cite><a href='/web/20110806090047/http://motherduce.wordpress.com/2006/06/29/links-for-2006-06-30/' rel='external nofollow' class='url'>Motherduce - The Blog &raquo; Blog Archive &raquo; links for 2006-06-30</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6933"><cite><a href='/web/20110806090047/http://amuchamu.bitacoras.com/archivos/2006/06/30/significado-de-ubuntu' rel='external nofollow' class='url'>El blog de amuchamu - Significado de Ubuntu</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6934"><cite><a href='/web/20110806090047/http://www.arturogoga.com/2006/06/29/aplicaciones-esenciales-para-linux-customizando-dapper/' rel='external nofollow' class='url'>arturogoga &raquo; Aplicaciones esenciales para Linux / customizando dapper</a></cite>&#160;(pingback)</li>
+<li id="comment-6935"><p><em>When an operating system (or more precisely, its vendor) consistently pushes applications that fail to store all data in open formats, the wise thing to do is escape from that operating system.</em></p>
+<p>This is the sort of comment that just drives me up a wall. Look, if the end point for your data is a digital file, this may, sometimes, makes a modicum of sense. But very often the end of the digital data is printed (whether a photo or a brochure designed in Quark XPress), and sometimes even when the file will be digital the open formats are just plain inferior (jpeg and png). This sort of manifesto-like statement is simpleminded, limiting, and incomplete.</p>
+<p class=sig>&#8212;&#8201;<cite>Tim Swan</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6935" title="June 29, 2006 @ 8:08 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6936"><p>> Look, if the end point for your data is a digital file, this may, sometimes, makes a modicum of sense.</p>
+<p>As I&#8217;ve explained at great length in recent posts, the vast majority of data I&#8217;m creating is personal, private, extremely important (to me), and strictly digital, and I would like to keep it for at least the next 50 years.  This involves a numbers of factors, one of which is open formats.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6936" title="June 29, 2006 @ 8:14 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6937"><p>> I want to play mpg and avi files</p>
+<p><a href="/web/20110806090047/http://easyubuntu.freecontrib.org/get.html" rel="nofollow">http://easyubuntu.freecontrib.org/get.html</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6937" title="June 29, 2006 @ 8:15 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6938"><p>> I&#8217;m not ready to wrestle with Linux on a laptop.</p>
+<p>Neither am I.  Like all hardware, your best bet is to buy a laptop from a vendor that specifically supports the operating system you want to run on it.  (This is not a Linux-specific problem; look at all the driver problems people are having with the 64-bit version of Windows.)  There are Linux-friendly OEMs out there.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6938" title="June 29, 2006 @ 8:20 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6939"><p>> Try gDesklets</p>
+<p>Tried it, hated it, uninstalled it.  I never liked Dashboard or Konfabulator either.  To each his own.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6939" title="June 29, 2006 @ 8:22 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6940"><p>You rock for posting this.  I&#8217;m planning to install Ubuntu soon, and I&#8217;m pretty sure I&#8217;ll be obtaining almost everything you listed.</p>
+<p class=sig>&#8212;&#8201;<cite>Emma</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6940" title="June 29, 2006 @ 9:06 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6941"><p>Did you find something that pulls/uses/preserves the metadata from iTunes?  Thousands and thousands of ratings and tags that don&#8217;t get put in id3v2&#8230;  I&#8217;ve thought about writing something myself (got as far as usefully parsing the plist xml) but just haven&#8217;t had the time.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://pyrogenic.livejournal.com/' rel='external nofollow' class='url'>Joshua Pollak</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6941" title="June 29, 2006 @ 9:11 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6942"><p>> Did you find something that pulls/uses/preserves the metadata from iTunes?</p>
+<p>No.  In a comment in a previous post, someone recommended <a href="/web/20110806090047/http://search.cpan.org/~bdfoy/Mac-iTunes-0.86/" rel="nofollow">http://search.cpan.org/~bdfoy/Mac-iTunes-0.86/</a> but I haven&#8217;t tried it yet.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6942" title="June 29, 2006 @ 9:33 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6943"><p>Never mind, the docs say it only works on iTunes 4.5 and earlier.  In iTunes 5 Apple changed their format and he hasn&#8217;t been able to reverse-engineer it.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6943" title="June 29, 2006 @ 9:37 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6944"><p>You could try <a href="/web/20110806090047/http://developer.imendio.com/wiki/GNOME_Launch_Box" rel="nofollow">Gnome Launch Box</a> if you miss Quicksilver that much. Also, I am really curious, why would you prefer Amarok to <a href="/web/20110806090047/http://www.sacredchao.net/quodlibet" rel="nofollow">Quod Libet</a>?<br />
+PS In case you ever wondered, <a href="/web/20110806090047/http://ubuntuforums.org/showthread.php?t=148351&highlight=xgl+compiz+rule" rel="nofollow">here</a> you can find the easyest way to install <a href="/web/20110806090047/http://en.wikipedia.org/wiki/Xgl" rel="nofollow">XGL</a> &amp; <a href="/web/20110806090047/http://en.wikipedia.org/wiki/Compiz" rel="nofollow">Compiz</a> ;).</p>
+<p class=sig>&#8212;&#8201;<cite>toxicduck</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6944" title="June 30, 2006 @ 12:33 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6945"><p>Well, the first thing I do when I boot up ubuntu, or any other linux distro other than Gentoo, is try to configure the wireless connection. Most of them find the card, but then provide no gui/touchy feely support for connecting to my WPA secured network at home. They apparently assume that everyone has open ESIDs and wireless routers. Neat. Three versions of Ubuntu haven&#8217;t been able to connect to my router. The one time I took the plunge and lovingly compiled Gentoo and manually configured the wireless card (after compiling the drivers no less) I was able to connect to my wireless network. I was so happy. Then the hard drive went tits up.</p>
+<p>The second thing I usually do is install the latest version of Fluxbox. I love that WM. Some day I&#8217;ll have to research how to run a different wm under OS X.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.lazycoder.com/' rel='external nofollow' class='url'>Scott</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6945" title="June 30, 2006 @ 12:36 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6946"><p>Add:</p>
+<p>Gnome Lunar Clock.</p>
+<p>Awesome moon tracking application &#8211; tells me exactly what phase the moon is in, and counts down the next full moon to the second. CRITICALLY IMPORTANT when you have a girlfriend like mine, who becomes irrational and snappy every full moon.</p>
+<p>My life was one big emotional mess untill I docked GnomeLunarClock on my daily desktop.</p>
+<p class=sig>&#8212;&#8201;<cite>SteveOC</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6946" title="June 30, 2006 @ 12:47 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6948"><p>Gotta have something to play, so get <a href='/web/20110806090047/http://oolite-linux.berlios.de/' rel="nofollow">Oolite for Linux</a>!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://oolite.aegidian.org/' rel='external nofollow' class='url'>aegidian</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6948" title="June 30, 2006 @ 2:07 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6949"><p>> but then provide no gui/touchy feely support for connecting to my WPA secured network at home</p>
+<p>I haven&#8217;t used it personally, but does <a href="/web/20110806090047/http://www.gnome.org/projects/NetworkManager/" rel="nofollow">NetworkManager</a> do what you need?  If not, could you explain to me what it&#8217;s missing?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6949" title="June 30, 2006 @ 2:18 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6950"><p>&gt; 57 &#8211; What about the Airport card in my iBook G4? Is that fully supported?</p>
+<p>I think the standard Airport cards have been supported for some time. Airport Extreme cards are supported by the default Dapper kernel but you need to install the firmware from the Mac OS X driver. See <a href="/web/20110806090047/https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx/Dapper" rel="nofollow">https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx/Dapper</a></p>
+<p class=sig>&#8212;&#8201;<cite>David O'C</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6950" title="June 30, 2006 @ 2:44 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6951"><cite><a href='/web/20110806090047/http://edward.oconnor.cx/blog/2006/06/30-links-for-2006-06-30' rel='external nofollow' class='url'>links for 2006-06-30 | Edward O&#8217;Connor</a></cite>&#160;(pingback)</li>
+<li id="comment-6952"><p>Mark, what&#8217;s your beef with Unison?</p>
+<p class=sig>&#8212;&#8201;<cite>Mic Edwards</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6952" title="June 30, 2006 @ 4:16 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6953"><p>So, Mac users are fanboys? What about the Linux users? They seem to be even more based in fandom than even the most determined Mac zealots.</p>
+<p>I understand that you have minimal requirements for your software, but those who work with professional-grade graphics and video just could not do their work with the software available for Linux. Does that make them fanboys? I wonder why you feel the need to condescend so much. It seems your choices are based on ego and ideology rather than practicality.</p>
+<p>Mac users don&#8217;t generally go around calling Linux users derogative names. Why so much hatred towards people that use different tools than you?</p>
+<p class=sig>&#8212;&#8201;<cite>Harvard Irving</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6953" title="June 30, 2006 @ 5:13 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6954"><p>This is all pretty interesting. I&#8217;ve been using Debian on my ThinkPads for years, but was considering switching to Mac out of convenience, especially because I&#8217;ve always had tons of trouble getting hibernation to work.</p>
+<p>Is there a hibernation solution with Ubuntu + Lenovo TP?</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.ramure.net/' rel='external nofollow' class='url'>skillet-thief</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6954" title="June 30, 2006 @ 5:20 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6955"><cite><a href='/web/20110806090047/http://demares.blogaliza.org/2006/06/30/o-que-tes-que-instalar/' rel='external nofollow' class='url'>de mares, portos e portas &raquo; o que tes que instalar&#8230;</a></cite>&#160;(pingback)</li>
+<li id="comment-6956"><p>Good to see you&#8217;ve made the switch to Linux.  I&#8217;ve been running linux for years, and have been using it solely at home for over a year now (gentoo).  </p>
+<p>Last October my girlfriend bought me an Apple ipod (5g video) for my birthday.  So I tried a handful of iTunes replacements including amaroK gtkpod and rhythmbox which I found to be good but buggy and not quite what I wanted.  gnupod worked quite well but, I found that what was limiting me was the ipod and it&#8217;s itunes index.  I wanted it to operate more like a file browser so I did some digging and found rockbox.</p>
+<p>Rockbox is an excellent opensource operating system for a whole variety of mp3 players including the ipod.  It plays mp3, oggs and a whole lot more, and it allows you to store the files on your ipod how you want.  It can easily be mounted in linux, and scripts can easily be written to sync to it.</p>
+<p>The only minor problem is that I don&#8217;t think it supports video playback yet.  </p>
+<p>I&#8217;ve never looked back.  Rather than using a graphical podcatcher for synchronising podcasts, I opted to cobble together my own solution.  I use podget (a bash script for downloading mp3s) and an XSLT file to strip my bloglines subscription opml to seperate my podcasts from my regular rss items.  I then have another script to sync the files to ipod appropriately.  For me this setup works really well as I can use my bloglines bookmarklet to subscribe to podcasts and have them sync up to my ipod later.</p>
+<p>An alternative to rockbox is ipodlinux, which at the time didn&#8217;t properly support the 5g ipod, though I believe progress is being made.</p>
+<p class=sig>&#8212;&#8201;<cite>Rick</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6956" title="June 30, 2006 @ 5:56 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6957"><p>All the things you say are ok&#8230; BUT I have just 2 reasons for not using only Ubuntu on my powerbook:</p>
+<p>- No Airport Extreme support.<br />
+- No Energy-saving/Sleeping mode stuff management.</p>
+<p>That was enough for me to erase my Ubuntu partition. I know it is not Ubuntu team fault but Apple for not releasing specs about these technologies, but anyway&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://anhelido.blogspot.com/' rel='external nofollow' class='url'>anhelido</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6957" title="June 30, 2006 @ 6:10 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6959"><cite><a href='/web/20110806090047/http://scott.yang.id.au/2006/06/mac-switchers-to-linux/' rel='external nofollow' class='url'>Mac Users Switch to Linux for Desktop | SYP</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6960"><cite><a href='/web/20110806090047/http://soypunk.com/2006/06/30/lets-ubuntu/' rel='external nofollow' class='url'>Soypunk &raquo; Let&#8217;s Ubuntu!</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6961"><cite><a href='/web/20110806090047/http://www.perton.net/wordpress/?p=81' rel='external nofollow' class='url'>Marc Perton &raquo; Blog Archive &raquo; Best. Laptop. Ever.</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6962"><cite><a href='/web/20110806090047/http://despuesdegoogle.com/2006/06/30/un-maquero-en-linux/' rel='external nofollow' class='url'>despuesdegoogle &raquo; Archivo del weblog &raquo; Un maquero en Linux</a></cite>&#160;(pingback)</li>
+<li id="comment-6963"><p>Does anyone still use Galeon? It&#8217;s one bit of software I missed when switching back to the Mac.  I noticed it&#8217;s in the Ubuntu repositories.</p>
+<p>Of course, those were pre-Firefox days.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://rossnotes.com/' rel='external nofollow' class='url'>Ross M Karchner</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6963" title="June 30, 2006 @ 9:08 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6964"><p>For wireless connections, check out wpagui. It lets you browse for wireless networks. I still needed to configure network preferences/security manually (there was flux in what daemons/config files to edit at the time).</p>
+<p>And in case you need it, pptpconfig is a nice VPN frontend.</p>
+<p>Glad to see all these people switching, of course being a contrarian contrarian I take this time to switch away, but its just for a break.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://zooid.org/~vid' rel='external nofollow' class='url'>davidm</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6964" title="June 30, 2006 @ 9:28 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6966"><cite><a href='/web/20110806090047/http://www.librarianactivist.org/2006/06/30/friday-fun-link-june-30-2006-book-burro/' rel='external nofollow' class='url'>&raquo; Blog Archive &raquo; Friday Fun Link - June 30, 2006 (Book Burro)LibrarianActivist.org</a></cite>&#160;(pingback)</li>
+<li id="comment-6967"><p>Great, lovely. But if you&#8217;ve got the time to wade through all those endless installations, good luck to you. You have no social life, right? My Mac does everything out of the box, so I can go and talk to some real people.</p>
+<p class=sig>&#8212;&#8201;<cite>NotDweeb</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6967" title="June 30, 2006 @ 10:51 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6968"><p>Mark, you should consider updating your instructions to use aptitude instead of apt-get. Aptitude remembers and differentiates between the packages you selected for installation and the packages which were installed as dependencies. When you use aptitude to remove a package, it also removes the unused dependencies that were installed with it. Now, if you use apt-get for a while and end up with a lot of extra packages, you can use deborphan to list your orphaned packages, and then remove them manually. But if you use aptitude from the get-go, it will never be a problem.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://basilcrow.com/' rel='external nofollow' class='url'>Basil Crow</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6968" title="June 30, 2006 @ 10:52 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6969"><p>Now that you&#8217;ve updated to use Konsole, I&#8217;ll suggest you check out Yakuake: <a href="/web/20110806090047/http://packages.debian.org/unstable/kde/yakuake" rel="nofollow">http://packages.debian.org/unstable/kde/yakuake</a></p>
+<p>I find it to be the most important thing I install in Linux; have a terminal (with tabs) that I can just slide in and out of the desktop, independent of desktop window, is huge time-saver for me.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.stephenduncanjr.com/' rel='external nofollow' class='url'>Stephen Duncan Jr</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6969" title="June 30, 2006 @ 10:59 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6971"><p>Like many people, I have been watching the furor surrounding Mark&#8217;s migration from OS X to ubuntu with interest. I&#8217;ve been a Debian user since the mid nineties, and have several hundred debian servers in production around the world. I have, however, always used apple powerbooks for my portable requirements. OS7-9 were woeful to be sure, but the 3600c and the pismo made fine linux platforms. When I upgraded to a G4 17, I installed OS X for the first time since the developer&#8217;s beta of 10.0 and was glad to see that they had remedied many of the performance problems, disk I/O and VM aside. I lived with tiger since I bought this machine in september, but I&#8217;m a unix user at heart, and OS X is a terrible unix environment. The package management (ports, fink, dmg, blah) make me want to remove my own eyes with something crafted out of stone by a neolithic man.</p>
+<p>So, that&#8217;s a long winded introduction to an answer to a question asked by somebody earlier in the comments. When I removed OS X from my machine, the migration was very straight forward:</p>
+<p>*terminal*<br />
+(you did enable the root account, right?)<br />
+$su -<br />
+#cd /Users &amp;&amp; #tar -cvf /Volumes/External_disk/homedir.tar ./my_home_dir<br />
+#verify the tarball<br />
+*format the disk*<br />
+*install ubuntu*<br />
+*create the first UID to match your short username on OS X*<br />
+*mount the external disk (HFS+ is read fine)*<br />
+$su -<br />
+#cd /mnt/External_disk<br />
+#tar xvf homedir.tar -C /home</p>
+<p>&#8230; then weed through the resulting directory removing all of the metadata associated with various OS X applications. There&#8217;s a lot of chaff in the directory listing, and much of it can go the way of the dodo (~me/Library for insance). If you have any shell customisations, these will be tracked over, and you&#8217;ll be able to migrate your media and other important data by associating them with the relevant applications (amaroK etc).</p>
+<p>*imo* OS X is probably a poor operating system for anybody who actually uses (X)emacs on a regular basis for anything like development of software. With all the talk from people about a &#8220;killer application for linux&#8221;, it&#8217;s easy enough to point out: emacs is king. It&#8217;s more important to me than photoshop or office or dreamweaver or xcode or just about anything else, and it&#8217;s support in OS X is weak at best. */imo*</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.deepsky.com/~fade/' rel='external nofollow' class='url'>Brian O'Reilly</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6971" title="June 30, 2006 @ 11:32 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6972"><p>To NotDweeb:</p>
+<p>Perhaps you don&#8217;t realise how ridiculously easy and quick it is to carry out &#8220;all those endless installations&#8221; on a modern Debian-based desktop like Ubuntu.  I seriously doubt it would have much impact on anyone&#8217;s social life.  On the other hand, it sounds like installing new programs must be a real chore on the Mac for you to leap to this ignorant and erroneous conclusion. </p>
+<p>Perhaps that&#8217;s another good reason to consider switching to Ubuntu &#8212; You can actually try out a variety of different programs (rather than using the OS defaults), without giving up your social life trying to get them installed!</p>
+<p class=sig>&#8212;&#8201;<cite>Norm</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6972" title="June 30, 2006 @ 11:36 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6973"><cite><a href='/web/20110806090047/http://bitelia.com/2006/06/30/software-para-el-maquero-converso-a-ubuntu/' rel='external nofollow' class='url'>Bitelia &raquo; Software para el maquero converso a Ubuntu</a></cite>&#160;(pingback)</li>
+<li id="comment-6974"><p>Whee. Fun to watch the fireballs fly.</p>
+<p>There are some obvious conclusions:</p>
+<p>Both platforms (Mac OS &amp; Linux) have a lot of diversity, strength and weaknesses, and their own issues that affect different people in different ways.</p>
+<p>It&#8217;s difficult to argue that in nearly every case, free/open source is not the better way, technically and idealistically. *Provided* the system runs well and does what is needed, for a particular user. Statements such as &#8220;Emacs is king&#8221; are just *hilarious* when I think of the average user&#8217;s requirements, especially when compared to specialized apps such as Photoshop (Oh, just write a Lisp macro to speak to GIMP&#8217;s python macros.. you&#8217;ll need Python 2.5.1 installed, not 2.5.2. Just read this 47 page discussion about it here, and join channel #leet-script-fu-splitters and talk to Foobah-the-great about how to get Python to not trip over backslashes. Yeah.) (Yes I know you said IMO, but this attitude still pervades, and I think the four people reading this who use Emacs already know how to switch their OS).</p>
+<p>The flames arise when people are inconsiderate of other&#8217;s priorities, for example, having a completely reliable, prebuilt environment without extensive yak-shaving, having full access to their data, a sense of purity, ego/machismo, bad experiences, cultural or technical entrenchment (it *is* hard to reach a plateau). Etc.</p>
+<p>Assuming free will (and data lock-in can prevent this), I really don&#8217;t think anyone is &#8220;right&#8221; here, and find it disgusting when people resort to name calling. Mark started the name calling, which sets a disrespectful tone for the rest of the conversation.</p>
+<p>Frankly, it is ridiculous. If the computer community can find a way to respond to these differences, that would be at least as great a thing as open source software. Perhaps a cohesive description of a responsible operating system, involving open data formats, etc, etc would be more useful than all this flammage.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://zooid.org/~vid' rel='external nofollow' class='url'>davidm</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6974" title="June 30, 2006 @ 12:20 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6975"><cite><a href='/web/20110806090047/http://www.thechunk.com/blog/archive/links-for-2006-06-30/' rel='external nofollow' class='url'>End of Silence - Random musings from a geek dad &raquo; links for 2006-06-30</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-6976"><cite><a href='/web/20110806090047/http://bugfox.net/blog/2006/06/27/mark-pilgrims-essentials/' rel='external nofollow' class='url'>bugfox blog &raquo; Blog Archive &raquo; Mark Pilgrim&#8217;s Essentials</a></cite>&#160;(pingback)</li>
+<li id="comment-6978"><blockquote><p>Mozilla Firefox + [...]. Damn it, why is Firefox taking 600 MB?</p></blockquote>
+<p>Firefox memory usage is somehow flawed in version 1.5.x (and it was not really good in version 1.0.x). I hope it will be much improved in version 2.0 (alpha versions already <a href="/web/20110806090047/http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla1.8/" rel="nofollow">available</a>).</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://ousia.wordpress.com/' rel='external nofollow' class='url'>Pablo Rodríguez</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6978" title="June 30, 2006 @ 1:59 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6979"><p>> Firefox memory usage is somehow flawed in version 1.5.x</p>
+<p>There were a number of memory leaks in 1.5 which were identified and fixed with the help of a leak detector extension that one of the core developers wrote a few months ago.  But many popular extensions leak memory like a sieve, which gives Firefox a bad name even though it&#8217;s somebody else&#8217;s fault.</p>
+<p>> version 2.0 (alpha versions already available)</p>
+<p>You do realize that I&#8217;m a full-time Firefox developer, right?  That link to nightly builds is the second link on my bookmarks toolbar!  I don&#8217;t really recommend nightlies for the general public, though.  Beta 1 is coming out in a few weeks and will be much more stable than some random nightly build.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6979" title="June 30, 2006 @ 2:16 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6980"><p>> Statements such as &#8220;Emacs is king&#8221; are just *hilarious* when I think of the average user&#8217;s requirements,</p>
+<p>An excellent point, but I&#8217;ve personally written over 1500 pages (including two published books) in Emacs, and I&#8217;m not done yet.  I am not an average user.</p>
+<p>> Mark started the name calling, which sets a disrespectful tone for the rest of the conversation.</p>
+<p>I could try to defend myself by pointing to the copious examples of rude behavior by Mac users &#8212; nay, fanboys &#8212; in previous posts, but why bother?  It&#8217;s my blog, and it&#8217;s my tone to set.  I must have missed the part where I was put under any obligation towards you whatsoever.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6980" title="June 30, 2006 @ 2:22 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6981"><p>Hey Mark,</p>
+<p>It&#8217;s not like there aren&#8217;t rude Linux users. Am not sure that return name calling has been proven to be constructive.</p>
+<p>But&#8230; it&#8217;s your blog, it&#8217;s your tone to set, it&#8217;s your position being the instigator of a topic that&#8217;s important to many people.</p>
+<p>Just like it&#8217;s your ISP&#8217;s bandwidth&#8230; no, wait.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://zooid.org/~vid' rel='external nofollow' class='url'>davidm</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6981" title="June 30, 2006 @ 2:57 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6982"><p>Mark,</p>
+<p>I haven&#8217;t tried that network manager. All the distros I&#8217;ve tried have been KDE oriented, except for Gentoo but I was going for a minimalist system when I installed that one. I&#8217;m using WPA on my network and so far all of the gui wireless managers for linux I&#8217;ve tried only support WEP. I may have to switch back to WEP.</p>
+<p>Why am I concerned about gui tools? Well, the people in my life that would be using my computer aren&#8217;t techies so it needs to be easy. IMO, wireless networking doesn&#8217;t get much easier than with OS X. So if a gui wireless manager for Linux doesn&#8217;t at least get me connected to my home network in two or three clicks, I&#8217;m not going to consider it. Heck, even Windows gets that right most of the time. :)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.lazycoder.com/' rel='external nofollow' class='url'>Scott</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6982" title="June 30, 2006 @ 3:00 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6983"><p>Scott, as mentioned above, try wpagui. I used it on Debian and it was fine, though you have to do some hand editing behind the scenes.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://zooid.org/~vid' rel='external nofollow' class='url'>davidm</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6983" title="June 30, 2006 @ 3:35 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6984"><p>Hey look now we&#8217;ve got an ubuntu fanboy site</p>
+<p class=sig>&#8212;&#8201;<cite>ubuntu fanboy</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6984" title="June 30, 2006 @ 3:41 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6985"><p>You forgot auto-matix or how ever it is spelled. I haven&#8217;t looked to closely at Easy-Ubuntu but automatix is a script that installs codex, nataulis scripts and much much more gets nearly evrey app you will ever need.</p>
+<p class=sig>&#8212;&#8201;<cite>Tarrant</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6985" title="June 30, 2006 @ 3:53 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6986"><p>DavidM,</p>
+<p>Thanks. I&#8217;ll give that a try.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.lazycoder.com/' rel='external nofollow' class='url'>Scott</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6986" title="June 30, 2006 @ 4:12 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-6987"><p>> IMO, wireless networking doesn’t get much easier than with OS X</p>
+<p>Agreed.  Every other platform is still playing catch-up, including Linux.  (I don&#8217;t personally care, since my new computer is a desktop and is plugged directly into my switch, but I acknowledge the problem.)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6987" title="June 30, 2006 @ 4:19 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6988"><p>What about a tool for downloading binaries from newsgroups? I use NewsBin on Windows, what is a good alternative for Linux?</p>
+<p class=sig>&#8212;&#8201;<cite>Clint</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6988" title="June 30, 2006 @ 5:02 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6990"><cite><a href='/web/20110806090047/http://www.cdavis.us/2006/06/30/links-for-2006-06-30/' rel='external nofollow' class='url'>It tastes like burning &raquo; links for 2006-06-30</a></cite>&#160;(pingback)</li>
+<li id="comment-6992"><p>Hey, you do know that you can download gmail via pop to thunderbird right? and then the thunderbird email notification icon covers all your accounts.</p>
+<p class=sig>&#8212;&#8201;<cite>nobody</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6992" title="June 30, 2006 @ 6:28 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6993"><p>for those GNOME lovers, who want something like Yakuake:</p>
+<p>apt-get install tilda<br />
+( or get it from gnomefiles.org)</p>
+<p>it&#8217;s freaking awesome ;)</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://debian.org/' rel='external nofollow' class='url'>Goll</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6993" title="June 30, 2006 @ 7:00 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-6995"><cite><a href='/web/20110806090047/http://newsbreaks.net/archives/1300' rel='external nofollow' class='url'>newsBreaks.net &raquo; Mark Pilgrim&#8217;s list of Ubuntu essentials for ex-Mac users</a></cite>&#160;(pingback)</li>
+<li id="comment-6996"><p>I had just downloaded the ISO for Xubuntu Desktop CD for PowerPC, so I could try it out before installing, but it was 690+ meg and my CD-R blanks were only 650 Meg. Rats! Oh, well, there&#8217;s always Darwin. 8)</p>
+<p class=sig>&#8212;&#8201;<cite>Buxton Pyland</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6996" title="June 30, 2006 @ 11:23 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6997"><p>Nice collection Mark, i use Kubuntu cuz&#8217; i like KDE and have a similar choice of apps. I recomend KOffice, it&#8217;s nicer than OpenOffice and it works faster.</p>
+<p>&#8220;Automatix&#8221; it&#8217;s better than &#8220;EasyUbuntu&#8221; but it&#8217;s still &#8220;ugly&#8221; for me, but it works! and it&#8217;s updated (see ubuntuforums.org)</p>
+<p>And if you want games you have a lot of new FPS with nice 3D, look at <a href="/web/20110806090047/http://www.fabio.com.ar/verpost.php?id_noticia=1767" rel="nofollow">this</a> and <a href="/web/20110806090047/http://www.fabio.com.ar/verpost.php?id_noticia=1757" rel="nofollow">this</a></p>
+<p>For graphics design, there&#8217;s a new version of Inkscape 0.44 (Vector design) and this software may not be professional but it&#8217;s going to be&#8230;</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://www.fabio.com.ar/' rel='external nofollow' class='url'>Fabio</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6997" title="June 30, 2006 @ 11:59 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6998"><p>It is probably not the best idea for the old Mac-lover (or whatever is currently PC term for long-time Mac user), but I would add to the list of applications I cannot live without Krusader (or probably gnome-commander, but that is still years behind) &#8212; more than competent replacement for Windows Commander (two-pane OFM file manager). Yes, I don&#8217;t like Konqueror as a file manager, but Nautilus makes me remember horrible times of Windows 3.0. Never again!</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://matej.ceplovi.cz/blog/' rel='external nofollow' class='url'>Matej Cepl</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6998" title="July 1, 2006 @ 1:14 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-6999"><p>Update: I just downloaded the ISO for Debian &#8220;Sarge&#8221; NetInst for PowerPC. At 195 Meg, it&#8217;s rather svelte compared to the Xubuntu ISO. I didn&#8217;t see a similar offering from Ubuntu.</p>
+<p>I&#8217;ve used Debian for the PC, as well as a dozen others over the years (I cut my teeth on Slackware 8) ). I&#8217;m really impressed by their package management system, and how it handles dependencies. Once I make a backup of my data, I&#8217;ll give it a whirl.</p>
+<p class=sig>&#8212;&#8201;<cite>Buxton Pyland</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-6999" title="July 1, 2006 @ 1:50 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7000"><p>For image editing a la photoshop and better check out XaraLX:</p>
+<p><a href="/web/20110806090047/http://www.xaraxtreme.org/" rel="nofollow">http://www.xaraxtreme.org/</a></p>
+<p class=sig>&#8212;&#8201;<cite>saracen</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-7000" title="July 1, 2006 @ 2:21 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-7001"><cite><a href='/web/20110806090047/http://zy.ca/archives/2006/07/01/cory-doctorow-is-my-new-lord-and-master/' rel='external nofollow' class='url'>Cory Doctorow Is My New Lord And Master at Zyca</a></cite>&#160;(pingback)</li>
+<li id="comment-7002"><p>I heard that Ubuntu doesn&#8217;t support wireless internet&#8230; thats the main thing putting me off at the moment as all my laptops and computers are wireless.</p>
+<p class=sig>&#8212;&#8201;<cite>Jaymz</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-7002" title="July 1, 2006 @ 4:01 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-7003"><cite><a href='/web/20110806090047/http://computerpioneer.wordpress.com/2006/07/01/essential-linux-convert-software-list/' rel='external nofollow' class='url'>Alt-Ctrl-Del &raquo; Essential Linux Convert Software List</a></cite>&#160;(pingback)</li>
+<li class=me id="comment-7004"><p>> I heard that Ubuntu doesn&#8217;t support wireless internet</p>
+<p>Many wireless cards are supported, but not all of them.  This is definitely an area where Linux is struggling to catch up.  The best thing to do is download a &#8220;live CD&#8221; of Ubuntu and boot it on your own laptop.  It won&#8217;t touch your existing hard drive at all &#8212; it does everything off the CD and in memory &#8212; and you can run a full Linux distribution and see whether it supports your hardware.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-7004" title="July 1, 2006 @ 9:34 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7005"><p>I just wanted to tell folks about Dia:<br />
+<a href="/web/20110806090047/http://www.gnome.org/projects/dia/" rel="nofollow">http://www.gnome.org/projects/dia/</a></p>
+<p>Anyone doing any data modelling, interface design, IA work&#8230; etc. </p>
+<p>There is also Graphviz:<br />
+<a href="/web/20110806090047/http://www.graphviz.org/" rel="nofollow">http://www.graphviz.org/</a></p>
+<p>Graphviz can be scripted&#8230; which is good if you can automate any part of your modelling process&#8230; (sitemaps, SQL schemas, etc.)</p>
+<p>Shawn</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://soypunk.com/' rel='external nofollow' class='url'>Shawn Medero</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-7005" title="July 1, 2006 @ 10:00 am"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7006"><p>While this is in fact your site and you may indeed set any tone you like, doing so authorizes the rest of us to add such tone to whatever ongoing list of petty cruelties issued by the formerly vaunted and esteemed Mark Pilgrim that we may have mentally compiled.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://joeclark.org/weblogs/' rel='external nofollow' class='url'>Joe Clark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-7006" title="July 1, 2006 @ 1:16 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7007"><p>You forgot:  </p>
+<p> &#8211; Something to pad the walls with for when you beat your head against it after you spend  countless hours trying to get half that stuff to work. </p>
+<p> &#8211; World of Warcraft.  They make that for Linux, right?</p>
+<p class=sig>&#8212;&#8201;<cite>Shaver</cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-7007" title="July 1, 2006 @ 2:35 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li id="comment-7010"><p>Shaver: <a href="/web/20110806090047/http://www.linux-gamers.net/modules/news/article.php?storyid=707" rel="nofollow"><abbr title="World of Warcraft">WoW</abbr> runs under Linux</a></p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://virtuelvis.com/' rel='external nofollow' class='url'>Arve</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-7010" title="July 1, 2006 @ 5:20 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=me id="comment-7011"><p>Joe wrote:<br />
+> you may indeed set any tone you like, doing so authorizes the rest of us &#8230; [blah blah blah]</p>
+<p>Shaver wrote:<br />
+> Something to pad the walls with for when you beat your head against it after you spend countless hours trying to get half that stuff to work.</p>
+<p>The juxtaposition is breathtaking.</p>
+<p class=sig>&#8212;&#8201;<cite><a href='/web/20110806090047/http://diveintomark.org/' rel='external nofollow' class='url'>Mark</a></cite>&#160;<a class=p href="/web/20110806090047/http://diveintomark.org/archives/2006/06/26/essentials-2006#comment-7011" title="July 1, 2006 @ 6:04 pm"><img alt="#" src=/web/20110806090047im_/http://wearehugh.com/h.png width=8 height=9></a></li>
+<li class=pb id="comment-7012"><cite><a href='/web/20110806090047/http://adrianomelo.com/blog/reblog-1/' rel='external nofollow' class='url'>Adriano Melo &raquo; reBlog #1</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7013"><cite><a href='/web/20110806090047/http://www.josejimenez.net/?p=109' rel='external nofollow' class='url'>JoseJimenez.net &raquo; Blog Archive &raquo; Lista de software esencial para cambiar de Mac a Ubuntu</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7014"><cite><a href='/web/20110806090047/http://www.chanduonline.com/2006/06/28/linkblog-for-wednesday-28-june-2006/' rel='external nofollow' class='url'>Linkblog for Wednesday, 28 June, 2006 &raquo; Chandrasekhar Vallabhaneni</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7015"><cite><a href='/web/20110806090047/http://www.gadgetguy.de/?p=1436' rel='external nofollow' class='url'>Ubuntu essential software list - www.gadgetguy.de - The GadgetGuy</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7016"><cite><a href='/web/20110806090047/http://byte.livenet.pl/?p=640' rel='external nofollow' class='url'>bytowisko &raquo; Archiwum wpisów &raquo; Witamy na pokładzie</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7017"><cite><a href='/web/20110806090047/http://cory.deppen.us/2006/06/30/links-for-2006-07-01/' rel='external nofollow' class='url'>Perpetually Thinking &raquo; links for 2006-07-01</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7018"><cite><a href='/web/20110806090047/http://eightface.com/2006/07/mark-pilgrims-essentials/' rel='external nofollow' class='url'>eightface // Mark Pilgrim&#8217;s Essentials</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7019"><cite><a href='/web/20110806090047/http://www.cooltechreviews.com/?p=169' rel='external nofollow' class='url'>Ubuntu passes Mac as next cool thing? -- Cool Tech Reviews</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7020"><cite><a href='/web/20110806090047/http://throwthemind.com/blog/2006/06/30/best-of-the-interweb-6-30-06/' rel='external nofollow' class='url'>Throw the Mind &raquo; Best of the Interweb 6-30-06</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7021"><cite><a href='/web/20110806090047/http://www.agsdot.com/blog/?p=893' rel='external nofollow' class='url'>Agsdot &raquo; Essentials, 2006 edition [dive into mark]</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7022"><cite><a href='/web/20110806090047/http://blog.labnotes.org/2006/06/29/links-for-2006-06-30/' rel='external nofollow' class='url'>Labnotes &raquo; Blog Archive &raquo; links for 2006-06-30</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7023"><cite><a href='/web/20110806090047/http://www.marteydodoo.com/2006/07/03/moving-to-linux-permanently/' rel='external nofollow' class='url'>MarteyDodoo.com &raquo; Moving to Linux Permanently</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7024"><cite><a href='/web/20110806090047/http://dawnview.wordpress.com/2006/07/04/links-for-2006-07-04/' rel='external nofollow' class='url'>sotto voce &raquo; links for 2006-07-04</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7025"><cite><a href='/web/20110806090047/http://blog.customproject.com/2006/07/04/ubuntu-selection/' rel='external nofollow' class='url'>blog.customproject.com &raquo; Blog Archive &raquo; Ubuntu Selection</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7026"><cite><a href='/web/20110806090047/http://tomcat.ranta.info/?p=367' rel='external nofollow' class='url'>^CatForSale$ &raquo; Ubuntu</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7027"><cite><a href='/web/20110806090047/http://www.oliyiptong.com/blog/2006/07/04/ubuntu-606-lts-in-focus/' rel='external nofollow' class='url'>Olivier Yiptong&#8217;s blog &raquo; Blog Archive &raquo; Ubuntu 6.06 LTS in focus</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7043"><cite><a href='/web/20110806090047/http://ktheory.com/archives/2006/07/04/essential-software/' rel='external nofollow' class='url'>ktheory.com &raquo; Blog Archive &raquo; Essential software</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7052"><cite><a href='/web/20110806090047/http://www.itexpressonline.com/2006/07/05/ubuntu-essentials-2006/' rel='external nofollow' class='url'>ITexpress &raquo; Blog Archive &raquo; Ubuntu Essentials 2006</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7055"><cite><a href='/web/20110806090047/http://www.geekster.org/index.php/2006/07/05/essential-linux-apps/' rel='external nofollow' class='url'>Geekster.org &raquo; Essential Linux Apps</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7058"><cite><a href='/web/20110806090047/http://niklasblog.com/?p=1001' rel='external nofollow' class='url'>Niklas&#8217; blog &raquo; Blog Archive &raquo; Apple, OSX, MacBook - I got that work</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7064"><cite><a href='/web/20110806090047/http://www.apcstart.com/site/admin/2006/07/621/switch-to-ubuntu-linux-say-two-high-profile-mac-advocates' rel='external nofollow' class='url'>APC Magazine &raquo; &#8220;Switch to Ubuntu Linux&#8221; say two high profile Mac advocates</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7065"><cite><a href='/web/20110806090047/http://www.smallwire.net/2006/07/06/pilgrim-ubuntu/' rel='external nofollow' class='url'>Smallwire &raquo; Ubuntu, which is an ancient African word meaning “can’t install Debian”</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7066"><cite><a href='/web/20110806090047/http://shabo.ath.cx/2006/07/06/ubuntu-linux-essential-applications-the-best-apps-for-a-dapper-install/' rel='external nofollow' class='url'>shabo blog &raquo; Blog Archive &raquo; Ubuntu Linux Essential Applications - The BEST apps for a Dapper Install.</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7070"><cite><a href='/web/20110806090047/http://www.roblef.com/?p=314' rel='external nofollow' class='url'>roblef dot com - pulling it all together &raquo; just like a mac, only ubuntu</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7076"><cite><a href='/web/20110806090047/http://wsuntech.com/esh/?p=177' rel='external nofollow' class='url'>The Web &#8220;Inside and Out&#8221; &raquo; Blog Archive &raquo; Ubuntu Gains Opera, High Profile Converts</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7077"><cite><a href='/web/20110806090047/http://www.developers.org.ua/archives/max/2006/07/07/weekly-linkdump-37/' rel='external nofollow' class='url'>weekly linkdump &laquo; блог разработчиков &laquo; developers.org.ua</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7078"><cite><a href='/web/20110806090047/http://www.amuchamu.com/2006/06/30/significado-de-ubuntu/' rel='external nofollow' class='url'>El blog de //Amuchamu &raquo; Blog Archive &raquo; Significado de Ubuntu</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7079"><cite><a href='/web/20110806090047/http://www.approachingnormal.com/articles/2006/07/08/links-for-7-6' rel='external nofollow' class='url'>Links for 7/6</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7080"><cite><a href='/web/20110806090047/http://sosa0sa.com/blog/2006/07/09/1019/' rel='external nofollow' class='url'>sosa0sa.com &raquo; Things to read</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7081"><cite><a href='/web/20110806090047/http://www.averyjparker.com/2006/07/10/rsync-for-easy-and-quick-backups/' rel='external nofollow' class='url'>Rsync for easy (and quick) backups-- Avery J. Parker - Web site hosting and computer service</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7082"><cite><a href='/web/20110806090047/http://brianbaggett.com/?p=399' rel='external nofollow' class='url'>brian baggett dot com &raquo;</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7083"><cite><a href='/web/20110806090047/http://www.swaroopch.info/archives/2006/07/12/ubuntu/' rel='external nofollow' class='url'>Swaroop C H, The Dreamer &raquo; Archives &raquo; Ubuntu</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7084"><cite><a href='/web/20110806090047/http://blog.ftofani.com/?p=184' rel='external nofollow' class='url'>links for 2006-07-12 | blog.ftofani.com</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7086"><cite><a href='/web/20110806090047/http://neoglam.com/?p=57' rel='external nofollow' class='url'>..[neoglam [thedaniel] ].. &raquo; this week&#8217;s bookmarks</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7087"><cite><a href='/web/20110806090047/http://www.davecentral.net/1970/01/01/essential-linux-apps-for-the-os-x-convert/' rel='external nofollow' class='url'>Essential Linux apps for the OS X convert - davecentral Planet David Central &amp; Dave Central Planet</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7100"><cite><a href='/web/20110806090047/http://jawe.net/2006/07/17/ubuntu/' rel='external nofollow' class='url'>jawe.net &raquo; Blog Archiv &raquo; Ubuntu</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7116"><cite><a href='/web/20110806090047/http://www.afroginthevalley.com/2006/07/17/it-just-works-yes-i-am-talking-about-linux.html' rel='external nofollow' class='url'>It just works (yes I am talking about Linux!) - A Frog in the Valley - Technology Intelligence</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7143"><cite><a href='/web/20110806090047/http://gatheringinlight.com/2006/07/21/cheap-mac-apps-for-students-and-teachers/' rel='external nofollow' class='url'>gathering in light - &raquo; Cheap Mac Apps for Students and Teachers</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7148"><cite><a href='/web/20110806090047/http://munckfish.net/blog/archive/2006/07/21/mac-users-migrating-to-ubuntu-linux/' rel='external nofollow' class='url'>Munckfish.net &raquo; Blog Archive &raquo; Mac users migrating to Ubuntu Linux</a></cite>&#160;(pingback)</li>
+<li class=tb id="comment-7198"><cite><a href='/web/20110806090047/http://sigt.net/archivo/yukei-y-el-coqueteo-con-xubuntu.xhtml' rel='external nofollow' class='url'>SigT</a></cite>&#160;(trackback)</li>
+<li class=pb id="comment-7205"><cite><a href='/web/20110806090047/http://www.nickhodge.com/blog/archives/1643' rel='external nofollow' class='url'>www.nickhodge.com | mungenet &raquo; Blog Archive &raquo; Our Virtual Future: There are Cycles to Burn</a></cite>&#160;(pingback)</li>
+<li class=pb id="comment-7213"><cite><a href='/web/20110806090047/http://www.venera7.com/apple/wep-macbookpro' rel='external nofollow' class='url'>Venera7.com &raquo; Blog Archive &raquo; WEP hacking con los nuevos MacBook y MacBook Pro</a></cite>&#160;(pingback)</li>
+</ol>
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806090047/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806090047/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806090047/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806090047/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806090047/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.779 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-13 11:07:55 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 9:00:47 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:09:57 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

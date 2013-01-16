@@ -1,0 +1,604 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Full disclosure [dive into mark]</title>
+<link rel=alternate type=application/atom+xml href=/web/20110806114749/http://diveintomark.org/feed/>
+<link rel=me type=text/html href=/web/20110806114749/http://www.google.com/profiles/pilgrim>
+<link rel=author href=/web/20110806114749/http://diveintomark.org/about>
+<link rel=search type=application/opensearchdescription+xml href=/web/20110806114749/http://wearehugh.com/public/2006/09/opensearch-full.xml title="dive into mark">
+<link rel="shortcut icon" href=/web/20110806114749im_/http://diveintomark.org/favicon.ico>
+<link rel=prev href="/web/20110806114749/http://diveintomark.org/archives/2002/03/03/while_you_were_out-2" title="While you were out">
+<link rel=next href="/web/20110806114749/http://diveintomark.org/archives/2002/03/04/radio_escaping_bugs" title="Radio escaping bugs">
+<link rel=up href="/web/20110806114749/http://diveintomark.org/archives#p404" title="March 2002">
+<link rel='index' title='dive into mark' href='/web/20110806114749/http://diveintomark.org/' />
+<link rel='prev' title='While you were out' href='/web/20110806114749/http://diveintomark.org/archives/2002/03/03/while_you_were_out-2' />
+<link rel='next' title='Radio escaping bugs' href='/web/20110806114749/http://diveintomark.org/archives/2002/03/04/radio_escaping_bugs' />
+<link rel='canonical' href='/web/20110806114749/http://diveintomark.org/archives/2002/03/04/full_disclosure' />
+<link rel='shortlink' href='/web/20110806114749/http://diveintomark.org/?p=404' />
+<meta name="keywords" content="blogging,manila,security">
+<link href="/web/20110806114749cs_/http://fonts.googleapis.com/css?family=Lora" rel=stylesheet>
+<style type=text/css>
+/*dive into minimalism(c)2010 Mark Pilgrim,MIT-licensed including graphics*/
+html{background:white url(/web/20110806114749/http://wearehugh.com/m.jpg) no-repeat bottom right;color:black}
+body{font:normal medium Lora,serif;margin:1.75em auto;width:40em;line-height:1.75;word-spacing:0.1em}
+em,i,blockquote{font-family:Lora,serif;font-style:oblique}
+strong,b{font-family:Lora,serif;}
+pre,code,var,samp,kbd,tt{font-family:monospace}
+h2,h3{font-weight:bold}
+.c{font-family:'Arial Unicode MS',FreeSerif,'DejaVu Sans',sans-serif}
+a{background:transparent;text-decoration:none;border-bottom:1px dotted}
+a:hover{border-bottom:1px solid}
+a:link{color:#1b67c9}
+a:visited{color:darkorchid}
+h1 a,h2 a,h3 a,#nav a,.punch a{color:inherit !important}
+abbr,.p{border:0;letter-spacing:0.1em;text-transform:lowercase;font-variant:small-caps}
+h1,h2,h3,p,ul,ol,#nav{margin:1.75em 0}
+h1,h2,h3{font-size:medium}
+h1,h2{display:inline}
+h1{font-weight:normal}
+pre,tt{white-space:pre-wrap;font-size:medium;line-height:2.154}
+cite{font-style:normal}
+img{border:0}
+.framed{border:1px solid}
+.cl,#arc th,#arc td,.punch p{list-style:none;margin:0;padding:0}
+.cl li{margin-bottom:-1px;border-bottom:1px dotted;overflow:hidden}
+.sig,.tb,.pb,blockquote{font-size:small;line-height:2.154;margin:2.154em 0;padding:0}
+blockquote{font-style:oblique;border-left:1px dotted;margin-left:2.154em;padding-left:2.154em}
+blockquote p{margin:2.154em 0}
+.tb,.pb{margin-top:0;padding:2.154em 0}
+.sig,.punch,#arc th{text-align:right}
+.f,.c{text-align:center;clear:both}
+#comment,#arc{width:100%}
+#comment{height:14.6em;margin:0;line-height:2.154}
+.me{background:papayawhip;color:black;padding:1.75em 1.75em 0 1.75em;border-top:1px dotted;margin-top:-2px}
+.me>p:first-child{margin-top:0}
+.punch{float:right;font-size:x-small;margin:0 0 1.75em 1.75em;line-height:1.75}
+#nav + .punch + p:first-letter{float:left;color:gainsboro;padding:0.11em 4px 0 0;font:normal 4em/0.68 serif}
+#arc th{padding:0 1.75em 0 0;vertical-align:baseline}
+#arc{border-collapse:collapse}
+figure{display:block;text-align:center;margin:1.75em 0}
+figure img{display:block;margin:0 auto}
+</style>
+<script>_gaq=[['_setAccount','UA-7434570-2'],['_trackPageview'],['_trackPageLoadTime']];(function(){var g=document.createElement('script');g.src='//www.google-analytics.com/ga.js';g.setAttribute('async','true');document.documentElement.firstChild.appendChild(g);})();</script>
+<link rel=canonical href="/web/20110806114749/http://diveintomark.org/archives/2002/03/04/full_disclosure">
+</head>
+<body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/diveintomark.org\/archives\/2002\/03\/04\/full_disclosure";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "6";
+var displayMonth = "Aug";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://diveintomark.org/archives/2002/03/04/full_disclosure" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110806114749" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110514124946/http://diveintomark.org/archives/2002/03/04/full_disclosure" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 May 2011"><strong>MAY</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 11:47:49 Aug 6, 2011">AUG</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Sep
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110514124946/http://diveintomark.org/archives/2002/03/04/full_disclosure" title="12:49:46 May 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 11:47:49 Aug 6, 2011">6</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20100620074258/http://diveintomark.org/archives/2002/03/04/full_disclosure" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Jun 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 11:47:49 Aug 6, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2012
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110806114749*/http://diveintomark.org/archives/2002/03/04/full_disclosure" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>15 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">1 Sep 06 - 6 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000001101_2007:-1:010101000000_2008:-1:001010100000_2009:-1:000000000000_2010:-1:000001000021_2011:7:000010010000_2012:-1:000000000000_2013:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<div id=nav><h1><a accesskey=1 href=/web/20110806114749/http://diveintomark.org/>dive into mark</a></h1> &#8227;
+<a href="/web/20110806114749/http://diveintomark.org/archives#p404">March 4, 2002</a> &#8227;
+<h2>Full disclosure</h2> (<a href="/web/20110806114749/http://diveintomark.org/tag/blogging" rel="tag">blogging</a>, <a href="/web/20110806114749/http://diveintomark.org/tag/manila" rel="tag">manila</a>, <a href="/web/20110806114749/http://diveintomark.org/tag/security" rel="tag">security</a>)</div>
+<p>This is the story of a Manila security hole.  Manila is a server-side content management system by Userland, the same company that makes the client-side CMS/aggregator/weblog tool called Radio.  I want to be clear that <em>this Manila security hole was closed on January 29, 2002</em>, and the fix was immediately deployed to all the major Manila-based weblog hosting sites.  So this is nothing to get panicked about if you have a hosted Manila weblog.  Also, as far as I know, this bug does not affect Radio users.</p>
+
+<p>The Manila security hole, in brief, was that referers were not HTML-escaped before being listed on the referers page (usually /stats/referers).  This allows malicious clients to alter their referer string to include HTML tags, including Javascript (in a SCRIPT tag).  There are many potential problems with this: hackers could insert web bugs in your referer page that track your visitors, or they could open popup (or popunder) windows with advertisements that appeared to be initiated by your site, or they could redirect a visitor to another page altogether, perhaps one that took advantage of other security holes in the visitor&#8217;s browser.  I would expect any competent software company to be able to recognize these potential problems, once they were advised on the underlying code bug.</p>
+
+<p>(Update, 6 PM: apparently the original version of this story triggered a <em>completely different bug</em> in Radio which &#8212; and I am not making this up &#8212; redirected readers to a different page.  This was never my intention, and I&#8217;ve tweaked the story so it does not trigger this bug in Radio.  Read <a href="/web/20110806114749/http://diveintomark.org/archives/2002/03/04.html#radio_escaping_bugs">Radio escaping bugs</a> for all the gory technical details on <em>that</em> bug.)</p>
+
+<p>I want to be clear that I am an advocate of full disclosure of security holes; however, I also believe that product vendors should be given a reasonable chance to fix their products.  This has always been (and will continue to be) a delicate balance, based more on courtesy and reputation than science and statistics.  How long is a &#8220;reasonable chance&#8221;?  I would say no more than 48 hours &#8212; and yes, I&#8217;ve worked on complex production systems, so I know how short 48 hours can be.  The key here is the realization that, <em>by the time someone tells you about a security flaw, someone else is almost certainly already exploiting it</em>.  Even if the person who tells you discovered it independently (as I did in this case), you must assume the worst, that others have already discovered it and <em>not</em> told you.</p>
+
+<p>And what about vendors (like Microsoft) that actively oppose full disclosure, go out of their way to belittle security experts who expose security flaws, and have developed a reputation for ignoring private notification of such flaws?  What about flaws that are easy to exploit but difficult to fix?  This muddies the waters even further, and I would leave it up to the discretion of the person who found the flaw.  I did not have these problems in this case.  When I found this security hole in Manila, I was on good terms with Dave Winer (the CEO of Userland); the flaw was both easy to understand and easy to fix; and I had seen instances of Dave openly admitting &#8212; and explaining &#8212; security flaws in his own products (after he fixed them, of course).</p>
+
+<p>This story is told in the same way that it unfolds, in a series of emails.  All the emails that make up this story are presented here unedited, in their entirety, except that email addresses have been replaced by proper names.  Except for minimal comments to keep track of the timeline and people involved, I will let the emails speak for themselves.</p>
+
+<ol>
+
+<li><p>I started the story on January 19th, by sending this email to the CEO of Userland, Dave Winer.</p>
+
+<blockquote>
+
+<p>Date: Sat, 19 Jan 2002 14:54:00 -0800 (PST)<br />
+
+From: Mark Pilgrim<br />
+
+To: Dave Winer<br />
+
+Subject: Manila security hole</p>
+
+<p>Out of respect for you personally, I am telling you this privately. (I reserve the right to speak about it publicly in the future.)</p>
+
+<p>I have discovered a security hole in Manila.  The referers page does not HTML-escape the referers it lists.  This allows a malicious client to insert arbitrary HTML into the referers page, including Javascript. This could, for instance, be used to hijack the referers page and redirect visitors to another site.</p>
+
+<p>To illustrate this, I hacked my Python urllib.py to send this referer [note: remove the dashes to trigger the bug]:</p>
+
+<p>&lt;s-c-r-i-p-t language=&#8221;Javascript&#8221;> window.location = &#8216;http&#8217; + unescape(&#8216;%3A%2F%2F&#8217;) + &#8216;diveintomark.weblogger.com&#8217; ;&lt;/script></p>
+
+<p>Then I programmatically hit diveintomark.weblogger.com a few times, and waited a hour until the referer page was rebuilt.  Now, going to my referer page redirects to my home page.  This could just as easily be a page on a completely different server.  (The redirect URL is specified in full by the malicious client.)</p>
+
+<p>  http://diveintomark.weblogger.com/stats/referers</p>
+
+<p>HTML-escaping all referers should solve this problem.</p>
+
+<p>Cheers.</p>
+
+<p>-Mark</p>
+
+</blockquote>
+
+</li>
+
+<li><p>Dave replied almost immediately.</p>
+
+<blockquote>
+
+<p>Date: Sat Jan 19, 2002  06:13:01  PM US/Eastern<br />
+
+From: Dave Winer<br />
+
+To: Mark Pilgrim<br />
+
+Subject: Re: Manila security hole</p>
+
+<p>Thanks Mark &#8212; it being Saturday I&#8217;m not sure if we can get a response out of the team. we&#8217;ll get on it quickly. Dave</p>
+
+</blockquote>
+
+</li>
+
+<li><p>Ten days later (January 29), I tested my own Manila-based weblog and discovered that the problem still existed, and I sent another email to Dave.  The rest of the story happened within hours on January 29.</p>
+
+<blockquote>
+
+<p>Date: Tue, 29 Jan 2002 07:50:32 -0800 (PST)<br />
+
+From: Mark Pilgrim<br />
+
+To: Dave Winer<br />
+
+Subject: Manila security hole followup</p>
+
+<p>Dave, whatever happened with that bug I found about the unescaped HTML on Manila referer pages?  You said you&#8217;d hand it off to development, but then my personal life went haywire and I never got a chance to follow up.  Is it fixed, or will it be fixed soon?</p>
+
+<p>Cheers.</p>
+
+<p>-Mark</p>
+
+</blockquote>
+
+</li>
+
+<li><p>Again, Dave replied almost immediately.</p>
+
+<blockquote>
+
+<p>Date: Tue Jan 29, 2002  11:01:21  AM US/Eastern<br />
+
+From: Dave Winer<br />
+
+To: Mark Pilgrim<br />
+
+Cc: Brent Simmons<br />
+
+Subject: Re: Manila security hole followup</p>
+
+<p>You can raise it as an issue publicly if you like, Brent Simmons is our spokesperson on this, he will answer whatever questions you have. Dave</p>
+
+</blockquote>
+
+</li>
+
+<li><p>So I sent an email to Brent Simmons.</p>
+
+<blockquote>
+
+<p>Date: Tue, 29 Jan 2002 08:19:24 -0800 (PST)<br />
+
+From: Mark Pilgrim<br />
+
+To: Brent Simmons<br />
+
+Subject: Re: Manila security hole followup</p>
+
+<p>Hi Brent.  Dave told me to contact you about this issue.  I don&#8217;t know how much you know about the background leading up to this.  In short, I found a small but important bug in Manila about 10 days ago and contacted Dave about it.  He said he would hand it off to development, and I was wondering what the status was.  Let me know if you need technical details, I can dig up my original mail that describes the problem.</p>
+
+<p>Thanks,</p>
+
+<p>Mark</p>
+
+</blockquote>
+
+</li>
+
+<li><p>Brent replied within hours.</p>
+
+<blockquote>
+
+<p>Date: Tue Jan 29, 2002  12:54:41  PM US/Eastern<br />
+
+From: Brent Simmons<br />
+
+To: Mark Pilgrim<br />
+
+Cc: Dave Winer<br />
+
+Subject: Re: Manila security hole followup</p>
+
+<p>Hi Mark,</p>
+
+<p>We can certainly make the change you&#8217;re talking about.</p>
+
+<p>But remember that people can also post discussion group messages and put JavaScript code in their posts.</p>
+
+<p>What we did was to use strict referer checking so that no JavaScript code could cause you to post to your weblog, flip your home page, or do anything else that could cause either loss of data or unwanted addition of data.</p>
+
+<p>Here&#8217;s a page dated 5/10/2000 where we talk about having added the referer checks:</p>
+
+<p>http://inessential.com/clientsidetrojan.html</p>
+
+<p>Note that Radio also has referer checking.</p>
+
+<p>Does that satisfy? Or are you thinking of a more specific exploit that isn&#8217;t thwarted by referer checking?</p>
+
+<p>-Brent</p>
+
+</blockquote>
+
+</li>
+
+<li><p>I replied to Brent, explaining the bug I had found, which had nothing to do with the (long since fixed) bug he was describing.</p>
+
+<blockquote>
+
+<p>Date: Tue Jan 29, 2002  01:33:20  PM US/Eastern<br />
+
+From: Mark Pilgrim<br />
+
+To: Brent Simmons<br />
+
+Subject: Re: Manila security hole followup</p>
+
+<p>That is actually interesting information (it explains why I&#8217;ve never been able to edit my Manila site when using Guidescope, which strips referers), but it&#8217;s not the bug I&#8217;m talking about.</p>
+
+<p>The bug is this: Manila takes the referer information it receives from the client and displays it in the referer page &#8220;as is&#8221;.  So if the client web browser (or scripting environment) is hacked to include HTML tags in its referer tag, these actual tags will be displayed in the referer page.  Such tags could include the SCRIPT tag to insert malicious Javascript into the referer page.  Such script would be executed by anyone who viewed the referer page (either the owner of the site, or any visitors).  It could, for instance, redirect them to another site.  Combined with the multitude of security holes for IE (and even some for Netscape), this could be very serious.</p>
+
+<p>To illustrate this point, I have (just now) demonstrated the bug by hacking my referer and hitting several Userland sites, including macros.userland.com.  If you go to http://macros.userland.com/stats/referers right now, it will redirect you to http://inessential.com/, because that&#8217;s what I told it to do.  (I can send you the one line of code I used &#8212; in Python &#8212; to set up this hack, but you can replicate it in any environment that allows you to specify the referer manually.)  Essentially, I have hijacked the referer page and redirected it to a web page of my choosing; the effect lasts 24 hours, since that&#8217;s how long it takes for the hacked referer to fall off the bottom of the page.</p>
+
+<p>The solution to this problem is to escape the referers you display on the referer page, so that &#8220;&lt;&#8221; becomes &#8220;&amp;lt;&#8221; and &#8220;&amp;&#8221; becomes &#8220;&amp;amp;&#8221; and so forth.  This is standard practice in displaying any text from an untrusted source; whatever programming language Manila is written in probably has a function to escape HTML like this.</p>
+
+<p>Let me know if you need any more information.</p>
+
+<p>-Mark</p>
+
+</blockquote>
+
+</li>
+
+<li><p>Brent replied and promised a fix, but he claimed the bug was not really a big problem.</p>
+
+<blockquote>
+
+<p>Date: Tue Jan 29, 2002  01:40:50  PM US/Eastern<br />
+
+From: Brent Simmons<br />
+
+To: Mark Pilgrim<br />
+
+Subject: Re: Manila security hole followup</p>
+
+<p>I&#8217;ll make that change today. Your server will probably update tonight.</p>
+
+<p>However, I don&#8217;t know how you could do anything worse than redirect a browser or cause it to run a Google search or something. But then again, we&#8217;ll just lock it down and it won&#8217;t be an issue anymore.</p>
+
+<p>-Brent</p>
+
+</blockquote>
+
+</li>
+
+<li><p>I replied to Brent and cc&#8217;d Dave, explaining why I felt the bug <em>was</em> a big problem.</p>
+
+<blockquote>
+
+<p>Date: Tue Jan 29, 2002  03:44:49  PM US/Eastern<br />
+
+From: Mark Pilgrim<br />
+
+To: Brent Simmons<br />
+
+Cc: Dave Winer<br />
+
+Subject: Re: Manila security hole followup</p>
+
+<p>There are any number of security and privacy concerns related to redirects.  Just today it was announced that every shipping version of Netscape 6 contains a bug that allows a malicious web site operator to read any cookies from your local browser cache.</p>
+
+<p> http://www.theregister.co.uk/content/56/23865.html</p>
+
+<p>This could be used to facilitate identity theft: stealing someone&#8217;s Amazon cookie and shipping goods from their account, stealing someone&#8217;s Hotmail cookie and reading their email, or stealing someone&#8217;s Passport cookie and potentially gaining access to their credit card information.</p>
+
+<p>There are also numerous IE bugs that allow malicious web site operators to execute arbitrary code on the victim&#8217;s local machine once the victim has been redirected to a properly constructed page.  This is one of the ways that the NIMDA worm spread so rapidly a few months ago.</p>
+
+<p>The web is only as safe as the sites you choose to visit, and this Manila bug creates a kind of &#8220;open relay&#8221; that hackers could use to hijack your visitors&#8217; browser and perpetrate web-based attacks.</p>
+
+<p>Thanks for giving it your attention.</p>
+
+<p>-Mark</p>
+
+</blockquote>
+
+</li>
+
+<li><p>Brent replied that the code had been fixed and would be deployed soon.</p>
+
+<blockquote>
+
+<p>Date: Tue Jan 29, 2002  04:29:14  PM US/Eastern<br />
+
+From: Brent Simmons<br />
+
+To: Mark Pilgrim<br />
+
+Cc: Dave Winer<br />
+
+Subject: Re: Manila security hole followup</p>
+
+<p>I made the change &#8212; &lt; characters in referers are now converted to &amp;lt; entities on the referers page.</p>
+
+<p>Most Manila servers will pick up the change tonight.</p>
+
+<p>-Brent</p>
+
+</blockquote>
+
+</li>
+
+</ol>
+<p class=c>&#167;
+
+<h3 id=respond>Respond privately</h3>
+<p><i>I am no longer accepting public comments on this post, but you can use this form to contact me privately.  (Your message will not be published.)</i></p>
+<form action="/web/20110806114749/http://wearehugh.com/public/contact.cgi" method=POST id=commentform>
+<p><label for=author>Name </label><br>
+<input type=text name=author id=author>
+<p><label for=email>Email</label><br>
+<input type=text name=email id=email></p>
+<p><label for=comment>Message</label>
+<textarea name=comment id=comment rows=10 cols=40></textarea></p>
+<p><input type=submit value="Send message">
+</p>
+</form>
+<p class=c>&#167;
+<div class=f>
+<p>
+<a title="my comments here and elsewhere" href=/web/20110806114749/http://firehose.diveintomark.org/>firehose</a> &#x2027;
+<a title="my current open source projects" href="/web/20110806114749/http://code.google.com/u/@UxdWQ1xUDhhBWwd%2F/">code</a> &#x2027;
+<a title="my personal news aggregator" href=/web/20110806114749/http://feeds.diveintomark.org/>planet</a>
+<p>&#169; 2001&#8211;present <a accesskey=9 href=/web/20110806114749/http://diveintomark.org/about>Mark Pilgrim</a>
+</div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.392 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2011-06-15 15:06:08 -->
+<!-- super cache -->
+
+
+
+
+<!--
+     FILE ARCHIVED ON 11:47:49 Aug 6, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:32:21 Jan 16, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
